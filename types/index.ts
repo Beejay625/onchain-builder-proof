@@ -45,3 +45,42 @@ export interface Achievement {
   author: string
 }
 
+export interface BuilderProfile {
+  address: string
+  username: string
+  bio: string
+  achievements: number
+  followers: number
+  following: number
+  reputation: number
+  level: string
+  joinedAt: number
+}
+
+export interface Notification {
+  id: string
+  type: 'like' | 'comment' | 'follow' | 'achievement' | 'tip'
+  message: string
+  timestamp: number
+  read: boolean
+  link?: string
+}
+
+export interface Badge {
+  id: string
+  name: string
+  description: string
+  icon: string
+  unlocked: boolean
+  requirement: number
+  progress: number
+}
+
+export interface Goal {
+  id: string
+  title: string
+  completed: boolean
+  deadline: string
+  createdAt: number
+}
+
