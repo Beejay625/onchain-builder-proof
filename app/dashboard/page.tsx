@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 import LoadingSpinner from '@/components/LoadingSpinner'
-import { truncateAddress } from '@/lib/utils'
+import { truncateAddress, formatTimestamp } from '@/lib/utils'
 
 // Deployed contract address on Base chain (verified)
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
