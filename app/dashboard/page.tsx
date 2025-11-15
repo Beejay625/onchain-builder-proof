@@ -153,7 +153,19 @@ export default function DashboardPage() {
 
           {isConfirmed && (
             <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-lg">
-              Transaction confirmed! Achievement minted successfully.
+              ✅ Onchain Transaction Confirmed! Your achievement is now permanently recorded on Base blockchain.
+              {hash && (
+                <p className="text-xs mt-2">
+                  <a 
+                    href={`https://basescan.org/tx/${hash}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-green-600"
+                  >
+                    View on BaseScan ↗
+                  </a>
+                </p>
+              )}
             </div>
           )}
         </div>
