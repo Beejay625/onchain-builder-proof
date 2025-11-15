@@ -171,19 +171,36 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">Your Achievements</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-semibold">🏆 Your Onchain Achievements</h2>
+            {userPostIds && userPostIds.length > 0 && (
+              <button
+                onClick={viewMyAchievements}
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition text-sm"
+              >
+                {showAchievements ? 'Hide Achievements' : 'View All Onchain'}
+              </button>
+            )}
+          </div>
           {isLoadingPosts ? (
             <LoadingSpinner />
           ) : (
             <>
-              <p className="text-gray-600 mb-4">
-                Total achievements minted: {totalPosts?.toString() || '0'}
+              <div className="flex gap-8 mb-4">
+                <div className="flex flex-col">
+                  <span className="text-3xl font-bold text-blue-600">{totalPosts?.toString() || '0'}</span>
+                  <span className="text-sm text-gray-500">Total Onchain</span>
+                </div>
+                {userPostIds && userPostIds.length > 0 && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-bold text-green-600">{userPostIds.length}</span>
+                    <span className="text-sm text-gray-500">Your Achievements</span>
+                  </div>
+                )}
+              </div>
+              <p className="text-xs text-gray-400">
+                All achievements are permanently stored on Base blockchain at {truncateAddress(CONTRACT_ADDRESS)}
               </p>
-              {userPostIds && userPostIds.length > 0 && (
-                <p className="text-sm text-gray-500">
-                  Your personal achievements: {userPostIds.length}
-                </p>
-              )}
             </>
           )}
         </div>
