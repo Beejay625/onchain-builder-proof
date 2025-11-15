@@ -2,62 +2,70 @@
 
 import { useState } from 'react'
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainProjectVerification() {
+interface OnchainProjectVerificationProps {
+  achievementId: bigint
+}
+
+export default function OnchainProjectVerification({ achievementId }: OnchainProjectVerificationProps) {
   const { address } = useAccount()
-  const [projectName, setProjectName] = useState('')
   const [projectUrl, setProjectUrl] = useState('')
-  const [description, setDescription] = useState('')
+  const [projectDescription, setProjectDescription] = useState('')
   
-  const { data: hash, writeContract, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const verifyProject = async () => {
-    if (!address || !projectName || !projectUrl) return
+    if (!address || !projectUrl.trim()) return
+    
+    const projectData = `PROJECT_VERIFICATION: ${projectUrl} - ${projectDescription || 'No description'}`
     
     writeContract({
-      address: BUILDER_PROOF_CONTRACT,
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`Verified Project: ${projectName} - ${projectUrl} - ${description}`],
+      functionName: 'addComment',
+      args: [achievementId, projectData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">✅ Project Verification</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Project name"
-          value={projectName}
-          onChange={(e) => setProjectName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="url"
-          placeholder="Project URL"
-          value={projectUrl}
-          onChange={(e) => setProjectUrl(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <textarea
-          placeholder="Project description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg h-24"
-        />
-        <button
-          onClick={verifyProject}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Verifying...' : 'Verify Project'}
-        </button>
-        {isSuccess && <p className="text-green-600">Project verified onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">✅ Onchain Project Verification</h3>
+      
+      <input
+        type="url"
+        value={projectUrl}
+        onChange={(e) => setProjectUrl(e.target.value)}
+        placeholder="Project URL (e.g., https://github.com/user/repo)"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <textarea
+        value={projectDescription}
+        onChange={(e) => setProjectDescription(e.target.value)}
+        placeholder="Project description..."
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+        rows={3}
+      />
+      
+      <button
+        onClick={verifyProject}
+        disabled={isPending || isConfirming || !projectUrl.trim()}
+        className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Verifying...' : 'Verify Project Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Project verification recorded onchain
+        </div>
+      )}
     </div>
   )
 }
-
