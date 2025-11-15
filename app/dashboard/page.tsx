@@ -39,7 +39,7 @@ export default function DashboardPage() {
     functionName: 'getTotalPosts',
   })
 
-  // Get user's post IDs
+  // Get user's post IDs from blockchain
   const { data: userPostIds } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
     abi: BuilderProofABI,
@@ -47,6 +47,17 @@ export default function DashboardPage() {
     args: address ? [address] : undefined,
     query: {
       enabled: !!address,
+    },
+  })
+
+  // Fetch individual post details from chain
+  const { data: selectedPost } = useReadContract({
+    address: CONTRACT_ADDRESS as `0x${string}`,
+    abi: BuilderProofABI,
+    functionName: 'getPost',
+    args: selectedPostId ? [selectedPostId] : undefined,
+    query: {
+      enabled: !!selectedPostId,
     },
   })
 
