@@ -32,3 +32,16 @@ export default function ReactionButton({ postId, currentLikes }: ReactionButtonP
       setIsLiking(false)
     }
   }
+
+  return (
+    <button
+      onClick={handleLike}
+      disabled={isLiking}
+      className="flex items-center gap-2 px-3 py-1 bg-blue-50 hover:bg-blue-100 rounded-full text-sm transition disabled:opacity-50"
+    >
+      <span className="text-lg">{isSuccess ? '❤️' : '👍'}</span>
+      <span className="font-semibold text-blue-600">{currentLikes.toString()}</span>
+      {isLiking && <span className="text-xs text-gray-500">Sending...</span>}
+    </button>
+  )
+}
