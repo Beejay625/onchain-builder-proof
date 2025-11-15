@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 import LoadingSpinner from '@/components/LoadingSpinner'
 import { truncateAddress, formatTimestamp } from '@/lib/utils'
+import ProfileCard from '@/components/ProfileCard'
+import ReactionButton from '@/components/ReactionButton'
+import CommentSection from '@/components/CommentSection'
 
 // Deployed contract address on Base chain (verified)
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
