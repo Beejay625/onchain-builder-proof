@@ -389,7 +389,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **130+ Features**: Complete builder achievement platform with advanced onchain capabilities
+- **160+ Features**: Complete builder achievement platform with extensive onchain capabilities
 - **150+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
