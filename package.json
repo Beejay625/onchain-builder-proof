@@ -9,13 +9,20 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["nextjs", "web3", "blockchain", "reown", "wagmi"],
+  "keywords": [
+    "nextjs",
+    "web3",
+    "blockchain",
+    "reown",
+    "wagmi"
+  ],
   "author": "",
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@reown/appkit": "^1.8.14",
     "@reown/appkit-adapter-wagmi": "^1.8.14",
+    "@tailwindcss/postcss": "^4.1.17",
     "@tanstack/react-query": "^5.90.9",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
