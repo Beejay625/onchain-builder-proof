@@ -22,3 +22,17 @@ export default function ProfileCard() {
     args: address ? [address] : undefined,
   })
 
+  const { writeContract, isPending } = useWriteContract()
+
+  const handleSaveProfile = async () => {
+    if (!name.trim()) return
+    
+    // Write profile to blockchain
+    writeContract({
+      address: CONTRACT_ADDRESS as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'updateProfile',
+      args: [name, bio, avatar],
+    })
+  }
+
