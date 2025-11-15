@@ -446,7 +446,7 @@ npm run lint
 ## 🎯 Key Highlights
 
 - **190+ Features**: Complete builder achievement platform with extensive onchain capabilities
-- **150+ Components**: Comprehensive UI component library
+- **180+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
 - **NFT Integration**: Discover and manage all your NFT badges in one place
