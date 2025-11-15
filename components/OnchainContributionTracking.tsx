@@ -1,59 +1,76 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
-import { formatNumber } from '@/lib/utils'
+import { useState } from 'react'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainContributionTracking() {
+interface OnchainContributionTrackingProps {
+  achievementId: bigint
+}
+
+export default function OnchainContributionTracking({ achievementId }: OnchainContributionTrackingProps) {
   const { address } = useAccount()
-  const [contributions, setContributions] = useState<any[]>([])
+  const [contributionType, setContributionType] = useState('code')
+  const [contributionDescription, setContributionDescription] = useState('')
   
-  const { data: totalPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getTotalPosts',
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
   })
 
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-  })
-
-  useEffect(() => {
-    if (userPosts) {
-      setContributions(Array.from(userPosts as bigint[]))
-    }
-  }, [userPosts])
+  const trackContribution = async () => {
+    if (!address || !contributionDescription.trim()) return
+    
+    const contributionData = `CONTRIBUTION_TRACKING: ${contributionType} - ${contributionDescription}`
+    
+    writeContract({
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'addComment',
+      args: [achievementId, contributionData],
+    })
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📊 Contribution Tracking</h2>
-      <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="text-sm text-gray-600">Your Contributions</p>
-            <p className="text-2xl font-bold">{contributions.length}</p>
-          </div>
-          <div className="bg-green-50 p-4 rounded-lg">
-            <p className="text-sm text-gray-600">Total Platform</p>
-            <p className="text-2xl font-bold">{totalPosts ? formatNumber(Number(totalPosts)) : '0'}</p>
-          </div>
+      <h3 className="text-xl font-bold mb-4">📊 Onchain Contribution Tracking</h3>
+      
+      <select
+        value={contributionType}
+        onChange={(e) => setContributionType(e.target.value)}
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      >
+        <option value="code">Code</option>
+        <option value="design">Design</option>
+        <option value="documentation">Documentation</option>
+        <option value="testing">Testing</option>
+        <option value="review">Code Review</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <textarea
+        value={contributionDescription}
+        onChange={(e) => setContributionDescription(e.target.value)}
+        placeholder="Describe your contribution..."
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+        rows={4}
+      />
+      
+      <button
+        onClick={trackContribution}
+        disabled={isPending || isConfirming || !contributionDescription.trim()}
+        className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Tracking...' : 'Track Contribution'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Contribution tracked onchain
         </div>
-        <div className="mt-4">
-          <h3 className="font-semibold mb-2">Recent Contributions</h3>
-          <div className="space-y-2">
-            {contributions.slice(0, 5).map((id, idx) => (
-              <div key={idx} className="p-2 bg-gray-50 rounded">
-                Contribution #{id.toString()}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   )
 }
-

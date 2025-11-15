@@ -1,71 +1,71 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
-import { MILESTONES } from '@/lib/constants'
+import { useState } from 'react'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainMilestoneRewards() {
+interface OnchainMilestoneRewardsProps {
+  achievementId: bigint
+}
+
+export default function OnchainMilestoneRewards({ achievementId }: OnchainMilestoneRewardsProps) {
   const { address } = useAccount()
-  const [nextMilestone, setNextMilestone] = useState(0)
-  const [progress, setProgress] = useState(0)
+  const [milestoneName, setMilestoneName] = useState('')
+  const [rewardAmount, setRewardAmount] = useState('')
   
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
   })
 
-  const { data: hash, writeContract, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
-
-  useEffect(() => {
-    if (userPosts) {
-      const count = Array.from(userPosts as bigint[]).length
-      const milestone = MILESTONES.find(m => m > count) || MILESTONES[MILESTONES.length - 1]
-      setNextMilestone(milestone)
-      setProgress(count)
-    }
-  }, [userPosts])
-
   const claimReward = async () => {
-    if (!address) return
+    if (!address || !milestoneName.trim()) return
+    
+    const rewardData = `MILESTONE_REWARD: ${milestoneName}${rewardAmount ? ` - Amount: ${rewardAmount}` : ''}`
+    
     writeContract({
-      address: BUILDER_PROOF_CONTRACT,
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`Claimed milestone reward at ${progress} achievements`],
+      functionName: 'addComment',
+      args: [achievementId, rewardData],
     })
   }
 
-  const progressPercent = nextMilestone > 0 ? (progress / nextMilestone) * 100 : 0
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🎁 Milestone Rewards</h2>
-      <div className="space-y-4">
-        <div>
-          <p className="text-gray-600 mb-2">Progress: {progress} / {nextMilestone}</p>
-          <div className="w-full bg-gray-200 rounded-full h-4">
-            <div 
-              className="bg-blue-600 h-4 rounded-full transition-all"
-              style={{ width: `${Math.min(progressPercent, 100)}%` }}
-            />
-          </div>
+      <h3 className="text-xl font-bold mb-4">🎁 Onchain Milestone Rewards</h3>
+      
+      <input
+        type="text"
+        value={milestoneName}
+        onChange={(e) => setMilestoneName(e.target.value)}
+        placeholder="Milestone name"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <input
+        type="text"
+        value={rewardAmount}
+        onChange={(e) => setRewardAmount(e.target.value)}
+        placeholder="Reward amount (optional)"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={claimReward}
+        disabled={isPending || isConfirming || !milestoneName.trim()}
+        className="w-full px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Claiming...' : 'Claim Milestone Reward'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Milestone reward claimed onchain
         </div>
-        {progress >= nextMilestone && (
-          <button
-            onClick={claimReward}
-            disabled={isPending || isConfirming}
-            className="w-full px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 disabled:opacity-50"
-          >
-            {isPending || isConfirming ? 'Claiming...' : 'Claim Reward'}
-          </button>
-        )}
-        {isSuccess && <p className="text-green-600">Reward claimed onchain!</p>}
-      </div>
+      )}
     </div>
   )
 }
-
