@@ -38,7 +38,7 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd onchain-builder-proof
+cd "buikders dex"
 ```
 
 2. Install dependencies:
