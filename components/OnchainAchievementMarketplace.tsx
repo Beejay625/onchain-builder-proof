@@ -1,89 +1,76 @@
 'use client'
 
 import { useState } from 'react'
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
-import { formatEthAmount } from '@/lib/utils'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt, useBalance } from 'wagmi'
+import { parseEther, formatEther } from 'viem'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-interface Listing {
-  id: string
-  postId: string
-  price: bigint
-  seller: string
+interface OnchainAchievementMarketplaceProps {
+  achievementId: bigint
 }
 
-export default function OnchainAchievementMarketplace() {
+export default function OnchainAchievementMarketplace({ achievementId }: OnchainAchievementMarketplaceProps) {
   const { address } = useAccount()
-  const [listings, setListings] = useState<Listing[]>([])
-  const [selectedPost, setSelectedPost] = useState('')
-  const [price, setPrice] = useState('')
+  const [listingPrice, setListingPrice] = useState('')
+  const [listingType, setListingType] = useState<'sale' | 'auction'>('sale')
   
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
+  const { data: balance } = useBalance({ address })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
   })
 
-  const listAchievement = () => {
-    if (!selectedPost || !price) return
-    const listing: Listing = {
-      id: Date.now().toString(),
-      postId: selectedPost,
-      price: BigInt(parseFloat(price) * 1e18),
-      seller: address || '',
-    }
-    setListings([...listings, listing])
-    setSelectedPost('')
-    setPrice('')
+  const listAchievement = async () => {
+    if (!address || !listingPrice) return
+    
+    const marketplaceData = `MARKETPLACE_LISTING: ${listingType} - Price: ${listingPrice} ETH`
+    
+    writeContract({
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'addComment',
+      args: [achievementId, marketplaceData],
+    })
   }
-
-  const posts = userPosts ? Array.from(userPosts as bigint[]) : []
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🏪 Achievement Marketplace</h2>
-      <div className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-2">Select Achievement</label>
-          <select
-            value={selectedPost}
-            onChange={(e) => setSelectedPost(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg"
-          >
-            <option value="">Choose an achievement</option>
-            {posts.map((postId) => (
-              <option key={postId.toString()} value={postId.toString()}>
-                Achievement #{postId.toString()}
-              </option>
-            ))}
-          </select>
+      <h3 className="text-xl font-bold mb-4">🏪 Onchain Achievement Marketplace</h3>
+      
+      <select
+        value={listingType}
+        onChange={(e) => setListingType(e.target.value as 'sale' | 'auction')}
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      >
+        <option value="sale">Direct Sale</option>
+        <option value="auction">Auction</option>
+      </select>
+      
+      <input
+        type="number"
+        value={listingPrice}
+        onChange={(e) => setListingPrice(e.target.value)}
+        placeholder="Listing price (ETH)"
+        step="0.001"
+        min="0"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={listAchievement}
+        disabled={isPending || isConfirming || !listingPrice || parseFloat(listingPrice) <= 0}
+        className="w-full px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Listing...' : `List for ${listingPrice || '0'} ETH`}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Achievement listed on marketplace
         </div>
-        <input
-          type="number"
-          placeholder="Price in ETH"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={listAchievement}
-          className="w-full px-4 py-2 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700"
-        >
-          List Achievement
-        </button>
-        {listings.length > 0 && (
-          <div className="mt-4 space-y-2">
-            <h3 className="font-semibold">Your Listings</h3>
-            {listings.map((listing) => (
-              <div key={listing.id} className="p-3 bg-gray-50 rounded">
-                <p>Post #{listing.postId} - {formatEthAmount(listing.price)}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      )}
     </div>
   )
 }
-
