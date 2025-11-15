@@ -10,4 +10,15 @@ const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A
 export default function ProfileCard() {
   const { address } = useAccount()
   const [isEditing, setIsEditing] = useState(false)
+  const [name, setName] = useState('')
+  const [bio, setBio] = useState('')
+  const [avatar, setAvatar] = useState('')
+
+  // Fetch user profile from blockchain
+  const { data: profile } = useReadContract({
+    address: CONTRACT_ADDRESS as `0x${string}`,
+    abi: BuilderProofABI,
+    functionName: 'getProfile',
+    args: address ? [address] : undefined,
+  })
 
