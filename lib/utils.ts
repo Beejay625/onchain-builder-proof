@@ -69,3 +69,28 @@ export function getTimeAgo(timestamp: number): string {
   return `${Math.floor(seconds / 604800)}w ago`
 }
 
+/**
+ * Calculate reputation score
+ * @param posts - Number of posts
+ * @param likes - Number of likes received
+ * @param comments - Number of comments received
+ * @returns Reputation score
+ */
+export function calculateReputation(posts: number, likes: number, comments: number): number {
+  return posts * 10 + likes * 2 + comments * 5
+}
+
+/**
+ * Get achievement level based on count
+ * @param achievementCount - Total achievements
+ * @returns Level name and color
+ */
+export function getAchievementLevel(achievementCount: number): { level: string; color: string } {
+  if (achievementCount >= 100) return { level: 'Legend', color: 'purple' }
+  if (achievementCount >= 50) return { level: 'Master', color: 'yellow' }
+  if (achievementCount >= 25) return { level: 'Expert', color: 'orange' }
+  if (achievementCount >= 10) return { level: 'Advanced', color: 'blue' }
+  if (achievementCount >= 5) return { level: 'Intermediate', color: 'green' }
+  return { level: 'Beginner', color: 'gray' }
+}
+
