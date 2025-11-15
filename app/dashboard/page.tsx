@@ -110,13 +110,17 @@ export default function DashboardPage() {
     <main className="flex min-h-screen flex-col items-center p-24">
       <div className="z-10 max-w-4xl w-full">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Builder Dashboard</h1>
+          <h1 className="text-4xl font-bold">⛓️ Builder Dashboard</h1>
           <div className="flex items-center gap-4">
             <p className="text-sm text-gray-600">
               {truncateAddress(address)}
             </p>
             <appkit-button />
           </div>
+        </div>
+
+        <div className="mb-8">
+          <ProfileCard />
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
