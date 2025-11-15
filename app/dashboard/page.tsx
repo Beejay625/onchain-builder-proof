@@ -256,13 +256,14 @@ function AchievementItem({ postId }: { postId: bigint }) {
         </span>
       </div>
       <p className="text-gray-800 mb-3">{post.content}</p>
-      <div className="flex gap-4 text-sm text-gray-600 border-t pt-2">
-        <span>👍 {post.likes.toString()} likes</span>
-        <span>💬 {post.comments.toString()} comments</span>
+      <div className="flex gap-4 items-center border-t pt-3">
+        <ReactionButton postId={post.id} currentLikes={post.likes} />
+        <span className="text-sm text-gray-500">💬 {post.comments.toString()}</span>
         <span className="text-xs text-gray-400 ml-auto">
           {new Date(Number(post.timestamp) * 1000).toLocaleDateString()}
         </span>
       </div>
+      <CommentSection postId={post.id} />
     </div>
   )
 }
