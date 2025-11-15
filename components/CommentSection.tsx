@@ -16,3 +16,16 @@ export default function CommentSection({ postId }: CommentSectionProps) {
   const [comment, setComment] = useState('')
   const [showComments, setShowComments] = useState(false)
   const { writeContract, isPending } = useWriteContract()
+
+  const handleAddComment = async () => {
+    if (!comment.trim()) return
+    
+    // Post comment to blockchain
+    writeContract({
+      address: CONTRACT_ADDRESS as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'addComment',
+      args: [postId, comment],
+    })
+    setComment('')
+  }
