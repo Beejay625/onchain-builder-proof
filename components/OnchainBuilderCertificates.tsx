@@ -2,62 +2,80 @@
 
 import { useState } from 'react'
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainBuilderCertificates() {
+interface OnchainBuilderCertificatesProps {
+  achievementId: bigint
+}
+
+export default function OnchainBuilderCertificates({ achievementId }: OnchainBuilderCertificatesProps) {
   const { address } = useAccount()
-  const [certificateName, setCertificateName] = useState('')
-  const [issuer, setIssuer] = useState('')
-  const [certificateUrl, setCertificateUrl] = useState('')
+  const [courseName, setCourseName] = useState('')
+  const [certificateId, setCertificateId] = useState('')
+  const [issuerName, setIssuerName] = useState('')
   
-  const { data: hash, writeContract, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const mintCertificate = async () => {
-    if (!address || !certificateName || !issuer) return
+    if (!address || !courseName.trim()) return
+    
+    const certData = `BUILDER_CERTIFICATE: ${courseName}${certificateId ? ` - ID: ${certificateId}` : ''}${issuerName ? ` - Issuer: ${issuerName}` : ''}`
+    
     writeContract({
-      address: BUILDER_PROOF_CONTRACT,
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`Certificate: ${certificateName} issued by ${issuer} - ${certificateUrl}`],
+      functionName: 'addComment',
+      args: [achievementId, certData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🎓 Builder Certificates</h2>
-      <div className="space-y-4">
+      <h3 className="text-xl font-bold mb-4">🎓 Onchain Builder Certificates</h3>
+      
+      <input
+        type="text"
+        value={courseName}
+        onChange={(e) => setCourseName(e.target.value)}
+        placeholder="Course name"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <div className="flex gap-2 mb-4">
         <input
           type="text"
-          placeholder="Certificate name"
-          value={certificateName}
-          onChange={(e) => setCertificateName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
+          value={certificateId}
+          onChange={(e) => setCertificateId(e.target.value)}
+          placeholder="Certificate ID (optional)"
+          className="flex-1 p-3 border border-gray-300 rounded-lg"
         />
         <input
           type="text"
-          placeholder="Issuer name"
-          value={issuer}
-          onChange={(e) => setIssuer(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
+          value={issuerName}
+          onChange={(e) => setIssuerName(e.target.value)}
+          placeholder="Issuer name (optional)"
+          className="flex-1 p-3 border border-gray-300 rounded-lg"
         />
-        <input
-          type="url"
-          placeholder="Certificate URL (optional)"
-          value={certificateUrl}
-          onChange={(e) => setCertificateUrl(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={mintCertificate}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Minting...' : 'Mint Certificate'}
-        </button>
-        {isSuccess && <p className="text-green-600">Certificate minted onchain!</p>}
       </div>
+      
+      <button
+        onClick={mintCertificate}
+        disabled={isPending || isConfirming || !courseName.trim()}
+        className="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Minting...' : 'Mint Certificate'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Certificate minted onchain
+        </div>
+      )}
     </div>
   )
 }
-
