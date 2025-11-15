@@ -1,66 +1,59 @@
 'use client'
 
 import { useState } from 'react'
-import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
 
 interface OnchainVotingProps {
   achievementId: bigint
 }
 
 export default function OnchainVoting({ achievementId }: OnchainVotingProps) {
-  const { address } = useAccount()
   const [voteType, setVoteType] = useState<'upvote' | 'downvote' | null>(null)
-  
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
-    hash,
-  })
 
-  const castVote = async (type: 'upvote' | 'downvote') => {
-    if (!address) return
-    
-    setVoteType(type)
-    const reactionType = type === 'upvote' ? 'vote_up' : 'vote_down'
-    
-    writeContract({
-      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-      abi: BuilderProofABI,
-      functionName: 'addReaction',
-      args: [achievementId, reactionType],
-    })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  const { isSuccess } = useWaitForTransactionReceipt({ hash })
+
+  const castVote = async (support: boolean) => {
+    try {
+      writeContract({
+        address: CONTRACT_ADDRESS as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'vote',
+        args: [achievementId, support],
+      })
+      setVoteType(support ? 'upvote' : 'downvote')
+    } catch (error) {
+      console.error('Vote error:', error)
+    }
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold mb-4">🗳️ Onchain Voting</h3>
-      
-      <div className="flex gap-4">
+      <h3 className="text-xl font-bold mb-4">🗳️ Vote</h3>
+      <div className="flex gap-3">
         <button
-          onClick={() => castVote('upvote')}
-          disabled={isPending || isConfirming}
+          onClick={() => castVote(true)}
+          disabled={isPending}
           className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400"
         >
-          {isPending || isConfirming ? 'Processing...' : '↑ Upvote'}
+          ↑ Upvote
         </button>
-        
         <button
-          onClick={() => castVote('downvote')}
-          disabled={isPending || isConfirming}
+          onClick={() => castVote(false)}
+          disabled={isPending}
           className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-gray-400"
         >
-          {isPending || isConfirming ? 'Processing...' : '↓ Downvote'}
+          ↓ Downvote
         </button>
       </div>
-
       {isSuccess && (
-        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+        <div className="mt-3 p-2 bg-green-100 text-green-800 rounded text-sm text-center">
           ✓ Vote recorded onchain
         </div>
       )}
     </div>
   )
 }
-
