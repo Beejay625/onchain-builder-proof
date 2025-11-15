@@ -3,6 +3,7 @@
 import { useAccount } from 'wagmi'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+import { truncateAddress } from '@/lib/utils'
 
 export default function LoginPage() {
   const { isConnected, address } = useAccount()
@@ -29,7 +30,7 @@ export default function LoginPage() {
         {isConnected && (
           <div className="mt-8 p-4 bg-green-100 rounded-lg text-center">
             <p className="text-green-800">
-              Connected: {address?.slice(0, 6)}...{address?.slice(-4)}
+              Connected: {truncateAddress(address)}
             </p>
             <p className="text-sm text-green-600 mt-2">Redirecting to dashboard...</p>
           </div>

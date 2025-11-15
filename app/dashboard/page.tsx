@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { SocialMediaContractABI } from '@/abi/SocialMediaContract'
 import LoadingSpinner from '@/components/LoadingSpinner'
+import { truncateAddress } from '@/lib/utils'
 
 // Replace with your deployed contract address
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000'
@@ -90,7 +91,7 @@ export default function DashboardPage() {
           <h1 className="text-4xl font-bold">Builder Dashboard</h1>
           <div className="flex items-center gap-4">
             <p className="text-sm text-gray-600">
-              {address?.slice(0, 6)}...{address?.slice(-4)}
+              {truncateAddress(address)}
             </p>
             <appkit-button />
           </div>
