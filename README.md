@@ -205,7 +205,26 @@ npm start
 npm run lint
 ```
 
-## License
+## 🎯 Key Highlights
+
+- **40+ Components**: Comprehensive UI component library
+- **Fully Onchain**: All achievements permanently recorded on Base
+- **Gamified Experience**: Badges, levels, streaks, and leaderboards
+- **Social Layer**: Comments, reactions, tips, and follows
+- **Multi-Network**: Base, Ethereum, Arbitrum, Optimism, Polygon
+- **Modern Stack**: Next.js 16, TypeScript, Tailwind CSS, Reown AppKit
+- **Real-time Updates**: Live notifications and transaction tracking
+- **Export Ready**: Download your data in JSON or CSV
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
 
 MIT
+
+---
+
+**Built with ❤️ by builders, for builders. Start minting your journey today! ⛓️**
 
