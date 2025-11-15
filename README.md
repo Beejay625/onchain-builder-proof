@@ -184,6 +184,34 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🚀 **Onchain Deployment Proof**: Record deployment proofs onchain
 - 📜 **Onchain Attestation**: Create verifiable attestations
 - 🔗 **Onchain Achievement Chain**: Visualize achievement chain connections
+- 🗳️ **Onchain Voting**: Vote on achievements with upvote/downvote system
+- 🍴 **Achievement Forking**: Fork achievements to create derivatives
+- 💰 **Achievement Sponsorship**: Sponsor achievements with ETH contributions
+- 🎯 **Achievement Bounty**: Create bounties for achievement completion
+- 🪙 **Token Rewards**: Issue token rewards for achievements
+- 🎨 **Achievement NFT Minting**: Mint NFTs from achievements
+- 💰 **Reputation Staking**: Stake reputation tokens to earn rewards
+- 🤝 **Collaboration Proof**: Prove collaborations with other builders onchain
+- ✅ **Skill Verification**: Verify skills with proof links and certificates
+- 📊 **Contribution Tracking**: Track all contributions across the platform
+- 🎁 **Milestone Rewards**: Claim rewards when reaching achievement milestones
+- 🏆 **Builder Rankings**: View rankings of top builders by achievements
+- ✅ **Project Verification**: Verify projects with URLs and descriptions
+- 💻 **Code Contribution Proof**: Prove code contributions with commit hashes
+- 🚀 **Deployment Proof**: Prove deployments with transaction hashes
+- 📚 **Learning Path Tracking**: Track learning progress and certificates
+- 👥 **Builder Teams**: Create and manage builder teams
+- 🏪 **Achievement Marketplace**: List and trade achievements
+- 🎫 **Reputation Delegation**: Delegate reputation to other builders
+- 📊 **Skill Assessments**: Submit and view skill assessments
+- 🌉 **Cross-Chain Proofs**: Create proofs that span multiple chains
+- 🎓 **Builder Certificates**: Mint certificates for completed courses
+- ✅ **Achievement Validation**: Validate achievements with verifier addresses
+- 🔄 **Achievement Sync**: Sync achievements across multiple chains
+- ⚖️ **Reputation Weighting**: Weighted voting based on reputation
+- 🔀 **Achievement Merging**: Merge multiple achievements together
+- 📜 **Onchain Attestation**: Create verifiable attestations
+- 🏦 **Onchain Treasury**: Contribute to treasury funds
 - 🔒 **Achievement Locking**: Lock achievements permanently onchain
 - 🍴 **Achievement Forking**: Fork achievements to create derivative works
 - 🔀 **Achievement Merging**: Merge multiple achievements together
