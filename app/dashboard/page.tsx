@@ -201,11 +201,62 @@ export default function DashboardPage() {
               <p className="text-xs text-gray-400">
                 All achievements are permanently stored on Base blockchain at {truncateAddress(CONTRACT_ADDRESS)}
               </p>
+              
+              {showAchievements && userPostIds && userPostIds.length > 0 && (
+                <div className="mt-6 space-y-4">
+                  <h3 className="font-semibold text-lg border-t pt-4">Your Minted Achievements</h3>
+                  {userPostIds.map((postId) => (
+                    <AchievementItem key={postId.toString()} postId={postId} />
+                  ))}
+                </div>
+              )}
             </>
           )}
         </div>
       </div>
     </main>
+  )
+}
+
+// Component to display individual onchain achievement
+function AchievementItem({ postId }: { postId: bigint }) {
+  const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
+  
+  const { data: post, isLoading } = useReadContract({
+    address: CONTRACT_ADDRESS as `0x${string}`,
+    abi: BuilderProofABI,
+    functionName: 'getPost',
+    args: [postId],
+  })
+
+  if (isLoading) {
+    return (
+      <div className="border border-gray-200 rounded-lg p-4 animate-pulse">
+        <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+        <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+      </div>
+    )
+  }
+
+  if (!post) return null
+
+  return (
+    <div className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition">
+      <div className="flex justify-between items-start mb-2">
+        <span className="text-sm font-semibold text-blue-600">Achievement #{post.id.toString()}</span>
+        <span className="text-xs text-gray-500">
+          ⛓️ Onchain
+        </span>
+      </div>
+      <p className="text-gray-800 mb-3">{post.content}</p>
+      <div className="flex gap-4 text-sm text-gray-600 border-t pt-2">
+        <span>👍 {post.likes.toString()} likes</span>
+        <span>💬 {post.comments.toString()} comments</span>
+        <span className="text-xs text-gray-400 ml-auto">
+          {new Date(Number(post.timestamp) * 1000).toLocaleDateString()}
+        </span>
+      </div>
+    </div>
   )
 }
 
