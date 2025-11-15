@@ -4,11 +4,13 @@
 
 Onchain Builder Proof is a decentralized application (dApp) that empowers builders, developers, and creators to mint their weekly achievements directly onchain through Talenty Protocol. Every milestone, every breakthrough, and every accomplishment becomes a permanent, verifiable record on the blockchain—creating an immutable proof of your journey as a builder.
 
+It also helps builders discover and manage their hidden NFT badges from the past, easily transferring them to the dashboard for unified management through Reown wallet integration on Onchain Builder Proof. 
+
 The platform is powered by a **BuilderProof smart contract** deployed and verified on **Base chain** at address `0xD96Da91A4DC052C860F4cA452efF924bd88CC437`. This smart contract handles all onchain operations, ensuring your achievements are stored permanently on the blockchain with complete transparency and immutability.
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🚀 Core Features
+## 🎉 45+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -53,6 +55,8 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🌐 **Multi-Network**: Support for Base, Mainnet, Arbitrum, Optimism, and Polygon
 - 🟢 **Network Status**: Real-time network connection indicator
 - 📱 **Mobile Wallet Support**: Connect via WalletConnect
+- 🏅 **NFT Badge Discovery**: Find and manage hidden NFT badges from your wallet
+- 🔄 **Badge Transfer**: Easily transfer NFT badges to dashboard for unified management
 
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
@@ -207,8 +211,10 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **40+ Components**: Comprehensive UI component library
+- **45+ Features**: Complete builder achievement platform
+- **26+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
+- **NFT Integration**: Discover and manage all your NFT badges in one place
 - **Gamified Experience**: Badges, levels, streaks, and leaderboards
 - **Social Layer**: Comments, reactions, tips, and follows
 - **Multi-Network**: Base, Ethereum, Arbitrum, Optimism, Polygon
