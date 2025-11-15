@@ -18,7 +18,6 @@
   ],
   "author": "",
   "license": "MIT",
-  "type": "commonjs",
   "dependencies": {
     "@reown/appkit": "^1.8.14",
     "@reown/appkit-adapter-wagmi": "^1.8.14",
