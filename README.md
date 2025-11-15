@@ -60,14 +60,16 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🎨 **Modern UI**: Beautiful, responsive interface with Tailwind CSS
 - 📱 **Mobile Responsive**: Optimized for all screen sizes
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Wallet Integration**: Reown AppKit
-- **Blockchain**: Wagmi + Viem
-- **Smart Contract**: SocialMediaContract (deployed)
+- **Framework**: Next.js 16 (App Router) with Turbopack
+- **Language**: TypeScript 5.9
+- **Styling**: Tailwind CSS 4.1
+- **Wallet Integration**: Reown AppKit 1.8 (formerly WalletConnect)
+- **Web3 Libraries**: Wagmi 2.19 + Viem 2.39
+- **State Management**: TanStack React Query 5.90
+- **Smart Contract**: BuilderProof (Solidity) - Verified on BaseScan
+- **Networks**: Base (primary), Mainnet, Arbitrum, Optimism, Polygon
 
 ## Getting Started
 
