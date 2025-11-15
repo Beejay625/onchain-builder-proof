@@ -8,13 +8,57 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-##  5 Features implemented already 
+## 🚀 Core Features
 
-- 🔐 Wallet connection via Reown AppKit
-- 📝 Mint weekly achievements onchain
-- 📊 Dashboard to view your achievements
-- 🔗 Integration with Talenty Protocol
-- ⚡ Built with Next.js 16 and TypeScript
+### Achievement Management
+- ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
+- 📝 **Achievement Templates**: Quick-start templates for common achievements
+- 🏷️ **Category System**: Organize achievements by type (Development, Design, Learning, etc.)
+- 🔍 **Search & Filter**: Find achievements quickly with advanced filtering
+- 📊 **Sort Options**: View achievements by newest, most liked, or most discussed
+
+### Gamification & Progress
+- 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
+- 🎯 **Milestone Tracker**: Visual progress tracking toward next milestone
+- 🔥 **Streak Tracking**: Monitor building consistency with current and longest streaks
+- 📈 **Reputation System**: Earn reputation points through posts, likes, and comments
+- ⭐ **Level System**: Progress from Beginner to Legend based on achievements
+
+### Social Features
+- 💬 **Comments**: Discuss achievements with other builders
+- ❤️ **Reactions**: Show support with likes
+- 💰 **Tipping**: Support builders directly with ETH
+- 👥 **Follow System**: Connect with and follow other builders
+- 🔗 **Social Sharing**: Share achievements on Twitter and LinkedIn
+- 🌐 **Community Feed**: View recent builder activity
+
+### Builder Profile
+- 👤 **Profile Editor**: Update username and bio onchain
+- 📊 **Builder Stats**: Comprehensive statistics dashboard
+- 💼 **Portfolio Showcase**: Display your projects and work
+- ✓ **Verification Badges**: Premium, Elite, and default verification tiers
+- 📜 **Transaction History**: Track all onchain interactions
+
+### Dashboard & Analytics
+- 📈 **Analytics Dashboard**: View key metrics and insights
+- 🎯 **Weekly Goals**: Set and track weekly objectives
+- 🏅 **Leaderboard**: See top builders by timeframe
+- 🔥 **Trending Achievements**: Discover popular recent achievements
+- 📥 **Data Export**: Export achievements in JSON or CSV format
+
+### Web3 Integration
+- 🔐 **Wallet Connection**: Seamless connection via Reown AppKit
+- 💰 **Balance Display**: View wallet balance in real-time
+- ⛽ **Gas Estimation**: See estimated transaction costs
+- 🌐 **Multi-Network**: Support for Base, Mainnet, Arbitrum, Optimism, and Polygon
+- 🟢 **Network Status**: Real-time network connection indicator
+- 📱 **Mobile Wallet Support**: Connect via WalletConnect
+
+### User Experience
+- 🔔 **Notifications**: Real-time alerts for engagement
+- ⚡ **Quick Actions**: Fast access to common tasks
+- 🎨 **Modern UI**: Beautiful, responsive interface with Tailwind CSS
+- 📱 **Mobile Responsive**: Optimized for all screen sizes
 
 ## Tech Stack
 
