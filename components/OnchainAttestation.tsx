@@ -1,72 +1,70 @@
 'use client'
 
 import { useState } from 'react'
-import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-interface OnchainAttestationProps {
-  achievementId: bigint
-}
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
 
-export default function OnchainAttestation({ achievementId }: OnchainAttestationProps) {
-  const { address } = useAccount()
+export default function OnchainAttestation() {
   const [attestationText, setAttestationText] = useState('')
-  const [attesterName, setAttesterName] = useState('')
-  
+  const [attestationURI, setAttestationURI] = useState('')
+
   const { writeContract, data: hash, isPending } = useWriteContract()
-  
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
-    hash,
-  })
+  const { isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const createAttestation = async () => {
-    if (!address || !attestationText.trim()) return
-    
-    const attestationData = `ATTESTATION by ${attesterName || 'Anonymous'}: ${attestationText}`
-    
-    writeContract({
-      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-      abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [achievementId, attestationData],
-    })
+    if (!attestationText.trim()) return
+
+    try {
+      writeContract({
+        address: CONTRACT_ADDRESS as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'createAttestation',
+        args: [attestationText, attestationURI],
+      })
+    } catch (error) {
+      console.error('Attestation error:', error)
+    }
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold mb-4">📜 Onchain Attestation</h3>
-      
-      <input
-        type="text"
-        value={attesterName}
-        onChange={(e) => setAttesterName(e.target.value)}
-        placeholder="Your name (optional)"
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-      />
-      
-      <textarea
-        value={attestationText}
-        onChange={(e) => setAttestationText(e.target.value)}
-        placeholder="Attestation statement..."
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-        rows={4}
-      />
-      
-      <button
-        onClick={createAttestation}
-        disabled={isPending || isConfirming || !attestationText.trim()}
-        className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:bg-gray-400"
-      >
-        {isPending || isConfirming ? 'Creating...' : 'Create Attestation'}
-      </button>
-
-      {isSuccess && (
-        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
-          ✓ Attestation recorded onchain
+      <h3 className="text-xl font-bold mb-4">📜 Create Attestation</h3>
+      <div className="space-y-3">
+        <div>
+          <label className="block text-sm font-medium mb-2">Attestation Text</label>
+          <textarea
+            value={attestationText}
+            onChange={(e) => setAttestationText(e.target.value)}
+            placeholder="I attest that..."
+            className="w-full p-2 border border-gray-300 rounded-lg"
+            rows={4}
+          />
         </div>
-      )}
+        <div>
+          <label className="block text-sm font-medium mb-2">Supporting URI (Optional)</label>
+          <input
+            type="url"
+            value={attestationURI}
+            onChange={(e) => setAttestationURI(e.target.value)}
+            placeholder="https://..."
+            className="w-full p-2 border border-gray-300 rounded-lg"
+          />
+        </div>
+        <button
+          onClick={createAttestation}
+          disabled={isPending}
+          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-gray-400"
+        >
+          {isPending ? 'Creating...' : 'Create Attestation'}
+        </button>
+        {isSuccess && (
+          <div className="mt-3 p-2 bg-green-100 text-green-800 rounded text-sm text-center">
+            ✓ Attestation created onchain
+          </div>
+        )}
+      </div>
     </div>
   )
 }
-
