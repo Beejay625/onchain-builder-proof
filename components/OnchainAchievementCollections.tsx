@@ -1,68 +1,71 @@
 'use client'
 
 import { useState } from 'react'
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementCollections() {
+interface OnchainAchievementCollectionsProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementCollections({ achievementId }: OnchainAchievementCollectionsProps) {
   const { address } = useAccount()
   const [collectionName, setCollectionName] = useState('')
-  const [selectedPosts, setSelectedPosts] = useState<string[]>([])
+  const [collectionDescription, setCollectionDescription] = useState('')
   
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
   })
 
-  const togglePost = (postId: string) => {
-    setSelectedPosts(prev => 
-      prev.includes(postId) 
-        ? prev.filter(id => id !== postId)
-        : [...prev, postId]
-    )
+  const addToCollection = async () => {
+    if (!address || !collectionName.trim()) return
+    
+    const collectionData = `COLLECTION: ${collectionName}${collectionDescription ? ` - ${collectionDescription}` : ''}`
+    
+    writeContract({
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'addComment',
+      args: [achievementId, collectionData],
+    })
   }
-
-  const createCollection = () => {
-    if (!collectionName || selectedPosts.length === 0) return
-    // Collection creation logic
-    alert(`Collection "${collectionName}" created with ${selectedPosts.length} achievements!`)
-  }
-
-  const posts = userPosts ? Array.from(userPosts as bigint[]) : []
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📦 Achievement Collections</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Collection name"
-          value={collectionName}
-          onChange={(e) => setCollectionName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <div className="max-h-60 overflow-y-auto space-y-2">
-          {posts.map((postId) => (
-            <label key={postId.toString()} className="flex items-center gap-2 p-2 hover:bg-gray-50 rounded cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selectedPosts.includes(postId.toString())}
-                onChange={() => togglePost(postId.toString())}
-              />
-              <span>Achievement #{postId.toString()}</span>
-            </label>
-          ))}
+      <h3 className="text-xl font-bold mb-4">📦 Onchain Achievement Collections</h3>
+      
+      <input
+        type="text"
+        value={collectionName}
+        onChange={(e) => setCollectionName(e.target.value)}
+        placeholder="Collection name"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <textarea
+        value={collectionDescription}
+        onChange={(e) => setCollectionDescription(e.target.value)}
+        placeholder="Collection description (optional)"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+        rows={3}
+      />
+      
+      <button
+        onClick={addToCollection}
+        disabled={isPending || isConfirming || !collectionName.trim()}
+        className="w-full px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Adding...' : 'Add to Collection'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Added to collection onchain
         </div>
-        <button
-          onClick={createCollection}
-          className="w-full px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700"
-        >
-          Create Collection
-        </button>
-      </div>
+      )}
     </div>
   )
 }
-
