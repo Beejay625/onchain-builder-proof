@@ -63,12 +63,13 @@ export default function DashboardPage() {
 
   const handleMintAchievement = async () => {
     if (!achievementContent.trim()) {
-      alert('Please enter your achievement')
+      alert('Please enter your achievement to mint onchain')
       return
     }
 
     setIsMinting(true)
     try {
+      // Write achievement directly to blockchain
       writeContract({
         address: CONTRACT_ADDRESS as `0x${string}`,
         abi: BuilderProofABI,
@@ -76,7 +77,7 @@ export default function DashboardPage() {
         args: [achievementContent],
       })
     } catch (err) {
-      console.error('Error minting:', err)
+      console.error('Onchain minting error:', err)
       setIsMinting(false)
     }
   }
