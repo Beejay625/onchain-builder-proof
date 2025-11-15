@@ -147,36 +147,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🔒 **Onchain Escrow**: Create escrow accounts for achievements
 - ⚖️ **Onchain Arbitration**: File disputes for arbitration
 - ✅ **Onchain Dispute Resolution**: Resolve disputes onchain
-- 🎯 **Skill Endorsement**: Endorse builder skills onchain with verifiable proof
-- 🖼️ **Achievement NFT**: Mint achievements as NFTs for permanent ownership
-- 💰 **Reputation Staking**: Stake reputation tokens to earn rewards
-- 🎯 **Achievement Challenges**: Create and participate in achievement challenges
-- 🤝 **Collaboration Proof**: Prove collaborations with other builders onchain
-- ✅ **Skill Verification**: Verify skills with proof links and certificates
-- 📊 **Contribution Tracking**: Track all contributions across the platform
-- 🎁 **Milestone Rewards**: Claim rewards when reaching achievement milestones
-- 🔗 **Achievement Sharing**: Share achievements with shareable links
-- 🏆 **Builder Rankings**: View rankings of top builders by achievements
-- ✅ **Project Verification**: Verify projects with URLs and descriptions
-- 💻 **Code Contribution Proof**: Prove code contributions with commit hashes
-- 🚀 **Deployment Proof**: Prove deployments with transaction hashes
-- 🌐 **Community Contribution**: Track contributions to communities
-- 📚 **Learning Path Tracking**: Track learning progress and certificates
-- 📦 **Achievement Collections**: Organize achievements into collections
-- 👥 **Builder Teams**: Create and manage builder teams
-- 🏪 **Achievement Marketplace**: List and trade achievements
-- 🎫 **Reputation Delegation**: Delegate reputation to other builders
-- 🗳️ **Achievement Voting**: Vote on achievements with upvote/downvote
-- 📊 **Skill Assessments**: Submit and view skill assessments
-- ⏰ **Achievement Timestamps**: View permanent blockchain timestamps
-- 🌉 **Cross-Chain Proofs**: Create proofs that span multiple chains
-- 📋 **Achievement Metadata**: Add rich metadata to achievements
-- 🎓 **Builder Certificates**: Mint certificates for completed courses
-- 📜 **Achievement History**: View complete achievement history
-- 🎁 **Achievement Rewards**: Claim rewards for achievements
-- 🏅 **Achievement Badges**: Unlock badges for milestone achievements
-- ✅ **Achievement Validation**: Validate achievements with verifier addresses
-- 🔄 **Achievement Sync**: Sync achievements across multiple chains
+- 🎯 **Onchain Skill Endorsement**: Endorse builder skills onchain with verifiable proof
+- 🖼️ **Onchain Achievement NFT**: Mint achievements as NFTs for permanent ownership
+- 💰 **Onchain Reputation Staking**: Stake reputation tokens to earn rewards
+- 🎯 **Onchain Achievement Challenges**: Create and participate in achievement challenges
+- 🤝 **Onchain Collaboration Proof**: Prove collaborations with other builders onchain
+- ✅ **Onchain Skill Verification**: Verify skills with proof links and certificates
+- 📊 **Onchain Contribution Tracking**: Track all contributions across the platform
+- 🎁 **Onchain Milestone Rewards**: Claim rewards when reaching achievement milestones
+- 🔗 **Onchain Achievement Sharing**: Share achievements with shareable links
+- 🏆 **Onchain Builder Rankings**: View rankings of top builders by achievements
+- ✅ **Onchain Project Verification**: Verify projects with URLs and descriptions
+- 💻 **Onchain Code Contribution Proof**: Prove code contributions with commit hashes
+- 🚀 **Onchain Deployment Proof**: Prove deployments with transaction hashes
+- 🌐 **Onchain Community Contribution**: Track contributions to communities
+- 📚 **Onchain Learning Path Tracking**: Track learning progress and certificates
+- 📦 **Onchain Achievement Collections**: Organize achievements into collections
+- 👥 **Onchain Builder Teams**: Create and manage builder teams
+- 🏪 **Onchain Achievement Marketplace**: List and trade achievements
+- 🎫 **Onchain Reputation Delegation**: Delegate reputation to other builders
+- 🗳️ **Onchain Achievement Voting**: Vote on achievements with upvote/downvote
+- 📊 **Onchain Skill Assessments**: Submit and view skill assessments
+- ⏰ **Onchain Achievement Timestamps**: View permanent blockchain timestamps
+- 🌉 **Onchain Cross-Chain Proofs**: Create proofs that span multiple chains
+- 📋 **Onchain Achievement Metadata**: Add rich metadata to achievements
+- 🎓 **Onchain Builder Certificates**: Mint certificates for completed courses
+- 📜 **Onchain Achievement History**: View complete achievement history
+- 🎁 **Onchain Achievement Rewards**: Claim rewards for achievements
+- 🏅 **Onchain Achievement Badges**: Unlock badges for milestone achievements
+- ✅ **Onchain Achievement Validation**: Validate achievements with verifier addresses
+- 🔄 **Onchain Achievement Sync**: Sync achievements across multiple chains
 - ⚖️ **Onchain Reputation Weighting**: Weighted voting based on reputation
 - 🌉 **Onchain Cross-chain Verification**: Verify achievements across chains
 - 📜 **Onchain Immutable History**: View complete immutable achievement history
