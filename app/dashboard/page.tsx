@@ -117,9 +117,9 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Mint Your Weekly Achievement</h2>
+          <h2 className="text-2xl font-semibold mb-4">⛓️ Mint Your Weekly Achievement Onchain</h2>
           <p className="text-gray-600 mb-4">
-            Share your weekly achievements and mint them onchain via Talenty Protocol
+            Record your weekly achievements permanently on Base blockchain via BuilderProof smart contract
           </p>
           
           <div className="mb-4">
