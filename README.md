@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 100+ Production-Ready Features!
+## 🎉 130+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -122,6 +122,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🌉 **Cross-Chain Bridge**: Enable cross-chain badge bridging
 - 💾 **Onchain Backup**: Create backup of onchain data
 - 📥 **Onchain Import**: Import achievements from backup files
+
+### Advanced Onchain Features
+- 🗳️ **Onchain Voting**: Vote on achievements with upvote/downvote system
+- ⭐ **Onchain Endorsements**: Endorse achievements with verified statements
+- ⏰ **Onchain Timestamps**: Verify blockchain timestamps for achievements
+- 🔗 **Onchain Proof Links**: Direct links to BaseScan and Etherscan verification
+- 📦 **Onchain Metadata Storage**: Store additional metadata permanently onchain
+- 📋 **Onchain Versioning**: Track version history for achievements
+- 🍴 **Onchain Forking**: Fork achievements to create derivatives
+- 🤝 **Onchain Collaboration**: Request collaboration on achievements
+- 💰 **Onchain Sponsorships**: Sponsor achievements with ETH contributions
+- 🎯 **Onchain Bounties**: Create bounties for achievement completion
+- 🎁 **Onchain Rewards Distribution**: Distribute rewards to achievement creators
+- 🎨 **Onchain NFT Minting**: Mint NFTs from achievements
+- 🪙 **Onchain Token Rewards**: Issue token rewards for achievements
+- 🔒 **Onchain Staking**: Stake ETH on achievements with duration
+- 👤 **Onchain Delegation**: Delegate voting or management rights
+- 🏛️ **Onchain Governance**: Create governance proposals for achievements
+- 🏦 **Onchain Treasury**: Contribute to treasury funds
+- 🔐 **Onchain Multi-signature**: Setup multi-sig for achievement management
+- ⏳ **Onchain Time-lock**: Create time-locks for achievement actions
+- 📊 **Onchain Vesting**: Setup vesting schedules for tokens
+- 🔒 **Onchain Escrow**: Create escrow accounts for achievements
+- ⚖️ **Onchain Arbitration**: File disputes for arbitration
+- ✅ **Onchain Dispute Resolution**: Resolve disputes onchain
+- ⚖️ **Onchain Reputation Weighting**: Weighted voting based on reputation
+- 🌉 **Onchain Cross-chain Verification**: Verify achievements across chains
+- 📜 **Onchain Immutable History**: View complete immutable achievement history
+- 🔀 **Onchain Merging**: Merge multiple achievements together
+- 🚀 **Onchain Deployment Proof**: Record deployment proofs onchain
+- 📜 **Onchain Attestation**: Create verifiable attestations
+- 🔗 **Onchain Achievement Chain**: Visualize achievement chain connections
 
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
