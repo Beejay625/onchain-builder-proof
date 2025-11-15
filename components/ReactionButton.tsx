@@ -14,3 +14,21 @@ interface ReactionButtonProps {
 export default function ReactionButton({ postId, currentLikes }: ReactionButtonProps) {
   const [isLiking, setIsLiking] = useState(false)
   const { writeContract, data: hash } = useWriteContract()
+  
+  const { isSuccess } = useWaitForTransactionReceipt({ hash })
+
+  const handleLike = async () => {
+    setIsLiking(true)
+    try {
+      // Send like transaction to blockchain
+      writeContract({
+        address: CONTRACT_ADDRESS as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'addReaction',
+        args: [postId, 'like'],
+      })
+    } catch (error) {
+      console.error('Blockchain reaction failed:', error)
+      setIsLiking(false)
+    }
+  }
