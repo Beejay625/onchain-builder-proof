@@ -15,6 +15,8 @@ export default function DashboardPage() {
   const router = useRouter()
   const [achievementContent, setAchievementContent] = useState('')
   const [isMinting, setIsMinting] = useState(false)
+  const [selectedPostId, setSelectedPostId] = useState<bigint | null>(null)
+  const [showAchievements, setShowAchievements] = useState(false)
 
   const { writeContract, data: hash, isPending, error } = useWriteContract()
   
