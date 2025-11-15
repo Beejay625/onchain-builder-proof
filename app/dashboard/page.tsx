@@ -86,9 +86,14 @@ export default function DashboardPage() {
     if (isConfirmed) {
       setIsMinting(false)
       setAchievementContent('')
-      alert('Achievement minted successfully!')
+      alert('🎉 Achievement minted onchain successfully!')
     }
   }, [isConfirmed])
+
+  // View all user achievements from blockchain
+  const viewMyAchievements = () => {
+    setShowAchievements(!showAchievements)
+  }
 
   if (!isConnected) {
     return (
