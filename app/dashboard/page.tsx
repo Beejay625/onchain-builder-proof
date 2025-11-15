@@ -4,6 +4,7 @@ import { useAccount, useReadContract, useWriteContract, useWaitForTransactionRec
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { SocialMediaContractABI } from '@/abi/SocialMediaContract'
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 // Replace with your deployed contract address
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000'
@@ -29,10 +30,21 @@ export default function DashboardPage() {
   }, [isConnected, router])
 
   // Get user's posts/achievements
-  const { data: totalPosts } = useReadContract({
+  const { data: totalPosts, isLoading: isLoadingPosts } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
     abi: SocialMediaContractABI,
     functionName: 'getTotalPosts',
+  })
+
+  // Get user's post IDs
+  const { data: userPostIds } = useReadContract({
+    address: CONTRACT_ADDRESS as `0x${string}`,
+    abi: SocialMediaContractABI,
+    functionName: 'getUserPosts',
+    args: address ? [address] : undefined,
+    query: {
+      enabled: !!address,
+    },
   })
 
   const handleMintAchievement = async () => {
@@ -128,9 +140,20 @@ export default function DashboardPage() {
 
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-semibold mb-4">Your Achievements</h2>
-          <p className="text-gray-600">
-            Total achievements minted: {totalPosts?.toString() || '0'}
-          </p>
+          {isLoadingPosts ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <p className="text-gray-600 mb-4">
+                Total achievements minted: {totalPosts?.toString() || '0'}
+              </p>
+              {userPostIds && userPostIds.length > 0 && (
+                <p className="text-sm text-gray-500">
+                  Your personal achievements: {userPostIds.length}
+                </p>
+              )}
+            </>
+          )}
         </div>
       </div>
     </main>
