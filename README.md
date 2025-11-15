@@ -1,6 +1,6 @@
 # Onchain Builder Proof
 
-> **Immortalize Your Weekly Achievements on the Blockchain**
+> 
 
 Onchain Builder Proof is a decentralized application (dApp) that empowers builders, developers, and creators to mint their weekly achievements directly onchain through Talenty Protocol. Every milestone, every breakthrough, and every accomplishment becomes a permanent, verifiable record on the blockchain—creating an immutable proof of your journey as a builder.
 
@@ -77,12 +77,16 @@ npm run dev
 
 ## Smart Contract
 
-The application uses a deployed `SocialMediaContract` that allows users to:
+The application uses a deployed `BuilderProof` smart contract on **Base chain** that allows users to:
 - Create posts (achievements)
 - Add comments
 - Add reactions
 - Update profiles
 - Track reputation
+
+**Contract Address**: `0xD96Da91A4DC052C860F4cA452efF924bd88CC437`  
+**Network**: Base Chain  
+**Status**: ✅ Verified on BaseScan
 
 ## Environment Variables
 

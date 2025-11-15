@@ -3,12 +3,12 @@
 import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { SocialMediaContractABI } from '@/abi/SocialMediaContract'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 import LoadingSpinner from '@/components/LoadingSpinner'
 import { truncateAddress } from '@/lib/utils'
 
-// Replace with your deployed contract address
-const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000'
+// Deployed contract address on Base chain (verified)
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
 
 export default function DashboardPage() {
   const { isConnected, address } = useAccount()
@@ -33,14 +33,14 @@ export default function DashboardPage() {
   // Get user's posts/achievements
   const { data: totalPosts, isLoading: isLoadingPosts } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
-    abi: SocialMediaContractABI,
+    abi: BuilderProofABI,
     functionName: 'getTotalPosts',
   })
 
   // Get user's post IDs
   const { data: userPostIds } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
-    abi: SocialMediaContractABI,
+    abi: BuilderProofABI,
     functionName: 'getUserPosts',
     args: address ? [address] : undefined,
     query: {
@@ -58,7 +58,7 @@ export default function DashboardPage() {
     try {
       writeContract({
         address: CONTRACT_ADDRESS as `0x${string}`,
-        abi: SocialMediaContractABI,
+        abi: BuilderProofABI,
         functionName: 'createPost',
         args: [achievementContent],
       })

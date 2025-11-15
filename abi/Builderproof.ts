@@ -1,4 +1,4 @@
-export const SocialMediaContractABI = [
+export const BuilderProofABI = [
   {
     inputs: [],
     stateMutability: 'nonpayable',
