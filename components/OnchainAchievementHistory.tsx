@@ -1,55 +1,63 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
-import { formatTimestamp } from '@/lib/utils'
+import { useReadContract } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementHistory() {
-  const { address } = useAccount()
-  const [history, setHistory] = useState<any[]>([])
-  
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
+interface OnchainAchievementHistoryProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementHistory({ achievementId }: OnchainAchievementHistoryProps) {
+  const { data: post, isLoading } = useReadContract({
+    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
+    functionName: 'getPost',
+    args: [achievementId],
   })
 
-  useEffect(() => {
-    const loadHistory = async () => {
-      if (!userPosts) return
-      const posts = Array.from(userPosts as bigint[])
-      const historyItems = await Promise.all(
-        posts.slice(0, 10).map(async (postId) => {
-          // In real app, fetch post details
-          return {
-            id: postId.toString(),
-            timestamp: Date.now() / 1000 - Math.random() * 86400 * 30,
-          }
-        })
-      )
-      setHistory(historyItems.sort((a, b) => b.timestamp - a.timestamp))
-    }
-    loadHistory()
-  }, [userPosts])
+  if (isLoading) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="animate-pulse">Loading history...</div>
+      </div>
+    )
+  }
+
+  if (!post) return null
+
+  const timestamp = Number(post.timestamp)
+  const date = new Date(timestamp * 1000)
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📜 Achievement History</h2>
-      <div className="space-y-2">
-        {history.length === 0 ? (
-          <p className="text-gray-600 text-center py-8">No history found</p>
-        ) : (
-          history.map((item) => (
-            <div key={item.id} className="p-3 bg-gray-50 rounded-lg flex justify-between items-center">
-              <span className="font-medium">Achievement #{item.id}</span>
-              <span className="text-sm text-gray-600">{formatTimestamp(BigInt(Math.floor(item.timestamp)))}</span>
+      <h3 className="text-xl font-bold mb-4">📜 Onchain Achievement History</h3>
+      
+      <div className="space-y-3">
+        <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+          <div className="text-sm text-gray-600">Created</div>
+          <div className="font-semibold">{date.toLocaleString()}</div>
+        </div>
+        
+        <div className="p-4 bg-gray-50 rounded-lg">
+          <div className="text-sm text-gray-600 mb-2">Author</div>
+          <div className="font-mono text-sm break-all">{post.author}</div>
+        </div>
+        
+        <div className="p-4 bg-green-50 rounded-lg">
+          <div className="text-sm text-gray-600 mb-2">Engagement</div>
+          <div className="flex gap-4">
+            <div>
+              <div className="text-xs text-gray-500">Likes</div>
+              <div className="font-bold text-lg">{Number(post.likes)}</div>
             </div>
-          ))
-        )}
+            <div>
+              <div className="text-xs text-gray-500">Comments</div>
+              <div className="font-bold text-lg">{Number(post.comments)}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
-
