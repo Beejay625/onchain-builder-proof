@@ -34,5 +34,25 @@ export default function ProfileCard() {
       functionName: 'updateProfile',
       args: [name, bio, avatar],
     })
+    setIsEditing(false)
   }
+
+  return (
+    <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-6 shadow-lg">
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            {profile?.name ? profile.name.slice(0, 2).toUpperCase() : address?.slice(2, 4).toUpperCase()}
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">{profile?.name || 'Anonymous Builder'}</h3>
+            <p className="text-sm text-gray-600">{truncateAddress(address)}</p>
+          </div>
+        </div>
+        {profile?.verified && (
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
+            ✓ Verified Onchain
+          </span>
+        )}
+      </div>
 
