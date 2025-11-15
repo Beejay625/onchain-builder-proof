@@ -56,3 +56,19 @@ export default function ProfileCard() {
         )}
       </div>
 
+      {profile?.bio && !isEditing && (
+        <p className="text-gray-700 mb-4">{profile.bio}</p>
+      )}
+
+      <div className="flex gap-4 text-sm mb-4">
+        <div className="flex flex-col">
+          <span className="font-bold text-2xl text-purple-600">{profile?.reputation?.toString() || '0'}</span>
+          <span className="text-gray-500">Reputation</span>
+        </div>
+        <div className="h-12 w-px bg-gray-300"></div>
+        <div className="flex flex-col">
+          <span className="text-xs text-gray-500">📍 Base Chain</span>
+          <span className="text-xs text-gray-500">⛓️ Onchain Identity</span>
+        </div>
+      </div>
+
