@@ -72,3 +72,47 @@ export default function ProfileCard() {
         </div>
       </div>
 
+      {isEditing ? (
+        <div className="space-y-3">
+          <input
+            type="text"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full p-2 border rounded-lg text-sm"
+          />
+          <textarea
+            placeholder="Bio (stored onchain)"
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+            className="w-full p-2 border rounded-lg text-sm"
+            rows={3}
+          />
+          <div className="flex gap-2">
+            <button
+              onClick={handleSaveProfile}
+              disabled={isPending}
+              className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700 disabled:bg-gray-400"
+            >
+              {isPending ? 'Saving Onchain...' : 'Save Onchain'}
+            </button>
+            <button
+              onClick={() => setIsEditing(false)}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      ) : (
+        <button
+          onClick={() => setIsEditing(true)}
+          className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700"
+        >
+          Edit Profile Onchain
+        </button>
+      )}
+    </div>
+  )
+}
+
