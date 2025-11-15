@@ -131,6 +131,15 @@ export default function DashboardPage() {
           <Analytics />
         </div>
 
+        <div className="mb-8">
+          <StreakTracker address={address} />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <MilestoneTracker achievementCount={userPostIds?.length || 0} />
+          <BadgeDisplay userAchievements={userPostIds?.length || 0} />
+        </div>
+
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">⛓️ Mint Your Weekly Achievement Onchain</h2>
           <p className="text-gray-600 mb-4">
