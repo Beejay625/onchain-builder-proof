@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 160+ Production-Ready Features!
+## 🎉 190+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -184,6 +184,34 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🚀 **Onchain Deployment Proof**: Record deployment proofs onchain
 - 📜 **Onchain Attestation**: Create verifiable attestations
 - 🔗 **Onchain Achievement Chain**: Visualize achievement chain connections
+- 🔒 **Achievement Locking**: Lock achievements permanently onchain
+- 🍴 **Achievement Forking**: Fork achievements to create derivative works
+- 🔀 **Achievement Merging**: Merge multiple achievements together
+- 🏷️ **Achievement Tagging**: Add tags to organize achievements
+- 🔗 **Achievement Linking**: Link related achievements together
+- 📌 **Achievement Pinning**: Pin achievements to profile
+- 📦 **Achievement Archiving**: Archive achievements onchain
+- 📋 **Achievement Versioning**: Track version history for achievements
+- ✍️ **Achievement Attestation**: Create verifiable attestations
+- 💰 **Achievement Sponsorship**: Sponsor achievements with contributions
+- 🎯 **Achievement Bounty**: Create bounties for achievements
+- 🔒 **Achievement Escrow**: Create escrow accounts for achievements
+- ⏳ **Achievement Time Lock**: Create time-locks for achievements
+- 📊 **Achievement Vesting**: Setup vesting schedules for achievements
+- 🔐 **Achievement Multi-Sig**: Setup multi-signature for achievements
+- 🏦 **Achievement Treasury**: Contribute to treasury funds
+- 🏛️ **Achievement Governance**: Create governance proposals
+- 👤 **Achievement Delegation**: Delegate achievement management
+- 🛡️ **Achievement Insurance**: Insure achievements onchain
+- 📜 **Achievement Licensing**: Add licensing information
+- 💰 **Achievement Royalties**: Configure royalty rates
+- 🔢 **Achievement Fractionalization**: Fractionalize achievements into shares
+- 🔒 **Achievement Staking**: Stake achievements with rewards
+- ⚖️ **Achievement Arbitration**: File disputes for arbitration
+- 🔄 **Achievement Resale**: List achievements for resale
+- ⏱️ **Achievement Rental**: Rent achievements temporarily
+- 📚 **Achievement Lending**: Lend achievements to others
+- 🔨 **Achievement Auction**: Create auctions for achievements
 
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
@@ -389,7 +417,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **160+ Features**: Complete builder achievement platform with extensive onchain capabilities
+- **190+ Features**: Complete builder achievement platform with extensive onchain capabilities
 - **150+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
