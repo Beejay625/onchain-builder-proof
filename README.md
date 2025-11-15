@@ -105,24 +105,64 @@ npm run dev
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ├── app/
-│   ├── dashboard/      # Dashboard page for minting achievements
-│   ├── login/          # Login/wallet connection page
-│   ├── layout.tsx      # Root layout with AppKit provider
-│   ├── page.tsx        # Home page
-│   └── globals.css     # Global styles
+│   ├── dashboard/          # Main dashboard with achievements
+│   ├── login/              # Wallet connection page  
+│   ├── layout.tsx          # Root layout with providers
+│   ├── page.tsx            # Landing page
+│   ├── error.tsx           # Error boundary
+│   ├── not-found.tsx       # 404 page
+│   ├── loading.tsx         # Loading states
+│   └── globals.css         # Global styles
+├── components/             # React components
+│   ├── AchievementCard.tsx
+│   ├── AchievementTemplates.tsx
+│   ├── Analytics.tsx
+│   ├── BadgeDisplay.tsx
+│   ├── BuilderStats.tsx
+│   ├── CategoryFilter.tsx
+│   ├── CommentSection.tsx
+│   ├── CommunityFeed.tsx
+│   ├── ExportButton.tsx
+│   ├── FollowButton.tsx
+│   ├── GasEstimator.tsx
+│   ├── Leaderboard.tsx
+│   ├── LoadingSpinner.tsx
+│   ├── MilestoneTracker.tsx
+│   ├── NetworkStatus.tsx
+│   ├── Notifications.tsx
+│   ├── PortfolioShowcase.tsx
+│   ├── ProfileCard.tsx
+│   ├── ProfileEditor.tsx
+│   ├── QuickActions.tsx
+│   ├── ReactionButton.tsx
+│   ├── SearchBar.tsx
+│   ├── ShareButton.tsx
+│   ├── SortFilter.tsx
+│   ├── StreakTracker.tsx
+│   ├── TipButton.tsx
+│   ├── TransactionHistory.tsx
+│   ├── TrendingAchievements.tsx
+│   ├── VerificationBadge.tsx
+│   ├── WalletBalance.tsx
+│   └── WeeklyGoals.tsx
 ├── config/
-│   └── index.tsx       # Wagmi configuration
+│   └── index.tsx           # Wagmi + Reown configuration
 ├── context/
-│   └── index.tsx       # AppKit context provider
+│   └── index.tsx           # AppKit context provider
+├── lib/
+│   └── utils.ts            # Utility functions
+├── types/
+│   └── index.ts            # TypeScript type definitions
 ├── abi/
-│   └── BuilderProof.ts  # Smart contract ABI
+│   └── BuilderProof.ts     # Smart contract ABI
 ├── contracts/
-│   └── BuilderProof.sol  # Smart contract source code
-└── next.config.js      # Next.js configuration
+│   └── BuilderProof.sol    # Smart contract source
+├── next.config.js          # Next.js configuration
+└── tailwind.config.ts      # Tailwind configuration
 ```
 
 ## Smart Contract
