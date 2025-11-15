@@ -138,11 +138,11 @@ export default function DashboardPage() {
           <button
             onClick={handleMintAchievement}
             disabled={isPending || isConfirming || isMinting}
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold"
           >
             {isPending || isConfirming || isMinting
-              ? 'Minting...'
-              : 'Mint Achievement'}
+              ? '⏳ Minting Onchain...'
+              : '⛓️ Mint Achievement Onchain'}
           </button>
 
           {error && (
