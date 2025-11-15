@@ -1,62 +1,53 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
-import { formatTimestamp } from '@/lib/utils'
+import { useReadContract } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementTimestamps() {
-  const { address } = useAccount()
-  const [selectedPost, setSelectedPost] = useState('')
-  const [timestamp, setTimestamp] = useState<string>('')
-  
-  const { data: post } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
+interface OnchainAchievementTimestampsProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementTimestamps({ achievementId }: OnchainAchievementTimestampsProps) {
+  const { data: post, isLoading } = useReadContract({
+    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
     functionName: 'getPost',
-    args: selectedPost ? [BigInt(selectedPost)] : undefined,
+    args: [achievementId],
   })
 
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-  })
+  if (isLoading) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="animate-pulse">Loading timestamps...</div>
+      </div>
+    )
+  }
 
-  useEffect(() => {
-    if (post) {
-      setTimestamp(formatTimestamp((post as any).timestamp))
-    }
-  }, [post])
+  if (!post) return null
 
-  const posts = userPosts ? Array.from(userPosts as bigint[]) : []
+  const timestamp = Number(post.timestamp)
+  const date = new Date(timestamp * 1000)
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⏰ Achievement Timestamps</h2>
-      <div className="space-y-4">
-        <select
-          value={selectedPost}
-          onChange={(e) => setSelectedPost(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        >
-          <option value="">Select achievement</option>
-          {posts.map((postId) => (
-            <option key={postId.toString()} value={postId.toString()}>
-              Achievement #{postId.toString()}
-            </option>
-          ))}
-        </select>
-        {timestamp && (
-          <div className="p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-600">Onchain Timestamp</p>
-            <p className="text-lg font-semibold">{timestamp}</p>
-            <p className="text-xs text-gray-500 mt-2">This timestamp is permanently recorded on the blockchain</p>
-          </div>
-        )}
+      <h3 className="text-xl font-bold mb-4">⏰ Onchain Achievement Timestamps</h3>
+      
+      <div className="space-y-3">
+        <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+          <div className="text-sm text-gray-600 mb-1">Blockchain Timestamp</div>
+          <div className="font-bold text-lg">{date.toLocaleString()}</div>
+        </div>
+        
+        <div className="p-4 bg-gray-50 rounded-lg">
+          <div className="text-sm text-gray-600 mb-1">Unix Timestamp</div>
+          <div className="font-mono text-sm">{timestamp}</div>
+        </div>
+        
+        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-sm text-yellow-800">
+          ⚠️ This timestamp is permanently recorded on the blockchain
+        </div>
       </div>
     </div>
   )
 }
-

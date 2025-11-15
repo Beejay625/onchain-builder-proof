@@ -2,62 +2,85 @@
 
 import { useState } from 'react'
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT, BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainCrossChainProofs() {
+interface OnchainCrossChainProofsProps {
+  achievementId: bigint
+}
+
+export default function OnchainCrossChainProofs({ achievementId }: OnchainCrossChainProofsProps) {
   const { address } = useAccount()
-  const [sourceChain, setSourceChain] = useState('')
-  const [targetChain, setTargetChain] = useState('')
-  const [txHash, setTxHash] = useState('')
+  const [sourceChain, setSourceChain] = useState('base')
+  const [targetChain, setTargetChain] = useState('ethereum')
+  const [proofHash, setProofHash] = useState('')
   
-  const { data: hash, writeContract, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
-  const bridgeProof = async () => {
-    if (!address || !sourceChain || !targetChain || !txHash) return
+  const createCrossChainProof = async () => {
+    if (!address || !proofHash.trim()) return
+    
+    const proofData = `CROSS_CHAIN_PROOF: ${sourceChain} -> ${targetChain} - Hash: ${proofHash}`
+    
     writeContract({
-      address: BUILDER_PROOF_CONTRACT,
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`Cross-chain proof: ${sourceChain} → ${targetChain} - TX: ${txHash}`],
+      functionName: 'addComment',
+      args: [achievementId, proofData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🌉 Cross-Chain Proofs</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Source chain"
+      <h3 className="text-xl font-bold mb-4">🌉 Onchain Cross-Chain Proofs</h3>
+      
+      <div className="flex gap-2 mb-4">
+        <select
           value={sourceChain}
           onChange={(e) => setSourceChain(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="text"
-          placeholder="Target chain"
+          className="flex-1 p-3 border border-gray-300 rounded-lg"
+        >
+          <option value="base">Base</option>
+          <option value="ethereum">Ethereum</option>
+          <option value="arbitrum">Arbitrum</option>
+        </select>
+        <select
           value={targetChain}
           onChange={(e) => setTargetChain(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="text"
-          placeholder="Transaction hash"
-          value={txHash}
-          onChange={(e) => setTxHash(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={bridgeProof}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 disabled:opacity-50"
+          className="flex-1 p-3 border border-gray-300 rounded-lg"
         >
-          {isPending || isConfirming ? 'Bridging...' : 'Bridge Proof'}
-        </button>
-        {isSuccess && <p className="text-green-600">Cross-chain proof created onchain!</p>}
+          <option value="ethereum">Ethereum</option>
+          <option value="arbitrum">Arbitrum</option>
+          <option value="optimism">Optimism</option>
+          <option value="polygon">Polygon</option>
+        </select>
       </div>
+      
+      <input
+        type="text"
+        value={proofHash}
+        onChange={(e) => setProofHash(e.target.value)}
+        placeholder="Cross-chain proof hash"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4 font-mono text-sm"
+      />
+      
+      <button
+        onClick={createCrossChainProof}
+        disabled={isPending || isConfirming || !proofHash.trim()}
+        className="w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Creating...' : `Create ${sourceChain} -> ${targetChain} Proof`}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Cross-chain proof created onchain
+        </div>
+      )}
     </div>
   )
 }
-
