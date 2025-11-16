@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 190+ Production-Ready Features!
+## 🎉 250+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -240,7 +240,79 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⏱️ **Achievement Rental**: Rent achievements temporarily
 - 📚 **Achievement Lending**: Lend achievements to others
 - 🔨 **Achievement Auction**: Create auctions for achievements
-
+- 🎯 **Achievement Quests**: Create and complete achievement quests
+- 👥 **Achievement Referrals**: Track referral codes and rewards
+- 🔥 **Achievement Streaks**: Monitor consecutive achievement days
+- 🎯 **Achievement Milestones**: Track progress toward milestones
+- 🏆 **Achievement Leaderboards**: View top builders rankings
+- 🎁 **Achievement Rewards**: Claim rewards for achievements
+- 🔒 **Achievement Staking**: Stake ETH on achievements
+- 🏛️ **Achievement Governance**: Create governance proposals
+- 🗳️ **Achievement Voting**: Vote on achievements
+- 👤 **Achievement Delegation**: Delegate management rights
+- ⚖️ **Achievement Arbitration**: File disputes for arbitration
+- 🛡️ **Achievement Insurance**: Insure achievements onchain
+- 📜 **Achievement Licensing**: Add licensing information
+- 💰 **Achievement Royalties**: Configure royalty rates
+- 🔢 **Achievement Fractionalization**: Fractionalize into shares
+- 🔄 **Achievement Resale**: List for resale marketplace
+- ⏱️ **Achievement Rental**: Rent achievements temporarily
+- 📚 **Achievement Lending**: Lend to other builders
+- 🔨 **Achievement Auction**: Create auction listings
+- 🏦 **Achievement Treasury**: Contribute to treasury
+- 🔐 **Achievement Multi-Sig**: Setup multi-signature
+- ⏳ **Achievement Time Lock**: Create time-locks
+- 📊 **Achievement Vesting**: Setup vesting schedules
+- 🍴 **Achievement Forking**: Fork to create derivatives
+- 🔀 **Achievement Merging**: Merge multiple achievements
+- 🏷️ **Achievement Tagging**: Add organizational tags
+- 🔗 **Achievement Linking**: Link related achievements
+- 📌 **Achievement Pinning**: Pin to profile
+- 📦 **Achievement Archiving**: Archive achievements
+- 📋 **Achievement Versioning**: Track version history
+- ✍️ **Achievement Attestation**: Create attestations
+- 🔒 **Achievement Locking**: Lock permanently
+- 📦 **Achievement Metadata**: Store rich metadata
+- 🔄 **Achievement Sync**: Sync across chains
+- 📜 **Achievement History**: View complete history
+- ✅ **Achievement Validation**: Validate achievements
+- ⏰ **Achievement Timestamps**: View blockchain timestamps
+- 📚 **Achievement Collections**: Organize into collections
+- 🎯 **Achievement Challenges**: Create challenges
+- ⛓️ **Achievement Chain**: Visualize relationships
+- 🏅 **Achievement Badges**: Unlock milestone badges
+- 🖼️ **Achievement NFT**: Mint as NFTs
+- 🔗 **Achievement Sharing**: Share achievements
+- 🏪 **Achievement Marketplace**: Trade achievements
+- 💸 **Onchain Retroactive Funding**: Allocate funding based on onchain achievement history
+- 📦 **Onchain Grant Milestone Tracking**: Track grant milestones and payouts onchain
+- 🚀 **Onchain Hackathon Rewards**: Distribute hackathon rewards using onchain submissions
+- 🗺️ **Onchain Quest Board**: Publish builder quests as onchain objectives
+- ✅ **Onchain Quest Verification**: Verify quest completion via onchain proofs
+- 🧑‍🏫 **Onchain Mentor Endorsements**: Capture mentor feedback as onchain endorsements
+- 📊 **Onchain Team Vesting Splits**: Configure vesting splits tied to achievements
+- 📡 **Onchain Streaming Rewards**: Stream rewards over time based on ongoing activity
+- ⛽ **Onchain Gas Refunds**: Track and allocate gas refunds for active builders
+- 📏 **Onchain Usage Limits**: Configure dynamic onchain rate limits per user
+- 📉 **Onchain Reputation Decay**: Model how reputation decays without new activity
+- 📈 **Onchain Reputation Recovery**: Recover reputation through verified achievements
+- 🌉 **Onchain Cross-Chain Mirrors**: Mirror achievements across multiple chains
+- 🎟️ **Onchain Access Passes**: Issue access passes based on onchain records
+- 🏦 **Onchain Contribution Sponsorship Pool**: Pool funds and route them to contributors
+- 📋 **Onchain Reputation Scorecards**: Generate onchain reputation summaries
+- 🏅 **Onchain Builder Season Pass**: Unlock perks for full building seasons
+- 🏆 **Onchain Seasonal Leaderboards**: Rank builders for specific seasons onchain
+- 👥 **Onchain Program Cohorts**: Group builders into onchain cohorts
+- 🎓 **Onchain Learning Quests**: Turn learning paths into onchain questlines
+- 🔑 **Onchain Token-Gated Content**: Gate content using achievements and tokens
+- 🧬 **Onchain Builder Referrals**: Track and reward referral relationships
+- 🛂 **Onchain Builder Passport**: Aggregate cross-ecosystem achievements
+- 🎟️ **Onchain Proof of Attendance**: Record participation as onchain proofs
+- 📌 **Onchain Project Milestone Board**: Visualize project milestones and proofs
+- 🏛️ **Onchain DAO Delegation Router**: Route governance power toward credible builders
+- 🛡️ **Onchain Safety Score**: Compute safety scores from dispute history
+- 🏅 **Onchain Builder Reputation Badges**: Mint dynamic reputation-aware badges
+- 📝 **Onchain Grant Reviewer Reputation**: Track reviewer performance onchain
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
 - ⚡ **Quick Actions**: Fast access to common tasks
@@ -445,7 +517,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **190+ Features**: Complete builder achievement platform with extensive onchain capabilities
+- **220+ Features**: Complete builder achievement platform with extensive onchain capabilities
 - **180+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
