@@ -4,7 +4,7 @@ import { useAccount, useReadContract } from 'wagmi'
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementReputationWeighting() {
+export default function OnchainAchievementVotingPower() {
   const { address } = useAccount()
   
   const { data: userPosts } = useReadContract({
@@ -15,18 +15,19 @@ export default function OnchainAchievementReputationWeighting() {
     query: { enabled: !!address },
   })
 
-  const reputationWeight = (userPosts?.length || 0) * 0.1
+  const votingPower = (userPosts?.length || 0) * 2
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⚖️ Reputation Weighting</h2>
+      <h2 className="text-2xl font-bold mb-4">🗳️ Voting Power</h2>
       <div className="space-y-2">
-        <p className="text-4xl font-bold text-orange-600">{reputationWeight.toFixed(2)}</p>
-        <p className="text-gray-600">Reputation weight</p>
+        <p className="text-4xl font-bold text-red-600">{votingPower}</p>
+        <p className="text-gray-600">Voting power</p>
         <p className="text-sm text-gray-500">
-          Based on {userPosts?.length || 0} achievements
+          Based on achievement count
         </p>
       </div>
     </div>
   )
 }
+
