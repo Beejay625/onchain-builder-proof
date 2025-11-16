@@ -1,39 +1,15 @@
 'use client'
 
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
-import { BuilderProofABI } from '@/abi/BuilderProof'
-
 export default function OnchainAchievementHeatmap() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
-  })
-
-  const totalDays = 365
-  const activeDays = Math.min(totalDays, (userPosts?.length || 0) * 7)
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📅 Achievement Heatmap</h2>
-      <div className="space-y-4">
-        <div className="text-center">
-          <p className="text-3xl font-bold text-green-600">{activeDays}</p>
-          <p className="text-gray-600">Active Days</p>
-        </div>
-        <div className="h-32 bg-gray-100 rounded flex items-center justify-center">
-          <p className="text-gray-400">Heatmap Visualization</p>
-        </div>
-        <p className="text-sm text-gray-500">
-          View your achievement activity over time.
-        </p>
-      </div>
+      <h2 className="text-2xl font-bold mb-2">🔥 Achievement Heatmap</h2>
+      <p className="text-gray-700 mb-2">
+        Visualize achievement activity with interactive heatmap.
+      </p>
+      <p className="text-gray-500 text-sm">
+        See activity patterns across time periods.
+      </p>
     </div>
   )
 }
-
