@@ -15,19 +15,16 @@ export default function OnchainAchievementContributionTracking() {
     query: { enabled: !!address },
   })
 
-  const contributions = userPosts?.length || 0
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <h2 className="text-2xl font-bold mb-4">📊 Contribution Tracking</h2>
-      <div className="text-center">
-        <p className="text-4xl font-bold text-blue-600">{contributions}</p>
+      <div className="space-y-2">
+        <p className="text-4xl font-bold text-blue-600">{userPosts?.length || 0}</p>
         <p className="text-gray-600">Total contributions</p>
-        <p className="text-sm text-gray-500 mt-2">
-          Tracked onchain permanently
+        <p className="text-sm text-gray-500">
+          All contributions tracked onchain
         </p>
       </div>
     </div>
   )
 }
-

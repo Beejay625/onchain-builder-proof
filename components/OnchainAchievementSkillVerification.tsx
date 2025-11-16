@@ -18,8 +18,8 @@ export default function OnchainAchievementSkillVerification() {
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`SKILL_VERIFY: ${skill} - ${proofLink}`],
+      functionName: 'addComment',
+      args: [BigInt(0), `SKILLVERIFY: ${skill} - ${proofLink}`],
     })
   }
 
@@ -44,7 +44,7 @@ export default function OnchainAchievementSkillVerification() {
         <button
           onClick={verifySkill}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Verifying...' : 'Verify Skill'}
         </button>
@@ -53,4 +53,3 @@ export default function OnchainAchievementSkillVerification() {
     </div>
   )
 }
-
