@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 280+ Production-Ready Features!
+## 🎉 310+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
