@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 370+ Production-Ready Features!
+## 🎉 400+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -562,6 +562,31 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🦋 **Onchain Achievement Evolution Score**: Track evolution of achievements
 - 🌟 **Onchain Builder Potential Score**: Measure potential through achievements
 - 🔗 **Onchain Achievement Coherence Score**: Measure coherence of achievements
+- 🔗 **Onchain Achievement Synergy Score**: Measure synergy between achievements onchain
+- 🎯 **Onchain Builder Alignment Index**: Measure alignment of achievements
+- 🧩 **Onchain Achievement Cohesion Score**: Measure cohesion of achievements
+- 🔌 **Onchain Builder Integration Score**: Measure integration of achievements
+- 🎵 **Onchain Achievement Harmony Score**: Measure harmony between achievements
+- 🎯 **Onchain Builder Coordination Index**: Measure coordination of achievements
+- ⚖️ **Onchain Achievement Balance Score**: Measure balance of achievements
+- 🏛️ **Onchain Builder Stability Index**: Measure stability of achievements
+- 💧 **Onchain Achievement Fluidity Score**: Measure fluidity of achievements
+- 🏃 **Onchain Builder Agility Index**: Measure agility through achievements
+- 📻 **Onchain Achievement Resonance Score**: Measure resonance of achievements
+- ⚡ **Onchain Builder Momentum Index**: Track momentum through achievements
+- ⚗️ **Onchain Achievement Catalyst Score**: Measure catalytic impact of achievements
+- 🚀 **Onchain Builder Acceleration Index**: Track acceleration through achievements
+- 📢 **Onchain Achievement Amplification Score**: Measure amplification of achievements
+- 🦋 **Onchain Builder Transformation Index**: Measure transformation through achievements
+- ⚙️ **Onchain Achievement Optimization Score**: Measure optimization of achievements
+- ✨ **Onchain Builder Refinement Index**: Measure refinement through achievements
+- 🔧 **Onchain Achievement Enhancement Score**: Measure enhancement of achievements
+- 📈 **Onchain Builder Elevation Index**: Measure elevation through achievements
+- 🔍 **Onchain Achievement Magnification Score**: Measure magnification of achievements
+- 📊 **Onchain Builder Progression Index**: Track progression through achievements
+- 🎯 **Onchain Achievement Advancement Score**: Measure advancement of achievements
+- ⬆️ **Onchain Builder Ascension Index**: Track ascension through achievements
+- 🌟 **Onchain Achievement Transcendence Score**: Measure transcendence of achievements
 - 🔗 **Onchain Achievement Reown Integration**: Seamless integration with Reown wallet for achievement verification
 - 📜 **Onchain Achievement Smart Contracts**: View verified smart contract details for achievements
 - 📋 **Onchain Achievement Event Logging**: Log all events onchain for transparency and auditability
