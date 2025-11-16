@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementGovernance() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
   const [proposal, setProposal] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const createProposal = async () => {
-    if (!address || !postId || !proposal) return
+    if (!address || !proposal) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `GOVERNANCE_PROPOSAL: ${proposal}`],
+      functionName: 'createPost',
+      args: [`PROPOSAL: ${proposal}`],
     })
   }
 
@@ -28,17 +27,11 @@ export default function OnchainAchievementGovernance() {
       <h2 className="text-2xl font-bold mb-4">🏛️ Achievement Governance</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <textarea
-          placeholder="Governance proposal"
+          type="text"
+          placeholder="Proposal description"
           value={proposal}
           onChange={(e) => setProposal(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg h-24"
+          className="w-full px-4 py-2 border rounded-lg"
         />
         <button
           onClick={createProposal}
@@ -52,4 +45,3 @@ export default function OnchainAchievementGovernance() {
     </div>
   )
 }
-
