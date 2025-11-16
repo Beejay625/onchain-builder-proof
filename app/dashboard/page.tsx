@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 import LoadingSpinner from '@/components/LoadingSpinner'
 import { truncateAddress, formatTimestamp } from '@/lib/utils'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import ProfileCard from '@/components/ProfileCard'
 import ReactionButton from '@/components/ReactionButton'
 import CommentSection from '@/components/CommentSection'
@@ -15,7 +16,7 @@ import BadgeDisplay from '@/components/BadgeDisplay'
 import MilestoneTracker from '@/components/MilestoneTracker'
 
 // Deployed contract address on Base chain (verified)
-const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
+const CONTRACT_ADDRESS = BUILDER_PROOF_CONTRACT
 
 export default function DashboardPage() {
   const { isConnected, address } = useAccount()
@@ -74,8 +75,16 @@ export default function DashboardPage() {
       return
     }
 
+    if (!address) {
+      alert('Please connect your wallet first')
+      return
+    }
+
     setIsMinting(true)
     try {
+      console.log('Minting to contract:', CONTRACT_ADDRESS)
+      console.log('Content:', achievementContent)
+      
       // Write achievement directly to blockchain
       writeContract({
         address: CONTRACT_ADDRESS as `0x${string}`,
@@ -85,6 +94,7 @@ export default function DashboardPage() {
       })
     } catch (err) {
       console.error('Onchain minting error:', err)
+      alert(`Minting error: ${err instanceof Error ? err.message : 'Unknown error'}`)
       setIsMinting(false)
     }
   }
@@ -145,6 +155,19 @@ export default function DashboardPage() {
           <p className="text-gray-600 mb-4">
             Record your weekly achievements permanently on Base blockchain via BuilderProof smart contract
           </p>
+          
+          <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+            <p className="text-xs text-gray-600 mb-1">Contract Address:</p>
+            <p className="text-sm font-mono text-blue-700 break-all">{CONTRACT_ADDRESS}</p>
+            <a 
+              href={`https://basescan.org/address/${CONTRACT_ADDRESS}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-blue-600 hover:underline mt-1 inline-block"
+            >
+              View on BaseScan ↗
+            </a>
+          </div>
           
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -244,7 +267,7 @@ export default function DashboardPage() {
 
 // Component to display individual onchain achievement
 function AchievementItem({ postId }: { postId: bigint }) {
-  const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '0xD96Da91A4DC052C860F4cA452efF924bd88CC437'
+  const CONTRACT_ADDRESS = BUILDER_PROOF_CONTRACT
   
   const { data: post, isLoading } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
