@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementLinking() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
   const [linkedPostId, setLinkedPostId] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const linkAchievements = async () => {
-    if (!address || !postId || !linkedPostId) return
+  const linkAchievement = async () => {
+    if (!address || !linkedPostId) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), `LINKED_TO: #${linkedPostId}`],
+      args: [BigInt(linkedPostId), 'LINK: Related achievement'],
     })
   }
 
@@ -29,28 +28,20 @@ export default function OnchainAchievementLinking() {
       <div className="space-y-4">
         <input
           type="number"
-          placeholder="Source Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          placeholder="Linked Post ID"
+          placeholder="Linked post ID"
           value={linkedPostId}
           onChange={(e) => setLinkedPostId(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
-          onClick={linkAchievements}
+          onClick={linkAchievement}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Linking...' : 'Link Achievements'}
+          {isPending || isConfirming ? 'Linking...' : 'Link Achievement'}
         </button>
-        {isSuccess && <p className="text-green-600">Achievements linked onchain!</p>}
+        {isSuccess && <p className="text-green-600">Linked onchain!</p>}
       </div>
     </div>
   )
 }
-
