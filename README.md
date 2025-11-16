@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 310+ Production-Ready Features!
+## 🎉 340+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -341,6 +341,51 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📉 **Onchain Reputation Decay**: Model how reputation decays without new activity
 - 📈 **Onchain Reputation Recovery**: Recover reputation through verified achievements
 - 🌉 **Onchain Cross-Chain Mirrors**: Mirror achievements across multiple chains
+- 🔐 **Token Gating**: Gate achievements with token requirements
+- 🏆 **Seasonal Leaderboards**: View leaderboards by season
+- 🛡️ **Safety Score**: Track safety rating based on activity
+- 📊 **Reputation Scorecards**: Detailed reputation breakdowns
+- 📡 **Proof of Attendance**: Prove event attendance onchain
+- 📋 **Project Milestone Board**: Track project milestones
+- 👥 **Program Cohorts**: Join program cohorts
+- 🗺️ **Learning Quests**: Start learning quests
+- 📝 **Grant Reviewer Reputation**: Earn reputation through reviews
+- 🗳️ **DAO Delegation Router**: Delegate to DAOs
+- 🎫 **Builder Season Pass**: Unlock seasonal rewards
+- 🏅 **Reputation Badges**: Earn reputation badges
+- 👥 **Builder Referrals**: Track referral codes
+- 🛂 **Builder Passport**: Onchain identity verification
+- 📡 **Streaming Rewards**: Continuous reward streams
+- 📊 **Team Vesting Splits**: Configure vesting splits
+- 🧑‍🏫 **Mentor Endorsements**: Request mentor endorsements
+- ✅ **Quest Verification**: Verify quest completion
+- 🗺️ **Quest Board**: Publish quests
+- 🔗 **Chain Visualization**: Visualize achievement chains
+- 📅 **Achievement Timeline**: View chronological history
+- ⭐ **Achievement Showcase**: Highlight achievements
+- 📊 **Achievement Trends**: Analyze trends
+- 💡 **Achievement Insights**: Personalized insights
+- ⚖️ **Achievement Comparison**: Compare achievements
+- 📊 **Achievement Progress**: Track progress
+- 🔄 **Recurring Achievements**: Setup recurring
+- ⏰ **Achievement Reminder**: Set reminders
+- 📅 **Achievement Scheduler**: Schedule achievements
+- 📝 **Achievement Drafts**: Save drafts
+- 🔖 **Achievement Bookmarks**: Bookmark achievements
+- ⭐ **Achievement Highlights**: Highlight important ones
+- 👥 **Achievement Groups**: Create groups
+- 📅 **Achievement Calendar**: Calendar view
+- 📝 **Achievement Templates**: Use templates
+- 📚 **Templates Library**: Browse templates
+- 🔍 **Achievement Filters**: Filter achievements
+- 🔍 **Advanced Filters**: Advanced filtering
+- 📊 **Sort Options**: Sort achievements
+- 📊 **Achievement Stats**: View statistics
+- 🔥 **Achievement Streaks**: Track streaks
+- 🔥 **Trending Achievements**: View trending
+- 📥 **Export Button**: Export achievements
+- 🎯 **Weekly Goals**: Set weekly goals
+- ⚡ **Quick Actions**: Quick action buttons
 - 🎟️ **Onchain Access Passes**: Issue access passes based on onchain records
 - 🏦 **Onchain Contribution Sponsorship Pool**: Pool funds and route them to contributors
 - 📋 **Onchain Reputation Scorecards**: Generate onchain reputation summaries
