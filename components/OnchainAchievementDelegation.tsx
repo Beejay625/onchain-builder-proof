@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementDelegation() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
   const [delegateTo, setDelegateTo] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const delegateAchievement = async () => {
-    if (!address || !postId || !delegateTo) return
+  const delegate = async () => {
+    if (!address || !delegateTo) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `DELEGATED_TO: ${delegateTo}`],
+      functionName: 'createPost',
+      args: [`DELEGATE: ${delegateTo}`],
     })
   }
 
@@ -28,13 +27,6 @@ export default function OnchainAchievementDelegation() {
       <h2 className="text-2xl font-bold mb-4">👤 Achievement Delegation</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
           type="text"
           placeholder="Delegate to address"
           value={delegateTo}
@@ -42,15 +34,14 @@ export default function OnchainAchievementDelegation() {
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
-          onClick={delegateAchievement}
+          onClick={delegate}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Delegating...' : 'Delegate Achievement'}
+          {isPending || isConfirming ? 'Delegating...' : 'Delegate Rights'}
         </button>
         {isSuccess && <p className="text-green-600">Delegation recorded onchain!</p>}
       </div>
     </div>
   )
 }
-
