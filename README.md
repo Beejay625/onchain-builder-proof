@@ -478,6 +478,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ✨ **Onchain Achievement Reward Multiplier**: Dynamic reward multipliers
 - 💧 **Onchain Achievement Liquidity Pool**: Add liquidity to achievement pools
 - 🌾 **Onchain Achievement Yield Farming**: Earn yield from achievement staking
+- 🛡️ **Onchain Achievement Sybil Resistance**: Verified achievements prevent sybil attacks
+- ⭐ **Onchain Achievement Meritocracy**: Merit-based scoring system
+- 📊 **Onchain Achievement Quadratic Voting**: Quadratic voting for governance
+- 🎁 **Onchain Achievement Retroactive Airdrop**: Claim airdrops from historical snapshots
+- 🔗 **Onchain Achievement Soulbound Tokens**: Non-transferable achievement tokens
+- 👤 **Onchain Achievement Proof of Humanity**: Verified human builder identity
+- 🔮 **Onchain Achievement Reputation Oracle**: Oracle-based reputation scoring
+- 📜 **Onchain Achievement Attestation Registry**: Register verifiable attestations
+- 🆔 **Onchain Achievement Decentralized Identity**: Self-sovereign identity on blockchain
+- 🔐 **Onchain Achievement Zero-Knowledge Proof**: Privacy-preserving proofs
+- 🎯 **Onchain Achievement Conditional Rewards**: Conditional reward distribution
+- 🤖 **Onchain Achievement Automated Governance**: Smart contract-based governance
+- 💎 **Onchain Achievement Reputation Bonding**: Bond reputation for commitments
+- 🔮 **Onchain Achievement Prediction Markets**: Create and trade predictions
+- 🔓 **Onchain Achievement Social Recovery**: Social recovery for accounts
+- 🎮 **Onchain Achievement Gamification Engine**: Level-based gamification system
+- 💰 **Onchain Achievement Dynamic Pricing**: Dynamic pricing based on activity
+- ⛏️ **Onchain Achievement Reputation Mining**: Mine reputation from achievements
+- 🔗 **Onchain Achievement Cross-Protocol Integration**: Integrate with other protocols
+- 💰 **Onchain Achievement Reputation Staking V2**: Enhanced reputation staking
+- 🕸️ **Onchain Achievement Achievement Graph**: Visualize achievement connections
+- 🔥 **Onchain Achievement Reputation Burning**: Burn reputation tokens
+- ⏱️ **Onchain Achievement Time-Weighted Reputation**: Time-weighted scoring
+- 📚 **Onchain Achievement Reputation Lending**: Lend reputation to others
+- 🛡️ **Onchain Achievement Reputation Insurance**: Insure reputation against loss
+- 📈 **Onchain Achievement Reputation Derivatives**: Trade reputation derivatives
+- 🔄 **Onchain Achievement Reputation Swaps**: Swap reputation with others
+- 📊 **Onchain Achievement Reputation Options**: Options trading on reputation
+- 📈 **Onchain Achievement Reputation Futures**: Futures contracts on reputation
+- ⚡ **Onchain Achievement Reputation Perpetuals**: Perpetual contracts for reputation
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
 - ⚡ **Quick Actions**: Fast access to common tasks
