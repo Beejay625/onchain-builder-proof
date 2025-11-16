@@ -7,20 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementRental() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [rentalPrice, setRentalPrice] = useState('')
-  const [duration, setDuration] = useState('')
+  const [rentalDuration, setRentalDuration] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const listForRent = async () => {
-    if (!address || !postId || !rentalPrice || !duration) return
+  const rentAchievement = async () => {
+    if (!address || !rentalDuration) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `RENTAL: ${rentalPrice} ETH for ${duration}`],
+      functionName: 'createPost',
+      args: [`RENTAL: ${rentalDuration} days`],
     })
   }
 
@@ -29,37 +27,21 @@ export default function OnchainAchievementRental() {
       <h2 className="text-2xl font-bold mb-4">⏱️ Achievement Rental</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          step="0.001"
-          placeholder="Rental price (ETH)"
-          value={rentalPrice}
-          onChange={(e) => setRentalPrice(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
           type="text"
-          placeholder="Duration (e.g., 30 days)"
-          value={duration}
-          onChange={(e) => setDuration(e.target.value)}
+          placeholder="Rental duration (days)"
+          value={rentalDuration}
+          onChange={(e) => setRentalDuration(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
-          onClick={listForRent}
+          onClick={rentAchievement}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Listing...' : 'List for Rent'}
+          {isPending || isConfirming ? 'Renting...' : 'Rent Achievement'}
         </button>
-        {isSuccess && <p className="text-green-600">Rental listing created onchain!</p>}
+        {isSuccess && <p className="text-green-600">Rental created onchain!</p>}
       </div>
     </div>
   )
 }
-
