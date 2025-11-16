@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementArbitration() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [dispute, setDispute] = useState('')
+  const [disputeReason, setDisputeReason] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const fileDispute = async () => {
-    if (!address || !postId || !dispute) return
+    if (!address || !disputeReason) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `DISPUTE: ${dispute}`],
+      functionName: 'createPost',
+      args: [`DISPUTE: ${disputeReason}`],
     })
   }
 
@@ -28,17 +27,11 @@ export default function OnchainAchievementArbitration() {
       <h2 className="text-2xl font-bold mb-4">⚖️ Achievement Arbitration</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
+          type="text"
+          placeholder="Dispute reason"
+          value={disputeReason}
+          onChange={(e) => setDisputeReason(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
-        />
-        <textarea
-          placeholder="Dispute description"
-          value={dispute}
-          onChange={(e) => setDispute(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg h-24"
         />
         <button
           onClick={fileDispute}
@@ -52,4 +45,3 @@ export default function OnchainAchievementArbitration() {
     </div>
   )
 }
-

@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementInsurance() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [coverage, setCoverage] = useState('')
+  const [coverageAmount, setCoverageAmount] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const insureAchievement = async () => {
-    if (!address || !postId || !coverage) return
+  const purchaseInsurance = async () => {
+    if (!address || !coverageAmount) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `INSURED: Coverage ${coverage} ETH`],
+      functionName: 'createPost',
+      args: [`INSURANCE: ${coverageAmount} coverage`],
     })
   }
 
@@ -28,30 +27,21 @@ export default function OnchainAchievementInsurance() {
       <h2 className="text-2xl font-bold mb-4">🛡️ Achievement Insurance</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          step="0.001"
-          placeholder="Coverage amount (ETH)"
-          value={coverage}
-          onChange={(e) => setCoverage(e.target.value)}
+          type="text"
+          placeholder="Coverage amount"
+          value={coverageAmount}
+          onChange={(e) => setCoverageAmount(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
-          onClick={insureAchievement}
+          onClick={purchaseInsurance}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Insuring...' : 'Insure Achievement'}
+          {isPending || isConfirming ? 'Purchasing...' : 'Purchase Insurance'}
         </button>
-        {isSuccess && <p className="text-green-600">Insurance recorded onchain!</p>}
+        {isSuccess && <p className="text-green-600">Insurance purchased onchain!</p>}
       </div>
     </div>
   )
 }
-
