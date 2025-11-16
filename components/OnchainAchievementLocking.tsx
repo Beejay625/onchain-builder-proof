@@ -1,20 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementLocking() {
   const { address } = useAccount()
   const [postId, setPostId] = useState('')
-  
-  const { data: post } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-    abi: BuilderProofABI,
-    functionName: 'getPost',
-    args: postId ? [BigInt(postId)] : undefined,
-  })
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
@@ -25,7 +18,7 @@ export default function OnchainAchievementLocking() {
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), 'LOCKED: Achievement permanently locked onchain'],
+      args: [BigInt(postId), 'LOCK: Permanently locked'],
     })
   }
 
@@ -35,7 +28,7 @@ export default function OnchainAchievementLocking() {
       <div className="space-y-4">
         <input
           type="number"
-          placeholder="Post ID"
+          placeholder="Post ID to lock"
           value={postId}
           onChange={(e) => setPostId(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
@@ -43,13 +36,12 @@ export default function OnchainAchievementLocking() {
         <button
           onClick={lockAchievement}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Locking...' : 'Lock Achievement'}
         </button>
-        {isSuccess && <p className="text-green-600">Achievement locked onchain!</p>}
+        {isSuccess && <p className="text-green-600">Locked onchain!</p>}
       </div>
     </div>
   )
 }
-

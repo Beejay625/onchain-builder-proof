@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementAttestation() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
   const [attestation, setAttestation] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const createAttestation = async () => {
-    if (!address || !postId || !attestation) return
+    if (!address || !attestation) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `ATTESTATION: ${attestation}`],
+      functionName: 'createPost',
+      args: [`ATTESTATION: ${attestation}`],
     })
   }
 
@@ -28,28 +27,21 @@ export default function OnchainAchievementAttestation() {
       <h2 className="text-2xl font-bold mb-4">✍️ Achievement Attestation</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <textarea
+          type="text"
           placeholder="Attestation statement"
           value={attestation}
           onChange={(e) => setAttestation(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg h-24"
+          className="w-full px-4 py-2 border rounded-lg"
         />
         <button
           onClick={createAttestation}
           disabled={isPending || isConfirming}
           className="w-full px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Attesting...' : 'Create Attestation'}
+          {isPending || isConfirming ? 'Creating...' : 'Create Attestation'}
         </button>
         {isSuccess && <p className="text-green-600">Attestation created onchain!</p>}
       </div>
     </div>
   )
 }
-
