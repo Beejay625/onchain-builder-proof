@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 250+ Production-Ready Features!
+## 🎉 280+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -284,6 +284,50 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🖼️ **Achievement NFT**: Mint as NFTs
 - 🔗 **Achievement Sharing**: Share achievements
 - 🏪 **Achievement Marketplace**: Trade achievements
+- 📊 **Achievement Analytics**: View comprehensive analytics dashboard
+- 🔐 **Achievement Proof**: Generate verifiable achievement proofs
+- ✓ **Achievement Verification**: Verify achievements onchain
+- ⭐ **Achievement Endorsements**: Create endorsements for achievements
+- 🔗 **Achievement Proof Links**: Direct links to BaseScan verification
+- 🌉 **Cross-Chain Bridge**: Bridge achievements across chains
+- 🔒 **Immutable History**: View permanent onchain records
+- 📥 **Achievement Export**: Export achievements in JSON format
+- 📥 **Achievement Import**: Import achievements from backups
+- 💾 **Achievement Backup**: Create backups of onchain data
+- 🔍 **Achievement Search**: Search achievements onchain
+- 📄 **Achievement Pagination**: Browse with pagination
+- 🤝 **Achievement Collaboration**: Request collaborations
+- 💡 **Achievement Recommendations**: Get personalized recommendations
+- 📰 **Achievement Feed**: Real-time activity feed
+- 🎛️ **Achievement Widgets**: Customizable dashboard widgets
+- 💬 **Achievement Comments**: Add comments onchain
+- ❤️ **Achievement Reactions**: React to achievements
+- 💰 **Achievement Tips**: Send tips to builders
+- 👥 **Follow Builders**: Follow other builders
+- 🚨 **Achievement Reports**: Report inappropriate content
+- ⚖️ **Achievement Moderation**: Moderate achievements
+- 🔒 **Achievement Privacy**: Configure privacy settings
+- 🔔 **Achievement Notifications**: Real-time notifications
+- ⚙️ **Achievement Settings**: Manage settings onchain
+- ✅ **Dispute Resolution**: Resolve disputes onchain
+- 🎯 **Skill Endorsement**: Endorse builder skills
+- 💰 **Reputation Staking**: Stake reputation tokens
+- 🤝 **Collaboration Proof**: Prove collaborations
+- ✅ **Skill Verification**: Verify skills with proofs
+- 📊 **Contribution Tracking**: Track all contributions
+- 🎁 **Milestone Rewards**: Claim milestone rewards
+- 🏆 **Builder Rankings**: View top builders
+- ✅ **Project Verification**: Verify projects
+- 💻 **Code Contribution Proof**: Prove code contributions
+- 🚀 **Deployment Proof**: Prove deployments
+- 🌐 **Community Contribution**: Track community contributions
+- 📚 **Learning Path Tracking**: Track learning progress
+- 👥 **Builder Teams**: Create and manage teams
+- 🎫 **Reputation Delegation**: Delegate reputation
+- 📊 **Skill Assessments**: Submit assessments
+- 🌉 **Cross-Chain Proofs**: Create cross-chain proofs
+- 🎓 **Builder Certificates**: Mint certificates
+- ⚖️ **Reputation Weighting**: Weighted voting system
 - 💸 **Onchain Retroactive Funding**: Allocate funding based on onchain achievement history
 - 📦 **Onchain Grant Milestone Tracking**: Track grant milestones and payouts onchain
 - 🚀 **Onchain Hackathon Rewards**: Distribute hackathon rewards using onchain submissions
@@ -517,7 +561,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **250+ Features**: Complete builder achievement platform with extensive onchain capabilities
+- **280+ Features**: Complete builder achievement platform with extensive onchain capabilities
 - **180+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
