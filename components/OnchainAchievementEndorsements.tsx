@@ -1,0 +1,48 @@
+'use client'
+
+import { useState } from 'react'
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
+
+export default function OnchainAchievementEndorsements() {
+  const { address } = useAccount()
+  const [endorsement, setEndorsement] = useState('')
+  
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+
+  const createEndorsement = async () => {
+    if (!address || !endorsement) return
+    writeContract({
+      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+      abi: BuilderProofABI,
+      functionName: 'createPost',
+      args: [`ENDORSE: ${endorsement}`],
+    })
+  }
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h2 className="text-2xl font-bold mb-4">⭐ Achievement Endorsements</h2>
+      <div className="space-y-4">
+        <input
+          type="text"
+          placeholder="Endorsement message"
+          value={endorsement}
+          onChange={(e) => setEndorsement(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg"
+        />
+        <button
+          onClick={createEndorsement}
+          disabled={isPending || isConfirming}
+          className="w-full px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 disabled:opacity-50"
+        >
+          {isPending || isConfirming ? 'Creating...' : 'Create Endorsement'}
+        </button>
+        {isSuccess && <p className="text-green-600">Endorsement created onchain!</p>}
+      </div>
+    </div>
+  )
+}
+
