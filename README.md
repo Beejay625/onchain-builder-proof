@@ -587,6 +587,10 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🎯 **Onchain Achievement Advancement Score**: Measure advancement of achievements
 - ⬆️ **Onchain Builder Ascension Index**: Track ascension through achievements
 - 🌟 **Onchain Achievement Transcendence Score**: Measure transcendence of achievements
+- 🎯 **Onchain Builder Convergence Index**: Measure convergence of achievements
+- 🔗 **Onchain Achievement Unification Score**: Measure unification of achievements
+- 🔄 **Onchain Builder Synchronization Index**: Measure synchronization of achievements
+- 📦 **Onchain Achievement Consolidation Score**: Measure consolidation of achievements
 - 🔗 **Onchain Achievement Reown Integration**: Seamless integration with Reown wallet for achievement verification
 - 📜 **Onchain Achievement Smart Contracts**: View verified smart contract details for achievements
 - 📋 **Onchain Achievement Event Logging**: Log all events onchain for transparency and auditability
