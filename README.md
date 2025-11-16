@@ -357,6 +357,40 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🛡️ **Onchain Safety Score**: Compute safety scores from dispute history
 - 🏅 **Onchain Builder Reputation Badges**: Mint dynamic reputation-aware badges
 - 📝 **Onchain Grant Reviewer Reputation**: Track reviewer performance onchain
+- 💼 **Onchain Builder Portfolio**: Aggregate all achievements into a comprehensive portfolio
+- 📊 **Onchain Achievement Impact**: Measure the impact of achievements onchain
+- ⭐ **Onchain Builder Credibility**: Calculate credibility based on onchain achievements
+- 🎓 **Onchain Skill Certification**: Certify skills with onchain verification
+- 👍 **Onchain Builder Endorsements**: Endorse builders with verifiable statements
+- 🏅 **Onchain Achievement Recognition**: Get recognized for onchain achievements
+- 🌐 **Onchain Builder Network**: Build network of builders through achievements
+- 📈 **Onchain Achievement Metrics**: Track performance metrics for achievements
+- 🎖️ **Onchain Skill Badges**: Earn skill badges based on achievements
+- 🔐 **Onchain Achievement Proofs**: Generate verifiable proofs for achievements
+- ⭐ **Onchain Builder Reputation System**: Build reputation through achievements
+- ⚡ **Onchain Achievement Performance**: Track achievement performance over time
+- 🤝 **Onchain Builder Collaboration**: Record collaborations onchain
+- 🎯 **Onchain Achievement Milestones**: Track progress toward milestones
+- ✅ **Onchain Skill Validation**: Validate skills with proof links
+- 🏆 **Onchain Builder Achievements**: View all earned achievements
+- 🔐 **Onchain Achievement Proof Generation**: Generate proofs for achievements
+- ✓ **Onchain Skill Verification**: Verify skills with verifier addresses
+- 🕸️ **Onchain Builder Network Graph**: Visualize builder network connections
+- ✅ **Onchain Achievement Validation System**: Validate achievements onchain
+- 📝 **Onchain Skill Assessment System**: Submit and track skill assessments
+- 📊 **Onchain Builder Credibility Metrics**: Track credibility and trust metrics
+- 📈 **Onchain Achievement Impact Metrics**: Measure impact and reach of achievements
+- 🔍 **Onchain Builder Network Analysis**: Analyze network strength and connections
+- ✓ **Onchain Achievement Verification System**: Verify achievements with proofs
+- ⭐ **Onchain Builder Reputation Score**: Track reputation score and tier
+- 📅 **Onchain Achievement Timeline**: View achievement timeline visualization
+- ⭐ **Onchain Builder Credibility Score**: Track credibility score with levels
+- 📊 **Onchain Achievement Analytics**: Comprehensive analytics dashboard
+- 🌐 **Onchain Builder Network Metrics**: Track network size and density
+- 📈 **Onchain Achievement Progress**: Track progress toward achievement goals
+- 🏅 **Onchain Builder Reputation Badges**: Earn reputation badges based on achievements
+- 📊 **Onchain Achievement Stats**: View comprehensive statistics
+- 🛡️ **Onchain Builder Trust Score**: Build trust through verified achievements
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
 - ⚡ **Quick Actions**: Fast access to common tasks
