@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementMultiSig() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [signers, setSigners] = useState('')
+  const [signerAddress, setSignerAddress] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const setupMultiSig = async () => {
-    if (!address || !postId || !signers) return
+  const addSigner = async () => {
+    if (!address || !signerAddress) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `MULTISIG: Required signers: ${signers}`],
+      functionName: 'createPost',
+      args: [`MULTISIG: Add signer ${signerAddress}`],
     })
   }
 
@@ -28,29 +27,21 @@ export default function OnchainAchievementMultiSig() {
       <h2 className="text-2xl font-bold mb-4">🔐 Achievement Multi-Sig</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
           type="text"
-          placeholder="Signer addresses (comma-separated)"
-          value={signers}
-          onChange={(e) => setSigners(e.target.value)}
+          placeholder="Signer address"
+          value={signerAddress}
+          onChange={(e) => setSignerAddress(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
-          onClick={setupMultiSig}
+          onClick={addSigner}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50"
         >
-          {isPending || isConfirming ? 'Setting up...' : 'Setup Multi-Sig'}
+          {isPending || isConfirming ? 'Adding...' : 'Add Signer'}
         </button>
-        {isSuccess && <p className="text-green-600">Multi-sig setup recorded onchain!</p>}
+        {isSuccess && <p className="text-green-600">Signer added onchain!</p>}
       </div>
     </div>
   )
 }
-
