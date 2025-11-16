@@ -18,7 +18,7 @@ export default function OnchainAchievementArchiving() {
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), 'ARCHIVED: Achievement archived onchain'],
+      args: [BigInt(postId), 'ARCHIVE: Archived'],
     })
   }
 
@@ -28,7 +28,7 @@ export default function OnchainAchievementArchiving() {
       <div className="space-y-4">
         <input
           type="number"
-          placeholder="Post ID"
+          placeholder="Post ID to archive"
           value={postId}
           onChange={(e) => setPostId(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
@@ -36,13 +36,12 @@ export default function OnchainAchievementArchiving() {
         <button
           onClick={archiveAchievement}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-stone-600 text-white rounded-lg hover:bg-stone-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Archiving...' : 'Archive Achievement'}
         </button>
-        {isSuccess && <p className="text-green-600">Achievement archived onchain!</p>}
+        {isSuccess && <p className="text-green-600">Archived onchain!</p>}
       </div>
     </div>
   )
 }
-

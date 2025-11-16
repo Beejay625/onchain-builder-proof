@@ -18,7 +18,7 @@ export default function OnchainAchievementPinning() {
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), 'PINNED: Achievement pinned to profile'],
+      args: [BigInt(postId), 'PIN: Pinned to profile'],
     })
   }
 
@@ -28,7 +28,7 @@ export default function OnchainAchievementPinning() {
       <div className="space-y-4">
         <input
           type="number"
-          placeholder="Post ID"
+          placeholder="Post ID to pin"
           value={postId}
           onChange={(e) => setPostId(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
@@ -36,13 +36,12 @@ export default function OnchainAchievementPinning() {
         <button
           onClick={pinAchievement}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Pinning...' : 'Pin Achievement'}
         </button>
-        {isSuccess && <p className="text-green-600">Achievement pinned onchain!</p>}
+        {isSuccess && <p className="text-green-600">Pinned onchain!</p>}
       </div>
     </div>
   )
 }
-
