@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementRoyalties() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
   const [royaltyRate, setRoyaltyRate] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const setRoyalties = async () => {
-    if (!address || !postId || !royaltyRate) return
+    if (!address || !royaltyRate) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `ROYALTIES: ${royaltyRate}%`],
+      functionName: 'createPost',
+      args: [`ROYALTY: ${royaltyRate}%`],
     })
   }
 
@@ -28,15 +27,7 @@ export default function OnchainAchievementRoyalties() {
       <h2 className="text-2xl font-bold mb-4">💰 Achievement Royalties</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          step="0.1"
+          type="text"
           placeholder="Royalty rate (%)"
           value={royaltyRate}
           onChange={(e) => setRoyaltyRate(e.target.value)}
@@ -54,4 +45,3 @@ export default function OnchainAchievementRoyalties() {
     </div>
   )
 }
-

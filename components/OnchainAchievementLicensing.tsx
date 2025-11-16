@@ -7,19 +7,18 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 
 export default function OnchainAchievementLicensing() {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [license, setLicense] = useState('')
+  const [licenseType, setLicenseType] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const addLicense = async () => {
-    if (!address || !postId || !license) return
+    if (!address || !licenseType) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `LICENSE: ${license}`],
+      functionName: 'createPost',
+      args: [`LICENSE: ${licenseType}`],
     })
   }
 
@@ -28,29 +27,21 @@ export default function OnchainAchievementLicensing() {
       <h2 className="text-2xl font-bold mb-4">📜 Achievement Licensing</h2>
       <div className="space-y-4">
         <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
           type="text"
-          placeholder="License type (MIT, Apache, etc.)"
-          value={license}
-          onChange={(e) => setLicense(e.target.value)}
+          placeholder="License type"
+          value={licenseType}
+          onChange={(e) => setLicenseType(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
         <button
           onClick={addLicense}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Adding...' : 'Add License'}
         </button>
-        {isSuccess && <p className="text-green-600">License recorded onchain!</p>}
+        {isSuccess && <p className="text-green-600">License added onchain!</p>}
       </div>
     </div>
   )
 }
-
