@@ -5,67 +5,43 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-interface OnchainAchievementChallengesProps {
-  achievementId: bigint
-}
-
-export default function OnchainAchievementChallenges({ achievementId }: OnchainAchievementChallengesProps) {
+export default function OnchainAchievementChallenges() {
   const { address } = useAccount()
   const [challengeName, setChallengeName] = useState('')
-  const [challengeDescription, setChallengeDescription] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
-    hash,
-  })
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const createChallenge = async () => {
-    if (!address || !challengeName.trim()) return
-    
-    const challengeData = `ACHIEVEMENT_CHALLENGE: ${challengeName} - ${challengeDescription || 'No description'}`
-    
+    if (!address || !challengeName) return
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [achievementId, challengeData],
+      functionName: 'createPost',
+      args: [`CHALLENGE: ${challengeName}`],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold mb-4">🎯 Onchain Achievement Challenges</h3>
-      
-      <input
-        type="text"
-        value={challengeName}
-        onChange={(e) => setChallengeName(e.target.value)}
-        placeholder="Challenge name"
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-      />
-      
-      <textarea
-        value={challengeDescription}
-        onChange={(e) => setChallengeDescription(e.target.value)}
-        placeholder="Challenge description..."
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-        rows={3}
-      />
-      
-      <button
-        onClick={createChallenge}
-        disabled={isPending || isConfirming || !challengeName.trim()}
-        className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-gray-400"
-      >
-        {isPending || isConfirming ? 'Creating...' : 'Create Challenge'}
-      </button>
-
-      {isSuccess && (
-        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
-          ✓ Challenge created onchain
-        </div>
-      )}
+      <h2 className="text-2xl font-bold mb-4">🎯 Achievement Challenges</h2>
+      <div className="space-y-4">
+        <input
+          type="text"
+          placeholder="Challenge name"
+          value={challengeName}
+          onChange={(e) => setChallengeName(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg"
+        />
+        <button
+          onClick={createChallenge}
+          disabled={isPending || isConfirming}
+          className="w-full px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 disabled:opacity-50"
+        >
+          {isPending || isConfirming ? 'Creating...' : 'Create Challenge'}
+        </button>
+        {isSuccess && <p className="text-green-600">Challenge created onchain!</p>}
+      </div>
     </div>
   )
 }
