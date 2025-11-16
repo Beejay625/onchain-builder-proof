@@ -18,8 +18,8 @@ export default function OnchainAchievementDisputeResolution() {
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`RESOLVE: ${disputeId} - ${resolution}`],
+      functionName: 'addComment',
+      args: [BigInt(0), `RESOLUTION: ${disputeId} - ${resolution}`],
     })
   }
 
@@ -34,17 +34,17 @@ export default function OnchainAchievementDisputeResolution() {
           onChange={(e) => setDisputeId(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
         />
-        <input
-          type="text"
-          placeholder="Resolution"
+        <textarea
+          placeholder="Resolution details"
           value={resolution}
           onChange={(e) => setResolution(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg"
+          rows={3}
         />
         <button
           onClick={resolveDispute}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50"
         >
           {isPending || isConfirming ? 'Resolving...' : 'Resolve Dispute'}
         </button>
@@ -53,4 +53,3 @@ export default function OnchainAchievementDisputeResolution() {
     </div>
   )
 }
-
