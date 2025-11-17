@@ -478,6 +478,44 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ✨ **Onchain Achievement Reward Multiplier**: Dynamic reward multipliers
 - 💧 **Onchain Achievement Liquidity Pool**: Add liquidity to achievement pools
 - 🌾 **Onchain Achievement Yield Farming**: Earn yield from achievement staking
+- 🔒 **Onchain Achievement Reputation Collateral**: Lock reputation as collateral
+- 💧 **Onchain Achievement Reputation Liquidation**: Liquidation threshold management
+- ⚡ **Onchain Achievement Reputation Flash Loans**: Flash loan reputation tokens
+- 🔨 **Onchain Achievement Reputation Auction**: Auction reputation tokens
+- 📊 **Onchain Achievement Reputation Vesting**: Vest reputation over time
+- 💧 **Onchain Achievement Reputation Streaming**: Stream reputation payments
+- 🔢 **Onchain Achievement Reputation Fractionalization**: Fractionalize reputation
+- 📊 **Onchain Achievement Reputation Aggregation**: Aggregate reputation scores
+- 🧩 **Onchain Achievement Reputation Composability**: Compose reputation across protocols
+- 📦 **Onchain Achievement Reputation Portability**: Transfer reputation across chains
+- 🌉 **Onchain Achievement Reputation Interoperability**: Bridge reputation to other protocols
+- 🧪 **Onchain Achievement Reputation Synthetic**: Create synthetic reputation tokens
+- 📈 **Onchain Achievement Reputation Index**: Track reputation index value
+- 🌾 **Onchain Achievement Reputation Yield**: Calculate reputation yield
+- 📊 **Onchain Achievement Reputation APR**: Annual percentage rate for reputation
+- 🔄 **Onchain Achievement Reputation Rebasing**: Daily rebase adjustments
+- 🪞 **Onchain Achievement Reputation Reflection**: Auto-distribute to holders
+- 🔄 **Onchain Achievement Reputation Auto-Compounding**: Automatic yield compounding
+- ⛏️ **Onchain Achievement Reputation Liquidity Mining**: Mine reputation from LP tokens
+- 🎁 **Onchain Achievement Reputation Staking Rewards**: Earn rewards from staking
+- 🗳️ **Onchain Achievement Reputation Governance Tokens**: Governance token distribution
+- 🗳️ **Onchain Achievement Reputation Voting Power**: Calculate voting power
+- 📸 **Onchain Achievement Reputation Snapshot**: Create reputation snapshots
+- 🌳 **Onchain Achievement Reputation Merklization**: Merkle tree proofs
+- ⛓️ **Onchain Achievement Reputation Proof of Stake**: Stake for validation rights
+- ⚔️ **Onchain Achievement Reputation Slashing**: Slash reputation for misbehavior
+- 👤 **Onchain Achievement Reputation Delegation V2**: Enhanced delegation system
+- ↩️ **Onchain Achievement Reputation Undelegation**: Undelegate reputation
+- ⚖️ **Onchain Achievement Reputation Reweighting**: Dynamic weight adjustment
+- 📉 **Onchain Achievement Reputation Decay**: Reputation decay over time
+- 📈 **Onchain Achievement Reputation Recovery**: Recover reputation through activity
+- 📊 **Onchain Achievement Reputation Inflation**: Track inflation rates
+- 📉 **Onchain Achievement Reputation Deflation**: Deflation mechanisms
+- ⚖️ **Onchain Achievement Reputation Stabilization**: Price stability features
+- 📌 **Onchain Achievement Reputation Pegging**: Peg reputation value
+- 💰 **Onchain Achievement Reputation Backing**: Collateral backing ratio
+- 🏦 **Onchain Achievement Reputation Reserve**: Treasury reserve management
+- 📊 **Onchain Achievement Reputation Supply**: Track total supply
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
 - ⚡ **Quick Actions**: Fast access to common tasks
