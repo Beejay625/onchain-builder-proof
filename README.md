@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 370+ Production-Ready Features!
+## 🎉 414+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -521,6 +521,50 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⚡ **Quick Actions**: Fast access to common tasks
 - 🎨 **Modern UI**: Beautiful, responsive interface with Tailwind CSS
 - 📱 **Mobile Responsive**: Optimized for all screen sizes
+- ❤️ **Reaction Button**: Add reactions to achievements
+- 👥 **Follow Button**: Follow other builders
+- 🔍 **Search Bar**: Search achievements across platform
+- 🏷️ **Category Filter**: Filter achievements by category
+- 📊 **Sort Filter**: Sort achievements by various criteria
+- ⏳ **Loading Spinner**: Visual loading indicators
+- 🖼️ **NFT Badge Gallery**: View NFT badge collection
+- 📊 **Collection Stats**: View collection statistics
+- 📊 **Builder Stats**: View builder statistics
+- 📊 **Badge Analytics**: Analyze badge performance
+- 🔔 **Notification Center**: Centralized notification hub
+- ⚙️ **Settings Panel**: Manage user settings
+- 🔒 **Privacy Controls**: Configure privacy settings
+- 🎨 **Theme Switcher**: Switch between light/dark themes
+- 🌐 **Language Selector**: Select preferred language
+- ❓ **Help Center**: Access help documentation
+- 💬 **Feedback Form**: Submit feedback and suggestions
+- 🚨 **Report Button**: Report inappropriate content
+- 🚫 **Block Button**: Block users onchain
+- 🔇 **Mute Button**: Mute users onchain
+- 🔗 **Copy Link Button**: Copy achievement links
+- 📱 **QR Code**: Generate QR codes for achievements
+- 📝 **Embed Code**: Get embed code for achievements
+- 🖨️ **Print Button**: Print achievements
+- 💾 **Download Button**: Download achievements
+- 🔄 **Refresh Button**: Refresh achievement data
+- 💾 **Backup Button**: Backup achievements
+- 📥 **Restore Button**: Restore from backup
+- 📜 **Version History**: View version history
+- 📋 **Changelog**: View platform changelog
+- 📄 **Terms of Service**: View terms of service
+- 🔒 **Privacy Policy**: View privacy policy
+- 🍪 **Cookie Consent**: Manage cookie preferences
+- ♿ **Accessibility Settings**: Configure accessibility options
+- ⌨️ **Keyboard Shortcuts**: View keyboard shortcuts
+- ℹ️ **About Page**: Learn about the platform
+- 📧 **Contact Page**: Contact support
+- 🎫 **Support Ticket**: Submit support tickets
+- 🐛 **Bug Report**: Report bugs
+- 💡 **Feature Request**: Request new features
+- 📊 **Status Page**: View platform status
+- ⏱️ **Rate Limit**: View rate limit status
+- 🔧 **Maintenance Mode**: Maintenance mode indicator
+- ⚠️ **Error Boundary**: Error handling component
 
 ### NFT Badge Management
 - 🏅 **Badge Gallery**: Display wallet badges in gallery view
