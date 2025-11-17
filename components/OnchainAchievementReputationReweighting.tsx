@@ -4,7 +4,7 @@ import { useAccount, useReadContract } from 'wagmi'
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementReputationDecay() {
+export default function OnchainAchievementReputationReweighting() {
   const { address } = useAccount()
   
   const { data: userPosts } = useReadContract({
@@ -15,18 +15,19 @@ export default function OnchainAchievementReputationDecay() {
     query: { enabled: !!address },
   })
 
-  const decayRate = (userPosts?.length || 0) * 0.02
+  const reweightFactor = (userPosts?.length || 0) * 0.3
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📉 Reputation Decay</h2>
+      <h2 className="text-2xl font-bold mb-4">⚖️ Reputation Reweighting</h2>
       <div className="space-y-2">
-        <p className="text-4xl font-bold text-red-600">{decayRate.toFixed(3)}%</p>
-        <p className="text-gray-600">Daily decay rate</p>
+        <p className="text-4xl font-bold text-orange-600">{reweightFactor.toFixed(2)}</p>
+        <p className="text-gray-600">Reweight factor</p>
         <p className="text-sm text-gray-500">
-          Without new activity
+          Dynamic weight adjustment
         </p>
       </div>
     </div>
   )
 }
+
