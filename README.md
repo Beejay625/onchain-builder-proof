@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 474+ Production-Ready Features!
+## 🎉 504+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -216,6 +216,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📜 **Onchain Attestation**: Create verifiable attestations
 - 🔗 **Onchain Achievement Chain**: Visualize achievement chain connections
 - 🗳️ **Onchain Voting**: Vote on achievements with upvote/downvote system
+- ⏳ **Onchain Time Capsule**: Lock achievements for future reveal with timestamps
+- 🔗 **Onchain Chain of Trust**: Build trust network through verified connections
+- 🏅 **Onchain Merit Badges**: Earn skill-based merit badges with levels
+- 👥 **Onchain Peer Review**: Submit peer reviews with ratings for validation
+- 📊 **Onchain Impact Measurement**: Track real-world impact and metrics
+- 🌱 **Onchain Carbon Footprint**: Record environmental impact and offsets
+- 🛡️ **Onchain IP Protection**: Protect intellectual property with hash verification
+- 📜 **Onchain Licensing**: Issue licenses for achievement distribution
+- 📡 **Onchain Syndication**: Syndicate achievements across platforms
+- 🔔 **Onchain Webhooks**: Register webhooks for real-time event notifications
+- 🔮 **Onchain Oracles**: Verify achievements with external oracle data
+- 🗳️ **Onchain Multi-Sig Voting**: Multi-signature voting for proposals
+- ⏰ **Onchain Time-Based Rewards**: Rewards based on holding duration
+- 💹 **Onchain Compound Interest**: Compound rewards over time automatically
+- 🏊 **Onchain Delegation Pools**: Pool delegation for efficient voting
+- 🌉 **Onchain Cross-Protocol Bridges**: Bridge achievements to other protocols
+- 🖼️ **Onchain NFT Metadata**: Store rich NFT metadata onchain
+- 💰 **Onchain Royalty Splits**: Automatic royalty distribution to multiple recipients
+- 🎯 **Onchain Automated Milestones**: Auto-trigger milestones based on conditions
+- 🔗 **Onchain Smart Contract Integration**: Integrate with external smart contracts
+- ⛽ **Onchain Gas Optimization**: Track and optimize gas usage
+- 📦 **Onchain Batch Operations**: Execute multiple operations in one transaction
+- 🌳 **Onchain Merkle Proofs**: Efficient validation using Merkle trees
+- 🔐 **Onchain Zero-Knowledge Proofs**: Privacy-preserving proof verification
+- 🔗 **Onchain Soulbound Tokens**: Mint non-transferable achievement tokens
+- 💲 **Onchain Dynamic Pricing**: Market-based dynamic pricing system
+- 🔮 **Onchain Prediction Markets**: Create markets for achievement forecasting
+- 🕸️ **Onchain Social Graph**: Build and visualize builder network connections
+- ⛓️ **Onchain Achievement Chains**: Link sequential achievements together
+- 🔌 **Onchain Reown Integration**: Enhanced Reown wallet connectivity features
 - 🍴 **Achievement Forking**: Fork achievements to create derivatives
 - 💰 **Achievement Sponsorship**: Sponsor achievements with ETH contributions
 - 🎯 **Achievement Bounty**: Create bounties for achievement completion
