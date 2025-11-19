@@ -5,43 +5,70 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementStaking() {
+interface OnchainAchievementStakingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementStaking({ achievementId }: OnchainAchievementStakingProps) {
   const { address } = useAccount()
   const [stakeAmount, setStakeAmount] = useState('')
+  const [duration, setDuration] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const stakeAchievement = async () => {
-    if (!address || !stakeAmount) return
+    if (!address || !stakeAmount.trim()) return
+    
+    const stakeData = `STAKE: ${stakeAmount} ETH${duration ? ` | duration: ${duration} days` : ''}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`STAKE: ${stakeAmount} ETH`],
+      functionName: 'addComment',
+      args: [achievementId, stakeData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🔒 Achievement Staking</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Stake amount"
-          value={stakeAmount}
-          onChange={(e) => setStakeAmount(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={stakeAchievement}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Staking...' : 'Stake Achievement'}
-        </button>
-        {isSuccess && <p className="text-green-600">Staked onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">🔒 Achievement Staking</h3>
+      
+      <input
+        type="number"
+        value={stakeAmount}
+        onChange={(e) => setStakeAmount(e.target.value)}
+        placeholder="Stake amount (ETH)"
+        step="0.001"
+        min="0"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <input
+        type="number"
+        value={duration}
+        onChange={(e) => setDuration(e.target.value)}
+        placeholder="Duration in days (optional)"
+        min="1"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={stakeAchievement}
+        disabled={isPending || isConfirming || !stakeAmount.trim()}
+        className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Staking...' : 'Stake Achievement Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Staking recorded onchain
+        </div>
+      )}
     </div>
   )
 }
