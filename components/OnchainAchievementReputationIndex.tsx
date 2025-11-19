@@ -1,33 +1,63 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationIndex() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+  const [indexType, setIndexType] = useState('total')
+
+  const { data: indexValue, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    functionName: 'getReputationIndex',
+    args: [indexType],
+    query: {
+      enabled: !!address && isConnected,
+    },
   })
 
-  const indexValue = (userPosts?.length || 0) * 1.2
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">📊 Reputation Index</h3>
+        <p className="text-gray-600">Connect wallet to view index</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📈 Reputation Index</h2>
-      <div className="space-y-2">
-        <p className="text-4xl font-bold text-green-600">{indexValue.toFixed(2)}</p>
-        <p className="text-gray-600">Index value</p>
-        <p className="text-sm text-gray-500">
-          Based on {userPosts?.length || 0} achievements
-        </p>
+      <h3 className="text-xl font-semibold mb-4">📊 Reputation Index</h3>
+      <p className="text-gray-600 mb-4">
+        Track reputation index value across platform onchain
+      </p>
+      
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium mb-2">Index Type</label>
+          <select
+            value={indexType}
+            onChange={(e) => setIndexType(e.target.value)}
+            className="w-full p-2 border rounded-lg"
+          >
+            <option value="total">Total Reputation</option>
+            <option value="average">Average Reputation</option>
+            <option value="median">Median Reputation</option>
+          </select>
+        </div>
+
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading index...</div>
+        ) : indexValue !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Reputation Index</p>
+            <p className="text-3xl font-bold text-blue-600">{indexValue?.toString() || '0'}</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
