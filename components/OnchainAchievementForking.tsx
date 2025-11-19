@@ -5,43 +5,62 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementForking() {
+interface OnchainAchievementForkingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementForking({ achievementId }: OnchainAchievementForkingProps) {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
+  const [forkDescription, setForkDescription] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const forkAchievement = async () => {
-    if (!address || !postId) return
+    if (!address) return
+    
+    const forkData = `FORK: ${achievementId}${forkDescription ? ` | ${forkDescription}` : ''}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), 'FORK: Creating derivative'],
+      functionName: 'createPost',
+      args: [forkData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🍴 Achievement Forking</h2>
-      <div className="space-y-4">
-        <input
-          type="number"
-          placeholder="Post ID to fork"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={forkAchievement}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Forking...' : 'Fork Achievement'}
-        </button>
-        {isSuccess && <p className="text-green-600">Forked onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">🍴 Fork Achievement</h3>
+      
+      <p className="text-sm text-gray-600 mb-4">
+        Create a derivative achievement based on this one
+      </p>
+      
+      <textarea
+        value={forkDescription}
+        onChange={(e) => setForkDescription(e.target.value)}
+        placeholder="Describe your fork (optional)"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+        rows={3}
+      />
+      
+      <button
+        onClick={forkAchievement}
+        disabled={isPending || isConfirming}
+        className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Forking...' : 'Fork Achievement Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Fork created onchain
+        </div>
+      )}
     </div>
   )
 }
