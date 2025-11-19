@@ -1,15 +1,63 @@
 'use client'
 
-export default function OnchainAchievementAnalytics() {
+import { useAccount, useReadContract } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
+
+interface OnchainAchievementAnalyticsProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementAnalytics({ achievementId }: OnchainAchievementAnalyticsProps) {
+  const { address } = useAccount()
+  
+  const { data: post, isLoading } = useReadContract({
+    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+    abi: BuilderProofABI,
+    functionName: 'getPost',
+    args: [achievementId],
+  })
+
+  if (isLoading || !post) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-bold mb-4">📊 Analytics</h3>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    )
+  }
+
+  const engagementRate = post.comments > 0 
+    ? ((Number(post.likes) / Number(post.comments)) * 100).toFixed(1)
+    : '0'
+
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-2">📊 Achievement Analytics</h2>
-      <p className="text-gray-700 mb-2">
-        Comprehensive analytics dashboard from onchain data.
-      </p>
-      <p className="text-gray-500 text-sm">
-        Detailed analytics and insights.
-      </p>
+      <h3 className="text-xl font-bold mb-4">📊 Achievement Analytics</h3>
+      
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <p className="text-2xl font-bold text-blue-600">{post.likes.toString()}</p>
+          <p className="text-sm text-gray-600">Likes</p>
+        </div>
+        
+        <div className="bg-green-50 p-4 rounded-lg">
+          <p className="text-2xl font-bold text-green-600">{post.comments.toString()}</p>
+          <p className="text-sm text-gray-600">Comments</p>
+        </div>
+        
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <p className="text-2xl font-bold text-purple-600">{engagementRate}%</p>
+          <p className="text-sm text-gray-600">Engagement Rate</p>
+        </div>
+        
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <p className="text-2xl font-bold text-yellow-600">
+            {Math.floor((Date.now() - Number(post.timestamp) * 1000) / (1000 * 60 * 60 * 24))}
+          </p>
+          <p className="text-sm text-gray-600">Days Old</p>
+        </div>
+      </div>
     </div>
   )
 }
