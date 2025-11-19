@@ -5,52 +5,75 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementVoting() {
+interface OnchainAchievementVotingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementVoting({ achievementId }: OnchainAchievementVotingProps) {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [voteType, setVoteType] = useState('upvote')
+  const [voteType, setVoteType] = useState<'upvote' | 'downvote'>('upvote')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const castVote = async () => {
-    if (!address || !postId) return
+    if (!address) return
+    
+    const voteData = `VOTE: ${voteType}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), `VOTE: ${voteType}`],
+      args: [achievementId, voteData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🗳️ Achievement Voting</h2>
-      <div className="space-y-4">
-        <input
-          type="number"
-          placeholder="Post ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <select
-          value={voteType}
-          onChange={(e) => setVoteType(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        >
-          <option value="upvote">Upvote</option>
-          <option value="downvote">Downvote</option>
-        </select>
-        <button
-          onClick={castVote}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Voting...' : 'Cast Vote'}
-        </button>
-        {isSuccess && <p className="text-green-600">Vote cast onchain!</p>}
+      <h3 className="text-xl font-bold mb-4">🗳️ Voting</h3>
+      
+      <div className="flex gap-4 mb-4">
+        <label className="flex items-center gap-2">
+          <input
+            type="radio"
+            value="upvote"
+            checked={voteType === 'upvote'}
+            onChange={(e) => setVoteType(e.target.value as 'upvote')}
+          />
+          <span>Upvote</span>
+        </label>
+        <label className="flex items-center gap-2">
+          <input
+            type="radio"
+            value="downvote"
+            checked={voteType === 'downvote'}
+            onChange={(e) => setVoteType(e.target.value as 'downvote')}
+          />
+          <span>Downvote</span>
+        </label>
       </div>
+      
+      <button
+        onClick={castVote}
+        disabled={isPending || isConfirming}
+        className={`w-full px-4 py-2 rounded-lg disabled:bg-gray-400 ${
+          voteType === 'upvote'
+            ? 'bg-green-600 hover:bg-green-700 text-white'
+            : 'bg-red-600 hover:bg-red-700 text-white'
+        }`}
+      >
+        {isPending || isConfirming ? 'Voting...' : `Cast ${voteType} Onchain`}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Vote recorded onchain
+        </div>
+      )}
     </div>
   )
 }
