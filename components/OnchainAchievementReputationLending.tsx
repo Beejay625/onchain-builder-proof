@@ -1,56 +1,89 @@
 'use client'
 
-import { useState } from 'react'
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationLending() {
-  const { address } = useAccount()
-  const [borrower, setBorrower] = useState('')
-  const [amount, setAmount] = useState('')
-  
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const { address, isConnected } = useAccount()
+  const [lendAmount, setLendAmount] = useState('')
+  const [interestRate, setInterestRate] = useState('5')
 
-  const lendReputation = async () => {
-    if (!address || !borrower || !amount) return
-    writeContract({
-      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-      abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(0), `LEND: ${amount} to ${borrower}`],
-    })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess: isConfirmed } = 
+    useWaitForTransactionReceipt({ hash })
+
+  const handleLendReputation = async () => {
+    if (!isConnected || !address) return
+
+    try {
+      writeContract({
+        address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'lendReputation',
+        args: [BigInt(lendAmount), BigInt(interestRate)],
+      })
+    } catch (error) {
+      console.error('Error lending reputation:', error)
+    }
+  }
+
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">💸 Reputation Lending</h3>
+        <p className="text-gray-600">Connect wallet to lend reputation</p>
+      </div>
+    )
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📚 Reputation Lending</h2>
+      <h3 className="text-xl font-semibold mb-4">💸 Reputation Lending</h3>
+      <p className="text-gray-600 mb-4">
+        Lend reputation tokens to other builders onchain
+      </p>
+      
       <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Borrower address"
-          value={borrower}
-          onChange={(e) => setBorrower(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="text"
-          placeholder="Reputation amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2">Amount</label>
+          <input
+            type="number"
+            value={lendAmount}
+            onChange={(e) => setLendAmount(e.target.value)}
+            placeholder="1000"
+            className="w-full p-2 border rounded-lg"
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium mb-2">Interest Rate (%)</label>
+          <input
+            type="number"
+            value={interestRate}
+            onChange={(e) => setInterestRate(e.target.value)}
+            min="0"
+            max="100"
+            className="w-full p-2 border rounded-lg"
+          />
+        </div>
+
         <button
-          onClick={lendReputation}
+          onClick={handleLendReputation}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
         >
-          {isPending || isConfirming ? 'Lending...' : 'Lend Reputation'}
+          {isPending || isConfirming ? 'Processing...' : '💸 Lend Reputation'}
         </button>
-        {isSuccess && <p className="text-green-600">Reputation lent!</p>}
+
+        {isConfirmed && (
+          <div className="p-3 bg-green-100 text-green-800 rounded-lg">
+            ✅ Reputation lending initiated
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
