@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 444+ Production-Ready Features!
+## 🎉 474+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -322,6 +322,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🔗 **Achievement Proof Links**: Direct links to BaseScan verification
 - 🌉 **Cross-Chain Bridge**: Bridge achievements across chains
 - 🔒 **Immutable History**: View permanent onchain records
+- ⏰ **Onchain Time Capsule**: Lock achievements for future reveal at specific timestamps
+- 🔐 **Onchain Multi-Signature Approval**: Require multiple signatures for important achievements
+- 👤 **Onchain Delegation Proxy**: Delegate achievement management to another address
+- 🔮 **Onchain Reputation Oracle**: Pull reputation from external oracles and aggregate onchain
+- 🌉 **Onchain Cross-Chain Attestation**: Attest achievements across multiple chains
+- 🔒 **Onchain Soulbound Tokens**: Make achievements non-transferable and permanently bound
+- ⏳ **Onchain Expiration System**: Set expiration dates for time-limited achievements
+- 🔒 **Onchain Privacy Levels**: Control visibility with public, followers-only, or private settings
+- 📦 **Onchain Batch Minting**: Mint multiple achievements in one transaction to save gas
+- 📦 **Onchain IPFS Storage**: Store achievement metadata on IPFS with onchain references
+- ⚡ **Onchain Gasless Minting**: Mint achievements using meta-transactions without paying gas
+- 📡 **Onchain Subscription Feed**: Subscribe to builder feeds and receive updates onchain
+- 🔗 **Onchain Achievement Chains**: Link achievements in sequences to show progression
+- ⛏️ **Onchain Proof of Work**: Require proof of work for achievements to prevent spam
+- 💰 **Onchain Reputation Marketplace**: Trade reputation tokens onchain marketplace
+- 💳 **Onchain Achievement Loans**: Borrow against achievements as collateral
+- 🛡️ **Onchain Achievement Insurance**: Insure achievements against loss or disputes
+- 📊 **Onchain Achievement Derivatives**: Create derivatives from achievements for trading
+- 🏦 **Onchain Achievement Bonds**: Issue bonds backed by achievements
+- 👥 **Onchain Achievement Syndicates**: Form achievement syndicates for collective ownership
+- 🛡️ **Onchain Trust Scores**: Calculate trust scores based on achievement history
+- ⛏️ **Onchain Reputation Mining**: Mine reputation tokens through achievement activities
+- 💸 **Onchain Reputation Lending**: Lend reputation tokens to other builders
+- 🔄 **Onchain Reputation Swaps**: Swap reputation tokens with other tokens
+- 💧 **Onchain Reputation Pools**: Pool reputation tokens for collective staking
+- 📊 **Onchain Reputation Index**: Track reputation index value across platform
+- 📈 **Onchain Reputation Futures**: Trade reputation futures contracts
+- 🎯 **Onchain Reputation Options**: Trade reputation options contracts
+- 🏊 **Onchain Reputation Staking Pools**: Stake reputation tokens in pools for rewards
+- 🌾 **Onchain Reputation Yield Farming**: Farm reputation yield from achievement staking
 - 📥 **Achievement Export**: Export achievements in JSON format
 - 📥 **Achievement Import**: Import achievements from backups
 - 💾 **Achievement Backup**: Create backups of onchain data
