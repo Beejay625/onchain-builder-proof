@@ -5,51 +5,62 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementMerging() {
+interface OnchainAchievementMergingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementMerging({ achievementId }: OnchainAchievementMergingProps) {
   const { address } = useAccount()
-  const [postId1, setPostId1] = useState('')
-  const [postId2, setPostId2] = useState('')
+  const [mergeTargetId, setMergeTargetId] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const mergeAchievements = async () => {
-    if (!address || !postId1 || !postId2) return
+    if (!address || !mergeTargetId.trim()) return
+    
+    const mergeData = `MERGE: ${achievementId} -> ${mergeTargetId}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId1), `MERGE: With ${postId2}`],
+      args: [achievementId, mergeData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🔀 Achievement Merging</h2>
-      <div className="space-y-4">
-        <input
-          type="number"
-          placeholder="First post ID"
-          value={postId1}
-          onChange={(e) => setPostId1(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          placeholder="Second post ID"
-          value={postId2}
-          onChange={(e) => setPostId2(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={mergeAchievements}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Merging...' : 'Merge Achievements'}
-        </button>
-        {isSuccess && <p className="text-green-600">Merged onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">🔀 Merge Achievements</h3>
+      
+      <p className="text-sm text-gray-600 mb-4">
+        Merge this achievement with another achievement
+      </p>
+      
+      <input
+        type="number"
+        value={mergeTargetId}
+        onChange={(e) => setMergeTargetId(e.target.value)}
+        placeholder="Target achievement ID"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={mergeAchievements}
+        disabled={isPending || isConfirming || !mergeTargetId.trim()}
+        className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Merging...' : 'Merge Achievements Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Merge recorded onchain
+        </div>
+      )}
     </div>
   )
 }
