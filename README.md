@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 414+ Production-Ready Features!
+## 🎉 444+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -46,6 +46,37 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 💡 **Recommendations**: Suggest personalized achievement recommendations
 - 📰 **Feed**: Create real-time onchain activity feed
 - 🎛️ **Widgets**: Customize dashboard with widgets
+- 🏷️ **Onchain Keywords**: Add searchable keywords to achievements
+- 📂 **Onchain Categories**: Categorize achievements onchain
+- 🔒 **Onchain Privacy**: Set privacy levels for achievements
+- 🔄 **Onchain Transfer**: Transfer achievements to other addresses
+- 🔐 **Onchain Lock**: Lock/unlock achievements onchain
+- 📋 **Onchain Version Control**: Track version history for achievements
+- 📦 **Onchain Archive**: Archive and restore achievements onchain
+- 📌 **Onchain Pin**: Pin achievements to profile onchain
+- 🔖 **Onchain Bookmark**: Bookmark achievements onchain
+- 📚 **Onchain Collection**: Organize achievements into collections
+- 📱 **QR Code Generation**: Generate QR codes for achievements
+- 📄 **Embed Code**: Generate embed codes for achievements
+- 📥 **Export Formats**: Export achievements in JSON, CSV, Markdown
+- 📥 **Onchain Import**: Import achievements from backup files
+- 💾 **Onchain Backup**: Create backups of onchain data
+- 📥 **Onchain Restore**: Restore achievements from backups
+- 📜 **Onchain History**: View complete achievement history
+- 📊 **Onchain Analytics**: Comprehensive analytics dashboard
+- 💡 **Onchain Insights**: Personalized achievement insights
+- 💡 **Onchain Recommendations**: Get achievement recommendations
+- 📰 **Onchain Feed**: Real-time activity feed from blockchain
+- 🔔 **Onchain Notifications**: Real-time notification system
+- ⚙️ **Onchain Settings**: Manage settings onchain
+- 🔐 **Onchain Access Control**: Control who can access achievements
+- 📋 **Onchain Event Log**: View all events logged onchain
+- 📜 **Smart Contract Info**: View verified smart contract details
+- 🔗 **Sharing Links**: Generate shareable links for achievements
+- ⏰ **Onchain Time Lock**: Set time-locks for achievements
+- 🔀 **Onchain Merging**: Merge multiple achievements together
+- 🍴 **Onchain Forking**: Fork achievements to create derivatives
+- 🔑 **Token Gating**: Gate achievements with token requirements
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
