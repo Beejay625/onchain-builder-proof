@@ -5,43 +5,70 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementRental() {
+interface OnchainAchievementRentalProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementRental({ achievementId }: OnchainAchievementRentalProps) {
   const { address } = useAccount()
+  const [rentalPrice, setRentalPrice] = useState('')
   const [rentalDuration, setRentalDuration] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
-  const rentAchievement = async () => {
-    if (!address || !rentalDuration) return
+  const listForRental = async () => {
+    if (!address || !rentalPrice.trim() || !rentalDuration.trim()) return
+    
+    const rentalData = `RENTAL: ${rentalPrice} ETH | duration: ${rentalDuration} days`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`RENTAL: ${rentalDuration} days`],
+      functionName: 'addComment',
+      args: [achievementId, rentalData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⏱️ Achievement Rental</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Rental duration (days)"
-          value={rentalDuration}
-          onChange={(e) => setRentalDuration(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={rentAchievement}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Renting...' : 'Rent Achievement'}
-        </button>
-        {isSuccess && <p className="text-green-600">Rental created onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">⏱️ Rental Listing</h3>
+      
+      <input
+        type="number"
+        value={rentalPrice}
+        onChange={(e) => setRentalPrice(e.target.value)}
+        placeholder="Rental price per day (ETH)"
+        step="0.001"
+        min="0"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <input
+        type="number"
+        value={rentalDuration}
+        onChange={(e) => setRentalDuration(e.target.value)}
+        placeholder="Maximum rental duration (days)"
+        min="1"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={listForRental}
+        disabled={isPending || isConfirming || !rentalPrice.trim() || !rentalDuration.trim()}
+        className="w-full px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Listing...' : 'List for Rental Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Rental listing recorded onchain
+        </div>
+      )}
     </div>
   )
 }
