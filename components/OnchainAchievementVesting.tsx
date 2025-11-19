@@ -5,43 +5,80 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementVesting() {
+interface OnchainAchievementVestingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementVesting({ achievementId }: OnchainAchievementVestingProps) {
   const { address } = useAccount()
-  const [vestingSchedule, setVestingSchedule] = useState('')
+  const [vestingAmount, setVestingAmount] = useState('')
+  const [vestingPeriod, setVestingPeriod] = useState('')
+  const [cliffPeriod, setCliffPeriod] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const setupVesting = async () => {
-    if (!address || !vestingSchedule) return
+    if (!address || !vestingAmount.trim() || !vestingPeriod.trim()) return
+    
+    const vestingData = `VESTING: ${vestingAmount} tokens | period: ${vestingPeriod} days${cliffPeriod ? ` | cliff: ${cliffPeriod} days` : ''}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`VESTING: ${vestingSchedule}`],
+      functionName: 'addComment',
+      args: [achievementId, vestingData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📊 Achievement Vesting</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Vesting schedule"
-          value={vestingSchedule}
-          onChange={(e) => setVestingSchedule(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={setupVesting}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-lime-600 text-white rounded-lg hover:bg-lime-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Setting up...' : 'Setup Vesting'}
-        </button>
-        {isSuccess && <p className="text-green-600">Vesting configured onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">📊 Vesting Schedule</h3>
+      
+      <input
+        type="number"
+        value={vestingAmount}
+        onChange={(e) => setVestingAmount(e.target.value)}
+        placeholder="Vesting amount"
+        step="0.01"
+        min="0"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <input
+        type="number"
+        value={vestingPeriod}
+        onChange={(e) => setVestingPeriod(e.target.value)}
+        placeholder="Vesting period (days)"
+        min="1"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <input
+        type="number"
+        value={cliffPeriod}
+        onChange={(e) => setCliffPeriod(e.target.value)}
+        placeholder="Cliff period (days, optional)"
+        min="0"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={setupVesting}
+        disabled={isPending || isConfirming || !vestingAmount.trim() || !vestingPeriod.trim()}
+        className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Setting up...' : 'Setup Vesting Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Vesting schedule created onchain
+        </div>
+      )}
     </div>
   )
 }
