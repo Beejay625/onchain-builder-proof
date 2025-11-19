@@ -1,35 +1,44 @@
 'use client'
 
-import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
-import { BuilderProofABI } from '@/abi/BuilderProof'
+import { useState } from 'react'
+import { useAccount } from 'wagmi'
 
 export default function OnchainAchievementNotifications() {
   const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
-    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-    abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
-  })
+  const [notifications, setNotifications] = useState([
+    { id: 1, message: 'New achievement minted', time: '2 hours ago', read: false },
+    { id: 2, message: 'Someone liked your achievement', time: '5 hours ago', read: false },
+    { id: 3, message: 'New comment on your achievement', time: '1 day ago', read: true },
+  ])
 
-  const notifications = (userPosts?.length || 0) * 2
+  const unreadCount = notifications.filter(n => !n.read).length
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🔔 Achievement Notifications</h2>
-      <div className="space-y-4">
-        <div className="text-center">
-          <p className="text-4xl font-bold text-blue-600">{notifications}</p>
-          <p className="text-gray-600">Unread notifications</p>
-        </div>
-        <p className="text-sm text-gray-500">
-          Real-time updates onchain
-        </p>
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-xl font-bold">🔔 Notifications</h3>
+        {unreadCount > 0 && (
+          <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            {unreadCount}
+          </span>
+        )}
+      </div>
+      
+      <div className="space-y-2">
+        {notifications.map((notification) => (
+          <div
+            key={notification.id}
+            className={`p-3 rounded-lg border ${
+              notification.read 
+                ? 'bg-gray-50 border-gray-200' 
+                : 'bg-blue-50 border-blue-200'
+            }`}
+          >
+            <p className="text-sm font-medium text-gray-800">{notification.message}</p>
+            <p className="text-xs text-gray-500 mt-1">{notification.time}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
 }
-
