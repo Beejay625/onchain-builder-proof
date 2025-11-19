@@ -77,6 +77,31 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🔀 **Onchain Merging**: Merge multiple achievements together
 - 🍴 **Onchain Forking**: Fork achievements to create derivatives
 - 🔑 **Token Gating**: Gate achievements with token requirements
+- ✍️ **Onchain Attestation**: Create verifiable attestations for achievements
+- ⭐ **Onchain Endorsement**: Endorse achievements with verifiable statements
+- 🔒 **Onchain Staking**: Stake ETH on achievements with duration
+- 🏛️ **Onchain Governance**: Create governance proposals for achievements
+- 🗳️ **Onchain Voting**: Vote on achievements with upvote/downvote system
+- 👤 **Onchain Delegation**: Delegate voting or management rights
+- 🔒 **Onchain Escrow**: Create escrow accounts for achievements
+- ⚖️ **Onchain Arbitration**: File disputes for arbitration
+- 🔐 **Onchain Multi-Sig**: Setup multi-signature for achievement management
+- 📊 **Onchain Vesting**: Setup vesting schedules for tokens
+- 🏦 **Onchain Treasury**: Contribute to treasury funds
+- 🎁 **Onchain Reward Distribution**: Distribute rewards to achievement creators
+- 🎨 **Onchain NFT Minting**: Mint NFTs from achievements
+- 💰 **Onchain Royalties**: Configure royalty rates for achievements
+- 📜 **Onchain Licensing**: Add licensing information to achievements
+- 🔢 **Onchain Fractionalization**: Fractionalize achievements into shares
+- 🛡️ **Onchain Insurance**: Insure achievements onchain
+- 🔄 **Onchain Resale**: List achievements for resale marketplace
+- ⏱️ **Onchain Rental**: Rent achievements temporarily
+- 📚 **Onchain Lending**: Lend achievements to other builders
+- 🔨 **Onchain Auction**: Create auction listings for achievements
+- 🎯 **Onchain Quests**: Create and complete achievement quests
+- 🧬 **Onchain Referrals**: Track referral codes and rewards
+- 📡 **Onchain Streaming**: Stream rewards over time based on activity
+- 🌉 **Onchain Cross-Chain**: Bridge achievements across multiple chains
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
