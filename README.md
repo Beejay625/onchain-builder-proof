@@ -146,6 +146,13 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⚖️ **Onchain Achievement Comparison**: Compare achievements side by side
 - 📊 **Onchain Achievement Stats**: View comprehensive statistics
 - 🔥 **Onchain Achievement Streaks**: Monitor consecutive achievement days
+- 📊 **Onchain Achievement Impact**: Measure the impact of achievements
+- 💼 **Onchain Builder Portfolio**: Aggregate all achievements into portfolio
+- 📡 **Onchain Achievement Reach**: Track achievement reach and visibility
+- 💬 **Onchain Achievement Engagement**: Monitor engagement rates
+- ⚡ **Onchain Achievement Velocity**: Track achievement velocity
+- ✅ **Onchain Achievement Success Rate**: Calculate success rates
+- 📊 **Onchain Achievement Completion Rate**: Track completion rates
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
