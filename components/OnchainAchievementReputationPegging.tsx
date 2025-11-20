@@ -1,33 +1,47 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationPegging() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+
+  const { data: pegValue, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    functionName: 'getReputationPegValue',
+    query: {
+      enabled: isConnected,
+    },
   })
 
-  const pegPrice = 1.0 + ((userPosts?.length || 0) * 0.01)
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">📌 Reputation Pegging</h3>
+        <p className="text-gray-600">Connect wallet to view peg</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📌 Reputation Pegging</h2>
-      <div className="space-y-2">
-        <p className="text-4xl font-bold text-indigo-600">{pegPrice.toFixed(3)}</p>
-        <p className="text-gray-600">Peg price</p>
-        <p className="text-sm text-gray-500">
-          Stable value mechanism
-        </p>
+      <h3 className="text-xl font-semibold mb-4">📌 Reputation Pegging</h3>
+      <p className="text-gray-600 mb-4">
+        Peg reputation value to stable assets onchain
+      </p>
+      
+      <div className="space-y-4">
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading peg value...</div>
+        ) : pegValue !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Peg Value</p>
+            <p className="text-3xl font-bold text-blue-600">{pegValue?.toString() || '0'}</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
