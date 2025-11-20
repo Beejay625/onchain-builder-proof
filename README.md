@@ -102,6 +102,27 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🧬 **Onchain Referrals**: Track referral codes and rewards
 - 📡 **Onchain Streaming**: Stream rewards over time based on activity
 - 🌉 **Onchain Cross-Chain**: Bridge achievements across multiple chains
+- 💰 **Onchain Reputation Staking**: Stake reputation tokens to earn rewards
+- ✅ **Onchain Skill Verification**: Verify skills with proof links and certificates
+- 🤝 **Onchain Collaboration Proof**: Prove collaborations with other builders
+- 💻 **Onchain Code Contribution**: Prove code contributions with commit hashes
+- 🚀 **Onchain Deployment Proof**: Prove deployments with transaction hashes
+- ✅ **Onchain Project Verification**: Verify projects with URLs and descriptions
+- 🏆 **Onchain Builder Rankings**: View rankings of top builders by achievements
+- 📊 **Onchain Contribution Tracking**: Track all contributions across the platform
+- 📚 **Onchain Learning Path**: Track learning progress and certificates
+- 👥 **Onchain Builder Teams**: Create and manage builder teams
+- 🏪 **Onchain Marketplace**: List and trade achievements on marketplace
+- 🎫 **Onchain Reputation Delegation**: Delegate reputation to other builders
+- 📊 **Onchain Skill Assessment**: Submit and view skill assessments
+- 🌉 **Onchain Cross-Chain Proofs**: Create proofs that span multiple chains
+- 🎓 **Onchain Builder Certificates**: Mint certificates for completed courses
+- ⚖️ **Onchain Reputation Weighting**: Weighted voting based on reputation
+- 🔄 **Onchain Achievement Sync**: Sync achievements across multiple chains
+- ✅ **Onchain Achievement Validation**: Validate achievements with verifier addresses
+- 📜 **Onchain Immutable History**: View complete immutable achievement history
+- 🔗 **Onchain Chain Visualization**: Visualize achievement chain connections
+- ⏰ **Onchain Timestamps**: View permanent blockchain timestamps
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
