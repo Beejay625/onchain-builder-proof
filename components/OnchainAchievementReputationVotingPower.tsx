@@ -1,33 +1,48 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationVotingPower() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+
+  const { data: votingPower, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
+    functionName: 'getVotingPower',
     args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    query: {
+      enabled: isConnected && !!address,
+    },
   })
 
-  const votingPower = Math.sqrt(userPosts?.length || 0) * 10
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">🗳️ Voting Power</h3>
+        <p className="text-gray-600">Connect wallet to view power</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🗳️ Voting Power</h2>
-      <div className="space-y-2">
-        <p className="text-4xl font-bold text-blue-600">{votingPower.toFixed(1)}</p>
-        <p className="text-gray-600">Voting power</p>
-        <p className="text-sm text-gray-500">
-          Quadratic voting system
-        </p>
+      <h3 className="text-xl font-semibold mb-4">🗳️ Reputation Voting Power</h3>
+      <p className="text-gray-600 mb-4">
+        Calculate voting power from reputation tokens onchain
+      </p>
+      
+      <div className="space-y-4">
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading voting power...</div>
+        ) : votingPower !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Voting Power</p>
+            <p className="text-3xl font-bold text-blue-600">{votingPower?.toString() || '0'}</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
