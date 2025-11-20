@@ -5,44 +5,68 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementReputationDelegation() {
+interface OnchainAchievementReputationDelegationProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementReputationDelegation({ achievementId }: OnchainAchievementReputationDelegationProps) {
   const { address } = useAccount()
-  const [delegateTo, setDelegateTo] = useState('')
+  const [delegateAddress, setDelegateAddress] = useState('')
+  const [reputationAmount, setReputationAmount] = useState('')
   
   const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
 
   const delegateReputation = async () => {
-    if (!address || !delegateTo) return
+    if (!address || !delegateAddress.trim() || !reputationAmount.trim()) return
+    
+    const delegationData = `REPUTATION_DELEGATION: ${delegateAddress} | amount: ${reputationAmount}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`REP_DELEGATE: ${delegateTo}`],
+      functionName: 'addComment',
+      args: [achievementId, delegationData],
     })
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🎫 Reputation Delegation</h2>
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Delegate to address"
-          value={delegateTo}
-          onChange={(e) => setDelegateTo(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={delegateReputation}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Delegating...' : 'Delegate Reputation'}
-        </button>
-        {isSuccess && <p className="text-green-600">Reputation delegated onchain!</p>}
-      </div>
+      <h3 className="text-xl font-bold mb-4">🎫 Reputation Delegation</h3>
+      
+      <input
+        type="text"
+        value={delegateAddress}
+        onChange={(e) => setDelegateAddress(e.target.value)}
+        placeholder="Delegate wallet address"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4 font-mono text-sm"
+      />
+      
+      <input
+        type="number"
+        value={reputationAmount}
+        onChange={(e) => setReputationAmount(e.target.value)}
+        placeholder="Reputation amount to delegate"
+        min="1"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={delegateReputation}
+        disabled={isPending || isConfirming || !delegateAddress.trim() || !reputationAmount.trim()}
+        className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Delegating...' : 'Delegate Reputation Onchain'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Reputation delegated onchain
+        </div>
+      )}
     </div>
   )
 }
-
