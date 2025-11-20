@@ -1,48 +1,76 @@
 'use client'
 
-import { useState } from 'react'
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationProofOfStake() {
-  const { address } = useAccount()
+  const { address, isConnected } = useAccount()
   const [stakeAmount, setStakeAmount] = useState('')
-  
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const stakeForValidation = async () => {
-    if (!address || !stakeAmount) return
-    writeContract({
-      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-      abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(0), `POS: ${stakeAmount} staked for validation`],
-    })
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess: isConfirmed } = 
+    useWaitForTransactionReceipt({ hash })
+
+  const handleStake = async () => {
+    if (!isConnected || !address) return
+
+    try {
+      writeContract({
+        address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'stakeForValidation',
+        args: [BigInt(stakeAmount)],
+      })
+    } catch (error) {
+      console.error('Error staking:', error)
+    }
+  }
+
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">⛓️ Proof of Stake</h3>
+        <p className="text-gray-600">Connect wallet to stake</p>
+      </div>
+    )
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⛓️ Proof of Stake</h2>
+      <h3 className="text-xl font-semibold mb-4">⛓️ Reputation Proof of Stake</h3>
+      <p className="text-gray-600 mb-4">
+        Stake reputation for validation rights onchain
+      </p>
+      
       <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Stake amount"
-          value={stakeAmount}
-          onChange={(e) => setStakeAmount(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2">Stake Amount</label>
+          <input
+            type="number"
+            value={stakeAmount}
+            onChange={(e) => setStakeAmount(e.target.value)}
+            placeholder="10000"
+            className="w-full p-2 border rounded-lg"
+          />
+        </div>
+
         <button
-          onClick={stakeForValidation}
+          onClick={handleStake}
           disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
         >
-          {isPending || isConfirming ? 'Staking...' : 'Stake for Validation'}
+          {isPending || isConfirming ? 'Staking...' : '⛓️ Stake for Validation'}
         </button>
-        {isSuccess && <p className="text-green-600">Staked for validation!</p>}
+
+        {isConfirmed && (
+          <div className="p-3 bg-green-100 text-green-800 rounded-lg">
+            ✅ Staked successfully for validation rights
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
