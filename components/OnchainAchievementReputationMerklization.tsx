@@ -1,33 +1,49 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { useState } from 'react'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationMerklization() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+  const [merkleRoot, setMerkleRoot] = useState<string | null>(null)
+
+  const { data: root, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    functionName: 'getReputationMerkleRoot',
+    query: {
+      enabled: isConnected,
+    },
   })
+
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">🌳 Merkle Proofs</h3>
+        <p className="text-gray-600">Connect wallet to view Merkle root</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🌳 Merklization</h2>
-      <div className="space-y-2">
-        <p className="text-gray-600">
-          Merkle tree proofs for reputation
-        </p>
-        <p className="text-4xl font-bold text-green-600">{userPosts?.length || 0}</p>
-        <p className="text-sm text-gray-500">
-          Merkle-verified achievements
-        </p>
+      <h3 className="text-xl font-semibold mb-4">🌳 Reputation Merklization</h3>
+      <p className="text-gray-600 mb-4">
+        Efficient validation using Merkle tree proofs onchain
+      </p>
+      
+      <div className="space-y-4">
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading Merkle root...</div>
+        ) : root && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Merkle Root</p>
+            <p className="text-xs font-mono text-blue-600 break-all">{root.toString()}</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
