@@ -1,33 +1,47 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationReserve() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+
+  const { data: reserveAmount, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    functionName: 'getReputationReserve',
+    query: {
+      enabled: isConnected,
+    },
   })
 
-  const reserveAmount = (userPosts?.length || 0) * 50
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">🏦 Reputation Reserve</h3>
+        <p className="text-gray-600">Connect wallet to view reserve</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🏦 Reputation Reserve</h2>
-      <div className="space-y-2">
-        <p className="text-4xl font-bold text-green-600">{reserveAmount}</p>
-        <p className="text-gray-600">Reserve amount</p>
-        <p className="text-sm text-gray-500">
-          Treasury reserves
-        </p>
+      <h3 className="text-xl font-semibold mb-4">🏦 Reputation Reserve</h3>
+      <p className="text-gray-600 mb-4">
+        Treasury reserve management for reputation tokens onchain
+      </p>
+      
+      <div className="space-y-4">
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading reserve...</div>
+        ) : reserveAmount !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Reserve Amount</p>
+            <p className="text-3xl font-bold text-blue-600">{reserveAmount?.toString() || '0'}</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
