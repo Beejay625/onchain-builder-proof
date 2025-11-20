@@ -13,17 +13,42 @@ export default function OnchainAchievementBuilderRankings() {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🏆 Builder Rankings</h2>
-      <div className="space-y-4">
-        <div className="text-center">
-          <p className="text-4xl font-bold text-gold-600">{totalPosts?.toString() || '0'}</p>
-          <p className="text-gray-600">Total achievements onchain</p>
+      <h3 className="text-xl font-bold mb-4">🏆 Builder Rankings</h3>
+      
+      <div className="space-y-3">
+        <div className="flex justify-between items-center p-3 bg-yellow-50 rounded-lg">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🥇</span>
+            <div>
+              <p className="font-semibold">Top Builder</p>
+              <p className="text-sm text-gray-600">Most achievements</p>
+            </div>
+          </div>
+          <span className="text-xl font-bold">{totalPosts?.toString() || '0'}</span>
         </div>
-        <p className="text-sm text-gray-500">
-          Rank builders by achievement count
-        </p>
+        
+        <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🥈</span>
+            <div>
+              <p className="font-semibold">Second Place</p>
+              <p className="text-sm text-gray-600">High engagement</p>
+            </div>
+          </div>
+          <span className="text-xl font-bold">-</span>
+        </div>
+        
+        <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🥉</span>
+            <div>
+              <p className="font-semibold">Third Place</p>
+              <p className="text-sm text-gray-600">Active builder</p>
+            </div>
+          </div>
+          <span className="text-xl font-bold">-</span>
+        </div>
       </div>
     </div>
   )
 }
-
