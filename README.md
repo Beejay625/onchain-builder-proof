@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 504+ Production-Ready Features!
+## 🎉 564+ Production-Ready Features!
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
@@ -123,6 +123,29 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📜 **Onchain Immutable History**: View complete immutable achievement history
 - 🔗 **Onchain Chain Visualization**: Visualize achievement chain connections
 - ⏰ **Onchain Timestamps**: View permanent blockchain timestamps
+- 📦 **Onchain Metadata Storage**: Store rich metadata onchain
+- 🔐 **Onchain Proof Generation**: Generate verifiable achievement proofs
+- 🔗 **Onchain Proof Links**: Direct links to BaseScan verification
+- 🎁 **Onchain Milestone Rewards**: Claim rewards when reaching milestones
+- 🏅 **Onchain Achievement Recognition**: Get recognized for achievements
+- 🌐 **Onchain Builder Network**: Build network through achievements
+- 📈 **Onchain Achievement Metrics**: Track performance metrics
+- ⭐ **Onchain Builder Credibility**: Calculate credibility based on achievements
+- 🎖️ **Onchain Skill Badges**: Earn skill badges based on achievements
+- 🔐 **Onchain Achievement Proofs**: Generate verifiable proofs for achievements
+- ⭐ **Onchain Builder Reputation System**: Build reputation through achievements
+- ⚡ **Onchain Achievement Performance**: Track achievement performance over time
+- 🤝 **Onchain Builder Collaboration**: Record collaborations onchain
+- 🎯 **Onchain Achievement Milestones**: Track progress toward milestones
+- 🎓 **Onchain Skill Certification**: Certify skills with onchain verification
+- 👍 **Onchain Builder Endorsements**: Endorse builders with verifiable statements
+- 📅 **Onchain Achievement Timeline**: View achievement timeline visualization
+- ⭐ **Onchain Achievement Showcase**: Highlight achievements
+- 📊 **Onchain Achievement Trends**: Analyze trends
+- 📈 **Onchain Achievement Progress**: Track progress toward goals
+- ⚖️ **Onchain Achievement Comparison**: Compare achievements side by side
+- 📊 **Onchain Achievement Stats**: View comprehensive statistics
+- 🔥 **Onchain Achievement Streaks**: Monitor consecutive achievement days
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
@@ -653,6 +676,35 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 💰 **Onchain Achievement Reputation Backing**: Collateral backing ratio
 - 🏦 **Onchain Achievement Reputation Reserve**: Treasury reserve management
 - 📊 **Onchain Achievement Reputation Supply**: Track total supply
+- ✓ **Onchain Verification Badges**: Issue verification badges for achievements
+- 🔥 **Onchain Reputation Burning**: Burn reputation tokens to reduce supply
+- 🔗 **Onchain Reputation Bonding**: Create reputation bonds with lock periods
+- ∞ **Onchain Reputation Perpetuals**: Trade perpetual contracts for reputation
+- ⚖️ **Onchain Achievement Weight**: View achievement weight based on engagement
+- 🗳️ **Onchain Governance Token Voting**: Vote on proposals using governance tokens
+- ⚔️ **Onchain Reputation Slashing**: Slash reputation for violations
+- 📸 **Onchain Reputation Snapshot**: Create reputation snapshots for governance
+- 🌳 **Onchain Reputation Merklization**: Efficient validation using Merkle trees
+- ⛓️ **Onchain Reputation Proof of Stake**: Stake reputation for validation rights
+- ↩️ **Onchain Reputation Undelegation**: Undelegate reputation from delegates
+- ⚖️ **Onchain Reputation Reweighting**: Dynamically adjust reputation weights
+- 📉 **Onchain Reputation Decay**: Model reputation decay without activity
+- 📈 **Onchain Reputation Recovery**: Recover reputation through achievements
+- 📊 **Onchain Reputation Inflation**: Track reputation inflation rates
+- 📉 **Onchain Reputation Deflation**: Track reputation deflation mechanisms
+- ⚖️ **Onchain Reputation Stabilization**: Price stability features for reputation
+- 📌 **Onchain Reputation Pegging**: Peg reputation value to stable assets
+- 💰 **Onchain Reputation Backing**: Collateral backing ratio tracking
+- 🏦 **Onchain Reputation Reserve**: Treasury reserve management
+- 📊 **Onchain Reputation Supply Tracking**: Track total reputation supply
+- 📈 **Onchain Reputation APR**: Annual percentage rate calculation
+- 🔄 **Onchain Reputation Rebasing**: Daily rebase adjustments
+- 🪞 **Onchain Reputation Reflection**: Auto-distribute rewards to holders
+- 🔄 **Onchain Reputation Auto-Compounding**: Automatic yield compounding
+- ⛏️ **Onchain Reputation Liquidity Mining**: Mine reputation from LP tokens
+- 🎁 **Onchain Reputation Staking Rewards**: Earn rewards from staking
+- 🗳️ **Onchain Reputation Voting Power**: Calculate voting power from reputation
+- 🌾 **Onchain Reputation Yield**: Calculate reputation yield from staking
 ### User Experience
 - 🔔 **Notifications**: Real-time alerts for engagement
 - ⚡ **Quick Actions**: Fast access to common tasks
