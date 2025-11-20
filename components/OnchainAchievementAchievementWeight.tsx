@@ -1,54 +1,60 @@
 'use client'
 
+import { useAccount, useReadContract } from 'wagmi'
 import { useState } from 'react'
-import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementAchievementWeight() {
-  const { address } = useAccount()
+  const { address, isConnected } = useAccount()
   const [postId, setPostId] = useState('')
-  const [weight, setWeight] = useState('')
 
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const { data: weight, isLoading } = useReadContract({
+    address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+    abi: BuilderProofABI,
+    functionName: 'getAchievementWeight',
+    args: postId ? [BigInt(postId)] : undefined,
+    query: {
+      enabled: !!postId && isConnected,
+    },
+  })
 
-  const applyWeight = async () => {
-    if (!address || !postId || !weight) return
-    writeContract({
-      address: BUILDER_PROOF_CONTRACT as `0x${string}`,
-      abi: BuilderProofABI,
-      functionName: 'addComment',
-      args: [BigInt(postId), `WEIGHT:${weight}`],
-    })
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">⚖️ Achievement Weight</h3>
+        <p className="text-gray-600">Connect wallet to view weight</p>
+      </div>
+    )
   }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⚖️ Achievement Weight</h2>
+      <h3 className="text-xl font-semibold mb-4">⚖️ Achievement Weight</h3>
+      <p className="text-gray-600 mb-4">
+        View achievement weight based on engagement and verification
+      </p>
+      
       <div className="space-y-4">
-        <input
-          type="number"
-          placeholder="Achievement ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="number"
-          placeholder="Weight score"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={applyWeight}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Applying...' : 'Apply Weight'}
-        </button>
-        {isSuccess && <p className="text-green-600">Weight stored onchain!</p>}
+        <div>
+          <label className="block text-sm font-medium mb-2">Achievement ID</label>
+          <input
+            type="text"
+            value={postId}
+            onChange={(e) => setPostId(e.target.value)}
+            placeholder="Enter achievement ID"
+            className="w-full p-2 border rounded-lg"
+          />
+        </div>
+
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading weight...</div>
+        ) : weight !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Achievement Weight</p>
+            <p className="text-3xl font-bold text-blue-600">{weight?.toString() || '0'}</p>
+          </div>
+        )}
       </div>
     </div>
   )
