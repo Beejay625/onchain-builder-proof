@@ -1,33 +1,47 @@
 'use client'
 
 import { useAccount, useReadContract } from 'wagmi'
-import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 
 export default function OnchainAchievementReputationYield() {
-  const { address } = useAccount()
-  
-  const { data: userPosts } = useReadContract({
+  const { address, isConnected } = useAccount()
+
+  const { data: yieldRate, isLoading } = useReadContract({
     address: BUILDER_PROOF_CONTRACT as `0x${string}`,
     abi: BuilderProofABI,
-    functionName: 'getUserPosts',
-    args: address ? [address] : undefined,
-    query: { enabled: !!address },
+    functionName: 'getReputationYield',
+    query: {
+      enabled: isConnected,
+    },
   })
 
-  const annualYield = (userPosts?.length || 0) * 2.5
+  if (!isConnected) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold mb-4">🌾 Reputation Yield</h3>
+        <p className="text-gray-600">Connect wallet to view yield</p>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">🌾 Reputation Yield</h2>
-      <div className="space-y-2">
-        <p className="text-4xl font-bold text-yellow-600">{annualYield.toFixed(1)}%</p>
-        <p className="text-gray-600">Annual yield</p>
-        <p className="text-sm text-gray-500">
-          From {userPosts?.length || 0} achievements
-        </p>
+      <h3 className="text-xl font-semibold mb-4">🌾 Reputation Yield</h3>
+      <p className="text-gray-600 mb-4">
+        Calculate reputation yield from staking onchain
+      </p>
+      
+      <div className="space-y-4">
+        {isLoading ? (
+          <div className="p-4 text-center text-gray-500">Loading yield...</div>
+        ) : yieldRate !== undefined && (
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-600 mb-1">Yield Rate</p>
+            <p className="text-3xl font-bold text-blue-600">{yieldRate?.toString() || '0'}%</p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-
