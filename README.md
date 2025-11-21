@@ -387,6 +387,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🕸️ **Onchain Social Graph**: Build and visualize builder network connections
 - ⛓️ **Onchain Achievement Chains**: Link sequential achievements together
 - 🔌 **Onchain Reown Integration**: Enhanced Reown wallet connectivity features
+
+#### New Operational Controls
+- 🛡️ **Guardian Recovery Plans**: Assign guardian wallets and recovery windows to each achievement for social recovery.
+- 💾 **Resilience Vault**: Mirror high-value proofs into a redundancy log that documents coverage commitments.
+- 🛠️ **Reown Session Safeguard**: Bind Reown session IDs and device fingerprints to sensitive achievements for audit trails.
+- ⚙️ **Modular Escrow**: Publish escrow archetypes and release conditions directly alongside the achievement record.
+- 🎯 **Dynamic Bounty Weights**: Adjust bounty criteria weightings onchain so contributors can see transparent payout math.
+- 📈 **Impact Leaderboard Ping**: Signal impact scores plus qualitative rationale to surface standout work in leaderboards.
+- 🔏 **Verifier Registry**: List third-party verifiers together with evidence links for every claim.
+- 💓 **Builder Heartbeat**: Broadcast lightweight focus and confidence pings to keep squads aware of momentum shifts.
+- ⏱️ **Timeboxed Challenges**: Attach challenge deadlines and reviewers so time-limited quests remain provable forever.
+- 🔓 **Progressive Unlocks**: Detail staged unlock plans for progressive disclosure or limited access phases.
+- 🤝 **Reputation Pledges**: Stake how much personal reputation backs any given achievement outcome.
+- 🧠 **Mentor Council**: Register mentor handles plus their domains of oversight per achievement stream.
+- 🤝 **Partner Attestations**: Log partner organizations and attestation hashes for cross-team collaborations.
+- 🧪 **Experiment Tracking**: Capture hypothesis and outcome pairs for onchain R&D experiments.
+- 📣 **DevRel Proofs**: Record DevRel engagements with the format and permalink so outreach is provable.
+- 🎁 **Retro Quest Payouts**: Track retroactive funding recipients together with payout amounts.
+- 🎓 **Learning Scholarships**: Mint scholarship awards and notes for supported learners.
+- 🏦 **Grant Escrow Vault**: Bind grant tranche IDs to escrow notes for compliance-ready reporting.
+- 📡 **Chain Signal Alerts**: Flag severity plus notification channel details for onchain alerting.
+- 📸 **Impact Snapshots**: Save quick KPI snapshots (TVL, adoption, savings, etc.) per achievement.
+- 🌱 **Sustainability Ledger**: Document sustainability initiatives and carbon offset impact.
+- 🤝 **Collab Contract Terms**: Reference collaboration agreement IDs plus next checkpoints onchain.
+- 📒 **Reown Session Log**: Mint summaries of critical Reown wallet sessions for accountability.
+- 🏋️ **Proof of Practice**: Track practice reps that led up to the final onchain proof-of-work.
+- 🧯 **Fail-Safe Vault**: Define fail-safe owners and trigger conditions for high-risk launches.
+- 🌐 **Cross-DAO Endorsement**: Record endorsements received from external DAOs or collectives.
+- 🧾 **Milestone Escrow**: Link milestone numbers directly to escrow identifiers for payout tracing.
+- ⛽ **Gas Budgeting**: Plan per-network gas ceilings before executing important transactions.
+- 🧾 **Builder Retainers**: Log retainer amounts plus renewal dates for long-term contributors.
+- 📋 **Release Checklist**: Mint final release checklist approvals with accountable owner notes.
 - 🍴 **Achievement Forking**: Fork achievements to create derivatives
 - 💰 **Achievement Sponsorship**: Sponsor achievements with ETH contributions
 - 🎯 **Achievement Bounty**: Create bounties for achievement completion
