@@ -187,6 +187,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ✅ **Onchain Achievement Success Rate**: Calculate success rates
 - 📊 **Onchain Achievement Completion Rate**: Track completion rates
 
+#### Additional Onchain Capabilities
+- 🧠 **Onchain AI Summaries**: Generate verifiable AI summaries for each achievement directly onchain
+- 🛰️ **Onchain Telemetry Mirror**: Mirror external telemetry proofs (CI, sensors, analytics) to the BuilderProof contract
+- ♻️ **Onchain Lifecycle Hooks**: Attach pre- and post-execution hooks that enforce achievement workflows
+- 🔎 **Onchain Anomaly Detection**: Flag irregular reputation, staking, or activity spikes with immutable alerts
+- ⚙️ **Onchain Automation Recipes**: Store reusable automation flows that trigger multi-step onchain actions
+- 🧪 **Onchain Experiment Tracking**: Log experiment hypotheses, metrics, and outcomes for verifiable R&D progress
+- 🧭 **Onchain Journey Maps**: Capture complete builder journey maps with signed checkpoints at every milestone
+- 📡 **Onchain Signal Boosters**: Broadcast notable achievements to partner protocols through automatic relays
+- 📦 **Onchain Module Registry**: Publish reusable achievement modules and blueprints as composable NFTs
+- 🛡️ **Onchain Guardian Alerts**: Allow guardian wallets to configure guardrails and emergency stop conditions
+- 📈 **Onchain KPI Benchmarks**: Store KPI targets and actuals onchain for transparent performance tracking
+- 🧱 **Onchain Build Logs**: Persist hashed build logs and deployment artifacts alongside achievements
+- 🪙 **Onchain Micro-Grants**: Attach programmable micro-funding pools that release rewards per milestone
+- 🧾 **Onchain Budget Tracking**: Track spend allocations and reimbursements tied to achievement phases
+- 🤖 **Onchain Agent Delegation**: Delegate achievement maintenance to autonomous agents with enforceable limits
+- 🔐 **Onchain Access Keys**: Mint scoped cryptographic keys that grant temporary data access
+- 🧮 **Onchain Smart Invoices**: Issue payable invoices generated directly from achievement deliverables
+- 🎯 **Onchain Goal Contracts**: Bind SMART goals to achievements with automated verification logic
+- 🔄 **Onchain Retro Sync**: Sync historical off-chain achievements via notarized bundles and timestamps
+- 📁 **Onchain Evidence Locker**: Store hashed evidence bundles for audit-ready retrieval at any moment
+- 🧬 **Onchain Provenance Graph**: Visualize dependency graphs between related achievements and contributors
+- 📊 **Onchain Impact Benchmarks**: Compare impact metrics against ecosystem-wide benchmarks stored onchain
+- 🛡️ **Onchain Guardian Council**: Form multi-signature councils that approve sensitive achievement actions
+- 🌐 **Onchain Localization Layer**: Maintain multilingual metadata packs pinned to each achievement
+- 🧯 **Onchain Incident Playbooks**: Keep emergency response playbooks that trigger when incidents are logged
+- 🪄 **Onchain Magic Links**: Issue expiring cryptographic share links for time-bound achievement previews
+- 🗂️ **Onchain Document Vault**: Reference decentralized storage documents with tamper-proof pointers
+- 🧩 **Onchain Integration Bridges**: Register third-party integrations with scoped permissions and monitoring
+- 🚀 **Onchain Launch Gates**: Stage multi-phase launches with gate conditions encoded onchain
+- 🎛️ **Onchain Config Snapshots**: Capture environment and configuration snapshots tied to each achievement
+
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
 - 🎯 **Milestone Tracker**: Visual progress tracking toward next milestone
