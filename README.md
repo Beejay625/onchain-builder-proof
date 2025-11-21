@@ -146,6 +146,39 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⚖️ **Onchain Achievement Comparison**: Compare achievements side by side
 - 📊 **Onchain Achievement Stats**: View comprehensive statistics
 - 🔥 **Onchain Achievement Streaks**: Monitor consecutive achievement days
+- 📝 **Onchain Audit Trail**: View immutable audit entries for each achievement
+- 🛡️ **Onchain Compliance Status**: Track compliance designations
+- 🔒 **Onchain Security Score**: Monitor onchain security posture
+- 🚨 **Onchain Alerting**: Broadcast important alerts onchain
+- ⚠️ **Onchain Risk Assessment**: Record compliance risk levels
+- 📄 **Onchain Policy Acknowledgement**: Log policy confirmations
+- 🚨 **Onchain Incident Report**: Submit incidents onchain
+- 📂 **Onchain Access Log**: View access-related details
+- 🔐 **Onchain Encryption Status**: Track encryption posture
+- 🗄️ **Onchain Data Retention**: Store retention policies
+- 🌍 **Onchain Geo Compliance**: Record regional compliance
+- 🛂 **Onchain Sanctions Check**: Log sanctions screening outcomes
+- 📇 **Onchain KYC Verification**: Capture KYC results
+- 📋 **Onchain Audit Checklist**: Track completed control items
+- 📎 **Onchain Control Evidence**: Link evidence references
+- 🔄 **Onchain Change Management**: Log approval changes
+- ⚠️ **Onchain Exception Tracking**: Track policy exceptions
+- 🤝 **Onchain Third-Party Review**: Record external review outcomes
+- 🏢 **Onchain Business Impact**: Estimate impact value
+- ⚖️ **Onchain Regulation Mapping**: Map achievements to regulations
+- 🛡️ **Onchain Privacy Assessment**: Store privacy risk reviews
+- ✅ **Onchain Consent Proof**: Record consent confirmations
+- 📢 **Onchain Breach Notification**: Log breach notifications
+- 🌀 **Onchain Disaster Recovery**: Track disaster recovery readiness
+- 🛡️ **Onchain Pen Test**: Capture penetration test outcomes
+- 🔐 **Onchain Vulnerability Status**: Monitor vulnerability lifecycle
+- 📊 **Onchain Compliance Scorecard**: Summarize compliance scoring
+- 📘 **Onchain Policy Versioning**: Track policy versions
+- 📡 **Onchain Continuous Monitoring**: Display monitoring status
+- 💸 **Onchain AML Screening**: Store AML screening results
+- 📜 **Onchain License Tracking**: Track license terms
+- 🏷️ **Onchain Asset Classification**: Record asset classes
+- 🔐 **Onchain Secure Storage Proof**: Prove secure storage providers
 - 📊 **Onchain Achievement Impact**: Measure the impact of achievements
 - 💼 **Onchain Builder Portfolio**: Aggregate all achievements into portfolio
 - 📡 **Onchain Achievement Reach**: Track achievement reach and visibility
