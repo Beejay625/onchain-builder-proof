@@ -39,7 +39,7 @@ export default function OnchainAchievementFlashMint({ achievementId }: OnchainAc
 
       <div className="space-y-3 mb-4">
         <input value={tokenAddress} onChange={(e) => setTokenAddress(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-500" placeholder="Token address" />
-        <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Amount" />
+        <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Amount" min="0" />
         <input value={callbackData} onChange={(e) => setCallbackData(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Callback data" />
       </div>
 
