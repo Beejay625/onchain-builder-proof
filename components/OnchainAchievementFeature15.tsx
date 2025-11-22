@@ -6,7 +6,8 @@ import { BuilderProofABI } from '@/abi/BuilderProof'
 interface Props { achievementId: bigint }
 export default function OnchainAchievementFeature15({ achievementId }: Props) {
   const { address } = useAccount()
-  const [data, setData] = useState('')
+  const [data, setData] = useState
+  const [error, setError] = useState('')
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
   const isValid = (val: string) => val.trim().length > 0
