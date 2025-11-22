@@ -45,7 +45,7 @@ export default function OnchainAchievementTokenAllowance({ achievementId }: Onch
 
       <button
         onClick={recordAllowance}
-        disabled={isPending || isConfirming || !tokenAddress.startsWith('0x')}
+        disabled={isPending || isConfirming || !tokenAddress.startsWith('0x') || !spender.startsWith('0x')}
         className="w-full px-4 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 disabled:bg-gray-400"
       >
         {isPending || isConfirming ? 'Recording...' : 'Record token allowance'}
