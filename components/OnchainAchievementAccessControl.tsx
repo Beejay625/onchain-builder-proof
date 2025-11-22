@@ -45,7 +45,7 @@ export default function OnchainAchievementAccessControl({ achievementId }: Oncha
 
       <button
         onClick={recordAccessControl}
-        disabled={isPending || isConfirming || !grantee.startsWith('0x')}
+        disabled={isPending || isConfirming || !grantee.startsWith('0x') || grantee.length < 42}
         className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 disabled:bg-gray-400"
       >
         {isPending || isConfirming ? 'Recording...' : 'Record access control'}
