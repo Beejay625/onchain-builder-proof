@@ -20,6 +20,8 @@ export default function OnchainAchievementContractUpgrades({ achievementId }: On
 
   const recordUpgrade = () => {
     if (!address || !upgradeType.trim()) return
+    if (!newImplementation.trim() || !upgradeTx.trim()) return
+    if (!newImplementation.startsWith('0x') || !upgradeTx.startsWith('0x')) return
 
     const payload = `CONTRACT_UPGRADE|type:${upgradeType}|impl:${newImplementation}|tx:${upgradeTx}`
 
