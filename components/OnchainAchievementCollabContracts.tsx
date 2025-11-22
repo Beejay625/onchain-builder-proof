@@ -5,102 +5,79 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementCollabContracts() {
-  const { address } = useAccount()
-  const [achievementId, setAchievementId] = useState('')
-  const [agreementId, setAgreementId] = useState('')
-  const [checkpoint, setCheckpoint] = useState('')
-  const [error, setError] = useState<string | null>(null)
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+interface OnchainAchievementCollabContractsProps {
+  achievementId: bigint
+}
 
-  const handleAction = () => {
-    if (!address) {
-      setError('Connect your wallet to continue')
-      return
-    }
-    if (!achievementId.trim()) {
-      setError('Enter an onchain achievement ID')
-      return
-    }
-    if (!agreementId.trim()) {
-      setError('Provide agreement id')
-      return
-    }
-    if (!checkpoint.trim()) {
-      setError('Provide next checkpoint')
-      return
-    }
-    let postId: bigint
-    try {
-      postId = BigInt(achievementId)
-    } catch {
-      setError('Invalid achievement ID')
-      return
-    }
-    setError(null)
-    const payload = `COLLAB_CONTRACT:${agreementId.trim()}:${checkpoint.trim()}`
+export default function OnchainAchievementCollabContracts({ achievementId }: OnchainAchievementCollabContractsProps) {
+  const { address } = useAccount()
+  const [collaboratorAddress, setCollaboratorAddress] = useState('')
+  const [collabRole, setCollabRole] = useState('contributor')
+  const [collabTerms, setCollabTerms] = useState('')
+  
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
+    hash,
+  })
+
+  const createCollabContract = async () => {
+    if (!address || !collaboratorAddress.trim()) return
+    
+    const collabData = `COLLAB_CONTRACT:collaborator:${collaboratorAddress.trim()}:role:${collabRole}:terms:${collabTerms.trim() || 'standard'}:timestamp:${Math.floor(Date.now() / 1000)}`
+    
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [postId, payload],
+      args: [achievementId, collabData],
     })
   }
 
-  const isBusy = isPending || isConfirming
-
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 space-y-4">
-      <div>
-        <p className="text-3xl">🤝</p>
-        <h3 className="text-xl font-bold">Collab Contract Terms</h3>
-        <p className="text-gray-600">Link collaboration agreement IDs with next review checkpoint.</p>
-      </div>
-      <div className="space-y-4">
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-gray-700">Achievement ID</label>
-          <input
-            type="number"
-            value={achievementId}
-            onChange={(e) => setAchievementId(e.target.value)}
-            placeholder="Enter onchain achievement ID"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-gray-700">Agreement ID</label>
-          <input
-            type="text"
-            value={agreementId}
-            onChange={(e) => setAgreementId(e.target.value)}
-            placeholder="COLLAB-2025-07"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-gray-700">Next checkpoint</label>
-          <input
-            type="text"
-            value={checkpoint}
-            onChange={(e) => setCheckpoint(e.target.value)}
-            placeholder="Sprint 4 retro"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
-      </div>
-      <button
-        onClick={handleAction}
-        disabled={isBusy}
-        className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h3 className="text-xl font-bold mb-4">🤝 Collaboration Contracts</h3>
+      
+      <input
+        type="text"
+        value={collaboratorAddress}
+        onChange={(e) => setCollaboratorAddress(e.target.value)}
+        placeholder="Collaborator wallet address (0x...)"
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <select
+        value={collabRole}
+        onChange={(e) => setCollabRole(e.target.value)}
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
       >
-        {isBusy ? 'Working...' : 'Store Contract'}
+        <option value="contributor">Contributor</option>
+        <option value="co-author">Co-Author</option>
+        <option value="reviewer">Reviewer</option>
+        <option value="mentor">Mentor</option>
+        <option value="sponsor">Sponsor</option>
+      </select>
+      
+      <textarea
+        value={collabTerms}
+        onChange={(e) => setCollabTerms(e.target.value)}
+        placeholder="Collaboration terms (optional)"
+        rows={3}
+        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      />
+      
+      <button
+        onClick={createCollabContract}
+        disabled={isPending || isConfirming || !collaboratorAddress.trim()}
+        className="w-full px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Creating...' : 'Create Collaboration Contract Onchain'}
       </button>
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
+
       {isSuccess && (
-        <div className="p-3 bg-green-50 text-green-700 rounded-lg text-sm">Collaboration contract noted.</div>
+        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
+          ✓ Collaboration contract created onchain
+        </div>
       )}
     </div>
   )
