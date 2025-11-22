@@ -11,52 +11,51 @@ interface OnchainAchievementAccessControlProps {
 
 export default function OnchainAchievementAccessControl({ achievementId }: OnchainAchievementAccessControlProps) {
   const { address } = useAccount()
-  const [allowedAddresses, setAllowedAddresses] = useState('')
-  
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
-    hash,
-  })
+  const [role, setRole] = useState('MINTER_ROLE')
+  const [grantee, setGrantee] = useState('0xgrantee')
+  const [grantTx, setGrantTx] = useState('0xgrant')
 
-  const setAccessControl = async () => {
-    if (!address) return
-    
-    const accessData = `ACCESS_CONTROL: ${allowedAddresses || 'public'}`
-    
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+
+  const recordAccessControl = () => {
+    if (!address || !role.trim()) return
+    if (!grantee.trim() || !grantee.startsWith('0x')) return
+
+    const payload = `ACCESS_CONTROL|role:${role}|grantee:${grantee}|tx:${grantTx}`
+
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [achievementId, accessData],
+      args: [achievementId, payload],
     })
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold mb-4">🔐 Access Control</h3>
-      
-      <textarea
-        value={allowedAddresses}
-        onChange={(e) => setAllowedAddresses(e.target.value)}
-        placeholder="Enter allowed addresses (one per line) or leave empty for public"
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4 font-mono text-sm"
-        rows={4}
-      />
-      
+    <section className="bg-white border border-red-100 rounded-xl shadow p-6">
+      <h3 className="text-xl font-bold mb-2">🔒 Access Control</h3>
+      <p className="text-sm text-gray-600 mb-4">Record role-based access control grants and revocations.</p>
+
+      <div className="space-y-3 mb-4">
+        <input value={role} onChange={(e) => setRole(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500" placeholder="Role name" />
+        <input value={grantee} onChange={(e) => setGrantee(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500" placeholder="Grantee address" />
+        <input value={grantTx} onChange={(e) => setGrantTx(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500" placeholder="Grant transaction" />
+      </div>
+
       <button
-        onClick={setAccessControl}
-        disabled={isPending || isConfirming}
-        className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-gray-400"
+        onClick={recordAccessControl}
+        disabled={isPending || isConfirming || !grantee.startsWith('0x')}
+        className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 disabled:bg-gray-400"
       >
-        {isPending || isConfirming ? 'Updating...' : 'Update Access Control Onchain'}
+        {isPending || isConfirming ? 'Recording...' : 'Record access control'}
       </button>
 
       {isSuccess && (
-        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
-          ✓ Access control updated onchain
+        <div className="mt-4 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3">
+          ✓ Access control event recorded onchain.
         </div>
       )}
-    </div>
+    </section>
   )
 }
