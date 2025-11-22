@@ -19,7 +19,8 @@ export default function OnchainAchievementProxyAdmin({ achievementId }: OnchainA
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const recordAdmin = () => {
-    if (!address || !adminAddress.trim()) return
+    if (!address) return
+    if (!adminAddress.trim()) return
 
     const payload = `PROXY_ADMIN|admin:${adminAddress}|proxy:${proxyAddress}|tx:${ownershipTx}`
 

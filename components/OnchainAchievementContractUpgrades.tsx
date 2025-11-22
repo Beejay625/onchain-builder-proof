@@ -19,7 +19,8 @@ export default function OnchainAchievementContractUpgrades({ achievementId }: On
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const recordUpgrade = () => {
-    if (!address || !upgradeType.trim()) return
+    if (!address) return
+    if (!upgradeType.trim()) return
     if (!newImplementation.trim() || !upgradeTx.trim()) return
     if (!newImplementation.startsWith('0x') || !upgradeTx.startsWith('0x')) return
 

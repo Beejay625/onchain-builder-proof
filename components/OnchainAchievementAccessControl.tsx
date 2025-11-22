@@ -19,7 +19,8 @@ export default function OnchainAchievementAccessControl({ achievementId }: Oncha
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
   const recordAccessControl = () => {
-    if (!address || !role.trim()) return
+    if (!address) return
+    if (!role.trim()) return
     if (!grantee.trim() || !grantee.startsWith('0x')) return
 
     const payload = `ACCESS_CONTROL|role:${role}|grantee:${grantee}|tx:${grantTx}`
