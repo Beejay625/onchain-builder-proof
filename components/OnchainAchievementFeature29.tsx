@@ -9,6 +9,7 @@ export default function OnchainAchievementFeature29({ achievementId }: Props) {
   const [data, setData] = useState('')
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+  const isValid = (val: string) => val.trim().length > 0
   const submit = () => {
     if (!address || !data.trim()) return
     writeContract({ address: BUILDER_PROOF_CONTRACT as `0x${string}`, abi: BuilderProofABI, functionName: 'addComment', args: [achievementId, `FEATURE29|data:${data}`] })
