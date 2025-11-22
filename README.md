@@ -12,9 +12,46 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 
 ## 🎉 564+ Production-Ready Features!
 
+### New Onchain Operations Layer (Q4 2025 Drop)
+- 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
+- 🔒 **Contribution Escrow**: Lock funds until milestone-specific unlock conditions are satisfied.
+- 🚨 **Risk Alerts**: Broadcast protocol risk advisories directly on the achievement timeline.
+- 🪙 **Dynamic NFT Levels**: Sync evolving XP levels, tiers, and badge labels for achievement NFTs.
+- 📈 **Impact Certificates**: Attach verifiable public goods metrics with immutable evidence links.
+- 🌿 **Carbon Offset Ledger**: Log registry-grade carbon retirements tied to every deployment.
+- 🏦 **Treasury Signals**: Coordinate treasury rebalances and payouts with onchain intent notes.
+- 🛰 **DePIN Proof**: Anchor decentralized hardware coverage, uptime, and device telemetry.
+- 📊 **Predictive Bonuses**: Publish model-driven retro bonus allocations with confidence scores.
+- 🔥 **Loyalty Multipliers**: Capture streak-based reward multipliers for consistent contributors.
+- 🛡 **Metadata Guardian**: Seal content-addressed manifests, storage networks, and versions.
+- 🔁 **Chain Abstraction Routes**: Describe inter-chain routing paths and tooling choices.
+- 🔐 **Reown Session Vault**: Snapshot short-lived Reown scopes, durations, and device tags.
+- 🧾 **Delegated Access**: Record scoped permissions, delegate wallets, and expirations.
+- ⛽ **Gas Budget Planner**: Document gas allocations per chain and execution purpose.
+- 🕸 **Social Graph Sync**: Mirror decentralized social metrics (followers, engagement, reach).
+- 📦 **Versioned Artifacts**: Track artifact tags, checksums, and immutable storage pointers.
+- 🪙 **Builder Insurance**: Reference parametric insurance policies covering deliverables.
+- 🧭 **Compliance Records**: Capture regulatory frameworks, audit partners, and status.
+- 🗓 **Quest Scheduler**: Sync quest windows with achievement IDs for automation hooks.
+- 🌉 **Attestation Bridge**: Note cross-standard attestation moves plus underlying bridge tx.
+- 💸 **Retro Payout Simulator**: Share model estimates for upcoming retroactive funding rounds.
+- 🧬 **NFT Composability Map**: Explain parent/child NFT relationships and booster effects.
+- ✅ **Validator Endorsements**: Let validator operators co-sign achievements with confidence.
+- 🛑 **Emergency Pause Log**: Chronicle pause reasons, guardians, and resume status.
+- 📡 **Observability Pulse**: Stream uptime, latency, and incident counts into the record.
+- 🧰 **Maintenance Proofs**: Document the cyclical maintenance tasks and verification links.
+- 🤖 **AI Review Insights**: Store AI-generated audit summaries with associated risk scoring.
+- 🌊 **Stream Guards**: Describe guardrails that throttle or pause token streaming payouts.
+- 🔥 **Builder Heatmap**: Share timezone, shipping windows, and cadence for coordination.
+
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
+- 🤖 **AI Draft Assistant**: Turn rough notes into onchain-ready achievement summaries
 - 📝 **Achievement Templates**: Quick-start templates for common achievements
+- 🧩 **Adaptive Template Builder**: Compose reusable blueprints with drag-and-drop fields
+- 📎 **Achievement Evidence Locker**: Attach hashes, IPFS links, and dashboards before minting
+- 🐙 **GitHub Auto-Proof Importer**: Convert recent commits into ready-to-mint drafts
+- ⚙️ **CI/CD Deployment Sync**: Register deployment webhooks that log proofs automatically
 - 📚 **Template Library**: Browse extensive library of achievement templates
 - 🏷️ **Category System**: Organize achievements by type (Development, Design, Learning, etc.)
 - 🔍 **Search & Filter**: Find achievements quickly with advanced filtering
@@ -187,43 +224,12 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ✅ **Onchain Achievement Success Rate**: Calculate success rates
 - 📊 **Onchain Achievement Completion Rate**: Track completion rates
 
-#### Additional Onchain Capabilities
-- 🧠 **Onchain AI Summaries**: Generate verifiable AI summaries for each achievement directly onchain
-- 🛰️ **Onchain Telemetry Mirror**: Mirror external telemetry proofs (CI, sensors, analytics) to the BuilderProof contract
-- ♻️ **Onchain Lifecycle Hooks**: Attach pre- and post-execution hooks that enforce achievement workflows
-- 🔎 **Onchain Anomaly Detection**: Flag irregular reputation, staking, or activity spikes with immutable alerts
-- ⚙️ **Onchain Automation Recipes**: Store reusable automation flows that trigger multi-step onchain actions
-- 🧪 **Onchain Experiment Tracking**: Log experiment hypotheses, metrics, and outcomes for verifiable R&D progress
-- 🧭 **Onchain Journey Maps**: Capture complete builder journey maps with signed checkpoints at every milestone
-- 📡 **Onchain Signal Boosters**: Broadcast notable achievements to partner protocols through automatic relays
-- 📦 **Onchain Module Registry**: Publish reusable achievement modules and blueprints as composable NFTs
-- 🛡️ **Onchain Guardian Alerts**: Allow guardian wallets to configure guardrails and emergency stop conditions
-- 📈 **Onchain KPI Benchmarks**: Store KPI targets and actuals onchain for transparent performance tracking
-- 🧱 **Onchain Build Logs**: Persist hashed build logs and deployment artifacts alongside achievements
-- 🪙 **Onchain Micro-Grants**: Attach programmable micro-funding pools that release rewards per milestone
-- 🧾 **Onchain Budget Tracking**: Track spend allocations and reimbursements tied to achievement phases
-- 🤖 **Onchain Agent Delegation**: Delegate achievement maintenance to autonomous agents with enforceable limits
-- 🔐 **Onchain Access Keys**: Mint scoped cryptographic keys that grant temporary data access
-- 🧮 **Onchain Smart Invoices**: Issue payable invoices generated directly from achievement deliverables
-- 🎯 **Onchain Goal Contracts**: Bind SMART goals to achievements with automated verification logic
-- 🔄 **Onchain Retro Sync**: Sync historical off-chain achievements via notarized bundles and timestamps
-- 📁 **Onchain Evidence Locker**: Store hashed evidence bundles for audit-ready retrieval at any moment
-- 🧬 **Onchain Provenance Graph**: Visualize dependency graphs between related achievements and contributors
-- 📊 **Onchain Impact Benchmarks**: Compare impact metrics against ecosystem-wide benchmarks stored onchain
-- 🛡️ **Onchain Guardian Council**: Form multi-signature councils that approve sensitive achievement actions
-- 🌐 **Onchain Localization Layer**: Maintain multilingual metadata packs pinned to each achievement
-- 🧯 **Onchain Incident Playbooks**: Keep emergency response playbooks that trigger when incidents are logged
-- 🪄 **Onchain Magic Links**: Issue expiring cryptographic share links for time-bound achievement previews
-- 🗂️ **Onchain Document Vault**: Reference decentralized storage documents with tamper-proof pointers
-- 🧩 **Onchain Integration Bridges**: Register third-party integrations with scoped permissions and monitoring
-- 🚀 **Onchain Launch Gates**: Stage multi-phase launches with gate conditions encoded onchain
-- 🎛️ **Onchain Config Snapshots**: Capture environment and configuration snapshots tied to each achievement
-
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
 - 🎯 **Milestone Tracker**: Visual progress tracking toward next milestone
 - 🔥 **Streak Tracking**: Monitor building consistency with current and longest streaks
 - 🔥 **Multiple Streaks**: Track daily, weekly, and monthly streaks
+- 🧭 **Habit Streak Coach**: Predict streak risk and queue proactive nudges
 - 📈 **Reputation System**: Earn reputation points through posts, likes, and comments
 - ⭐ **Level System**: Progress from Beginner to Legend based on achievements
 - 🎁 **Rewards**: Display and claim achievement rewards
@@ -257,6 +263,7 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 
 ### Dashboard & Analytics
 - 📈 **Analytics Dashboard**: View key metrics and insights
+- 📈 **Impact KPI Dashboard**: Monitor reach, streak health, and velocity at a glance
 - 📊 **Onchain Analytics**: Show platform statistics from blockchain
 - 📊 **Onchain Analytics Dashboard**: Build analytics dashboard with trends
 - 📊 **Onchain Stats**: Display platform-wide statistics
@@ -267,12 +274,16 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📥 **Data Export**: Export achievements in JSON or CSV format
 - 📥 **Achievement Export**: Export achievements in multiple formats
 - 💡 **Insights**: Display personalized achievement insights
+- ⏱️ **Wakatime Activity Sync**: Pull focus time and language mix into analytics
+- 🛣️ **Milestone Roadmaps**: Align achievements to OKRs and completion targets
+- 🌉 **Cross-Chain Mirror View**: Preview proofs across Base, Optimism, and Arbitrum
 
 ### Web3 Integration
 - 🔐 **Wallet Connection**: Seamless connection via Reown AppKit
 - 💰 **Balance Display**: View wallet balance in real-time
 - ⛽ **Gas Estimation**: See estimated transaction costs
 - 🌐 **Multi-Network**: Support for Base, Mainnet, Arbitrum, Optimism, and Polygon
+- 👛 **Multi-Wallet Aggregator**: Consolidate stats across EOAs and contract wallets
 - 🟢 **Network Status**: Real-time network connection indicator
 - 🔄 **Sync Status**: Show blockchain sync status indicator
 - 🔄 **Onchain Sync Status**: Monitor blockchain synchronization status
@@ -387,38 +398,6 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🕸️ **Onchain Social Graph**: Build and visualize builder network connections
 - ⛓️ **Onchain Achievement Chains**: Link sequential achievements together
 - 🔌 **Onchain Reown Integration**: Enhanced Reown wallet connectivity features
-
-#### New Operational Controls
-- 🛡️ **Guardian Recovery Plans**: Assign guardian wallets and recovery windows to each achievement for social recovery.
-- 💾 **Resilience Vault**: Mirror high-value proofs into a redundancy log that documents coverage commitments.
-- 🛠️ **Reown Session Safeguard**: Bind Reown session IDs and device fingerprints to sensitive achievements for audit trails.
-- ⚙️ **Modular Escrow**: Publish escrow archetypes and release conditions directly alongside the achievement record.
-- 🎯 **Dynamic Bounty Weights**: Adjust bounty criteria weightings onchain so contributors can see transparent payout math.
-- 📈 **Impact Leaderboard Ping**: Signal impact scores plus qualitative rationale to surface standout work in leaderboards.
-- 🔏 **Verifier Registry**: List third-party verifiers together with evidence links for every claim.
-- 💓 **Builder Heartbeat**: Broadcast lightweight focus and confidence pings to keep squads aware of momentum shifts.
-- ⏱️ **Timeboxed Challenges**: Attach challenge deadlines and reviewers so time-limited quests remain provable forever.
-- 🔓 **Progressive Unlocks**: Detail staged unlock plans for progressive disclosure or limited access phases.
-- 🤝 **Reputation Pledges**: Stake how much personal reputation backs any given achievement outcome.
-- 🧠 **Mentor Council**: Register mentor handles plus their domains of oversight per achievement stream.
-- 🤝 **Partner Attestations**: Log partner organizations and attestation hashes for cross-team collaborations.
-- 🧪 **Experiment Tracking**: Capture hypothesis and outcome pairs for onchain R&D experiments.
-- 📣 **DevRel Proofs**: Record DevRel engagements with the format and permalink so outreach is provable.
-- 🎁 **Retro Quest Payouts**: Track retroactive funding recipients together with payout amounts.
-- 🎓 **Learning Scholarships**: Mint scholarship awards and notes for supported learners.
-- 🏦 **Grant Escrow Vault**: Bind grant tranche IDs to escrow notes for compliance-ready reporting.
-- 📡 **Chain Signal Alerts**: Flag severity plus notification channel details for onchain alerting.
-- 📸 **Impact Snapshots**: Save quick KPI snapshots (TVL, adoption, savings, etc.) per achievement.
-- 🌱 **Sustainability Ledger**: Document sustainability initiatives and carbon offset impact.
-- 🤝 **Collab Contract Terms**: Reference collaboration agreement IDs plus next checkpoints onchain.
-- 📒 **Reown Session Log**: Mint summaries of critical Reown wallet sessions for accountability.
-- 🏋️ **Proof of Practice**: Track practice reps that led up to the final onchain proof-of-work.
-- 🧯 **Fail-Safe Vault**: Define fail-safe owners and trigger conditions for high-risk launches.
-- 🌐 **Cross-DAO Endorsement**: Record endorsements received from external DAOs or collectives.
-- 🧾 **Milestone Escrow**: Link milestone numbers directly to escrow identifiers for payout tracing.
-- ⛽ **Gas Budgeting**: Plan per-network gas ceilings before executing important transactions.
-- 🧾 **Builder Retainers**: Log retainer amounts plus renewal dates for long-term contributors.
-- 📋 **Release Checklist**: Mint final release checklist approvals with accountable owner notes.
 - 🍴 **Achievement Forking**: Fork achievements to create derivatives
 - 💰 **Achievement Sponsorship**: Sponsor achievements with ETH contributions
 - 🎯 **Achievement Bounty**: Create bounties for achievement completion
