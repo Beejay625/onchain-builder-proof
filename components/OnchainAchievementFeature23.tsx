@@ -15,5 +15,5 @@ export default function OnchainAchievementFeature23({ achievementId }: Props) {
     if (!address || !data.trim()) return
     writeContract({ address: BUILDER_PROOF_CONTRACT as `0x${string}`, abi: BuilderProofABI, functionName: 'addComment', args: [achievementId, `FEATURE23|data:${data}`] })
   }
-  return <section className="bg-white border rounded-xl shadow p-6"><h3 className="text-xl font-bold mb-2">Feature 23</h3><input value={data} onChange={(e) => setData(e.target.value)} className="w-full border rounded-lg p-2 mb-4" /><button onClick={submit} disabled={isPending || isConfirming} className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg">{isPending ? 'Submitting...' : 'Submit'}</button>{isSuccess && <div className="mt-4 text-green-700">✓ Recorded</div>}</section>
+  return <section className="bg-white border rounded-xl shadow p-6"><h3 className="text-xl font-bold mb-2">Feature 23</h3><input value={data} onChange={(e) => setData(e.target.value)} className="w-full border rounded-lg p-2 mb-4" /><button onClick={submit} disabled={isPending || isConfirming} className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg">{isPending || isConfirming ? 'Submitting...' : 'Submit'}</button>{isSuccess && <div className="mt-4 text-green-700">✓ Recorded</div>}</section>
 }
