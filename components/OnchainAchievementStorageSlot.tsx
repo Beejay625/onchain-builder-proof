@@ -37,9 +37,9 @@ export default function OnchainAchievementStorageSlot({ achievementId }: Onchain
       <p className="text-sm text-gray-600 mb-4">Document storage slot layouts for upgradeable contracts.</p>
 
       <div className="space-y-3 mb-4">
-        <input type="number" value={slot} onChange={(e) => setSlot(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Storage slot" />
-        <input value={value} onChange={(e) => setValue(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Value" />
-        <input value={purpose} onChange={(e) => setPurpose(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Purpose" />
+        <input type="number" value={slot} onChange={(e) => setSlot(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder=" requiredStorage slot" />
+        <input value={value} onChange={(e) => setValue(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder=" requiredValue" />
+        <input value={purpose} onChange={(e) => setPurpose(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder=" requiredPurpose" />
       </div>
 
       <button

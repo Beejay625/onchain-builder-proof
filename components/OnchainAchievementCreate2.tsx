@@ -38,9 +38,9 @@ export default function OnchainAchievementCreate2({ achievementId }: OnchainAchi
       <p className="text-sm text-gray-600 mb-4">Record CREATE2 deterministic contract deployments.</p>
 
       <div className="space-y-3 mb-4">
-        <input value={salt} onChange={(e) => setSalt(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" placeholder="Salt" />
-        <input value={bytecode} onChange={(e) => setBytecode(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Bytecode hash" />
-        <input value={deployedAddress} onChange={(e) => setDeployedAddress(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" placeholder="Deployed address" />
+        <input value={salt} onChange={(e) => setSalt(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" placeholder=" requiredSalt" />
+        <input value={bytecode} onChange={(e) => setBytecode(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder=" requiredBytecode hash" />
+        <input value={deployedAddress} onChange={(e) => setDeployedAddress(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" placeholder=" requiredDeployed address" />
       </div>
 
       <button

@@ -38,12 +38,12 @@ export default function OnchainAchievementERC165({ achievementId }: OnchainAchie
       <p className="text-sm text-gray-600 mb-4">Record ERC165 interface support declarations.</p>
 
       <div className="space-y-3 mb-4">
-        <input value={interfaceId} onChange={(e) => setInterfaceId(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-violet-500" placeholder="Interface ID" />
+        <input value={interfaceId} onChange={(e) => setInterfaceId(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-violet-500" placeholder=" requiredInterface ID" />
         <select value={supported} onChange={(e) => setSupported(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2">
           <option value="true">Supported</option>
           <option value="false">Not Supported</option>
         </select>
-        <input value={standard} onChange={(e) => setStandard(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Standard name" />
+        <input value={standard} onChange={(e) => setStandard(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder=" requiredStandard name" />
       </div>
 
       <button
