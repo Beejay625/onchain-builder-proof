@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 594+ Production-Ready Features!
+## 🎉 600+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -279,6 +279,13 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⚖️ **Onchain Reputation Weighting**: Weighted voting based on reputation
 - 🔄 **Onchain Achievement Sync**: Sync achievements across multiple chains
 - ✅ **Onchain Achievement Validation**: Validate achievements with verifier addresses
+- 🏅 **Onchain Verification Badge System**: Request verifiable badges with tier levels (basic, premium, elite)
+- 🎫 **Onchain Reputation Delegation with Time Locks**: Delegate reputation with configurable expiration periods
+- 💰 **Onchain Sponsorship Pool**: Sponsor achievements with ETH contributions and messages
+- 🎯 **Onchain Achievement Bounty System**: Create bounties for achievement completion with deadlines
+- 🪙 **Onchain Token Rewards Distribution**: Distribute token rewards to achievement recipients
+- ⚖️ **Onchain Dispute Resolution**: Resolve disputes onchain with approval, rejection, or modification outcomes
+- 🎯 **Onchain Skill Endorsement**: Endorse builder skills with verifiable proof links and level ratings
 - 📜 **Onchain Immutable History**: View complete immutable achievement history
 - 🔗 **Onchain Chain Visualization**: Visualize achievement chain connections
 - ⏰ **Onchain Timestamps**: View permanent blockchain timestamps
