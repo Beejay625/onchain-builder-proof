@@ -55,7 +55,7 @@ export default function OnchainAchievementPausableState({ achievementId }: Oncha
 
       {isSuccess && (
         <div className="mt-4 text-sm text-orange-700 bg-orange-50 border border-orange-200 rounded-lg p-3">
-          ✓ Pause state recorded onchain.
+          ✓ Operation recorded successfully onchain.
         </div>
       )}
     </section>
