@@ -38,7 +38,7 @@ export default function OnchainAchievementEventLogging({ achievementId }: Onchai
 
       <div className="space-y-3 mb-4">
         <input value={eventName} onChange={(e) => setEventName(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Event name" />
-        <input value={eventSignature} onChange={(e) => setEventSignature(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Event signature" />
+        <input value={eventSignature} onChange={(e) => setEventSignature(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Event signature" type="text" />
         <input value={indexedParams} onChange={(e) => setIndexedParams(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Indexed params" />
       </div>
 
