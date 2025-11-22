@@ -11,51 +11,51 @@ interface OnchainAchievementTimeLockProps {
 
 export default function OnchainAchievementTimeLock({ achievementId }: OnchainAchievementTimeLockProps) {
   const { address } = useAccount()
-  const [unlockDate, setUnlockDate] = useState('')
-  
-  const { writeContract, data: hash, isPending } = useWriteContract()
-  
-  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({
-    hash,
-  })
+  const [target, setTarget] = useState('0xtarget')
+  const [value, setValue] = useState('0')
+  const [delay, setDelay] = useState('48 hours')
 
-  const setTimeLock = async () => {
-    if (!address || !unlockDate) return
-    
-    const lockData = `TIMELOCK: ${unlockDate}`
-    
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
+
+  const recordTimeLock = () => {
+    if (!address) return
+    if (!target.trim() || !target.startsWith('0x')) return
+
+    const payload = `TIMELOCK|target:${target}|value:${value}|delay:${delay}`
+
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [achievementId, lockData],
+      args: [achievementId, payload],
     })
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold mb-4">⏰ Time Lock</h3>
-      
-      <input
-        type="datetime-local"
-        value={unlockDate}
-        onChange={(e) => setUnlockDate(e.target.value)}
-        className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-      />
-      
+    <section className="bg-white border border-slate-100 rounded-xl shadow p-6">
+      <h3 className="text-xl font-bold mb-2">⏰ Time Lock</h3>
+      <p className="text-sm text-gray-600 mb-4">Record time-locked transactions for delayed execution.</p>
+
+      <div className="space-y-3 mb-4">
+        <input value={target} onChange={(e) => setTarget(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-slate-500" placeholder="Target address" />
+        <input value={value} onChange={(e) => setValue(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Value" />
+        <input value={delay} onChange={(e) => setDelay(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Delay period" />
+      </div>
+
       <button
-        onClick={setTimeLock}
-        disabled={isPending || isConfirming || !unlockDate}
-        className="w-full px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:bg-gray-400"
+        onClick={recordTimeLock}
+        disabled={isPending || isConfirming || !address || !target.startsWith('0x')}
+        className="w-full px-4 py-3 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 disabled:bg-gray-400"
       >
-        {isPending || isConfirming ? 'Setting...' : 'Set Time Lock Onchain'}
+        {isPending || isConfirming ? 'Recording...' : 'Record time lock'}
       </button>
 
       {isSuccess && (
-        <div className="mt-4 p-3 bg-green-50 border border-green-500 rounded-lg text-sm text-green-700">
-          ✓ Time lock set onchain
+        <div className="mt-4 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-lg p-3">
+          ✓ Time lock transaction recorded.
         </div>
       )}
-    </div>
+    </section>
   )
 }
