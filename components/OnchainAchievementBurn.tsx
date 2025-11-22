@@ -70,3 +70,4 @@ export default function OnchainAchievementBurn({ achievementId }: OnchainAchieve
   )
 }
 
+
