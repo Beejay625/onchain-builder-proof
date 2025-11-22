@@ -39,7 +39,7 @@ export default function OnchainAchievementReownSessionManager({ achievementId }:
       <div className="space-y-3 mb-4">
         <input value={sessionId} onChange={(e) => setSessionId(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-sky-500" placeholder="Session ID" />
         <input value={permissions} onChange={(e) => setPermissions(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Permissions" />
-        <input type="number" value={expiry} onChange={(e) => setExpiry(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Expiry (seconds)" />
+        <input type="number" value={expiry} onChange={(e) => setExpiry(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Expiry (seconds)" min="1" />
       </div>
 
       <button
