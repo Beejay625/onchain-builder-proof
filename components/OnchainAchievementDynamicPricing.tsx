@@ -5,51 +5,56 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementDynamicPricing() {
+interface OnchainAchievementDynamicPricingProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementDynamicPricing({ achievementId }: OnchainAchievementDynamicPricingProps) {
   const { address } = useAccount()
-  const [postId, setPostId] = useState('')
-  const [priceFormula, setPriceFormula] = useState('')
-  
+  const [basePrice, setBasePrice] = useState('100')
+  const [demandMultiplier, setDemandMultiplier] = useState('1.2x')
+  const [currentPrice, setCurrentPrice] = useState('120')
+
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const setPricing = async () => {
-    if (!address || !postId || !priceFormula) return
+  const recordPricing = () => {
+    if (!address || !basePrice.trim()) return
+
+    const payload = `DYNAMIC_PRICING|base:${basePrice}|multiplier:${demandMultiplier}|current:${currentPrice}`
+
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
       functionName: 'addComment',
-      args: [BigInt(postId), `PRICING:${priceFormula}`],
+      args: [achievementId, payload],
     })
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">💲 Dynamic Pricing</h2>
-      <div className="space-y-4">
-        <input
-          type="number"
-          placeholder="Achievement ID"
-          value={postId}
-          onChange={(e) => setPostId(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <input
-          type="text"
-          placeholder="Price formula"
-          value={priceFormula}
-          onChange={(e) => setPriceFormula(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={setPricing}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Setting...' : 'Set Dynamic Price'}
-        </button>
-        {isSuccess && <p className="text-green-600">Dynamic pricing configured!</p>}
+    <section className="bg-white border border-orange-100 rounded-xl shadow p-6">
+      <h3 className="text-xl font-bold mb-2">💰 Dynamic Pricing</h3>
+      <p className="text-sm text-gray-600 mb-4">Record market-based pricing adjustments for achievement access.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <input value={basePrice} onChange={(e) => setBasePrice(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Base price" />
+        <input value={demandMultiplier} onChange={(e) => setDemandMultiplier(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Multiplier" />
+        <input value={currentPrice} onChange={(e) => setCurrentPrice(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Current price" />
       </div>
-    </div>
+
+      <button
+        onClick={recordPricing}
+        disabled={isPending || isConfirming}
+        className="w-full px-4 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Recording...' : 'Record dynamic pricing'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 text-sm text-orange-700 bg-orange-50 border border-orange-200 rounded-lg p-3">
+          ✓ Dynamic pricing snapshot stored.
+        </div>
+      )}
+    </section>
   )
 }
