@@ -45,7 +45,7 @@ export default function OnchainAchievementSignatureVerification({ achievementId 
 
       <button
         onClick={recordVerification}
-        disabled={isPending || isConfirming || !signer.startsWith('0x')}
+        disabled={isPending || isConfirming || !address || !signer.startsWith('0x')}
         className="w-full px-4 py-3 bg-cyan-600 text-white rounded-lg font-semibold hover:bg-cyan-700 disabled:bg-gray-400"
       >
         {isPending || isConfirming ? 'Recording...' : 'Record signature verification'}

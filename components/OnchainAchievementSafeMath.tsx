@@ -49,7 +49,7 @@ export default function OnchainAchievementSafeMath({ achievementId }: OnchainAch
 
       <button
         onClick={recordSafeMath}
-        disabled={isPending || isConfirming}
+        disabled={isPending || isConfirming || !address}
         className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400"
       >
         {isPending || isConfirming ? 'Recording...' : 'Record safe math'}
