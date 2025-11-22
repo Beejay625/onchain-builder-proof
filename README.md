@@ -43,6 +43,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🤖 **AI Review Insights**: Store AI-generated audit summaries with associated risk scoring.
 - 🌊 **Stream Guards**: Describe guardrails that throttle or pause token streaming payouts.
 - 🔥 **Builder Heatmap**: Share timezone, shipping windows, and cadence for coordination.
+- 💧 **Achievement Watermarking**: Add verifiable watermarks for ownership, authenticity, integrity, and timestamp verification.
+- ✍️ **Co-Signing**: Request and record multiple builder co-signatures for collaborative achievements.
+- ⏰ **Achievement Expiration**: Set expiration dates with optional auto-renewal for time-limited achievements.
+- 🔄 **Achievement Renewal**: Renew expired achievements with configurable renewal periods and tracking.
+- 🧬 **Achievement Cloning**: Clone achievements as templates or derivative works with source attribution.
+- ❄️ **Achievement Freeze**: Temporarily freeze achievements with reasons and duration tracking.
+- 🔥 **Achievement Thaw**: Unfreeze frozen achievements with manual or automatic thaw mechanisms.
+- 📌 **Achievement Priority**: Set priority levels (low, medium, high, critical) for achievement management.
+- ⭐ **Achievement Rating**: Rate achievements with 1-5 star system and optional review comments.
+- 📊 **Achievement Status**: Track status transitions (draft, published, archived, hidden, pending review).
+- 📸 **Achievement Snapshot**: Create immutable snapshots at specific points in time with descriptions.
+- ↩️ **Achievement Rollback**: Rollback achievements to previous versions with reason tracking.
+- 📉 **Achievement Decay**: Configure reputation or value decay rates over time periods.
+- 🕸️ **Achievement Graph**: Build relationship graphs between achievements (depends-on, enables, blocks, related-to).
+- 📡 **Achievement Reach**: Track reach metrics and visibility across different sources and platforms.
+- 💬 **Achievement Engagement**: Monitor engagement rates for views, likes, comments, shares, and clicks.
+- ⚡ **Achievement Velocity**: Track velocity metrics including completion rate, progress speed, and adoption rate.
+- ✅ **Achievement Success Rate**: Calculate and record success rates with total attempts tracking.
+- 📊 **Achievement Completion Rate**: Track completion rates with completed vs total tasks breakdown.
+- ✨ **Achievement Multiplier**: Set dynamic multipliers for rewards, reputation, experience, and bonuses.
+- 📢 **Amplification Score**: Calculate and track amplification scores with contributing factors.
+- 📈 **Advancement Score**: Track advancement scores with level progression (beginner to master).
+- 🔥 **Achievement Burn**: Record achievement burns with reasons and amounts for tokenomics.
+- 🔒 **Modular Escrow**: Create flexible escrow systems (milestone, time-based, condition-based, multi-party).
+- ⏰ **Proof of Practice**: Record practice hours by type (coding, design, research, writing, testing) with evidence.
+- 🧪 **Experiment Tracking**: Track experiments with hypotheses, status, and results onchain.
+- 🔓 **Progressive Unlocks**: Configure progressive unlock stages with conditions and rewards.
+- ⏱️ **Timeboxed Challenges**: Create time-limited challenges with deadlines and duration tracking.
+- 🤝 **Collaboration Contracts**: Record collaboration agreements with roles, terms, and contributor addresses.
+- 📡 **Chain Signal Alerts**: Broadcast onchain alerts with types (milestone, deadline, risk) and severity levels.
 
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
