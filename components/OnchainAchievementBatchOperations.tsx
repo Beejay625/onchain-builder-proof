@@ -5,43 +5,56 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementBatchOperations() {
+interface OnchainAchievementBatchOperationsProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementBatchOperations({ achievementId }: OnchainAchievementBatchOperationsProps) {
   const { address } = useAccount()
-  const [operations, setOperations] = useState('')
-  
+  const [operationCount, setOperationCount] = useState('5')
+  const [gasSaved, setGasSaved] = useState('45%')
+  const [batchTx, setBatchTx] = useState('0xbatch')
+
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const executeBatch = async () => {
-    if (!address || !operations) return
+  const recordBatch = () => {
+    if (!address || !batchTx.trim()) return
+
+    const payload = `BATCH_OP|count:${operationCount}|gasSaved:${gasSaved}|tx:${batchTx}`
+
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`BATCH:${operations}`],
+      functionName: 'addComment',
+      args: [achievementId, payload],
     })
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">📦 Batch Operations</h2>
-      <div className="space-y-4">
-        <textarea
-          placeholder="Batch operations (JSON array)"
-          value={operations}
-          onChange={(e) => setOperations(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={executeBatch}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Executing...' : 'Execute Batch'}
-        </button>
-        {isSuccess && <p className="text-green-600">Batch operations executed!</p>}
+    <section className="bg-white border border-blue-100 rounded-xl shadow p-6">
+      <h3 className="text-xl font-bold mb-2">📦 Batch Operations</h3>
+      <p className="text-sm text-gray-600 mb-4">Record gas-optimized batch transaction proofs.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <input value={operationCount} onChange={(e) => setOperationCount(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Operation count" />
+        <input value={gasSaved} onChange={(e) => setGasSaved(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Gas saved" />
+        <input value={batchTx} onChange={(e) => setBatchTx(e.target.value)} className="border border-gray-300 rounded-lg p-2" placeholder="Batch tx" />
       </div>
-    </div>
+
+      <button
+        onClick={recordBatch}
+        disabled={isPending || isConfirming}
+        className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Recording...' : 'Record batch operation'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 text-sm text-blue-700 bg-blue-50 border border-blue-200 rounded-lg p-3">
+          ✓ Batch operation proof stored.
+        </div>
+      )}
+    </section>
   )
 }
-
