@@ -37,9 +37,9 @@ export default function OnchainAchievementAIReviewInsights({ achievementId }: On
       <p className="text-sm text-gray-600 mb-4">Archive AI summarizations directly in the onchain record.</p>
 
       <div className="space-y-3 mb-4">
-        <input value={model} onChange={(e) => setModel(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Model" />
-        <textarea value={finding} onChange={(e) => setFinding(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" rows={3} placeholder="Finding" />
-        <input value={riskScore} onChange={(e) => setRiskScore(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Risk score" />
+        <input value={model} onChange={(e) => setModel(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="Model" />
+        <textarea value={finding} onChange={(e) => setFinding(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" rows={3} placeholder="Finding" />
+        <input value={riskScore} onChange={(e) => setRiskScore(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="Risk score" />
       </div>
 
       <button
