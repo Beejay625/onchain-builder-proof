@@ -38,9 +38,24 @@ export default function OnchainAchievementGasOptimization({ achievementId }: Onc
       <p className="text-sm text-gray-600 mb-4">Document gas optimization techniques applied to smart contracts.</p>
 
       <div className="space-y-3 mb-4">
-        <input value={optimization} onChange={(e) => setOptimization(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Optimization type" />
-        <input value={gasSaved} onChange={(e) => setGasSaved(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Gas saved" />
-        <input value={technique} onChange={(e) => setTechnique(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Technique" />
+        <input 
+          value={optimization} 
+          onChange={(e) => setOptimization(e.target.value)} 
+          className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" 
+          placeholder="Optimization type" 
+        />
+        <input 
+          value={gasSaved} 
+          onChange={(e) => setGasSaved(e.target.value)} 
+          className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" 
+          placeholder="Gas saved" 
+        />
+        <input 
+          value={technique} 
+          onChange={(e) => setTechnique(e.target.value)} 
+          className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-emerald-500" 
+          placeholder="Technique" 
+        />
       </div>
 
       <button
