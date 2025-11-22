@@ -5,43 +5,56 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-export default function OnchainAchievementGasOptimization() {
+interface OnchainAchievementGasOptimizationProps {
+  achievementId: bigint
+}
+
+export default function OnchainAchievementGasOptimization({ achievementId }: OnchainAchievementGasOptimizationProps) {
   const { address } = useAccount()
-  const [optimization, setOptimization] = useState('')
-  
+  const [optimization, setOptimization] = useState('packed storage')
+  const [gasSaved, setGasSaved] = useState('35%')
+  const [technique, setTechnique] = useState('struct packing')
+
   const { writeContract, data: hash, isPending } = useWriteContract()
   const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-  const optimizeGas = async () => {
-    if (!address || !optimization) return
+  const recordOptimization = () => {
+    if (!address || !optimization.trim()) return
+
+    const payload = `GAS_OPTIMIZATION|type:${optimization}|saved:${gasSaved}|technique:${technique}`
+
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
-      functionName: 'createPost',
-      args: [`GAS_OPT:${optimization}`],
+      functionName: 'addComment',
+      args: [achievementId, payload],
     })
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-4">⛽ Gas Optimization</h2>
-      <div className="space-y-4">
-        <textarea
-          placeholder="Gas optimization strategy"
-          value={optimization}
-          onChange={(e) => setOptimization(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
-        />
-        <button
-          onClick={optimizeGas}
-          disabled={isPending || isConfirming}
-          className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-        >
-          {isPending || isConfirming ? 'Optimizing...' : 'Optimize Gas Usage'}
-        </button>
-        {isSuccess && <p className="text-green-600">Gas optimization recorded!</p>}
+    <section className="bg-white border border-emerald-100 rounded-xl shadow p-6">
+      <h3 className="text-xl font-bold mb-2">⛽ Gas Optimization</h3>
+      <p className="text-sm text-gray-600 mb-4">Document gas optimization techniques applied to smart contracts.</p>
+
+      <div className="space-y-3 mb-4">
+        <input value={optimization} onChange={(e) => setOptimization(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Optimization type" />
+        <input value={gasSaved} onChange={(e) => setGasSaved(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Gas saved" />
+        <input value={technique} onChange={(e) => setTechnique(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Technique" />
       </div>
-    </div>
+
+      <button
+        onClick={recordOptimization}
+        disabled={isPending || isConfirming}
+        className="w-full px-4 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:bg-gray-400"
+      >
+        {isPending || isConfirming ? 'Recording...' : 'Record gas optimization'}
+      </button>
+
+      {isSuccess && (
+        <div className="mt-4 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          ✓ Gas optimization recorded onchain.
+        </div>
+      )}
+    </section>
   )
 }
-
