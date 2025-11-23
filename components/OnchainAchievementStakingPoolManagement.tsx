@@ -21,6 +21,7 @@ export default function OnchainAchievementStakingPoolManagement({ achievementId 
   const recordPool = () => {
     if (!address) return
     if (!poolAddress.trim()) return
+    if (!totalStaked.trim() || isNaN(Number(totalStaked))) return
     if (!poolAddress.startsWith('0x') || poolAddress.length !== 42) return
 
     const payload = `STAKING_POOL_MANAGEMENT|pool:${poolAddress}|totalStaked:${totalStaked}|apy:${apy}`
