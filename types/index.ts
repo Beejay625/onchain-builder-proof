@@ -175,6 +175,36 @@ export interface FeatureFlags {
   achievementDetailView: boolean
   achievementQuickActions: boolean
   achievementBulkOperations: boolean
+  achievementMetadataManagement: boolean
+  achievementIPFSStorage: boolean
+  achievementMultiChainBridge: boolean
+  achievementCrossChainSync: boolean
+  achievementGasOptimization: boolean
+  achievementBatchMinting: boolean
+  achievementMerkleTreeProofs: boolean
+  achievementZeroKnowledgeProofs: boolean
+  achievementSoulboundTokens: boolean
+  achievementComposability: boolean
+  achievementInteroperability: boolean
+  achievementStandardCompliance: boolean
+  achievementEventLogging: boolean
+  achievementAuditTrail: boolean
+  achievementComplianceReporting: boolean
+  achievementRiskAssessment: boolean
+  achievementSecurityScoring: boolean
+  achievementVulnerabilityScanning: boolean
+  achievementAccessLogging: boolean
+  achievementPermissionManagement: boolean
+  achievementRoleBasedAccess: boolean
+  achievementTimeBasedAccess: boolean
+  achievementLocationBasedAccess: boolean
+  achievementDeviceBasedAccess: boolean
+  achievementAPIRateLimiting: boolean
+  achievementWebhookManagement: boolean
+  achievementIntegrationManagement: boolean
+  achievementPluginSystem: boolean
+  achievementExtensionSystem: boolean
+  achievementCustomFields: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
