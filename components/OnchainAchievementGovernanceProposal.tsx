@@ -21,6 +21,7 @@ export default function OnchainAchievementGovernanceProposal({ achievementId }: 
   const record = () => {
     if (!address) return
     if (!proposalId.trim()) return
+    if (!data.trim()) return
     const payload = `GovernanceProposal|id:${proposalId}|data:${data}|tx:${txHash}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
