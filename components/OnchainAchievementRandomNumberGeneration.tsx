@@ -20,7 +20,8 @@ export default function OnchainAchievementRandomNumberGeneration({ achievementId
 
   const record = () => {
     if (!address) return
-    if (!contractAddress.trim() || !contractAddress.startsWith('0x')) return
+    if (!contractAddress.trim()) return
+    if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
     const payload = `RandomNumberGeneration|contract:${contractAddress}|requestId:${requestId}|data:${data}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
