@@ -21,6 +21,7 @@ export default function OnchainAchievementSmartContractEvents({ achievementId }:
   const recordEvent = () => {
     if (!address) return
     if (!contractAddress.trim()) return
+    if (!eventName.trim()) return
     if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
 
     const payload = `SMART_CONTRACT_EVENTS|contract:${contractAddress}|event:${eventName}|data:${eventData}`
