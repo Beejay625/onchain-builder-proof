@@ -20,7 +20,8 @@ export default function OnchainAchievementBridgeValidators({ achievementId }: On
 
   const record = () => {
     if (!address) return
-    if (!chainId.trim() || !data.trim()) return
+    if (!chainId.trim()) return
+    if (!data.trim()) return
     const payload = `BridgeValidators|chainId:${chainId}|data:${data}|tx:${txHash}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
