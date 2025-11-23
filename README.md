@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 660+ Production-Ready Features!
+## 🎉 690+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -400,6 +400,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 👁️ **Onchain Preview**: Preview achievements before sharing with formatted display
 - ✅ **Onchain Validation**: Validate achievement data integrity with verification checks
 - 🔍 **Onchain Verification**: Verify achievement authenticity with contract address and chain info
+- 📋 **Achievement Templates**: Create and manage achievement templates with categories
+- 📅 **Achievement Scheduling**: Schedule achievements for future publishing with date and time
+- 🔄 **Achievement Recurring**: Set up recurring achievement reminders (daily, weekly, monthly)
+- 📝 **Achievement Drafts**: Save and manage achievement drafts locally
+- 🏷️ **Achievement Categories**: Categorize achievements for better organization
+- 🏷️ **Achievement Tags**: Add tags to achievements for better discoverability
+- 🔒 **Achievement Privacy**: Control achievement visibility and privacy settings
+- 👁️ **Achievement Visibility**: Control achievement visibility (visible, hidden, archived)
+- ⏰ **Achievement Expiration Manager**: Manage achievement expiration dates with auto-renewal
+- 🔄 **Achievement Renewal Automation**: Automate achievement renewals with configurable periods
+- 📜 **Achievement Transfer History**: View complete transfer history for achievements
+- 👤 **Achievement Ownership History**: Track ownership changes over time
+- 🤝 **Achievement Collaboration Invites**: Invite others to collaborate on achievements with roles
+- 🛡️ **Achievement Comments Moderation**: Moderate comments on achievements (approve, delete, flag)
+- 😊 **Achievement Reactions System**: React to achievements with emojis (like, love, celebrate, support)
+- 👥 **Achievement Follow System**: Follow achievements and builders onchain
+- 📊 **Achievement Share Analytics**: Track sharing metrics and performance across platforms
+- 👁️ **Achievement View Tracking**: Track views and unique views for achievements
+- 📈 **Achievement Engagement Metrics**: Comprehensive engagement analytics dashboard
+- 📊 **Achievement Performance Dashboard**: Performance metrics and scoring system
+- ⚖️ **Achievement Comparison Tool**: Compare multiple achievements side by side
+- 📊 **Achievement Trends Analysis**: Analyze achievement trends over time (week, month, year)
+- 📅 **Achievement Calendar View**: View achievements in calendar format by month
+- 📅 **Achievement Timeline View**: View achievements in chronological timeline format
+- 🖼️ **Achievement Gallery View**: View achievements in visual gallery format with grid sizes
+- 📋 **Achievement List View**: View achievements in compact list format with sorting
+- 🔲 **Achievement Grid View**: View achievements in responsive grid layout with columns
+- 📄 **Achievement Detail View**: Detailed view of achievement information and metrics
+- ⚡ **Achievement Quick Actions**: Quick access to common actions (share, bookmark, export, print)
+- 📦 **Achievement Bulk Operations**: Perform operations on multiple achievements (archive, delete, export, tag)
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
