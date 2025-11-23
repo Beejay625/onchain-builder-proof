@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 720+ Production-Ready Features!
+## 🎉 750+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -490,6 +490,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🧩 **Achievement Plugin System**: Install and manage plugins for achievements with version control
 - 🔌 **Achievement Extension System**: Add extensions to enhance achievements with feature/integration support
 - 📝 **Achievement Custom Fields**: Add custom fields to achievements with multiple data types
+- 📡 **Achievement Smart Contract Events**: Record smart contract event emissions for off-chain indexing
+- 🔍 **Achievement Event Indexing**: Track event indexing operations and configurations
+- 📦 **Achievement Transaction Batching**: Track transaction batching operations and configurations
+- ⛽ **Achievement Gas Price Oracle**: Track gas price oracle operations and configurations
+- 📝 **Achievement Token Metadata**: Track token metadata operations and configurations
+- 📝 **Achievement NFT Metadata Standard**: Record NFT metadata URI and standard compliance
+- 💰 **Achievement ERC20 Metadata**: Track ERC20 metadata operations in DeFi protocols
+- 📋 **Achievement Token Listings**: Track token listings operations in DeFi protocols
+- 🛣️ **Achievement DEX Routing**: Track DEX routing operations in DeFi protocols
+- 🛡️ **Achievement Slippage Protection**: Track slippage protection operations in DeFi protocols
+- 📊 **Achievement Price Impact Calculation**: Record price impact calculations for large swaps
+- 📊 **Achievement Liquidity Pool Analytics**: Track liquidity pool analytics metrics in DeFi protocols
+- 💰 **Achievement Yield Calculation**: Track yield calculation metrics in DeFi protocols
+- 📈 **Achievement APR/APY Tracking**: Track APR/APY tracking metrics in DeFi protocols
+- 🎁 **Achievement Reward Distribution**: Track reward distribution metrics in DeFi protocols
+- 🏊 **Achievement Staking Pool Management**: Record staking pool configurations and metrics
+- 🗳️ **Achievement Delegation Tracking**: Track delegation tracking operations in blockchain networks
+- ⚙️ **Achievement Validator Operations**: Track validator operations in blockchain networks
+- 🤝 **Achievement Consensus Participation**: Track consensus participation operations in blockchain networks
+- ⛏️ **Achievement Block Production**: Track block production operations in blockchain networks
+- ✅ **Achievement Transaction Finality**: Record transaction finality confirmations and block numbers
+- 🌐 **Achievement Cross-Chain State**: Track cross-chain state operations in cross-chain protocols
+- 🌉 **Achievement Bridge Validators**: Track bridge validators operations in cross-chain protocols
+- 🚚 **Achievement Relayer Operations**: Track relayer operations in cross-chain protocols
+- 📊 **Achievement Oracle Aggregation**: Track oracle aggregation operations in cross-chain protocols
+- 📈 **Achievement Price Feeds**: Record price feed updates from oracle networks
+- 📡 **Achievement Data Feeds**: Track data feeds operations and verifications
+- 🎲 **Achievement Random Number Generation**: Track random number generation operations and verifications
+- 🔐 **Achievement VRF**: Track VRF operations and verifications
+- 🔒 **Achievement Commit-Reveal Schemes**: Track commit-reveal schemes operations and verifications
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
