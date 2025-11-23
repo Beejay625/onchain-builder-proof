@@ -21,6 +21,7 @@ export default function OnchainAchievementMerkleProof({ achievementId }: Onchain
   const recordProof = () => {
     if (!address) return
     if (!merkleRoot.trim()) return
+    if (!merkleRoot.startsWith('0x') || merkleRoot.length !== 66) return
 
     const payload = `MERKLE_PROOF|root:${merkleRoot}|proof:${proof}|leaf:${leaf}`
 
