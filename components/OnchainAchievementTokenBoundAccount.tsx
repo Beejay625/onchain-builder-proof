@@ -20,7 +20,8 @@ export default function OnchainAchievementTokenBoundAccount({ achievementId }: O
 
   const recordTBA = () => {
     if (!address) return
-    if (!nftAddress.trim() || !nftAddress.startsWith('0x')) return
+    if (!nftAddress.trim()) return
+    if (!nftAddress.startsWith('0x') || nftAddress.length !== 42) return
 
     const payload = `TOKEN_BOUND_ACCOUNT|nft:${nftAddress}|tokenId:${tokenId}|tba:${tbaAddress}`
 
