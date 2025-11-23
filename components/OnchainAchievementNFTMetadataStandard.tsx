@@ -22,6 +22,7 @@ export default function OnchainAchievementNFTMetadataStandard({ achievementId }:
   const recordMetadata = () => {
     if (!address) return
     if (!nftAddress.trim()) return
+    if (!metadataURI.trim()) return
     if (!nftAddress.startsWith('0x') || nftAddress.length !== 42) return
 
     const payload = `NFT_METADATA_STANDARD|nft:${nftAddress}|tokenId:${tokenId}|uri:${metadataURI}|standard:${standard}`
