@@ -1,0 +1,87 @@
+'use client'
+
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
+import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
+import { BuilderProofABI } from '@/abi/BuilderProof'
+import AppCard from '@/components/common/AppCard'
+import { useState } from 'react'
+import { isFeatureEnabled } from '@/lib/featureFlags'
+
+interface AchievementRenewalAutomationProps {
+  achievementId: bigint
+}
+
+export default function AchievementRenewalAutomation({ achievementId }: AchievementRenewalAutomationProps) {
+  const { address, isConnected } = useAccount()
+  const [renewalPeriod, setRenewalPeriod] = useState<'1month' | '3months' | '6months' | '1year'>('1month')
+  const [enabled, setEnabled] = useState(false)
+  const { writeContract, data: hash, isPending } = useWriteContract()
+  const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({ hash })
+
+  if (!isFeatureEnabled('achievementRenewalAutomation')) {
+    return null
+  }
+
+  const handleSetRenewal = async () => {
+    if (!isConnected || !address) return
+
+    try {
+      const content = `Renewal Automation\nAchievement: #${achievementId.toString()}\nPeriod: ${renewalPeriod}\nEnabled: ${enabled}`
+      writeContract({
+        address: BUILDER_PROOF_CONTRACT as `0x${string}`,
+        abi: BuilderProofABI,
+        functionName: 'createPost',
+        args: [content],
+      })
+    } catch (error) {
+      console.error('Renewal automation failed:', error)
+    }
+  }
+
+  return (
+    <AppCard title="🔄 Achievement Renewal Automation" subtitle="Automate achievement renewals" accent="green">
+      <div className="space-y-4">
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="renewalEnabled"
+            checked={enabled}
+            onChange={(e) => setEnabled(e.target.checked)}
+            className="rounded border-gray-300"
+          />
+          <label htmlFor="renewalEnabled" className="ml-2 text-sm text-gray-700">
+            Enable automatic renewal
+          </label>
+        </div>
+        {enabled && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Renewal Period</label>
+            <select
+              value={renewalPeriod}
+              onChange={(e) => setRenewalPeriod(e.target.value as '1month' | '3months' | '6months' | '1year')}
+              className="w-full rounded-lg border border-gray-300 p-2 text-sm"
+            >
+              <option value="1month">1 Month</option>
+              <option value="3months">3 Months</option>
+              <option value="6months">6 Months</option>
+              <option value="1year">1 Year</option>
+            </select>
+          </div>
+        )}
+        <button
+          onClick={handleSetRenewal}
+          disabled={isPending || isConfirming || !isConnected}
+          className="w-full rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 disabled:bg-gray-400"
+        >
+          {isPending || isConfirming ? 'Setting...' : 'Set Renewal Automation'}
+        </button>
+        {isConfirmed && (
+          <div className="rounded-lg bg-green-50 border border-green-200 p-3 text-sm text-green-800">
+            ✅ Renewal automation configured onchain
+          </div>
+        )}
+      </div>
+    </AppCard>
+  )
+}
+
