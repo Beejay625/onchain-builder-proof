@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 630+ Production-Ready Features!
+## 🎉 660+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -370,6 +370,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🛡️ **Onchain Achievement Insurance**: Register insurance policies for achievements
 - 🔑 **Onchain Token Gating**: Gate achievements with token ownership or balance requirements
 - ⚖️ **Onchain Reputation Weighting System**: Weighted voting based on reputation scores
+- ⏰ **Onchain Achievement Timestamps**: View permanent blockchain timestamps for achievements
+- 📋 **Onchain Version Control**: Track version history for achievements with change tracking
+- 📦 **Onchain Achievement Archive**: Archive and restore achievements onchain with reason tracking
+- 📌 **Onchain Achievement Pin**: Pin achievements to profile onchain with location options
+- 🔖 **Onchain Achievement Bookmark**: Bookmark achievements onchain with categories and notes
+- 📚 **Onchain Achievement Collection**: Organize achievements into collections with descriptions
+- 📱 **Onchain QR Code Generation**: Generate QR codes for achievements in multiple sizes
+- 📄 **Onchain Embed Code**: Generate embed codes for achievements with customizable sizes
+- 📥 **Onchain Export Formats**: Export achievements in JSON, CSV, and Markdown formats
+- 📥 **Onchain Import**: Import achievements from backup files with format support
+- 💾 **Onchain Backup**: Create backups of onchain data with naming and timestamp tracking
+- 📥 **Onchain Restore**: Restore achievements from backups with selective restore options
+- 📜 **Onchain History**: View complete achievement history with timeline visualization
+- 📊 **Onchain Analytics**: Comprehensive analytics dashboard with engagement metrics
+- 💡 **Onchain Insights**: Personalized achievement insights with recommendations
+- 💡 **Onchain Recommendations**: Get achievement recommendations based on activity
+- 📰 **Onchain Feed**: Real-time activity feed from blockchain with live updates
+- 🔔 **Onchain Notifications**: Real-time notification system with read/unread tracking
+- ⚙️ **Onchain Settings**: Manage settings onchain with category organization
+- 🔐 **Onchain Access Control**: Control who can access achievements with privacy levels
+- 🔍 **Onchain Search**: Search achievements onchain by content, author, or ID
+- 🔽 **Onchain Filters**: Filter achievements by date range, sort order, and type
+- 🔄 **Onchain Sorting**: Sort achievements by timestamp, likes, comments, or author
+- 📄 **Onchain Pagination**: Navigate through achievements with customizable page sizes
+- 📤 **Onchain Export**: Export all achievements with format selection
+- 🔗 **Onchain Sharing**: Share achievements across platforms (Twitter, LinkedIn, copy link)
+- 🖨️ **Onchain Print**: Print achievements with formatted output
+- 👁️ **Onchain Preview**: Preview achievements before sharing with formatted display
+- ✅ **Onchain Validation**: Validate achievement data integrity with verification checks
+- 🔍 **Onchain Verification**: Verify achievement authenticity with contract address and chain info
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
