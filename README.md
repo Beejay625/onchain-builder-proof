@@ -105,6 +105,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 👥 **Achievement Following**: Follow achievement authors
 - 🚨 **Achievement Reporting**: Report inappropriate achievements
 - ⚖️ **Achievement Moderation**: Moderate achievements for quality control
+- 🌳 **Merkle Proof**: Record Merkle tree proof verifications for efficient data validation.
+- 🔐 **Zero Knowledge Proof**: Record zero-knowledge proof verifications for privacy-preserving computations.
+- 🎓 **Verifiable Credentials**: Track verifiable credentials operations and configurations.
+- 🔗 **Soulbound Token**: Track soulbound token operations and configurations.
+- 🧩 **Fractionalized NFT**: Track fractionalized NFT operations and configurations.
+- 🏠 **NFT Rental**: Track NFT rental operations and configurations.
+- 💎 **NFT Lending**: Record NFT lending operations and collateral agreements.
+- 🤖 **Automated Market Maker**: Track automated market maker operations in DeFi protocols.
+- ⛏️ **Liquidity Mining**: Track liquidity mining operations in DeFi protocols.
+- 💰 **Staking Rewards**: Track staking rewards operations in DeFi protocols.
+- 📅 **Vesting Schedule**: Track vesting schedule operations in DeFi protocols.
+- 🔒 **Token Lock**: Record token lock contracts with vesting schedules.
+- 🔥 **Token Burn**: Track token burn operations for ERC20 tokens.
+- 🪙 **Token Mint**: Track token mint operations for ERC20 tokens.
+- 📤 **Token Transfer**: Track token transfer operations for ERC20 tokens.
+- ✅ **Token Approval**: Track token approval operations for ERC20 tokens.
+- 🔄 **Token Swap**: Record token swap operations on DEX protocols.
+- 📊 **Price Oracle**: Track price oracle integrations and operations.
+- 🔗 **Chainlink Integration**: Track Chainlink integration operations.
+- 📡 **The Graph Integration**: Track The Graph integration operations.
+- 🌐 **ENS Domain**: Track ENS domain integrations and operations.
+- 🌐 **Unstoppable Domains**: Record Unstoppable Domains registrations and configurations.
+- ⛽ **Gasless Transactions**: Track gasless transactions operations in DeFi protocols.
+- 📦 **Batch Operations**: Track batch operations in DeFi protocols.
+- ⚡ **Flash Loans**: Track flash loans operations in DeFi protocols.
+- 🔄 **Flash Swaps**: Track flash swaps operations in DeFi protocols.
+- 📊 **Limit Orders**: Record limit order placements on DEX protocols.
+- 🛑 **Stop Loss Orders**: Record stop loss order configurations for risk management.
+- 🔀 **DEX Aggregator**: Record DEX aggregator swaps and optimal routing.
+- 🛡️ **MEV Protection**: Record MEV protection mechanisms and saved amounts.
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
