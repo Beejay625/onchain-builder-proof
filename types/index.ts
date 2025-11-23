@@ -145,6 +145,36 @@ export interface FeatureFlags {
   onchainPreview: boolean
   onchainValidation: boolean
   onchainVerification: boolean
+  achievementTemplates: boolean
+  achievementScheduling: boolean
+  achievementRecurring: boolean
+  achievementDrafts: boolean
+  achievementCategories: boolean
+  achievementTags: boolean
+  achievementPrivacy: boolean
+  achievementVisibility: boolean
+  achievementExpirationManager: boolean
+  achievementRenewalAutomation: boolean
+  achievementTransferHistory: boolean
+  achievementOwnershipHistory: boolean
+  achievementCollaborationInvites: boolean
+  achievementCommentsModeration: boolean
+  achievementReactionsSystem: boolean
+  achievementFollowSystem: boolean
+  achievementShareAnalytics: boolean
+  achievementViewTracking: boolean
+  achievementEngagementMetrics: boolean
+  achievementPerformanceDashboard: boolean
+  achievementComparisonTool: boolean
+  achievementTrendsAnalysis: boolean
+  achievementCalendarView: boolean
+  achievementTimelineView: boolean
+  achievementGalleryView: boolean
+  achievementListView: boolean
+  achievementGridView: boolean
+  achievementDetailView: boolean
+  achievementQuickActions: boolean
+  achievementBulkOperations: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
