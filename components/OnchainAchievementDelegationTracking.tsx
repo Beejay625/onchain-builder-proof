@@ -20,7 +20,8 @@ export default function OnchainAchievementDelegationTracking({ achievementId }: 
 
   const record = () => {
     if (!address) return
-    if (!validatorAddress.trim() || !validatorAddress.startsWith('0x')) return
+    if (!validatorAddress.trim()) return
+    if (!validatorAddress.startsWith('0x') || validatorAddress.length !== 42) return
     const payload = `DelegationTracking|validator:${validatorAddress}|amount:${amount}|data:${data}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
