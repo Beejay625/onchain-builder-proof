@@ -20,7 +20,8 @@ export default function OnchainAchievementSecurityAudit({ achievementId }: Oncha
 
   const recordAudit = () => {
     if (!address) return
-    if (!auditor.trim() || !contractAddress.trim()) return
+    if (!auditor.trim()) return
+    if (!contractAddress.trim()) return
     if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
 
     const payload = `SECURITY_AUDIT|auditor:${auditor}|contract:${contractAddress}|report:${reportHash}`
