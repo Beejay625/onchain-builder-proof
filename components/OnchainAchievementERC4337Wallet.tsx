@@ -21,6 +21,7 @@ export default function OnchainAchievementERC4337Wallet({ achievementId }: Oncha
   const recordWallet = () => {
     if (!address) return
     if (!walletAddress.trim()) return
+    if (!factory.trim() || !implementation.trim()) return
     if (!walletAddress.startsWith('0x') || walletAddress.length !== 42) return
 
     const payload = `ERC4337_WALLET|wallet:${walletAddress}|factory:${factory}|impl:${implementation}`
