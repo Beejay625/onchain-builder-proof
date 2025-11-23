@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 600+ Production-Ready Features!
+## 🎉 630+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -352,6 +352,24 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ⚡ **Onchain Achievement Velocity**: Track achievement velocity
 - ✅ **Onchain Achievement Success Rate**: Calculate success rates
 - 📊 **Onchain Achievement Completion Rate**: Track completion rates
+- ✍️ **Onchain Achievement Attestation**: Create verifiable attestations for achievements
+- ⭐ **Onchain Achievement Endorsement**: Endorse achievements with verifiable statements and confidence levels
+- 🗳️ **Onchain Achievement Voting**: Vote on achievements with upvote/downvote system
+- 👤 **Onchain Achievement Delegation**: Delegate voting or management rights with scope control
+- 🔄 **Onchain Achievement Resale**: List achievements for resale marketplace
+- ⏱️ **Onchain Achievement Rental**: Rent achievements temporarily with duration tracking
+- 📚 **Onchain Achievement Lending**: Lend achievements to other builders with terms
+- 🔨 **Onchain Achievement Auction**: Create auction listings with starting bid and reserve price
+- 🎯 **Onchain Achievement Quests**: Create and complete achievement quests with rewards
+- 🧬 **Onchain Achievement Referrals**: Track referral codes and rewards
+- 📡 **Onchain Streaming Rewards**: Stream rewards over time based on activity
+- 💰 **Onchain Reputation Staking**: Stake reputation tokens to earn rewards with duration
+- 💰 **Onchain Royalties Configuration**: Configure royalty rates and recipients for achievements
+- 📜 **Onchain Licensing Information**: Add licensing information (MIT, Apache, GPL, Custom) to achievements
+- 🔢 **Onchain Achievement Fractionalization**: Fractionalize achievements into tradeable shares
+- 🛡️ **Onchain Achievement Insurance**: Register insurance policies for achievements
+- 🔑 **Onchain Token Gating**: Gate achievements with token ownership or balance requirements
+- ⚖️ **Onchain Reputation Weighting System**: Weighted voting based on reputation scores
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
