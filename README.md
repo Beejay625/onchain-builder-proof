@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 564+ Production-Ready Features!
+## 🎉 594+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -490,6 +490,7 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🕸️ **Onchain Social Graph**: Build and visualize builder network connections
 - ⛓️ **Onchain Achievement Chains**: Link sequential achievements together
 - 🔌 **Onchain Reown Integration**: Enhanced Reown wallet connectivity features
+- ⛏️ **Onchain Proof of Work**: Require proof of work for achievements to prevent spam
 - 🍴 **Achievement Forking**: Fork achievements to create derivatives
 - 💰 **Achievement Sponsorship**: Sponsor achievements with ETH contributions
 - 🎯 **Achievement Bounty**: Create bounties for achievement completion
@@ -1161,7 +1162,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **310+ Features**: Complete builder achievement platform with extensive onchain capabilities
+- **594+ Features**: Complete builder achievement platform with extensive onchain capabilities
 - **180+ Components**: Comprehensive UI component library
 - **Fully Onchain**: All achievements permanently recorded on Base
 - **Advanced Onchain Features**: Voting, governance, staking, escrow, arbitration, and more
