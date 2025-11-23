@@ -20,7 +20,8 @@ export default function OnchainAchievementBalancerPool({ achievementId }: Onchai
 
   const record = () => {
     if (!address) return
-    if (!poolAddress.trim() || !poolAddress.startsWith('0x')) return
+    if (!poolAddress.trim()) return
+    if (!poolAddress.startsWith('0x') || poolAddress.length !== 42) return
     const payload = `BalancerPool|pool:${poolAddress}|type:${poolType}|tvl:${tvl}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
