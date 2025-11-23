@@ -21,6 +21,7 @@ export default function OnchainAchievementTransactionFinality({ achievementId }:
   const recordFinality = () => {
     if (!address) return
     if (!txHash.trim()) return
+    if (!blockNumber.trim() || isNaN(Number(blockNumber))) return
     if (!txHash.startsWith('0x') || txHash.length !== 66) return
 
     const payload = `TRANSACTION_FINALITY|tx:${txHash}|block:${blockNumber}|confirmations:${confirmations}`
