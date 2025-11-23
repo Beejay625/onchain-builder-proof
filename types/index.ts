@@ -84,3 +84,68 @@ export interface Goal {
   createdAt: number
 }
 
+export interface FeatureFlags {
+  aiDraftAssistant: boolean
+  adaptiveTemplateBuilder: boolean
+  achievementEvidenceLocker: boolean
+  githubAutoProofImporter: boolean
+  ciCdDeploymentSync: boolean
+  wakatimeActivitySync: boolean
+  habitStreakCoach: boolean
+  milestoneRoadmaps: boolean
+  impactKpiDashboard: boolean
+  crossChainMirrorView: boolean
+  multiWalletAggregator: boolean
+  gasOptimizerTips: boolean
+  achievementBundles: boolean
+  liveCollaborationRooms: boolean
+  mentorshipMatcher: boolean
+  squadSprintBoard: boolean
+  threadedCommentsMentions: boolean
+  reactionPaletteMood: boolean
+  tipSplittingRevenueShare: boolean
+  rewardVaults: boolean
+  governanceSnapshotMirror: boolean
+  complianceAttestationForms: boolean
+  evidenceReviewWorkflows: boolean
+  realtimeNotificationCenter: boolean
+  publicWebhooksApiKeys: boolean
+  scheduledPublishingAutoSharing: boolean
+  digestEmailsPush: boolean
+  embeddableAchievementGallery: boolean
+  profileLayoutBuilder: boolean
+  offlineCaptureSync: boolean
+  onchainTimestamps: boolean
+  onchainVersionControl: boolean
+  onchainArchive: boolean
+  onchainPin: boolean
+  onchainBookmark: boolean
+  onchainCollection: boolean
+  qrCodeGeneration: boolean
+  embedCode: boolean
+  exportFormats: boolean
+  onchainImport: boolean
+  onchainBackup: boolean
+  onchainRestore: boolean
+  onchainHistory: boolean
+  onchainAnalytics: boolean
+  onchainInsights: boolean
+  onchainRecommendations: boolean
+  onchainFeed: boolean
+  onchainNotifications: boolean
+  onchainSettings: boolean
+  onchainAccessControl: boolean
+  onchainSearch: boolean
+  onchainFilters: boolean
+  onchainSorting: boolean
+  onchainPagination: boolean
+  onchainExport: boolean
+  onchainSharing: boolean
+  onchainPrint: boolean
+  onchainPreview: boolean
+  onchainValidation: boolean
+  onchainVerification: boolean
+}
+
+export type FeatureFlagKey = keyof FeatureFlags
+
