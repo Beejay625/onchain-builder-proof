@@ -21,6 +21,7 @@ export default function OnchainAchievementPriceFeeds({ achievementId }: OnchainA
   const recordFeed = () => {
     if (!address) return
     if (!feedAddress.trim()) return
+    if (!pair.trim() || !price.trim()) return
     if (!feedAddress.startsWith('0x') || feedAddress.length !== 42) return
 
     const payload = `PRICE_FEEDS|feed:${feedAddress}|pair:${pair}|price:${price}`
