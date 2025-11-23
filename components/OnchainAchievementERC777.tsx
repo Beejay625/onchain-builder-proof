@@ -20,7 +20,8 @@ export default function OnchainAchievementERC777({ achievementId }: OnchainAchie
 
   const record = () => {
     if (!address) return
-    if (!contractAddress.trim() || !contractAddress.startsWith('0x')) return
+    if (!contractAddress.trim()) return
+    if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
     const payload = `ERC777|contract:${contractAddress}|standard:${standard}|impl:${implementation}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
