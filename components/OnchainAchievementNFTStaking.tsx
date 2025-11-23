@@ -20,7 +20,8 @@ export default function OnchainAchievementNFTStaking({ achievementId }: OnchainA
 
   const record = () => {
     if (!address) return
-    if (!nftAddress.trim() || !nftAddress.startsWith('0x')) return
+    if (!nftAddress.trim()) return
+    if (!nftAddress.startsWith('0x') || nftAddress.length !== 42) return
     const payload = `NFTStaking|nft:${nftAddress}|tokenId:${tokenId}|data:${data}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
