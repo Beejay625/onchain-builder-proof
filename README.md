@@ -166,6 +166,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🔀 **DEX Aggregator**: Record DEX aggregator swaps and optimal routing.
 - 🛡️ **MEV Protection**: Record MEV protection mechanisms and saved amounts.
 
+- 📡 **Smart Contract Events**: Record smart contract event emissions for off-chain indexing.
+- 🔍 **Event Indexing**: Track event indexing operations and configurations.
+- 📦 **Transaction Batching**: Track transaction batching operations and configurations.
+- ⛽ **Gas Price Oracle**: Track gas price oracle operations and configurations.
+- 📝 **Token Metadata**: Track token metadata operations and configurations.
+- 📝 **NFT Metadata Standard**: Record NFT metadata URI and standard compliance.
+- 💰 **ERC20 Metadata**: Track ERC20 metadata operations in DeFi protocols.
+- 📋 **Token Listings**: Track token listings operations in DeFi protocols.
+- 🛣️ **DEX Routing**: Track DEX routing operations in DeFi protocols.
+- 🛡️ **Slippage Protection**: Track slippage protection operations in DeFi protocols.
+- 📊 **Price Impact Calculation**: Record price impact calculations for large swaps.
+- 📊 **Liquidity Pool Analytics**: Track liquidity pool analytics metrics in DeFi protocols.
+- 💰 **Yield Calculation**: Track yield calculation metrics in DeFi protocols.
+- 📈 **APR/APY Tracking**: Track APR/APY tracking metrics in DeFi protocols.
+- 🎁 **Reward Distribution**: Track reward distribution metrics in DeFi protocols.
+- 🏊 **Staking Pool Management**: Record staking pool configurations and metrics.
+- 🗳️ **Delegation Tracking**: Track delegation tracking operations in blockchain networks.
+- ⚙️ **Validator Operations**: Track validator operations operations in blockchain networks.
+- 🤝 **Consensus Participation**: Track consensus participation operations in blockchain networks.
+- ⛏️ **Block Production**: Track block production operations in blockchain networks.
+- ✅ **Transaction Finality**: Record transaction finality confirmations and block numbers.
+- 🌐 **Cross-Chain State**: Track cross-chain state operations in cross-chain protocols.
+- 🌉 **Bridge Validators**: Track bridge validators operations in cross-chain protocols.
+- 🚚 **Relayer Operations**: Track relayer operations operations in cross-chain protocols.
+- 📊 **Oracle Aggregation**: Track oracle aggregation operations in cross-chain protocols.
+- 📈 **Price Feeds**: Record price feed updates from oracle networks.
+- 📡 **Data Feeds**: Track data feeds operations and verifications.
+- 🎲 **Random Number Generation**: Track random number generation operations and verifications.
+- 🔐 **VRF**: Track VRF operations and verifications.
+- 🔒 **Commit-Reveal Schemes**: Track commit-reveal schemes operations and verifications.
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
 - 🤖 **AI Draft Assistant**: Turn rough notes into onchain-ready achievement summaries
