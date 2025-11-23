@@ -20,7 +20,8 @@ export default function OnchainAchievementYieldCalculation({ achievementId }: On
 
   const record = () => {
     if (!address) return
-    if (!poolAddress.trim() || !poolAddress.startsWith('0x')) return
+    if (!poolAddress.trim()) return
+    if (!poolAddress.startsWith('0x') || poolAddress.length !== 42) return
     const payload = `YieldCalculation|pool:${poolAddress}|metric:${metric}|value:${value}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
