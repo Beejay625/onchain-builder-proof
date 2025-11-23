@@ -22,7 +22,8 @@ export default function OnchainAchievementCrossChainBridge({ achievementId }: On
   const recordBridge = () => {
     if (!address) return
     if (!bridgeProtocol.trim() || !sourceChain.trim()) return
-    if (!txHash.trim() || !txHash.startsWith('0x')) return
+    if (!txHash.trim()) return
+    if (!txHash.startsWith('0x') || txHash.length !== 66) return
 
     const payload = `CROSS_CHAIN_BRIDGE|protocol:${bridgeProtocol}|source:${sourceChain}|dest:${destChain}|tx:${txHash}`
 
