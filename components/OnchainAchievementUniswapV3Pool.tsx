@@ -22,6 +22,7 @@ export default function OnchainAchievementUniswapV3Pool({ achievementId }: Oncha
   const recordPool = () => {
     if (!address) return
     if (!poolAddress.trim()) return
+    if (!token0.trim() || !token1.trim()) return
     if (!poolAddress.startsWith('0x') || poolAddress.length !== 42) return
 
     const payload = `UNISWAP_V3_POOL|pool:${poolAddress}|token0:${token0}|token1:${token1}|fee:${fee}`
