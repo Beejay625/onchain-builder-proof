@@ -75,6 +75,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📊 **Achievement Metrics**: Comprehensive metrics dashboard (views, likes, comments, shares)
 - ⏳ **Achievement Expiration**: Set expiration dates for time-limited achievements
 - 🔓 **Achievement Unlocking**: Configure unlock conditions (time, milestone, manual, automatic)
+- 🔒 **Achievement Locking**: Lock achievements with duration support
+- ✓ **Achievement Verification**: Verify achievements with proof and verifier addresses
+- ⭐ **Achievement Endorsement**: Endorse achievements with typed statements
+- 📜 **Achievement Attestation**: Create verifiable attestations with evidence links
+- 💰 **Achievement Sponsorship**: Sponsor achievements with contributions
+- 🎯 **Achievement Bounty**: Create bounties for achievement completion with deadlines
+- 🔒 **Achievement Staking**: Stake on achievements with duration and purpose
+- 🔐 **Achievement Escrow**: Create escrow accounts for milestone releases
+- ⚖️ **Achievement Arbitration**: File disputes for arbitration with arbitrator support
+- 🏛️ **Achievement Governance**: Create governance proposals with voting deadlines
+- 🗳️ **Achievement Voting**: Cast votes on achievement proposals with weights
+- 👤 **Achievement Delegation**: Delegate voting and management rights with expiry
+- 🔐 **Achievement Multi-Sig**: Setup multi-signature for achievement management
+- 📊 **Achievement Vesting**: Setup vesting schedules with cliff periods
+- 🏦 **Achievement Treasury**: Contribute to treasury funds with purpose tracking
+- ⏰ **Achievement Time Lock**: Create time-locks for achievement actions
+- 🔀 **Achievement Merging**: Merge multiple achievements with strategies
+- 🏷️ **Achievement Tagging**: Add tags to organize achievements by category
+- 📌 **Achievement Pinning**: Pin achievements to profile, dashboard, or collections
+- 📦 **Achievement Archiving**: Archive and restore achievements with categories
+- 📋 **Achievement Versioning**: Track version history with semantic versioning
+- 📚 **Achievement Collection**: Organize achievements into collections
+- 🔖 **Achievement Bookmark**: Bookmark achievements for quick access
+- ⭐ **Achievement Highlight**: Highlight important achievements with duration
+- 🔗 **Achievement Sharing**: Share achievements on social platforms
+- 💬 **Achievement Commenting**: Add typed comments to achievements
+- ❤️ **Achievement Reaction**: React to achievements with multiple types
+- 👥 **Achievement Following**: Follow achievement authors
+- 🚨 **Achievement Reporting**: Report inappropriate achievements
+- ⚖️ **Achievement Moderation**: Moderate achievements for quality control
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
