@@ -21,6 +21,7 @@ export default function OnchainAchievementYieldFarming({ achievementId }: Onchai
   const recordFarm = () => {
     if (!address) return
     if (!farmAddress.trim()) return
+    if (!tokenAddress.trim() || !tokenAddress.startsWith('0x')) return
     if (!farmAddress.startsWith('0x') || farmAddress.length !== 42) return
 
     const payload = `YIELD_FARMING|farm:${farmAddress}|token:${tokenAddress}|apy:${apy}`
