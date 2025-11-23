@@ -23,6 +23,7 @@ export default function OnchainAchievementPriceImpactCalculation({ achievementId
     if (!address) return
     if (!tokenIn.trim() || !tokenOut.trim()) return
     if (!tokenIn.startsWith('0x') || tokenIn.length !== 42) return
+    if (!tokenOut.startsWith('0x') || tokenOut.length !== 42) return
 
     const payload = `PRICE_IMPACT_CALCULATION|tokenIn:${tokenIn}|tokenOut:${tokenOut}|amount:${amount}|impact:${impact}`
 
