@@ -44,6 +44,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🌊 **Stream Guards**: Describe guardrails that throttle or pause token streaming payouts.
 - 🔥 **Builder Heatmap**: Share timezone, shipping windows, and cadence for coordination.
 
+### Advanced Achievement Operations
+- ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
+- 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics
+- 🧬 **Achievement Cloning**: Create exact copies or variations of achievements
+- 🛑 **Achievement Freeze**: Temporarily freeze achievement state with reason tracking
+- 🔄 **Achievement Thaw**: Unfreeze achievement state after freeze period
+- 🔄 **Achievement Renewal**: Extend achievement validity period with expiry tracking
+- ⭐ **Achievement Rating**: Rate achievement quality with 1-10 scale and comments
+- 📌 **Achievement Priority**: Set priority levels (low, medium, high, critical)
+- 📊 **Achievement Status**: Manage lifecycle status (draft, active, completed, archived, deprecated)
+- 📉 **Achievement Decay**: Configure reputation decay over time with rate and period
+- ↩️ **Achievement Rollback**: Rollback to previous achievement state with snapshot support
+- 🔥 **Achievement Burn**: Permanently mark achievements as burned with reason
+- 🔄 **Achievement Transfer**: Transfer achievement ownership to other addresses
+- 🔗 **Achievement Linking**: Link related achievements with relationship types
+- ⛓️ **Achievement Chain Links**: Create sequential achievement chains for progression
+- ✨ **Achievement Multiplier**: Set reputation/weight multipliers for achievements
+- 📈 **Advancement Score**: Calculate and record advancement scores based on engagement
+- 📢 **Amplification Score**: Measure achievement reach and engagement amplification
+- 📊 **Achievement Impact**: Record real-world impact metrics (users, revenue, time saved)
+- 📡 **Achievement Reach**: Track achievement visibility and estimated reach scores
+- 💬 **Achievement Engagement**: Track engagement rate over time with percentage metrics
+- ⚡ **Achievement Velocity**: Measure achievement momentum and growth velocity
+- ✅ **Achievement Success Rate**: Track success metrics with goals and percentages
+- 📊 **Achievement Completion Rate**: Track task completion progress and rates
+- 🏅 **Achievement Recognition**: Record official recognition (awards, certifications, endorsements)
+- 🕸️ **Achievement Graph**: Create achievement relationship graphs (network, hierarchy, timeline)
+- ⚡ **Achievement Performance**: Track overall performance scores based on engagement
+- 📊 **Achievement Metrics**: Comprehensive metrics dashboard (views, likes, comments, shares)
+- ⏳ **Achievement Expiration**: Set expiration dates for time-limited achievements
+- 🔓 **Achievement Unlocking**: Configure unlock conditions (time, milestone, manual, automatic)
+
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
 - 🤖 **AI Draft Assistant**: Turn rough notes into onchain-ready achievement summaries
