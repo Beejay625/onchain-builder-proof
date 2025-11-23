@@ -21,6 +21,7 @@ export default function OnchainAchievementTransactionBatching({ achievementId }:
   const record = () => {
     if (!address) return
     if (!data.trim()) return
+    if (!index.trim() || isNaN(Number(index))) return
     const payload = `TransactionBatching|data:${data}|index:${index}|timestamp:${timestamp}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,

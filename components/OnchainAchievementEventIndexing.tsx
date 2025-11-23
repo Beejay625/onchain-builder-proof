@@ -21,6 +21,7 @@ export default function OnchainAchievementEventIndexing({ achievementId }: Oncha
   const record = () => {
     if (!address) return
     if (!data.trim()) return
+    if (!index.trim() || isNaN(Number(index))) return
     const payload = `EventIndexing|data:${data}|index:${index}|timestamp:${timestamp}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
