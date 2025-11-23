@@ -21,6 +21,7 @@ export default function OnchainAchievementLendingProtocol({ achievementId }: Onc
   const recordLending = () => {
     if (!address) return
     if (!marketAddress.trim()) return
+    if (!protocol.trim()) return
     if (!marketAddress.startsWith('0x') || marketAddress.length !== 42) return
 
     const payload = `LENDING_PROTOCOL|protocol:${protocol}|market:${marketAddress}|apy:${apy}`
