@@ -20,7 +20,8 @@ export default function OnchainAchievementGasOptimization({ achievementId }: Onc
 
   const recordOptimization = () => {
     if (!address) return
-    if (!optimizationType.trim() || !gasSaved.trim()) return
+    if (!optimizationType.trim()) return
+    if (!gasSaved.trim() || isNaN(Number(gasSaved))) return
 
     const payload = `GAS_OPTIMIZATION|type:${optimizationType}|saved:${gasSaved}|technique:${technique}`
 
