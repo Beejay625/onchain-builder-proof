@@ -205,6 +205,36 @@ export interface FeatureFlags {
   achievementPluginSystem: boolean
   achievementExtensionSystem: boolean
   achievementCustomFields: boolean
+  achievementSmartContractEvents: boolean
+  achievementEventIndexing: boolean
+  achievementTransactionBatching: boolean
+  achievementGasPriceOracle: boolean
+  achievementTokenMetadata: boolean
+  achievementNFTMetadataStandard: boolean
+  achievementERC20Metadata: boolean
+  achievementTokenListings: boolean
+  achievementDEXRouting: boolean
+  achievementSlippageProtection: boolean
+  achievementPriceImpactCalculation: boolean
+  achievementLiquidityPoolAnalytics: boolean
+  achievementYieldCalculation: boolean
+  achievementAPRAPYTracking: boolean
+  achievementRewardDistribution: boolean
+  achievementStakingPoolManagement: boolean
+  achievementDelegationTracking: boolean
+  achievementValidatorOperations: boolean
+  achievementConsensusParticipation: boolean
+  achievementBlockProduction: boolean
+  achievementTransactionFinality: boolean
+  achievementCrossChainState: boolean
+  achievementBridgeValidators: boolean
+  achievementRelayerOperations: boolean
+  achievementOracleAggregation: boolean
+  achievementPriceFeeds: boolean
+  achievementDataFeeds: boolean
+  achievementRandomNumberGeneration: boolean
+  achievementVRF: boolean
+  achievementCommitRevealSchemes: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
