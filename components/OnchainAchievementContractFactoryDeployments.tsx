@@ -21,6 +21,7 @@ export default function OnchainAchievementContractFactoryDeployments({ achieveme
   const recordDeployment = () => {
     if (!address) return
     if (!factoryAddress.trim()) return
+    if (!deployedAddress.trim() || !deployedAddress.startsWith('0x')) return
     if (!factoryAddress.startsWith('0x') || factoryAddress.length !== 42) return
 
     const payload = `CONTRACT_FACTORY_DEPLOYMENTS|factory:${factoryAddress}|deployed:${deployedAddress}|salt:${salt}`
