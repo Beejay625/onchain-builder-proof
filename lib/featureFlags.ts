@@ -151,6 +151,7 @@ const defaultFlags: FeatureFlags = {
   achievementRandomNumberGeneration: false,
   achievementVRF: false,
   achievementCommitRevealSchemes: false,
+  achievementRunbookRegistry: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}

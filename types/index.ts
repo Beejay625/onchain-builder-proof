@@ -235,6 +235,7 @@ export interface FeatureFlags {
   achievementRandomNumberGeneration: boolean
   achievementVRF: boolean
   achievementCommitRevealSchemes: boolean
+  achievementRunbookRegistry: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
