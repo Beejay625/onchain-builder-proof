@@ -21,6 +21,7 @@ export default function OnchainAchievementSubscriptionServices({ achievementId }
   const recordSubscription = () => {
     if (!address) return
     if (!subscriptionAddress.trim()) return
+    if (!price.trim() || isNaN(Number(price))) return
     if (!subscriptionAddress.startsWith('0x') || subscriptionAddress.length !== 42) return
 
     const payload = `SUBSCRIPTION_SERVICES|subscription:${subscriptionAddress}|price:${price}|period:${period}`
