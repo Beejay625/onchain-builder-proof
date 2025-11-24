@@ -21,6 +21,7 @@ export default function OnchainAchievementGovernanceTokenDistribution({ achievem
   const recordDistribution = () => {
     if (!address) return
     if (!tokenAddress.trim()) return
+    if (!totalSupply.trim() || isNaN(Number(totalSupply))) return
     if (!tokenAddress.startsWith('0x') || tokenAddress.length !== 42) return
 
     const payload = `GOVERNANCE_TOKEN_DISTRIBUTION|token:${tokenAddress}|supply:${totalSupply}|type:${distributionType}`
