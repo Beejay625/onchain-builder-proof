@@ -22,6 +22,7 @@ export default function OnchainAchievementRoyaltyPayments({ achievementId }: Onc
   const recordRoyalty = () => {
     if (!address) return
     if (!nftAddress.trim()) return
+    if (!recipient.trim() || !recipient.startsWith('0x')) return
     if (!nftAddress.startsWith('0x') || nftAddress.length !== 42) return
 
     const payload = `ROYALTY_PAYMENTS|nft:${nftAddress}|tokenId:${tokenId}|amount:${royaltyAmount}|recipient:${recipient}`
