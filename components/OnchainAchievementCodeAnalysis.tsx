@@ -20,7 +20,8 @@ export default function OnchainAchievementCodeAnalysis({ achievementId }: Onchai
 
   const record = () => {
     if (!address) return
-    if (!contractAddress.trim() || !contractAddress.startsWith('0x')) return
+    if (!contractAddress.trim()) return
+    if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
     const payload = `CodeAnalysis|contract:${contractAddress}|tool:${tool}|result:${result}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
