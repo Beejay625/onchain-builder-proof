@@ -21,6 +21,7 @@ export default function OnchainAchievementSmartContractVerification({ achievemen
   const recordVerification = () => {
     if (!address) return
     if (!contractAddress.trim()) return
+    if (!verificationStatus.trim()) return
     if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
 
     const payload = `SMART_CONTRACT_VERIFICATION|contract:${contractAddress}|status:${verificationStatus}|verifier:${verifier}`
