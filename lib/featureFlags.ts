@@ -153,6 +153,7 @@ const defaultFlags: FeatureFlags = {
   achievementCommitRevealSchemes: false,
   achievementRunbookRegistry: false,
   achievementIncidentPlayback: false,
+  achievementSequencerSLA: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}
