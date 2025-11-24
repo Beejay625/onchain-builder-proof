@@ -258,6 +258,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 💧 **Token Streaming**: Track token streaming operations and payment configurations.
 - ⏱️ **Continuous Payments**: Track continuous payments operations and payment configurations.
 - 🔗 **Reown Wallet Integration**: Track Reown wallet integration operations and payment configurations.
+- ✅ **Smart Contract Verification**: Record smart contract verification status and verifier information.
+- 📋 **Contract Registry**: Track contract registry operations and registry entries.
+- 🪙 **Token Registry**: Track token registry operations and registry entries.
+- 📍 **Address Registry**: Track address registry operations and registry entries.
+- 🌐 **ENS Resolution**: Track ENS resolution operations and registry entries.
+- 🔍 **Name Resolution**: Record name resolution operations for ENS and other naming services.
+- 📡 **Contract Interaction Tracking**: Track contract interaction tracking operations and metrics.
+- 🔧 **Function Call Tracking**: Track function call tracking operations and metrics.
+- ⛽ **Gas Estimation**: Track gas estimation operations and metrics.
+- 🎮 **Transaction Simulation**: Track transaction simulation operations and metrics.
+- 🧪 **Contract Testing**: Record smart contract testing frameworks and coverage metrics.
+- 🔒 **Security Scanning**: Track security scanning operations and analysis results.
+- 📊 **Code Analysis**: Track code analysis operations and analysis results.
+- 🔗 **Dependency Tracking**: Track dependency tracking operations and analysis results.
+- 📝 **Version Control**: Track version control operations and analysis results.
+- 🚀 **Deployment Tracking**: Record smart contract deployment information and network details.
+- ⬆️ **Upgrade Tracking**: Track upgrade tracking operations and state changes.
+- 🔄 **Migration Tracking**: Track migration tracking operations and state changes.
+- 📸 **State Snapshot**: Track state snapshot operations and state changes.
+- 🔍 **Event Filtering**: Track event filtering operations and state changes.
+- 📋 **Log Parsing**: Record transaction log parsing and event extraction operations.
+- 👁️ **Transaction Monitoring**: Track transaction monitoring operations and token states.
+- 💰 **Balance Tracking**: Track balance tracking operations and token states.
+- ✅ **Allowance Tracking**: Track allowance tracking operations and token states.
+- ✅ **Approval Tracking**: Track approval tracking operations and token states.
+- 📤 **Transfer Tracking**: Track transfer tracking operations and state changes.
+- 🪙 **Mint Tracking**: Track mint tracking operations and state changes.
+- 🔥 **Burn Tracking**: Track burn tracking operations and state changes.
+- ⏸️ **Pause Tracking**: Track pause tracking operations and state changes.
+- ▶️ **Unpause Tracking**: Track unpause tracking operations and state changes.
+- 🔗 **Reown Wallet Connect**: Track Reown wallet connect operations and state changes.
+<!-- test -->
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
 - 🤖 **AI Draft Assistant**: Turn rough notes into onchain-ready achievement summaries
