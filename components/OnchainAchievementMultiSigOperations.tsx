@@ -21,6 +21,7 @@ export default function OnchainAchievementMultiSigOperations({ achievementId }: 
   const recordMultiSig = () => {
     if (!address) return
     if (!multisigAddress.trim()) return
+    if (!threshold.trim() || isNaN(Number(threshold)) || Number(threshold) < 1) return
     if (!multisigAddress.startsWith('0x') || multisigAddress.length !== 42) return
 
     const payload = `MULTISIG_OPERATIONS|multisig:${multisigAddress}|threshold:${threshold}|owners:${owners}`
