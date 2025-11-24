@@ -21,6 +21,7 @@ export default function OnchainAchievementDeploymentTracking({ achievementId }: 
   const recordDeployment = () => {
     if (!address) return
     if (!contractAddress.trim()) return
+    if (!network.trim()) return
     if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
 
     const payload = `DEPLOYMENT_TRACKING|contract:${contractAddress}|network:${network}|tx:${deploymentTx}`
