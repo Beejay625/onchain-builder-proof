@@ -228,6 +228,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🎲 **Random Number Generation**: Track random number generation operations and verifications.
 - 🔐 **VRF**: Track VRF operations and verifications.
 - 🔒 **Commit-Reveal Schemes**: Track commit-reveal schemes operations and verifications.
+- 🔀 **Proxy Patterns**: Record proxy pattern implementations and upgrade configurations.
+- 🏭 **Factory Contracts**: Track factory contracts deployments and configurations.
+- 🧬 **Clone Contracts**: Track clone contracts deployments and configurations.
+- 🔦 **Beacon Contracts**: Track beacon contracts deployments and configurations.
+- 💎 **Diamond Implementation**: Track diamond implementation deployments and configurations.
+- 🔐 **Multi-Sig Operations**: Record multi-signature wallet operations and configurations.
+- ⏰ **Time-Locked Transactions**: Track time-locked transactions operations and distributions.
+- 📅 **Vesting Contracts**: Track vesting contracts operations and distributions.
+- 🪙 **Token Distribution**: Track token distribution operations and distributions.
+- 🎁 **Airdrop Operations**: Track airdrop operations operations and distributions.
+- 🌳 **Merkle Airdrops**: Record Merkle tree-based airdrop distributions.
+- 🔒 **Token Vesting**: Track token vesting operations and configurations.
+- 🏊 **Staking Contracts**: Track staking contracts operations and configurations.
+- 🌾 **Yield Farming Contracts**: Track yield farming contracts operations and configurations.
+- 💧 **Liquidity Provider Rewards**: Track liquidity provider rewards operations and configurations.
+- 🗳️ **Governance Token Distribution**: Record governance token distribution schedules and allocations.
+- 💼 **Treasury Management**: Track treasury management operations and distributions.
+- 💰 **Fee Collection**: Track fee collection operations and distributions.
+- 💵 **Revenue Sharing**: Track revenue sharing operations and distributions.
+- 💎 **Royalty Distribution**: Track royalty distribution operations and distributions.
+- 🛒 **NFT Marketplace Operations**: Record NFT marketplace listings, sales and operations.
+- 🔨 **Auction Contracts**: Track auction contracts operations and configurations.
+- 🎯 **Bidding Systems**: Track bidding systems operations and configurations.
+- 🔒 **Escrow Services**: Track escrow services operations and configurations.
+- 💳 **Payment Splitting**: Track payment splitting operations and configurations.
+- 📅 **Subscription Services**: Record subscription service configurations and billing cycles.
+- 🔄 **Recurring Payments**: Track recurring payments operations and payment configurations.
+- 💧 **Token Streaming**: Track token streaming operations and payment configurations.
+- ⏱️ **Continuous Payments**: Track continuous payments operations and payment configurations.
+- 🔗 **Reown Wallet Integration**: Track Reown wallet integration operations and payment configurations.
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
 - 🤖 **AI Draft Assistant**: Turn rough notes into onchain-ready achievement summaries
