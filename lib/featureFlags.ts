@@ -152,6 +152,7 @@ const defaultFlags: FeatureFlags = {
   achievementVRF: false,
   achievementCommitRevealSchemes: false,
   achievementRunbookRegistry: false,
+  achievementIncidentPlayback: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}
