@@ -21,6 +21,7 @@ export default function OnchainAchievementGasStationNetworks({ achievementId }: 
   const recordGasStation = () => {
     if (!address) return
     if (!gasStationAddress.trim()) return
+    if (!sponsorAddress.trim() || !sponsorAddress.startsWith('0x')) return
     if (!gasStationAddress.startsWith('0x') || gasStationAddress.length !== 42) return
 
     const payload = `GAS_STATION_NETWORKS|station:${gasStationAddress}|sponsor:${sponsorAddress}|gasPaid:${gasPaid}`
