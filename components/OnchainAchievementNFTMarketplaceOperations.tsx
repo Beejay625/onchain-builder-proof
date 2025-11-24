@@ -22,6 +22,7 @@ export default function OnchainAchievementNFTMarketplaceOperations({ achievement
   const recordMarketplace = () => {
     if (!address) return
     if (!marketplaceAddress.trim()) return
+    if (!nftAddress.trim() || !nftAddress.startsWith('0x')) return
     if (!marketplaceAddress.startsWith('0x') || marketplaceAddress.length !== 42) return
 
     const payload = `NFT_MARKETPLACE_OPERATIONS|marketplace:${marketplaceAddress}|nft:${nftAddress}|tokenId:${tokenId}|price:${price}`
