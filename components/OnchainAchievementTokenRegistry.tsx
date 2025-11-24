@@ -20,7 +20,8 @@ export default function OnchainAchievementTokenRegistry({ achievementId }: Oncha
 
   const record = () => {
     if (!address) return
-    if (!registryAddress.trim() || !registryAddress.startsWith('0x')) return
+    if (!registryAddress.trim()) return
+    if (!registryAddress.startsWith('0x') || registryAddress.length !== 42) return
     const payload = `TokenRegistry|registry:${registryAddress}|entry:${entry}|data:${data}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
