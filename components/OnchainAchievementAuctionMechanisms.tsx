@@ -20,7 +20,8 @@ export default function OnchainAchievementAuctionMechanisms({ achievementId }: O
 
   const record = () => {
     if (!address) return
-    if (!marketplaceAddress.trim() || !marketplaceAddress.startsWith('0x')) return
+    if (!marketplaceAddress.trim()) return
+    if (!marketplaceAddress.startsWith('0x') || marketplaceAddress.length !== 42) return
     const payload = `AuctionMechanisms|marketplace:${marketplaceAddress}|nft:${nftAddress}|price:${price}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
