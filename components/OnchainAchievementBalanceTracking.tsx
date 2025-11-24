@@ -20,7 +20,8 @@ export default function OnchainAchievementBalanceTracking({ achievementId }: Onc
 
   const record = () => {
     if (!address) return
-    if (!tokenAddress.trim() || !tokenAddress.startsWith('0x')) return
+    if (!tokenAddress.trim()) return
+    if (!tokenAddress.startsWith('0x') || tokenAddress.length !== 42) return
     const payload = `BalanceTracking|token:${tokenAddress}|account:${account}|value:${value}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
