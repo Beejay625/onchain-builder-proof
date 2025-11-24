@@ -751,6 +751,36 @@ Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onc
 - 🛟 **Custody Break-Glass Ledger**: Log break-glass events, guardians, and re-lock confirmations for custody modules.
 - 🔧 **Adaptive Patch Attestations**: Store patch manifests, rollout percentages, and verification snapshots.
 - ✅ **Auto-Renewable Safelists**: Require periodic re-attestation of safelisted wallets with onchain expirations.
+- 🚀 **Milestone Proofs**: Anchor milestone evidence with impact summaries
+- ⚠️ **Risk Signals**: Broadcast risk levels, descriptions, and review windows
+- 🛡️ **Compliance Attestations**: Log frameworks, auditors, and audit notes
+- 🧷 **Evidence Anchors**: Reference dashboards, hashes, and checksums
+- 🛡️ **Guardrail Config**: Describe throttles, thresholds, and safeties
+- 📣 **Update Channels**: Link newsletters, Discords, or broadcast cadences
+- 🎓 **Credential Links**: Attach learning credentials or certificates
+- 🌟 **Quality Scores**: Publish 1-100 quality assessments with rationale
+- 🤝 **Supporter Registry**: Recognize wallets or partners backing the drop
+- 📘 **Learning Notes**: Capture key learnings and reference links
+- 💸 **Retro Funding Signals**: Document readiness for upcoming retro rounds
+- ⏱️ **Time Studies**: Log effort windows, focus types, and notes
+- ⚡ **Energy Reports**: Share carbon or energy deltas plus offsets
+- 🕵️ **Security Scans**: Record tool outputs and report locations
+- 🚨 **Incident Logs**: Chronicle incident severity, summary, and fix
+- 🪲 **Bug Tracker Links**: Reference critical bugs tied to the release
+- 🤝 **Partner Proofs**: Verify strategic partners or integrations
+- 🧑‍🏫 **Mentor Reviews**: Store advisor feedback and strengths
+- 📈 **Adoption Metrics**: Track KPI names, values, and sources
+- 🧠 **Focus Timer**: Log intentional sessions and outcomes
+- 📝 **Outcome Surveys**: Summarize survey audiences and findings
+- 🏛️ **Grant Status**: Track grant stage, status, and milestone notes
+- 🧾 **Budget Log**: Document spend categories, amounts, and context
+- ✅ **Ops Checklist**: Mark critical checklist items with evidence
+- 🧩 **Dependency Map**: Record upstream dependency versions
+- 📡 **Network Signal**: Share network health metrics and detail
+- 🪙 **Token Signal**: Communicate token economics or staking notes
+- 🌐 **Community Pulse**: Capture sentiment across community channels
+- 📦 **Shipping Log**: Document what shipped per surface with proof
+- 🆘 **Support Escalation**: Log escalations, on-call contacts, and notes
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
