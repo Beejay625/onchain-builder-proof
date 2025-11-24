@@ -21,7 +21,8 @@ export default function OnchainAchievementNameResolution({ achievementId }: Onch
   const recordResolution = () => {
     if (!address) return
     if (!name.trim()) return
-    if (!resolvedAddress.trim() || !resolvedAddress.startsWith('0x')) return
+    if (!resolvedAddress.trim()) return
+    if (!resolvedAddress.startsWith('0x') || resolvedAddress.length !== 42) return
 
     const payload = `NAME_RESOLUTION|name:${name}|address:${resolvedAddress}|resolver:${resolver}`
 
