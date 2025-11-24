@@ -74,6 +74,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🤝 **Collaboration Contracts**: Record collaboration agreements with roles, terms, and contributor addresses.
 - 📡 **Chain Signal Alerts**: Broadcast onchain alerts with types (milestone, deadline, risk) and severity levels.
 
+### Autonomous Onchain Assurance (New Additions)
+- ⚙️ **Adaptive Gas Hedging**: Collateralize hedged positions that auto-balance Base gas volatility for weekly proofs.
+- 🛰️ **Cross-Rollup Receipt Sync**: Mirror OP Stack rollup receipts into the BuilderProof timeline for unified auditability.
+- 🧠 **Intent Orchestrator**: Encode multi-step intent graphs that route Talenty and Reown workflows autonomously.
+- 🛡️ **Reown Trust Anchors**: Stamp Reown session attestations with device class, recovery posture, and signing strength.
+- 🧾 **Onchain Expense Proofs**: Attach signed expense breakdowns per achievement for grants and treasury compliance.
+- 🔄 **Artifact Continuity Hashes**: Chain artifact hashes across sprints so reviewers can verify tamper-resistant histories.
+- 🧬 **Deterministic Build Anchors**: Store reproducible build configs plus deterministic derivations for shipping proofs.
+- 🌐 **Multi-Sig Session Escrow**: Require guardian co-signatures on sensitive dashboard actions before they execute.
+- 🧱 **Builder Identity Graph**: Maintain DID-linked identity edges (mentor, team, DAO) with revocation metadata.
+- 📡 **Telemetry Oracle Mesh**: Stream latency, error, and uptime data from external oracles into the achievement ledger.
+- 🚀 **Launch Readiness Liveness**: Publish liveness checks showing last deployment, smoke test status, and reviewer sign-off.
+- 📦 **Deployment Capsule Vault**: Save IPFS capsules bundling binaries, configs, and docs with onchain immutability.
+- 🔐 **Secretless Job Circuits**: Document MPC or TEE-based automations that operate without raw API keys.
+- 🔁 **Autopilot Retro Claims**: Auto-trigger retro funding claims when KPI thresholds are met via oracle proofs.
+- 🧮 **Budget Drift Auditor**: Compare planned vs. actual spend per initiative and flag drift envelopes onchain.
+- 🛠️ **Maintenance Worklog Nodes**: Require hashed maintenance worklogs linked to payout triggers and reviewers.
+- 🧪 **Chaos Experiment Journal**: Record chaos tests, blast radius, mitigations, and postmortem hashes immutably.
+- 📊 **KPI Bond Marketplace**: Issue KPI-tied bonds whose payouts settle based on achievement metric performance.
+- 🤝 **Team SLA Escrow**: Escrow deliverable-based SLAs with slip penalties codified in contract metadata.
+- 📜 **License Compliance Trace**: Track open-source license obligations and auto-issue alerts before violations.
+- 🧭 **Roadmap Timelock Guard**: Place timelocks on roadmap commitments that unlock only after governance proofs.
+- 📥 **Inbox-to-Onchain Bridge**: Convert verified email or calendar receipts into notarized onchain events.
+- 🗳️ **Partial Snapshot Voting**: Support partial-result attestations for long-running votes tied to achievements.
+- 🧷 **Dependency Risk Weights**: Publish dependency inventories with CVSS-weighted risk and mitigation owners.
+- 🌀 **Disaster Tabletop Ledger**: Store disaster recovery tabletop outcomes, responders, and follow-up tasks immutably.
+- 🪙 **Stablecoin Flow Meter**: Visualize stablecoin inflows/outflows per initiative with threshold-based alerts.
+- 🧾 **Tax Lot Proofs**: Generate FIFO/LIFO proofs for treasury token movements to simplify compliance reporting.
+- 🌱 **Impact Staking Garden**: Stake public-goods tokens that unlock yield only when milestones verify onchain.
+- 🧩 **Modular Rollup Hooks**: Register hook manifests describing how BuilderProof plugs into rollup automation rails.
+- 📱 **Mobile Reown Session Anchors**: Capture device integrity metrics for mobile Reown sessions with geo attestations.
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics
