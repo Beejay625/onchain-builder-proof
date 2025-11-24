@@ -20,7 +20,8 @@ export default function OnchainAchievementVotingMechanisms({ achievementId }: On
 
   const record = () => {
     if (!address) return
-    if (!contractAddress.trim() || !contractAddress.startsWith('0x')) return
+    if (!contractAddress.trim()) return
+    if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
     const payload = `VotingMechanisms|contract:${contractAddress}|amount:${amount}|recipient:${recipient}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
