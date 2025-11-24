@@ -5,11 +5,11 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagm
 import { BUILDER_PROOF_CONTRACT } from '@/lib/constants'
 import { BuilderProofABI } from '@/abi/BuilderProof'
 
-interface OnchainAchievementTreasuryManagementProps {
+interface OnchainAchievementRevenueSharingProps {
   achievementId: bigint
 }
 
-export default function OnchainAchievementTreasuryManagement({ achievementId }: OnchainAchievementTreasuryManagementProps) {
+export default function OnchainAchievementRevenueSharing({ achievementId }: OnchainAchievementRevenueSharingProps) {
   const { address } = useAccount()
   const [treasuryAddress, setTreasuryAddress] = useState('0xtreasury')
   const [amount, setAmount] = useState('1000')
@@ -21,7 +21,7 @@ export default function OnchainAchievementTreasuryManagement({ achievementId }: 
   const record = () => {
     if (!address) return
     if (!treasuryAddress.trim() || !treasuryAddress.startsWith('0x')) return
-    const payload = `TreasuryManagement|treasury:${treasuryAddress}|amount:${amount}|recipient:${recipient}`
+    const payload = `RevenueSharing|treasury:${treasuryAddress}|amount:${amount}|recipient:${recipient}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
       abi: BuilderProofABI,
@@ -32,17 +32,17 @@ export default function OnchainAchievementTreasuryManagement({ achievementId }: 
 
   return (
     <section className="bg-white border rounded-xl shadow p-6">
-      <h3 className="text-xl font-bold mb-2">TreasuryManagement</h3>
-      <p className="text-sm text-gray-600 mb-4">Track TreasuryManagement operations and distributions.</p>
+      <h3 className="text-xl font-bold mb-2">RevenueSharing</h3>
+      <p className="text-sm text-gray-600 mb-4">Track RevenueSharing operations and distributions.</p>
       <div className="space-y-3 mb-4">
         <input value={treasuryAddress} onChange={(e) => setTreasuryAddress(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Treasury address" />
         <input value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Amount" />
         <input value={recipient} onChange={(e) => setRecipient(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2" placeholder="Recipient" />
       </div>
       <button onClick={record} disabled={isPending || isConfirming || !address || !treasuryAddress.startsWith('0x')} className="w-full px-4 py-3 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 disabled:bg-gray-400">
-        {isPending || isConfirming ? 'Recording...' : 'Record TreasuryManagement'}
+        {isPending || isConfirming ? 'Recording...' : 'Record RevenueSharing'}
       </button>
-      {isSuccess && <div className="mt-4 text-sm text-pink-700 bg-pink-50 border border-pink-200 rounded-lg p-3">✓ TreasuryManagement recorded onchain.</div>}
+      {isSuccess && <div className="mt-4 text-sm text-pink-700 bg-pink-50 border border-pink-200 rounded-lg p-3">✓ RevenueSharing recorded onchain.</div>}
     </section>
   )
 }
