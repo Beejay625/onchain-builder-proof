@@ -21,6 +21,7 @@ export default function OnchainAchievementTokenGating({ achievementId }: Onchain
   const recordGating = () => {
     if (!address) return
     if (!tokenAddress.trim()) return
+    if (!minBalance.trim() || isNaN(Number(minBalance))) return
     if (!tokenAddress.startsWith('0x') || tokenAddress.length !== 42) return
 
     const payload = `TOKEN_GATING|token:${tokenAddress}|minBalance:${minBalance}|type:${gateType}`
