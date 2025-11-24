@@ -21,6 +21,7 @@ export default function OnchainAchievementGovernanceProposals({ achievementId }:
   const recordProposal = () => {
     if (!address) return
     if (!governanceAddress.trim()) return
+    if (!proposalId.trim() || isNaN(Number(proposalId))) return
     if (!governanceAddress.startsWith('0x') || governanceAddress.length !== 42) return
 
     const payload = `GOVERNANCE_PROPOSALS|governance:${governanceAddress}|proposalId:${proposalId}|description:${description}`
