@@ -20,7 +20,8 @@ export default function OnchainAchievementFactoryContracts({ achievementId }: On
 
   const record = () => {
     if (!address) return
-    if (!contractAddress.trim() || !contractAddress.startsWith('0x')) return
+    if (!contractAddress.trim()) return
+    if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
     const payload = `FactoryContracts|contract:${contractAddress}|template:${template}|data:${data}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
