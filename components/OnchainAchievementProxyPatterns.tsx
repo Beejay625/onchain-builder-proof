@@ -21,6 +21,7 @@ export default function OnchainAchievementProxyPatterns({ achievementId }: Oncha
   const recordProxy = () => {
     if (!address) return
     if (!proxyAddress.trim()) return
+    if (!implementation.trim() || !implementation.startsWith('0x')) return
     if (!proxyAddress.startsWith('0x') || proxyAddress.length !== 42) return
 
     const payload = `PROXY_PATTERNS|proxy:${proxyAddress}|impl:${implementation}|type:${patternType}`
