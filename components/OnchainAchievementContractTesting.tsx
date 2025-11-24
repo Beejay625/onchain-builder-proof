@@ -21,6 +21,7 @@ export default function OnchainAchievementContractTesting({ achievementId }: Onc
   const recordTesting = () => {
     if (!address) return
     if (!contractAddress.trim()) return
+    if (!testFramework.trim()) return
     if (!contractAddress.startsWith('0x') || contractAddress.length !== 42) return
 
     const payload = `CONTRACT_TESTING|contract:${contractAddress}|framework:${testFramework}|coverage:${coverage}`
