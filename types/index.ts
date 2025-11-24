@@ -242,6 +242,36 @@ export interface FeatureFlags {
   operationalResilienceSuite: boolean
   autonomousAssuranceSuite: boolean
   achievementPostmortemVault: boolean
+  achievementGaslessTransactions: boolean
+  achievementFlashLoans: boolean
+  achievementFlashSwaps: boolean
+  achievementLimitOrders: boolean
+  achievementStopLossOrders: boolean
+  achievementDEXAggregator: boolean
+  achievementMEVProtection: boolean
+  achievementLiquidityMining: boolean
+  achievementStakingRewards: boolean
+  achievementTokenLocks: boolean
+  achievementTokenBurns: boolean
+  achievementTokenMints: boolean
+  achievementTokenTransfers: boolean
+  achievementTokenApprovals: boolean
+  achievementTokenSwaps: boolean
+  achievementPriceOracleIntegration: boolean
+  achievementChainlinkIntegration: boolean
+  achievementGraphIntegration: boolean
+  achievementENSDomains: boolean
+  achievementUnstoppableDomains: boolean
+  achievementTxSimulation: boolean
+  achievementSandwichDetector: boolean
+  achievementFrontRunningAlerts: boolean
+  achievementBlockspaceReservations: boolean
+  achievementBridgeFeeEstimator: boolean
+  achievementIntentBroadcasting: boolean
+  achievementBuilderSlotScheduler: boolean
+  achievementSessionKeysManager: boolean
+  achievementPaymasterPlanner: boolean
+  achievementSessionRevocation: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
