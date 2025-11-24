@@ -154,6 +154,7 @@ const defaultFlags: FeatureFlags = {
   achievementRunbookRegistry: false,
   achievementIncidentPlayback: false,
   achievementSequencerSLA: false,
+  achievementLatencyHeatmap: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}

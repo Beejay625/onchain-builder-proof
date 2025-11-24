@@ -238,6 +238,7 @@ export interface FeatureFlags {
   achievementRunbookRegistry: boolean
   achievementIncidentPlayback: boolean
   achievementSequencerSLA: boolean
+  achievementLatencyHeatmap: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
