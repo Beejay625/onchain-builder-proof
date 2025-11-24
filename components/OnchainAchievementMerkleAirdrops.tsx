@@ -21,6 +21,7 @@ export default function OnchainAchievementMerkleAirdrops({ achievementId }: Onch
   const recordAirdrop = () => {
     if (!address) return
     if (!merkleRoot.trim()) return
+    if (!tokenAddress.trim() || !tokenAddress.startsWith('0x')) return
     if (!merkleRoot.startsWith('0x') || merkleRoot.length !== 66) return
 
     const payload = `MERKLE_AIRDROPS|root:${merkleRoot}|token:${tokenAddress}|amount:${totalAmount}`
