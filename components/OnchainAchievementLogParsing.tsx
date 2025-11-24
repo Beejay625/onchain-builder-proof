@@ -21,6 +21,7 @@ export default function OnchainAchievementLogParsing({ achievementId }: OnchainA
   const recordParsing = () => {
     if (!address) return
     if (!txHash.trim()) return
+    if (!logIndex.trim() || isNaN(Number(logIndex))) return
     if (!txHash.startsWith('0x') || txHash.length !== 66) return
 
     const payload = `LOG_PARSING|tx:${txHash}|logIndex:${logIndex}|event:${eventSignature}`
