@@ -22,6 +22,7 @@ export default function OnchainAchievementVestingSchedules({ achievementId }: On
   const recordVesting = () => {
     if (!address) return
     if (!vestingAddress.trim()) return
+    if (!beneficiary.trim() || !beneficiary.startsWith('0x')) return
     if (!vestingAddress.startsWith('0x') || vestingAddress.length !== 42) return
 
     const payload = `VESTING_SCHEDULES|vesting:${vestingAddress}|beneficiary:${beneficiary}|amount:${totalAmount}|duration:${duration}`
