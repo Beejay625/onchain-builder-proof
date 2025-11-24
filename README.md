@@ -709,6 +709,36 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🎲 **Achievement Random Number Generation**: Track random number generation operations and verifications
 - 🔐 **Achievement VRF**: Track VRF operations and verifications
 - 🔒 **Achievement Commit-Reveal Schemes**: Track commit-reveal schemes operations and verifications
+- ⚡ **Achievement Gasless Transactions**: Record gasless execution with relayer attribution
+- 💸 **Achievement Flash Loans**: Document flash loan amounts, assets, and use cases
+- 🔄 **Achievement Flash Swaps**: Capture flash swap routes and settlement strategies
+- 📈 **Achievement Limit Orders**: Log onchain limit order placements and parameters
+- 🛑 **Achievement Stop Loss Orders**: Configure and track stop loss automations for DeFi positions
+- 🧮 **Achievement DEX Aggregator**: Benchmark best swap routes across aggregator services
+- 🛡️ **Achievement MEV Protection**: Track MEV protection strategies and saved amounts
+- 🌊 **Achievement Liquidity Mining**: Record liquidity mining campaigns and earned rewards
+- 🎖️ **Achievement Staking Rewards**: Document staking rewards programs and payouts
+- 🔒 **Achievement Token Locks**: Manage token lockups with unlock schedules
+- 🔥 **Achievement Token Burns**: Track token burn operations for ERC20 assets
+- 🪙 **Achievement Token Mints**: Record token mint events with recipients and amounts
+- 📤 **Achievement Token Transfers**: Capture token transfer proofs and recipients
+- ✅ **Achievement Token Approvals**: Log ERC20 allowance approvals with spender context
+- 🔁 **Achievement Token Swaps**: Record swap executions with in/out amounts
+- 📡 **Achievement Price Oracle Integration**: Record oracle endpoints powering onchain insights
+- 🔗 **Achievement Chainlink Integration**: Log Chainlink data feed usage across networks
+- 📊 **Achievement The Graph Integration**: Capture subgraph deployments powering analytics
+- 🌐 **Achievement ENS Domain Tracking**: Link ENS domains to builder achievements
+- 🌐 **Achievement Unstoppable Domains**: Track unstoppable domains and linked services
+- 🧪 **Achievement Transaction Simulation**: Dry-run achievement mints before committing onchain
+- 🥪 **Achievement Sandwich Attack Detector**: Inspect mempool slippage risks and saved value
+- 🚨 **Achievement Front-Running Alerts**: Monitor mempool for malicious priority transactions
+- 📦 **Achievement Blockspace Reservations**: Plan deterministic blockspace for critical drops
+- 🌉 **Achievement Bridge Fee Estimator**: Forecast cross-chain bridge fees prior to syncing
+- 📣 **Achievement Intent Broadcasting**: Record solver-friendly intent payloads with deadlines
+- 🗓️ **Achievement Builder Slot Scheduler**: Reserve builder slots for restaking and proof delivery windows
+- 🔑 **Achievement Session Keys Manager**: Provision account abstraction session keys with scoped permissions
+- 💳 **Achievement Paymaster Planner**: Allocate sponsorship budgets for paymasters and gas policies
+- 🛑 **Achievement Session Revocation**: Invalidate compromised session keys with onchain logs
 
 ### Gamification & Progress
 - 🏆 **Achievement Badges**: Unlock badges at milestone achievements (1, 5, 10, 25, 50, 100)
