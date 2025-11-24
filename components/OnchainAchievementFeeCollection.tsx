@@ -20,7 +20,8 @@ export default function OnchainAchievementFeeCollection({ achievementId }: Oncha
 
   const record = () => {
     if (!address) return
-    if (!treasuryAddress.trim() || !treasuryAddress.startsWith('0x')) return
+    if (!treasuryAddress.trim()) return
+    if (!treasuryAddress.startsWith('0x') || treasuryAddress.length !== 42) return
     const payload = `FeeCollection|treasury:${treasuryAddress}|amount:${amount}|recipient:${recipient}`
     writeContract({
       address: BUILDER_PROOF_CONTRACT as `0x${string}`,
