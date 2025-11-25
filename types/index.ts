@@ -272,6 +272,36 @@ export interface FeatureFlags {
   achievementSessionKeysManager: boolean
   achievementPaymasterPlanner: boolean
   achievementSessionRevocation: boolean
+  attestationCircuitStudio: boolean
+  stakeSlashingRadar: boolean
+  coldStorageEscrows: boolean
+  recurringRoyaltyIndex: boolean
+  reownAgentTrail: boolean
+  fraudProofMonitor: boolean
+  incidentAutoTriage: boolean
+  invoiceHashVault: boolean
+  didSessionAnchors: boolean
+  executableBundleProofs: boolean
+  satelliteUplinkReceipts: boolean
+  automationCircuitBreakers: boolean
+  treasuryNavClaims: boolean
+  antiSybilDossier: boolean
+  schemaRegistryHashes: boolean
+  composabilityBlueprintIds: boolean
+  okrProofStreams: boolean
+  toolchainFingerprints: boolean
+  regionRoutingTables: boolean
+  attractorScoreEngine: boolean
+  dataSovereigntyLedger: boolean
+  redTeamExerciseLog: boolean
+  policyArbitrationHooks: boolean
+  keyCeremonyProofs: boolean
+  stateDiffSnapshots: boolean
+  latencySlaWitness: boolean
+  guardianRotationLog: boolean
+  postQuantumPreview: boolean
+  listenerSyncMap: boolean
+  jurisdictionalTriggerGates: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
