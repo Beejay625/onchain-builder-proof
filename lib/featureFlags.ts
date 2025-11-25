@@ -157,6 +157,7 @@ const defaultFlags: FeatureFlags = {
   achievementLatencyHeatmap: false,
   operationalResilienceSuite: false,
   autonomousAssuranceSuite: false,
+  achievementPostmortemVault: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}

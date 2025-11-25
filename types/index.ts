@@ -241,6 +241,7 @@ export interface FeatureFlags {
   achievementLatencyHeatmap: boolean
   operationalResilienceSuite: boolean
   autonomousAssuranceSuite: boolean
+  achievementPostmortemVault: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
