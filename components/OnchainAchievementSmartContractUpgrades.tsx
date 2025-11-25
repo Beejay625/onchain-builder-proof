@@ -22,6 +22,7 @@ export default function OnchainAchievementSmartContractUpgrades({ achievementId 
   const recordUpgrade = () => {
     if (!address) return
     if (!proxyAddress.trim()) return
+    if (!newImplementation.trim() || !newImplementation.startsWith('0x')) return
     if (!proxyAddress.startsWith('0x') || proxyAddress.length !== 42) return
 
     const payload = `SMART_CONTRACT_UPGRADES|proxy:${proxyAddress}|oldImpl:${oldImplementation}|newImpl:${newImplementation}|tx:${upgradeTx}`
