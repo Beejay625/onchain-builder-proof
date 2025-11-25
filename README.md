@@ -10,7 +10,7 @@ The platform is powered by a **BuilderProof smart contract** deployed and verifi
 
 Unlike traditional achievement systems that rely on centralized databases, this platform leverages blockchain technology to ensure your achievements are **permanently recorded**, **publicly verifiable**, and **truly owned by you**. Built with Next.js 16 and Reown AppKit, it provides a seamless Web3 experience for documenting your builder journey onchain.
 
-## 🎉 750+ Production-Ready Features!
+## 🎉 810+ Production-Ready Features!
 
 ### New Onchain Operations Layer (Q4 2025 Drop)
 - 🎼 **Dynamic Royalty Curves**: Encode time-boxed royalty tiers for remixable achievement NFTs.
@@ -290,6 +290,7 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - ▶️ **Unpause Tracking**: Track unpause tracking operations and state changes.
 - 🔗 **Reown Wallet Connect**: Track Reown wallet connect operations and state changes.
 ### Trustless Operations Extensions
+> **Latest drop (30 features):** trustless automation controls, anti-sybil dossiers, PQ previews, satellite uplink receipts, guardian rotation logs, and jurisdiction-aware policy gates now run natively in the dashboard.
 - 🔎 **Fraud Proof Monitor**: Chronicle optimistic rollup fraud proof submissions, challengers, and verdict blocks.
 - 🧯 **Incident Auto-Triage**: Log incident payload hashes with onchain severity, owner, and mitigation timers.
 - 🧾 **Invoice Hash Vault**: Attach notarized invoice hashes plus payer attestations for grant or bounty payouts.
