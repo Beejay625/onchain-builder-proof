@@ -452,36 +452,36 @@ export interface FeatureFlags {
   achievementRecoveryRoleRandomizer: boolean
   achievementCustodialIntegrityGrid: boolean
   achievementEvidenceEscrowExchange: boolean
-  achievementEventualConsistencyLedger: boolean
-  achievementIntentInsuranceSyndicate: boolean
-  achievementGuardianCollectiveBargain: boolean
-  achievementContractorProofHub: boolean
-  achievementTelemetryVaccinationLabs: boolean
-  achievementAdaptiveFailoverRouter: boolean
-  achievementRollingServicePledges: boolean
-  achievementObservabilityMint: boolean
-  achievementAutonomousLifelineAgents: boolean
-  achievementIntegritySnapshotCarousel: boolean
-  achievementServiceCreditEscrow: boolean
-  achievementCongestionTriageDeck: boolean
-  achievementMultiRiskScoreboard: boolean
-  achievementParameterizedReliefBonds: boolean
-  achievementAttestedTroubleshootingTrees: boolean
-  achievementDisasterRehearsalLedger: boolean
-  achievementAxialResponseMesh: boolean
-  achievementEvidenceRedactionVault: boolean
-  achievementSovereignFallbackFederation: boolean
-  achievementMultiGovernanceHarmonizer: boolean
-  achievementKpiShockAbsorber: boolean
-  achievementTreasuryCushionRouter: boolean
-  achievementBidirectionalImpactRelay: boolean
-  achievementGlobalQuietHoursTimeline: boolean
-  achievementBuilderEmpathyGraph: boolean
-  achievementDisasterMutualAidPool: boolean
-  achievementComplianceScenarioStudio: boolean
-  achievementFailoverBondMarketplace: boolean
-  achievementProgressiveMintCovenant: boolean
-  achievementSovereignPolicyCodex: boolean
+  achievementContinuityAtlas: boolean
+  achievementIntentQuarantineFabric: boolean
+  achievementGuardianWageEscrow: boolean
+  achievementContractorIntegrityGraph: boolean
+  achievementTelemetryInoculationLab: boolean
+  achievementSovereignFailoverLoom: boolean
+  achievementLivingSlaCovenant: boolean
+  achievementObservabilitySignalMint: boolean
+  achievementAutonomousLifelineBrigade: boolean
+  achievementSnapshotIntegrityGyre: boolean
+  achievementServiceRebateRouter: boolean
+  achievementCongestionEscalationBoard: boolean
+  achievementMultidimensionalRiskRadar: boolean
+  achievementReliefBondSyndicator: boolean
+  achievementTroubleshootingWitnessTree: boolean
+  achievementBlackstartDrillLedger: boolean
+  achievementCrossAxisResponseMesh: boolean
+  achievementEvidenceRedactionSanctuary: boolean
+  achievementProvincialFallbackFederation: boolean
+  achievementGovernanceResonanceHarmonizer: boolean
+  achievementKpiDampenerOracle: boolean
+  achievementCushionLiquidityRouter: boolean
+  achievementImpactRelayTwin: boolean
+  achievementQuietHourSentinel: boolean
+  achievementEmpathyPulseGraph: boolean
+  achievementMutualAidClearinghouse: boolean
+  achievementComplianceScenarioForge: boolean
+  achievementFailoverCreditExchange: boolean
+  achievementProgressiveMintThrottle: boolean
+  achievementSovereignPolicyManuscript: boolean
   achievementLighthouseRiskSonar: boolean
   achievementContinuityBufferPools: boolean
   achievementIntentBackflowScrubber: boolean
