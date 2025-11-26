@@ -332,6 +332,36 @@ export interface FeatureFlags {
   achievementReentryTimelockGuard: boolean
   achievementOmnichainInboxRouter: boolean
   achievementAdaptiveReputationBonds: boolean
+  achievementSentinelConsensusMirror: boolean
+  achievementPredictiveFailoverGraph: boolean
+  achievementIntentDelayVault: boolean
+  achievementGuardianBondEscrow: boolean
+  achievementCustodyChainSequencer: boolean
+  achievementEncryptionEnvelopeLedger: boolean
+  achievementDeviceTrustFabric: boolean
+  achievementRateLimitBeacon: boolean
+  achievementPostQuantumAttestor: boolean
+  achievementRollingProofContinuity: boolean
+  achievementRollforwardRepairKit: boolean
+  achievementMultihopRewardDirector: boolean
+  achievementGasRefundRouter: boolean
+  achievementSovereignExecutorLedger: boolean
+  achievementGuardianDriftRadar: boolean
+  achievementIntegrityBeaconSwitchboard: boolean
+  achievementAuditReplayShuttle: boolean
+  achievementEvidenceCompressionLab: boolean
+  achievementReviewerSignalToken: boolean
+  achievementBridgeTimeoutEscrow: boolean
+  achievementUnlockConditionGraph: boolean
+  achievementExecutionCircuitNotebook: boolean
+  achievementMempoolMirrorChain: boolean
+  achievementMultipartyDustSettlement: boolean
+  achievementVaultWarmupScheduler: boolean
+  achievementConfigLintOracle: boolean
+  achievementCarbonImpactProofset: boolean
+  achievementAdaptiveRecoveryTree: boolean
+  achievementWarrantCanaryRegister: boolean
+  achievementPrivacyEnvelopeSwitch: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags

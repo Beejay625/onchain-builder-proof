@@ -172,6 +172,40 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 
 Deep dives for this wave live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md).
 
+### Sentinel Cascade · 30 Continuity Enhancers
+- 🛰️ **Achievement Sentinel Consensus Mirror**: Mirror validator votes plus cross-domain confirmations so reviewers spot finality drift instantly.
+- 🔮 **Achievement Predictive Failover Graph**: Continuously score infra dependency graphs and log predicted failover paths with confidence levels.
+- 🕰️ **Achievement Intent Delay Vault**: Apply programmable hold windows to high-risk intents with override attestations.
+- 🛡️ **Achievement Guardian Bond Escrow**: Bond guardian capital onchain and auto-slash when remediation steps fail SLA.
+- 🔗 **Achievement Custody Chain Sequencer**: Immutable ledger of every custody hop for achievement evidence and private artifacts.
+- 🔐 **Achievement Encryption Envelope Ledger**: Register encryption suites, rotation cadences, and signer fingerprints for each proof bundle.
+- 📱 **Achievement Device Trust Fabric**: Capture hardware attestation hashes plus geo hints for every signing session.
+- 🚦 **Achievement Rate Limit Beacon**: Broadcast live throttle budgets so automation agents respect shared throughput caps.
+- 🧮 **Achievement Post-Quantum Attestor**: Log PQ-safe proof transcripts and required verifier implementations.
+- ♻️ **Achievement Rolling Proof Continuity**: Require overlapping proof windows so there is never a telemetry gap.
+- 🧰 **Achievement Rollforward Repair Kit**: Store deterministic repair scripts and hashes used when replaying corrupted states forward.
+- 🧭 **Achievement Multihop Reward Director**: Define multi-party reward routing trees with fallback recipients and reason codes.
+- ⛽ **Achievement Gas Refund Router**: Publish refund splits tied to sponsored transactions with spender proofs.
+- 📜 **Achievement Sovereign Executor Ledger**: Track custom executors, permissions, and review hashes before they act onchain.
+- 🛰️ **Achievement Guardian Drift Radar**: Detect idle guardians, missed heartbeats, and log escalation steps.
+- 🕸️ **Achievement Integrity Beacon Switchboard**: Fan-out signed integrity beacons to multiple storage planes with audit receipts.
+- 🔁 **Achievement Audit Replay Shuttle**: Store replay-ready datasets so auditors can deterministically reproduce incidents.
+- 📦 **Achievement Evidence Compression Lab**: Document compression recipes, ratios, and verifiers for large evidence archives.
+- 🪙 **Achievement Reviewer Signal Token**: Mint non-transferable reviewer signal tokens that score review accuracy over time.
+- 🕓 **Achievement Bridge Timeout Escrow**: Escrow risky bridge transfers until timeout witnesses confirm completion.
+- 🧵 **Achievement Unlock Condition Graph**: Graph unlock dependencies plus proofs so downstream automations can reason over them.
+- 🧮 **Achievement Execution Circuit Notebook**: Version control complex execution circuits with step proofs and reviewer comments.
+- 📡 **Achievement Mempool Mirror Chain**: Snapshot mempool transactions relevant to achievements with hash pointers.
+- 🤝 **Achievement Multi-Party Dust Settlement**: Aggregate micro-payments/dust into scheduled settlement pulses with receipts.
+- 🔥 **Achievement Vault Warmup Scheduler**: Publish warmup scripts and seal proofs before vaults accept live deposits.
+- 🧷 **Achievement Config Lint Oracle**: Run lint policies on config/state diffs and notarize pass/fail verdicts.
+- 🌿 **Achievement Carbon Impact Proofset**: Attach per-achievement carbon footprint attestations plus offsets that were retired.
+- 🌳 **Achievement Adaptive Recovery Tree**: Encode adaptive recovery trees with branching conditions and guardian roles.
+- 🕊️ **Achievement Warrant Canary Register**: Timestamp warrant-canary statements with status and expiry proofs.
+- 🫥 **Achievement Privacy Envelope Switch**: Toggle granular privacy envelopes (public, partner, sealed) with signed approvals.
+
+Deep dives for this cascade live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#sentinel-cascade).
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics
