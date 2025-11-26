@@ -204,7 +204,41 @@ Deep dives for this wave live in [`docs/onchain-feature-expansion.md`](docs/onch
 - 🕊️ **Achievement Warrant Canary Register**: Timestamp warrant-canary statements with status and expiry proofs.
 - 🫥 **Achievement Privacy Envelope Switch**: Toggle granular privacy envelopes (public, partner, sealed) with signed approvals.
 
-Deep dives for this cascade live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#sentinel-cascade).
+Deep dives for this cascade live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#sentinel-cascade--continuity-enhancers).
+
+### Bastion Lattice · 30 Continuity Amplifiers
+- 🚀 **Achievement Latency Insurance Vaults**: Guarantee reimbursements when proof pipelines breach latency SLOs.
+- 🔄 **Achievement Dynamic Risk Oracles**: Stream adaptive risk scores that can pause downstream flows on red alerts.
+- 🪐 **Achievement Cross-Chain Quorum Sync**: Mirror governance quorums across chains with notarized tallies and drift checks.
+- 📈 **Achievement Predictive Ops Escalations**: Forecast escalation paths through telemetry and pre-stage approvers onchain.
+- ♻️ **Achievement Attestation Revalidation Loop**: Auto-refresh attestations on rolling cadences with expiry proofs and hashes.
+- 🛡️ **Achievement Data Residency Shields**: Stamp evidence with jurisdiction metadata before it leaves approved regions.
+- 🧾 **Achievement Compliant Bridging Escrows**: Wrap bridge transfers in compliance gating plus automated escrow releases.
+- ❤️‍🔥 **Achievement Multi-Sig Heartbeat Logger**: Require heartbeat signatures from custodians prior to privileged execution.
+- 🧭 **Achievement Keeper Fallback Registry**: Register backup keepers that inherit jobs when primaries miss heartbeats.
+- 📚 **Achievement Chain Handoff Playbooks**: Encode cross-chain migration runbooks with validation checkpoints and approvals.
+- 🕰️ **Achievement Timewarp Audit Trail**: Track forward/back-dated adjustments with reviewer attestations and reasoning.
+- 📜 **Achievement Term Sheet Anchors**: Anchor contributor or sponsor term sheets with immutable change control.
+- 💸 **Achievement Retro Funding Routers**: Route retro payouts automatically to every impacted achievement address.
+- ✅ **Achievement Onchain QA Queues**: Gate mint actions behind QA verdicts, severity codes, and remediation owners.
+- 🛰️ **Achievement Service Graph Mapper**: Map dependency graphs with live health proofs attached to each edge.
+- 🧪 **Achievement Deterministic Compression Forge**: Store deterministic evidence compression/decompression proofs for audits.
+- 🏦 **Achievement Treasury Stress Map**: Simulate treasury shock scenarios and notarize reviewer sign-offs on assumptions.
+- ⚙️ **Achievement Reward Emission Governors**: Auto-throttle or boost reward emissions based on observed KPI guardrails.
+- 🌿 **Achievement Sustainable Mining Offsets**: Attach verified sustainability offsets to energy-heavy achievements.
+- 🛠️ **Achievement Emergency Gas Switchboard**: Flip transactions into sponsored or batched modes during fee spikes.
+- 🔑 **Achievement Handover Escrow Keys**: Escrow admin keys during handovers with time-locked release attestations.
+- 🔍 **Achievement Credential Sanity Scanner**: Continuously validate verifiable credentials powering achievements.
+- 📉 **Achievement Intent Failure Registry**: Chronicle failed intents with payload hashes, root-cause codes, and owners.
+- 🔓 **Achievement Progressive Disclosure Flows**: Reveal sensitive evidence progressively as reviewers clear checkpoints.
+- 📏 **Achievement KPI Confidence Bands**: Publish KPI confidence intervals tied to oracle references and refresh cadence.
+- 💧 **Achievement Liquidity Fallback Lines**: Register emergency liquidity providers scoped to specific achievements.
+- 🧱 **Achievement Operator Escrow Bonds**: Require operator escrow that slashes automatically when commitments slip.
+- 🛰️ **Achievement Validator Relief Signals**: Broadcast validator relief workflows and restitution plans post-slash.
+- 🧾 **Achievement Impact Audit Trails**: Chain audit workpapers, signatures, and remediation checkpoints for impact reviews.
+- 🚨 **Achievement Zero-Day Response Ledger**: Capture zero-day timelines, mitigations, and disclosure proofs end-to-end.
+
+Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#bastion-lattice--continuity-amplifiers).
 
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
