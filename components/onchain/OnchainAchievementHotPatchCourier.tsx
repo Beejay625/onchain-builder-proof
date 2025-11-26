@@ -11,44 +11,44 @@ export default function OnchainAchievementHotPatchCourier(props: HeliosMeshFeatu
       accent="fuchsia"
       ctaLabel="Send Patch Record"
       payloadPrefix="PATCH_COURIER"
-      fields=[
-      {
-              key: 'artifactHash',
-              label: 'Artifact Hash',
-              type: 'text',
-              placeholder: '0xpatch',
-              required: true,
-            },
-      {
-              key: 'environment',
-              label: 'Environment',
-              type: 'select',
-              options: [
-          { label: 'Staging', value: 'staging' },
-          { label: 'Canary', value: 'canary' },
-          { label: 'Production', value: 'production' },
+      fields={[
+        {
+        key: 'artifactHash',
+        label: 'Artifact Hash',
+        type: 'text',
+        placeholder: '0xpatch',
+        required: true,
+        },
+        {
+        key: 'environment',
+        label: 'Environment',
+        type: 'select',
+        options: [
+        { label: 'Staging', value: 'staging' },
+        { label: 'Canary', value: 'canary' },
+        { label: 'Production', value: 'production' },
         ],
-              required: true,
-            },
-      {
-              key: 'risk',
-              label: 'Risk Class',
-              type: 'select',
-              options: [
-          { label: 'Low', value: 'low' },
-          { label: 'Medium', value: 'medium' },
-          { label: 'High', value: 'high' },
+        required: true,
+        },
+        {
+        key: 'risk',
+        label: 'Risk Class',
+        type: 'select',
+        options: [
+        { label: 'Low', value: 'low' },
+        { label: 'Medium', value: 'medium' },
+        { label: 'High', value: 'high' },
         ],
-              required: true,
-            },
-      {
-              key: 'summary',
-              label: 'Summary',
-              type: 'textarea',
-              placeholder: 'What changed and why',
-              required: true,
-            },
-    ]
+        required: true,
+        },
+        {
+        key: 'summary',
+        label: 'Summary',
+        type: 'textarea',
+        placeholder: 'What changed and why',
+        required: true,
+        },
+      ]}
     />
   )
 }
