@@ -302,6 +302,39 @@ export interface FeatureFlags {
   postQuantumPreview: boolean
   listenerSyncMap: boolean
   jurisdictionalTriggerGates: boolean
+  achievementHotfixStream: boolean
+  achievementSafelistRegistry: boolean
+  achievementStressTest: boolean
+  achievementAdaptiveEscrowTrees: boolean
+  achievementAttestationRelayMesh: boolean
+  achievementSovereignWorkspaceClones: boolean
+  achievementMultiTenantKpiMap: boolean
+  achievementParameterGuardrails: boolean
+  achievementEvidenceDiffVisualizer: boolean
+  achievementIntegrityBackfillEngine: boolean
+  achievementCrossDomainIntentRouter: boolean
+  achievementRecoveryGuardianCouncil: boolean
+  achievementDeterministicBatchReactor: boolean
+  achievementZkKpiOracle: boolean
+  achievementLiquidBacklogUnderwriter: boolean
+  achievementRewardCliffSimulator: boolean
+  achievementGovernanceHeartbeatMonitor: boolean
+  achievementStreakAnchorVaults: boolean
+  achievementCensorshipEscapeHatch: boolean
+  achievementImpactWeightNotary: boolean
+  achievementDelegatedWitnessSwarms: boolean
+  achievementTreasuryDriftSentinel: boolean
+  achievementProgrammaticBonusStreams: boolean
+  achievementEthicsDisclosureLedger: boolean
+  achievementAutoprunedEvidenceTrees: boolean
+  achievementFailureModeSandbox: boolean
+  achievementSlaEscrowMonitor: boolean
+  achievementReentryTimelockGuard: boolean
+  achievementOmnichainInboxRouter: boolean
+  achievementAdaptiveReputationBonds: boolean
+  achievementOmnichainReplayBuffer: boolean
+  achievementGuardianEscalationDesk: boolean
+  achievementEvidenceCompression: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
