@@ -11,39 +11,39 @@ export default function OnchainAchievementProofShelterBridge(props: HeliosMeshFe
       accent="slate"
       ctaLabel="Update Proof Shelter"
       payloadPrefix="PROOF_SHELTER"
-      fields=[
-      {
-              key: 'bundleId',
-              label: 'Bundle ID',
-              type: 'text',
-              placeholder: 'bundle-23',
-              required: true,
-            },
-      {
-              key: 'state',
-              label: 'Shelter State',
-              type: 'select',
-              options: [
-          { label: 'Sealed', value: 'sealed' },
-          { label: 'Released', value: 'released' },
+      fields={[
+        {
+        key: 'bundleId',
+        label: 'Bundle ID',
+        type: 'text',
+        placeholder: 'bundle-23',
+        required: true,
+        },
+        {
+        key: 'state',
+        label: 'Shelter State',
+        type: 'select',
+        options: [
+        { label: 'Sealed', value: 'sealed' },
+        { label: 'Released', value: 'released' },
         ],
-              required: true,
-            },
-      {
-              key: 'criteria',
-              label: 'Release Criteria',
-              type: 'textarea',
-              placeholder: 'Need quorum + audit',
-              required: true,
-            },
-      {
-              key: 'watcher',
-              label: 'Watcher',
-              type: 'text',
-              placeholder: 'guardian.watch',
-              required: true,
-            },
-    ]
+        required: true,
+        },
+        {
+        key: 'criteria',
+        label: 'Release Criteria',
+        type: 'textarea',
+        placeholder: 'Need quorum + audit',
+        required: true,
+        },
+        {
+        key: 'watcher',
+        label: 'Watcher',
+        type: 'text',
+        placeholder: 'guardian.watch',
+        required: true,
+        },
+      ]}
     />
   )
 }
