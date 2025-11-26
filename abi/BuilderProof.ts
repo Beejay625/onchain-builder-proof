@@ -409,6 +409,173 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'latticeId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'signalLayer',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'severity',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'indicatorHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'HeliosSignalLatticeLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'profilerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'blastScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'projectedLoss',
+        type: 'uint256',
+      },
+    ],
+    name: 'BlastRadiusProfiled',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'vaultId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'expectedHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'observedHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'varianceReason',
+        type: 'string',
+      },
+    ],
+    name: 'ContinuityDeltaVaultLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'meshId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'regionId',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'rehearsalHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'SovereignFailoverMeshLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'cartographerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'postureScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'reviewerSignature',
+        type: 'bytes32',
+      },
+    ],
+    name: 'ContinuityVectorCartographerLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -1505,6 +1672,186 @@ export const BuilderProofABI = [
     ],
     name: 'clearQuietHour',
     outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'signalLayer',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'watchMetric',
+        type: 'string',
+      },
+      {
+        internalType: 'uint256',
+        name: 'severity',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'indicatorHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logHeliosSignalLattice',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'blastScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string[]',
+        name: 'affectedDependencies',
+        type: 'string[]',
+      },
+      {
+        internalType: 'uint256',
+        name: 'projectedLoss',
+        type: 'uint256',
+      },
+    ],
+    name: 'logBlastRadiusProfiler',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'expectedHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'observedHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'string',
+        name: 'varianceReason',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'reviewerSignature',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logContinuityDeltaVault',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'regionId',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'rehearsalHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address[]',
+        name: 'quorumSigners',
+        type: 'address[]',
+      },
+    ],
+    name: 'logSovereignFailoverMesh',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string[]',
+        name: 'dependencyIds',
+        type: 'string[]',
+      },
+      {
+        internalType: 'uint256',
+        name: 'postureScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'reviewerSignature',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logContinuityVectorCartographer',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
     stateMutability: 'nonpayable',
     type: 'function',
   },
