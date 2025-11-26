@@ -134,6 +134,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Custodial Integrity Grid** — Score custodial providers, breaches, and remediation chronologies.
 30. **Achievement Evidence Escrow Exchange** — Facilitate encrypted evidence escrows with release proofs and audit trails.
 
+## Aegis Matrix · Resilience Catalysts
+
+1. **Achievement Eventual Consistency Ledger** — Log reconciliation windows plus attested diffs whenever ledgers converge.
+2. **Achievement Intent Insurance Syndicate** — Collectively underwrite high-risk intents with slashable risk pools and payout proofs.
+3. **Achievement Guardian Collective Bargain** — Capture guardian responsibility agreements, compensation rails, and renewal votes.
+4. **Achievement Contractor Proof Hub** — Track external contractor obligations, service proofs, and dispute hooks.
+5. **Achievement Telemetry Vaccination Labs** — Run telemetry sanity suites before data enters production achievement metrics.
+6. **Achievement Adaptive Failover Router** — Shift execution routes across chains or RPCs based on live health attestations.
+7. **Achievement Rolling Service Pledges** — Publish rolling uptime/latency pledges with enforcement windows and penalty states.
+8. **Achievement Observability Mint** — Mint attestations whenever observability coverage meets or exceeds policy targets.
+9. **Achievement Autonomous Lifeline Agents** — Register autonomous agent networks that can assume emergency workflows onchain.
+10. **Achievement Integrity Snapshot Carousel** — Rotate zero-downtime snapshot sets with hashed manifests and verifier approvals.
+11. **Achievement Service Credit Escrow** — Hold service credits that auto-release to builders when KPIs are missed.
+12. **Achievement Congestion Triage Deck** — Prioritize workloads during congestion with signed instructions and reviewer proofs.
+13. **Achievement Multi-Risk Scoreboard** — Aggregate risk categories and weights per achievement with change history.
+14. **Achievement Parameterized Relief Bonds** — Issue relief bonds that unlock when policy-defined risk metrics breach.
+15. **Achievement Attested Troubleshooting Trees** — Publish troubleshooting trees where every branch is hashed and reviewer-signed.
+16. **Achievement Disaster Rehearsal Ledger** — Store rehearsal outcomes, participants, and pass/fail metrics for each scenario.
+17. **Achievement Axial Response Mesh** — Link response clusters across teams/DAOs with acknowledgement receipts.
+18. **Achievement Evidence Redaction Vault** — Manage redacted evidence versions with hash pointers back to full archives.
+19. **Achievement Sovereign Fallback Federation** — Register fallback sovereign nodes plus readiness attestations per geography.
+20. **Achievement Multi-Governance Harmonizer** — Align overlapping governance votes with bridging proofs and quorum parity.
+21. **Achievement KPI Shock Absorber** — Buffer KPI volatility via smoothing formulas that are notarized onchain.
+22. **Achievement Treasury Cushion Router** — Route treasury cushions to stressed achievements with transparent triggers.
+23. **Achievement Bidirectional Impact Relay** — Mirror impact telemetry upstream and downstream with signed receipt trails.
+24. **Achievement Global Quiet Hours Timeline** — Declare quiet hours that automatically pause risky operations and notify builders.
+25. **Achievement Builder Empathy Graph** — Track builder wellbeing metrics tied to shipping cadence and retro payouts.
+26. **Achievement Disaster Mutual Aid Pool** — Coordinate mutual aid commitments between DAOs with escrowed resources.
+27. **Achievement Compliance Scenario Studio** — Scenario-test policy changes and mint the resulting compliance verdicts.
+28. **Achievement Failover Bond Marketplace** — Match failover providers with achievements needing standby coverage plus SLA proofs.
+29. **Achievement Progressive Mint Covenant** — Enforce covenant checkpoints before high-risk achievements can mint.
+30. **Achievement Sovereign Policy Codex** — Version control sovereign policy packs with approvals, revocations, and audit trails.
+
 ## Polaris Relay · Frontier Automations
 
 1. **Achievement Reown Session Sentinel** — Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.
