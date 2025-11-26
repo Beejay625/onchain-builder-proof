@@ -254,6 +254,142 @@ Deep dives for this matrix live in [`docs/onchain-feature-expansion.md`](docs/on
 
 Deep dives for this array live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#lighthouse-array--crisis-automation-relays).
 
+### Helios Mesh · 30 Incident Automation Primitives
+- 🔗 **Achievement Helios Signal Lattice**: Captures signal layers and severity notes for correlated alert detection.
+- 📞 **Achievement Incident Escalation Choreographer**: Orchestrates escalation stages with responder assignments.
+- 💥 **Achievement Blast Radius Profiler**: Quantifies impact scope with affected services and projected loss.
+- 🔄 **Achievement Runbook Circuit Switch**: Enables guardians to toggle automation circuits with fallback runbooks.
+- 👥 **Achievement Triage Swarm Coordinator**: Coordinates multi-team triage with swarm labels and capacity management.
+- 📋 **Achievement Post-Incident Autopsy Vault**: Memorializes post-incident learnings with evidence CIDs.
+- 🔇 **Achievement Telemetry Dampening Shield**: Filters noisy telemetry signals during incidents.
+- 💰 **Achievement Crisis Budget Router**: Routes emergency budgets across squads with token caps.
+- 📢 **Achievement Guardian Paging Matrix**: Maintains paging priority and coverage scores for on-call management.
+- ⚡ **Achievement Latency Surge Buffer**: Applies buffer actions when latency thresholds breach.
+- 🔨 **Achievement Safe Rebuild Capsule**: Packages deterministic rebuild targets with artifact hashes.
+- 🔒 **Achievement Chain Isolation Switch**: Isolates affected chains with state controls and rejoin criteria.
+- 📦 **Achievement Incident Evidence Relay**: Routes evidence bundles with CIDs and verifier signatures.
+- 🚀 **Achievement Hot Patch Courier**: Tracks patch artifacts with hashes and risk classes.
+- 🔐 **Achievement Hazmat Credential Locker**: Locks elevated credentials with vault slots and expiry.
+- ✅ **Achievement Alert Authenticity Filter**: Filters alert sources with authenticity verdicts.
+- ⏱️ **Achievement Response Window Ledger**: Tracks incident stages with promised response windows.
+- 🔄 **Achievement Operator Relief Rotation**: Schedules relief rotations with operator wallets.
+- 💸 **Achievement Victim Compensation Pool**: Configures victim cohorts with compensation tokens.
+- 🌍 **Achievement Multi-Region Failover Deck**: Captures primary and standby regions with validation checklists.
+- ❄️ **Achievement Emergency Config Freezer**: Freezes config scopes with hash locks during incidents.
+- 🔍 **Achievement Forensic Snapshot Beacon**: Records forensic snapshots with block heights and CIDs.
+- 🧠 **Achievement Incident Learning Loop**: Captures retro hypotheses and adoption status.
+- 🛡️ **Achievement Proof Shelter Bridge**: Shelters proof bundles with release preconditions.
+- 📊 **Achievement Continuity Drift Recorder**: Measures drift metrics against baselines.
+- 📈 **Achievement Recovery KPI Gauge**: Tracks recovery KPIs with current readings and confidence bands.
+- 📝 **Achievement Incident Debt Tracker**: Records remediation items with debt owners.
+- 🔕 **Achievement Quiet Mode Broadcast**: Declares quiet mode windows with scope and reasoning.
+- 🚦 **Achievement Auto-Throttle Sentinel**: Sets throttle targets with max throughput.
+- 💚 **Achievement Guardian Aftercare Portal**: Tracks guardian aftercare tasks with completion proofs.
+
+Deep dives for this mesh live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-mesh-incident-automation-f121f150).
+
+### Helios Forge · 30 Deterministic Continuity Primitives
+- 📊 **Achievement Continuity Delta Vault**: Captures expected vs observed state hashes with variance reasons.
+- 🔍 **Achievement Cross-Domain Circuit Auditor**: Logs circuit audits with verifier hashes and approval quorums.
+- 🌡️ **Achievement Guardian Thermal Failover Map**: Records data center temperature telemetry with failover thresholds.
+- 💰 **Achievement Liquidation Recovery Escrow**: Escrows restitution allocations with payout schedule hashes.
+- 🚪 **Achievement Intent Floodgate Governor**: Governs intent release credits with throttle policies.
+- 🌐 **Achievement Sovereign Edge Witness Grid**: Registers edge witness nodes with jurisdiction tags.
+- 🛡️ **Achievement KPI Anti-Sybil Router**: Routes KPI channels with Sybil heuristics and adjudication hashes.
+- 🔗 **Achievement Deterministic Vault Rolling Hash**: Enforces sequential hash linkage for vault state transitions.
+- ⚖️ **Achievement Custody Drift Arbitration Desk**: Records custody drift disputes with evidence CIDs.
+- 📈 **Achievement Treasury Scenario Bond Ladder**: Plans bond ladders with rung maturities and trigger KPIs.
+- ⚠️ **Achievement Onchain Hazard Maturity Graph**: Graphs hazard classes with exposure maturity.
+- 📦 **Achievement Verdict Provenance Capsule**: Bundles reviewer verdicts with signature chains.
+- 💰 **Achievement Witness Incentive Oscillator**: Oscillates witness incentives with coverage heatmaps.
+- 🏖️ **Achievement Autonomous Attestor Sandbox**: Configures attestor sandboxes with guardrails.
+- 🔒 **Achievement Retro Funding Lockbox**: Locks retro funding with escrow amounts and release quorums.
+- 📊 **Achievement Impact Equity Pool Router**: Routes impact equity pools with KPI split rules.
+- 🚨 **Achievement Circuit Divergence Alarm**: Alarms on circuit divergence with approved vs observed hashes.
+- ⛽ **Achievement Posture-Based Gas Sponsor**: Sponsors gas based on device posture scores.
+- 📚 **Achievement Temporal Sequencer Archive**: Archives sequencer epochs with signer lists.
+- 💼 **Achievement Guardian Proof-of-Workload Feed**: Feeds guardian workload proofs with attested windows.
+- 🔄 **Achievement Sovereign Evidence Swapline**: Swaps evidence between DAOs with encryption schemas.
+- ⏳ **Achievement Rollup Grace Period Monitor**: Monitors rollup grace periods with checkpoint hashes.
+- 🧠 **Achievement Intent Memory Fountain**: Logs anonymized replay traces with scenario tags.
+- 📋 **Achievement Compliance Receipt Relay**: Relays compliance receipts to regulators with encrypted CIDs.
+- 📱 **Achievement Device Handoff Ledger**: Ledgers device handoffs with biometric attestations.
+- 🎯 **Achievement Restitution Auction Vault**: Auction vaults with victim lists and bidding rules.
+- 📈 **Achievement Resilience Option Writer**: Writes resilience options with KPI strikes.
+- 🛡️ **Achievement Fail-Safe Macro Planner**: Plans rollback macros with script hashes.
+- 💰 **Achievement Automated Relief Clearinghouse**: Clears relief queues with priority weights.
+- 📊 **Achievement Impact KPI Hedge Desk**: Hedges impact KPIs with derivative types.
+
+Deep dives for this forge live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
+
+### Nebula Forge · 30 Autonomous Continuity Controls
+- 🌐 **Achievement Sovereign Failover Mesh**: Clones achievement scopes across sovereign deployments.
+- 🔥 **Achievement Adaptive Intent Firewall**: Scores intents with AI and rules engines before broadcast.
+- 📦 **Achievement Modular Recovery Capsules**: Pre-builds recovery capsules with calldata and guardian assignments.
+- 📚 **Achievement Guardian Playbook Composer**: Composes and versions incident playbooks with escalation timers.
+- 📊 **Achievement Continuum Risk Lattice**: Calculates multi-factor risk tensors with contributor signatures.
+- ⚖️ **Achievement Proof Drift Equalizer**: Detects and equalizes proof drift between mirrored anchors.
+- 💰 **Achievement Treasury Auto-Hedge Vaults**: Deploys hedging vaults with oracle feeds and stress scores.
+- ⚡ **Achievement Zero-Latency Witness Grid**: Registers ultra-low-latency witnesses with jitter metrics.
+- 🤖 **Achievement Neural Incident Forecaster**: Provides ML-driven incident forecasts with feature importance.
+- 📈 **Achievement Continuity Futures Clearinghouse**: Lists continuity futures that hedge downtime.
+- 📦 **Achievement Multi-Hop Evidence Courier**: Routes evidence across custody layers with notarized checkpoints.
+- ⏱️ **Achievement Crisis Timebox Director**: Enforces maximum remediation windows with auto-escalations.
+- 🍴 **Achievement Fork Horizon Tracker**: Tracks fork-choice hints and client diversity for safety warnings.
+- 🎯 **Achievement Kinetic Reward Governor**: Converts ops metrics into kinetic reward multipliers.
+- ⚖️ **Achievement Autonomous Compliance Arbiter**: Runs compliance arbiters that gate sensitive actions.
+- 💸 **Achievement Intent Chargeback Ledger**: Chronicles chargeback cases for misfired intents.
+- 🔄 **Achievement Resilient Sequencer Proxy**: Maintains sequencer proxies with replay buffers.
+- 📊 **Achievement Guardian Accountability Graph**: Graphs guardian activities and heartbeats.
+- 📡 **Achievement Telemetry Custody Router**: Routes telemetry through custody routers with encryption.
+- 💰 **Achievement Impact Contingency Bonds**: Issues impact-linked bonds unlocking relief when KPIs miss.
+- 🚀 **Achievement Sovereign Patch Relay**: Stages signed patches per sovereignty zone.
+- 🤝 **Achievement Multilateral Witness Escrow**: Escrows witness stakes from multiple orgs.
+- 🏥 **Achievement Vault Health Sentinel**: Scans vault solvency and policy compliance.
+- 📋 **Achievement Policy Drift Comparator**: Hashes policy baselines and emits diffs.
+- 🔗 **Achievement Proof Anchoring Synthesizer**: Collates redundant proof anchors and verifies parity.
+- 📊 **Achievement Staggered Impact Orchestrator**: Sequences impact releases over epochs.
+- 📦 **Achievement Data Retention Capsule**: Encodes retention capsules with hold/drop timers.
+- 🕸️ **Achievement Adaptive Audit Mesh**: Meshes auditor pools with capability tags.
+- 🚨 **Achievement Emergency Signal Beacon**: Broadcasts authenticated emergency beacons.
+- 🔐 **Achievement Omni-Custody Access Guard**: Enforces custody guard rules with session hashes.
+
+Deep dives for this forge live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
+
+### Obsidian Nexus · 30 Autonomous Integrity Fabric
+- 🗺️ **Achievement Continuity Vector Cartographer**: Maps dependency vectors with continuity posture scores.
+- 🤖 **Achievement Adaptive Threat Playbook Hub**: Curates AI-assisted threat playbooks with dynamic steps.
+- 🔐 **Achievement Quantum Guardrail Relay**: Relays PQ-ready guardrails to automation agents.
+- 🌳 **Achievement Intent Provenance Arboretum**: Preserves lineage trees for intents with reviewers.
+- 💰 **Achievement Drift-Aware Treasury Governor**: Tunes treasury throttles when drift hits policy limits.
+- 🔒 **Achievement Cross-Domain Sealing Chamber**: Seals sensitive payloads before chain traversal.
+- 💰 **Achievement Anomaly Escrow Fountain**: Bonds anomaly remediation funds that auto-stream.
+- 👥 **Achievement Omni-Swarm Witness Director**: Assigns witness swarms dynamically based on coverage gaps.
+- 💓 **Achievement Temporal Heartbeat Ledger**: Captures heartbeat cadences for automation agents.
+- 📚 **Achievement Deterministic Runbook Fabric**: Versions deterministic runbooks with hashed scripts.
+- 🔒 **Achievement Dynamic Custody Ringfence**: Creates programmable ringfences that adjust on risk scores.
+- 🔍 **Achievement Sovereign Cache Auditor**: Audits sovereign caches with retention and encryption metadata.
+- 🚀 **Achievement Proof Integrity Warp Drive**: Batch-verifies multi-anchor proofs and publishes warp hashes.
+- 💰 **Achievement Guardian Relief Bond Exchange**: Lets guardians swap relief bonds with onchain slashing proofs.
+- 📡 **Achievement Situational Awareness Beacon**: Broadcasts combined telemetry, treasury, and governance insights.
+- 💰 **Achievement Zero-Loss Impact Vault**: Guarantees restitution for impact payouts with bonded vaults.
+- 🔄 **Achievement Adaptive Policy Translator**: Translates governance policies into machine-readable guardrails.
+- ⚖️ **Achievement Intent Outcome Court**: Runs onchain mini-courts for disputed intents with verdicts.
+- 🔇 **Achievement Telemetry Hush Circuit**: Gates sensitive telemetry streams behind hush circuits.
+- 🔄 **Achievement Compliance Circuit Switch**: Flips compliance circuit states with jurisdictional triggers.
+- 🧪 **Achievement Resilience Twin Simulator**: Simulates digital twins of proof pipelines with assumptions.
+- 👥 **Achievement Recovery Quorum Synthesizer**: Synthesizes optimal recovery quorums per incident type.
+- 🪞 **Achievement Counterparty Integrity Mirror**: Mirrors counterparty attestations and dispute histories.
+- 🔐 **Achievement Edge Operator Credential Forge**: Mints edge-operator credentials with device attestations.
+- 📈 **Achievement Continuity Momentum Index**: Scores continuity momentum by blending heartbeat metrics.
+- 📦 **Achievement Evidence Continuity Capsule**: Packages rolling evidence snapshots with retention commitments.
+- 🔄 **Achievement Guardian Synchrony Grid**: Measures guardian synchrony and auto-escalates on drift.
+- 💰 **Achievement Autonomous Reward Backstop**: Maintains backstop pools that auto-fund rewards.
+- 🔮 **Achievement Vault Integrity Harbinger**: Forecasts vault breaches by correlating anomaly signals.
+- 🔐 **Achievement Omni-Lifecycle Access Sentinel**: Tracks privileged access across entire achievement lifecycle.
+
+Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--obsidian-nexus-autonomous-fabric-f241f270).
+
 ### Polaris Relay · 30 Frontier Automations
 - 🛰️ **Achievement Reown Session Sentinel**: Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.
 - 🕸️ **Achievement Omniwallet Delegation Fabric**: Visualize cross-chain delegation graphs with expiry timers and override routes.
