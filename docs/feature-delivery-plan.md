@@ -14,6 +14,7 @@
 | W4 | Automation & Distribution | F25–F30 | Weeks 7–8 |
 | W5 | Onchain Assurance (Wave Θ) | F31–F60 | Weeks 9–14 |
 | W6 | Sentinel Cascade Continuity | F61–F90 | Weeks 15–20 |
+| W7 | Aurora Wave · Ethereum Control Plane | F151–F180 | Weeks 21–26 |
 
 ### 3. Shared Prerequisites
 1. **Context Upgrade** (`context/index.tsx`): multi-wallet support, cached analytics, notification stream.
@@ -568,6 +569,410 @@ Sentinel Cascade layers another thirty continuity and assurance primitives on to
 - **UI**: Toggle interface to switch between public/partner/sealed envelopes with approvals.
 - **Contract**: `addComment` logs envelope state plus approver addresses.
 - **Acceptance**: Multi-sig approvals enforced before sealed envelope activates.
+
+### Wave Ω · Aegis Matrix Resilience Catalysts (F91–F120)
+
+Aegis Matrix layers thirty resilience-focused capabilities that let BuilderProof self-heal in the face of ledger drift, congestion, or governance contention. Every feature rides the shared feature flags inside `lib/featureFlags.ts`, leans on the Aegis sandbox (`app/sandbox/aegis-matrix`), and records deterministic payloads via the `createPost`/`addComment` helpers so downstream automations can trust the state.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F91 | Achievement Eventual Consistency Ledger | Ledger Assurance | `components/onchain/AchievementEventualConsistencyLedger.tsx` |
+| F92 | Achievement Intent Insurance Syndicate | Risk Financing | `components/onchain/AchievementIntentInsuranceSyndicate.tsx` |
+| F93 | Achievement Guardian Collective Bargain | Guardian Governance | `components/onchain/AchievementGuardianCollectiveBargain.tsx` |
+| F94 | Achievement Contractor Proof Hub | Vendor Trust | `components/onchain/AchievementContractorProofHub.tsx` |
+| F95 | Achievement Telemetry Vaccination Labs | Telemetry Hygiene | `components/onchain/AchievementTelemetryVaccinationLabs.tsx` |
+| F96 | Achievement Adaptive Failover Router | Routing Resilience | `components/onchain/AchievementAdaptiveFailoverRouter.tsx` |
+| F97 | Achievement Rolling Service Pledges | Service Assurance | `components/onchain/AchievementRollingServicePledges.tsx` |
+| F98 | Achievement Observability Mint | Observability Coverage | `components/onchain/AchievementObservabilityMint.tsx` |
+| F99 | Achievement Autonomous Lifeline Agents | Autonomous Ops | `components/onchain/AchievementAutonomousLifelineAgents.tsx` |
+| F100 | Achievement Integrity Snapshot Carousel | Snapshot Continuity | `components/onchain/AchievementIntegritySnapshotCarousel.tsx` |
+| F101 | Achievement Service Credit Escrow | Remediation Finance | `components/onchain/AchievementServiceCreditEscrow.tsx` |
+| F102 | Achievement Congestion Triage Deck | Congestion Control | `components/onchain/AchievementCongestionTriageDeck.tsx` |
+| F103 | Achievement Multi-Risk Scoreboard | Risk Analytics | `components/onchain/AchievementMultiRiskScoreboard.tsx` |
+| F104 | Achievement Parameterized Relief Bonds | Liquidity Safety Nets | `components/onchain/AchievementParameterizedReliefBonds.tsx` |
+| F105 | Achievement Attested Troubleshooting Trees | Support Readiness | `components/onchain/AchievementAttestedTroubleshootingTrees.tsx` |
+| F106 | Achievement Disaster Rehearsal Ledger | Incident Rehearsal | `components/onchain/AchievementDisasterRehearsalLedger.tsx` |
+| F107 | Achievement Axial Response Mesh | Cross-Team Response | `components/onchain/AchievementAxialResponseMesh.tsx` |
+| F108 | Achievement Evidence Redaction Vault | Privacy Controls | `components/onchain/AchievementEvidenceRedactionVault.tsx` |
+| F109 | Achievement Sovereign Fallback Federation | Sovereign Ops | `components/onchain/AchievementSovereignFallbackFederation.tsx` |
+| F110 | Achievement Multi-Governance Harmonizer | Governance Alignment | `components/onchain/AchievementMultiGovernanceHarmonizer.tsx` |
+| F111 | Achievement KPI Shock Absorber | Analytics Smoothing | `components/onchain/AchievementKpiShockAbsorber.tsx` |
+| F112 | Achievement Treasury Cushion Router | Treasury Automation | `components/onchain/AchievementTreasuryCushionRouter.tsx` |
+| F113 | Achievement Bidirectional Impact Relay | Telemetry Continuity | `components/onchain/AchievementBidirectionalImpactRelay.tsx` |
+| F114 | Achievement Global Quiet Hours Timeline | Operations Guardrails | `components/onchain/AchievementGlobalQuietHoursTimeline.tsx` |
+| F115 | Achievement Builder Empathy Graph | People Analytics | `components/onchain/AchievementBuilderEmpathyGraph.tsx` |
+| F116 | Achievement Disaster Mutual Aid Pool | Resource Pooling | `components/onchain/AchievementDisasterMutualAidPool.tsx` |
+| F117 | Achievement Compliance Scenario Studio | Compliance Simulation | `components/onchain/AchievementComplianceScenarioStudio.tsx` |
+| F118 | Achievement Failover Bond Marketplace | Failover Liquidity | `components/onchain/AchievementFailoverBondMarketplace.tsx` |
+| F119 | Achievement Progressive Mint Covenant | Issuance Controls | `components/onchain/AchievementProgressiveMintCovenant.tsx` |
+| F120 | Achievement Sovereign Policy Codex | Policy Management | `components/onchain/AchievementSovereignPolicyCodex.tsx` |
+
+#### F91 · Achievement Eventual Consistency Ledger
+- **UI**: Ledger module logs source/target ledgers, drift window, reconciler hash, and reviewer notes.
+- **Contract**: `createPost` stores `CONSISTENCY_LEDGER` payloads with block heights so auditors can replay convergence timelines.
+- **Automation**: Reconciliation cron compares declared drift windows with `lib/analytics.ts` deltas and escalates when variance exceeds tolerance.
+- **Acceptance**: Entry rejected if reconciliation hash missing or drift window smaller than recorded block delta.
+
+#### F92 · Achievement Intent Insurance Syndicate
+- **UI**: Syndicate builder captures insured intent ID, bonded pool amount, payout caps, and oracle feed.
+- **Contract**: `addComment` logs `INTENT_SYNDICATE` metadata, referencing escrow vault IDs for claim enforcement.
+- **Finance**: Treasury worker listens for breach signals and automatically drafts payout transactions referencing the syndicate record.
+- **Acceptance**: Coverage ratio must exceed minimum configured in settings; otherwise UI blocks submission.
+
+#### F93 · Achievement Guardian Collective Bargain
+- **UI**: Collective bargain editor records guardian roster, duties, compensation rails, and renewal epoch.
+- **Contract**: `createPost` persists `GUARDIAN_BARGAIN` payloads so governance proposals can reference obligations.
+- **Governance**: Reminder service pings guardians 14 days before renewal to refresh signatures if duties change.
+- **Acceptance**: Duplicate guardian entries blocked and quorum threshold must be >= majority before save.
+
+#### F94 · Achievement Contractor Proof Hub
+- **UI**: Proof hub form captures contractor identity, deliverable scope, proof CID, and escalation owner.
+- **Contract**: `addComment` logs `CONTRACTOR_PROOF` entries tying deliverables to hashed statements of work.
+- **Data**: Mirrors to Supabase table `contractor_proofs` so ops teams can search deliverables by vendor or status.
+- **Acceptance**: Submission requires both contractor handle and proof CID; otherwise inline error prevents logging.
+
+#### F95 · Achievement Telemetry Vaccination Labs
+- **UI**: Lab console stores dataset hash, validation recipe, reviewer signature, and expiry date.
+- **Contract**: `createPost` records `TELEMETRY_VACCINE` payloads for downstream telemetry gating.
+- **Automation**: CI workflow replays the recipe and attaches pass/fail CIDs; failures auto-flag dataset as quarantined.
+- **Acceptance**: Entries missing reviewer signature or dataset hash are rejected; UI warns when validation expired.
+
+#### F96 · Achievement Adaptive Failover Router
+- **UI**: Router composer defines destination lanes, health thresholds, and fallback ordering.
+- **Contract**: `createPost` logs `FAILOVER_ROUTER` payloads that automation services consult before rerouting.
+- **Runtime**: `app/api/runtime/failover` caches latest router config and ensures reroutes emit event logs.
+- **Acceptance**: Config requires at least two destinations and disallows duplicate ordering numbers.
+
+#### F97 · Achievement Rolling Service Pledges
+- **UI**: Pledge wizard collects service scope, pledge duration, enforcement window, and reviewer acknowledgments.
+- **Contract**: `addComment` stores `SERVICE_PLEDGE` entries attached to achievement IDs.
+- **Monitoring**: Scheduler cross-references uptime telemetry and automatically logs breach incidents referencing pledge ID.
+- **Acceptance**: Enforcement window must be >= pledge duration and at least one reviewer ack required.
+
+#### F98 · Achievement Observability Mint
+- **UI**: Observability panel captures coverage metrics (logs/traces/metrics), sample density, and evidence CID.
+- **Contract**: `createPost` records `OBS_MINT` payloads to track observability posture over time.
+- **Analytics**: `lib/analytics.ts` surfaces minted coverage badges to highlight policy compliance across achievements.
+- **Acceptance**: Coverage percentages must sum ≤ 100%; missing evidence CID blocks submission.
+
+#### F99 · Achievement Autonomous Lifeline Agents
+- **UI**: Registry logs agent scope, key fingerprint, escalation authority, and expiry timestamp.
+- **Contract**: `addComment` logs `LIFELINE_AGENT` metadata allowed to run emergency automations.
+- **Automation**: Scheduler only triggers lifeline workflows when active agent entry exists with unexpired key.
+- **Acceptance**: Entries missing fingerprint or expiry are rejected; UI warns when expiry < 7 days.
+
+#### F100 · Achievement Integrity Snapshot Carousel
+- **UI**: Carousel setup lists snapshot cadence, storage targets, manifest hash, and checksum status.
+- **Contract**: `createPost` stores `SNAPSHOT_CAROUSEL` payload pointing to IPFS manifest.
+- **Storage**: `lib/storage.ts` validates uploads reached at least two storage planes before marking snapshot healthy.
+- **Acceptance**: Submission blocked without manifest hash; UI shows countdown until next scheduled snapshot.
+
+#### F101 · Achievement Service Credit Escrow
+- **UI**: Escrow form records counterparty, credit amount, trigger condition, and payout wallet.
+- **Contract**: `addComment` logs `SERVICE_CREDIT_ESCROW` entries referencing treasury escrow account IDs.
+- **Finance**: Treasury automation listens for trigger conditions and dispatches payouts referencing this entry.
+- **Acceptance**: Credit amount must be >0 and payout wallet must pass checksum validation.
+
+#### F102 · Achievement Congestion Triage Deck
+- **UI**: Deck builder orders workloads with severity tags, unlock signals, and runbook links.
+- **Contract**: `createPost` anchors `CONGESTION_TRIAGE` payloads so automation respects priority ordering.
+- **Ops Hooks**: `OperationalResilienceSuite` consumes deck entries to visualize queue depth across squads.
+- **Acceptance**: Submission requires at least three tiers and unique unlock signal per tier.
+
+#### F103 · Achievement Multi-Risk Scoreboard
+- **UI**: Scoreboard interface captures category weights, real-time scores, and reviewer overrides.
+- **Contract**: `addComment` stores `RISK_SCOREBOARD` payloads hashed for deterministic ordering.
+- **Analytics**: KPI dashboard overlays scoreboard data to color-code achievements.
+- **Acceptance**: Category weights must total 100%; duplicates blocked.
+
+#### F104 · Achievement Parameterized Relief Bonds
+- **UI**: Bond composer defines trigger metric, bond size, depletion curve, and treasury source.
+- **Contract**: `createPost` logs `RELIEF_BOND` metadata until automated redemption contract ships.
+- **Treasury**: Worker references depletion curve to schedule payouts via `lib/treasury.ts`.
+- **Acceptance**: Entry requires trigger metric + positive bond size; UI surfaces estimated runway post-submit.
+
+#### F105 · Achievement Attested Troubleshooting Trees
+- **UI**: Tree builder captures decision nodes, remediation steps, and attesting reviewer signatures.
+- **Contract**: `addComment` stores `TROUBLESHOOT_TREE` payloads pointing to hashed JSON.
+- **Docs**: `docs/runbooks.md` auto-links latest tree per achievement for oncall use.
+- **Acceptance**: All branches must end in terminal action; validation rejects cycles.
+
+#### F106 · Achievement Disaster Rehearsal Ledger
+- **UI**: Ledger entry records scenario name, participants, results, and follow-up tickets.
+- **Contract**: `createPost` records `DISASTER_REHEARSAL` payload for immutable rehearsal tracking.
+- **Automation**: Reminder cron auto-schedules next rehearsal based on cadence field.
+- **Acceptance**: Requires at least one participant and positive cadence interval to save.
+
+#### F107 · Achievement Axial Response Mesh
+- **UI**: Mesh designer maps clusters, responsibilities, acknowledgement proofs, and escalation channels.
+- **Contract**: `addComment` logs `AXIAL_RESPONSE` metadata for cross-team accountability.
+- **Notifications**: Webhook fan-out notifies cluster owners whenever mesh is activated.
+- **Acceptance**: Requires ≥2 clusters and unique acknowledgement proof per cluster.
+
+#### F108 · Achievement Evidence Redaction Vault
+- **UI**: Vault screen records redaction reason, hash pointer to full evidence, and reviewer approval.
+- **Contract**: `createPost` stores `REDACTION_VAULT` entries linking sealed and redacted artifacts.
+- **Storage**: `lib/storage.ts` verifies sealed artifact exists before marking redaction complete.
+- **Acceptance**: Entries without reviewer approval or hash pointer rejected.
+
+#### F109 · Achievement Sovereign Fallback Federation
+- **UI**: Federation builder captures participating sovereign nodes, readiness attestations, and failover order.
+- **Contract**: `addComment` logs `FALLBACK_FEDERATION` payload so automation can follow attested sequence.
+- **Ops**: Health monitor pings each node and records heartbeats aligned with the federation entry.
+- **Acceptance**: Requires ≥3 nodes with readiness hashes; duplicates blocked.
+
+#### F110 · Achievement Multi-Governance Harmonizer
+- **UI**: Harmonizer panel maps overlapping governance sources, quorum targets, and bridging proofs.
+- **Contract**: `createPost` stores `GOV_HARMONIZER` payload referenced by governance dashboards.
+- **Governance**: Drift detector alerts when quorums diverge beyond allowed delta.
+- **Acceptance**: Needs at least two governance feeds and unique quorum IDs per entry.
+
+#### F111 · Achievement KPI Shock Absorber
+- **UI**: Shock absorber editor defines smoothing formula, lookback window, and oracle references.
+- **Contract**: `addComment` logs `KPI_SHOCK` metadata enabling analytics to show raw vs smoothed views.
+- **Analytics**: Dashboard toggles display to compare absorber outputs with raw KPIs.
+- **Acceptance**: Lookback window must be >= smoothing interval and at least one oracle reference required.
+
+#### F112 · Achievement Treasury Cushion Router
+- **UI**: Router ties cushion pools to achievements with trigger bands and payout destinations.
+- **Contract**: `createPost` stores `TREASURY_CUSHION` payloads referencing treasury pool IDs.
+- **Finance**: Treasury automation routes liquidity when triggers fire, citing entry ID for audit.
+- **Acceptance**: Requires at least one trigger band and valid payout destination.
+
+#### F113 · Achievement Bidirectional Impact Relay
+- **UI**: Relay builder defines upstream/downstream feeds, sampling cadence, and checksum hash.
+- **Contract**: `addComment` logs `IMPACT_RELAY` entries preserving telemetry parity proofs.
+- **Data**: Stream processor compares feeds and raises alerts when drift exceeds tolerance.
+- **Acceptance**: Cadence must be ≥ 1 minute and checksum mandatory.
+
+#### F114 · Achievement Global Quiet Hours Timeline
+- **UI**: Scheduler records quiet windows, impacted scopes, and override approvers.
+- **Contract**: `createPost` stores `QUIET_HOURS` payload consumed by automation guardrails.
+- **Ops**: `lib/scheduler.ts` blocks risky workflows during recorded quiet hours.
+- **Acceptance**: Requires timezone-normalized start/end; overlapping quiet windows produce inline warning but still log with reviewer sign-off.
+
+#### F115 · Achievement Builder Empathy Graph
+- **UI**: Empathy graph captures wellbeing indicators, sentiment tags, and consent toggle.
+- **Contract**: `addComment` stores `EMPATHY_GRAPH` payload with anonymized hash references.
+- **Analytics**: Aggregated insights surface to program leads without exposing raw entries.
+- **Acceptance**: Entry rejected unless consent toggle checked and severity tag supplied.
+
+#### F116 · Achievement Disaster Mutual Aid Pool
+- **UI**: Pool manager records participating DAOs, pledged resources, unlock triggers, and repayment rules.
+- **Contract**: `createPost` logs `MUTUAL_AID_POOL` metadata so drawdowns can be audited.
+- **Automation**: Aid dispatcher references pool entries when incidents log via `OperationalResilienceSuite`.
+- **Acceptance**: Requires unlock trigger + repayment rule; missing either blocks submission.
+
+#### F117 · Achievement Compliance Scenario Studio
+- **UI**: Scenario builder captures policy variant, test scope, verdict, and reviewer signature.
+- **Contract**: `addComment` stores `COMPLIANCE_SCENARIO` payload for regulator review.
+- **Automation**: CI harness can trigger scenario studio via API, attaching verdict CIDs automatically.
+- **Acceptance**: Entries lacking verdict or signature rejected.
+
+#### F118 · Achievement Failover Bond Marketplace
+- **UI**: Marketplace logs provider address, coverage scope, SLA, and bond amount.
+- **Contract**: `createPost` stores `FAILOVER_BOND` entries linking to escrow IDs.
+- **Treasury**: Matching engine debits bond into escrow when failover contract approved.
+- **Acceptance**: Bond amount must exceed configured minimum and address must pass checksum validation.
+
+#### F119 · Achievement Progressive Mint Covenant
+- **UI**: Covenant editor defines checkpoint list, quorum rules, and mint thresholds.
+- **Contract**: `addComment` logs `MINT_COVENANT` payload gating high-risk mint actions.
+- **Automation**: Mint flow checks covenant compliance before final signature.
+- **Acceptance**: Requires ≥2 checkpoints with strictly ascending thresholds; duplicates blocked.
+
+#### F120 · Achievement Sovereign Policy Codex
+- **UI**: Codex manager records policy pack version, approvers, revocations, and jurisdiction metadata.
+- **Contract**: `createPost` stores `SOVEREIGN_CODEX` payload referencing IPFS docs.
+- **Governance**: Diff service compares codex hashes and raises alerts when unapproved policy drifts occur.
+- **Acceptance**: Entry must include at least one approver and jurisdiction; otherwise save disabled.
+
+### Wave Λ · Aurora Ethereum Control Plane (F151–F180)
+
+Aurora Wave layers thirty Ethereum-first controls that harden intent routing, treasury automation, and guardian accountability. Each capability ties into the shared feature-flag framework (`lib/featureFlags.ts`) and references the detailed specs captured inside `docs/onchain-feature-expansion.md#aurora-wave--ethereum-control-plane`.
+
+| ID | Feature | Owner | Status | Primary Surface |
+| --- | --- | --- | --- | --- |
+| F151 | Achievement EigenRestake Shield | ChainOps Guild | Spec Ready | `components/onchain/AchievementEigenRestakeShield.tsx` |
+| F152 | Achievement Intent Sequencer Guard | BuilderOps Squad | Discovery | `components/onchain/AchievementIntentSequencerGuard.tsx` |
+| F153 | Achievement MEV Amnesty Escrow | Treasury Collective | Spec Ready | `components/onchain/AchievementMevAmnestyEscrow.tsx` |
+| F154 | Achievement Slot Commitment Ledger | Protocol Insights | Spec Ready | `components/onchain/AchievementSlotCommitmentLedger.tsx` |
+| F155 | Achievement L2 Settlement Mirror | Interop Crew | Discovery | `components/onchain/AchievementL2SettlementMirror.tsx` |
+| F156 | Achievement Account-Abstraction Circuit | Automation Studio | In Research | `components/onchain/AchievementAccountAbstractionCircuit.tsx` |
+| F157 | Achievement Deterministic Pre-Confirm Vaults | Reliability Guild | Spec Ready | `components/onchain/AchievementDeterministicPreconfirmVaults.tsx` |
+| F158 | Achievement Intent Baton Relay | Collaboration Pod | Discovery | `components/onchain/AchievementIntentBatonRelay.tsx` |
+| F159 | Achievement Guardian Ragequit Pool | Guardian Council | Spec Ready | `components/onchain/AchievementGuardianRagequitPool.tsx` |
+| F160 | Achievement Operator Slippage Sentinel | Treasury Risk | Discovery | `components/onchain/AchievementOperatorSlippageSentinel.tsx` |
+| F161 | Achievement Cross-Rollup Witness Hub | Interop Crew | Spec Ready | `components/onchain/AchievementCrossRollupWitnessHub.tsx` |
+| F162 | Achievement Deterministic Gas Oracle | Data Plane | Spec Ready | `components/onchain/AchievementDeterministicGasOracle.tsx` |
+| F163 | Achievement Partial Withdrawal Router | Treasury Collective | Discovery | `components/onchain/AchievementPartialWithdrawalRouter.tsx` |
+| F164 | Achievement Sovereign RPC Quorum | Infra Guild | Spec Ready | `components/onchain/AchievementSovereignRpcQuorum.tsx` |
+| F165 | Achievement zkSync State Syncer | L2 Team | Discovery | `components/onchain/AchievementZkSyncStateSyncer.tsx` |
+| F166 | Achievement Intent Merkle Journal | Compliance Studio | Spec Ready | `components/onchain/AchievementIntentMerkleJournal.tsx` |
+| F167 | Achievement Deadline Arbitration Bridge | Governance Pod | Discovery | `components/onchain/AchievementDeadlineArbitrationBridge.tsx` |
+| F168 | Achievement Multi-Asset Proof Router | Treasury Collective | Spec Ready | `components/onchain/AchievementMultiAssetProofRouter.tsx` |
+| F169 | Achievement Verification Credit Ledger | Auditor Guild | Discovery | `components/onchain/AchievementVerificationCreditLedger.tsx` |
+| F170 | Achievement Guardian Vault Timelock | Guardian Council | Spec Ready | `components/onchain/AchievementGuardianVaultTimelock.tsx` |
+| F171 | Achievement Execution Capsule | Automation Studio | Discovery | `components/onchain/AchievementExecutionCapsule.tsx` |
+| F172 | Achievement Risk-Weighted Vault Matrix | Treasury Risk | Spec Ready | `components/onchain/AchievementRiskWeightedVaultMatrix.tsx` |
+| F173 | Achievement Asset Trace Matrix | Treasury Risk | Discovery | `components/onchain/AchievementAssetTraceMatrix.tsx` |
+| F174 | Achievement Compliance Anchor Chain | Compliance Studio | Spec Ready | `components/onchain/AchievementComplianceAnchorChain.tsx` |
+| F175 | Achievement Offchain Evidence Hashline | Evidence Pod | Spec Ready | `components/onchain/AchievementOffchainEvidenceHashline.tsx` |
+| F176 | Achievement Guardian Multisig Assembler | Guardian Council | Discovery | `components/onchain/AchievementGuardianMultisigAssembler.tsx` |
+| F177 | Achievement Intent Suspension Switch | Governance Pod | Discovery | `components/onchain/AchievementIntentSuspensionSwitch.tsx` |
+| F178 | Achievement Resilience Score Beacon | Reliability Guild | Spec Ready | `components/onchain/AchievementResilienceScoreBeacon.tsx` |
+| F179 | Achievement Payout Circuit Breaker | Treasury Collective | Discovery | `components/onchain/AchievementPayoutCircuitBreaker.tsx` |
+| F180 | Achievement Data Availability Vault | Data Plane | Spec Ready | `components/onchain/AchievementDataAvailabilityVault.tsx` |
+
+#### F151 · Achievement EigenRestake Shield
+- **Goal**: Pin EigenLayer restake attestations to each achievement, exposing slashable stakes when remediation windows are breached.
+- **Surfaces**: Contract event + dashboard guardian view, wired through `featureFlags.achievementEigenRestakeShield`.
+- **Acceptance**: Reown guardians can inspect restake exposure per achievement and simulate slash outcome before execution.
+
+#### F152 · Achievement Intent Sequencer Guard
+- **Goal**: Capture deterministic sequencing receipts for bundled intents, including slot, block, and builder checkpoint hashes.
+- **Surfaces**: Intent composer UI plus contract helper that stores `SEQ_GUARD` payloads for later verification.
+- **Acceptance**: Submission blocked unless slot and block anchors progress monotonically for the same builder batch.
+
+#### F153 · Achievement MEV Amnesty Escrow
+- **Goal**: Escrow MEV restitution funds tied to exploited achievements until affected parties countersign payout receipts.
+- **Surfaces**: Treasury dashboard module and new contract struct to track escrow policy metadata.
+- **Acceptance**: Funds cannot exit escrow without quorum signatures plus matching incident reference hash.
+
+#### F154 · Achievement Slot Commitment Ledger
+- **Goal**: Record slot-level commitments proving which validators attested a milestone window.
+- **Surfaces**: Ledger UI inside analytics plus `slotCommitmentLogged` event for downstream monitoring.
+- **Acceptance**: At least two validator signatures required before ledger entry finalizes.
+
+#### F155 · Achievement L2 Settlement Mirror
+- **Goal**: Mirror L2 settlement proofs (Optimism/Base/Arbitrum) with challenge window receipts to gate automation unlocks.
+- **Surfaces**: Interop screen, contract payload storing `L2_MIRROR` metadata, and BaseScan deep links.
+- **Acceptance**: Automation unlock is blocked if challenge window is still active.
+
+#### F156 · Achievement Account-Abstraction Circuit
+- **Goal**: Persist ERC-4337 session scopes, paymaster attestations, and policy hashes backing automation wallets.
+- **Surfaces**: Settings modal plus `AccountAbstractionCircuit` struct in contract storing scope/policy metadata.
+- **Acceptance**: Wallet scopes expire automatically when policy hash changes unless renewed onchain.
+
+#### F157 · Achievement Deterministic Pre-Confirm Vaults
+- **Goal**: Store pre-confirmation signatures, expiry timestamps, and fallback intents that guarantee deterministic completion.
+- **Surfaces**: Vault setup UI and `PreconfirmVault` struct with events for watchers.
+- **Acceptance**: Submission rejected if fallback intent omitted or expiry less than 2 slots.
+
+#### F158 · Achievement Intent Baton Relay
+- **Goal**: Relay intents between squads with notarized baton metadata while preserving accountability.
+- **Surfaces**: Dashboard baton timeline plus contract event `IntentBatonRelayed`.
+- **Acceptance**: Receiving squad must acknowledge baton within defined SLA or baton auto-reverts.
+
+#### F159 · Achievement Guardian Ragequit Pool
+- **Goal**: Bond guardian capital and enforce ragequit exits that require attested replacements before unlocking stakes.
+- **Surfaces**: Guardian admin page plus `RagequitPool` struct storing bonded amount and replacement address.
+- **Acceptance**: Ragequit attempts fail until new guardian is registered and acknowledged.
+
+#### F160 · Achievement Operator Slippage Sentinel
+- **Goal**: Track operator-executed swaps, comparing declared vs. actual slippage, and logging breaches.
+- **Surfaces**: Treasury risk dashboard + `SlippageSentinel` records inside contract.
+- **Acceptance**: Breach alerts fire when deviation exceeds policy threshold and link to remediation checklist.
+
+#### F161 · Achievement Cross-Rollup Witness Hub
+- **Goal**: Register witness quorum proofs across rollups and settlement layers for evidence continuity.
+- **Surfaces**: Witness registry UI plus `WitnessHubEntry` struct referencing rollup IDs.
+- **Acceptance**: Entries require at least three witness signatures with matching root hash.
+
+#### F162 · Achievement Deterministic Gas Oracle
+- **Goal**: Capture gas oracle readings, variance envelopes, and reviewer approvals per proof submission.
+- **Surfaces**: Gas inspector UI + contract mapping storing `gasBase`, `gasTip`, `variance`.
+- **Acceptance**: Variance > policy threshold blocks transaction broadcast until re-approved.
+
+#### F163 · Achievement Partial Withdrawal Router
+- **Goal**: Route partial treasury withdrawals across epochs with attested unlock checkpoints.
+- **Surfaces**: Treasury console + `PartialWithdrawal` struct referencing multi-epoch approvals.
+- **Acceptance**: Router enforces sequential unlocks; skipping an epoch triggers manual review.
+
+#### F164 · Achievement Sovereign RPC Quorum
+- **Goal**: Record quorum-approved RPC endpoints with heartbeat proofs for each achievement scope.
+- **Surfaces**: Infra settings + contract storage for endpoint URIs and heartbeat TTL.
+- **Acceptance**: Endpoints lacking heartbeat inside TTL are auto-deactivated and flagged.
+
+#### F165 · Achievement zkSync State Syncer
+- **Goal**: Anchor zkSync Lite/Era state root proofs aligned to achievement checkpoints.
+- **Surfaces**: Interop UI + `ZkSyncSync` struct storing root hash, batch ID, and proof CID.
+- **Acceptance**: Sync attempts rejected if batch ID regresses relative to previous entry.
+
+#### F166 · Achievement Intent Merkle Journal
+- **Goal**: Maintain rolling Merkle journals of intents plus evidence metadata for audit playback.
+- **Surfaces**: Audit console + contract-managed `MerkleJournal` root and chunk pointers.
+- **Acceptance**: Journal submissions must include branch proof verifying new root extension.
+
+#### F167 · Achievement Deadline Arbitration Bridge
+- **Goal**: Encode arbitration workflows with quorum verdict hashes whenever deadlines slip.
+- **Surfaces**: Governance panel + contract event `DeadlineArbitrated`.
+- **Acceptance**: Arbitration requires quorum >= configured threshold; else status remains pending.
+
+#### F168 · Achievement Multi-Asset Proof Router
+- **Goal**: Map ERC-20/721/1155 asset proofs plus settlement policy metadata per achievement.
+- **Surfaces**: Treasury UI + `AssetProofRoute` struct storing asset type, policy hash, release log.
+- **Acceptance**: Router rejects payload if asset type unsupported or policy hash missing.
+
+#### F169 · Achievement Verification Credit Ledger
+- **Goal**: Track verifier credits burned per achievement to meter scarce audit resources.
+- **Surfaces**: Auditor ledger UI + contract counter storing credits per verifier.
+- **Acceptance**: Credits cannot go negative; attempts to overdraw revert with reason.
+
+#### F170 · Achievement Guardian Vault Timelock
+- **Goal**: Enforce guardian-managed timelocks before sensitive contract mutations execute.
+- **Surfaces**: Vault admin + `GuardianTimelock` struct storing delay, guardians, and release hash.
+- **Acceptance**: Timelock release requires majority guardian signatures referencing the same hash.
+
+#### F171 · Achievement Execution Capsule
+- **Goal**: Package deterministic execution capsules with calldata hashes and replay guards.
+- **Surfaces**: Automation composer + contract mapping storing capsule metadata.
+- **Acceptance**: Capsule submissions must include replay guard ID; duplicates rejected.
+
+#### F172 · Achievement Risk-Weighted Vault Matrix
+- **Goal**: Score vault exposures per achievement along with mitigation artifacts and reviewer approvals.
+- **Surfaces**: Risk dashboard + struct storing exposure tiers, mitigation CID, reviewer address.
+- **Acceptance**: Matrix rows missing reviewer signature cannot transition to “approved.”
+
+#### F173 · Achievement Asset Trace Matrix
+- **Goal**: Trace asset provenance hops with hashed receipts to prove treasury intent congruence.
+- **Surfaces**: Trace explorer + `AssetTrace` entries storing hop list and receipt hash.
+- **Acceptance**: Hop chain must remain acyclic; cycles rejected at submission.
+
+#### F174 · Achievement Compliance Anchor Chain
+- **Goal**: Chain compliance attestations (KYC/KYB) plus revocation proofs and jurisdiction metadata.
+- **Surfaces**: Compliance console + `ComplianceAnchor` struct referencing revocation registry.
+- **Acceptance**: Jurisdiction tag required; missing tags block anchor creation.
+
+#### F175 · Achievement Offchain Evidence Hashline
+- **Goal**: Anchor offchain bundle hashes, verifier signatures, and expiry timers for sealed archives.
+- **Surfaces**: Evidence locker UI + contract storage for hash, verifier, expiry.
+- **Acceptance**: Expired entries must be renewed before data is referenced downstream.
+
+#### F176 · Achievement Guardian Multisig Assembler
+- **Goal**: Register guardian multisig compositions, rotations, and quorum drift monitors.
+- **Surfaces**: Guardian admin UI + `GuardianMultisig` struct storing members and quorum.
+- **Acceptance**: Rotations require majority acknowledgement before taking effect.
+
+#### F177 · Achievement Intent Suspension Switch
+- **Goal**: Allow reviewers to flip suspension flags that halt automation until clearance.
+- **Surfaces**: Governance console + contract boolean `intentSuspended`.
+- **Acceptance**: Suspension requires reason code; clearing switch logs reviewer hash.
+
+#### F178 · Achievement Resilience Score Beacon
+- **Goal**: Publish resilience score oracles from telemetry feeds with refresh cadence proofs.
+- **Surfaces**: Analytics UI + `ResilienceScore` struct storing score and proof CID.
+- **Acceptance**: Scores older than SLA auto-expire and trigger alert.
+
+#### F179 · Achievement Payout Circuit Breaker
+- **Goal**: Auto-pause payouts when KPI thresholds breach policy, awaiting quorum restart.
+- **Surfaces**: Treasury UI + `PayoutCircuitBreaker` struct referencing KPI signal and policy hash.
+- **Acceptance**: Restart requires quorum approval referencing the same incident hash.
+
+#### F180 · Achievement Data Availability Vault
+- **Goal**: Commit data-availability proofs (EIP-4844 blobs, Celestia shares) tying external data to achievements.
+- **Surfaces**: Data pipeline UI + `DataAvailabilityCommitment` struct storing blob references.
+- **Acceptance**: Submission fails without blob version hash and expiry metadata.
 
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.

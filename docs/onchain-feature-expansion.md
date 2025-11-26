@@ -2,6 +2,39 @@
 
 Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, and the new **Lighthouse Array (F121–F150)** tranche inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
+## Aurora Wave · Ethereum Control Plane
+
+1. **Achievement EigenRestake Shield** — Pin EigenLayer restake attestations per achievement and slash bonded stakes if guardians or operators violate remediation windows.
+2. **Achievement Intent Sequencer Guard** — Enforce deterministic sequencing receipts for bundled intents, storing slot, block, and builder checkpoint hashes for audit trails.
+3. **Achievement MEV Amnesty Escrow** — Hold pledged MEV refund liquidity in escrow until affected achievements receive signed restitution confirmations.
+4. **Achievement Slot Commitment Ledger** — Log slot-level commitment signatures so reviewers can trace which validators attested each milestone window.
+5. **Achievement L2 Settlement Mirror** — Mirror Optimism/Base/Arbitrum settlement proofs with challenge timers, ensuring downstream automation waits for safe-finality epochs.
+6. **Achievement Account-Abstraction Circuit** — Store ERC-4337 session scopes, policy hashes, and paymaster attestations for automation wallets servicing achievements.
+7. **Achievement Deterministic Pre-Confirm Vaults** — Persist pre-confirmation signatures, expiry timestamps, and fallback intents to guarantee deterministic delivery.
+8. **Achievement Intent Baton Relay** — Allow squads to relay intents across programs with notarized baton metadata, preserving execution guarantees.
+9. **Achievement Guardian Ragequit Pool** — Bond guardian capital with ragequit rules requiring attested replacements before exits settle.
+10. **Achievement Operator Slippage Sentinel** — Track operator-led swaps against declared slippage ceilings and emit breach attestations onchain.
+11. **Achievement Cross-Rollup Witness Hub** — Register witness quorum proofs spanning rollups and L1 settlement to prove evidence continuity.
+12. **Achievement Deterministic Gas Oracle** — Capture gas oracle readings, variance envelopes, and reviewer approvals per achievement proof.
+13. **Achievement Partial Withdrawal Router** — Route partial treasury withdrawals with multi-epoch attestation trails plus downstream unlock checkpoints.
+14. **Achievement Sovereign RPC Quorum** — Record quorum-approved RPC endpoints, heartbeat intervals, and failover receipts for each scope.
+15. **Achievement zkSync State Syncer** — Anchor zkSync Lite/Era state root sync proofs to guarantee checkpoint alignment with BuilderProof achievements.
+16. **Achievement Intent Merkle Journal** — Maintain rolling Merkle journals of intents and associated evidence for rapid audit playback.
+17. **Achievement Deadline Arbitration Bridge** — Encode arbitration workflows that trigger when deadlines slip, including quorum verdict hashes.
+18. **Achievement Multi-Asset Proof Router** — Map ERC-20/721/1155 asset proofs with settlement policy metadata and reviewable release logs.
+19. **Achievement Verification Credit Ledger** — Track verifier credits burned per achievement to meter scarce audit resources onchain.
+20. **Achievement Guardian Vault Timelock** — Enforce guardian-managed timelocks before sensitive contract paths mutate state.
+21. **Achievement Execution Capsule** — Package deterministic execution capsules with calldata hashes, replay guards, and evidence CIDs.
+22. **Achievement Risk-Weighted Vault Matrix** — Score vault exposures per achievement, linking mitigation actions plus reviewer approvals.
+23. **Achievement Asset Trace Matrix** — Trace asset provenance hops with hashed receipts so treasury teams can prove intent congruence.
+24. **Achievement Compliance Anchor Chain** — Chain compliance attestations (KYC/KYB) with revocation proofs and jurisdiction metadata.
+25. **Achievement Offchain Evidence Hashline** — Anchor offchain bundle hashes, verifier signatures, and expiry timers for sealed archives.
+26. **Achievement Guardian Multisig Assembler** — Register guardian multisig compositions, rotations, and quorum drift monitors per achievement.
+27. **Achievement Intent Suspension Switch** — Allow reviewers to flip suspension flags that halt downstream automation until re-enabled.
+28. **Achievement Resilience Score Beacon** — Publish resilience score oracles sourced from telemetry feeds with refresh proofs.
+29. **Achievement Payout Circuit Breaker** — Auto-pause payouts crossing policy thresholds until guardian quorum restarts the flow.
+30. **Achievement Data Availability Vault** — Commit data-availability proofs (EIP-4844 blobs, Celestia shares) tying external data to achievements.
+
 ## Guardian Wave · Controls Backlog
 
 1. **Achievement Hotfix Stream** — Rapidly notarize emergency fixes with reviewer acks and automatic rollback hooks.
