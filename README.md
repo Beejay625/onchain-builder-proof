@@ -106,6 +106,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🧩 **Modular Rollup Hooks**: Register hook manifests describing how BuilderProof plugs into rollup automation rails.
 - 📱 **Mobile Reown Session Anchors**: Capture device integrity metrics for mobile Reown sessions with geo attestations.
 
+### Wave Θ · Onchain Feature Expansion
+- 🔧 **Achievement Hotfix Stream**: Stamp emergency fix metadata onchain with deployment hashes and reviewer confirmations.
+- ✅ **Achievement Safelist Registry**: Maintain curated address, contract, domain, or IP allowlists that gate sensitive actions.
+- 💥 **Achievement Stress Test**: Log deterministic load-test scenarios, peak metrics, and mitigation notes for every release.
+- 🌲 **Achievement Adaptive Escrow Trees**: Publish programmable Merkle trees that rebalance milestone escrows as scope evolves.
+- 🕸️ **Achievement Attestation Relay Mesh**: Relay third-party attestations with signature proofs to enrich achievement evidence.
+- 🛰️ **Achievement Sovereign Workspace Clones**: Register isolated workspace clones plus sync cadences and diff hashes.
+- 🧭 **Achievement Multi-Tenant KPI Map**: Layer builder, squad, and program KPIs into a single verifiable lattice.
+- 🚧 **Achievement Parameter Guardrails**: Enforce reviewer-defined min/max envelopes before any transaction broadcasts.
+- 🧾 **Achievement Evidence Diff Visualizer**: Persist hashed diffs between evidence bundles for tamper-evident reviews.
+- ♻️ **Achievement Integrity Backfill Engine**: Backfill historical proofs with synthetic attestations while preserving lineage.
+- 🌐 **Achievement Cross-Domain Intent Router**: Route intents across chains and protocols with explicit settlement proofs.
+- 🛡️ **Achievement Recovery Guardian Council**: Assign rotating guardian sets that can pause, thaw, or dispute achievements.
+- 🧪 **Achievement Deterministic Batch Reactor**: Compose deterministic batch jobs whose execution traces are notarized.
+- 🧮 **Achievement ZK KPI Oracle**: Publish KPI aggregates via zero-knowledge attestations to protect sensitive data.
+- 💧 **Achievement Liquid Backlog Underwriter**: Underwrite high-impact backlog items with bonded liquidity and slashing hooks.
+- 📈 **Achievement Reward Cliff Simulator**: Simulate vesting cliffs and store the resulting payout curves for audits.
+- ❤️ **Achievement Governance Heartbeat Monitor**: Emit signed heartbeats proving governance cadences stay within policy.
+- 📦 **Achievement Streak Anchor Vaults**: Lock streak proofs with weighted anchors that degrade if reporting stops.
+- 🚪 **Achievement Censorship Escape Hatch**: Document escape routes so proofs keep flowing even if primary RPCs censor.
+- ⚖️ **Achievement Impact Weight Notary**: Keep notarized impact weight calculations plus reviewer overrides.
+- 🐝 **Achievement Delegated Witness Swarms**: Register distributed witnesses tasked with co-signing sensitive proofs.
+- 💹 **Achievement Treasury Drift Sentinel**: Compare budgeted vs. actual outflows and alert when drift crosses thresholds.
+- 🎁 **Achievement Programmatic Bonus Streams**: Define programmable bonus streams that settle when KPI windows close.
+- 📝 **Achievement Ethics Disclosure Ledger**: Store linked disclosures for data usage, AI claims, or contributor rights.
+- 🌿 **Achievement Autopruned Evidence Trees**: Auto-prune redundant evidence while preserving proofs-of-deletion onchain.
+- 🔥 **Achievement Failure Mode Sandbox**: Sandbox catastrophic scenarios and memorialize blast radius plus recovery time.
+- 📉 **Achievement SLA Escrow Monitor**: Escrow service-level guarantees and slash positions when latency/uptime slips.
+- ⏳ **Achievement Re-entry Timelock Guard**: Enforce re-entry cooldowns for renegotiated milestones or disputes.
+- 📬 **Achievement Omnichain Inbox Router**: Normalize inbound proofs from any chain with replay-protected metadata.
+- 🪙 **Achievement Adaptive Reputation Bonds**: Create adaptive bonding curves where reputation backing adjusts in real time.
+
 ### Mission Control Expansion Pack (30 Fresh Onchain Plays)
 - 🧠 **Intent Graph Auditor**: Continuously score multi-hop execution graphs, flagging brittle paths before they hit Talenty.
 - 🔁 **Recursive Intent Replay**: Auto-resubmit partially executed intents with adaptive gas and calldata tweaks.

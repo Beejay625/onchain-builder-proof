@@ -1,6 +1,6 @@
 # Onchain Feature Expansion · Wave Θ
 
-Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`.
+Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is now mirrored in **Wave Θ (F31–F60)** inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
 ## Guardian Wave · Controls Backlog
 
