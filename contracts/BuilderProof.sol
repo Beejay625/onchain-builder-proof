@@ -17,6 +17,11 @@ contract SocialMediaContract {
     uint256 public continuityAtlasCount;
     uint256 public intentQuarantineCount;
     uint256 public quietHourWindowCount;
+    uint256 public heliosSignalLatticeCount;
+    uint256 public blastRadiusProfilerCount;
+    uint256 public continuityDeltaVaultCount;
+    uint256 public sovereignFailoverMeshCount;
+    uint256 public continuityVectorCartographerCount;
     
     struct Post {
         uint256 id;
@@ -107,6 +112,53 @@ contract SocialMediaContract {
         address approvedBy;
         bool active;
     }
+
+    struct HeliosSignalLattice {
+        uint256 id;
+        uint256 achievementId;
+        string signalLayer;
+        string watchMetric;
+        uint256 severity;
+        bytes32 indicatorHash;
+        uint256 recordedAt;
+    }
+
+    struct BlastRadiusProfiler {
+        uint256 id;
+        uint256 achievementId;
+        uint256 blastScore;
+        string[] affectedDependencies;
+        uint256 projectedLoss;
+        uint256 recordedAt;
+    }
+
+    struct ContinuityDeltaVault {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 expectedHash;
+        bytes32 observedHash;
+        string varianceReason;
+        bytes32 reviewerSignature;
+        uint256 recordedAt;
+    }
+
+    struct SovereignFailoverMesh {
+        uint256 id;
+        uint256 achievementId;
+        string regionId;
+        bytes32 rehearsalHash;
+        address[] quorumSigners;
+        uint256 recordedAt;
+    }
+
+    struct ContinuityVectorCartographer {
+        uint256 id;
+        uint256 achievementId;
+        string[] dependencyIds;
+        uint256 postureScore;
+        bytes32 reviewerSignature;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -120,6 +172,11 @@ contract SocialMediaContract {
     mapping(uint256 => ContinuityAtlasEntry) public continuityAtlasEntries;
     mapping(uint256 => IntentQuarantine) public intentQuarantines;
     mapping(uint256 => QuietHourWindow) public quietHourWindows;
+    mapping(uint256 => HeliosSignalLattice) public heliosSignalLattices;
+    mapping(uint256 => BlastRadiusProfiler) public blastRadiusProfilers;
+    mapping(uint256 => ContinuityDeltaVault) public continuityDeltaVaults;
+    mapping(uint256 => SovereignFailoverMesh) public sovereignFailoverMeshes;
+    mapping(uint256 => ContinuityVectorCartographer) public continuityVectorCartographers;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -135,6 +192,11 @@ contract SocialMediaContract {
     event IntentQuarantineCleared(uint256 indexed quarantineId, address indexed resolver);
     event QuietHourScheduled(uint256 indexed windowId, uint256 indexed achievementId, uint256 startTime, uint256 endTime, string scope);
     event QuietHourCleared(uint256 indexed windowId, address indexed resolver);
+    event HeliosSignalLatticeLogged(uint256 indexed latticeId, uint256 indexed achievementId, string signalLayer, uint256 severity, bytes32 indicatorHash);
+    event BlastRadiusProfiled(uint256 indexed profilerId, uint256 indexed achievementId, uint256 blastScore, uint256 projectedLoss);
+    event ContinuityDeltaVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, bytes32 expectedHash, bytes32 observedHash, string varianceReason);
+    event SovereignFailoverMeshLogged(uint256 indexed meshId, uint256 indexed achievementId, string regionId, bytes32 rehearsalHash);
+    event ContinuityVectorCartographerLogged(uint256 indexed cartographerId, uint256 indexed achievementId, uint256 postureScore, bytes32 reviewerSignature);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -152,6 +214,11 @@ contract SocialMediaContract {
         continuityAtlasCount = 0;
         intentQuarantineCount = 0;
         quietHourWindowCount = 0;
+        heliosSignalLatticeCount = 0;
+        blastRadiusProfilerCount = 0;
+        continuityDeltaVaultCount = 0;
+        sovereignFailoverMeshCount = 0;
+        continuityVectorCartographerCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
@@ -425,6 +492,115 @@ contract SocialMediaContract {
         require(windowEntry.active, "Window already cleared");
         windowEntry.active = false;
         emit QuietHourCleared(windowId, msg.sender);
+    }
+
+    function logHeliosSignalLattice(
+        uint256 achievementId,
+        string memory signalLayer,
+        string memory watchMetric,
+        uint256 severity,
+        bytes32 indicatorHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(severity > 0, "Severity required");
+        heliosSignalLatticeCount++;
+        heliosSignalLattices[heliosSignalLatticeCount] = HeliosSignalLattice({
+            id: heliosSignalLatticeCount,
+            achievementId: achievementId,
+            signalLayer: signalLayer,
+            watchMetric: watchMetric,
+            severity: severity,
+            indicatorHash: indicatorHash,
+            recordedAt: block.timestamp
+        });
+        emit HeliosSignalLatticeLogged(heliosSignalLatticeCount, achievementId, signalLayer, severity, indicatorHash);
+        return heliosSignalLatticeCount;
+    }
+
+    function logBlastRadiusProfiler(
+        uint256 achievementId,
+        uint256 blastScore,
+        string[] memory affectedDependencies,
+        uint256 projectedLoss
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(affectedDependencies.length > 0, "Dependencies required");
+        blastRadiusProfilerCount++;
+        blastRadiusProfilers[blastRadiusProfilerCount] = BlastRadiusProfiler({
+            id: blastRadiusProfilerCount,
+            achievementId: achievementId,
+            blastScore: blastScore,
+            affectedDependencies: affectedDependencies,
+            projectedLoss: projectedLoss,
+            recordedAt: block.timestamp
+        });
+        emit BlastRadiusProfiled(blastRadiusProfilerCount, achievementId, blastScore, projectedLoss);
+        return blastRadiusProfilerCount;
+    }
+
+    function logContinuityDeltaVault(
+        uint256 achievementId,
+        bytes32 expectedHash,
+        bytes32 observedHash,
+        string memory varianceReason,
+        bytes32 reviewerSignature
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(expectedHash != bytes32(0) && observedHash != bytes32(0), "Hashes required");
+        continuityDeltaVaultCount++;
+        continuityDeltaVaults[continuityDeltaVaultCount] = ContinuityDeltaVault({
+            id: continuityDeltaVaultCount,
+            achievementId: achievementId,
+            expectedHash: expectedHash,
+            observedHash: observedHash,
+            varianceReason: varianceReason,
+            reviewerSignature: reviewerSignature,
+            recordedAt: block.timestamp
+        });
+        emit ContinuityDeltaVaultLogged(continuityDeltaVaultCount, achievementId, expectedHash, observedHash, varianceReason);
+        return continuityDeltaVaultCount;
+    }
+
+    function logSovereignFailoverMesh(
+        uint256 achievementId,
+        string memory regionId,
+        bytes32 rehearsalHash,
+        address[] memory quorumSigners
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(quorumSigners.length >= 2, "Quorum required");
+        sovereignFailoverMeshCount++;
+        sovereignFailoverMeshes[sovereignFailoverMeshCount] = SovereignFailoverMesh({
+            id: sovereignFailoverMeshCount,
+            achievementId: achievementId,
+            regionId: regionId,
+            rehearsalHash: rehearsalHash,
+            quorumSigners: quorumSigners,
+            recordedAt: block.timestamp
+        });
+        emit SovereignFailoverMeshLogged(sovereignFailoverMeshCount, achievementId, regionId, rehearsalHash);
+        return sovereignFailoverMeshCount;
+    }
+
+    function logContinuityVectorCartographer(
+        uint256 achievementId,
+        string[] memory dependencyIds,
+        uint256 postureScore,
+        bytes32 reviewerSignature
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(dependencyIds.length > 0, "Dependencies required");
+        continuityVectorCartographerCount++;
+        continuityVectorCartographers[continuityVectorCartographerCount] = ContinuityVectorCartographer({
+            id: continuityVectorCartographerCount,
+            achievementId: achievementId,
+            dependencyIds: dependencyIds,
+            postureScore: postureScore,
+            reviewerSignature: reviewerSignature,
+            recordedAt: block.timestamp
+        });
+        emit ContinuityVectorCartographerLogged(continuityVectorCartographerCount, achievementId, postureScore, reviewerSignature);
+        return continuityVectorCartographerCount;
     }
 }
 
