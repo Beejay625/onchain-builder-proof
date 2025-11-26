@@ -27,7 +27,8 @@ Onchain Builder Proof lets builders mint weekly milestones through Talenty Proto
 
 Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the problem statement, scoped features, required contract changes, and rollout notes. Skim here for direction, then dive into `docs/onchain-feature-expansion.md` for acceptance criteria, JSON schemas, and transaction templates.
 
-- **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
+- **Wave Ω · Aegis Matrix (F91–F120)** maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
+- **Wave Σ · Frontier Resilience Grid (F121–F150)** extends that spine with continuity telemetry, cross-chain lifelines, and quantum-ready failsafes documented in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-σ--frontier-resilience-grid-f121f150).
 
 ## Reference Docs
 
