@@ -542,37 +542,37 @@ export interface FeatureFlags {
   achievementImpactDividendRouter: boolean
   achievementIntentRecoveryForge: boolean
   achievementBuilderAvailabilityIndex: boolean
-  // Helios Mesh wave feature flags
-  achievementHeliosBeaconOrchestrator: boolean
-  achievementIncidentSwarmSandbox: boolean
-  achievementBlastproofCommandQueue: boolean
-  achievementRunbookDeltaCodex: boolean
-  achievementResponderBondEscrow: boolean
-  achievementAutopsyContinuityLoom: boolean
-  achievementTelemetryParityLatch: boolean
-  achievementCrisisFloatPoolRouter: boolean
-  achievementGuardianReachRouter: boolean
-  achievementLatencyFuseConsole: boolean
-  achievementRebuildDryRunCapsule: boolean
-  achievementChainAirgapSwitch: boolean
-  achievementEvidenceCourierSpoke: boolean
-  achievementPatchRelayLocker: boolean
-  achievementCredentialBurnVault: boolean
-  achievementAlertIntegrityGate: boolean
-  achievementResponseTempoLedger: boolean
-  achievementOperatorReliefWheel: boolean
-  achievementVictimReliefCoordinator: boolean
-  achievementRegionHopBlueprint: boolean
-  achievementConfigFreezeHatch: boolean
-  achievementForensicAnchorBeacon: boolean
-  achievementIncidentInsightWeave: boolean
-  achievementProofRefugeBridge: boolean
-  achievementContinuityDriftScope: boolean
-  achievementRecoveryCompassGauge: boolean
-  achievementIncidentDebtLedger: boolean
-  achievementQuietPhaseBroadcaster: boolean
-  achievementAutothrottleGuardian: boolean
-  achievementGuardianCareConsole: boolean
+  // Helios Mesh wave feature flags (F121-F150)
+  achievementHeliosSignalLattice: boolean
+  achievementIncidentEscalationChoreographer: boolean
+  achievementBlastRadiusProfiler: boolean
+  achievementRunbookCircuitSwitch: boolean
+  achievementTriageSwarmCoordinator: boolean
+  achievementPostIncidentAutopsyVault: boolean
+  achievementTelemetryDampeningShield: boolean
+  achievementCrisisBudgetRouter: boolean
+  achievementGuardianPagingMatrix: boolean
+  achievementLatencySurgeBuffer: boolean
+  achievementSafeRebuildCapsule: boolean
+  achievementChainIsolationSwitch: boolean
+  achievementIncidentEvidenceRelay: boolean
+  achievementHotPatchCourier: boolean
+  achievementHazmatCredentialLocker: boolean
+  achievementAlertAuthenticityFilter: boolean
+  achievementResponseWindowLedger: boolean
+  achievementOperatorReliefRotation: boolean
+  achievementVictimCompensationPool: boolean
+  achievementMultiRegionFailoverDeck: boolean
+  achievementEmergencyConfigFreezer: boolean
+  achievementForensicSnapshotBeacon: boolean
+  achievementIncidentLearningLoop: boolean
+  achievementProofShelterBridge: boolean
+  achievementContinuityDriftRecorder: boolean
+  achievementRecoveryKpiGauge: boolean
+  achievementIncidentDebtTracker: boolean
+  achievementQuietModeBroadcast: boolean
+  achievementAutoThrottleSentinel: boolean
+  achievementGuardianAftercarePortal: boolean
   // Aurora Wave feature flags
   achievementEigenRestakeShield: boolean
   achievementIntentSequencerGuard: boolean
@@ -604,6 +604,99 @@ export interface FeatureFlags {
   achievementResilienceScoreBeacon: boolean
   achievementPayoutCircuitBreaker: boolean
   achievementDataAvailabilityVault: boolean
+  // Helios Forge wave feature flags (F181-F210)
+  achievementContinuityDeltaVault: boolean
+  achievementCrossDomainCircuitAuditor: boolean
+  achievementGuardianThermalFailoverMap: boolean
+  achievementLiquidationRecoveryEscrow: boolean
+  achievementIntentFloodgateGovernor: boolean
+  achievementSovereignEdgeWitnessGrid: boolean
+  achievementKpiAntiSybilRouter: boolean
+  achievementDeterministicVaultRollingHash: boolean
+  achievementCustodyDriftArbitrationDesk: boolean
+  achievementTreasuryScenarioBondLadder: boolean
+  achievementOnchainHazardMaturityGraph: boolean
+  achievementVerdictProvenanceCapsule: boolean
+  achievementWitnessIncentiveOscillator: boolean
+  achievementAutonomousAttestorSandbox: boolean
+  achievementRetroFundingLockbox: boolean
+  achievementImpactEquityPoolRouter: boolean
+  achievementCircuitDivergenceAlarm: boolean
+  achievementPostureBasedGasSponsor: boolean
+  achievementTemporalSequencerArchive: boolean
+  achievementGuardianProofOfWorkloadFeed: boolean
+  achievementSovereignEvidenceSwapline: boolean
+  achievementRollupGracePeriodMonitor: boolean
+  achievementIntentMemoryFountain: boolean
+  achievementComplianceReceiptRelay: boolean
+  achievementDeviceHandoffLedger: boolean
+  achievementRestitutionAuctionVault: boolean
+  achievementResilienceOptionWriter: boolean
+  achievementFailSafeMacroPlanner: boolean
+  achievementAutomatedReliefClearinghouse: boolean
+  achievementImpactKpiHedgeDesk: boolean
+  // Nebula Forge wave feature flags (F211-F240)
+  achievementSovereignFailoverMesh: boolean
+  achievementAdaptiveIntentFirewall: boolean
+  achievementModularRecoveryCapsules: boolean
+  achievementGuardianPlaybookComposer: boolean
+  achievementContinuumRiskLattice: boolean
+  achievementProofDriftEqualizer: boolean
+  achievementTreasuryAutoHedgeVaults: boolean
+  achievementZeroLatencyWitnessGrid: boolean
+  achievementNeuralIncidentForecaster: boolean
+  achievementContinuityFuturesClearinghouse: boolean
+  achievementMultiHopEvidenceCourier: boolean
+  achievementCrisisTimeboxDirector: boolean
+  achievementForkHorizonTracker: boolean
+  achievementKineticRewardGovernor: boolean
+  achievementAutonomousComplianceArbiter: boolean
+  achievementIntentChargebackLedger: boolean
+  achievementResilientSequencerProxy: boolean
+  achievementGuardianAccountabilityGraph: boolean
+  achievementTelemetryCustodyRouter: boolean
+  achievementImpactContingencyBonds: boolean
+  achievementSovereignPatchRelay: boolean
+  achievementMultilateralWitnessEscrow: boolean
+  achievementVaultHealthSentinel: boolean
+  achievementPolicyDriftComparator: boolean
+  achievementProofAnchoringSynthesizer: boolean
+  achievementStaggeredImpactOrchestrator: boolean
+  achievementDataRetentionCapsule: boolean
+  achievementAdaptiveAuditMesh: boolean
+  achievementEmergencySignalBeacon: boolean
+  achievementOmniCustodyAccessGuard: boolean
+  // Obsidian Nexus wave feature flags (F241-F270)
+  achievementContinuityVectorCartographer: boolean
+  achievementAdaptiveThreatPlaybookHub: boolean
+  achievementQuantumGuardrailRelay: boolean
+  achievementIntentProvenanceArboretum: boolean
+  achievementDriftAwareTreasuryGovernor: boolean
+  achievementCrossDomainSealingChamber: boolean
+  achievementAnomalyEscrowFountain: boolean
+  achievementOmniSwarmWitnessDirector: boolean
+  achievementTemporalHeartbeatLedger: boolean
+  achievementDeterministicRunbookFabric: boolean
+  achievementDynamicCustodyRingfence: boolean
+  achievementSovereignCacheAuditor: boolean
+  achievementProofIntegrityWarpDrive: boolean
+  achievementGuardianReliefBondExchange: boolean
+  achievementSituationalAwarenessBeacon: boolean
+  achievementZeroLossImpactVault: boolean
+  achievementAdaptivePolicyTranslator: boolean
+  achievementIntentOutcomeCourt: boolean
+  achievementTelemetryHushCircuit: boolean
+  achievementComplianceCircuitSwitch: boolean
+  achievementResilienceTwinSimulator: boolean
+  achievementRecoveryQuorumSynthesizer: boolean
+  achievementCounterpartyIntegrityMirror: boolean
+  achievementEdgeOperatorCredentialForge: boolean
+  achievementContinuityMomentumIndex: boolean
+  achievementEvidenceContinuityCapsule: boolean
+  achievementGuardianSynchronyGrid: boolean
+  achievementAutonomousRewardBackstop: boolean
+  achievementVaultIntegrityHarbinger: boolean
+  achievementOmniLifecycleAccessSentinel: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
