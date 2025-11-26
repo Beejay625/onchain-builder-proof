@@ -28,6 +28,7 @@ Onchain Builder Proof lets builders mint weekly milestones through Talenty Proto
 Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the problem statement, scoped features, required contract changes, and rollout notes. Skim here for direction, then dive into `docs/onchain-feature-expansion.md` for acceptance criteria, JSON schemas, and transaction templates.
 
 - **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
+- **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 
 ## Reference Docs
 
