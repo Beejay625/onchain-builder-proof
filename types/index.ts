@@ -542,6 +542,37 @@ export interface FeatureFlags {
   achievementImpactDividendRouter: boolean
   achievementIntentRecoveryForge: boolean
   achievementBuilderAvailabilityIndex: boolean
+  // Helios Mesh wave feature flags
+  achievementHeliosSignalLattice: boolean
+  achievementIncidentEscalationChoreographer: boolean
+  achievementBlastRadiusProfiler: boolean
+  achievementRunbookCircuitSwitch: boolean
+  achievementTriageSwarmCoordinator: boolean
+  achievementPostIncidentAutopsyVault: boolean
+  achievementTelemetryDampeningShield: boolean
+  achievementCrisisBudgetRouter: boolean
+  achievementGuardianPagingMatrix: boolean
+  achievementLatencySurgeBuffer: boolean
+  achievementSafeRebuildCapsule: boolean
+  achievementChainIsolationSwitch: boolean
+  achievementIncidentEvidenceRelay: boolean
+  achievementHotPatchCourier: boolean
+  achievementHazmatCredentialLocker: boolean
+  achievementAlertAuthenticityFilter: boolean
+  achievementResponseWindowLedger: boolean
+  achievementOperatorReliefRotation: boolean
+  achievementVictimCompensationPool: boolean
+  achievementMultiRegionFailoverDeck: boolean
+  achievementEmergencyConfigFreezer: boolean
+  achievementForensicSnapshotBeacon: boolean
+  achievementIncidentLearningLoop: boolean
+  achievementProofShelterBridge: boolean
+  achievementContinuityDriftRecorder: boolean
+  achievementRecoveryKpiGauge: boolean
+  achievementIncidentDebtTracker: boolean
+  achievementQuietModeBroadcast: boolean
+  achievementAutoThrottleSentinel: boolean
+  achievementGuardianAftercarePortal: boolean
   // Aurora Wave feature flags
   achievementEigenRestakeShield: boolean
   achievementIntentSequencerGuard: boolean
