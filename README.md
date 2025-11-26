@@ -29,6 +29,7 @@ Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the prob
 
 - **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
+- **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
 
 ## Reference Docs
 
