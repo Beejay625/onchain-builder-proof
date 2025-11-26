@@ -185,36 +185,36 @@ Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/o
 Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#citadel-flux--sovereign-continuity-modules).
 
 ### Aegis Matrix · 30 Resilience Catalysts
-- ⚖️ **Achievement Eventual Consistency Ledger**: Log reconciliation windows plus attested diffs whenever ledgers converge.
-- 🛡️ **Achievement Intent Insurance Syndicate**: Collectively underwrite high-risk intents with slashable risk pools and payout proofs.
-- 🤝 **Achievement Guardian Collective Bargain**: Capture guardian responsibility agreements, compensation rails, and renewal votes.
-- 🧑‍🔧 **Achievement Contractor Proof Hub**: Track external contractor obligations, service proofs, and dispute hooks.
-- 🧫 **Achievement Telemetry Vaccination Labs**: Run telemetry sanity suites before data enters production achievement metrics.
-- 🔀 **Achievement Adaptive Failover Router**: Shift execution routes across chains or RPCs based on live health attestations.
-- 📆 **Achievement Rolling Service Pledges**: Publish rolling uptime/latency pledges with enforcement windows and penalty states.
-- 🪙 **Achievement Observability Mint**: Mint attestations whenever observability coverage meets or exceeds policy targets.
-- 🛟 **Achievement Autonomous Lifeline Agents**: Register autonomous agent networks that can assume emergency workflows onchain.
-- 🌀 **Achievement Integrity Snapshot Carousel**: Rotate zero-downtime snapshot sets with hashed manifests and verifier approvals.
-- 💳 **Achievement Service Credit Escrow**: Hold service credits that auto-release to builders when KPIs are missed.
-- 🚧 **Achievement Congestion Triage Deck**: Prioritize workloads during congestion with signed instructions and reviewer proofs.
-- 📉 **Achievement Multi-Risk Scoreboard**: Aggregate risk categories and weights per achievement with change history.
-- 💵 **Achievement Parameterized Relief Bonds**: Issue relief bonds that unlock when policy-defined risk metrics breach.
-- 🌲 **Achievement Attested Troubleshooting Trees**: Publish troubleshooting trees where every branch is hashed and reviewer-signed.
-- 🧯 **Achievement Disaster Rehearsal Ledger**: Store rehearsal outcomes, participants, and pass/fail metrics for each scenario.
-- 🕸️ **Achievement Axial Response Mesh**: Link response clusters across teams/DAOs with acknowledgement receipts.
-- 🕶️ **Achievement Evidence Redaction Vault**: Manage redacted evidence versions with hash pointers back to full archives.
-- 🛰️ **Achievement Sovereign Fallback Federation**: Register fallback sovereign nodes plus readiness attestations per geography.
-- 🗳️ **Achievement Multi-Governance Harmonizer**: Align overlapping governance votes with bridging proofs and quorum parity.
-- 🪬 **Achievement KPI Shock Absorber**: Buffer KPI volatility via smoothing formulas that are notarized onchain.
-- 🏦 **Achievement Treasury Cushion Router**: Route treasury cushions to stressed achievements with transparent triggers.
-- 🔁 **Achievement Bidirectional Impact Relay**: Mirror impact telemetry upstream and downstream with signed receipt trails.
-- 🌙 **Achievement Global Quiet Hours Timeline**: Declare quiet hours that automatically pause risky operations and notify builders.
-- 💞 **Achievement Builder Empathy Graph**: Track builder wellbeing metrics tied to shipping cadence and retro payouts.
-- 🆘 **Achievement Disaster Mutual Aid Pool**: Coordinate mutual aid commitments between DAOs with escrowed resources.
-- 📋 **Achievement Compliance Scenario Studio**: Scenario-test policy changes and mint the resulting compliance verdicts.
-- 💹 **Achievement Failover Bond Marketplace**: Match failover providers with achievements needing standby coverage plus SLA proofs.
-- ✍️ **Achievement Progressive Mint Covenant**: Enforce covenant checkpoints before high-risk achievements can mint.
-- 📚 **Achievement Sovereign Policy Codex**: Version control sovereign policy packs with approvals, revocations, and audit trails.
+- 🗺️ **Achievement Continuity Atlas**: Log reconciler hashes, drift envelopes, and reviewer notes for every ledger pair.
+- 🧼 **Achievement Intent Quarantine Fabric**: Sandbox risky intents with notarized mitigation plans and unlock quorums.
+- 💰 **Achievement Guardian Wage Escrow**: Keep guardian payroll bonded until attested duties finish.
+- 🧠 **Achievement Contractor Integrity Graph**: Track vendor deliverables, proof hashes, and escalation owners.
+- 🧪 **Achievement Telemetry Inoculation Lab**: Run dataset inoculation recipes before telemetry hits production.
+- 🧵 **Achievement Sovereign Failover Loom**: Weave deterministic reroute lanes with live health probes.
+- 📜 **Achievement Living SLA Covenant**: Publish evolving SLA pledges plus enforcement windows and penalty classes.
+- 🛰️ **Achievement Observability Signal Mint**: Mint coverage attestations proving logs/metrics/traces met policy.
+- 🛗 **Achievement Autonomous Lifeline Brigade**: Register emergency automation agents with fingerprints and expiries.
+- 🔁 **Achievement Snapshot Integrity Gyre**: Rotate multi-plane snapshot manifests and checksum proofs for recovery drills.
+- 💸 **Achievement Service Rebate Router**: Route make-good credits whenever SLA trigger signals stack up.
+- 🚨 **Achievement Congestion Escalation Board**: Publish severity-ranked workload boards for orchestration.
+- 📈 **Achievement Multi-Dimensional Risk Radar**: Aggregate weighted risk axes with reviewer overrides.
+- 💵 **Achievement Relief Bond Syndicator**: Parameterize liquidity pools that unlock when resilience metrics breach.
+- 🌲 **Achievement Troubleshooting Witness Tree**: Store reviewer-signed troubleshooting trees with deterministic paths.
+- ⚡ **Achievement Blackstart Drill Ledger**: Notarize blackstart drill cadences, teams, and outcomes.
+- 🕸️ **Achievement Cross-Axis Response Mesh**: Map response clusters, acknowledgement proofs, and escalation paths.
+- 🛡️ **Achievement Evidence Redaction Sanctuary**: Seal redacted artifacts with approvals and tamper-evident hashes.
+- 🛰️ **Achievement Provincial Fallback Federation**: Register regional failover federations with readiness attestations.
+- 🗳️ **Achievement Governance Resonance Harmonizer**: Align overlapping governance feeds, quorum rules, and arbitration logic.
+- 📉 **Achievement KPI Dampener Oracle**: Publish smoothed KPI curves next to raw metrics for context.
+- 🏦 **Achievement Cushion Liquidity Router**: Route treasury cushions to stressed achievements with transparent triggers.
+- 🔄 **Achievement Impact Relay Twin**: Mirror upstream/downstream telemetry feeds with checksum proofs.
+- 🌙 **Achievement Quiet Hour Sentinel**: Enforce quiet-hour windows with override approvals and impacted scopes.
+- 💞 **Achievement Empathy Pulse Graph**: Aggregate anonymized wellbeing signals so leads can spot burnout early.
+- 🤝 **Achievement Mutual Aid Clearinghouse**: Coordinate DAO resource pledges, unlock triggers, and repayment covenants.
+- 📋 **Achievement Compliance Scenario Forge**: Run regulator-facing scenario verdicts with signed reviewers.
+- 💳 **Achievement Failover Credit Exchange**: Match failover providers with escrowed credits and SLA metadata.
+- ✍️ **Achievement Progressive Mint Throttle**: Gate high-risk mints behind checkpoint sequences and throughput curves.
+- 📚 **Achievement Sovereign Policy Manuscript**: Version control sovereign policy packs with approvals and revocations.
 
 Deep dives for this matrix live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#aegis-matrix--resilience-catalysts).
 
