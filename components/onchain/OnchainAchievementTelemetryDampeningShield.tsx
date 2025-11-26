@@ -11,36 +11,36 @@ export default function OnchainAchievementTelemetryDampeningShield(props: Helios
       accent="indigo"
       ctaLabel="Deploy Dampening"
       payloadPrefix="DAMPENING_SHIELD"
-      fields=[
-      {
-              key: 'band',
-              label: 'Dampening Band',
-              type: 'number',
-              placeholder: '15',
-              required: true,
-            },
-      {
-              key: 'policyHash',
-              label: 'Policy Hash',
-              type: 'text',
-              placeholder: '0xpolicy',
-              required: true,
-            },
-      {
-              key: 'duration',
-              label: 'Duration',
-              type: 'text',
-              placeholder: '15m',
-              required: true,
-            },
-      {
-              key: 'justification',
-              label: 'Justification',
-              type: 'textarea',
-              placeholder: 'Why the shield is needed',
-              required: true,
-            },
-    ]
+      fields={[
+        {
+        key: 'band',
+        label: 'Dampening Band',
+        type: 'number',
+        placeholder: '15',
+        required: true,
+        },
+        {
+        key: 'policyHash',
+        label: 'Policy Hash',
+        type: 'text',
+        placeholder: '0xpolicy',
+        required: true,
+        },
+        {
+        key: 'duration',
+        label: 'Duration',
+        type: 'text',
+        placeholder: '15m',
+        required: true,
+        },
+        {
+        key: 'justification',
+        label: 'Justification',
+        type: 'textarea',
+        placeholder: 'Why the shield is needed',
+        required: true,
+        },
+      ]}
     />
   )
 }
