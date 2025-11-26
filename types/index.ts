@@ -512,6 +512,36 @@ export interface FeatureFlags {
   achievementImpactCushionOracle: boolean
   achievementContinuityPolicyStudio: boolean
   achievementNightwatchSilenceTimer: boolean
+  achievementIntentBlueprintRegistry: boolean
+  achievementProofSequencerCoop: boolean
+  achievementTreasuryWeatherDesk: boolean
+  achievementImpactFuturesClearinghouse: boolean
+  achievementAdaptiveValidatorConcierge: boolean
+  achievementAutonomousGrantsRouter: boolean
+  achievementCrossDomainSandboxHarness: boolean
+  achievementCoordinationCanvas: boolean
+  achievementAiPairingLedger: boolean
+  achievementOnchainStandupChronicle: boolean
+  achievementPursuitBatchOptimizer: boolean
+  achievementIntentCollateralComposer: boolean
+  achievementExecutionWeatherStation: boolean
+  achievementRiskLayeredTreasuryLadder: boolean
+  achievementModularArbitrationEscrow: boolean
+  achievementGradientBonusOptions: boolean
+  achievementCarbonSwapboard: boolean
+  achievementSovereignTaskMesh: boolean
+  achievementDeviceBloomFilter: boolean
+  achievementSponsorshipExchange: boolean
+  achievementGovernanceMemoryVault: boolean
+  achievementAutoVerifierPipeline: boolean
+  achievementMentorshipTrailLedger: boolean
+  achievementZeroLatencySyncRelay: boolean
+  achievementMultiscopePaymasterOrchestrator: boolean
+  achievementProofLiquidityMarketplace: boolean
+  achievementPolicyDriftSentinel: boolean
+  achievementImpactDividendRouter: boolean
+  achievementIntentRecoveryForge: boolean
+  achievementBuilderAvailabilityIndex: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
