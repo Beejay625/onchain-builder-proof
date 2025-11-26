@@ -14,6 +14,9 @@ contract SocialMediaContract {
     uint256 public eigenRestakeShieldCount;
     uint256 public intentSequencerGuardCount;
     uint256 public payoutCircuitBreakerCount;
+    uint256 public continuityAtlasCount;
+    uint256 public intentQuarantineCount;
+    uint256 public quietHourWindowCount;
     
     struct Post {
         uint256 id;
@@ -75,6 +78,35 @@ contract SocialMediaContract {
         bool active;
         uint256 recordedAt;
     }
+
+    struct ContinuityAtlasEntry {
+        uint256 id;
+        string sourceLedger;
+        string targetLedger;
+        uint256 driftWindow;
+        bytes32 reconcilerHash;
+        uint256 recordedAt;
+    }
+
+    struct IntentQuarantine {
+        uint256 id;
+        uint256 achievementId;
+        string intentId;
+        string reason;
+        uint256 unlockQuorum;
+        bool active;
+        uint256 recordedAt;
+    }
+
+    struct QuietHourWindow {
+        uint256 id;
+        uint256 achievementId;
+        uint256 startTime;
+        uint256 endTime;
+        string scope;
+        address approvedBy;
+        bool active;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -85,6 +117,9 @@ contract SocialMediaContract {
     mapping(uint256 => EigenRestakeShield) public eigenRestakeShields;
     mapping(uint256 => IntentSequencerGuard) public intentSequencerGuards;
     mapping(uint256 => PayoutCircuitBreaker) public payoutCircuitBreakers;
+    mapping(uint256 => ContinuityAtlasEntry) public continuityAtlasEntries;
+    mapping(uint256 => IntentQuarantine) public intentQuarantines;
+    mapping(uint256 => QuietHourWindow) public quietHourWindows;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -95,6 +130,11 @@ contract SocialMediaContract {
     event IntentSequencerGuardLogged(uint256 indexed guardId, uint256 indexed achievementId, uint256 slot, uint256 blockNumber, bytes32 builderHash);
     event PayoutCircuitBreakerTriggered(uint256 indexed breakerId, uint256 indexed achievementId, uint256 policyThreshold, string reason);
     event PayoutCircuitBreakerCleared(uint256 indexed breakerId, address indexed resolver);
+    event ContinuityAtlasLogged(uint256 indexed atlasId, string sourceLedger, string targetLedger, uint256 driftWindow, bytes32 reconcilerHash);
+    event IntentQuarantined(uint256 indexed quarantineId, uint256 indexed achievementId, string intentId, uint256 unlockQuorum);
+    event IntentQuarantineCleared(uint256 indexed quarantineId, address indexed resolver);
+    event QuietHourScheduled(uint256 indexed windowId, uint256 indexed achievementId, uint256 startTime, uint256 endTime, string scope);
+    event QuietHourCleared(uint256 indexed windowId, address indexed resolver);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -109,6 +149,9 @@ contract SocialMediaContract {
         eigenRestakeShieldCount = 0;
         intentSequencerGuardCount = 0;
         payoutCircuitBreakerCount = 0;
+        continuityAtlasCount = 0;
+        intentQuarantineCount = 0;
+        quietHourWindowCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
@@ -296,6 +339,92 @@ contract SocialMediaContract {
         require(breaker.active, "Breaker already cleared");
         breaker.active = false;
         emit PayoutCircuitBreakerCleared(breakerId, msg.sender);
+    }
+
+    function logContinuityAtlas(
+        string memory sourceLedger,
+        string memory targetLedger,
+        uint256 driftWindow,
+        bytes32 reconcilerHash
+    ) public returns (uint256) {
+        require(bytes(sourceLedger).length > 0, "Source required");
+        require(bytes(targetLedger).length > 0, "Target required");
+        require(driftWindow > 0, "Drift window required");
+        require(reconcilerHash != bytes32(0), "Hash required");
+        continuityAtlasCount++;
+        continuityAtlasEntries[continuityAtlasCount] = ContinuityAtlasEntry({
+            id: continuityAtlasCount,
+            sourceLedger: sourceLedger,
+            targetLedger: targetLedger,
+            driftWindow: driftWindow,
+            reconcilerHash: reconcilerHash,
+            recordedAt: block.timestamp
+        });
+        emit ContinuityAtlasLogged(continuityAtlasCount, sourceLedger, targetLedger, driftWindow, reconcilerHash);
+        return continuityAtlasCount;
+    }
+
+    function quarantineIntent(
+        uint256 achievementId,
+        string memory intentId,
+        string memory reason,
+        uint256 unlockQuorum
+    ) public returns (uint256) {
+        require(achievementId > 0, "Achievement required");
+        require(bytes(intentId).length > 0, "Intent required");
+        require(bytes(reason).length > 0, "Reason required");
+        require(unlockQuorum > 0, "Unlock quorum required");
+        intentQuarantineCount++;
+        intentQuarantines[intentQuarantineCount] = IntentQuarantine({
+            id: intentQuarantineCount,
+            achievementId: achievementId,
+            intentId: intentId,
+            reason: reason,
+            unlockQuorum: unlockQuorum,
+            active: true,
+            recordedAt: block.timestamp
+        });
+        emit IntentQuarantined(intentQuarantineCount, achievementId, intentId, unlockQuorum);
+        return intentQuarantineCount;
+    }
+
+    function clearIntentQuarantine(uint256 quarantineId) public {
+        require(quarantineId > 0 && quarantineId <= intentQuarantineCount, "Quarantine missing");
+        IntentQuarantine storage quarantine = intentQuarantines[quarantineId];
+        require(quarantine.active, "Quarantine already cleared");
+        quarantine.active = false;
+        emit IntentQuarantineCleared(quarantineId, msg.sender);
+    }
+
+    function scheduleQuietHour(
+        uint256 achievementId,
+        uint256 startTime,
+        uint256 endTime,
+        string memory scope
+    ) public returns (uint256) {
+        require(achievementId > 0, "Achievement required");
+        require(endTime > startTime, "End must be after start");
+        require(bytes(scope).length > 0, "Scope required");
+        quietHourWindowCount++;
+        quietHourWindows[quietHourWindowCount] = QuietHourWindow({
+            id: quietHourWindowCount,
+            achievementId: achievementId,
+            startTime: startTime,
+            endTime: endTime,
+            scope: scope,
+            approvedBy: msg.sender,
+            active: true
+        });
+        emit QuietHourScheduled(quietHourWindowCount, achievementId, startTime, endTime, scope);
+        return quietHourWindowCount;
+    }
+
+    function clearQuietHour(uint256 windowId) public {
+        require(windowId > 0 && windowId <= quietHourWindowCount, "Window missing");
+        QuietHourWindow storage windowEntry = quietHourWindows[windowId];
+        require(windowEntry.active, "Window already cleared");
+        windowEntry.active = false;
+        emit QuietHourCleared(windowId, msg.sender);
     }
 }
 
