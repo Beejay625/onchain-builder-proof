@@ -1,6 +1,6 @@
 # Onchain Feature Expansion · Wave Θ
 
-Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, and the new **Lighthouse Array (F121–F150)** tranche inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
+Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, the **Lighthouse Array (F121–F150)** tranche, and the fresh **Nebula Forge (F181–F210)** lane inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
 ## Aurora Wave · Ethereum Control Plane
 
@@ -169,36 +169,69 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 
 ## Aegis Matrix · Resilience Catalysts
 
-1. **Achievement Eventual Consistency Ledger** — Log reconciliation windows plus attested diffs whenever ledgers converge.
-2. **Achievement Intent Insurance Syndicate** — Collectively underwrite high-risk intents with slashable risk pools and payout proofs.
-3. **Achievement Guardian Collective Bargain** — Capture guardian responsibility agreements, compensation rails, and renewal votes.
-4. **Achievement Contractor Proof Hub** — Track external contractor obligations, service proofs, and dispute hooks.
-5. **Achievement Telemetry Vaccination Labs** — Run telemetry sanity suites before data enters production achievement metrics.
-6. **Achievement Adaptive Failover Router** — Shift execution routes across chains or RPCs based on live health attestations.
-7. **Achievement Rolling Service Pledges** — Publish rolling uptime/latency pledges with enforcement windows and penalty states.
-8. **Achievement Observability Mint** — Mint attestations whenever observability coverage meets or exceeds policy targets.
-9. **Achievement Autonomous Lifeline Agents** — Register autonomous agent networks that can assume emergency workflows onchain.
-10. **Achievement Integrity Snapshot Carousel** — Rotate zero-downtime snapshot sets with hashed manifests and verifier approvals.
-11. **Achievement Service Credit Escrow** — Hold service credits that auto-release to builders when KPIs are missed.
-12. **Achievement Congestion Triage Deck** — Prioritize workloads during congestion with signed instructions and reviewer proofs.
-13. **Achievement Multi-Risk Scoreboard** — Aggregate risk categories and weights per achievement with change history.
-14. **Achievement Parameterized Relief Bonds** — Issue relief bonds that unlock when policy-defined risk metrics breach.
-15. **Achievement Attested Troubleshooting Trees** — Publish troubleshooting trees where every branch is hashed and reviewer-signed.
-16. **Achievement Disaster Rehearsal Ledger** — Store rehearsal outcomes, participants, and pass/fail metrics for each scenario.
-17. **Achievement Axial Response Mesh** — Link response clusters across teams/DAOs with acknowledgement receipts.
-18. **Achievement Evidence Redaction Vault** — Manage redacted evidence versions with hash pointers back to full archives.
-19. **Achievement Sovereign Fallback Federation** — Register fallback sovereign nodes plus readiness attestations per geography.
-20. **Achievement Multi-Governance Harmonizer** — Align overlapping governance votes with bridging proofs and quorum parity.
-21. **Achievement KPI Shock Absorber** — Buffer KPI volatility via smoothing formulas that are notarized onchain.
-22. **Achievement Treasury Cushion Router** — Route treasury cushions to stressed achievements with transparent triggers.
-23. **Achievement Bidirectional Impact Relay** — Mirror impact telemetry upstream and downstream with signed receipt trails.
-24. **Achievement Global Quiet Hours Timeline** — Declare quiet hours that automatically pause risky operations and notify builders.
-25. **Achievement Builder Empathy Graph** — Track builder wellbeing metrics tied to shipping cadence and retro payouts.
-26. **Achievement Disaster Mutual Aid Pool** — Coordinate mutual aid commitments between DAOs with escrowed resources.
-27. **Achievement Compliance Scenario Studio** — Scenario-test policy changes and mint the resulting compliance verdicts.
-28. **Achievement Failover Bond Marketplace** — Match failover providers with achievements needing standby coverage plus SLA proofs.
-29. **Achievement Progressive Mint Covenant** — Enforce covenant checkpoints before high-risk achievements can mint.
-30. **Achievement Sovereign Policy Codex** — Version control sovereign policy packs with approvals, revocations, and audit trails.
+1. **Achievement Continuity Atlas** — Capture reconciler hashes, drift envelopes, and reviewer notes for every ledger pair so convergence proofs stay auditable.
+2. **Achievement Intent Quarantine Fabric** — Isolate high-risk intents with notarized mitigation plans and unlock quorums before automation resumes.
+3. **Achievement Guardian Wage Escrow** — Bond guardian compensation inside onchain escrows that release only when attested duties finish.
+4. **Achievement Contractor Integrity Graph** — Graph contractor relationships, deliverables, and proof hashes to spotlight weak vendor links.
+5. **Achievement Telemetry Inoculation Lab** — Run dataset inoculation recipes prior to production ingestion and expire unvalidated telemetry.
+6. **Achievement Sovereign Failover Loom** — Weave deterministic reroute instructions across sovereign deployments with live probe attestations.
+7. **Achievement Living SLA Covenant** — Record continuously evolving SLA pledges, enforcement windows, and penalty classes per achievement.
+8. **Achievement Observability Signal Mint** — Mint coverage attestations that prove logs, metrics, and traces hit policy-defined density.
+9. **Achievement Autonomous Lifeline Brigade** — Register emergency automation agents, fingerprints, and expiry timers with governance oversight.
+10. **Achievement Snapshot Integrity Gyre** — Rotate multi-plane snapshot manifests plus checksum proofs to guarantee rolling recovery points.
+11. **Achievement Service Rebate Router** — Route make-good credits to impacted builders whenever SLA trigger signals stack up.
+12. **Achievement Congestion Escalation Board** — Publish severity-ranked workload boards so orchestration layers respect resilience priorities.
+13. **Achievement Multi-Dimensional Risk Radar** — Aggregate weighted risk axes, reviewer overrides, and live telemetry into one radar verdict.
+14. **Achievement Relief Bond Syndicator** — Parameterize relief bond pools that unlock liquidity when policy-defined metrics breach.
+15. **Achievement Troubleshooting Witness Tree** — Store reviewer-signed troubleshooting decision trees with deterministic branch proofs.
+16. **Achievement Blackstart Drill Ledger** — Notarize blackstart drill outcomes, cadences, and follow-up tickets for continuity audits.
+17. **Achievement Cross-Axis Response Mesh** — Map response clusters, acknowledgement proofs, and escalation routes spanning teams/DAOs.
+18. **Achievement Evidence Redaction Sanctuary** — Seal redacted artifacts with reviewer approvals while preserving tamper-evident hash links.
+19. **Achievement Provincial Fallback Federation** — Register regional failover federations with readiness attestations and heartbeat receipts.
+20. **Achievement Governance Resonance Harmonizer** — Align overlapping governance feeds, quorum thresholds, and arbitration policies.
+21. **Achievement KPI Dampener Oracle** — Publish smoothed KPI feeds alongside raw metrics so volatility can be contextualized.
+22. **Achievement Cushion Liquidity Router** — Wire treasury cushion pools to stressed achievements with transparent trigger bands.
+23. **Achievement Impact Relay Twin** — Mirror upstream/downstream telemetry feeds with checksum proofs to eliminate drift ambiguity.
+24. **Achievement Quiet Hour Sentinel** — Encode quiet-hour windows, override approvers, and impacted modules to pause risky operations.
+25. **Achievement Empathy Pulse Graph** — Aggregate wellbeing signals with anonymized hashes so program leads can spot burnout early.
+26. **Achievement Mutual Aid Clearinghouse** — Coordinate cross-DAO resource pledges, unlock triggers, and repayment covenants.
+27. **Achievement Compliance Scenario Forge** — Run regulator-facing scenario verdicts with signed reviewers and exportable CIDs.
+28. **Achievement Failover Credit Exchange** — Match failover providers with credit escrow, SLA metadata, and drawdown proofs.
+29. **Achievement Progressive Mint Throttle** — Gate high-risk mints behind checkpoint sequences, quorum votes, and throughput curves.
+30. **Achievement Sovereign Policy Manuscript** — Version policy manuscripts with jurisdiction tags, approvers, and revocation trails.
+
+## Helios Mesh · Incident Automation Wave
+
+1. **Achievement Helios Signal Lattice** — Correlate telemetry, governance, and treasury signals into one lattice so responders see converging anomalies instantly.
+2. **Achievement Incident Escalation Choreographer** — Script deterministic escalation paths with responder handles, channels, and approvals baked in.
+3. **Achievement Blast Radius Profiler** — Quantify service impact, user counts, and projected loss for every incident to guide compensation.
+4. **Achievement Runbook Circuit Switch** — Toggle automation circuits with onchain audit trails plus fallback runbook references.
+5. **Achievement Triage Swarm Coordinator** — Register swarm rosters, duty windows, and capacity targets so multi-team triage can be orchestrated.
+6. **Achievement Post-Incident Autopsy Vault** — Anchor retro evidence bundles and remediation owners to keep root causes immutable.
+7. **Achievement Telemetry Dampening Shield** — Declare dampening policies that temporarily suppress noisy feeds while keeping signatures onchain.
+8. **Achievement Crisis Budget Router** — Route emergency treasury allocations with reviewer approvals and guardrails tied to incidents.
+9. **Achievement Guardian Paging Matrix** — Track paging priorities, coverage scores, and preferred channels for every guardian.
+10. **Achievement Latency Surge Buffer** — Capture surge thresholds and buffer actions so throttling policies can be reenacted deterministically.
+11. **Achievement Safe Rebuild Capsule** — Describe rebuild targets, artifact hashes, and approvals to drive clean-room redeployments.
+12. **Achievement Chain Isolation Switch** — Record when chains are isolated, why, and what must happen before proofs start flowing again.
+13. **Achievement Incident Evidence Relay** — Log evidence bundle CIDs plus verifier signatures to keep forensics tamper-proof.
+14. **Achievement Hot Patch Courier** — Track hotfix artifacts, environments, and risk class to control emergency patch lifecycles.
+15. **Achievement Hazmat Credential Locker** — Seal elevated credentials with expiry timers and scope definitions until the incident clears.
+16. **Achievement Alert Authenticity Filter** — Annotate alert sources with authenticity verdicts and reviewer rationale to dampen false positives.
+17. **Achievement Response Window Ledger** — Commit promised response windows per stage so SLA violations are provable.
+18. **Achievement Operator Relief Rotation** — Schedule relief rotations with fatigue scores to prevent burnout mid-incident.
+19. **Achievement Victim Compensation Pool** — Pre-commit compensation cohorts, tokens, and triggers for affected builders or users.
+20. **Achievement Multi-Region Failover Deck** — Publish region mappings and validation checklists for deterministic regional failovers.
+21. **Achievement Emergency Config Freezer** — Freeze risky config scopes with blast-zone notes and thaw policies.
+22. **Achievement Forensic Snapshot Beacon** — Emit block heights, CIDs, and investigator handles for reproducible forensic captures.
+23. **Achievement Incident Learning Loop** — Store hypotheses, experiments, and adoption verdicts from every retro.
+24. **Achievement Proof Shelter Bridge** — Pause sensitive proof bundles inside shelters until release preconditions are satisfied.
+25. **Achievement Continuity Drift Recorder** — Track drift metrics versus baseline so trendlines can be inspected later.
+26. **Achievement Recovery KPI Gauge** — Stream recovery KPIs and confidence bands for leadership updates.
+27. **Achievement Incident Debt Tracker** — Log outstanding remediation debts with owners and payoff cadence.
+28. **Achievement Quiet Mode Broadcast** — Announce intentional quiet periods with scope, reasoning, and expiry timers.
+29. **Achievement Auto-Throttle Sentinel** — Define auto-throttle targets, throughput caps, and rationales for rate limiting.
+30. **Achievement Guardian Aftercare Portal** — Record aftercare tasks, guardian wallet addresses, and completion proofs once the dust settles.
 
 ## Lighthouse Array · Crisis Automation Relays
 
@@ -265,6 +298,72 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 28. **Achievement Governance Handoff Capsule** — Create handoff capsules that package context, permissions, and attested next steps.
 29. **Achievement AI Fact-Check Attestor** — Log AI-driven fact-check attestations with reviewer sampling and override mechanisms.
 30. **Achievement Impact Option Vaults** — Offer option vaults that pay out when impact metrics cross verifiable strike thresholds.
+
+## Helios Forge · Deterministic Continuity Grid
+
+1. **Achievement Continuity Delta Vault** — Seal delta proofs comparing expected vs. observed state so reviewers can replay divergence windows.
+2. **Achievement Cross-Domain Circuit Auditor** — Log circuit IDs, verifier hashes, and signed approvals for every cross-domain execution path.
+3. **Achievement Guardian Thermal Failover Map** — Track infra temperature, failover thresholds, and guardian acknowledgements to avoid thermal throttling.
+4. **Achievement Liquidation Recovery Escrow** — Escrow liquidation clawbacks until restitution rules and victim receipts are notarized.
+5. **Achievement Intent Floodgate Governor** — Rate-limit risky intents by bonding release credits and logging overrides onchain.
+6. **Achievement Sovereign Edge Witness Grid** — Register edge witness nodes per jurisdiction along with uptime and response proofs.
+7. **Achievement KPI Anti-Sybil Router** — Route KPI submissions through Sybil filters that publish adjudication hashes for auditability.
+8. **Achievement Deterministic Vault Rolling Hash** — Maintain rolling hash chains of treasury vault balances plus policy deltas for instant attestations.
+9. **Achievement Custody Drift Arbitration Desk** — Capture custody drift disputes, quorum verdicts, and remediation payouts onchain.
+10. **Achievement Treasury Scenario Bond Ladder** — Program bond ladders with maturity tiers that automatically trigger when risk bands breach.
+11. **Achievement Onchain Hazard Maturity Graph** — Graph hazard classes, exposure maturity, and mitigation ownership for every achievement.
+12. **Achievement Verdict Provenance Capsule** — Bundle reviewer verdicts with signature chains and evidence hashes to prove provenance.
+13. **Achievement Witness Incentive Oscillator** — Adjust witness rewards dynamically based on coverage heatmaps and publish oscillation receipts.
+14. **Achievement Autonomous Attestor Sandbox** — Spin isolated attestor sandboxes with signed guardrails before they graduate to production proofs.
+15. **Achievement Retro Funding Lockbox** — Create retro funding lockboxes that escrow payouts until validator quorums sign confirmation receipts.
+16. **Achievement Impact Equity Pool Router** — Route impact equity pool flows with deterministic split metadata tied to onchain KPIs.
+17. **Achievement Circuit Divergence Alarm** — Emit divergence alarms when automation circuits drift from approved netlists, including fix-it playbooks.
+18. **Achievement Posture-Based Gas Sponsor** — Sponsor gas for compliant devices while logging posture attestations and revocation proofs.
+19. **Achievement Temporal Sequencer Archive** — Archive sequencer snapshots plus signer proofs for every epoch to guarantee temporal lineage.
+20. **Achievement Guardian Proof-of-Workload Feed** — Publish guardian workload attestations so rotations and stipends align with actual load.
+21. **Achievement Sovereign Evidence Swapline** — Facilitate encrypted evidence swap lines between sovereign partners with receipt proofs.
+22. **Achievement Rollup Grace Period Monitor** — Track grace-period timers for each rollup and block automation until checkpoints finalize.
+23. **Achievement Intent Memory Fountain** — Store anonymized replay traces that help agents rehearse intents before they go live.
+24. **Achievement Compliance Receipt Relay** — Relay compliance receipts to regulators with signed delivery acknowledgements and expiry timers.
+25. **Achievement Device Handoff Ledger** — Record device custody handoffs, biometric attestations, and revocation history for sensitive signers.
+26. **Achievement Restitution Auction Vault** — Run onchain auctions that direct restitution funds to verified victims using signed bidding rules.
+27. **Achievement Resilience Option Writer** — Write option-style insurance contracts that pay out when resilience KPIs breach guardrails.
+28. **Achievement Fail-Safe Macro Planner** — Encode macro-level fail-safe scripts with quorum approvals and deterministic rollback plans.
+29. **Achievement Automated Relief Clearinghouse** — Clear relief fund disbursements via programmable netting and audit-friendly ledgers.
+30. **Achievement Impact KPI Hedge Desk** — Hedge KPI volatility using programmable derivatives while anchoring collateral flows onchain.
+
+## Nebula Forge · Autonomous Continuity Grid
+
+1. **Achievement Sovereign Failover Mesh** — Clone full achievement scopes across sovereign deployments with notarized failover rehearsal receipts.
+2. **Achievement Adaptive Intent Firewall** — Enforce AI-scored policy rules ahead of broadcast, hashing every override and reviewer sign-off.
+3. **Achievement Modular Recovery Capsules** — Package pre-authorized incident capsules with calldata, guardian roles, and unwind steps for single-click deployment.
+4. **Achievement Guardian Playbook Composer** — Compose guardian response playbooks onchain, including dependencies, quorum needs, and escalation clocks.
+5. **Achievement Continuum Risk Lattice** — Layer multi-factor risk tensors per achievement so treasury, ops, and guardians share a live consensus score.
+6. **Achievement Proof Drift Equalizer** — Track proof drift across mirrors and automatically insert counter-balancing attestations when divergence exceeds tolerance.
+7. **Achievement Treasury Auto-Hedge Vaults** — Spin up hedging vaults that sync oracle signals with preset derivatives or coverage pools.
+8. **Achievement Zero-Latency Witness Grid** — Register ultra-low-latency witness nodes plus their telemetry so incident playback includes microsecond ordering.
+9. **Achievement Neural Incident Forecaster** — Store ML-driven incident forecasts, feature weights, and reviewer approvals for transparency.
+10. **Achievement Continuity Futures Clearinghouse** — List continuity futures where contributors hedge downtime or remediation debt with verifiable payouts.
+11. **Achievement Multi-Hop Evidence Courier** — Route evidence parcels through notarized couriers, preserving integrity across storage domains.
+12. **Achievement Crisis Timebox Director** — Encode maximum remediation windows per incident class with auto-escalation when timers breach.
+13. **Achievement Fork Horizon Tracker** — Mirror fork-choice hints, shadow gas metrics, and client versions to warn when fork horizons get risky.
+14. **Achievement Kinetic Reward Governor** — Attach kinetic formulas to rewards so payouts react instantly to verified effort or risk deltas.
+15. **Achievement Autonomous Compliance Arbiter** — Deploy compliance arbiters that evaluate rulepacks, emit verdict hashes, and gate sensitive flows.
+16. **Achievement Intent Chargeback Ledger** — Record chargeback scopes, restitution flows, and dispute hashes for intents that misfire.
+17. **Achievement Resilient Sequencer Proxy** — Run sequencer proxies with attestable replay buffers so intents survive upstream congestion.
+18. **Achievement Guardian Accountability Graph** — Graph guardian actions, heartbeats, and incident ownership to spot accountability gaps.
+19. **Achievement Telemetry Custody Router** — Route telemetry feeds through custody routers that notarize encryption posture, retention, and access audit trails.
+20. **Achievement Impact Contingency Bonds** — Issue impact-linked bonds that unlock relief funding when KPIs miss by attested thresholds.
+21. **Achievement Sovereign Patch Relay** — Stage signed patch payloads per sovereignty zone with multi-hop delivery proofs.
+22. **Achievement Multilateral Witness Escrow** — Escrow witness stakes from multiple orgs, releasing funds only when quorum commitments stay healthy.
+23. **Achievement Vault Health Sentinel** — Continuously scan vault solvency, drifts, and policy compliance before payouts or withdrawals settle.
+24. **Achievement Policy Drift Comparator** — Hash policy baselines and emit diffs whenever governance pushes unreviewed changes.
+25. **Achievement Proof Anchoring Synthesizer** — Collate redundant proof anchors (L1, DA, cold storage) and prove synth parity onchain.
+26. **Achievement Staggered Impact Orchestrator** — Sequence impact releases over multiple epochs with attestable dependency gates.
+27. **Achievement Data Retention Capsule** — Encode retention capsules with hold/drop timers, jurisdiction tags, and destruction attestations.
+28. **Achievement Adaptive Audit Mesh** — Mesh auditor pools, skill tags, and availability attestations to route reviews intelligently.
+29. **Achievement Emergency Signal Beacon** — Broadcast authenticated emergency beacons that fan out to wallets, webhooks, and comms rails.
+30. **Achievement Omni-Custody Access Guard** — Enforce custody guard rules that notarize every privileged session, signer context, and approval path.
 
 ## Enablement Notes
 
