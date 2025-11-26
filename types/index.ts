@@ -542,7 +542,46 @@ export interface FeatureFlags {
   achievementImpactDividendRouter: boolean
   achievementIntentRecoveryForge: boolean
   achievementBuilderAvailabilityIndex: boolean
+  // Aurora Wave feature flags
+  achievementEigenRestakeShield: boolean
+  achievementIntentSequencerGuard: boolean
+  achievementMevAmnestyEscrow: boolean
+  achievementSlotCommitmentLedger: boolean
+  achievementL2SettlementMirror: boolean
+  achievementAccountAbstractionCircuit: boolean
+  achievementDeterministicPreconfirmVaults: boolean
+  achievementIntentBatonRelay: boolean
+  achievementGuardianRagequitPool: boolean
+  achievementOperatorSlippageSentinel: boolean
+  achievementCrossRollupWitnessHub: boolean
+  achievementDeterministicGasOracle: boolean
+  achievementPartialWithdrawalRouter: boolean
+  achievementSovereignRpcQuorum: boolean
+  achievementZksyncStateSyncer: boolean
+  achievementIntentMerkleJournal: boolean
+  achievementDeadlineArbitrationBridge: boolean
+  achievementMultiAssetProofRouter: boolean
+  achievementVerificationCreditLedger: boolean
+  achievementGuardianVaultTimelock: boolean
+  achievementExecutionCapsule: boolean
+  achievementRiskWeightedVaultMatrix: boolean
+  achievementAssetTraceMatrix: boolean
+  achievementComplianceAnchorChain: boolean
+  achievementOffchainEvidenceHashline: boolean
+  achievementGuardianMultisigAssembler: boolean
+  achievementIntentSuspensionSwitch: boolean
+  achievementResilienceScoreBeacon: boolean
+  achievementPayoutCircuitBreaker: boolean
+  achievementDataAvailabilityVault: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
+
+export interface FeatureFlagDescriptor {
+  key: FeatureFlagKey
+  title: string
+  summary: string
+  docPath: string
+  wave?: string
+}
 

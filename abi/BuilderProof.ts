@@ -142,6 +142,130 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'shieldId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'restakeProof',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bondedAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'violationWindow',
+        type: 'uint256',
+      },
+    ],
+    name: 'EigenRestakeShieldLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'guardId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'slot',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'blockNumber',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'builderHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'IntentSequencerGuardLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'breakerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'policyThreshold',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'reason',
+        type: 'string',
+      },
+    ],
+    name: 'PayoutCircuitBreakerTriggered',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'breakerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'resolver',
+        type: 'address',
+      },
+    ],
+    name: 'PayoutCircuitBreakerCleared',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -773,6 +897,287 @@ export const BuilderProofABI = [
       },
     ],
     stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'eigenRestakeShieldCount',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    name: 'eigenRestakeShields',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'restakeProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'bondedAmount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'violationWindow',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'recordedAt',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'intentSequencerGuardCount',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    name: 'intentSequencerGuards',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'slot',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'blockNumber',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'builderHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'recordedAt',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'payoutCircuitBreakerCount',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    name: 'payoutCircuitBreakers',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'policyThreshold',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'reason',
+        type: 'string',
+      },
+      {
+        internalType: 'bool',
+        name: 'active',
+        type: 'bool',
+      },
+      {
+        internalType: 'uint256',
+        name: 'recordedAt',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'restakeProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'bondedAmount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'violationWindow',
+        type: 'uint256',
+      },
+    ],
+    name: 'logEigenRestakeShield',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'slot',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'blockNumber',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'builderHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logIntentSequencerGuard',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'policyThreshold',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'reason',
+        type: 'string',
+      },
+    ],
+    name: 'triggerPayoutCircuitBreaker',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'breakerId',
+        type: 'uint256',
+      },
+    ],
+    name: 'clearPayoutCircuitBreaker',
+    outputs: [],
+    stateMutability: 'nonpayable',
     type: 'function',
   },
 ] as const

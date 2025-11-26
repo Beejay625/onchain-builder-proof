@@ -11,6 +11,9 @@ contract SocialMediaContract {
     uint256 public postCount;
     uint256 public commentCount;
     uint256 public reactionCount;
+    uint256 public eigenRestakeShieldCount;
+    uint256 public intentSequencerGuardCount;
+    uint256 public payoutCircuitBreakerCount;
     
     struct Post {
         uint256 id;
@@ -45,6 +48,33 @@ contract SocialMediaContract {
         uint256 reputation;
         bool verified;
     }
+
+    struct EigenRestakeShield {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 restakeProof;
+        uint256 bondedAmount;
+        uint256 violationWindow;
+        uint256 recordedAt;
+    }
+
+    struct IntentSequencerGuard {
+        uint256 id;
+        uint256 achievementId;
+        uint256 slot;
+        uint256 blockNumber;
+        bytes32 builderHash;
+        uint256 recordedAt;
+    }
+
+    struct PayoutCircuitBreaker {
+        uint256 id;
+        uint256 achievementId;
+        uint256 policyThreshold;
+        string reason;
+        bool active;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -52,12 +82,19 @@ contract SocialMediaContract {
     mapping(address => Profile) public profiles;
     mapping(uint256 => mapping(address => bool)) public hasLiked;
     mapping(address => uint256[]) public userPosts;
+    mapping(uint256 => EigenRestakeShield) public eigenRestakeShields;
+    mapping(uint256 => IntentSequencerGuard) public intentSequencerGuards;
+    mapping(uint256 => PayoutCircuitBreaker) public payoutCircuitBreakers;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
     event ReactionAdded(uint256 indexed reactionId, uint256 indexed postId, address indexed user, string reactionType);
     event ProfileUpdated(address indexed user, string name, string bio);
     event ReputationUpdated(address indexed user, uint256 newReputation);
+    event EigenRestakeShieldLogged(uint256 indexed shieldId, uint256 indexed achievementId, bytes32 restakeProof, uint256 bondedAmount, uint256 violationWindow);
+    event IntentSequencerGuardLogged(uint256 indexed guardId, uint256 indexed achievementId, uint256 slot, uint256 blockNumber, bytes32 builderHash);
+    event PayoutCircuitBreakerTriggered(uint256 indexed breakerId, uint256 indexed achievementId, uint256 policyThreshold, string reason);
+    event PayoutCircuitBreakerCleared(uint256 indexed breakerId, address indexed resolver);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -69,6 +106,9 @@ contract SocialMediaContract {
         postCount = 0;
         commentCount = 0;
         reactionCount = 0;
+        eigenRestakeShieldCount = 0;
+        intentSequencerGuardCount = 0;
+        payoutCircuitBreakerCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
@@ -183,6 +223,79 @@ contract SocialMediaContract {
     
     function getTotalReactions() public view returns (uint256) {
         return reactionCount;
+    }
+
+    function logEigenRestakeShield(
+        uint256 achievementId,
+        bytes32 restakeProof,
+        uint256 bondedAmount,
+        uint256 violationWindow
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(restakeProof != bytes32(0), "Proof required");
+        eigenRestakeShieldCount++;
+        eigenRestakeShields[eigenRestakeShieldCount] = EigenRestakeShield({
+            id: eigenRestakeShieldCount,
+            achievementId: achievementId,
+            restakeProof: restakeProof,
+            bondedAmount: bondedAmount,
+            violationWindow: violationWindow,
+            recordedAt: block.timestamp
+        });
+        emit EigenRestakeShieldLogged(eigenRestakeShieldCount, achievementId, restakeProof, bondedAmount, violationWindow);
+        return eigenRestakeShieldCount;
+    }
+
+    function logIntentSequencerGuard(
+        uint256 achievementId,
+        uint256 slot,
+        uint256 blockNumber,
+        bytes32 builderHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(slot > 0, "Slot required");
+        require(blockNumber > 0, "Block required");
+        require(builderHash != bytes32(0), "Builder hash required");
+        intentSequencerGuardCount++;
+        intentSequencerGuards[intentSequencerGuardCount] = IntentSequencerGuard({
+            id: intentSequencerGuardCount,
+            achievementId: achievementId,
+            slot: slot,
+            blockNumber: blockNumber,
+            builderHash: builderHash,
+            recordedAt: block.timestamp
+        });
+        emit IntentSequencerGuardLogged(intentSequencerGuardCount, achievementId, slot, blockNumber, builderHash);
+        return intentSequencerGuardCount;
+    }
+
+    function triggerPayoutCircuitBreaker(
+        uint256 achievementId,
+        uint256 policyThreshold,
+        string memory reason
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(policyThreshold > 0, "Policy required");
+        require(bytes(reason).length > 0, "Reason required");
+        payoutCircuitBreakerCount++;
+        payoutCircuitBreakers[payoutCircuitBreakerCount] = PayoutCircuitBreaker({
+            id: payoutCircuitBreakerCount,
+            achievementId: achievementId,
+            policyThreshold: policyThreshold,
+            reason: reason,
+            active: true,
+            recordedAt: block.timestamp
+        });
+        emit PayoutCircuitBreakerTriggered(payoutCircuitBreakerCount, achievementId, policyThreshold, reason);
+        return payoutCircuitBreakerCount;
+    }
+
+    function clearPayoutCircuitBreaker(uint256 breakerId) public {
+        require(breakerId > 0 && breakerId <= payoutCircuitBreakerCount, "Breaker missing");
+        PayoutCircuitBreaker storage breaker = payoutCircuitBreakers[breakerId];
+        require(breaker.active, "Breaker already cleared");
+        breaker.active = false;
+        emit PayoutCircuitBreakerCleared(breakerId, msg.sender);
     }
 }
 

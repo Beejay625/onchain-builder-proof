@@ -96,3 +96,4 @@ function buildForecast(streak: number) {
 
 
 
+
