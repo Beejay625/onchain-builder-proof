@@ -101,6 +101,72 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Impact Audit Trails** — Chain audit workpapers, signatures, and remediation status for impact reviews.
 30. **Achievement Zero-Day Response Ledger** — Capture zero-day timelines, mitigations, and disclosure proofs end to end.
 
+## Citadel Flux · Sovereign Continuity Modules
+
+1. **Achievement Continuity Chaos Guard** — Simulate cascading chaos sequences and notarize which failover lanes stay compliant.
+2. **Achievement Intent Hedging Pools** — Pool capital that auto-insures high-risk intents whenever adaptive risk spikes.
+3. **Achievement Multi-Agent Incident Mesh** — Register multi-agent responder graphs with scoped authorities and escalation paths.
+4. **Achievement Temporal Rollback Permits** — Issue signed rollback permits with expiry, reason codes, and reviewer quorum proofs.
+5. **Achievement Probabilistic Failure Forecaster** — Publish probability cones for subsystem failure windows plus mitigation owners.
+6. **Achievement Reown Session Circuit** — Chain Reown session scopes, device attestations, and force-reset rules onchain.
+7. **Achievement Counterparty Escalation Bonds** — Escrow counterparty stakes that slash if escalation policies are violated.
+8. **Achievement Distributed Custody Vaults** — Shard custody attestations across storage providers with quorum requirements.
+9. **Achievement Autonomous Patch Caravan** — Queue autopatch payloads, verification hashes, and adoption watchdog attestations.
+10. **Achievement Treasury Heartbeat Orchestrator** — Emit heartbeat attestations for treasury operations, signers, and timelocks.
+11. **Achievement Settlement Finality Radar** — Track finality lags across chains with alert thresholds and reviewer acknowledgements.
+12. **Achievement Disaster Aid Escrow Grid** — Map relief escrows per geography that unlock when oracle triggers attest disasters.
+13. **Achievement Compliance Evidence Router** — Route encrypted evidence parcels to regulator-specific endpoints with receipt proofs.
+14. **Achievement Multi-Chain Debrief Studio** — Store standardized incident debriefs per chain with action item hashes.
+15. **Achievement Witness Density Tracker** — Measure witness coverage vs. policy and flag low-density segments.
+16. **Achievement Staged Redemption Queue** — Stage redemption unlocks that require multi-phase evidence across checkpoints.
+17. **Achievement Quantum Readiness Registry** — Log PQ readiness status, committed cutover dates, and signed audits.
+18. **Achievement Sovereign Data Relay** — Record sovereign data replications with hashed manifests and jurisdiction tags.
+19. **Achievement Regenerative Budget Vault** — Refill treasury vaults only when impact KPIs meet regenerative thresholds.
+20. **Achievement Adaptive Scope Guard** — Auto-adjust achievement scopes or quarantine modules when anomaly signals trip.
+21. **Achievement Multi-Hop Ticketing Graph** — Graph dependency-aware support tickets with resolution proofs and SLA clocks.
+22. **Achievement Operator Credential Vault** — Seal operator credentials with rotation attestations and revocation proofs.
+23. **Achievement Resilience KPI Synthesizer** — Fuse telemetry into resilience KPIs and notarize the synthesis recipe.
+24. **Achievement Omni-Alert Coordinator** — Aggregate alerts and route them to signed channel-specific acknowledgment flows.
+25. **Achievement Hazard Insurance Grid** — Register hazard-specific parametric insurance schedules with payout proofs.
+26. **Achievement Stateful Circuit Backups** — Snapshot automation circuits with deterministic replay attestations.
+27. **Achievement Rapid Neutralization Switch** — Encode pre-authorized neutralization sequences for compromised modules.
+28. **Achievement Recovery Role Randomizer** — Randomize and attest recovery role assignments to prevent collusion.
+29. **Achievement Custodial Integrity Grid** — Score custodial providers, breaches, and remediation chronologies.
+30. **Achievement Evidence Escrow Exchange** — Facilitate encrypted evidence escrows with release proofs and audit trails.
+
+## Polaris Relay · Frontier Automations
+
+1. **Achievement Reown Session Sentinel** — Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.
+2. **Achievement Omniwallet Delegation Fabric** — Map wallet delegation graphs across chains with expiry timers and override paths.
+3. **Achievement Perimeter Access Ledger** — Memorialize access perimeter changes (RBAC, scoped keys) linked to each achievement.
+4. **Achievement Incentive Hedging Vault** — Hedge achievement incentive payouts with programmable derivative vaults.
+5. **Achievement Settlement Race Arbiter** — Detect race conditions between simultaneous settlements and serialize outcomes onchain.
+6. **Achievement Impact Streaming Router** — Route impact streaming payouts across chains with programmable splits and throttles.
+7. **Achievement Sovereign Rollup Snapshot** — Snapshot rollup state roots tied to achievement batches for deterministic replay.
+8. **Achievement Intent Carbon Credits Router** — Attach verified carbon credit retirements to high-emission intents before execution.
+9. **Achievement Compliance Auto-Curator** — Auto-curate compliance rulepacks per achievement with notarized acceptance tests.
+10. **Achievement Real-Time Retro Scoreboard** — Continuously score retro candidates using signed input feeds and reviewer overrides.
+11. **Achievement Adaptive Royalty Vaults** — Adjust royalty unlock curves automatically using utilization and KPI metrics.
+12. **Achievement Cross-DAO Escrow Netting** — Net escrow balances between DAOs and mint settlements once multi-party approvals land.
+13. **Achievement Multi-Hop Verification Trees** — Chain verification trees spanning L1/L2/L3 checkpoints with witness proofs.
+14. **Achievement Temporal Evidence Lineage** — Store temporal lineage graphs that prove evidence ordering, merges, and supersessions.
+15. **Achievement Settlement Assurance Pools** — Provide bonded insurance pools that cover failed settlements with slashable stakes.
+16. **Achievement Multi-Domain Chain Locks** — Lock coordinated cross-domain actions until all participating chains sign release proofs.
+17. **Achievement Rollup Safety Net** — Maintain safety-net intents that auto-migrate achievements if rollup liveness degrades.
+18. **Achievement Verified Simulation Trails** — Pin deterministic simulation transcripts alongside live execution to prove parity.
+19. **Achievement Attestation Upgrade Council** — Require council-signed upgrade manifests before new attestation formats activate.
+20. **Achievement Budget Pressure Gauge** — Track budget pressure indexes per initiative and emit governance alerts when thresholds breach.
+21. **Achievement Autonomic XP Curves** — Adjust XP curves programmatically based on streak health, reviewer trust, and impact tiers.
+22. **Achievement Tokenized Playbook Market** — Tokenize operational playbooks and log who consumes or forks each strategy.
+23. **Achievement Sovereign Access Graph** — Persist access graphs showing which actors can mutate proof data across domains.
+24. **Achievement Adaptive Rate Limiter** — Dynamically tune rate limits per builder scope with notarized bursts and cooldowns.
+25. **Achievement Keeper Market Maker** — Maintain keeper marketplaces, bonding, and performance histories tied to achievement tasks.
+26. **Achievement Auto-Renewal Bonds** — Auto-roll renewal bonds for long-lived achievements and store slashing/replenishment events.
+27. **Achievement Dispute Heat Index** — Publish dispute heat indexes powered by outcome probabilities and backlog metrics.
+28. **Achievement Governance Handoff Capsule** — Create handoff capsules that package context, permissions, and attested next steps.
+29. **Achievement AI Fact-Check Attestor** — Log AI-driven fact-check attestations with reviewer sampling and override mechanisms.
+30. **Achievement Impact Option Vaults** — Offer option vaults that pay out when impact metrics cross verifiable strike thresholds.
+
 ## Enablement Notes
 
 - Each feature is toggled via `FeatureFlags`; keep them disabled by default until implementation ships.

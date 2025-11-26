@@ -240,6 +240,74 @@ Deep dives for this cascade live in [`docs/onchain-feature-expansion.md`](docs/o
 
 Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#bastion-lattice--continuity-amplifiers).
 
+### Citadel Flux · 30 Sovereign Continuity Modules
+- ⚔️ **Achievement Continuity Chaos Guard**: Simulate cascading chaos sequences and notarize which failover lanes stay green.
+- 💹 **Achievement Intent Hedging Pools**: Pool capital to auto-insure high-risk intents whenever adaptive risk spikes.
+- 🕸️ **Achievement Multi-Agent Incident Mesh**: Register multi-agent responder graphs with scoped authorities and escalation paths.
+- 🕞 **Achievement Temporal Rollback Permits**: Issue signed rollback permits with expiry, reason codes, and reviewer quorum proofs.
+- 📈 **Achievement Probabilistic Failure Forecaster**: Publish probability cones for subsystem failure windows plus mitigation owners.
+- 🔄 **Achievement Reown Session Circuit**: Chain Reown session scopes, device attestations, and force-reset rules onchain.
+- 🤝 **Achievement Counterparty Escalation Bonds**: Escrow counterparty stakes that slash if they escalate without following protocol.
+- 🏛️ **Achievement Distributed Custody Vaults**: Shard custody attestations across storage providers with quorum requirements.
+- 🚑 **Achievement Autonomous Patch Caravan**: Queue autopatch payloads, verification hashes, and adoption watchdogs.
+- 💓 **Achievement Treasury Heartbeat Orchestrator**: Emit heartbeat attestations for treasury operations, signers, and timelocks.
+- 📡 **Achievement Settlement Finality Radar**: Track finality lags across chains with alert thresholds and reviewer acknowledgements.
+- 🆘 **Achievement Disaster Aid Escrow Grid**: Map relief escrows per geography that unlock when oracle triggers attest disasters.
+- 📨 **Achievement Compliance Evidence Router**: Route encrypted evidence parcels to regulator-specific endpoints with receipt proofs.
+- 🌐 **Achievement Multi-Chain Debrief Studio**: Store standardized incident debriefs per chain with action item hashes.
+- 🧮 **Achievement Witness Density Tracker**: Measure witness coverage vs. policy and flag low-density segments.
+- 🔁 **Achievement Staged Redemption Queue**: Stage redemption unlocks that require multi-phase evidence across checkpoints.
+- 🧪 **Achievement Quantum Readiness Registry**: Log PQ readiness status, committed cutover dates, and signed audits.
+- 🛰️ **Achievement Sovereign Data Relay**: Record sovereign data replications with hashed manifests and jurisdiction tags.
+- 🌱 **Achievement Regenerative Budget Vault**: Refill treasury vaults only when impact KPIs meet regenerative thresholds.
+- 🛡️ **Achievement Adaptive Scope Guard**: Auto-adjust achievement scopes or quarantine modules when anomaly signals trip.
+- 🧵 **Achievement Multi-Hop Ticketing Graph**: Graph dependency-aware support tickets with resolution proofs.
+- 🔐 **Achievement Operator Credential Vault**: Seal operator credentials with rotation attestations and revocation proofs.
+- 📊 **Achievement Resilience KPI Synthesizer**: Fuse telemetry into resilience KPIs and notarize the synthesis recipe.
+- 📣 **Achievement Omni-Alert Coordinator**: Aggregate alerts and route them to signed channel-specific acknowledgment flows.
+- 🛡 **Achievement Hazard Insurance Grid**: Register hazard-specific parametric insurance schedules with payout proofs.
+- 🧠 **Achievement Stateful Circuit Backups**: Snapshot automation circuits with deterministic replay attestations.
+- ⚡ **Achievement Rapid Neutralization Switch**: Encode pre-authorized neutralization sequences for compromised modules.
+- 🎲 **Achievement Recovery Role Randomizer**: Randomize and attest recovery role assignments to prevent collusion.
+- 🧱 **Achievement Custodial Integrity Grid**: Score custodial providers, breaches, and remediation chronologies.
+- 📦 **Achievement Evidence Escrow Exchange**: Facilitate encrypted evidence escrows with release proofs and audit trails.
+
+Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#citadel-flux--sovereign-continuity-modules).
+
+### Polaris Relay · 30 Frontier Automations
+- 🛰️ **Achievement Reown Session Sentinel**: Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.
+- 🕸️ **Achievement Omniwallet Delegation Fabric**: Visualize cross-chain delegation graphs with expiry timers and override routes.
+- 🧱 **Achievement Perimeter Access Ledger**: Memorialize perimeter changes (RBAC, scoped keys) tied to every achievement update.
+- ⚖️ **Achievement Incentive Hedging Vault**: Hedge incentive payouts through programmable derivative vaults.
+- ⚡ **Achievement Settlement Race Arbiter**: Detect simultaneous settlements and serialize outcomes onchain.
+- 🌊 **Achievement Impact Streaming Router**: Route impact streams across chains with programmable splits and throttles.
+- 🌀 **Achievement Sovereign Rollup Snapshot**: Snapshot rollup state roots with each batch for deterministic replay.
+- 🌱 **Achievement Intent Carbon Credits Router**: Attach verified carbon credit retirements to high-emission intents before execution.
+- 🛡️ **Achievement Compliance Auto-Curator**: Auto-curate compliance rulepacks with notarized acceptance tests per achievement.
+- 🧮 **Achievement Real-Time Retro Scoreboard**: Continuously score retro candidates with signed inputs and reviewer overrides.
+- 💎 **Achievement Adaptive Royalty Vaults**: Adjust royalty unlock curves using utilization and KPI signals.
+- 🤝 **Achievement Cross-DAO Escrow Netting**: Net escrow balances between DAOs and mint settlements once multi-party approvals land.
+- 🌐 **Achievement Multi-Hop Verification Trees**: Chain verification trees across L1/L2/L3 checkpoints with witness proofs.
+- 🧭 **Achievement Temporal Evidence Lineage**: Capture lineage graphs proving evidence ordering, merges, and supersessions.
+- 🛡️ **Achievement Settlement Assurance Pools**: Offer bonded pools that underwrite failed settlements with slashable stakes.
+- 🔐 **Achievement Multi-Domain Chain Locks**: Lock coordinated multi-chain actions until every domain signs release proofs.
+- 🛟 **Achievement Rollup Safety Net**: Maintain safety-net intents that auto-migrate achievements during rollup incidents.
+- 🧪 **Achievement Verified Simulation Trails**: Pin deterministic simulation transcripts alongside live execution trajectories.
+- 🧾 **Achievement Attestation Upgrade Council**: Require council-signed manifests before new attestation formats activate.
+- 📉 **Achievement Budget Pressure Gauge**: Track budget pressure indexes and emit alerts when risk thresholds breach.
+- 📊 **Achievement Autonomic XP Curves**: Adjust XP curves programmatically using streak health, reviewer trust, and impact tiers.
+- 📚 **Achievement Tokenized Playbook Market**: Tokenize operational playbooks and log consumption or forks per builder.
+- 🔑 **Achievement Sovereign Access Graph**: Persist access graphs showing who can mutate proof data across domains.
+- ⏱️ **Achievement Adaptive Rate Limiter**: Dynamically tune rate limits per builder scope with notarized bursts/cooldowns.
+- 🛠️ **Achievement Keeper Market Maker**: Maintain keeper marketplaces with bonding, performance stats, and slashing history.
+- 🔁 **Achievement Auto-Renewal Bonds**: Auto-roll renewal bonds for long-lived achievements and record slashing/reload events.
+- 🌡️ **Achievement Dispute Heat Index**: Publish heat indexes informed by dispute probability, backlog, and severity trends.
+- 📦 **Achievement Governance Handoff Capsule**: Package context, permissions, and attested next steps for governance handoffs.
+- 🤖 **Achievement AI Fact-Check Attestor**: Log AI-driven fact-check attestations with reviewer sampling and override flows.
+- 💥 **Achievement Impact Option Vaults**: Offer option vaults that pay out when impact metrics cross verifiable strike thresholds.
+
+Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#polaris-relay--frontier-automations).
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics

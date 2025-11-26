@@ -392,6 +392,36 @@ export interface FeatureFlags {
   achievementValidatorReliefSignals: boolean
   achievementImpactAuditTrails: boolean
   achievementZeroDayResponseLedger: boolean
+  achievementReownSessionSentinel: boolean
+  achievementOmniwalletDelegationFabric: boolean
+  achievementPerimeterAccessLedger: boolean
+  achievementIncentiveHedgingVault: boolean
+  achievementSettlementRaceArbiter: boolean
+  achievementImpactStreamingRouter: boolean
+  achievementSovereignRollupSnapshot: boolean
+  achievementIntentCarbonCreditsRouter: boolean
+  achievementComplianceAutoCurator: boolean
+  achievementRealtimeRetroScoreboard: boolean
+  achievementAdaptiveRoyaltyVaults: boolean
+  achievementCrossDaoEscrowNetting: boolean
+  achievementMultiHopVerificationTrees: boolean
+  achievementTemporalEvidenceLineage: boolean
+  achievementSettlementAssurancePools: boolean
+  achievementMultiDomainChainLocks: boolean
+  achievementRollupSafetyNet: boolean
+  achievementVerifiedSimulationTrails: boolean
+  achievementAttestationUpgradeCouncil: boolean
+  achievementBudgetPressureGauge: boolean
+  achievementAutonomicXpCurves: boolean
+  achievementTokenizedPlaybookMarket: boolean
+  achievementSovereignAccessGraph: boolean
+  achievementAdaptiveRateLimiter: boolean
+  achievementKeeperMarketMaker: boolean
+  achievementAutoRenewalBonds: boolean
+  achievementDisputeHeatIndex: boolean
+  achievementGovernanceHandoffCapsule: boolean
+  achievementAiFactCheckAttestor: boolean
+  achievementImpactOptionVaults: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
