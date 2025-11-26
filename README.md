@@ -781,6 +781,36 @@ Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onc
 - 🌐 **Community Pulse**: Capture sentiment across community channels
 - 📦 **Shipping Log**: Document what shipped per surface with proof
 - 🆘 **Support Escalation**: Log escalations, on-call contacts, and notes
+- 🤖 **Automation Runs**: Log automation jobs, results, and log references
+- 🧪 **Experiment Log**: Capture experiment hypotheses, outcomes, and status
+- 🧑‍💻 **User Test Sessions**: Anchor usability personas, insights, and recordings
+- 🎨 **UI Review Notes**: Record design review scope, findings, and follow-ups
+- 🚀 **Deployment Checklist**: Confirm launch checklist items and status
+- 🛠 **Incident Response Plans**: Track mitigation owners, plans, and current status
+- 💬 **Customer Feedback**: Store customer quotes, segments, and references
+- 📊 **Usage Analytics**: Snapshot usage metrics with value and time window
+- 🗃️ **Data Snapshots**: Hash dataset exports with storage locations
+- 🔌 **Integration Status**: Monitor partner integration health and notes
+- 🛡️ **Risk Mitigation Plans**: Document mitigation playbooks for key risks
+- 📈 **Budget Forecasts**: Share future spend projections and assumptions
+- 🎯 **Grant Milestones**: Update grant milestone progress with evidence
+- 📨 **Investor Updates**: Log investor memo highlights and next focus
+- 🎤 **Community AMA Logs**: Capture AMA hosts, topics, and recording links
+- 🗳️ **DAO Proposal Links**: Attach DAO proposal references and status
+- 🚨 **Treasury Alerts**: Broadcast treasury threshold alerts and notes
+- ♿ **Accessibility Audits**: Document accessibility scope, findings, and remediation
+- 🌍 **Localization Status**: Track localization readiness per language
+- 💎 **Tokenomics Updates**: Describe emission or reward policy changes
+- 🤝 **Partner Commitments**: Record partner deliverables and due dates
+- 🗺️ **Roadmap Checkpoints**: Capture milestone status and upcoming steps
+- 📋 **Compliance Tasks**: Track compliance obligations, owners, and status
+- 🚫 **Security Exceptions**: Record approved security exceptions with expiry
+- 🗂️ **Data Retention Events**: Log retention, purge, or anonymization actions
+- 🆘 **Escalation Contacts**: Publish on-call contacts and coverage windows
+- 📘 **Runbook Links**: Attach operational runbooks and notes
+- 📢 **Release Announcements**: Link public launch announcements and recaps
+- 📈 **KPI Alerts**: Signal KPI threshold breaches and directions
+- 🎁 **Reward Distributions**: Document reward pools, amounts, and recipients
 
 ### Achievement Management
 - ⛓️ **Onchain Minting**: Permanently record achievements on Base blockchain
