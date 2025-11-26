@@ -1,6 +1,6 @@
 # Onchain Feature Expansion · Wave Θ
 
-Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, the **Lighthouse Array (F121–F150)** tranche, and the fresh **Nebula Forge (F181–F210)** lane inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
+Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, the **Lighthouse Array (F121–F150)** tranche, and the fresh **Nebula Forge (F211–F240)** lane inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
 ## Aurora Wave · Ethereum Control Plane
 
