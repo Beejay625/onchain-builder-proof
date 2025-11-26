@@ -11,35 +11,35 @@ export default function OnchainAchievementForensicSnapshotBeacon(props: HeliosMe
       accent="cyan"
       ctaLabel="Emit Snapshot Beacon"
       payloadPrefix="FORENSIC_BEACON"
-      fields=[
-      {
-              key: 'blockHeight',
-              label: 'Block Height',
-              type: 'number',
-              placeholder: '123456',
-              required: true,
-            },
-      {
-              key: 'cid',
-              label: 'Snapshot CID',
-              type: 'text',
-              placeholder: 'bafy...',
-              required: true,
-            },
-      {
-              key: 'investigator',
-              label: 'Investigator',
-              type: 'text',
-              placeholder: 'forensics@ops',
-              required: true,
-            },
-      {
-              key: 'notes',
-              label: 'Notes',
-              type: 'textarea',
-              placeholder: 'What the snapshot covers',
-            },
-    ]
+      fields={[
+        {
+        key: 'blockHeight',
+        label: 'Block Height',
+        type: 'number',
+        placeholder: '123456',
+        required: true,
+        },
+        {
+        key: 'cid',
+        label: 'Snapshot CID',
+        type: 'text',
+        placeholder: 'bafy...',
+        required: true,
+        },
+        {
+        key: 'investigator',
+        label: 'Investigator',
+        type: 'text',
+        placeholder: 'forensics@ops',
+        required: true,
+        },
+        {
+        key: 'notes',
+        label: 'Notes',
+        type: 'textarea',
+        placeholder: 'What the snapshot covers',
+        },
+      ]}
     />
   )
 }
