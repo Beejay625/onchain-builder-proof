@@ -384,6 +384,8 @@ Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onc
 - 🔮 **Achievement Vault Integrity Harbinger**: Forecast vault stress by correlating anomaly signals, policy breaches, and collateral volatility.
 - 🛰️ **Achievement Omni-Lifecycle Access Sentinel**: Track privileged access end-to-end, logging device posture and dual approvals at every stage.
 
+Deep dives for this fabric live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#obsidian-nexus--autonomous-integrity-fabric) and its program-management companion in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--obsidian-nexus-autonomous-fabric-f241f270).
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics
