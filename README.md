@@ -138,6 +138,38 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 📬 **Achievement Omnichain Inbox Router**: Normalize inbound proofs from any chain with replay-protected metadata.
 - 🪙 **Achievement Adaptive Reputation Bonds**: Create adaptive bonding curves where reputation backing adjusts in real time.
 
+### Sentinel Cascade · Continuity Enhancers
+- 🪞 **Achievement Sentinel Consensus Mirror**: Mirror validator votes and cross-domain confirmations to detect finality drift.
+- 🛰 **Achievement Predictive Failover Graph**: Score infra dependency graphs and publish predicted failover paths.
+- 🕒 **Achievement Intent Delay Vault**: Apply programmable hold windows to high-risk intents with reviewer overrides.
+- 🤝 **Achievement Guardian Bond Escrow**: Bond guardian capital onchain and auto-slash when remediation SLAs fail.
+- 🧾 **Achievement Custody Chain Sequencer**: Maintain immutable custody hop ledgers for every evidence artifact.
+- 🔐 **Achievement Encryption Envelope Ledger**: Register encryption suites, rotation cadences, and signer fingerprints per proof bundle.
+- 🛡️ **Achievement Device Trust Fabric**: Capture device attestation hashes and geo hints for every signing session.
+- 🚦 **Achievement Rate Limit Beacon**: Broadcast live throttle budgets so automation agents respect throughput caps.
+- 🧮 **Achievement Post-Quantum Attestor**: Log post-quantum proof transcripts and verifier requirements.
+- 🔁 **Achievement Rolling Proof Continuity**: Enforce overlapping proof windows to eliminate telemetry gaps.
+- 🧰 **Achievement Rollforward Repair Kit**: Store deterministic repair scripts and hashes for replaying corrupted states.
+- 🌳 **Achievement Multihop Reward Director**: Define reward routing trees with fallback recipients and onchain reason codes.
+- 💸 **Achievement Gas Refund Router**: Publish refund splits tied to sponsored transactions with spender attestations.
+- 🧾 **Achievement Sovereign Executor Ledger**: Track custom executors, permissions, and review hashes before execution.
+- 📡 **Achievement Guardian Drift Radar**: Detect idle guardians via missed heartbeats and log escalation steps.
+- 🛗 **Achievement Integrity Beacon Switchboard**: Fan-out signed integrity beacons to multiple storage planes with receipts.
+- 🚀 **Achievement Audit Replay Shuttle**: Store replay-ready datasets so auditors can deterministically reproduce incidents.
+- 🗜 **Achievement Evidence Compression Lab**: Document compression recipes, ratios, and verifiers for large archives.
+- 🪙 **Achievement Reviewer Signal Token**: Mint reviewer signal tokens that score review accuracy and trust.
+- 🔒 **Achievement Bridge Timeout Escrow**: Escrow risky bridge transfers until timeout witnesses confirm completion.
+- 🔗 **Achievement Unlock Condition Graph**: Graph unlock dependencies and proofs so downstream automations can reason over them.
+- 📓 **Achievement Execution Circuit Notebook**: Version control complex execution circuits with step proofs and reviewer comments.
+- 🧊 **Achievement Mempool Mirror Chain**: Snapshot mempool transactions relevant to achievements with hash pointers.
+- 💱 **Achievement Multi-Party Dust Settlement**: Aggregate micro-payments into scheduled settlement pulses with receipts.
+- 🔥 **Achievement Vault Warmup Scheduler**: Publish warmup scripts and seal proofs before vaults accept live deposits.
+- 🧑‍💻 **Achievement Config Lint Oracle**: Run lint policies on config/state diffs and notarize pass/fail verdicts.
+- 🌿 **Achievement Carbon Impact Proofset**: Attach per-achievement carbon footprint attestations plus retired offsets.
+- 🌲 **Achievement Adaptive Recovery Tree**: Encode adaptive recovery trees with branching conditions and guardian roles.
+- 🕯 **Achievement Warrant Canary Register**: Timestamp warrant-canary statements with status and expiry proofs.
+- 🕶 **Achievement Privacy Envelope Switch**: Toggle privacy envelopes (public, partner, sealed) with signed approvals.
+
 ### Mission Control Expansion Pack (30 Fresh Onchain Plays)
 - 🧠 **Intent Graph Auditor**: Continuously score multi-hop execution graphs, flagging brittle paths before they hit Talenty.
 - 🔁 **Recursive Intent Replay**: Auto-resubmit partially executed intents with adaptive gas and calldata tweaks.
@@ -339,6 +371,40 @@ Deep dives for this lattice live in [`docs/onchain-feature-expansion.md`](docs/o
 - 📚 **Achievement Sovereign Policy Codex**: Version control sovereign policy packs with approvals, revocations, and audit trails.
 
 Deep dives for this matrix live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#aegis-matrix--resilience-catalysts).
+
+### Lighthouse Array · 30 Crisis Automation Relays
+- 🗼 **Achievement Lighthouse Risk Sonar**: Sweep cross-chain telemetry for early instability signals before proofs degrade.
+- 🔄 **Achievement Continuity Buffer Pools**: Hold programmable buffer pools that auto-release when service debt accumulates.
+- 🧽 **Achievement Intent Backflow Scrubber**: Strip hazardous payloads from retried intents using signed policy templates.
+- 🚨 **Achievement Incident Semaphore Grid**: Broadcast color-coded incident semaphores with guardian signatures per severity.
+- 🌐 **Achievement Sovereign Warm Path Router**: Pre-provision warm routing paths across sovereign deployments with attested configs.
+- 🛡️ **Achievement Reown Relay Safeguards**: Log Reown relay scope changes alongside device posture audits for rapid recall.
+- ⚡ **Achievement Delta Abort Switch**: Encode high-risk automation abort switches with quorum proofs and cooldowns.
+- 📈 **Achievement Crisis Threshold Tuner**: Auto-tune crisis thresholds using observed drift envelopes and confidence scoring.
+- 🧠 **Achievement Failure Memory Ledger**: Archive failure fingerprints plus remediation proofs for future training runs.
+- 🤖 **Achievement Autonomous Relay Contracts**: Deploy auto-mitigation contracts that execute only after witness quorum attests.
+- 🎻 **Achievement Custodian Sync Orchestra**: Coordinate custodian refresh cycles with hashed runbooks and completion receipts.
+- 🛡️ **Achievement Proof Shelter Pools**: Isolate proofs inside temporary shelters when upstream services degrade.
+- 🪙 **Achievement Safety Net Escrow Hub**: Escrow safety funds with transparent triggers tied to continuity metrics.
+- ☁️ **Achievement Multistake Witness Cloud**: Register multi-stake witness clusters that co-sign continuity attestations.
+- 🧾 **Achievement Resilience Credit Notary**: Track issuance and redemption of resilience credits linked to metric unlocks.
+- 📊 **Achievement Telemetry Drift Vault**: Seal telemetry drift deltas along with reviewer approvals and replay links.
+- 🧯 **Achievement Error Budget Notifier**: Emit signed warnings whenever error budgets cross defined guardbands.
+- 🧪 **Achievement Redline Calibration Bureau**: Record redline calibration sessions with attested methodology and outcomes.
+- 🕹️ **Achievement Sovereign Rollback Theater**: Simulate sovereign rollback paths and notarize checkpoint transcripts.
+- 🚀 **Achievement Mission Replay Capsule**: Bundle deterministic replay assets for mission-critical achievements with receipts.
+- 🔗 **Achievement Cross-Domain Lifeline Bridge**: Maintain lifeline bridges that keep receipts synchronized across domains.
+- 🧩 **Achievement Safeguard Operator Graph**: Graph operator responsibilities, expirations, and audit trails onchain.
+- 🛎️ **Achievement Obsolescence Alarm Grid**: Alert builders when dependencies approach obsolescence windows with evidence links.
+- 🧑‍⚕️ **Achievement Guardian Relief Queue**: Queue guardian relief rotations with attested handoffs and fatigue metrics.
+- 🐝 **Achievement Anomaly Swarm Dispatcher**: Dispatch anomaly response swarms prioritized by severity-weighted tokens.
+- ✍️ **Achievement Incident Treaty Ledger**: Encode treaty clauses between teams for shared incident response obligations.
+- 🪞 **Achievement Circuit Sanity Mirror**: Mirror automation circuits into read-only watchers for differential sanity checks.
+- 🪙 **Achievement Impact Cushion Oracle**: Publish cushion coverage levels versus impact obligations for instant audits.
+- 🧮 **Achievement Continuity Policy Studio**: Version continuity policy experiments and mint acceptance verdicts.
+- 🌙 **Achievement Nightwatch Silence Timer**: Prove scheduled silence windows were intentional via countersigned timers.
+
+Deep dives for this array live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#lighthouse-array--crisis-automation-relays).
 
 ### Polaris Relay · 30 Frontier Automations
 - 🛰️ **Achievement Reown Session Sentinel**: Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.

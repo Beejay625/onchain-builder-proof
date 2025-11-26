@@ -13,6 +13,7 @@
 | W3 | Insights & Rewards | F18–F24 | Weeks 5–6 |
 | W4 | Automation & Distribution | F25–F30 | Weeks 7–8 |
 | W5 | Onchain Assurance (Wave Θ) | F31–F60 | Weeks 9–14 |
+| W6 | Sentinel Cascade Continuity | F61–F90 | Weeks 15–20 |
 
 ### 3. Shared Prerequisites
 1. **Context Upgrade** (`context/index.tsx`): multi-wallet support, cached analytics, notification stream.
@@ -380,6 +381,193 @@ Wave Θ stitches thirty additional resilience, compliance, and automation primit
 - **Contract**: `addComment` attaches bond metadata; future `adjustReputationBond` contract to enforce weights.
 - **Reputation**: Dashboard shows how weights shift after governance votes.
 - **Acceptance**: Input enforces 0–1 weight range; slider preview updates instantly.
+
+### Wave Σ · Sentinel Cascade Continuity Enhancers (F61–F90)
+
+Sentinel Cascade layers another thirty continuity and assurance primitives on top of Wave Θ. Each capability is paired with a dedicated onchain module (planned under `components/onchain/*`) and is meant to harden runtime operations, custody, and governance flows. Like prior waves, every feature is wrapped in a feature flag and inherits the shared contract helper scaffolding.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F61 | Achievement Sentinel Consensus Mirror | Finality Assurance | `components/onchain/AchievementSentinelConsensusMirror.tsx` |
+| F62 | Achievement Predictive Failover Graph | Infra Forecasting | `components/onchain/AchievementPredictiveFailoverGraph.tsx` |
+| F63 | Achievement Intent Delay Vault | Transaction Safety | `components/onchain/AchievementIntentDelayVault.tsx` |
+| F64 | Achievement Guardian Bond Escrow | Guardian Incentives | `components/onchain/AchievementGuardianBondEscrow.tsx` |
+| F65 | Achievement Custody Chain Sequencer | Evidence Custody | `components/onchain/AchievementCustodyChainSequencer.tsx` |
+| F66 | Achievement Encryption Envelope Ledger | Crypto Hygiene | `components/onchain/AchievementEncryptionEnvelopeLedger.tsx` |
+| F67 | Achievement Device Trust Fabric | Device Integrity | `components/onchain/AchievementDeviceTrustFabric.tsx` |
+| F68 | Achievement Rate Limit Beacon | Throughput Governance | `components/onchain/AchievementRateLimitBeacon.tsx` |
+| F69 | Achievement Post-Quantum Attestor | PQ Assurance | `components/onchain/AchievementPostQuantumAttestor.tsx` |
+| F70 | Achievement Rolling Proof Continuity | Telemetry Coverage | `components/onchain/AchievementRollingProofContinuity.tsx` |
+| F71 | Achievement Rollforward Repair Kit | Recovery Automation | `components/onchain/AchievementRollforwardRepairKit.tsx` |
+| F72 | Achievement Multihop Reward Director | Reward Routing | `components/onchain/AchievementMultihopRewardDirector.tsx` |
+| F73 | Achievement Gas Refund Router | Cost Accounting | `components/onchain/AchievementGasRefundRouter.tsx` |
+| F74 | Achievement Sovereign Executor Ledger | Executor Governance | `components/onchain/AchievementSovereignExecutorLedger.tsx` |
+| F75 | Achievement Guardian Drift Radar | Guardian Monitoring | `components/onchain/AchievementGuardianDriftRadar.tsx` |
+| F76 | Achievement Integrity Beacon Switchboard | Integrity Broadcast | `components/onchain/AchievementIntegrityBeaconSwitchboard.tsx` |
+| F77 | Achievement Audit Replay Shuttle | Auditability | `components/onchain/AchievementAuditReplayShuttle.tsx` |
+| F78 | Achievement Evidence Compression Lab | Storage Efficiency | `components/onchain/AchievementEvidenceCompressionLab.tsx` |
+| F79 | Achievement Reviewer Signal Token | Reviewer Incentives | `components/onchain/AchievementReviewerSignalToken.tsx` |
+| F80 | Achievement Bridge Timeout Escrow | Bridge Safety | `components/onchain/AchievementBridgeTimeoutEscrow.tsx` |
+| F81 | Achievement Unlock Condition Graph | Dependency Modeling | `components/onchain/AchievementUnlockConditionGraph.tsx` |
+| F82 | Achievement Execution Circuit Notebook | Execution Governance | `components/onchain/AchievementExecutionCircuitNotebook.tsx` |
+| F83 | Achievement Mempool Mirror Chain | Transaction Observability | `components/onchain/AchievementMempoolMirrorChain.tsx` |
+| F84 | Achievement Multi-Party Dust Settlement | Treasury Ops | `components/onchain/AchievementMultiPartyDustSettlement.tsx` |
+| F85 | Achievement Vault Warmup Scheduler | Vault Safety | `components/onchain/AchievementVaultWarmupScheduler.tsx` |
+| F86 | Achievement Config Lint Oracle | Config Quality | `components/onchain/AchievementConfigLintOracle.tsx` |
+| F87 | Achievement Carbon Impact Proofset | Sustainability | `components/onchain/AchievementCarbonImpactProofset.tsx` |
+| F88 | Achievement Adaptive Recovery Tree | Recovery Planning | `components/onchain/AchievementAdaptiveRecoveryTree.tsx` |
+| F89 | Achievement Warrant Canary Register | Legal Transparency | `components/onchain/AchievementWarrantCanaryRegister.tsx` |
+| F90 | Achievement Privacy Envelope Switch | Privacy Controls | `components/onchain/AchievementPrivacyEnvelopeSwitch.tsx` |
+
+#### F61 · Achievement Sentinel Consensus Mirror
+- **UI**: `components/onchain/AchievementSentinelConsensusMirror.tsx` lets operators log validator votes, finality slots, and drift indicators.
+- **Contract**: `createPost` stores consensus snapshots tagged `CONSENSUS_MIRROR` for downstream auditors.
+- **Acceptance**: Dashboard warns when mirrored quorum diverges from onchain finality longer than configurable threshold.
+
+#### F62 · Achievement Predictive Failover Graph
+- **UI**: Graph composer collects dependency nodes, risk weights, and predicted failover routes.
+- **Contract**: `createPost` persists serialized dependency graphs for deterministic playback.
+- **Acceptance**: Each upload shows top three failover suggestions and flags missing redundancy.
+
+#### F63 · Achievement Intent Delay Vault
+- **UI**: Allows reviewers to assign programmable hold windows to risky intents plus override notes.
+- **Contract**: `addComment` ties delay policy to the specific achievement/intent ID.
+- **Acceptance**: Hold status is displayed on mint flow; manual overrides require guardian signature.
+
+#### F64 · Achievement Guardian Bond Escrow
+- **UI**: Captures guardian address, bond amount, and SLA terms.
+- **Contract**: `createPost` anchors escrow metadata pending future `guardianBondEscrow` contract.
+- **Acceptance**: UI highlights when SLA breaches trigger recommended slashing workflow.
+
+#### F65 · Achievement Custody Chain Sequencer
+- **UI**: Stepper interface records custody hops for evidence or artifacts.
+- **Contract**: `createPost` stores immutable custody manifest for compliance review.
+- **Acceptance**: Sequencer ensures no hop is left undefined before submission.
+
+#### F66 · Achievement Encryption Envelope Ledger
+- **UI**: Form records encryption suite, rotation cadence, and signer fingerprint.
+- **Contract**: `addComment` logs `ENCRYPTION_ENVELOPE` entries.
+- **Acceptance**: Submission blocked unless fingerprint hash is provided.
+
+#### F67 · Achievement Device Trust Fabric
+- **UI**: Collects device attestation hash, geo hint, and session scope.
+- **Contract**: `createPost` records trust fabric event referencing Reown sessions.
+- **Acceptance**: Device flagged if attestation missing or geo mismatch occurs.
+
+#### F68 · Achievement Rate Limit Beacon
+- **UI**: Streams current throttle budgets and reason codes.
+- **Contract**: `addComment` publishes `RATE_LIMIT` payload that automation agents consume.
+- **Acceptance**: Dashboard surfaces beacon TTL countdown to avoid stale throttles.
+
+#### F69 · Achievement Post-Quantum Attestor
+- **UI**: Allows uploading PQ proof transcript references and verifier metadata.
+- **Contract**: `createPost` stores PQ attestation anchors for future circuits.
+- **Acceptance**: PQ mode only considered active once verifier list populated.
+
+#### F70 · Achievement Rolling Proof Continuity
+- **UI**: Configures overlapping proof windows and evidence intervals.
+- **Contract**: `addComment` logs coverage guarantees with `ROLLING_PROOF` tag.
+- **Acceptance**: Alerts trigger when coverage overlap would fall below threshold.
+
+#### F71 · Achievement Rollforward Repair Kit
+- **UI**: Captures deterministic repair scripts, hash, and target state.
+- **Contract**: `createPost` logs `ROLLFORWARD_REPAIR` payload for reproducibility.
+- **Acceptance**: Submission requires both script hash and human-readable summary.
+
+#### F72 · Achievement Multihop Reward Director
+- **UI**: Tree editor defines reward paths, fallback recipients, and reason codes.
+- **Contract**: `createPost` stores reward routing manifest.
+- **Acceptance**: Weighted splits must sum to 100%; validation enforced client-side.
+
+#### F73 · Achievement Gas Refund Router
+- **UI**: Records sponsor, refund percent, spender attestation hash.
+- **Contract**: `addComment` logs refund instructions per transaction set.
+- **Acceptance**: Only addresses with proper format accepted; else UI warns.
+
+#### F74 · Achievement Sovereign Executor Ledger
+- **UI**: Lists custom executors, scope, reviewers, and hashes of the code bundle.
+- **Contract**: `createPost` anchors ledger entries for executors before they run.
+- **Acceptance**: Executors missing reviewer signature flagged.
+
+#### F75 · Achievement Guardian Drift Radar
+- **UI**: Displays guardian heartbeat metrics and drift classifications.
+- **Contract**: `addComment` stores drift radar snapshots for accountability.
+- **Acceptance**: Guardian marked inactive after configurable heartbeat misses.
+
+#### F76 · Achievement Integrity Beacon Switchboard
+- **UI**: Allows operators to define beacon sources and fan-out destinations with receipts.
+- **Contract**: `createPost` logs switchboard state plus storage proofs.
+- **Acceptance**: Submission requires at least one destination plus receipt hash.
+
+#### F77 · Achievement Audit Replay Shuttle
+- **UI**: Captures dataset pointer, replay instructions, and auditor handle.
+- **Contract**: `createPost` anchors `AUDIT_REPLAY` payloads.
+- **Acceptance**: UI highlights when dataset hash mismatches previously logged value.
+
+#### F78 · Achievement Evidence Compression Lab
+- **UI**: Records compression recipe, ratio, and verifier binary hash.
+- **Contract**: `addComment` stores `EVIDENCE_COMPRESSION` metadata.
+- **Acceptance**: Ratio display warns when compression exceeds configurable threshold.
+
+#### F79 · Achievement Reviewer Signal Token
+- **UI**: Configures reviewer identity, signal weight, and rationale.
+- **Contract**: `createPost` logs signal token issuance; later version to mint ERC-1155.
+- **Acceptance**: Duplicate signal per reviewer/achievement blocked.
+
+#### F80 · Achievement Bridge Timeout Escrow
+- **UI**: Records bridge route, timeout, witness list, and escrow policy.
+- **Contract**: `createPost` persists `BRIDGE_TIMEOUT` entry for watchers.
+- **Acceptance**: Timeout must exceed minimum; else inline error is shown.
+
+#### F81 · Achievement Unlock Condition Graph
+- **UI**: Graph editor models dependency edges and unlock proofs.
+- **Contract**: `addComment` stores serialized DAG for automations.
+- **Acceptance**: Graph validated for cycles before allowing submission.
+
+#### F82 · Achievement Execution Circuit Notebook
+- **UI**: Markdown + schema editor for execution circuit steps and reviewers.
+- **Contract**: `createPost` logs notebooks hashed for version control.
+- **Acceptance**: Notebook needs both steps and reviewer list before saving.
+
+#### F83 · Achievement Mempool Mirror Chain
+- **UI**: Captures mempool filter criteria, hash pointers, and retention policy.
+- **Contract**: `createPost` anchors mempool mirror metadata.
+- **Acceptance**: Filter expression validated to avoid blank catch-alls.
+
+#### F84 · Achievement Multi-Party Dust Settlement
+- **UI**: Aggregates micro-payments, scheduling pulses, and recipient list.
+- **Contract**: `createPost` logs settlement manifest for treasury automation.
+- **Acceptance**: Totals computed in UI to ensure pulses exceed minimum threshold.
+
+#### F85 · Achievement Vault Warmup Scheduler
+- **UI**: Configures warmup scripts, sign-off checklist, and activation timestamp.
+- **Contract**: `addComment` logs `VAULT_WARMUP` entries for compliance.
+- **Acceptance**: Activation date must be in future; else UI blocks submission.
+
+#### F86 · Achievement Config Lint Oracle
+- **UI**: Records lint policy version, scope, and pass/fail verdict.
+- **Contract**: `createPost` stores config lint results.
+- **Acceptance**: Requires evidence link for failed runs before logging.
+
+#### F87 · Achievement Carbon Impact Proofset
+- **UI**: Collects carbon footprint, registry link, and retired offset hash.
+- **Contract**: `addComment` logs sustainability metadata.
+- **Acceptance**: Displays warnings if footprint omitted or offsets missing.
+
+#### F88 · Achievement Adaptive Recovery Tree
+- **UI**: Tree builder maps branching recovery paths with guardian roles.
+- **Contract**: `createPost` anchors tree descriptors.
+- **Acceptance**: Each branch must have exit condition; validated client-side.
+
+#### F89 · Achievement Warrant Canary Register
+- **UI**: Logs statement hash, expiry, and status (alive/triggered).
+- **Contract**: `addComment` records canary updates immutably.
+- **Acceptance**: Status automatically flips to expired when timestamp passes.
+
+#### F90 · Achievement Privacy Envelope Switch
+- **UI**: Toggle interface to switch between public/partner/sealed envelopes with approvals.
+- **Contract**: `addComment` logs envelope state plus approver addresses.
+- **Acceptance**: Multi-sig approvals enforced before sealed envelope activates.
 
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
