@@ -320,6 +320,40 @@ Deep dives for this array live in [`docs/onchain-feature-expansion.md`](docs/onc
 
 Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#polaris-relay--frontier-automations).
 
+### Continuity Fusion · 30 Cross-Domain Orchestration Modules
+- 🔄 **Achievement Continuity Fusion Orchestrator**: Orchestrate multi-domain continuity flows with sync policies and checkpoint intervals.
+- ⚛️ **Achievement Quantum State Sync**: Sync quantum-resistant state across chains using post-quantum cryptographic algorithms.
+- 🤖 **Achievement Autonomous Recovery Mesh**: Mesh autonomous recovery agents across domains with configurable recovery strategies.
+- 🛰️ **Achievement Cross-Chain Attestation Hub**: Hub for routing cross-chain attestations with support for multiple attestation protocols.
+- 🔀 **Achievement Intent Fusion Engine**: Fuse intents across multiple domains with atomic, best-effort, or partial fusion strategies.
+- 🌐 **Achievement Sovereign Data Bridge**: Bridge sovereign data with jurisdiction compliance, encryption, and data handling policies.
+- 🛡️ **Achievement Guardian Fusion Council**: Fuse guardian councils across domains with quorum thresholds and authority levels.
+- 💰 **Achievement Treasury Fusion Vault**: Fuse treasury operations across chains with aggregated, segregated, or hybrid fusion modes.
+- 🔗 **Achievement Proof Fusion Network**: Network for fusing proofs across domains with Merkle, ZK-SNARK, ZK-STARK, or fraud proof types.
+- 🗳️ **Achievement Cross-Domain Governance**: Governance system for coordinating proposals and voting across multiple domains.
+- 📦 **Achievement Intent Aggregation Pool**: Pool and aggregate intents for efficiency using time-based, size-based, or priority-based strategies.
+- ⚙️ **Achievement Sovereign Execution Layer**: Sovereign execution layer for cross-domain operations with deterministic, optimistic, or ZK-based models.
+- 🔄 **Achievement Cross-Chain State Machine**: State machine for cross-chain coordination with configurable state transitions and timeout policies.
+- 📜 **Achievement Fusion Attestation Registry**: Registry for tracking fusion attestations with expiry timestamps and revocation policies.
+- 🤝 **Achievement Multi-Domain Consensus**: Consensus mechanism across multiple domains with BFT, PoS, PoA, or hybrid consensus types.
+- 📊 **Achievement Fusion Data Pipeline**: Pipeline for fusing data across domains with streaming, batch, or hybrid processing modes.
+- 🪪 **Achievement Sovereign Identity Bridge**: Bridge sovereign identities across domains with DID, ENS, or custom identity types.
+- 📨 **Achievement Cross-Domain Messaging**: Messaging system for cross-domain communication with configurable delivery guarantees.
+- 🔒 **Achievement Fusion Security Audit**: Security audit system for fusion operations with findings tracking and remediation plans.
+- 🔐 **Achievement Quantum-Resistant Keys**: Manage quantum-resistant cryptographic keys with CRYSTALS-Kyber, Dilithium, FALCON, or SPHINCS+ algorithms.
+- ✅ **Achievement Fusion Compliance Gate**: Compliance gate for fusion operations with KYC, AML, GDPR, or multi-jurisdiction compliance types.
+- 🌍 **Achievement Sovereign Data Residency**: Manage data residency requirements with allowed/restricted regions and enforcement modes.
+- 📉 **Achievement Fusion Risk Matrix**: Risk assessment matrix for fusion operations with severity, likelihood, and mitigation strategies.
+- 💸 **Achievement Cross-Domain Settlement**: Settlement system for cross-domain transactions with atomic, optimistic, or delayed settlement modes.
+- 📡 **Achievement Fusion Telemetry Aggregator**: Aggregate telemetry across fusion domains with configurable aggregation methods and output formats.
+- 🔑 **Achievement Sovereign Access Control**: Access control for sovereign operations with configurable access levels and enforcement modes.
+- 🧮 **Achievement Fusion Governance Oracle**: Oracle for fusion governance decisions with voting results, proposal status, and quorum checks.
+- 🔐 **Achievement Quantum-Secure Channel**: Secure communication channel with quantum resistance using post-quantum encryption algorithms.
+- 📋 **Achievement Fusion Continuity Ledger**: Ledger for tracking fusion continuity with state, execution, data, or identity continuity types.
+- 🎯 **Achievement Fusion Orchestration Hub**: Central hub for orchestrating all fusion operations with centralized, distributed, or hybrid coordination policies.
+
+Deep dives for this fusion wave live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#continuity-fusion-wave--cross-domain-orchestration-f271f300).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
