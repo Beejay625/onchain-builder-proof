@@ -1,6 +1,6 @@
 # Onchain Feature Expansion · Wave Θ
 
-Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, the **Lighthouse Array (F121–F150)** tranche, and the fresh **Nebula Forge (F211–F240)** lane inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
+Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, the **Lighthouse Array (F121–F150)** tranche, **Nebula Forge (F211–F240)**, and the new **Obsidian Nexus (F241–F270)** lane inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
 ## Aurora Wave · Ethereum Control Plane
 
@@ -364,6 +364,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 28. **Achievement Adaptive Audit Mesh** — Mesh auditor pools, skill tags, and availability attestations to route reviews intelligently.
 29. **Achievement Emergency Signal Beacon** — Broadcast authenticated emergency beacons that fan out to wallets, webhooks, and comms rails.
 30. **Achievement Omni-Custody Access Guard** — Enforce custody guard rules that notarize every privileged session, signer context, and approval path.
+
+## Obsidian Nexus · Autonomous Integrity Fabric
+
+1. **Achievement Continuity Vector Cartographer** — Map dependency vectors, risk posture, and reviewer-signed mitigations for every achievement scope.
+2. **Achievement Adaptive Threat Playbook Hub** — Curate AI-assisted remediation playbooks with quorum checkpoints and automation hooks baked in.
+3. **Achievement Quantum Guardrail Relay** — Push PQ-safe guardrails to automation agents before they broadcast sensitive payloads.
+4. **Achievement Intent Provenance Arboretum** — Preserve layered intent lineage trees, supersession references, and evidence hashes onchain.
+5. **Achievement Drift-Aware Treasury Governor** — Auto-throttle treasury flows when projected vs. actual spend drifts beyond policy tolerances.
+6. **Achievement Cross-Domain Sealing Chamber** — Seal payloads before cross-chain hops, logging encryption posture and witness approvals.
+7. **Achievement Anomaly Escrow Fountain** — Stream anomaly remediation funds to impacted squads once notarized incident proofs land.
+8. **Achievement Omni-Swarm Witness Director** — Orchestrate witness swarms dynamically based on coverage gaps, jurisdiction, and performance.
+9. **Achievement Temporal Heartbeat Ledger** — Capture heartbeat cadences for guardians, agents, and treasuries so latency drifts are provable.
+10. **Achievement Deterministic Runbook Fabric** — Version deterministic runbooks with hashed scripts, parameter manifests, and reviewer attestations.
+11. **Achievement Dynamic Custody Ringfence** — Auto-adjust custody boundaries as risk scores change, ensuring privileged access stays right-sized.
+12. **Achievement Sovereign Cache Auditor** — Audit sovereign caches with retention TTLs, encryption suites, and attestor signatures onchain.
+13. **Achievement Proof Integrity Warp Drive** — Batch-verify multi-anchor proofs and publish warp hashes proving every anchor matches.
+14. **Achievement Guardian Relief Bond Exchange** — Let guardians trade relief bonds, ensuring coverage handoffs keep slashing guarantees intact.
+15. **Achievement Situational Awareness Beacon** — Broadcast fused telemetry, treasury, and governance signals as one situational awareness feed.
+16. **Achievement Zero-Loss Impact Vault** — Bond restitution vaults behind each KPI so payout failures automatically draw from guarantees.
+17. **Achievement Adaptive Policy Translator** — Translate governance prose into rulepacks with hashed schemas ready for automation.
+18. **Achievement Intent Outcome Court** — Run miniature onchain courts for disputed intents, logging jurors, evidence, and verdict hashes.
+19. **Achievement Telemetry Hush Circuit** — Gate sensitive telemetry streams behind hush circuits that notarize every consumer and throttle window.
+20. **Achievement Compliance Circuit Switch** — Flip jurisdiction-specific compliance circuits with proof-backed trigger references.
+21. **Achievement Resilience Twin Simulator** — Simulate digital twins of proof pipelines with recorded assumptions and signed outcomes.
+22. **Achievement Recovery Quorum Synthesizer** — Build optimal recovery quorums by analyzing guardian availability, expertise, and fatigue.
+23. **Achievement Counterparty Integrity Mirror** — Mirror counterparty attestations, bonding statements, and dispute histories per shared achievement.
+24. **Achievement Edge Operator Credential Forge** — Mint edge-operator credentials with device attestations, geofencing, and revocation timers.
+25. **Achievement Continuity Momentum Index** — Score continuity “momentum” by blending heartbeat adherence, buffers, and guardian workload.
+26. **Achievement Evidence Continuity Capsule** — Package rolling evidence snapshots with encrypted diffs and retention commitments.
+27. **Achievement Guardian Synchrony Grid** — Measure guardian synchrony and trigger escalations whenever response variance spikes.
+28. **Achievement Autonomous Reward Backstop** — Maintain backstop pools that auto-fund rewards when KPI vaults dip below reserve floors.
+29. **Achievement Vault Integrity Harbinger** — Forecast vault stress by correlating anomaly signals, policy breaches, and collateral volatility.
+30. **Achievement Omni-Lifecycle Access Sentinel** — Track privileged access end-to-end, logging device posture and dual approvals for every stage.
 
 ## Enablement Notes
 
