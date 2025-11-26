@@ -319,6 +319,38 @@ Deep dives for this array live in [`docs/onchain-feature-expansion.md`](docs/onc
 
 Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#polaris-relay--frontier-automations).
 
+### Nebula Forge · 30 Autonomous Continuity Controls
+- 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
+- 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
+- 🧰 **Achievement Modular Recovery Capsules**: Package pre-authorized incident capsules with calldata, guardians, and unwind steps ready for single-click activation.
+- 📘 **Achievement Guardian Playbook Composer**: Compose and notarize guardian playbooks with dependency graphs, quorum needs, and escalation clocks.
+- 🧮 **Achievement Continuum Risk Lattice**: Blend treasury, ops, and guardian tensors into one co-signed risk score per achievement.
+- ⚖️ **Achievement Proof Drift Equalizer**: Detect anchor drift across mirrors and append counter-balancing attestations before divergence escalates.
+- 💹 **Achievement Treasury Auto-Hedge Vaults**: Spin hedging vaults that follow oracle signals and treasury stress bands automatically.
+- ⚡ **Achievement Zero-Latency Witness Grid**: Register ultra-low-latency witnesses plus telemetry so incident playback preserves microsecond ordering.
+- 🧠 **Achievement Neural Incident Forecaster**: Store ML-driven incident forecasts with feature weights, reviewer approvals, and mitigation hooks.
+- 📈 **Achievement Continuity Futures Clearinghouse**: List continuity futures that hedge downtime or remediation debt with verifiable payout proofs.
+- 📦 **Achievement Multi-Hop Evidence Courier**: Route evidence parcels through notarized couriers while preserving custody attestations across storage domains.
+- ⏱️ **Achievement Crisis Timebox Director**: Encode maximum remediation windows per incident class and auto-escalate once timers breach.
+- 🛰️ **Achievement Fork Horizon Tracker**: Mirror fork-choice hints and client diversity to warn when fork horizons become unsafe.
+- ⚙️ **Achievement Kinetic Reward Governor**: Attach kinetic formulas to rewards so payouts react immediately to verified effort or risk deltas.
+- 🧑‍⚖️ **Achievement Autonomous Compliance Arbiter**: Deploy compliance arbiters that evaluate rulepacks, emit verdict hashes, and gate sensitive flows.
+- 💳 **Achievement Intent Chargeback Ledger**: Chronicle chargeback scopes, restitution flows, and dispute hashes whenever intents misfire.
+- 🔁 **Achievement Resilient Sequencer Proxy**: Buffer intents behind replay-capable sequencer proxies so congestion or censorship cannot drop payloads.
+- 🕵️ **Achievement Guardian Accountability Graph**: Graph guardian actions, heartbeats, and incident ownership to expose accountability gaps in real time.
+- 🛰️ **Achievement Telemetry Custody Router**: Route telemetry through custody routers that notarize encryption posture, retention, and access trails.
+- 🪙 **Achievement Impact Contingency Bonds**: Issue impact-linked bonds that unlock relief capital when KPIs miss attested thresholds.
+- 📮 **Achievement Sovereign Patch Relay**: Stage signed patch payloads per sovereignty zone with multi-hop delivery proofs and witness attestations.
+- 🤝 **Achievement Multilateral Witness Escrow**: Escrow witness stakes from multiple orgs and release only when quorum commitments stay healthy.
+- 🏦 **Achievement Vault Health Sentinel**: Continuously scan vault solvency, drifts, and policy compliance before payouts or withdrawals settle.
+- 📊 **Achievement Policy Drift Comparator**: Hash policy baselines and emit diffs whenever governance pushes unreviewed changes.
+- 🧷 **Achievement Proof Anchoring Synthesizer**: Collate redundant proof anchors (L1, DA, cold storage) and publish parity proofs onchain.
+- 🎚️ **Achievement Staggered Impact Orchestrator**: Sequence impact releases over multiple epochs with notarized dependency gates.
+- 🗄️ **Achievement Data Retention Capsule**: Encode retention capsules with hold/drop timers, jurisdiction tags, and destruction attestations.
+- 🕸️ **Achievement Adaptive Audit Mesh**: Mesh auditor pools, capability tags, and liveness attestations so reviews auto-route intelligently.
+- 🚨 **Achievement Emergency Signal Beacon**: Broadcast authenticated emergency beacons that fan out to wallets, webhooks, and comms rails simultaneously.
+- 🛡️ **Achievement Omni-Custody Access Guard**: Enforce custody guard rules that notarize every privileged session, device posture, and approval path.
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics
