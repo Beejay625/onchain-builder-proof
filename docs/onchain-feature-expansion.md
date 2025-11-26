@@ -1,6 +1,6 @@
 # Onchain Feature Expansion · Wave Θ
 
-Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is now mirrored across **Wave Θ (F31–F60)** and **Sentinel Cascade (F61–F90)** inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
+Thirty net-new onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each item can ship independently behind the shared feature flag scaffold defined in `types/index.ts` and `lib/featureFlags.ts`, and every feature is mirrored across **Wave Θ (F31–F60)**, **Sentinel Cascade (F61–F90)**, **Aegis Matrix (F91–F120)**, and the new **Lighthouse Array (F121–F150)** tranche inside `docs/feature-delivery-plan.md` for scheduling, staffing, and rollout tracking.
 
 ## Guardian Wave · Controls Backlog
 
@@ -166,6 +166,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 28. **Achievement Failover Bond Marketplace** — Match failover providers with achievements needing standby coverage plus SLA proofs.
 29. **Achievement Progressive Mint Covenant** — Enforce covenant checkpoints before high-risk achievements can mint.
 30. **Achievement Sovereign Policy Codex** — Version control sovereign policy packs with approvals, revocations, and audit trails.
+
+## Lighthouse Array · Crisis Automation Relays
+
+1. **Achievement Lighthouse Risk Sonar** — Sweep cross-chain telemetry for early instability signals before proofs degrade.
+2. **Achievement Continuity Buffer Pools** — Hold programmable buffer pools that auto-release when service debt accumulates.
+3. **Achievement Intent Backflow Scrubber** — Strip hazardous payloads from retried intents using signed policy templates.
+4. **Achievement Incident Semaphore Grid** — Broadcast color-coded incident semaphores with guardian signatures per severity.
+5. **Achievement Sovereign Warm Path Router** — Pre-provision warm routing paths across sovereign deployments with attested configs.
+6. **Achievement Reown Relay Safeguards** — Log Reown relay scope changes alongside device posture audits for rapid recall.
+7. **Achievement Delta Abort Switch** — Encode high-risk automation abort switches with quorum proofs and enforced cooldowns.
+8. **Achievement Crisis Threshold Tuner** — Auto-tune crisis thresholds using observed drift envelopes and confidence scoring.
+9. **Achievement Failure Memory Ledger** — Archive failure fingerprints plus remediation proofs for future training runs.
+10. **Achievement Autonomous Relay Contracts** — Deploy auto-mitigation contracts that execute only after witness quorum attests.
+11. **Achievement Custodian Sync Orchestra** — Coordinate custodian refresh cycles with hashed runbooks and completion receipts.
+12. **Achievement Proof Shelter Pools** — Isolate proofs inside temporary shelters when upstream services degrade.
+13. **Achievement Safety Net Escrow Hub** — Escrow safety funds with transparent triggers tied to continuity metrics.
+14. **Achievement Multistake Witness Cloud** — Register multi-stake witness clusters that co-sign continuity attestations.
+15. **Achievement Resilience Credit Notary** — Track issuance and redemption of resilience credits linked to metric unlocks.
+16. **Achievement Telemetry Drift Vault** — Seal telemetry drift deltas along with reviewer approvals and replay links.
+17. **Achievement Error Budget Notifier** — Emit signed warnings whenever error budgets cross defined guardbands.
+18. **Achievement Redline Calibration Bureau** — Record redline calibration sessions with attested methodology and outcomes.
+19. **Achievement Sovereign Rollback Theater** — Simulate sovereign rollback paths and notarize checkpoint transcripts.
+20. **Achievement Mission Replay Capsule** — Bundle deterministic replay assets for mission-critical achievements with receipts.
+21. **Achievement Cross-Domain Lifeline Bridge** — Maintain lifeline bridges that keep receipts synchronized across domains.
+22. **Achievement Safeguard Operator Graph** — Graph operator responsibilities, expirations, and audit trails onchain.
+23. **Achievement Obsolescence Alarm Grid** — Alert builders when dependencies approach obsolescence windows with evidence links.
+24. **Achievement Guardian Relief Queue** — Queue guardian relief rotations with attested handoffs and fatigue metrics.
+25. **Achievement Anomaly Swarm Dispatcher** — Dispatch anomaly response swarms prioritized by severity-weighted tokens.
+26. **Achievement Incident Treaty Ledger** — Encode treaty clauses between teams for shared incident response obligations.
+27. **Achievement Circuit Sanity Mirror** — Mirror automation circuits into read-only watchers for differential sanity checks.
+28. **Achievement Impact Cushion Oracle** — Publish cushion coverage levels versus impact obligations for instant audits.
+29. **Achievement Continuity Policy Studio** — Version continuity policy experiments and mint acceptance verdicts.
+30. **Achievement Nightwatch Silence Timer** — Prove scheduled silence windows were intentional via countersigned timers.
 
 ## Polaris Relay · Frontier Automations
 

@@ -438,6 +438,38 @@ Deep dives for this array live in [`docs/onchain-feature-expansion.md`](docs/onc
 - 🤖 **Achievement AI Fact-Check Attestor**: Log AI-driven fact-check attestations with reviewer sampling and override flows.
 - 💥 **Achievement Impact Option Vaults**: Offer option vaults that pay out when impact metrics cross verifiable strike thresholds.
 
+### Aurora Forge · 30 Autonomous Coordination Modules
+- 🧭 **Achievement Intent Blueprint Registry**: Publish hashed execution blueprints with reviewer approvals before risky deployments.
+- 🛰️ **Achievement Proof Sequencer Co-op**: Coordinate shared proof sequencer rotations with notarized uptime and reward splits.
+- 🌦️ **Achievement Treasury Weather Desk**: Log macro/liquidity advisories that gate treasury actions and payouts.
+- 📈 **Achievement Impact Futures Clearinghouse**: Register forward-looking impact contracts with strike KPIs and oracle feeds.
+- 🛡️ **Achievement Adaptive Validator Concierge**: Match validators to verification windows with staking incentives and slashing rules.
+- 🧬 **Achievement Autonomous Grants Router**: Route grant intents across programs using weighted governance signals.
+- 🧪 **Achievement Cross-Domain Sandbox Harness**: Capture sandbox configuration hashes for reproducible cross-domain testing.
+- 🗺️ **Achievement Coordination Canvas**: Map dependency graphs, owners, and deadlines with signed accountability receipts.
+- 🤖 **Achievement AI Pairing Ledger**: Log AI co-pilot prompts, outputs, and approvals for provenance.
+- 🗒️ **Achievement Onchain Standup Chronicle**: Mint daily standup summaries with blockers, intents, and reviewer acknowledgements.
+- 🧮 **Achievement Pursuit Batch Optimizer**: Record batched pursuit plans that minimize gas while sequencing high-impact work.
+- 💼 **Achievement Intent Collateral Composer**: Define collateral mixes per intent with thresholds downstream services enforce.
+- 🌡️ **Achievement Execution Weather Station**: Stream congestion, gas pressure, and RPC health metrics tied to execution plans.
+- 🪜 **Achievement Risk-Layered Treasury Ladder**: Encode multi-layer treasury responses for green/yellow/red risk bands.
+- ⚖️ **Achievement Modular Arbitration Escrow**: Stand up arbitration escrows with dynamic arbitrator rosters and release proofs.
+- 🌀 **Achievement Gradient Bonus Options**: Issue gradient-based bonus options that vest when engagement or impact curves rise.
+- 🌳 **Achievement Carbon Swapboard**: Swap verifiable carbon credits between achievements with settlement proofs.
+- 🕸️ **Achievement Sovereign Task Mesh**: Assign cross-DAO tasks with hashed scopes, acceptance criteria, and staking guarantees.
+- 🪪 **Achievement Device Bloom Filter**: Anchor device bloom filters for Sybil resistance in builder sessions.
+- 🤝 **Achievement Sponsorship Exchange**: Match sponsors to achievements via onchain bids, deliverable hashes, and payout rails.
+- 🧠 **Achievement Governance Memory Vault**: Store compressed governance timelines for rapid replay and diffing.
+- 🔍 **Achievement Auto Verifier Pipeline**: Describe automated verifier steps, scripts, and pass/fail statuses with tx proofs.
+- 🧑‍🏫 **Achievement Mentorship Trail Ledger**: Capture mentorship pairings, goals, and completion attestations.
+- ⚡ **Achievement Zero-Latency Sync Relay**: Document ultra-low-latency relays bridging oracle or telemetry data.
+- 💳 **Achievement Multiscope Paymaster Orchestrator**: Coordinate paymaster strategies per chain, scope, and time window.
+- 💧 **Achievement Proof Liquidity Marketplace**: Pool liquidity that fronts proof costs with revenue sharing when proofs settle.
+- 📜 **Achievement Policy Drift Sentinel**: Hash policy docs and emit drift alerts with reviewer-required acknowledgements.
+- 💸 **Achievement Impact Dividend Router**: Route dividend splits to contributors whenever KPIs exceed thresholds.
+- 🔥 **Achievement Intent Recovery Forge**: Chronicle recovery runbooks for failed intents with links to follow-up attestations.
+- 📆 **Achievement Builder Availability Index**: Maintain availability attestations for builders, squads, and reviewers with expiry proofs.
+
 Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#polaris-relay--frontier-automations).
 
 ### Advanced Achievement Operations

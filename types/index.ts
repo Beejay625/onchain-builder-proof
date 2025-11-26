@@ -482,6 +482,36 @@ export interface FeatureFlags {
   achievementFailoverBondMarketplace: boolean
   achievementProgressiveMintCovenant: boolean
   achievementSovereignPolicyCodex: boolean
+  achievementLighthouseRiskSonar: boolean
+  achievementContinuityBufferPools: boolean
+  achievementIntentBackflowScrubber: boolean
+  achievementIncidentSemaphoreGrid: boolean
+  achievementSovereignWarmPathRouter: boolean
+  achievementReownRelaySafeguards: boolean
+  achievementDeltaAbortSwitch: boolean
+  achievementCrisisThresholdTuner: boolean
+  achievementFailureMemoryLedger: boolean
+  achievementAutonomousRelayContracts: boolean
+  achievementCustodianSyncOrchestra: boolean
+  achievementProofShelterPools: boolean
+  achievementSafetyNetEscrowHub: boolean
+  achievementMultistakeWitnessCloud: boolean
+  achievementResilienceCreditNotary: boolean
+  achievementTelemetryDriftVault: boolean
+  achievementErrorBudgetNotifier: boolean
+  achievementRedlineCalibrationBureau: boolean
+  achievementSovereignRollbackTheater: boolean
+  achievementMissionReplayCapsule: boolean
+  achievementCrossDomainLifelineBridge: boolean
+  achievementSafeguardOperatorGraph: boolean
+  achievementObsolescenceAlarmGrid: boolean
+  achievementGuardianReliefQueue: boolean
+  achievementAnomalySwarmDispatcher: boolean
+  achievementIncidentTreatyLedger: boolean
+  achievementCircuitSanityMirror: boolean
+  achievementImpactCushionOracle: boolean
+  achievementContinuityPolicyStudio: boolean
+  achievementNightwatchSilenceTimer: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
