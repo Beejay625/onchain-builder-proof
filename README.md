@@ -138,6 +138,40 @@ Unlike traditional achievement systems that rely on centralized databases, this 
 - 🚦 **Throughput Governor**: Rate-limit sensitive contract functions with onchain governor knobs.
 - 🛠️ **Hotfix Arbitration Desk**: Route emergency patch proposals through scoped arbitrators before execution.
 
+### Guardian Wave · 30 Fresh Onchain Controls
+- ⚡ **Achievement Hotfix Stream**: Rapid-fire patch anchoring with automatic rollback watchers and reviewer acks.
+- 🛡️ **Achievement Safelist Registry**: Maintain onchain allowlists that gate mints, payouts, and reviewer privileges.
+- 🧪 **Achievement Stress Test**: Persist deterministic load-test scenarios, witnesses, and remediation runbooks.
+- 🌳 **Achievement Adaptive Escrow Trees**: Programmatically split escrow branches per milestone lineage with merkle proofs.
+- 🛰️ **Achievement Attestation Relay Mesh**: Bridge third-party attestations into BuilderProof with signature trails.
+- 🪟 **Achievement Sovereign Workspace Clones**: Spin isolated workspace forks and sync their diffs back via intent proofs.
+- 📊 **Achievement Multi-Tenant KPI Map**: Layer builder, squad, and program KPIs into a unified verifiable lattice.
+- 📐 **Achievement Parameter Guardrails**: Enforce reviewer-defined parameter envelopes before transactions broadcast.
+- 🧬 **Achievement Evidence Diff Visualizer**: Hash and compare evidence bundles for tamper-evident change tracking.
+- ♻️ **Achievement Integrity Backfill Engine**: Backfill historical proofs with synthetic attestations while preserving lineage.
+- 🔀 **Achievement Cross-Domain Intent Router**: Route intents across chains/protocols with explicit settlement proofs.
+- 🛡 **Achievement Recovery Guardian Council**: Assign guardian sets that can pause, thaw, or dispute achievements onchain.
+- 🧮 **Achievement Deterministic Batch Reactor**: Orchestrate deterministic batch jobs and notarize their execution traces.
+- 🕵️ **Achievement ZK KPI Oracle**: Publish KPI aggregates through zero-knowledge attestations to protect sensitive data.
+- 💧 **Achievement Liquid Backlog Underwriter**: Bond liquidity behind high-impact backlog items with slashing conditions.
+- 🧱 **Achievement Reward Cliff Simulator**: Simulate vesting cliffs and store the resulting payout curves for auditors.
+- 📡 **Achievement Governance Heartbeat Monitor**: Emit signed cadence heartbeats proving governance duties stay on schedule.
+- 🔗 **Achievement Streak Anchor Vaults**: Lock streak proofs with weighted anchors that degrade if reporting stops.
+- 🛫 **Achievement Censorship Escape Hatch**: Mirror proofs through escape routes when RPCs or sequencers censor activity.
+- ⚖️ **Achievement Impact Weight Notary**: Keep notarized impact-weight calculations plus reviewer overrides.
+- 🐝 **Achievement Delegated Witness Swarms**: Register distributed witnesses tasked with co-signing sensitive proofs.
+- 📉 **Achievement Treasury Drift Sentinel**: Compare planned vs. actual outflows and alert when drift crosses thresholds.
+- 🎁 **Achievement Programmatic Bonus Streams**: Spin KPI-triggered bonus streams that settle automatically when windows close.
+- 🧾 **Achievement Ethics Disclosure Ledger**: Link AI, data-use, and rights disclosures directly to minted achievements.
+- 🌲 **Achievement Autopruned Evidence Trees**: Auto-prune redundant evidence while preserving proofs-of-deletion onchain.
+- ⚠️ **Achievement Failure Mode Sandbox**: Sandbox failure modes and memorialize blast radius plus recovery metrics.
+- 📡 **Achievement SLA Escrow Monitor**: Escrow service-level guarantees and slash when latency/uptime windows slip.
+- 🔄 **Achievement Re-entry Timelock Guard**: Enforce cooldowns for renegotiated milestones, disputes, or retries.
+- 🌐 **Achievement Omnichain Inbox Router**: Normalize inbound proofs from any chain with replay-protection metadata.
+- 🪙 **Achievement Adaptive Reputation Bonds**: Create bonding curves where reputation backing adjusts in real time.
+
+Deep dives for this wave live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md).
+
 ### Advanced Achievement Operations
 - ⏰ **Time Capsule**: Lock achievement content for future reveal at specified timestamps
 - 📸 **Achievement Snapshot**: Capture current achievement state onchain with metrics

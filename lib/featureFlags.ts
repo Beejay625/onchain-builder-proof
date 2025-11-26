@@ -248,9 +248,6 @@ const defaultFlags: FeatureFlags = {
   achievementReentryTimelockGuard: false,
   achievementOmnichainInboxRouter: false,
   achievementAdaptiveReputationBonds: false,
-  achievementOmnichainReplayBuffer: false,
-  achievementGuardianEscalationDesk: false,
-  achievementEvidenceCompression: false,
 }
 
 let flagOverrides: Partial<FeatureFlags> = {}

@@ -332,9 +332,6 @@ export interface FeatureFlags {
   achievementReentryTimelockGuard: boolean
   achievementOmnichainInboxRouter: boolean
   achievementAdaptiveReputationBonds: boolean
-  achievementOmnichainReplayBuffer: boolean
-  achievementGuardianEscalationDesk: boolean
-  achievementEvidenceCompression: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
