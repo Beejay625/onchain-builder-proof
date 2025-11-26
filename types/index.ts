@@ -543,36 +543,36 @@ export interface FeatureFlags {
   achievementIntentRecoveryForge: boolean
   achievementBuilderAvailabilityIndex: boolean
   // Helios Mesh wave feature flags
-  achievementHeliosSignalLattice: boolean
-  achievementIncidentEscalationChoreographer: boolean
-  achievementBlastRadiusProfiler: boolean
-  achievementRunbookCircuitSwitch: boolean
-  achievementTriageSwarmCoordinator: boolean
-  achievementPostIncidentAutopsyVault: boolean
-  achievementTelemetryDampeningShield: boolean
-  achievementCrisisBudgetRouter: boolean
-  achievementGuardianPagingMatrix: boolean
-  achievementLatencySurgeBuffer: boolean
-  achievementSafeRebuildCapsule: boolean
-  achievementChainIsolationSwitch: boolean
-  achievementIncidentEvidenceRelay: boolean
-  achievementHotPatchCourier: boolean
-  achievementHazmatCredentialLocker: boolean
-  achievementAlertAuthenticityFilter: boolean
-  achievementResponseWindowLedger: boolean
-  achievementOperatorReliefRotation: boolean
-  achievementVictimCompensationPool: boolean
-  achievementMultiRegionFailoverDeck: boolean
-  achievementEmergencyConfigFreezer: boolean
-  achievementForensicSnapshotBeacon: boolean
-  achievementIncidentLearningLoop: boolean
-  achievementProofShelterBridge: boolean
-  achievementContinuityDriftRecorder: boolean
-  achievementRecoveryKpiGauge: boolean
-  achievementIncidentDebtTracker: boolean
-  achievementQuietModeBroadcast: boolean
-  achievementAutoThrottleSentinel: boolean
-  achievementGuardianAftercarePortal: boolean
+  achievementHeliosBeaconOrchestrator: boolean
+  achievementIncidentSwarmSandbox: boolean
+  achievementBlastproofCommandQueue: boolean
+  achievementRunbookDeltaCodex: boolean
+  achievementResponderBondEscrow: boolean
+  achievementAutopsyContinuityLoom: boolean
+  achievementTelemetryParityLatch: boolean
+  achievementCrisisFloatPoolRouter: boolean
+  achievementGuardianReachRouter: boolean
+  achievementLatencyFuseConsole: boolean
+  achievementRebuildDryRunCapsule: boolean
+  achievementChainAirgapSwitch: boolean
+  achievementEvidenceCourierSpoke: boolean
+  achievementPatchRelayLocker: boolean
+  achievementCredentialBurnVault: boolean
+  achievementAlertIntegrityGate: boolean
+  achievementResponseTempoLedger: boolean
+  achievementOperatorReliefWheel: boolean
+  achievementVictimReliefCoordinator: boolean
+  achievementRegionHopBlueprint: boolean
+  achievementConfigFreezeHatch: boolean
+  achievementForensicAnchorBeacon: boolean
+  achievementIncidentInsightWeave: boolean
+  achievementProofRefugeBridge: boolean
+  achievementContinuityDriftScope: boolean
+  achievementRecoveryCompassGauge: boolean
+  achievementIncidentDebtLedger: boolean
+  achievementQuietPhaseBroadcaster: boolean
+  achievementAutothrottleGuardian: boolean
+  achievementGuardianCareConsole: boolean
   // Aurora Wave feature flags
   achievementEigenRestakeShield: boolean
   achievementIntentSequencerGuard: boolean
