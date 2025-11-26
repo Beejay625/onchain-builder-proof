@@ -37,36 +37,16 @@ Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the prob
 - [`contracts/BuilderProof.sol`](contracts/BuilderProof.sol) – Source of truth for onchain logic plus ABI references.
 
 ### Mission Control Expansion Pack (30 Fresh Onchain Plays)
-- 🧠 **Intent Graph Auditor**: Continuously score multi-hop execution graphs, flagging brittle paths before they hit Talenty.
-- 🔁 **Recursive Intent Replay**: Auto-resubmit partially executed intents with adaptive gas and calldata tweaks.
-- 🛰️ **Orbit Relay Buffer**: Queue cross-domain messages with congestion-aware release windows.
-- 🧷 **Guardian Deadman Switch**: Escalate to backup guardians when primary custodians miss heartbeats.
-- 📡 **Latency Arbitration Pool**: Let reviewers stake against latency SLAs and slash underperformers automatically.
-- 🧾 **Attestation Gas Tracker**: Break down gas attribution per attestation anchor for cost accounting.
-- 💽 **Deterministic Storage Atlas**: Snapshot slot layouts per deployment so auditors can diff storage regressions.
-- 🧊 **Cold Start Proof Cache**: Pre-compute hashed payloads that unlock when offline builders reconnect.
-- ⚖️ **Policy Diff Notary**: Hash and notarize governance policy diffs with reviewer signatures.
-- 🛑 **Kill-Switch Covenant**: Encode kill-switch guardians, triggers, and rehearse logs onchain.
-- 🪪 **Identity Link Guardian**: Require multi-party approvals for DID link/unlink events tied to builders.
-- 🔂 **Auto-Rollup Replayer**: Replay rollup outputs in sandboxes to confirm deterministic parity.
-- 📦 **Artifact Integrity Anchors**: Cross-verify artifact hashes across IPFS, Arweave, and S3 mirrors.
-- 🧱 **Bridge Risk Board**: Publish live bridge risk tiers, monitors, and mitigation owners.
-- 🧬 **Fork Sensitivity Scanner**: Simulate fork-choice impacts on pending achievements with severity scoring.
-- 📊 **Retro Metric Curator**: Gate retro funding metrics through curator approvals before claims go live.
-- 🧮 **Budget Vest Oracle**: Sync treasury vesting unlocks with budget drift envelopes.
-- 🧭 **Geo-Sharded Compliance Map**: Map regulatory constraints per jurisdiction and attach reviewer attestations.
-- 📶 **Spectrum Telemetry Vault**: Stream DePIN radio/coverage telemetry alongside achievement proofs.
-- 🧯 **Incident Cooldown Timer**: Enforce minimum cooldowns and sign-offs before sensitive modules restart.
-- 📍 **Waypoint Claim Router**: Sequence multi-hop claim flows with dependency tracking.
-- 🔗 **Composable Bridge Recipes**: Store step-by-step bridge workflows with required approvals and tooling.
-- 🗂️ **Runbook NFT Binder**: Bind operational runbooks to NFTs for provenance and access control.
-- 🧑‍💻 **Shadow Reviewer Roster**: Maintain an encrypted roster of standby reviewers with activation proofs.
-- 🔍 **Firmware Provenance Trace**: Record firmware lineage, reviewers, and checksum attestations for hardware proofs.
-- ⚙️ **Scheduler Drift Alarm**: Alert when automation schedules drift beyond tolerances, including root-cause notes.
-- ✨ **Entropy Beacon Mirror**: Mirror external randomness beacons with tamper alerts and latency metrics.
-- 🧩 **Strategy Bundle Ledger**: Chain tactical execution steps into reusable bundles with success telemetry.
-- 🚦 **Throughput Governor**: Rate-limit sensitive contract functions with onchain governor knobs.
-- 🛠️ **Hotfix Arbitration Desk**: Route emergency patch proposals through scoped arbitrators before execution.
+- 🧭 **Achievement Continuity Atlas**: Log reconciler hashes and drift envelopes so every ledger pair can prove convergence.
+- 🧼 **Achievement Intent Quarantine Fabric**: Sandboxes risky intents until mitigation steps and unlock quorums are notarized.
+- 🛡️ **Achievement Guardian Wage Escrow**: Keeps guardian payroll locked until attested duties finish onchain.
+- 🧵 **Achievement Sovereign Failover Loom**: Weaves deterministic reroute lanes across sovereign deployments with live probes.
+- 📡 **Achievement Observability Signal Mint**: Mints coverage attestations that prove logs, metrics, and traces met policy.
+- 🌀 **Achievement Snapshot Integrity Gyre**: Rotates multi-plane snapshot manifests plus checksum proofs for recovery drills.
+- 💸 **Achievement Service Rebate Router**: Automates make-good credits whenever SLA trigger signals stack up.
+- 🚨 **Achievement Congestion Escalation Board**: Publishes severity-ranked workload boards so orchestration respects resilience priorities.
+- 🤝 **Achievement Mutual Aid Clearinghouse**: Coordinates cross-DAO resource pledges, unlock triggers, and repayment covenants.
+- 📜 **Achievement Sovereign Policy Manuscript**: Versions policy packs with jurisdiction tags, approvers, and revocation trails.
 
 ### Guardian Wave · 30 Fresh Onchain Controls
 - ⚡ **Achievement Hotfix Stream**: Rapid-fire patch anchoring with automatic rollback watchers and reviewer acks.
