@@ -15,7 +15,7 @@
 | W5 | Onchain Assurance (Wave Θ) | F31–F60 | Weeks 9–14 |
 | W6 | Sentinel Cascade Continuity | F61–F90 | Weeks 15–20 |
 | W7 | Aurora Wave · Ethereum Control Plane | F151–F180 | Weeks 21–26 |
-| W8 | Nebula Forge Autonomous Grid | F181–F210 | Weeks 27–32 |
+| W8 | Nebula Forge Autonomous Grid | F211–F240 | Weeks 27–32 |
 
 ### 3. Shared Prerequisites
 1. **Context Upgrade** (`context/index.tsx`): multi-wallet support, cached analytics, notification stream.
@@ -1042,38 +1042,6 @@ Aurora Wave layers thirty Ethereum-first controls that harden intent routing, tr
 | F179 | Achievement Payout Circuit Breaker | Treasury Collective | Discovery | `components/onchain/AchievementPayoutCircuitBreaker.tsx` |
 | F180 | Achievement Data Availability Vault | Data Plane | Spec Ready | `components/onchain/AchievementDataAvailabilityVault.tsx` |
 
-| ID | Feature | Team | Status | Primary Surface |
-| --- | --- | --- | --- | --- |
-| F181 | Achievement Sovereign Failover Mesh | Reliability Guild | Discovery | `components/onchain/AchievementSovereignFailoverMesh.tsx` |
-| F182 | Achievement Adaptive Intent Firewall | Trust & Safety | Spec Ready | `components/onchain/AchievementAdaptiveIntentFirewall.tsx` |
-| F183 | Achievement Modular Recovery Capsules | Automation Studio | Discovery | `components/onchain/AchievementModularRecoveryCapsules.tsx` |
-| F184 | Achievement Guardian Playbook Composer | Guardian Council | Spec Ready | `components/onchain/AchievementGuardianPlaybookComposer.tsx` |
-| F185 | Achievement Continuum Risk Lattice | Treasury Risk | Discovery | `components/onchain/AchievementContinuumRiskLattice.tsx` |
-| F186 | Achievement Proof Drift Equalizer | Evidence Pod | Spec Ready | `components/onchain/AchievementProofDriftEqualizer.tsx` |
-| F187 | Achievement Treasury Auto-Hedge Vaults | Treasury Collective | Discovery | `components/onchain/AchievementTreasuryAutoHedgeVaults.tsx` |
-| F188 | Achievement Zero-Latency Witness Grid | Evidence Pod | Spec Ready | `components/onchain/AchievementZeroLatencyWitnessGrid.tsx` |
-| F189 | Achievement Neural Incident Forecaster | Reliability Guild | Discovery | `components/onchain/AchievementNeuralIncidentForecaster.tsx` |
-| F190 | Achievement Continuity Futures Clearinghouse | Treasury Collective | Discovery | `components/onchain/AchievementContinuityFuturesClearinghouse.tsx` |
-| F191 | Achievement Multi-Hop Evidence Courier | Evidence Pod | Spec Ready | `components/onchain/AchievementMultiHopEvidenceCourier.tsx` |
-| F192 | Achievement Crisis Timebox Director | Governance Pod | Discovery | `components/onchain/AchievementCrisisTimeboxDirector.tsx` |
-| F193 | Achievement Fork Horizon Tracker | Reliability Guild | Spec Ready | `components/onchain/AchievementForkHorizonTracker.tsx` |
-| F194 | Achievement Kinetic Reward Governor | Rewards | Discovery | `components/onchain/AchievementKineticRewardGovernor.tsx` |
-| F195 | Achievement Autonomous Compliance Arbiter | Compliance Studio | Spec Ready | `components/onchain/AchievementAutonomousComplianceArbiter.tsx` |
-| F196 | Achievement Intent Chargeback Ledger | Treasury Ops | Discovery | `components/onchain/AchievementIntentChargebackLedger.tsx` |
-| F197 | Achievement Resilient Sequencer Proxy | Automation Studio | Spec Ready | `components/onchain/AchievementResilientSequencerProxy.tsx` |
-| F198 | Achievement Guardian Accountability Graph | Guardian Council | Discovery | `components/onchain/AchievementGuardianAccountabilityGraph.tsx` |
-| F199 | Achievement Telemetry Custody Router | Data Plane | Spec Ready | `components/onchain/AchievementTelemetryCustodyRouter.tsx` |
-| F200 | Achievement Impact Contingency Bonds | Treasury Collective | Discovery | `components/onchain/AchievementImpactContingencyBonds.tsx` |
-| F201 | Achievement Sovereign Patch Relay | Automation Studio | Discovery | `components/onchain/AchievementSovereignPatchRelay.tsx` |
-| F202 | Achievement Multilateral Witness Escrow | Guardian Council | Spec Ready | `components/onchain/AchievementMultilateralWitnessEscrow.tsx` |
-| F203 | Achievement Vault Health Sentinel | Treasury Risk | Discovery | `components/onchain/AchievementVaultHealthSentinel.tsx` |
-| F204 | Achievement Policy Drift Comparator | Governance Pod | Spec Ready | `components/onchain/AchievementPolicyDriftComparator.tsx` |
-| F205 | Achievement Proof Anchoring Synthesizer | Evidence Pod | Discovery | `components/onchain/AchievementProofAnchoringSynthesizer.tsx` |
-| F206 | Achievement Staggered Impact Orchestrator | Treasury Collective | Spec Ready | `components/onchain/AchievementStaggeredImpactOrchestrator.tsx` |
-| F207 | Achievement Data Retention Capsule | Compliance Studio | Discovery | `components/onchain/AchievementDataRetentionCapsule.tsx` |
-| F208 | Achievement Adaptive Audit Mesh | Auditor Guild | Spec Ready | `components/onchain/AchievementAdaptiveAuditMesh.tsx` |
-| F209 | Achievement Emergency Signal Beacon | Reliability Guild | Discovery | `components/onchain/AchievementEmergencySignalBeacon.tsx` |
-| F210 | Achievement Omni-Custody Access Guard | Guardian Council | Spec Ready | `components/onchain/AchievementOmniCustodyAccessGuard.tsx` |
 
 #### F151 · Achievement EigenRestake Shield
 - **Goal**: Pin EigenLayer restake attestations to each achievement, exposing slashable stakes when remediation windows are breached.
@@ -1225,155 +1193,6 @@ Aurora Wave layers thirty Ethereum-first controls that harden intent routing, tr
 - **Surfaces**: Data pipeline UI + `DataAvailabilityCommitment` struct storing blob references.
 - **Acceptance**: Submission fails without blob version hash and expiry metadata.
 
-#### F181 · Achievement Sovereign Failover Mesh
-- **Goal**: Clone complete achievement scopes across sovereign deployments so failovers replay deterministically.
-- **Surfaces**: Reliability console plus contract mapping `sovereignFailoverMesh` storing region IDs, rehearsal hashes, and quorum signers.
-- **Acceptance**: Failover cannot trigger unless the most recent rehearsal hash is <14 days old and quorum signatures match the target region.
-
-#### F182 · Achievement Adaptive Intent Firewall
-- **Goal**: Score intents with AI and rules engines before broadcast, forcing reviewers to notarize any override.
-- **Surfaces**: Intent composer guardrail UI + `IntentFirewallPolicy` struct logging rulepacks, scores, and override hashes.
-- **Acceptance**: Intents with scores below policy floor revert unless an override hash referencing the same payload is provided.
-
-#### F183 · Achievement Modular Recovery Capsules
-- **Goal**: Pre-build modular recovery capsules that ship calldata, guardian assignments, and unwind steps for rapid deployment.
-- **Surfaces**: Capsule library UI + contract `RecoveryCapsule` struct linking calldata CID, guardian quorum, and expiry.
-- **Acceptance**: Capsule activation requires matching guardian quorum signatures and unexpired capsule metadata.
-
-#### F184 · Achievement Guardian Playbook Composer
-- **Goal**: Let guardian leads compose, version, and notarize incident playbooks tied to specific achievement classes.
-- **Surfaces**: Guardian dashboard composer + `GuardianPlaybook` struct storing version hash, dependencies, and escalation timers.
-- **Acceptance**: Playbook cannot publish until dependencies are acknowledged and timer values fall within policy envelope.
-
-#### F185 · Achievement Continuum Risk Lattice
-- **Goal**: Calculate multi-factor risk tensors that treasury, ops, and guardian teams can co-sign each epoch.
-- **Surfaces**: Risk lattice UI + `RiskContinuum` struct storing factor weights, contributor signatures, and decay windows.
-- **Acceptance**: Lattice entries lacking signatures from all three stakeholder groups remain in “draft” and cannot gate automation.
-
-#### F186 · Achievement Proof Drift Equalizer
-- **Goal**: Detect proof drift between mirrored anchors and auto-attach counter-balancing attestations before divergence widens.
-- **Surfaces**: Evidence diff view + contract `ProofDrift` struct storing baseline root, mirror root, and equalization event hash.
-- **Acceptance**: Equalizer must emit a remediation reference hash whenever drift exceeds configured basis points.
-
-#### F187 · Achievement Treasury Auto-Hedge Vaults
-- **Goal**: Deploy hedging vaults that allocate coverage instruments based on oracle feeds and treasury stress scores.
-- **Surfaces**: Treasury hedging UI + `AutoHedgeVault` struct storing strategy ID, oracle IDs, and hedge position proofs.
-- **Acceptance**: Vault cannot rebalance without two oracle confirmations and a risk score delta above the trigger threshold.
-
-#### F188 · Achievement Zero-Latency Witness Grid
-- **Goal**: Register ultra-low-latency witnesses and capture their telemetry so incident playback preserves microsecond order.
-- **Surfaces**: Witness grid monitor + `LowLatencyWitness` struct storing jitter metrics, last heartbeat, and attest key.
-- **Acceptance**: Witness entries auto-suspend if jitter exceeds SLA or heartbeat gaps surpass configured maximum.
-
-#### F189 · Achievement Neural Incident Forecaster
-- **Goal**: Provide ML-driven incident forecasts with feature importance, reviewer approvals, and countermeasure references.
-- **Surfaces**: Forecast UI + `IncidentForecast` struct capturing model hash, feature weights, and reviewer signature set.
-- **Acceptance**: Forecasts lacking reviewer signatures cannot block rollout nor trigger automations.
-
-#### F190 · Achievement Continuity Futures Clearinghouse
-- **Goal**: List continuity futures that hedge downtime or remediation debt and settle automatically on incident proof.
-- **Surfaces**: Treasury derivatives panel + `ContinuityFuture` struct storing strike KPI, payout asset, and oracle feed IDs.
-- **Acceptance**: Futures settle only when oracle feeds emit an incident hash that matches the stored strike KPI reference.
-
-#### F191 · Achievement Multi-Hop Evidence Courier
-- **Goal**: Route evidence across multiple custody layers while preserving notarized courier checkpoints and encryption posture.
-- **Surfaces**: Evidence courier UI + `EvidenceCourierRoute` struct with hop sequence, custody attestations, and checksum.
-- **Acceptance**: Route submission rejected if any hop lacks custody attestation or checksum mismatch occurs.
-
-#### F192 · Achievement Crisis Timebox Director
-- **Goal**: Enforce maximum remediation windows per incident class with auto-escalations once timers breach.
-- **Surfaces**: Governance incident board + `CrisisTimebox` struct storing class ID, time budget, escalation target, and proofs.
-- **Acceptance**: When timer expires without resolution hash, escalation event must emit automatically with the configured target.
-
-#### F193 · Achievement Fork Horizon Tracker
-- **Goal**: Track fork-choice hints, client diversity, and shadow gas data to warn when fork horizons become unsafe.
-- **Surfaces**: Reliability dashboard + `ForkHorizon` struct storing client mix, head hashes, and risk percentile.
-- **Acceptance**: Tracker issues blocking alert when risk percentile exceeds policy, preventing new deployments until acknowledged.
-
-#### F194 · Achievement Kinetic Reward Governor
-- **Goal**: Convert real-time ops metrics into kinetic reward multipliers that throttle or boost payouts immediately.
-- **Surfaces**: Rewards governor UI + `KineticReward` struct storing formula hash, KPI feed IDs, and last multiplier.
-- **Acceptance**: Multipliers must include proof of source KPI feeds; missing proofs freeze adjustments.
-
-#### F195 · Achievement Autonomous Compliance Arbiter
-- **Goal**: Run autonomous compliance arbiters that evaluate rulepacks and gate sensitive actions with notarized verdicts.
-- **Surfaces**: Compliance arbiter console + `ComplianceArbiter` struct storing rulepack hash, verdict, and reviewer overrides.
-- **Acceptance**: Sensitive transaction cannot execute unless latest arbiter verdict is “pass” or override hash references same payload.
-
-#### F196 · Achievement Intent Chargeback Ledger
-- **Goal**: Chronicle chargeback cases for intents that misfire, including restitution flows, disputants, and reason codes.
-- **Surfaces**: Treasury ops ledger + `IntentChargeback` struct storing intent ID, chargeback amount, and dispute hash.
-- **Acceptance**: Ledger entry must reference a finalized dispute hash before funds can be debited.
-
-#### F197 · Achievement Resilient Sequencer Proxy
-- **Goal**: Maintain sequencer proxies with replay buffers so intents persist when upstream sequencers fail or censor.
-- **Surfaces**: Automation studio UI + contract proxy module storing buffer depth, replay hash, and fallback RPC endpoints.
-- **Acceptance**: Proxy cannot acknowledge completion until replay buffer hash matches onchain verification hash.
-
-#### F198 · Achievement Guardian Accountability Graph
-- **Goal**: Graph guardian activities, heartbeats, and incident ownership to expose accountability gaps.
-- **Surfaces**: Guardian analytics view + `GuardianAccountabilityEdge` struct storing action type, timestamp, and evidence CID.
-- **Acceptance**: Graph must flag and block guardian rotations if accountability edges fall below quorum-defined minimums.
-
-#### F199 · Achievement Telemetry Custody Router
-- **Goal**: Route telemetry feeds through custody routers that notarize encryption posture, retention, and access logs.
-- **Surfaces**: Data plane router UI + `TelemetryCustody` struct storing encryption suite, retention TTL, and access hashes.
-- **Acceptance**: Router refuses to forward telemetry when retention TTL or encryption suite is missing or expired.
-
-#### F200 · Achievement Impact Contingency Bonds
-- **Goal**: Issue impact-linked bonds unlocking relief funding when KPIs miss attested thresholds.
-- **Surfaces**: Treasury bond console + `ImpactContingencyBond` struct storing KPI oracle, strike, and payout receivers.
-- **Acceptance**: Bond payout executes only when oracle proof shows KPI below strike for two consecutive observations.
-
-#### F201 · Achievement Sovereign Patch Relay
-- **Goal**: Stage signed patch payloads per sovereignty zone with multi-hop delivery proofs.
-- **Surfaces**: Automation deploy UI + `SovereignPatchRelay` struct storing zone ID, payload CID, and delivery witness list.
-- **Acceptance**: Patch cannot execute until delivery witnesses attest receipt in the correct sequence.
-
-#### F202 · Achievement Multilateral Witness Escrow
-- **Goal**: Escrow witness stakes from multiple orgs, releasing capital when commitments stay healthy.
-- **Surfaces**: Guardian escrow UI + `MultilateralWitnessEscrow` struct storing participants, stake size, and health metrics.
-- **Acceptance**: Withdrawal requires health metric proofs and quorum approvals; otherwise funds stay bonded.
-
-#### F203 · Achievement Vault Health Sentinel
-- **Goal**: Continuously scan vault solvency, drifts, and policy compliance before payouts or withdrawals settle.
-- **Surfaces**: Treasury sentinel UI + `VaultHealth` struct storing solvency ratio, drift hash, and reviewer acknowledgement.
-- **Acceptance**: Vault operations auto-halt if solvency ratio dips below threshold without reviewer acknowledgement hash.
-
-#### F204 · Achievement Policy Drift Comparator
-- **Goal**: Hash policy baselines and emit diffs whenever governance pushes changes without review.
-- **Surfaces**: Governance comparator panel + `PolicyDrift` struct storing baseline hash, proposed hash, and diff CID.
-- **Acceptance**: Comparator must block policy activation until a reviewer signs the diff CID.
-
-#### F205 · Achievement Proof Anchoring Synthesizer
-- **Goal**: Collate redundant proof anchors across L1, DA layers, and cold storage, then verify parity onchain.
-- **Surfaces**: Evidence synth UI + `ProofAnchorSynth` struct storing anchor list, parity hash, and verifier signature.
-- **Acceptance**: Synth submissions missing any anchor location or parity hash revert.
-
-#### F206 · Achievement Staggered Impact Orchestrator
-- **Goal**: Sequence impact releases over multiple epochs with attestable dependency gates.
-- **Surfaces**: Impact orchestrator UI + `StaggeredImpactPlan` struct storing epoch list, dependency IDs, and unlock proofs.
-- **Acceptance**: Later epochs cannot unlock until prerequisite dependencies include notarized completion hashes.
-
-#### F207 · Achievement Data Retention Capsule
-- **Goal**: Encode data-retention capsules with hold/drop timers, jurisdiction tags, and destruction attestations.
-- **Surfaces**: Compliance console + `DataRetentionCapsule` struct storing retention policy, jurisdiction, and destruction proof hash.
-- **Acceptance**: Capsule transitions to “destroyed” state only when destruction proof hash references an approved attestor.
-
-#### F208 · Achievement Adaptive Audit Mesh
-- **Goal**: Mesh auditor pools, capability tags, and availability attestations to route reviews automatically.
-- **Surfaces**: Auditor mesh UI + `AuditMeshNode` struct storing capability tags, stake, and liveness proofs.
-- **Acceptance**: Assignment engine must select only auditors with fresh liveness proofs and capability overlap for the requested scope.
-
-#### F209 · Achievement Emergency Signal Beacon
-- **Goal**: Broadcast authenticated emergency beacons that reach wallets, webhooks, and comm rails simultaneously.
-- **Surfaces**: Beacon control UI + `EmergencySignal` struct storing severity, channel map, and signature fan-out receipts.
-- **Acceptance**: Beacon fails unless every channel reports acknowledgment within defined SLA windows.
-
-#### F210 · Achievement Omni-Custody Access Guard
-- **Goal**: Enforce custody guard rules that notarize every privileged session, device posture, and approval path.
-- **Surfaces**: Custody access UI + `OmniCustodyGuard` struct storing session hash, device attestation, and reviewer approvals.
-- **Acceptance**: Privileged session cannot start without device attestation and dual approval references.
 
 ### Wave Ξ · Helios Forge Continuity Grid (F181–F210)
 
@@ -1561,6 +1380,193 @@ Helios Forge brings another thirty deterministic continuity primitives online, f
 - **UI**: Hedge desk config captures KPI series, derivative type, collateral vault, and expiry.
 - **Contract**: `addComment` logs `KPI_HEDGE_DESK` payload enabling automated hedging flows.
 - **Acceptance**: Entries must specify collateral vault and expiry in the future; missing either rejects submission.
+
+### Wave Π · Nebula Forge Autonomous Grid (F211–F240)
+
+Nebula Forge extends BuilderProof with thirty autonomous continuity controls focused on intent firewalls, treasury hedges, guardian accountability, and cross-domain telemetry custody. Each capability ships behind a discrete feature flag and mirrors the acceptance criteria captured in [`docs/onchain-feature-expansion.md#nebula-forge--autonomous-continuity-grid`](docs/onchain-feature-expansion.md#nebula-forge--autonomous-continuity-grid).
+
+| ID | Feature | Owner | Status | Primary Surface |
+| --- | --- | --- | --- | --- |
+| F211 | Achievement Sovereign Failover Mesh | Reliability Guild | Discovery | `components/onchain/AchievementSovereignFailoverMesh.tsx` |
+| F212 | Achievement Adaptive Intent Firewall | Trust & Safety | Spec Ready | `components/onchain/AchievementAdaptiveIntentFirewall.tsx` |
+| F213 | Achievement Modular Recovery Capsules | Automation Studio | Discovery | `components/onchain/AchievementModularRecoveryCapsules.tsx` |
+| F214 | Achievement Guardian Playbook Composer | Guardian Council | Spec Ready | `components/onchain/AchievementGuardianPlaybookComposer.tsx` |
+| F215 | Achievement Continuum Risk Lattice | Treasury Risk | Discovery | `components/onchain/AchievementContinuumRiskLattice.tsx` |
+| F216 | Achievement Proof Drift Equalizer | Evidence Pod | Spec Ready | `components/onchain/AchievementProofDriftEqualizer.tsx` |
+| F217 | Achievement Treasury Auto-Hedge Vaults | Treasury Collective | Discovery | `components/onchain/AchievementTreasuryAutoHedgeVaults.tsx` |
+| F218 | Achievement Zero-Latency Witness Grid | Evidence Pod | Spec Ready | `components/onchain/AchievementZeroLatencyWitnessGrid.tsx` |
+| F219 | Achievement Neural Incident Forecaster | Reliability Guild | Discovery | `components/onchain/AchievementNeuralIncidentForecaster.tsx` |
+| F220 | Achievement Continuity Futures Clearinghouse | Treasury Collective | Discovery | `components/onchain/AchievementContinuityFuturesClearinghouse.tsx` |
+| F221 | Achievement Multi-Hop Evidence Courier | Evidence Pod | Spec Ready | `components/onchain/AchievementMultiHopEvidenceCourier.tsx` |
+| F222 | Achievement Crisis Timebox Director | Governance Pod | Discovery | `components/onchain/AchievementCrisisTimeboxDirector.tsx` |
+| F223 | Achievement Fork Horizon Tracker | Reliability Guild | Spec Ready | `components/onchain/AchievementForkHorizonTracker.tsx` |
+| F224 | Achievement Kinetic Reward Governor | Rewards | Discovery | `components/onchain/AchievementKineticRewardGovernor.tsx` |
+| F225 | Achievement Autonomous Compliance Arbiter | Compliance Studio | Spec Ready | `components/onchain/AchievementAutonomousComplianceArbiter.tsx` |
+| F226 | Achievement Intent Chargeback Ledger | Treasury Ops | Discovery | `components/onchain/AchievementIntentChargebackLedger.tsx` |
+| F227 | Achievement Resilient Sequencer Proxy | Automation Studio | Spec Ready | `components/onchain/AchievementResilientSequencerProxy.tsx` |
+| F228 | Achievement Guardian Accountability Graph | Guardian Council | Discovery | `components/onchain/AchievementGuardianAccountabilityGraph.tsx` |
+| F229 | Achievement Telemetry Custody Router | Data Plane | Spec Ready | `components/onchain/AchievementTelemetryCustodyRouter.tsx` |
+| F230 | Achievement Impact Contingency Bonds | Treasury Collective | Discovery | `components/onchain/AchievementImpactContingencyBonds.tsx` |
+| F231 | Achievement Sovereign Patch Relay | Automation Studio | Discovery | `components/onchain/AchievementSovereignPatchRelay.tsx` |
+| F232 | Achievement Multilateral Witness Escrow | Guardian Council | Spec Ready | `components/onchain/AchievementMultilateralWitnessEscrow.tsx` |
+| F233 | Achievement Vault Health Sentinel | Treasury Risk | Discovery | `components/onchain/AchievementVaultHealthSentinel.tsx` |
+| F234 | Achievement Policy Drift Comparator | Governance Pod | Spec Ready | `components/onchain/AchievementPolicyDriftComparator.tsx` |
+| F235 | Achievement Proof Anchoring Synthesizer | Evidence Pod | Discovery | `components/onchain/AchievementProofAnchoringSynthesizer.tsx` |
+| F236 | Achievement Staggered Impact Orchestrator | Treasury Collective | Spec Ready | `components/onchain/AchievementStaggeredImpactOrchestrator.tsx` |
+| F237 | Achievement Data Retention Capsule | Compliance Studio | Discovery | `components/onchain/AchievementDataRetentionCapsule.tsx` |
+| F238 | Achievement Adaptive Audit Mesh | Auditor Guild | Spec Ready | `components/onchain/AchievementAdaptiveAuditMesh.tsx` |
+| F239 | Achievement Emergency Signal Beacon | Reliability Guild | Discovery | `components/onchain/AchievementEmergencySignalBeacon.tsx` |
+| F240 | Achievement Omni-Custody Access Guard | Guardian Council | Spec Ready | `components/onchain/AchievementOmniCustodyAccessGuard.tsx` |
+
+#### F211 · Achievement Sovereign Failover Mesh
+- **Goal**: Clone complete achievement scopes across sovereign deployments so failovers replay deterministically.
+- **Surfaces**: Reliability console plus contract mapping `sovereignFailoverMesh` storing region IDs, rehearsal hashes, and quorum signers.
+- **Acceptance**: Failover cannot trigger unless the most recent rehearsal hash is <14 days old and quorum signatures match the target region.
+
+#### F212 · Achievement Adaptive Intent Firewall
+- **Goal**: Score intents with AI and rules engines before broadcast, forcing reviewers to notarize any override.
+- **Surfaces**: Intent composer guardrail UI + `IntentFirewallPolicy` struct logging rulepacks, scores, and override hashes.
+- **Acceptance**: Intents with scores below policy floor revert unless an override hash referencing the same payload is provided.
+
+#### F213 · Achievement Modular Recovery Capsules
+- **Goal**: Pre-build modular recovery capsules that ship calldata, guardian assignments, and unwind steps for rapid deployment.
+- **Surfaces**: Capsule library UI + contract `RecoveryCapsule` struct linking calldata CID, guardian quorum, and expiry.
+- **Acceptance**: Capsule activation requires matching guardian quorum signatures and unexpired capsule metadata.
+
+#### F214 · Achievement Guardian Playbook Composer
+- **Goal**: Let guardian leads compose, version, and notarize incident playbooks tied to specific achievement classes.
+- **Surfaces**: Guardian dashboard composer + `GuardianPlaybook` struct storing version hash, dependencies, and escalation timers.
+- **Acceptance**: Playbook cannot publish until dependencies are acknowledged and timer values fall within policy envelope.
+
+#### F215 · Achievement Continuum Risk Lattice
+- **Goal**: Calculate multi-factor risk tensors that treasury, ops, and guardian teams can co-sign each epoch.
+- **Surfaces**: Risk lattice UI + `RiskContinuum` struct storing factor weights, contributor signatures, and decay windows.
+- **Acceptance**: Lattice entries lacking signatures from all three stakeholder groups remain in “draft” and cannot gate automation.
+
+#### F216 · Achievement Proof Drift Equalizer
+- **Goal**: Detect proof drift between mirrored anchors and auto-attach counter-balancing attestations before divergence widens.
+- **Surfaces**: Evidence diff view + contract `ProofDrift` struct storing baseline root, mirror root, and equalization event hash.
+- **Acceptance**: Equalizer must emit a remediation reference hash whenever drift exceeds configured basis points.
+
+#### F217 · Achievement Treasury Auto-Hedge Vaults
+- **Goal**: Deploy hedging vaults that allocate coverage instruments based on oracle feeds and treasury stress scores.
+- **Surfaces**: Treasury hedging UI + `AutoHedgeVault` struct storing strategy ID, oracle IDs, and hedge position proofs.
+- **Acceptance**: Vault cannot rebalance without two oracle confirmations and a risk score delta above the trigger threshold.
+
+#### F218 · Achievement Zero-Latency Witness Grid
+- **Goal**: Register ultra-low-latency witnesses and capture their telemetry so incident playback preserves microsecond order.
+- **Surfaces**: Witness grid monitor + `LowLatencyWitness` struct storing jitter metrics, last heartbeat, and attest key.
+- **Acceptance**: Witness entries auto-suspend if jitter exceeds SLA or heartbeat gaps surpass configured maximum.
+
+#### F219 · Achievement Neural Incident Forecaster
+- **Goal**: Provide ML-driven incident forecasts with feature importance, reviewer approvals, and countermeasure references.
+- **Surfaces**: Forecast UI + `IncidentForecast` struct capturing model hash, feature weights, and reviewer signature set.
+- **Acceptance**: Forecasts lacking reviewer signatures cannot block rollout nor trigger automations.
+
+#### F220 · Achievement Continuity Futures Clearinghouse
+- **Goal**: List continuity futures that hedge downtime or remediation debt and settle automatically on incident proof.
+- **Surfaces**: Treasury derivatives panel + `ContinuityFuture` struct storing strike KPI, payout asset, and oracle feed IDs.
+- **Acceptance**: Futures settle only when oracle feeds emit an incident hash that matches the stored strike KPI reference.
+
+#### F221 · Achievement Multi-Hop Evidence Courier
+- **Goal**: Route evidence across multiple custody layers while preserving notarized courier checkpoints and encryption posture.
+- **Surfaces**: Evidence courier UI + `EvidenceCourierRoute` struct with hop sequence, custody attestations, and checksum.
+- **Acceptance**: Route submission rejected if any hop lacks custody attestation or checksum mismatch occurs.
+
+#### F222 · Achievement Crisis Timebox Director
+- **Goal**: Enforce maximum remediation windows per incident class with auto-escalations once timers breach.
+- **Surfaces**: Governance incident board + `CrisisTimebox` struct storing class ID, time budget, escalation target, and proofs.
+- **Acceptance**: When timer expires without resolution hash, escalation event must emit automatically with the configured target.
+
+#### F223 · Achievement Fork Horizon Tracker
+- **Goal**: Track fork-choice hints, client diversity, and shadow gas data to warn when fork horizons become unsafe.
+- **Surfaces**: Reliability dashboard + `ForkHorizon` struct storing client mix, head hashes, and risk percentile.
+- **Acceptance**: Tracker issues blocking alert when risk percentile exceeds policy, preventing new deployments until acknowledged.
+
+#### F224 · Achievement Kinetic Reward Governor
+- **Goal**: Convert real-time ops metrics into kinetic reward multipliers that throttle or boost payouts immediately.
+- **Surfaces**: Rewards governor UI + `KineticReward` struct storing formula hash, KPI feed IDs, and last multiplier.
+- **Acceptance**: Multipliers must include proof of source KPI feeds; missing proofs freeze adjustments.
+
+#### F225 · Achievement Autonomous Compliance Arbiter
+- **Goal**: Run autonomous compliance arbiters that evaluate rulepacks and gate sensitive actions with notarized verdicts.
+- **Surfaces**: Compliance arbiter console + `ComplianceArbiter` struct storing rulepack hash, verdict, and reviewer overrides.
+- **Acceptance**: Sensitive transaction cannot execute unless latest arbiter verdict is “pass” or override hash references same payload.
+
+#### F226 · Achievement Intent Chargeback Ledger
+- **Goal**: Chronicle chargeback cases for intents that misfire, including restitution flows, disputants, and reason codes.
+- **Surfaces**: Treasury ops ledger + `IntentChargeback` struct storing intent ID, chargeback amount, and dispute hash.
+- **Acceptance**: Ledger entry must reference a finalized dispute hash before funds can be debited.
+
+#### F227 · Achievement Resilient Sequencer Proxy
+- **Goal**: Maintain sequencer proxies with replay buffers so intents persist when upstream sequencers fail or censor.
+- **Surfaces**: Automation studio UI + contract proxy module storing buffer depth, replay hash, and fallback RPC endpoints.
+- **Acceptance**: Proxy cannot acknowledge completion until replay buffer hash matches onchain verification hash.
+
+#### F228 · Achievement Guardian Accountability Graph
+- **Goal**: Graph guardian activities, heartbeats, and incident ownership to expose accountability gaps.
+- **Surfaces**: Guardian analytics view + `GuardianAccountabilityEdge` struct storing action type, timestamp, and evidence CID.
+- **Acceptance**: Graph must flag and block guardian rotations if accountability edges fall below quorum-defined minimums.
+
+#### F229 · Achievement Telemetry Custody Router
+- **Goal**: Route telemetry feeds through custody routers that notarize encryption posture, retention, and access logs.
+- **Surfaces**: Data plane router UI + `TelemetryCustody` struct storing encryption suite, retention TTL, and access hashes.
+- **Acceptance**: Router refuses to forward telemetry when retention TTL or encryption suite is missing or expired.
+
+#### F230 · Achievement Impact Contingency Bonds
+- **Goal**: Issue impact-linked bonds unlocking relief funding when KPIs miss attested thresholds.
+- **Surfaces**: Treasury bond console + `ImpactContingencyBond` struct storing KPI oracle, strike, and payout receivers.
+- **Acceptance**: Bond payout executes only when oracle proof shows KPI below strike for two consecutive observations.
+
+#### F231 · Achievement Sovereign Patch Relay
+- **Goal**: Stage signed patch payloads per sovereignty zone with multi-hop delivery proofs.
+- **Surfaces**: Automation deploy UI + `SovereignPatchRelay` struct storing zone ID, payload CID, and delivery witness list.
+- **Acceptance**: Patch cannot execute until delivery witnesses attest receipt in the correct sequence.
+
+#### F232 · Achievement Multilateral Witness Escrow
+- **Goal**: Escrow witness stakes from multiple orgs, releasing capital when commitments stay healthy.
+- **Surfaces**: Guardian escrow UI + `MultilateralWitnessEscrow` struct storing participants, stake size, and health metrics.
+- **Acceptance**: Withdrawal requires health metric proofs and quorum approvals; otherwise funds stay bonded.
+
+#### F233 · Achievement Vault Health Sentinel
+- **Goal**: Continuously scan vault solvency, drifts, and policy compliance before payouts or withdrawals settle.
+- **Surfaces**: Treasury sentinel UI + `VaultHealth` struct storing solvency ratio, drift hash, and reviewer acknowledgement.
+- **Acceptance**: Vault operations auto-halt if solvency ratio dips below threshold without reviewer acknowledgement hash.
+
+#### F234 · Achievement Policy Drift Comparator
+- **Goal**: Hash policy baselines and emit diffs whenever governance pushes changes without review.
+- **Surfaces**: Governance comparator panel + `PolicyDrift` struct storing baseline hash, proposed hash, and diff CID.
+- **Acceptance**: Comparator must block policy activation until a reviewer signs the diff CID.
+
+#### F235 · Achievement Proof Anchoring Synthesizer
+- **Goal**: Collate redundant proof anchors across L1, DA layers, and cold storage, then verify parity onchain.
+- **Surfaces**: Evidence synth UI + `ProofAnchorSynth` struct storing anchor list, parity hash, and verifier signature.
+- **Acceptance**: Synth submissions missing any anchor location or parity hash revert.
+
+#### F236 · Achievement Staggered Impact Orchestrator
+- **Goal**: Sequence impact releases over multiple epochs with attestable dependency gates.
+- **Surfaces**: Impact orchestrator UI + `StaggeredImpactPlan` struct storing epoch list, dependency IDs, and unlock proofs.
+- **Acceptance**: Later epochs cannot unlock until prerequisite dependencies include notarized completion hashes.
+
+#### F237 · Achievement Data Retention Capsule
+- **Goal**: Encode data-retention capsules with hold/drop timers, jurisdiction tags, and destruction attestations.
+- **Surfaces**: Compliance console + `DataRetentionCapsule` struct storing retention policy, jurisdiction, and destruction proof hash.
+- **Acceptance**: Capsule transitions to “destroyed” state only when destruction proof hash references an approved attestor.
+
+#### F238 · Achievement Adaptive Audit Mesh
+- **Goal**: Mesh auditor pools, capability tags, and availability attestations to route reviews automatically.
+- **Surfaces**: Auditor mesh UI + `AuditMeshNode` struct storing capability tags, stake, and liveness proofs.
+- **Acceptance**: Assignment engine must select only auditors with fresh liveness proofs and capability overlap for the requested scope.
+
+#### F239 · Achievement Emergency Signal Beacon
+- **Goal**: Broadcast authenticated emergency beacons that reach wallets, webhooks, and comm rails simultaneously.
+- **Surfaces**: Beacon control UI + `EmergencySignal` struct storing severity, channel map, and signature fan-out receipts.
+- **Acceptance**: Beacon fails unless every channel reports acknowledgment within defined SLA windows.
+
+#### F240 · Achievement Omni-Custody Access Guard
+- **Goal**: Enforce custody guard rules that notarize every privileged session, device posture, and approval path.
+- **Surfaces**: Custody access UI + `OmniCustodyGuard` struct storing session hash, device attestation, and reviewer approvals.
+- **Acceptance**: Privileged session cannot start without device attestation and dual approval references.
 
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
