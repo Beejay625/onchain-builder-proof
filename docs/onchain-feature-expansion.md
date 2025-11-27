@@ -431,6 +431,72 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Vault Integrity Harbinger** — Forecast vault stress by correlating anomaly signals, policy breaches, and collateral volatility.
 30. **Achievement Omni-Lifecycle Access Sentinel** — Track privileged access end-to-end, logging device posture and dual approvals for every stage.
 
+## Quantum Flux · Predictive Continuity Matrix
+
+1. **Achievement Predictive Failure Cascade Detector** — Model failure cascades using dependency graphs and telemetry correlations to predict which achievements will degrade next.
+2. **Achievement Adaptive Gas Strategy Optimizer** — Continuously optimize gas strategies per chain using historical patterns, congestion forecasts, and builder preferences.
+3. **Achievement Multi-Signature Recovery Vault** — Escrow recovery keys in multi-sig vaults that unlock only when quorum attests to legitimate recovery scenarios.
+4. **Achievement Cross-Chain Reputation Aggregator** — Aggregate reputation scores across chains with weighted consensus and timestamp proofs for unified builder profiles.
+5. **Achievement Intent Outcome Predictor** — Use ML models to predict intent success rates before broadcast, flagging high-risk intents for manual review.
+6. **Achievement Treasury Stress Simulator** — Run Monte Carlo simulations on treasury health under various scenarios, storing assumptions and outcomes onchain.
+7. **Achievement Guardian Fatigue Monitor** — Track guardian workload, response times, and error rates to predict burnout and trigger rotation recommendations.
+8. **Achievement Evidence Chain Validator** — Validate evidence chains across multiple storage layers, detecting gaps or tampering before proofs finalize.
+9. **Achievement Autonomous Dispute Resolver** — Deploy AI-assisted dispute resolvers that analyze evidence, propose settlements, and require human override for edge cases.
+10. **Achievement Cross-Domain Liquidity Router** — Route liquidity needs across chains automatically, optimizing for cost, speed, and compliance constraints.
+11. **Achievement Compliance Auto-Auditor** — Continuously audit compliance posture against policy baselines, emitting alerts when drift exceeds thresholds.
+12. **Achievement Intent Batching Optimizer** — Optimize intent batching strategies to minimize gas while respecting deadlines and dependency constraints.
+13. **Achievement Multi-Asset Escrow Composer** — Create escrows that hold multiple asset types with programmable release conditions and cross-asset settlement.
+14. **Achievement Guardian Performance Benchmark** — Benchmark guardian performance against SLAs, publishing scores and triggering remediation when metrics degrade.
+15. **Achievement Proof Compression Engine** — Compress large proof bundles using deterministic algorithms while preserving verifiability and auditability.
+16. **Achievement Cross-Chain State Validator** — Validate state consistency across chains using merkle proofs and challenge windows for dispute resolution.
+17. **Achievement Adaptive Rate Limiter** — Dynamically adjust rate limits based on network conditions, builder reputation, and treasury health metrics.
+18. **Achievement Intent Dependency Resolver** — Automatically resolve intent dependencies, sequencing execution to respect prerequisites and maximize parallelism.
+19. **Achievement Treasury Yield Optimizer** — Optimize treasury yield across chains and protocols while maintaining liquidity buffers and risk limits.
+20. **Achievement Guardian Rotation Scheduler** — Schedule guardian rotations automatically based on tenure, performance, and availability attestations.
+21. **Achievement Evidence Redundancy Manager** — Manage redundant evidence storage across multiple providers, ensuring availability and detecting inconsistencies.
+22. **Achievement Cross-Domain Identity Verifier** — Verify builder identities across chains using cryptographic proofs and reputation cross-references.
+23. **Achievement Intent Gas Estimator** — Estimate gas costs for intents across chains using historical data and current network conditions.
+24. **Achievement Treasury Rebalancing Automator** — Automatically rebalance treasury allocations based on risk scores, yield opportunities, and policy constraints.
+25. **Achievement Guardian Quorum Optimizer** — Optimize guardian quorum sizes and compositions based on workload, risk, and availability patterns.
+26. **Achievement Proof Verification Accelerator** — Accelerate proof verification using parallel processing, caching, and optimized algorithms.
+27. **Achievement Cross-Chain Settlement Optimizer** — Optimize cross-chain settlements for cost, speed, and finality guarantees using multi-path routing.
+28. **Achievement Compliance Evidence Archiver** — Archive compliance evidence with retention policies, encryption, and audit trails for regulatory requirements.
+29. **Achievement Intent Execution Monitor** — Monitor intent execution in real-time, detecting anomalies and triggering rollbacks when deviations occur.
+30. **Achievement Omni-Chain Governance Aggregator** — Aggregate governance signals across chains, enabling unified decision-making with weighted voting.
+
+## Stellar Nexus · Quantum Continuity Fabric
+
+1. **Achievement Quantum Proof Anchoring** — Anchor proofs using post-quantum cryptographic signatures that remain secure against future quantum attacks.
+2. **Achievement Cross-Chain Merkle Forest** — Maintain synchronized Merkle forests across multiple chains to prove achievement consistency without full state replication.
+3. **Achievement Autonomous Guardian Rotation Engine** — Automatically rotate guardian sets based on performance metrics, availability, and risk scores with onchain attestations.
+4. **Achievement Intent Execution Guarantee Vault** — Escrow execution guarantees that auto-release when intents complete successfully or refund when they fail deterministically.
+5. **Achievement Multi-Sovereign Compliance Passport** — Issue compliance passports that aggregate attestations from multiple jurisdictions into a single verifiable credential.
+6. **Achievement Treasury Liquidity Stress Tester** — Simulate liquidity stress scenarios onchain and log results so treasury teams can validate reserve adequacy.
+7. **Achievement Evidence Chain-of-Custody Ledger** — Record every custody transfer, access event, and modification with cryptographic proofs for legal admissibility.
+8. **Achievement Guardian Performance Scoreboard** — Publish guardian performance scores based on response times, accuracy, and incident resolution with transparency proofs.
+9. **Achievement Cross-Domain State Reconciliation** — Automatically reconcile state differences across domains and log reconciliation proofs for audit trails.
+10. **Achievement Intent Gas Optimization Oracle** — Provide real-time gas optimization recommendations based on network conditions and historical patterns.
+11. **Achievement Sovereign Data Sovereignty Enforcer** — Enforce data residency rules by routing data through jurisdiction-compliant storage with attestation proofs.
+12. **Achievement Multi-Party Dispute Resolution Court** — Run onchain dispute resolution with jurors, evidence submission, and binding verdicts tied to achievement claims.
+13. **Achievement Treasury Yield Optimization Router** — Automatically route treasury funds to optimal yield opportunities while maintaining liquidity and risk limits.
+14. **Achievement Proof Compression Engine** — Compress large proof bundles using verifiable compression algorithms while preserving cryptographic integrity.
+15. **Achievement Guardian Fatigue Monitor** — Track guardian workload and automatically trigger relief rotations when fatigue thresholds are exceeded.
+16. **Achievement Cross-Chain Intent Atomicity Guarantor** — Guarantee atomic execution of intents across multiple chains or revert all operations with proof of rollback.
+17. **Achievement Evidence Immutability Verifier** — Continuously verify evidence immutability by comparing hashes across storage layers and alerting on discrepancies.
+18. **Achievement Treasury Rebalancing Automator** — Automatically rebalance treasury allocations based on risk-adjusted returns and policy constraints.
+19. **Achievement Guardian Reputation Marketplace** — Enable guardians to stake reputation tokens that can be slashed for poor performance or rewarded for excellence.
+20. **Achievement Intent Deadline Escalation Ladder** — Automatically escalate intent deadlines through predefined escalation paths with guardian notifications.
+21. **Achievement Cross-Domain Proof Aggregator** — Aggregate proofs from multiple domains into unified attestations that prove achievement validity across all chains.
+22. **Achievement Treasury Risk-Adjusted Allocator** — Allocate treasury funds using risk-adjusted return models with onchain validation of allocation logic.
+23. **Achievement Guardian Quorum Health Monitor** — Monitor guardian quorum health and automatically trigger replacements when quorum integrity degrades.
+24. **Achievement Intent Execution Replay Verifier** — Verify intent execution correctness by replaying transactions in isolated environments and comparing outcomes.
+25. **Achievement Evidence Redundancy Orchestrator** — Orchestrate redundant evidence storage across multiple providers with automatic failover and integrity checks.
+26. **Achievement Treasury Multi-Asset Portfolio Manager** — Manage multi-asset treasury portfolios with automatic rebalancing, risk limits, and yield optimization.
+27. **Achievement Guardian Duty Rotation Scheduler** — Schedule guardian duty rotations with conflict detection, availability checks, and automatic assignment optimization.
+28. **Achievement Cross-Chain Proof Verification Network** — Deploy verification networks that validate proofs across chains using distributed consensus mechanisms.
+29. **Achievement Intent Gas Price Predictor** — Predict optimal gas prices for intent execution using machine learning models with onchain validation of predictions.
+30. **Achievement Sovereign Compliance Attestation Chain** — Chain compliance attestations from multiple sovereign entities into a single verifiable proof of regulatory adherence.
+
 ## Enablement Notes
 
 - Each feature is toggled via `FeatureFlags`; keep them disabled by default until implementation ships.
