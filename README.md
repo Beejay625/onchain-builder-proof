@@ -31,7 +31,7 @@ Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the prob
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 - **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
 - **Wave Φ · Obsidian Nexus (F241–F270)** adds predictive continuity vectors, programmable custody ringfences, anomaly escrows, and auditor-ready evidence capsules inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--obsidian-nexus-autonomous-fabric-f241f270).
-- **Wave Ψ · Stellar Nexus (F301–F330)** introduces quantum-resistant proof anchoring, cross-chain Merkle forests, autonomous guardian rotations, and sovereign compliance attestation chains inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--stellar-nexus-quantum-continuity-f301f330).
+- **Wave Ψ · Quantum Flux (F271–F300)** introduces predictive failure detection, adaptive gas optimization, cross-chain reputation aggregation, and autonomous dispute resolution inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--quantum-flux-predictive-continuity-f271f300).
 
 ## Reference Docs
 
@@ -390,6 +390,40 @@ Deep dives for this forge live in [`docs/feature-delivery-plan.md`](docs/feature
 - 🔐 **Achievement Omni-Lifecycle Access Sentinel**: Tracks privileged access across entire achievement lifecycle.
 
 Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--obsidian-nexus-autonomous-fabric-f241f270).
+
+### Quantum Flux · 30 Predictive Continuity Controls
+- 🔮 **Achievement Predictive Failure Cascade Detector**: Models failure cascades using dependency graphs to predict which achievements will degrade next.
+- ⛽ **Achievement Adaptive Gas Strategy Optimizer**: Continuously optimizes gas strategies per chain using historical patterns and congestion forecasts.
+- 🔐 **Achievement Multi-Signature Recovery Vault**: Escrows recovery keys in multi-sig vaults that unlock only when quorum attests to legitimate recovery scenarios.
+- 🌐 **Achievement Cross-Chain Reputation Aggregator**: Aggregates reputation scores across chains with weighted consensus and timestamp proofs.
+- 🤖 **Achievement Intent Outcome Predictor**: Uses ML models to predict intent success rates before broadcast, flagging high-risk intents for manual review.
+- 📊 **Achievement Treasury Stress Simulator**: Runs Monte Carlo simulations on treasury health under various scenarios, storing assumptions and outcomes onchain.
+- 😴 **Achievement Guardian Fatigue Monitor**: Tracks guardian workload, response times, and error rates to predict burnout and trigger rotation recommendations.
+- ✅ **Achievement Evidence Chain Validator**: Validates evidence chains across multiple storage layers, detecting gaps or tampering before proofs finalize.
+- ⚖️ **Achievement Autonomous Dispute Resolver**: Deploys AI-assisted dispute resolvers that analyze evidence, propose settlements, and require human override.
+- 💧 **Achievement Cross-Domain Liquidity Router**: Routes liquidity needs across chains automatically, optimizing for cost, speed, and compliance constraints.
+- 🔍 **Achievement Compliance Auto-Auditor**: Continuously audits compliance posture against policy baselines, emitting alerts when drift exceeds thresholds.
+- 📦 **Achievement Intent Batching Optimizer**: Optimizes intent batching strategies to minimize gas while respecting deadlines and dependency constraints.
+- 💎 **Achievement Multi-Asset Escrow Composer**: Creates escrows that hold multiple asset types with programmable release conditions and cross-asset settlement.
+- 📈 **Achievement Guardian Performance Benchmark**: Benchmarks guardian performance against SLAs, publishing scores and triggering remediation when metrics degrade.
+- 🗜️ **Achievement Proof Compression Engine**: Compresses large proof bundles using deterministic algorithms while preserving verifiability and auditability.
+- 🔗 **Achievement Cross-Chain State Validator**: Validates state consistency across chains using merkle proofs and challenge windows for dispute resolution.
+- 🚦 **Achievement Adaptive Rate Limiter**: Dynamically adjusts rate limits based on network conditions, builder reputation, and treasury health metrics.
+- 🔄 **Achievement Intent Dependency Resolver**: Automatically resolves intent dependencies, sequencing execution to respect prerequisites and maximize parallelism.
+- 💰 **Achievement Treasury Yield Optimizer**: Optimizes treasury yield across chains and protocols while maintaining liquidity buffers and risk limits.
+- 🔄 **Achievement Guardian Rotation Scheduler**: Schedules guardian rotations automatically based on tenure, performance, and availability attestations.
+- 📦 **Achievement Evidence Redundancy Manager**: Manages redundant evidence storage across multiple providers, ensuring availability and detecting inconsistencies.
+- 🪪 **Achievement Cross-Domain Identity Verifier**: Verifies builder identities across chains using cryptographic proofs and reputation cross-references.
+- ⛽ **Achievement Intent Gas Estimator**: Estimates gas costs for intents across chains using historical data and current network conditions.
+- 💼 **Achievement Treasury Rebalancing Automator**: Automatically rebalances treasury allocations based on risk scores, yield opportunities, and policy constraints.
+- 👥 **Achievement Guardian Quorum Optimizer**: Optimizes guardian quorum sizes and compositions based on workload, risk, and availability patterns.
+- ⚡ **Achievement Proof Verification Accelerator**: Accelerates proof verification using parallel processing, caching, and optimized algorithms.
+- 🌉 **Achievement Cross-Chain Settlement Optimizer**: Optimizes cross-chain settlements for cost, speed, and finality guarantees using multi-path routing.
+- 📚 **Achievement Compliance Evidence Archiver**: Archives compliance evidence with retention policies, encryption, and audit trails for regulatory requirements.
+- 👁️ **Achievement Intent Execution Monitor**: Monitors intent execution in real-time, detecting anomalies and triggering rollbacks when deviations occur.
+- 🗳️ **Achievement Omni-Chain Governance Aggregator**: Aggregates governance signals across chains, enabling unified decision-making with weighted voting.
+
+Deep dives for this flux live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#quantum-flux--predictive-continuity-matrix) and its program-management companion in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--quantum-flux-predictive-continuity-f271f300).
 
 ### Polaris Relay · 30 Frontier Automations
 - 🛰️ **Achievement Reown Session Sentinel**: Anchor short-lived Reown scopes with signer posture, jurisdiction, and revocation proofs.
