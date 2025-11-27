@@ -1821,65 +1821,55 @@ Quantum Flux introduces thirty predictive continuity primitives that leverage ma
 - **Surfaces**: Intent composer UI + `IntentPrediction` struct storing model hash, success probability, and risk flags.
 - **Acceptance**: Predictor must emit probability score and block intents when risk exceeds policy threshold.
 
-#### F276 · Achievement Sovereign Data Bridge
-- **UI**: Bridges sovereign data with source/target jurisdictions, data type, compliance hash, encryption method, and bridge policy.
-- **Contract**: `addComment` logs `SOV_DATA_BRIDGE` entries with compliance attestations.
-- **Automation**: Data bridge service validates compliance and applies encryption before bridging.
-- **Acceptance**: Both jurisdictions and compliance hash required; encryption method must be selected.
+#### F276 · Achievement Treasury Stress Simulator
+- **Goal**: Run Monte Carlo simulations on treasury health under various scenarios, storing assumptions and outcomes onchain.
+- **Surfaces**: Treasury simulator UI + `StressSimulation` struct storing scenario parameters, assumptions hash, and outcome probabilities.
+- **Acceptance**: Simulator must include at least three scenarios and emit alerts when probability of breach exceeds threshold.
 
-#### F277 · Achievement Guardian Fusion Council
-- **UI**: Fuses guardian councils with council ID, member count, quorum threshold, domain scope, authority level, and rotation policy.
-- **Contract**: `addComment` stores `GUARDIAN_FUSION` entries for council coordination.
-- **Automation**: Guardian service coordinates council operations across domains based on authority level.
-- **Acceptance**: Council ID, member count, and quorum threshold required; domain scope must be non-empty.
+#### F277 · Achievement Guardian Fatigue Monitor
+- **Goal**: Track guardian workload, response times, and error rates to predict burnout and trigger rotation recommendations.
+- **Surfaces**: Guardian analytics UI + `GuardianFatigue` struct storing workload metrics, fatigue score, and rotation recommendation.
+- **Acceptance**: Monitor must track at least workload and response time, emitting alerts when fatigue score exceeds policy threshold.
 
-#### F278 · Achievement Treasury Fusion Vault
-- **UI**: Deploys fusion vaults with vault address, asset types, fusion mode, rebalance threshold, chain distribution, and risk policy.
-- **Contract**: `addComment` logs `TREASURY_FUSION` entries for vault management.
-- **Automation**: Treasury service monitors rebalance thresholds and executes rebalancing across chains.
-- **Acceptance**: Vault address and asset types required; chain distribution must sum to 100%.
+#### F278 · Achievement Evidence Chain Validator
+- **Goal**: Validate evidence chains across multiple storage layers, detecting gaps or tampering before proofs finalize.
+- **Surfaces**: Evidence validator UI + `EvidenceChain` struct storing layer hashes, validation status, and gap detection flags.
+- **Acceptance**: Validator must check at least two storage layers and block finalization when gaps or tampering detected.
 
-#### F279 · Achievement Proof Fusion Network
-- **UI**: Joins proof fusion networks with network ID, proof type, participant chains, consensus mechanism, fusion proof hash, and network policy.
-- **Contract**: `addComment` stores `PROOF_FUSION` entries for network participation.
-- **Automation**: Proof network service validates proofs and coordinates consensus across participants.
-- **Acceptance**: Network ID, proof type, and at least one participant chain required.
+#### F279 · Achievement Autonomous Dispute Resolver
+- **Goal**: Deploy AI-assisted dispute resolvers that analyze evidence, propose settlements, and require human override for edge cases.
+- **Surfaces**: Dispute resolver UI + `DisputeResolution` struct storing evidence hash, AI proposal, and human override flag.
+- **Acceptance**: Resolver must emit proposal and require human approval when confidence below threshold or edge case detected.
 
-#### F280 · Achievement Cross-Domain Governance
-- **UI**: Proposes cross-domain governance with proposal ID, type, affected domains, voting period, quorum requirement, proposal hash, and description.
-- **Contract**: `addComment` logs `XDOMAIN_GOV` entries for governance proposals.
-- **Automation**: Governance service coordinates voting across domains and tracks quorum.
-- **Acceptance**: Proposal ID, type, and at least one affected domain required; voting period must be positive.
+#### F280 · Achievement Cross-Domain Liquidity Router
+- **Goal**: Route liquidity needs across chains automatically, optimizing for cost, speed, and compliance constraints.
+- **Surfaces**: Liquidity router UI + `LiquidityRoute` struct storing source/target chains, amount, route options, and optimization proof.
+- **Acceptance**: Router must evaluate at least two route options and select based on optimization criteria.
 
-#### F281 · Achievement Intent Aggregation Pool
-- **UI**: Aggregates intents with pool ID, intent count, aggregation strategy, batch size, time window, and intent hashes.
-- **Contract**: `addComment` stores `INTENT_POOL` entries for intent batching.
-- **Automation**: Aggregation service batches intents based on strategy and executes when thresholds met.
-- **Acceptance**: Pool ID and intent count required; batch size and time window must be positive.
+#### F281 · Achievement Compliance Auto-Auditor
+- **Goal**: Continuously audit compliance posture against policy baselines, emitting alerts when drift exceeds thresholds.
+- **Surfaces**: Compliance auditor UI + `ComplianceAudit` struct storing policy baseline hash, current posture, and drift metrics.
+- **Acceptance**: Auditor must compare against baseline and emit alerts when drift exceeds configured threshold.
 
-#### F282 · Achievement Sovereign Execution Layer
-- **UI**: Deploys execution layers with layer ID, execution model, supported domains, finality time, challenge window, and execution policy.
-- **Contract**: `addComment` logs `SOV_EXEC` entries for execution layer registration.
-- **Automation**: Execution service routes operations through appropriate execution model.
-- **Acceptance**: Layer ID, execution model, and at least one supported domain required.
+#### F282 · Achievement Intent Batching Optimizer
+- **Goal**: Optimize intent batching strategies to minimize gas while respecting deadlines and dependency constraints.
+- **Surfaces**: Intent optimizer UI + `IntentBatch` struct storing intent hashes, batch strategy, and optimization proof.
+- **Acceptance**: Optimizer must evaluate at least two batching strategies and select based on gas savings and constraints.
 
-#### F283 · Achievement Cross-Chain State Machine
-- **UI**: Deploys state machines with machine ID, initial state, state transitions, chain scope, transition conditions, and timeout policy.
-- **Contract**: `addComment` stores `STATE_MACHINE` entries for state coordination.
-- **Automation**: State machine service manages transitions and enforces timeout policies.
-- **Acceptance**: Machine ID, initial state, and at least one state transition required.
+#### F283 · Achievement Multi-Asset Escrow Composer
+- **Goal**: Create escrows that hold multiple asset types with programmable release conditions and cross-asset settlement.
+- **Surfaces**: Escrow composer UI + `MultiAssetEscrow` struct storing asset types, amounts, release conditions, and settlement policy.
+- **Acceptance**: Escrow must support at least two asset types and include programmable release conditions.
 
-#### F284 · Achievement Fusion Attestation Registry
-- **UI**: Registers attestations with attestation ID, attestor address, type, subject hash, expiry timestamp, and revocation policy.
-- **Contract**: `addComment` logs `FUSION_ATTEST` entries for attestation tracking.
-- **Automation**: Registry service validates attestations and enforces expiry/revocation policies.
-- **Acceptance**: Attestation ID, attestor address, and subject hash required; expiry must be in future.
+#### F284 · Achievement Guardian Performance Benchmark
+- **Goal**: Benchmark guardian performance against SLAs, publishing scores and triggering remediation when metrics degrade.
+- **Surfaces**: Guardian benchmark UI + `GuardianBenchmark` struct storing SLA targets, actual metrics, and performance score.
+- **Acceptance**: Benchmark must compare against SLA and trigger remediation when score falls below threshold.
 
-#### F285 · Achievement Multi-Domain Consensus
-- **UI**: Proposes consensus with consensus ID, type, participant domains, quorum size, finality threshold, and consensus policy.
-- **Contract**: `addComment` stores `MULTI_CONSENSUS` entries for consensus coordination.
-- **Automation**: Consensus service coordinates voting and tracks finality across domains.
-- **Acceptance**: Consensus ID, type, and at least one participant domain required; quorum size must be positive.
+#### F285 · Achievement Proof Compression Engine
+- **Goal**: Compress large proof bundles using deterministic algorithms while preserving verifiability and auditability.
+- **Surfaces**: Proof compressor UI + `CompressedProof` struct storing original hash, compression algorithm, and compressed hash.
+- **Acceptance**: Compressor must preserve verifiability and include decompression proof for auditability.
 
 #### F286 · Achievement Fusion Data Pipeline
 - **UI**: Deploys pipelines with pipeline ID, source domains, target domain, processing mode, batch size, and transformation rules.
