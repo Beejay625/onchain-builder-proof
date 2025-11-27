@@ -2380,6 +2380,223 @@ Quantum Nexus extends BuilderProof's capabilities with thirty quantum-resistant 
 - **Automation**: Network service manages quantum nexus network infrastructure.
 - **Acceptance**: Network ID, network type, and positive participant count required.
 
+### Wave Ψ · Sovereign Nexus (F331–F360)
+
+Sovereign Nexus extends BuilderProof with thirty sovereign operations and advanced coordination primitives that enable cross-sovereignty bridges, federated identity systems, and autonomous fusion grids. Each feature respects sovereignty boundaries, implements federated governance models, and provides secure interoperability across sovereign domains while maintaining jurisdictional compliance and data sovereignty guarantees.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F331 | Achievement Sovereign Nexus Coordinator | Sovereign Coordination | `components/onchain/OnchainAchievementSovereignNexusCoordinator.tsx` |
+| F332 | Achievement Autonomous Fusion Grid | Autonomous Operations | `components/onchain/OnchainAchievementAutonomousFusionGrid.tsx` |
+| F333 | Achievement Cross-Sovereignty Bridge | Cross-Sovereignty | `components/onchain/OnchainAchievementCrossSovereigntyBridge.tsx` |
+| F334 | Achievement Sovereign Treasury Orchestrator | Treasury Management | `components/onchain/OnchainAchievementSovereignTreasuryOrchestrator.tsx` |
+| F335 | Achievement Nexus Governance Assembly | Governance | `components/onchain/OnchainAchievementNexusGovernanceAssembly.tsx` |
+| F336 | Achievement Sovereign Identity Federation | Identity | `components/onchain/OnchainAchievementSovereignIdentityFederation.tsx` |
+| F337 | Achievement Nexus Data Sovereignty | Data Sovereignty | `components/onchain/OnchainAchievementNexusDataSovereignty.tsx` |
+| F338 | Achievement Sovereign Attestation Network | Attestation | `components/onchain/OnchainAchievementSovereignAttestationNetwork.tsx` |
+| F339 | Achievement Nexus Compliance Framework | Compliance | `components/onchain/OnchainAchievementNexusComplianceFramework.tsx` |
+| F340 | Achievement Sovereign Execution Environment | Execution | `components/onchain/OnchainAchievementSovereignExecutionEnvironment.tsx` |
+| F341 | Achievement Nexus Telemetry Fusion | Observability | `components/onchain/OnchainAchievementNexusTelemetryFusion.tsx` |
+| F342 | Achievement Sovereign Risk Governance | Risk Management | `components/onchain/OnchainAchievementSovereignRiskGovernance.tsx` |
+| F343 | Achievement Nexus Settlement Protocol | Settlement | `components/onchain/OnchainAchievementNexusSettlementProtocol.tsx` |
+| F344 | Achievement Sovereign Access Federation | Access Control | `components/onchain/OnchainAchievementSovereignAccessFederation.tsx` |
+| F345 | Achievement Nexus Continuity Matrix | Continuity Tracking | `components/onchain/OnchainAchievementNexusContinuityMatrix.tsx` |
+| F346 | Achievement Sovereign Proof Network | Proof Networks | `components/onchain/OnchainAchievementSovereignProofNetwork.tsx` |
+| F347 | Achievement Nexus Intent Orchestrator | Intent Orchestration | `components/onchain/OnchainAchievementNexusIntentOrchestrator.tsx` |
+| F348 | Achievement Sovereign Guardian Council | Guardian Operations | `components/onchain/OnchainAchievementSovereignGuardianCouncil.tsx` |
+| F349 | Achievement Nexus Audit Trail | Auditability | `components/onchain/OnchainAchievementNexusAuditTrail.tsx` |
+| F350 | Achievement Sovereign Messaging Protocol | Messaging | `components/onchain/OnchainAchievementSovereignMessagingProtocol.tsx` |
+| F351 | Achievement Nexus Key Management | Key Management | `components/onchain/OnchainAchievementNexusKeyManagement.tsx` |
+| F352 | Achievement Sovereign Consensus Mechanism | Consensus | `components/onchain/OnchainAchievementSovereignConsensusMechanism.tsx` |
+| F353 | Achievement Nexus Resource Pool | Resource Management | `components/onchain/OnchainAchievementNexusResourcePool.tsx` |
+| F354 | Achievement Sovereign Dispute Resolution | Dispute Resolution | `components/onchain/OnchainAchievementSovereignDisputeResolution.tsx` |
+| F355 | Achievement Nexus Security Framework | Security | `components/onchain/OnchainAchievementNexusSecurityFramework.tsx` |
+| F356 | Achievement Sovereign Data Governance | Data Governance | `components/onchain/OnchainAchievementSovereignDataGovernance.tsx` |
+| F357 | Achievement Nexus Interoperability Hub | Interoperability | `components/onchain/OnchainAchievementNexusInteroperabilityHub.tsx` |
+| F358 | Achievement Sovereign Event Stream | Event Streaming | `components/onchain/OnchainAchievementSovereignEventStream.tsx` |
+| F359 | Achievement Nexus Monitoring Dashboard | Monitoring | `components/onchain/OnchainAchievementNexusMonitoringDashboard.tsx` |
+| F360 | Achievement Sovereign Nexus Platform | Platform Infrastructure | `components/onchain/OnchainAchievementSovereignNexusPlatform.tsx` |
+
+#### F331 · Achievement Sovereign Nexus Coordinator
+- **UI**: `components/onchain/OnchainAchievementSovereignNexusCoordinator.tsx` configures coordinator ID, nexus type, participant sovereignties, coordination protocol, and sovereignty policy for coordinating operations across sovereign boundaries.
+- **Contract**: Uses `addComment` with `SOV_NEXUS_COORD` payloads that encode coordination configuration and sovereignty boundaries.
+- **Automation**: Coordinator service manages operations across sovereignties using selected coordination protocol.
+- **Acceptance**: Coordinator ID and at least one participant sovereignty required; coordination protocol selection mandatory.
+
+#### F332 · Achievement Autonomous Fusion Grid
+- **UI**: Deploys grids with grid ID, grid topology, fusion domains, autonomy level, and grid policy for autonomous fusion operations.
+- **Contract**: `addComment` logs `AUTO_FUSION_GRID` entries for grid deployment.
+- **Automation**: Grid service manages autonomous fusion operations based on configured autonomy level.
+- **Acceptance**: Grid ID and at least one fusion domain required; grid topology selection mandatory.
+
+#### F333 · Achievement Cross-Sovereignty Bridge
+- **UI**: Deploys bridges with bridge ID, source/target sovereignties, bridge type, compliance attestation hash, and bridge policy.
+- **Contract**: `addComment` stores `XSOV_BRIDGE` entries for bridge deployment.
+- **Automation**: Bridge service manages cross-sovereignty operations with compliance validation.
+- **Acceptance**: Bridge ID, both sovereignties, and compliance attestation hash required.
+
+#### F334 · Achievement Sovereign Treasury Orchestrator
+- **UI**: Deploys orchestrators with orchestrator ID, sovereignty scope, asset types, orchestration mode, and allocation policy.
+- **Contract**: `addComment` logs `SOV_TREASURY_ORCH` entries for treasury orchestration.
+- **Automation**: Orchestrator service manages treasury operations across sovereignties.
+- **Acceptance**: Orchestrator ID, at least one sovereignty, and asset types required.
+
+#### F335 · Achievement Nexus Governance Assembly
+- **UI**: Forms assemblies with assembly ID, nexus ID, member sovereignties, voting mechanism, quorum threshold, and governance scope.
+- **Contract**: `addComment` stores `NEXUS_GOV_ASSEMBLY` entries for assembly formation.
+- **Automation**: Assembly service coordinates governance decisions across nexus networks.
+- **Acceptance**: Assembly ID, nexus ID, and at least one member sovereignty required.
+
+#### F336 · Achievement Sovereign Identity Federation
+- **UI**: Creates federations with federation ID, participant sovereignties, identity standard, federation protocol, and trust framework.
+- **Contract**: `addComment` logs `SOV_ID_FED` entries for identity federation.
+- **Automation**: Federation service manages identity operations across sovereign boundaries.
+- **Acceptance**: Federation ID and at least one participant sovereignty required; identity standard selection mandatory.
+
+#### F337 · Achievement Nexus Data Sovereignty
+- **UI**: Sets sovereignty policies with policy ID, nexus ID, data type, sovereignty rules, and enforcement mode.
+- **Contract**: `addComment` stores `NEXUS_DATA_SOV` entries for data sovereignty management.
+- **Automation**: Sovereignty service enforces data location and sovereignty requirements.
+- **Acceptance**: Policy ID, nexus ID, data type, and sovereignty rules required.
+
+#### F338 · Achievement Sovereign Attestation Network
+- **UI**: Joins networks with network ID, participant sovereignties, attestation standard, trust model, and network policy.
+- **Contract**: `addComment` logs `SOV_ATTEST_NET` entries for network participation.
+- **Automation**: Network service manages attestation operations across sovereignties.
+- **Acceptance**: Network ID and at least one participant sovereignty required; attestation standard selection mandatory.
+
+#### F339 · Achievement Nexus Compliance Framework
+- **UI**: Deploys frameworks with framework ID, nexus ID, compliance standards, jurisdictions, enforcement level, and framework rules.
+- **Contract**: `addComment` stores `NEXUS_COMPLIANCE` entries for compliance management.
+- **Automation**: Framework service validates compliance across jurisdictions.
+- **Acceptance**: Framework ID, nexus ID, and at least one compliance standard required.
+
+#### F340 · Achievement Sovereign Execution Environment
+- **UI**: Deploys environments with environment ID, sovereignty scope, execution model, isolation level, and environment policy.
+- **Contract**: `addComment` logs `SOV_EXEC_ENV` entries for execution environment deployment.
+- **Automation**: Environment service manages execution operations within sovereignty boundaries.
+- **Acceptance**: Environment ID and at least one sovereignty required; execution model selection mandatory.
+
+#### F341 · Achievement Nexus Telemetry Fusion
+- **UI**: Configures fusion with fusion ID, source nexuses, telemetry types, fusion method, fusion window, and fusion policy.
+- **Contract**: `addComment` stores `NEXUS_TELEMETRY_FUSION` entries for telemetry fusion.
+- **Automation**: Fusion service aggregates telemetry across nexus networks.
+- **Acceptance**: Fusion ID and at least one source nexus required; fusion method selection mandatory.
+
+#### F342 · Achievement Sovereign Risk Governance
+- **UI**: Deploys governance with governance ID, sovereignty scope, risk categories, governance model, and risk thresholds.
+- **Contract**: `addComment` logs `SOV_RISK_GOV` entries for risk governance.
+- **Automation**: Governance service manages risk across sovereignties.
+- **Acceptance**: Governance ID and at least one sovereignty required; governance model selection mandatory.
+
+#### F343 · Achievement Nexus Settlement Protocol
+- **UI**: Deploys protocols with protocol ID, nexus ID, settlement type, finality mechanism, and protocol policy.
+- **Contract**: `addComment` stores `NEXUS_SETTLE` entries for settlement protocol deployment.
+- **Automation**: Protocol service processes transactions with configured finality guarantees.
+- **Acceptance**: Protocol ID, nexus ID, and settlement type selection required.
+
+#### F344 · Achievement Sovereign Access Federation
+- **UI**: Creates federations with federation ID, participant sovereignties, access protocol, trust level, and federation policy.
+- **Contract**: `addComment` logs `SOV_ACCESS_FED` entries for access federation.
+- **Automation**: Federation service manages access control across sovereign boundaries.
+- **Acceptance**: Federation ID and at least one participant sovereignty required; access protocol selection mandatory.
+
+#### F345 · Achievement Nexus Continuity Matrix
+- **UI**: Creates matrices with matrix ID, nexus networks, continuity dimensions, measurement interval, and threshold policy.
+- **Contract**: `addComment` stores `NEXUS_CONTINUITY_MATRIX` entries for continuity tracking.
+- **Automation**: Matrix service monitors continuity across nexus networks.
+- **Acceptance**: Matrix ID and at least one nexus network required.
+
+#### F346 · Achievement Sovereign Proof Network
+- **UI**: Joins networks with network ID, participant sovereignties, proof type, consensus model, and network policy.
+- **Contract**: `addComment` logs `SOV_PROOF_NET` entries for network participation.
+- **Automation**: Network service manages proof operations across sovereignties.
+- **Acceptance**: Network ID and at least one participant sovereignty required; proof type selection mandatory.
+
+#### F347 · Achievement Nexus Intent Orchestrator
+- **UI**: Deploys orchestrators with orchestrator ID, nexus networks, orchestration strategy, failure mode, and orchestration policy.
+- **Contract**: `addComment` stores `NEXUS_INTENT_ORCH` entries for intent orchestration.
+- **Automation**: Orchestrator service coordinates intents across nexus networks.
+- **Acceptance**: Orchestrator ID and at least one nexus network required; orchestration strategy selection mandatory.
+
+#### F348 · Achievement Sovereign Guardian Council
+- **UI**: Forms councils with council ID, sovereignty scope, member count, quorum threshold, authority level, and council policy.
+- **Contract**: `addComment` logs `SOV_GUARDIAN_COUNCIL` entries for council formation.
+- **Automation**: Council service coordinates guardian operations across sovereignties.
+- **Acceptance**: Council ID and at least one sovereignty required; positive member count mandatory.
+
+#### F349 · Achievement Nexus Audit Trail
+- **UI**: Creates trails with trail ID, nexus ID, audit scope, retention policy, immutability level.
+- **Contract**: `addComment` stores `NEXUS_AUDIT_TRAIL` entries for audit trail creation.
+- **Automation**: Trail service maintains immutable audit records.
+- **Acceptance**: Trail ID, nexus ID, and audit scope required; retention policy selection mandatory.
+
+#### F350 · Achievement Sovereign Messaging Protocol
+- **UI**: Deploys protocols with protocol ID, sovereignty scope, message type, encryption requirement, delivery guarantee, and protocol policy.
+- **Contract**: `addComment` logs `SOV_MSG_PROTOCOL` entries for messaging protocol deployment.
+- **Automation**: Protocol service handles secure messaging across sovereignties.
+- **Acceptance**: Protocol ID and at least one sovereignty required; message type selection mandatory.
+
+#### F351 · Achievement Nexus Key Management
+- **UI**: Configures systems with system ID, nexus ID, key type, key rotation policy, key storage, and key policy.
+- **Contract**: `addComment` stores `NEXUS_KEY_MGMT` entries for key management configuration.
+- **Automation**: Key management service handles key lifecycle operations.
+- **Acceptance**: System ID, nexus ID, and key type selection required.
+
+#### F352 · Achievement Sovereign Consensus Mechanism
+- **UI**: Deploys mechanisms with mechanism ID, sovereignty scope, consensus type, quorum size, finality threshold, and consensus policy.
+- **Contract**: `addComment` logs `SOV_CONSENSUS` entries for consensus mechanism deployment.
+- **Automation**: Consensus service coordinates agreement across sovereignties.
+- **Acceptance**: Mechanism ID and at least one sovereignty required; consensus type selection mandatory.
+
+#### F353 · Achievement Nexus Resource Pool
+- **UI**: Creates pools with pool ID, nexus ID, resource types, allocation strategy, pool capacity, and pool policy.
+- **Contract**: `addComment` stores `NEXUS_RESOURCE_POOL` entries for resource pool creation.
+- **Automation**: Pool service manages resource allocation across nexus networks.
+- **Acceptance**: Pool ID, nexus ID, and at least one resource type required; positive pool capacity mandatory.
+
+#### F354 · Achievement Sovereign Dispute Resolution
+- **UI**: Initiates resolutions with dispute ID, sovereignty scope, dispute type, resolution mechanism, and dispute details.
+- **Contract**: `addComment` logs `SOV_DISPUTE` entries for dispute resolution.
+- **Automation**: Dispute service manages resolution processes across sovereignties.
+- **Acceptance**: Dispute ID and at least one sovereignty required; dispute type selection mandatory.
+
+#### F355 · Achievement Nexus Security Framework
+- **UI**: Deploys frameworks with framework ID, nexus ID, security layers, threat model, security level, and framework policy.
+- **Contract**: `addComment` stores `NEXUS_SECURITY` entries for security framework deployment.
+- **Automation**: Framework service enforces security policies across nexus networks.
+- **Acceptance**: Framework ID, nexus ID, and at least one security layer required; threat model selection mandatory.
+
+#### F356 · Achievement Sovereign Data Governance
+- **UI**: Deploys governance with governance ID, sovereignty scope, data categories, governance model, retention policy, and governance policy.
+- **Contract**: `addComment` logs `SOV_DATA_GOV` entries for data governance deployment.
+- **Automation**: Governance service manages data policies across sovereignties.
+- **Acceptance**: Governance ID and at least one sovereignty required; governance model selection mandatory.
+
+#### F357 · Achievement Nexus Interoperability Hub
+- **UI**: Registers hubs with hub ID, connected nexuses, interop protocols, translation layer, hub address, and hub policy.
+- **Contract**: `addComment` stores `NEXUS_INTEROP_HUB` entries for hub registration.
+- **Automation**: Hub service facilitates interoperability across nexus networks.
+- **Acceptance**: Hub ID and at least one connected nexus required; hub address mandatory.
+
+#### F358 · Achievement Sovereign Event Stream
+- **UI**: Creates streams with stream ID, sovereignty scope, event types, stream mode, retention period, and stream policy.
+- **Contract**: `addComment` logs `SOV_EVENT_STREAM` entries for event stream creation.
+- **Automation**: Stream service manages event distribution across sovereignties.
+- **Acceptance**: Stream ID and at least one sovereignty required; positive retention period mandatory.
+
+#### F359 · Achievement Nexus Monitoring Dashboard
+- **UI**: Deploys dashboards with dashboard ID, nexus ID, monitoring metrics, refresh interval, and alert thresholds.
+- **Contract**: `addComment` stores `NEXUS_MONITORING` entries for dashboard deployment.
+- **Automation**: Dashboard service aggregates and displays monitoring data.
+- **Acceptance**: Dashboard ID, nexus ID, and at least one monitoring metric required; positive refresh interval mandatory.
+
+#### F360 · Achievement Sovereign Nexus Platform
+- **UI**: Deploys platforms with platform ID, sovereignty scope, platform services, platform type, platform address, and platform policy.
+- **Contract**: `addComment` logs `SOV_NEXUS_PLATFORM` entries for platform deployment.
+- **Automation**: Platform service coordinates all sovereign nexus operations.
+- **Acceptance**: Platform ID, at least one sovereignty, and platform address required; platform type selection mandatory.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
