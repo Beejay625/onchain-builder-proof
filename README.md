@@ -525,6 +525,40 @@ Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onc
 
 Deep dives for this fusion wave live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#continuity-fusion-wave--cross-domain-orchestration-f271f300).
 
+### Quantum Nexus · 30 Quantum-Resistant Mesh Operations
+- 🔀 **Achievement Quantum Nexus Router**: Route operations through quantum-resistant nexus with configurable routing strategies.
+- 🌐 **Achievement Sovereign Mesh Coordinator**: Coordinate operations across sovereign mesh networks with various topologies.
+- 🤖 **Achievement Autonomous Mesh Network**: Deploy autonomous mesh networks with configurable autonomy levels.
+- 🔐 **Achievement Quantum Key Rotation Vault**: Manage quantum-resistant key rotation cycles with flexible policies.
+- 🔄 **Achievement Cross-Mesh State Sync**: Synchronize state across multiple mesh networks with multiple sync modes.
+- 🧮 **Achievement Mesh Consensus Oracle**: Oracle for mesh network consensus decisions with various consensus types.
+- 📦 **Achievement Quantum Proof Aggregator**: Aggregate quantum-resistant proofs across networks using multiple methods.
+- 🚪 **Achievement Sovereign Mesh Gateway**: Gateway for sovereign mesh network access with configurable policies.
+- 📡 **Achievement Mesh Telemetry Hub**: Central hub for mesh network telemetry with configurable aggregation.
+- 🌉 **Achievement Quantum-Resilient Bridge**: Bridge with quantum-resistant security guarantees and multiple bridge modes.
+- 🗳️ **Achievement Mesh Governance Council**: Governance council for mesh network operations with quorum thresholds.
+- 🔒 **Achievement Quantum-Secure Messaging**: Secure messaging with quantum-resistant encryption and delivery guarantees.
+- 📋 **Achievement Mesh Node Registry**: Registry for mesh network node management with multiple node roles.
+- 🔗 **Achievement Quantum Attestation Chain**: Chain of quantum-resistant attestations with configurable depth.
+- 🔍 **Achievement Mesh Security Audit**: Security audit for mesh network operations with findings tracking.
+- 💰 **Achievement Mesh Treasury Pool**: Treasury pool for mesh network operations with multiple pool types.
+- 🪪 **Achievement Quantum-Resistant Identity**: Identity system with quantum-resistant cryptography and multiple identity types.
+- ✅ **Achievement Mesh Compliance Gate**: Compliance gate for mesh network operations with multi-jurisdiction support.
+- ✓ **Achievement Quantum Proof Verifier**: Verify quantum-resistant proofs using multiple quantum algorithms.
+- 📊 **Achievement Mesh Risk Matrix**: Risk assessment matrix for mesh networks with multiple risk categories.
+- 🌍 **Achievement Mesh Data Residency**: Manage data residency requirements for mesh networks with region controls.
+- ✍️ **Achievement Quantum Signature Vault**: Vault for quantum-resistant signatures with multiple vault types.
+- 🔑 **Achievement Mesh Access Control**: Access control for mesh network resources with multiple access levels.
+- 🔐 **Achievement Quantum Encryption Service**: Encryption service with quantum-resistant algorithms and key management.
+- 📋 **Achievement Mesh Continuity Ledger**: Ledger for tracking mesh network continuity with multiple continuity types.
+- 🎯 **Achievement Quantum Nexus Hub**: Central hub for quantum nexus operations with comprehensive operation support.
+- 💸 **Achievement Mesh Settlement Engine**: Settlement engine for mesh network transactions with multiple settlement modes.
+- 🔑 **Achievement Quantum Key Exchange**: Key exchange protocol with quantum resistance using multiple protocols.
+- 🎼 **Achievement Mesh Orchestration Platform**: Platform for orchestrating mesh network operations with multiple modes.
+- 🌐 **Achievement Quantum Nexus Network**: Network infrastructure for quantum nexus operations with multiple network types.
+
+Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--quantum-nexus-f301f330).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
