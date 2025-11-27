@@ -68,6 +68,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Fusion Continuity Ledger** — Ledger for tracking fusion continuity with state, execution, data, or identity continuity types.
 30. **Achievement Fusion Orchestration Hub** — Central hub for orchestrating all fusion operations with centralized, distributed, or hybrid coordination policies.
 
+## Quantum Nexus Wave · Quantum-Resistant Mesh Operations (F301–F330)
+
+1. **Achievement Quantum Nexus Router** — Route operations through quantum-resistant nexus with configurable routing strategies and quantum algorithms.
+2. **Achievement Sovereign Mesh Coordinator** — Coordinate operations across sovereign mesh networks with various topologies and coordination protocols.
+3. **Achievement Autonomous Mesh Network** — Deploy autonomous mesh networks with configurable autonomy levels and consensus mechanisms.
+4. **Achievement Quantum Key Rotation Vault** — Manage quantum-resistant key rotation cycles with time-based, event-based, or hybrid policies.
+5. **Achievement Cross-Mesh State Sync** — Synchronize state across multiple mesh networks with bidirectional, unidirectional, or selective sync modes.
+6. **Achievement Mesh Consensus Oracle** — Oracle for mesh network consensus decisions with BFT, Raft, PBFT, or custom consensus types.
+7. **Achievement Quantum Proof Aggregator** — Aggregate quantum-resistant proofs across networks using Merkle trees, ZK-SNARKs, ZK-STARKs, or hybrid methods.
+8. **Achievement Sovereign Mesh Gateway** — Gateway for sovereign mesh network access with open, restricted, whitelist, or permissioned policies.
+9. **Achievement Mesh Telemetry Hub** — Central hub for mesh network telemetry with configurable aggregation intervals and retention policies.
+10. **Achievement Quantum-Resilient Bridge** — Bridge with quantum-resistant security guarantees supporting lock-and-mint, burn-and-mint, or atomic swap modes.
+11. **Achievement Mesh Governance Council** — Governance council for mesh network operations with configurable quorum thresholds and voting periods.
+12. **Achievement Quantum-Secure Messaging** — Secure messaging with quantum-resistant encryption and configurable delivery guarantees.
+13. **Achievement Mesh Node Registry** — Registry for mesh network node management with validator, relay, observer, or gateway roles.
+14. **Achievement Quantum Attestation Chain** — Chain of quantum-resistant attestations with configurable chain depth and revocation policies.
+15. **Achievement Mesh Security Audit** — Security audit for mesh network operations with findings tracking and report hashing.
+16. **Achievement Mesh Treasury Pool** — Treasury pool for mesh network operations with shared, segregated, or hybrid pool types.
+17. **Achievement Quantum-Resistant Identity** — Identity system with quantum-resistant cryptography supporting DID, ENS, or custom identity types.
+18. **Achievement Mesh Compliance Gate** — Compliance gate for mesh network operations with KYC, AML, GDPR, or multi-jurisdiction compliance types.
+19. **Achievement Quantum Proof Verifier** — Verify quantum-resistant proofs using CRYSTALS-Kyber, Dilithium, FALCON, or SPHINCS+ algorithms.
+20. **Achievement Mesh Risk Matrix** — Risk assessment matrix for mesh networks with technical, financial, operational, or security risk categories.
+21. **Achievement Mesh Data Residency** — Manage data residency requirements for mesh networks with allowed/restricted regions and enforcement modes.
+22. **Achievement Quantum Signature Vault** — Vault for quantum-resistant signatures with hot, warm, or cold vault types and rotation policies.
+23. **Achievement Mesh Access Control** — Access control for mesh network resources with read, write, execute, or admin access levels.
+24. **Achievement Quantum Encryption Service** — Encryption service with quantum-resistant algorithms and centralized, distributed, or hybrid key management.
+25. **Achievement Mesh Continuity Ledger** — Ledger for tracking mesh network continuity with state, execution, data, or identity continuity types.
+26. **Achievement Quantum Nexus Hub** — Central hub for quantum nexus operations with support for routing, encryption, signing, and verification.
+27. **Achievement Mesh Settlement Engine** — Settlement engine for mesh network transactions with atomic, optimistic, or delayed settlement modes.
+28. **Achievement Quantum Key Exchange** — Key exchange protocol with quantum resistance using CRYSTALS-Kyber, NTRU, or McEliece protocols.
+29. **Achievement Mesh Orchestration Platform** — Platform for orchestrating mesh network operations with centralized, distributed, or hybrid orchestration modes.
+30. **Achievement Quantum Nexus Network** — Network infrastructure for quantum nexus operations with public, private, or consortium network types.
+
 ## Guardian Wave · Controls Backlog
 
 1. **Achievement Hotfix Stream** — Rapidly notarize emergency fixes with reviewer acks and automatic rollback hooks.
