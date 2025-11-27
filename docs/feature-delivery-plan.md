@@ -1871,95 +1871,80 @@ Quantum Flux introduces thirty predictive continuity primitives that leverage ma
 - **Surfaces**: Proof compressor UI + `CompressedProof` struct storing original hash, compression algorithm, and compressed hash.
 - **Acceptance**: Compressor must preserve verifiability and include decompression proof for auditability.
 
-#### F286 · Achievement Fusion Data Pipeline
-- **UI**: Deploys pipelines with pipeline ID, source domains, target domain, processing mode, batch size, and transformation rules.
-- **Contract**: `addComment` logs `FUSION_PIPELINE` entries for pipeline management.
-- **Automation**: Pipeline service processes data according to mode and applies transformation rules.
-- **Acceptance**: Pipeline ID, at least one source domain, and target domain required.
+#### F286 · Achievement Cross-Chain State Validator
+- **Goal**: Validate state consistency across chains using merkle proofs and challenge windows for dispute resolution.
+- **Surfaces**: State validator UI + `StateValidation` struct storing chain IDs, state hashes, merkle proof, and validation status.
+- **Acceptance**: Validator must check at least two chains and emit challenge events when inconsistencies detected.
 
-#### F287 · Achievement Sovereign Identity Bridge
-- **UI**: Bridges identities with identity ID, source/target domains, identity type, verification method, and bridge proof hash.
-- **Contract**: `addComment` stores `SOV_ID_BRIDGE` entries for identity bridging.
-- **Automation**: Identity bridge service validates verification method and executes bridging.
-- **Acceptance**: Identity ID, both domains, and bridge proof hash required.
+#### F287 · Achievement Adaptive Rate Limiter
+- **Goal**: Dynamically adjust rate limits based on network conditions, builder reputation, and treasury health metrics.
+- **Surfaces**: Rate limiter UI + `RateLimitPolicy` struct storing base limit, adjustment factors, and current limit.
+- **Acceptance**: Limiter must adjust based on at least network conditions and builder reputation, with minimum floor limit.
 
-#### F288 · Achievement Cross-Domain Messaging
-- **UI**: Sends messages with message ID, source/target domains, message type, payload hash, delivery guarantee, and message content.
-- **Contract**: `addComment` logs `XDOMAIN_MSG` entries for message tracking.
-- **Automation**: Messaging service routes messages according to delivery guarantee.
-- **Acceptance**: Message ID, both domains, and payload hash required.
+#### F288 · Achievement Intent Dependency Resolver
+- **Goal**: Automatically resolve intent dependencies, sequencing execution to respect prerequisites and maximize parallelism.
+- **Surfaces**: Dependency resolver UI + `IntentDependency` struct storing dependency graph, execution order, and parallelism flags.
+- **Acceptance**: Resolver must detect dependencies and sequence execution, blocking when prerequisites unmet.
 
-#### F289 · Achievement Fusion Security Audit
-- **UI**: Submits audits with audit ID, auditor address, audit scope, status, findings count, audit report hash, and remediation plan.
-- **Contract**: `addComment` stores `FUSION_AUDIT` entries for audit tracking.
-- **Automation**: Audit service tracks status and validates report hashes.
-- **Acceptance**: Audit ID, auditor address, and audit scope required.
+#### F289 · Achievement Treasury Yield Optimizer
+- **Goal**: Optimize treasury yield across chains and protocols while maintaining liquidity buffers and risk limits.
+- **Surfaces**: Yield optimizer UI + `YieldStrategy` struct storing allocation targets, yield projections, and risk scores.
+- **Acceptance**: Optimizer must evaluate at least two strategies and respect liquidity and risk constraints.
 
-#### F290 · Achievement Quantum-Resistant Keys
-- **UI**: Generates keys with key ID, algorithm, key purpose, public key hash, rotation policy, and expiry timestamp.
-- **Contract**: `addComment` logs `QUANTUM_KEYS` entries for key management.
-- **Automation**: Key service manages rotation and enforces expiry policies.
-- **Acceptance**: Key ID, algorithm, and public key hash required.
+#### F290 · Achievement Guardian Rotation Scheduler
+- **Goal**: Schedule guardian rotations automatically based on tenure, performance, and availability attestations.
+- **Surfaces**: Rotation scheduler UI + `GuardianRotation` struct storing rotation schedule, criteria, and approval status.
+- **Acceptance**: Scheduler must consider tenure and performance, requiring approval before rotation executes.
 
-#### F291 · Achievement Fusion Compliance Gate
-- **UI**: Verifies compliance with gate ID, compliance type, jurisdictions, verification status, attestation hash, and compliance rules.
-- **Contract**: `addComment` stores `FUSION_COMPLIANCE` entries for compliance tracking.
-- **Automation**: Compliance service validates attestations and enforces rules.
-- **Acceptance**: Gate ID, compliance type, and at least one jurisdiction required.
+#### F291 · Achievement Evidence Redundancy Manager
+- **Goal**: Manage redundant evidence storage across multiple providers, ensuring availability and detecting inconsistencies.
+- **Surfaces**: Redundancy manager UI + `EvidenceRedundancy` struct storing provider list, storage hashes, and consistency status.
+- **Acceptance**: Manager must store evidence on at least two providers and detect inconsistencies automatically.
 
-#### F292 · Achievement Sovereign Data Residency
-- **UI**: Sets residency policies with policy ID, data type, allowed/restricted regions, enforcement mode, and residency proof hash.
-- **Contract**: `addComment` logs `SOV_RESIDENCY` entries for residency management.
-- **Automation**: Residency service enforces policies based on enforcement mode.
-- **Acceptance**: Policy ID, data type, and at least one allowed region required.
+#### F292 · Achievement Cross-Domain Identity Verifier
+- **Goal**: Verify builder identities across chains using cryptographic proofs and reputation cross-references.
+- **Surfaces**: Identity verifier UI + `IdentityVerification` struct storing chain IDs, identity proofs, and verification status.
+- **Acceptance**: Verifier must check at least two chains and require cryptographic proof for verification.
 
-#### F293 · Achievement Fusion Risk Matrix
-- **UI**: Assesses risks with assessment ID, risk category, severity, likelihood, mitigation strategy, and residual risk.
-- **Contract**: `addComment` stores `FUSION_RISK` entries for risk tracking.
-- **Automation**: Risk service calculates risk scores and tracks mitigations.
-- **Acceptance**: Assessment ID, risk category, severity, and likelihood required.
+#### F293 · Achievement Intent Gas Estimator
+- **Goal**: Estimate gas costs for intents across chains using historical data and current network conditions.
+- **Surfaces**: Gas estimator UI + `GasEstimate` struct storing chain ID, intent type, historical data, and estimated cost.
+- **Acceptance**: Estimator must use historical data and current conditions, providing confidence intervals.
 
-#### F294 · Achievement Cross-Domain Settlement
-- **UI**: Initiates settlements with settlement ID, source/target domains, asset type, amount, settlement mode, and finality proof hash.
-- **Contract**: `addComment` logs `XDOMAIN_SETTLE` entries for settlement tracking.
-- **Automation**: Settlement service executes based on mode and validates finality proofs.
-- **Acceptance**: Settlement ID, both domains, asset type, and amount required.
+#### F294 · Achievement Treasury Rebalancing Automator
+- **Goal**: Automatically rebalance treasury allocations based on risk scores, yield opportunities, and policy constraints.
+- **Surfaces**: Rebalancer UI + `TreasuryRebalance` struct storing current allocation, target allocation, and rebalance triggers.
+- **Acceptance**: Rebalancer must respect risk and policy constraints, requiring approval for large rebalances.
 
-#### F295 · Achievement Fusion Telemetry Aggregator
-- **UI**: Aggregates telemetry with aggregator ID, source domains, aggregation window, metric types, aggregation method, and output format.
-- **Contract**: `addComment` stores `FUSION_TELEMETRY` entries for telemetry management.
-- **Automation**: Aggregator service collects metrics and applies aggregation method.
-- **Acceptance**: Aggregator ID, at least one source domain, and aggregation window required.
+#### F295 · Achievement Guardian Quorum Optimizer
+- **Goal**: Optimize guardian quorum sizes and compositions based on workload, risk, and availability patterns.
+- **Surfaces**: Quorum optimizer UI + `QuorumOptimization` struct storing current quorum, optimization criteria, and recommended quorum.
+- **Acceptance**: Optimizer must consider workload and risk, maintaining minimum quorum size for security.
 
-#### F296 · Achievement Sovereign Access Control
-- **UI**: Configures access with policy ID, resource type, access level, authorized entities, enforcement mode, and policy rules.
-- **Contract**: `addComment` logs `SOV_ACCESS` entries for access management.
-- **Automation**: Access control service enforces policies based on mode.
-- **Acceptance**: Policy ID, resource type, and at least one authorized entity required.
+#### F296 · Achievement Proof Verification Accelerator
+- **Goal**: Accelerate proof verification using parallel processing, caching, and optimized algorithms.
+- **Surfaces**: Verification accelerator UI + `VerificationAcceleration` struct storing proof type, acceleration method, and performance metrics.
+- **Acceptance**: Accelerator must maintain verification correctness while improving speed by at least 2x.
 
-#### F297 · Achievement Fusion Governance Oracle
-- **UI**: Queries oracle with oracle ID, query type, target domains, query hash, response format, and oracle proof hash.
-- **Contract**: `addComment` stores `FUSION_ORACLE` entries for oracle queries.
-- **Automation**: Oracle service processes queries and returns formatted responses.
-- **Acceptance**: Oracle ID, query type, and query hash required.
+#### F297 · Achievement Cross-Chain Settlement Optimizer
+- **Goal**: Optimize cross-chain settlements for cost, speed, and finality guarantees using multi-path routing.
+- **Surfaces**: Settlement optimizer UI + `SettlementRoute` struct storing route options, cost estimates, and finality guarantees.
+- **Acceptance**: Optimizer must evaluate at least two routes and select based on optimization criteria.
 
-#### F298 · Achievement Quantum-Secure Channel
-- **UI**: Establishes channels with channel ID, participant addresses, encryption algorithm, channel type, and expiry timestamp.
-- **Contract**: `addComment` logs `QUANTUM_CHANNEL` entries for channel management.
-- **Automation**: Channel service manages encryption and enforces expiry.
-- **Acceptance**: Channel ID, both participant addresses, and encryption algorithm required.
+#### F298 · Achievement Compliance Evidence Archiver
+- **Goal**: Archive compliance evidence with retention policies, encryption, and audit trails for regulatory requirements.
+- **Surfaces**: Evidence archiver UI + `ComplianceArchive` struct storing evidence hash, retention policy, encryption method, and audit trail.
+- **Acceptance**: Archiver must enforce retention policies and maintain encrypted audit trails.
 
-#### F299 · Achievement Fusion Continuity Ledger
-- **UI**: Records continuity with ledger ID, continuity type, source/target domains, continuity proof hash, checkpoint interval, and metadata.
-- **Contract**: `addComment` stores `FUSION_CONTINUITY` entries for continuity tracking.
-- **Automation**: Continuity service validates proofs and manages checkpoints.
-- **Acceptance**: Ledger ID, continuity type, both domains, and continuity proof hash required.
+#### F299 · Achievement Intent Execution Monitor
+- **Goal**: Monitor intent execution in real-time, detecting anomalies and triggering rollbacks when deviations occur.
+- **Surfaces**: Execution monitor UI + `IntentExecution` struct storing execution status, expected vs actual, and anomaly flags.
+- **Acceptance**: Monitor must detect deviations and trigger rollback when anomalies exceed threshold.
 
-#### F300 · Achievement Fusion Orchestration Hub
-- **UI**: Central hub for orchestrating all fusion operations with hub ID, supported fusion types, coordination policy, and hub metadata.
-- **Contract**: `addComment` logs `FUSION_HUB` entries for hub registration.
-- **Automation**: Hub service coordinates all fusion operations and enforces policies.
-- **Acceptance**: Hub ID and at least one supported fusion type required.
+#### F300 · Achievement Omni-Chain Governance Aggregator
+- **Goal**: Aggregate governance signals across chains, enabling unified decision-making with weighted voting.
+- **Surfaces**: Governance aggregator UI + `GovernanceAggregate` struct storing chain votes, weights, and aggregated result.
+- **Acceptance**: Aggregator must weight votes by chain importance and require quorum across chains.
 
 ### Wave Ψ · Stellar Nexus Quantum Continuity (F301–F330)
 
@@ -2177,6 +2162,223 @@ Stellar Nexus introduces thirty quantum-resistant and cross-chain continuity pri
 - **Contract**: `addComment` stores `SOV_COMPLIANCE_CHAIN` payload with attestation hashes and chain metadata.
 - **Automation**: Chain service validates attestations and creates unified compliance proofs.
 - **Acceptance**: Requires at least one sovereign attestation; chain metadata must be verifiable.
+
+### Wave Φ · Quantum Nexus (F301–F330)
+
+Quantum Nexus extends BuilderProof's capabilities with thirty quantum-resistant and mesh network primitives that enable secure cross-domain operations, autonomous mesh coordination, and quantum-safe cryptography. Each feature leverages post-quantum algorithms (CRYSTALS-Kyber, Dilithium, FALCON, SPHINCS+) and mesh network topologies to provide resilient, future-proof infrastructure for onchain achievements.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F301 | Achievement Quantum Nexus Router | Quantum Routing | `components/onchain/OnchainAchievementQuantumNexusRouter.tsx` |
+| F302 | Achievement Sovereign Mesh Coordinator | Mesh Coordination | `components/onchain/OnchainAchievementSovereignMeshCoordinator.tsx` |
+| F303 | Achievement Autonomous Mesh Network | Autonomous Networks | `components/onchain/OnchainAchievementAutonomousMeshNetwork.tsx` |
+| F304 | Achievement Quantum Key Rotation Vault | Key Management | `components/onchain/OnchainAchievementQuantumKeyRotationVault.tsx` |
+| F305 | Achievement Cross-Mesh State Sync | State Synchronization | `components/onchain/OnchainAchievementCrossMeshStateSync.tsx` |
+| F306 | Achievement Mesh Consensus Oracle | Consensus | `components/onchain/OnchainAchievementMeshConsensusOracle.tsx` |
+| F307 | Achievement Quantum Proof Aggregator | Proof Aggregation | `components/onchain/OnchainAchievementQuantumProofAggregator.tsx` |
+| F308 | Achievement Sovereign Mesh Gateway | Gateway Access | `components/onchain/OnchainAchievementSovereignMeshGateway.tsx` |
+| F309 | Achievement Mesh Telemetry Hub | Observability | `components/onchain/OnchainAchievementMeshTelemetryHub.tsx` |
+| F310 | Achievement Quantum-Resilient Bridge | Bridge Security | `components/onchain/OnchainAchievementQuantumResilientBridge.tsx` |
+| F311 | Achievement Mesh Governance Council | Governance | `components/onchain/OnchainAchievementMeshGovernanceCouncil.tsx` |
+| F312 | Achievement Quantum-Secure Messaging | Secure Communication | `components/onchain/OnchainAchievementQuantumSecureMessaging.tsx` |
+| F313 | Achievement Mesh Node Registry | Node Management | `components/onchain/OnchainAchievementMeshNodeRegistry.tsx` |
+| F314 | Achievement Quantum Attestation Chain | Attestation | `components/onchain/OnchainAchievementQuantumAttestationChain.tsx` |
+| F315 | Achievement Mesh Security Audit | Security | `components/onchain/OnchainAchievementMeshSecurityAudit.tsx` |
+| F316 | Achievement Mesh Treasury Pool | Treasury | `components/onchain/OnchainAchievementMeshTreasuryPool.tsx` |
+| F317 | Achievement Quantum-Resistant Identity | Identity | `components/onchain/OnchainAchievementQuantumResistantIdentity.tsx` |
+| F318 | Achievement Mesh Compliance Gate | Compliance | `components/onchain/OnchainAchievementMeshComplianceGate.tsx` |
+| F319 | Achievement Quantum Proof Verifier | Proof Verification | `components/onchain/OnchainAchievementQuantumProofVerifier.tsx` |
+| F320 | Achievement Mesh Risk Matrix | Risk Management | `components/onchain/OnchainAchievementMeshRiskMatrix.tsx` |
+| F321 | Achievement Mesh Data Residency | Data Residency | `components/onchain/OnchainAchievementMeshDataResidency.tsx` |
+| F322 | Achievement Quantum Signature Vault | Signature Management | `components/onchain/OnchainAchievementQuantumSignatureVault.tsx` |
+| F323 | Achievement Mesh Access Control | Access Control | `components/onchain/OnchainAchievementMeshAccessControl.tsx` |
+| F324 | Achievement Quantum Encryption Service | Encryption | `components/onchain/OnchainAchievementQuantumEncryptionService.tsx` |
+| F325 | Achievement Mesh Continuity Ledger | Continuity Tracking | `components/onchain/OnchainAchievementMeshContinuityLedger.tsx` |
+| F326 | Achievement Quantum Nexus Hub | Central Hub | `components/onchain/OnchainAchievementQuantumNexusHub.tsx` |
+| F327 | Achievement Mesh Settlement Engine | Settlement | `components/onchain/OnchainAchievementMeshSettlementEngine.tsx` |
+| F328 | Achievement Quantum Key Exchange | Key Exchange | `components/onchain/OnchainAchievementQuantumKeyExchange.tsx` |
+| F329 | Achievement Mesh Orchestration Platform | Orchestration | `components/onchain/OnchainAchievementMeshOrchestrationPlatform.tsx` |
+| F330 | Achievement Quantum Nexus Network | Network Infrastructure | `components/onchain/OnchainAchievementQuantumNexusNetwork.tsx` |
+
+#### F301 · Achievement Quantum Nexus Router
+- **UI**: `components/onchain/OnchainAchievementQuantumNexusRouter.tsx` configures router ID, routing strategy, nexus node addresses, quantum algorithm, and routing policy for quantum-resistant routing operations.
+- **Contract**: Uses `addComment` with `QNEXUS_ROUTER` payloads that encode routing configuration and node topology.
+- **Automation**: Router service processes operations through quantum-resistant nexus nodes based on configured strategy.
+- **Acceptance**: Router ID and at least one nexus node address required; quantum algorithm selection mandatory.
+
+#### F302 · Achievement Sovereign Mesh Coordinator
+- **UI**: Deploys coordinators with coordinator ID, mesh topology, participant node addresses, coordination protocol, and heartbeat intervals.
+- **Contract**: `addComment` logs `SOV_MESH_COORD` entries for coordinator registration.
+- **Automation**: Coordinator service manages mesh operations using selected coordination protocol.
+- **Acceptance**: Coordinator ID, mesh topology, and at least one participant node required.
+
+#### F303 · Achievement Autonomous Mesh Network
+- **UI**: Deploys networks with network ID, initial node count, autonomy level, consensus mechanism, and network policy.
+- **Contract**: `addComment` stores `AUTO_MESH` entries for network deployment.
+- **Automation**: Network service manages autonomous operations based on configured autonomy level.
+- **Acceptance**: Network ID and positive node count required; consensus mechanism selection mandatory.
+
+#### F304 · Achievement Quantum Key Rotation Vault
+- **UI**: Configures vaults with vault ID, rotation policy, rotation interval, quantum algorithm, and key history limit.
+- **Contract**: `addComment` logs `QKEY_ROTATION` entries for key rotation management.
+- **Automation**: Vault service manages key rotation cycles according to configured policy.
+- **Acceptance**: Vault ID, rotation policy, and positive rotation interval required.
+
+#### F305 · Achievement Cross-Mesh State Sync
+- **UI**: Configures sync with sync ID, source mesh, target meshes, sync mode, sync frequency, and conflict resolution strategy.
+- **Contract**: `addComment` stores `CROSS_MESH_SYNC` entries for state synchronization.
+- **Automation**: Sync service coordinates state transfers across meshes using configured conflict resolution.
+- **Acceptance**: Sync ID, source mesh, and at least one target mesh required.
+
+#### F306 · Achievement Mesh Consensus Oracle
+- **UI**: Deploys oracles with oracle ID, mesh ID, consensus type, quorum size, finality threshold, and oracle policy.
+- **Contract**: `addComment` logs `MESH_CONSENSUS` entries for consensus coordination.
+- **Automation**: Oracle service processes consensus decisions based on configured parameters.
+- **Acceptance**: Oracle ID, mesh ID, and positive quorum size required.
+
+#### F307 · Achievement Quantum Proof Aggregator
+- **UI**: Configures aggregators with aggregator ID, proof source networks, aggregation method, quantum algorithm, and aggregation window.
+- **Contract**: `addComment` stores `QPROOF_AGG` entries for proof aggregation.
+- **Automation**: Aggregator service collects and aggregates proofs from source networks.
+- **Acceptance**: Aggregator ID and at least one proof source network required.
+
+#### F308 · Achievement Sovereign Mesh Gateway
+- **UI**: Deploys gateways with gateway ID, mesh ID, access policy, allowed addresses, encryption requirement, and gateway policy.
+- **Contract**: `addComment` logs `SOV_GATEWAY` entries for gateway registration.
+- **Automation**: Gateway service enforces access policies and encryption requirements.
+- **Acceptance**: Gateway ID, mesh ID, and access policy selection required.
+
+#### F309 · Achievement Mesh Telemetry Hub
+- **UI**: Deploys hubs with hub ID, connected mesh networks, telemetry types, aggregation interval, retention policy, and hub configuration.
+- **Contract**: `addComment` stores `MESH_TELEMETRY` entries for telemetry management.
+- **Automation**: Hub service aggregates telemetry from connected networks.
+- **Acceptance**: Hub ID and at least one connected mesh network required.
+
+#### F310 · Achievement Quantum-Resilient Bridge
+- **UI**: Deploys bridges with bridge ID, source/target chains, quantum algorithm, bridge mode, and security policy.
+- **Contract**: `addComment` logs `QBRIDGE` entries for bridge deployment.
+- **Automation**: Bridge service manages cross-chain transfers with quantum-resistant security.
+- **Acceptance**: Bridge ID, both chains, and quantum algorithm selection required.
+
+#### F311 · Achievement Mesh Governance Council
+- **UI**: Forms councils with council ID, mesh ID, member count, quorum threshold, voting period, and governance scope.
+- **Contract**: `addComment` stores `MESH_GOV` entries for council formation.
+- **Automation**: Council service coordinates governance decisions across mesh networks.
+- **Acceptance**: Council ID, mesh ID, and positive member count required.
+
+#### F312 · Achievement Quantum-Secure Messaging
+- **UI**: Configures messaging with channel ID, participant addresses, encryption algorithm, message retention, and delivery guarantee.
+- **Contract**: `addComment` logs `QMSG` entries for messaging configuration.
+- **Automation**: Messaging service handles secure communication with quantum-resistant encryption.
+- **Acceptance**: Channel ID and at least two participant addresses required.
+
+#### F313 · Achievement Mesh Node Registry
+- **UI**: Registers nodes with node ID, node address, mesh ID, node role, status, and node metadata.
+- **Contract**: `addComment` stores `MESH_NODE_REG` entries for node registration.
+- **Automation**: Registry service manages node lifecycle and role assignments.
+- **Acceptance**: Node ID, node address, and mesh ID required.
+
+#### F314 · Achievement Quantum Attestation Chain
+- **UI**: Creates chains with chain ID, attestation type, quantum algorithm, chain depth, and revocation policy.
+- **Contract**: `addComment` logs `QATTEST_CHAIN` entries for attestation chain creation.
+- **Automation**: Chain service manages attestation chains with quantum-resistant signatures.
+- **Acceptance**: Chain ID, attestation type, and positive chain depth required.
+
+#### F315 · Achievement Mesh Security Audit
+- **UI**: Submits audits with audit ID, mesh ID, auditor address, audit scope, audit status, findings count, and report hash.
+- **Contract**: `addComment` stores `MESH_AUDIT` entries for audit tracking.
+- **Automation**: Audit service tracks security assessments and findings.
+- **Acceptance**: Audit ID, mesh ID, and auditor address required.
+
+#### F316 · Achievement Mesh Treasury Pool
+- **UI**: Creates pools with pool ID, mesh ID, asset types, pool type, and allocation policy.
+- **Contract**: `addComment` logs `MESH_TREASURY` entries for treasury management.
+- **Automation**: Pool service manages treasury allocations across mesh networks.
+- **Acceptance**: Pool ID, mesh ID, and at least one asset type required.
+
+#### F317 · Achievement Quantum-Resistant Identity
+- **UI**: Creates identities with identity ID, identity type, quantum algorithm, public key hash, and verification method.
+- **Contract**: `addComment` stores `QIDENTITY` entries for identity creation.
+- **Automation**: Identity service manages quantum-resistant identity operations.
+- **Acceptance**: Identity ID, identity type, and public key hash required.
+
+#### F318 · Achievement Mesh Compliance Gate
+- **UI**: Configures gates with gate ID, mesh ID, compliance type, jurisdictions, verification status, and attestation hash.
+- **Contract**: `addComment` logs `MESH_COMPLIANCE` entries for compliance tracking.
+- **Automation**: Gate service validates compliance across jurisdictions.
+- **Acceptance**: Gate ID, mesh ID, and at least one jurisdiction required.
+
+#### F319 · Achievement Quantum Proof Verifier
+- **UI**: Verifies proofs with verifier ID, proof hash, quantum algorithm, verification status, and verification proof hash.
+- **Contract**: `addComment` stores `QPROOF_VERIFY` entries for proof verification.
+- **Automation**: Verifier service validates quantum-resistant proofs.
+- **Acceptance**: Verifier ID and proof hash required.
+
+#### F320 · Achievement Mesh Risk Matrix
+- **UI**: Assesses risks with assessment ID, mesh ID, risk category, severity, likelihood, and mitigation strategy.
+- **Contract**: `addComment` logs `MESH_RISK` entries for risk tracking.
+- **Automation**: Risk service calculates and tracks risk assessments.
+- **Acceptance**: Assessment ID, mesh ID, risk category, severity, and likelihood required.
+
+#### F321 · Achievement Mesh Data Residency
+- **UI**: Sets residency policies with policy ID, mesh ID, data type, allowed/restricted regions, and enforcement mode.
+- **Contract**: `addComment` stores `MESH_RESIDENCY` entries for residency management.
+- **Automation**: Residency service enforces data location requirements.
+- **Acceptance**: Policy ID, mesh ID, data type, and at least one allowed region required.
+
+#### F322 · Achievement Quantum Signature Vault
+- **UI**: Creates vaults with vault ID, signature algorithm, vault type, signature count, and rotation policy.
+- **Contract**: `addComment` logs `QSIG_VAULT` entries for signature management.
+- **Automation**: Vault service manages quantum-resistant signature operations.
+- **Acceptance**: Vault ID, signature algorithm, and positive signature count required.
+
+#### F323 · Achievement Mesh Access Control
+- **UI**: Configures access with policy ID, mesh ID, resource type, access level, authorized entities, and enforcement mode.
+- **Contract**: `addComment` stores `MESH_ACCESS` entries for access management.
+- **Automation**: Access control service enforces resource access policies.
+- **Acceptance**: Policy ID, mesh ID, and at least one authorized entity required.
+
+#### F324 · Achievement Quantum Encryption Service
+- **UI**: Deploys services with service ID, encryption algorithm, key management, encryption mode, and service policy.
+- **Contract**: `addComment` logs `QENCRYPT` entries for encryption service deployment.
+- **Automation**: Encryption service provides quantum-resistant encryption operations.
+- **Acceptance**: Service ID and encryption algorithm selection required.
+
+#### F325 · Achievement Mesh Continuity Ledger
+- **UI**: Records continuity with ledger ID, mesh ID, continuity type, checkpoint interval, continuity proof hash, and metadata.
+- **Contract**: `addComment` stores `MESH_CONTINUITY` entries for continuity tracking.
+- **Automation**: Continuity service manages checkpoint intervals and proof validation.
+- **Acceptance**: Ledger ID, mesh ID, and continuity proof hash required.
+
+#### F326 · Achievement Quantum Nexus Hub
+- **UI**: Registers hubs with hub ID, supported operations, quantum algorithms, hub address, coordination policy, and hub metadata.
+- **Contract**: `addComment` logs `QNEXUS_HUB` entries for hub registration.
+- **Automation**: Hub service coordinates quantum nexus operations.
+- **Acceptance**: Hub ID, at least one supported operation, and hub address required.
+
+#### F327 · Achievement Mesh Settlement Engine
+- **UI**: Deploys engines with engine ID, mesh ID, settlement mode, finality time, challenge window, and settlement policy.
+- **Contract**: `addComment` stores `MESH_SETTLE` entries for settlement engine deployment.
+- **Automation**: Settlement engine processes transactions with configured finality guarantees.
+- **Acceptance**: Engine ID, mesh ID, and positive finality time required.
+
+#### F328 · Achievement Quantum Key Exchange
+- **UI**: Initiates exchanges with exchange ID, participant addresses, key exchange protocol, and session key hash.
+- **Contract**: `addComment` logs `QKEY_EXCHANGE` entries for key exchange operations.
+- **Automation**: Exchange service manages quantum-resistant key exchange protocols.
+- **Acceptance**: Exchange ID, both participant addresses, and session key hash required.
+
+#### F329 · Achievement Mesh Orchestration Platform
+- **UI**: Deploys platforms with platform ID, orchestration scope, orchestration mode, coordination protocol, and platform policy.
+- **Contract**: `addComment` stores `MESH_ORCH` entries for platform deployment.
+- **Automation**: Platform service orchestrates mesh network operations.
+- **Acceptance**: Platform ID and orchestration scope required.
+
+#### F330 · Achievement Quantum Nexus Network
+- **UI**: Joins networks with network ID, network type, participant count, supported quantum algorithms, and network policy.
+- **Contract**: `addComment` logs `QNEXUS_NET` entries for network participation.
+- **Automation**: Network service manages quantum nexus network infrastructure.
+- **Acceptance**: Network ID, network type, and positive participant count required.
 
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
