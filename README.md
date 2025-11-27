@@ -31,6 +31,7 @@ Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the prob
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 - **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
 - **Wave Φ · Obsidian Nexus (F241–F270)** adds predictive continuity vectors, programmable custody ringfences, anomaly escrows, and auditor-ready evidence capsules inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--obsidian-nexus-autonomous-fabric-f241f270).
+- **Wave Ψ · Stellar Nexus (F301–F330)** introduces quantum-resistant proof anchoring, cross-chain Merkle forests, autonomous guardian rotations, and sovereign compliance attestation chains inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--stellar-nexus-quantum-continuity-f301f330).
 
 ## Reference Docs
 
