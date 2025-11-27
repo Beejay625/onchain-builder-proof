@@ -101,6 +101,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Mesh Orchestration Platform** — Platform for orchestrating mesh network operations with centralized, distributed, or hybrid orchestration modes.
 30. **Achievement Quantum Nexus Network** — Network infrastructure for quantum nexus operations with public, private, or consortium network types.
 
+## Sovereign Nexus Wave · Sovereign Operations & Advanced Coordination (F331–F360)
+
+1. **Achievement Sovereign Nexus Coordinator** — Coordinate sovereign operations across nexus networks with consensus-based, treaty-based, or delegated coordination protocols.
+2. **Achievement Autonomous Fusion Grid** — Grid for autonomous fusion operations across domains with mesh, hierarchical, or hybrid topologies.
+3. **Achievement Cross-Sovereignty Bridge** — Bridge operations across sovereign boundaries with trustless, federated, or hybrid bridge types.
+4. **Achievement Sovereign Treasury Orchestrator** — Orchestrate treasury operations across sovereignties with unified, segregated, or hybrid orchestration modes.
+5. **Achievement Nexus Governance Assembly** — Governance assembly for nexus network operations with one-vote-per-sovereignty, weighted, or quadratic voting mechanisms.
+6. **Achievement Sovereign Identity Federation** — Federate identities across sovereign boundaries with DID, Verifiable Credentials, or custom identity standards.
+7. **Achievement Nexus Data Sovereignty** — Manage data sovereignty across nexus networks with strict, advisory, or hybrid enforcement modes.
+8. **Achievement Sovereign Attestation Network** — Network for sovereign attestations across boundaries with EAS, Verax, or custom attestation standards.
+9. **Achievement Nexus Compliance Framework** — Compliance framework for nexus network operations with mandatory, recommended, or advisory enforcement levels.
+10. **Achievement Sovereign Execution Environment** — Execution environment for sovereign operations with deterministic, optimistic, ZK-based, or hybrid execution models.
+11. **Achievement Nexus Telemetry Fusion** — Fuse telemetry across nexus networks with aggregation, correlation, or hybrid fusion methods.
+12. **Achievement Sovereign Risk Governance** — Governance framework for sovereign risk management with centralized, distributed, or federated governance models.
+13. **Achievement Nexus Settlement Protocol** — Settlement protocol for nexus network transactions with atomic, optimistic, delayed, or hybrid settlement types.
+14. **Achievement Sovereign Access Federation** — Federate access control across sovereign boundaries with OAuth2, SAML, or custom access protocols.
+15. **Achievement Nexus Continuity Matrix** — Matrix for tracking continuity across nexus networks with configurable measurement intervals and threshold policies.
+16. **Achievement Sovereign Proof Network** — Network for sovereign proof operations with Merkle, ZK-SNARK, ZK-STARK, or fraud proof types.
+17. **Achievement Nexus Intent Orchestrator** — Orchestrate intents across nexus networks with sequential, parallel, or hybrid orchestration strategies.
+18. **Achievement Sovereign Guardian Council** — Guardian council for sovereign operations with advisory, operational, emergency, or sovereign authority levels.
+19. **Achievement Nexus Audit Trail** — Audit trail for nexus network operations with short-term, medium-term, long-term, or permanent retention policies.
+20. **Achievement Sovereign Messaging Protocol** — Messaging protocol for sovereign communications with state updates, intents, attestations, or notifications.
+21. **Achievement Nexus Key Management** — Key management system for nexus networks with symmetric, asymmetric, quantum-resistant, or hybrid key types.
+22. **Achievement Sovereign Consensus Mechanism** — Consensus mechanism for sovereign operations with BFT, PoS, PoA, or hybrid consensus types.
+23. **Achievement Nexus Resource Pool** — Resource pool for nexus network operations with fair, priority-based, or weighted allocation strategies.
+24. **Achievement Sovereign Dispute Resolution** — Dispute resolution system for sovereign operations with arbitration, mediation, or voting resolution mechanisms.
+25. **Achievement Nexus Security Framework** — Security framework for nexus network operations with STRIDE, DREAD, or custom threat models.
+26. **Achievement Sovereign Data Governance** — Data governance framework for sovereign operations with centralized, distributed, or federated governance models.
+27. **Achievement Nexus Interoperability Hub** — Hub for nexus network interoperability with protocol-agnostic, protocol-specific, or hybrid translation layers.
+28. **Achievement Sovereign Event Stream** — Event streaming for sovereign operations with real-time, batch, or hybrid stream modes.
+29. **Achievement Nexus Monitoring Dashboard** — Monitoring dashboard for nexus network operations with configurable refresh intervals and alert thresholds.
+30. **Achievement Sovereign Nexus Platform** — Platform for sovereign nexus operations with public, private, or consortium platform types.
+
 ## Guardian Wave · Controls Backlog
 
 1. **Achievement Hotfix Stream** — Rapidly notarize emergency fixes with reviewer acks and automatic rollback hooks.
