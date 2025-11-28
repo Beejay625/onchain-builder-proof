@@ -695,6 +695,38 @@ Deep dives for this resilience wave live in [`docs/feature-delivery-plan.md`](do
 
 Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-α--aether-nexus-f421f450).
 
+### Cross-Chain Security · 30 Multi-Chain Security Primitives
+- 🌉 **Achievement Cross-Chain Bridge Security**: Secures bridge operations with multi-signature verification.
+- 🔗 **Achievement Multi-Chain Verification Network**: Verifies proofs across multiple chains with consensus.
+- ✅ **Achievement Bridge Attestation Protocol**: Attests bridge operations with cryptographic proofs.
+- 🤝 **Achievement Cross-Chain Consensus Engine**: Consensus mechanisms for cross-chain operations.
+- 📋 **Achievement Inter-Chain Trust Registry**: Registry for trust relationships between chains.
+- 🔄 **Achievement Bridge State Synchronizer**: Synchronizes state across bridge endpoints.
+- 🚨 **Achievement Cross-Chain Fraud Detection**: Detects fraudulent cross-chain operations.
+- 🔑 **Achievement Multi-Chain Key Management**: Manages keys across multiple chains securely.
+- ✔️ **Achievement Bridge Transaction Validator**: Validates bridge transactions before execution.
+- 📡 **Achievement Cross-Chain Event Relay**: Relays events securely across chains.
+- 📬 **Achievement Inter-Chain Message Queue**: Queues messages for cross-chain delivery.
+- 💧 **Achievement Bridge Liquidity Monitor**: Monitors bridge liquidity across chains.
+- 🆔 **Achievement Cross-Chain Identity Bridge**: Bridges identities across chains with verification.
+- 🗳️ **Achievement Multi-Chain Governance Sync**: Synchronizes governance across chains.
+- ⚠️ **Achievement Bridge Risk Assessor**: Assesses risks in bridge operations.
+- 📊 **Achievement Cross-Chain Proof Aggregator**: Aggregates proofs from multiple chains.
+- 💰 **Achievement Inter-Chain Settlement Layer**: Settlement layer for cross-chain transactions.
+- ⚡ **Achievement Bridge Circuit Breaker**: Circuit breaker for bridge operations.
+- 📋 **Achievement Cross-Chain Audit Trail**: Audit trail for cross-chain operations.
+- ✅ **Achievement Multi-Chain Compliance Checker**: Checks compliance across chains.
+- 📸 **Achievement Bridge State Snapshot**: Snapshots bridge state for recovery.
+- ⚖️ **Achievement Cross-Chain Dispute Resolver**: Resolves disputes across chains.
+- 🪙 **Achievement Inter-Chain Token Bridge**: Secure token bridging with verification.
+- 💚 **Achievement Bridge Health Monitor**: Monitors bridge health across chains.
+- 🔒 **Achievement Cross-Chain Data Integrity**: Ensures data integrity across chains.
+- 🔐 **Achievement Multi-Chain Access Control**: Access control across multiple chains.
+- 🔄 **Achievement Bridge Recovery Protocol**: Recovery protocol for bridge failures.
+- ⏰ **Achievement Cross-Chain Timelock**: Timelock for cross-chain operations.
+- 💼 **Achievement Inter-Chain Escrow**: Escrow for cross-chain transactions.
+- 🎯 **Achievement Bridge Finality Guarantor**: Guarantees finality for bridge operations.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
