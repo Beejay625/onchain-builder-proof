@@ -134,6 +134,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Nexus Monitoring Dashboard** — Monitoring dashboard for nexus network operations with configurable refresh intervals and alert thresholds.
 30. **Achievement Sovereign Nexus Platform** — Platform for sovereign nexus operations with public, private, or consortium platform types.
 
+## Hyperion Nexus Wave · Advanced Orchestration & Intelligent Automation (F361–F390)
+
+1. **Achievement Hyperion Orchestration Engine** — Advanced orchestration engine for multi-domain operations with intelligent, deterministic, or adaptive orchestration modes.
+2. **Achievement Real-Time Coordination Hub** — Hub for real-time coordination across networks with configurable coordination latency and sync modes.
+3. **Achievement Intelligent Automation Mesh** — Mesh for intelligent automation across domains with high, medium, or low intelligence levels.
+4. **Achievement Adaptive Routing Network** — Network with adaptive routing capabilities using Dijkstra, A*, or adaptive routing algorithms.
+5. **Achievement Predictive State Manager** — State manager with predictive capabilities using ML-based, rule-based, or hybrid prediction models.
+6. **Achievement Dynamic Consensus Orchestrator** — Orchestrator for dynamic consensus mechanisms with BFT, PoS, PoA, or dynamic consensus types.
+7. **Achievement Intelligent Load Balancer** — Load balancer with intelligent distribution using round-robin, least-connections, or intelligent balancing algorithms.
+8. **Achievement Adaptive Security Gateway** — Gateway with adaptive security policies with high, medium, low, or adaptive security levels.
+9. **Achievement Predictive Resource Allocator** — Resource allocator with predictive capabilities using predictive, reactive, or hybrid allocation strategies.
+10. **Achievement Intelligent Event Processor** — Event processor with intelligent routing using real-time, batch, or intelligent processing modes.
+11. **Achievement Adaptive Failure Recovery** — Recovery system with adaptive strategies using automatic, semi-automatic, or adaptive recovery strategies.
+12. **Achievement Intelligent Scheduling Engine** — Scheduling engine with intelligent optimization using priority-based, fair-share, or intelligent scheduling algorithms.
+13. **Achievement Predictive Scaling Controller** — Controller for predictive scaling operations with predictive, reactive, or hybrid scaling strategies.
+14. **Achievement Adaptive Network Topology** — Network topology with adaptive reconfiguration using mesh, star, ring, or adaptive topology types.
+15. **Achievement Intelligent Cache Manager** — Cache manager with intelligent eviction using LRU, LFU, or intelligent eviction policies.
+16. **Achievement Predictive Anomaly Detector** — Detector with predictive anomaly detection using ML-based, statistical, or hybrid detection models.
+17. **Achievement Adaptive Workflow Engine** — Workflow engine with adaptive execution using sequential, parallel, or adaptive execution modes.
+18. **Achievement Intelligent Data Pipeline** — Data pipeline with intelligent processing using streaming, batch, or intelligent processing modes.
+19. **Achievement Predictive Maintenance System** — System for predictive maintenance operations with predictive, preventive, or reactive maintenance strategies.
+20. **Achievement Adaptive Monitoring System** — Monitoring system with adaptive thresholds using static, dynamic, or adaptive threshold modes.
+21. **Achievement Intelligent Query Optimizer** — Query optimizer with intelligent planning using cost-based, rule-based, or intelligent optimization strategies.
+22. **Achievement Adaptive Backup System** — Backup system with adaptive scheduling using full, incremental, or adaptive backup strategies.
+23. **Achievement Predictive Capacity Planner** — Planner for predictive capacity management using ML-based, statistical, or hybrid planning models.
+24. **Achievement Intelligent Service Mesh** — Service mesh with intelligent routing using round-robin, least-load, or intelligent routing policies.
+25. **Achievement Adaptive Configuration Manager** — Configuration manager with adaptive updates using immediate, rolling, or adaptive update strategies.
+26. **Achievement Predictive Performance Optimizer** — Optimizer for predictive performance tuning with latency, throughput, resource-usage, or multi-objective optimization targets.
+27. **Achievement Intelligent Network Analyzer** — Analyzer for intelligent network analysis with traffic, performance, security, or comprehensive analysis types.
+28. **Achievement Adaptive Resource Governor** — Governor for adaptive resource management with strict, flexible, or adaptive governance modes.
+29. **Achievement Predictive Cost Optimizer** — Optimizer for predictive cost management with cost-minimization, cost-performance, or predictive optimization strategies.
+30. **Achievement Hyperion Nexus Platform** — Platform for hyperion nexus operations with public, private, or hybrid platform types.
+
 ## Guardian Wave · Controls Backlog
 
 1. **Achievement Hotfix Stream** — Rapidly notarize emergency fixes with reviewer acks and automatic rollback hooks.
