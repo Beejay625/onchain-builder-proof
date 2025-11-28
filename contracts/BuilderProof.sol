@@ -778,6 +778,27 @@ contract SocialMediaContract {
         emit CrossChainBridgeSecurityLogged(crossChainBridgeSecurityCount, achievementId, bridgeId, threshold, securityProof);
         return crossChainBridgeSecurityCount;
     }
+
+    function logMultiChainVerificationNetwork(
+        uint256 achievementId,
+        string[] memory chainIds,
+        bytes32 consensusProof,
+        uint256 verificationCount
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(chainIds.length >= 2, "At least 2 chains required");
+        multiChainVerificationNetworkCount++;
+        multiChainVerificationNetworks[multiChainVerificationNetworkCount] = MultiChainVerificationNetwork({
+            id: multiChainVerificationNetworkCount,
+            achievementId: achievementId,
+            chainIds: chainIds,
+            consensusProof: consensusProof,
+            verificationCount: verificationCount,
+            recordedAt: block.timestamp
+        });
+        emit MultiChainVerificationNetworkLogged(multiChainVerificationNetworkCount, achievementId, consensusProof, verificationCount);
+        return multiChainVerificationNetworkCount;
+    }
 }
 
 
