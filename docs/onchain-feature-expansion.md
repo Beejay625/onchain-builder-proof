@@ -596,6 +596,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Intent Gas Price Predictor** — Predict optimal gas prices for intent execution using machine learning models with onchain validation of predictions.
 30. **Achievement Sovereign Compliance Attestation Chain** — Chain compliance attestations from multiple sovereign entities into a single verifiable proof of regulatory adherence.
 
+## Quantum Resilience · Future-Proof Security (F391–F420)
+
+1. **Achievement Quantum Key Rotation** — Rotate cryptographic keys using post-quantum algorithms with scheduled rotations and migration windows.
+2. **Achievement Post-Quantum Signature Vault** — Store signatures using quantum-resistant schemes with public key hashes and expiry timestamps.
+3. **Achievement Quantum-Resistant Vault** — Secure vaults with PQ cryptography, encryption algorithms, and access control policies.
+4. **Achievement Quantum-Safe Attestation** — Attestations using quantum-resistant proofs with signature schemes and validity periods.
+5. **Achievement Quantum Proof Anchor** — Anchor proofs with PQ hash functions, chain references, and block anchors.
+6. **Achievement Hybrid Cryptography Bridge** — Bridge between classical and PQ crypto with transition schedules and compatibility modes.
+7. **Achievement Quantum Key Escrow** — Escrow keys with PQ encryption, release conditions, and escrow duration controls.
+8. **Achievement Post-Quantum Merkle Trees** — Merkle trees using PQ hash functions with tree structures and root hashes.
+9. **Achievement Quantum-Safe Multi-Sig** — Multi-signature with PQ schemes, signer sets, and threshold requirements.
+10. **Achievement Quantum Migration Path** — Migration strategy from classical to PQ with algorithm transitions and timelines.
+11. **Achievement Quantum Threat Monitor** — Monitor for quantum computing threats with threat levels and mitigation tracking.
+12. **Achievement PQ Certificate Authority** — Certificate authority using PQ crypto with signature schemes and validity periods.
+13. **Achievement Quantum-Safe Timelock** — Timelock contracts with PQ security, lock durations, and release mechanisms.
+14. **Achievement Post-Quantum Zero-Knowledge** — ZK proofs using PQ primitives with proof systems and verification data.
+15. **Achievement Quantum-Resistant Randomness** — Random number generation with PQ security, entropy sources, and verification.
+16. **Achievement PQ Key Derivation** — Key derivation using PQ functions with KDF algorithms and usage tracking.
+17. **Achievement Quantum-Safe Hash Chain** — Hash chains with PQ algorithms, chain lengths, and integrity verification.
+18. **Achievement Post-Quantum Commitment Scheme** — Commitments using PQ crypto with algorithms and reveal scheduling.
+19. **Achievement Quantum-Resistant Encryption** — Encryption with PQ algorithms, schemes, and key management.
+20. **Achievement PQ Signature Aggregation** — Aggregate signatures with PQ schemes, aggregation methods, and optimization.
+21. **Achievement Quantum-Safe State Transition** — State transitions with PQ verification, transition proofs, and rollback support.
+22. **Achievement Post-Quantum Audit Trail** — Audit trails using PQ hashing with event metadata and tamper detection.
+23. **Achievement Quantum-Resistant Token** — Tokens secured with PQ cryptography, security layers, and transfer rules.
+24. **Achievement PQ Governance Protocol** — Governance using PQ signatures with voting schemes and quorum enforcement.
+25. **Achievement Quantum-Safe Consensus** — Consensus mechanisms with PQ security, algorithms, and validator coordination.
+26. **Achievement Post-Quantum Identity** — Identity management with PQ crypto, signatures, and attestation tracking.
+27. **Achievement Quantum-Resistant Escrow** — Escrow contracts with PQ security, encryption, and conditional release.
+28. **Achievement PQ Cross-Chain Bridge** — Cross-chain bridges with PQ verification, chain references, and finality tracking.
+29. **Achievement Quantum-Safe Oracle** — Oracles using PQ cryptography with signature schemes and update verification.
+30. **Achievement Post-Quantum Continuity** — Continuity guarantees with PQ primitives, security models, and migration paths.
+
 ## Enablement Notes
 
 - Each feature is toggled via `FeatureFlags`; keep them disabled by default until implementation ships.
