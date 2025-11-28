@@ -667,6 +667,29 @@ contract SocialMediaContract {
         emit QuantumKeyRotationLogged(quantumKeyRotationCount, achievementId, algorithmType, rotationSchedule, keyGenerationProof);
         return quantumKeyRotationCount;
     }
+
+    function logPostQuantumSignatureVault(
+        uint256 achievementId,
+        string memory signatureScheme,
+        bytes32 publicKeyHash,
+        bytes32 signatureProof,
+        uint256 expiryTimestamp
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(expiryTimestamp > block.timestamp, "Expiry must be in future");
+        postQuantumSignatureVaultCount++;
+        postQuantumSignatureVaults[postQuantumSignatureVaultCount] = PostQuantumSignatureVault({
+            id: postQuantumSignatureVaultCount,
+            achievementId: achievementId,
+            signatureScheme: signatureScheme,
+            publicKeyHash: publicKeyHash,
+            signatureProof: signatureProof,
+            expiryTimestamp: expiryTimestamp,
+            recordedAt: block.timestamp
+        });
+        emit PostQuantumSignatureVaultLogged(postQuantumSignatureVaultCount, achievementId, signatureScheme, publicKeyHash, expiryTimestamp);
+        return postQuantumSignatureVaultCount;
+    }
 }
 
 
