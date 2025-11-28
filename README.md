@@ -593,6 +593,74 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 
 Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--sovereign-nexus-f331f360).
 
+### Hyperion Nexus · 30 Advanced Orchestration & Intelligent Automation
+- 🎼 **Achievement Hyperion Orchestration Engine**: Advanced orchestration engine for multi-domain operations with intelligent, deterministic, or adaptive modes.
+- ⚡ **Achievement Real-Time Coordination Hub**: Hub for real-time coordination across networks with configurable latency and sync modes.
+- 🤖 **Achievement Intelligent Automation Mesh**: Mesh for intelligent automation across domains with configurable intelligence levels.
+- 🔀 **Achievement Adaptive Routing Network**: Network with adaptive routing capabilities using multiple routing algorithms.
+- 🔮 **Achievement Predictive State Manager**: State manager with predictive capabilities using ML-based, rule-based, or hybrid models.
+- 🤝 **Achievement Dynamic Consensus Orchestrator**: Orchestrator for dynamic consensus mechanisms with multiple consensus types.
+- ⚖️ **Achievement Intelligent Load Balancer**: Load balancer with intelligent distribution using multiple balancing algorithms.
+- 🛡️ **Achievement Adaptive Security Gateway**: Gateway with adaptive security policies with multiple security levels.
+- 📦 **Achievement Predictive Resource Allocator**: Resource allocator with predictive capabilities using multiple allocation strategies.
+- 📨 **Achievement Intelligent Event Processor**: Event processor with intelligent routing using multiple processing modes.
+- 🔄 **Achievement Adaptive Failure Recovery**: Recovery system with adaptive strategies using multiple recovery approaches.
+- ⏰ **Achievement Intelligent Scheduling Engine**: Scheduling engine with intelligent optimization using multiple scheduling algorithms.
+- 📈 **Achievement Predictive Scaling Controller**: Controller for predictive scaling operations with multiple scaling strategies.
+- 🌐 **Achievement Adaptive Network Topology**: Network topology with adaptive reconfiguration using multiple topology types.
+- 💾 **Achievement Intelligent Cache Manager**: Cache manager with intelligent eviction using multiple eviction policies.
+- 🔍 **Achievement Predictive Anomaly Detector**: Detector with predictive anomaly detection using multiple detection models.
+- 🔧 **Achievement Adaptive Workflow Engine**: Workflow engine with adaptive execution using multiple execution modes.
+- 📊 **Achievement Intelligent Data Pipeline**: Data pipeline with intelligent processing using multiple processing modes.
+- 🔧 **Achievement Predictive Maintenance System**: System for predictive maintenance operations with multiple maintenance strategies.
+- 📡 **Achievement Adaptive Monitoring System**: Monitoring system with adaptive thresholds using multiple threshold modes.
+- 🔍 **Achievement Intelligent Query Optimizer**: Query optimizer with intelligent planning using multiple optimization strategies.
+- 💾 **Achievement Adaptive Backup System**: Backup system with adaptive scheduling using multiple backup strategies.
+- 📊 **Achievement Predictive Capacity Planner**: Planner for predictive capacity management using multiple planning models.
+- 🌐 **Achievement Intelligent Service Mesh**: Service mesh with intelligent routing using multiple routing policies.
+- ⚙️ **Achievement Adaptive Configuration Manager**: Configuration manager with adaptive updates using multiple update strategies.
+- ⚡ **Achievement Predictive Performance Optimizer**: Optimizer for predictive performance tuning with multiple optimization targets.
+- 🔍 **Achievement Intelligent Network Analyzer**: Analyzer for intelligent network analysis with multiple analysis types.
+- 🎛️ **Achievement Adaptive Resource Governor**: Governor for adaptive resource management with multiple governance modes.
+- 💰 **Achievement Predictive Cost Optimizer**: Optimizer for predictive cost management with multiple optimization strategies.
+- 🎯 **Achievement Hyperion Nexus Platform**: Platform for hyperion nexus operations with public, private, or hybrid platform types.
+
+Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--hyperion-nexus-f361f390).
+
+### Quantum Resilience · 30 Future-Proof Security Primitives
+- 🔑 **Achievement Quantum Key Rotation**: Rotates cryptographic keys using post-quantum algorithms with scheduled rotations.
+- 📝 **Achievement Post-Quantum Signature Vault**: Stores signatures using quantum-resistant schemes with public key hashes.
+- 🔒 **Achievement Quantum-Resistant Vault**: Secures vaults with PQ cryptography and access control policies.
+- ✅ **Achievement Quantum-Safe Attestation**: Attestations using quantum-resistant proofs with signature schemes.
+- ⚓ **Achievement Quantum Proof Anchor**: Anchors proofs with PQ hash functions and chain references.
+- 🌉 **Achievement Hybrid Cryptography Bridge**: Bridges between classical and PQ crypto with transition schedules.
+- 🔐 **Achievement Quantum Key Escrow**: Escrows keys with PQ encryption and release conditions.
+- 🌳 **Achievement Post-Quantum Merkle Trees**: Merkle trees using PQ hash functions with tree structures.
+- ✍️ **Achievement Quantum-Safe Multi-Sig**: Multi-signature with PQ schemes and threshold requirements.
+- 🛤️ **Achievement Quantum Migration Path**: Migration strategy from classical to PQ with algorithm transitions.
+- 👁️ **Achievement Quantum Threat Monitor**: Monitors for quantum computing threats with threat levels.
+- 🏛️ **Achievement PQ Certificate Authority**: Certificate authority using PQ crypto with signature schemes.
+- ⏰ **Achievement Quantum-Safe Timelock**: Timelock contracts with PQ security and release mechanisms.
+- 🔍 **Achievement Post-Quantum Zero-Knowledge**: ZK proofs using PQ primitives with proof systems.
+- 🎲 **Achievement Quantum-Resistant Randomness**: Random number generation with PQ security and entropy sources.
+- 🔑 **Achievement PQ Key Derivation**: Key derivation using PQ functions with KDF algorithms.
+- 🔗 **Achievement Quantum-Safe Hash Chain**: Hash chains with PQ algorithms and integrity verification.
+- 📦 **Achievement Post-Quantum Commitment Scheme**: Commitments using PQ crypto with algorithms and reveal scheduling.
+- 🔐 **Achievement Quantum-Resistant Encryption**: Encryption with PQ algorithms and key management.
+- 📊 **Achievement PQ Signature Aggregation**: Aggregates signatures with PQ schemes and optimization.
+- 🔄 **Achievement Quantum-Safe State Transition**: State transitions with PQ verification and rollback support.
+- 📋 **Achievement Post-Quantum Audit Trail**: Audit trails using PQ hashing with tamper detection.
+- 🪙 **Achievement Quantum-Resistant Token**: Tokens secured with PQ cryptography and transfer rules.
+- 🗳️ **Achievement PQ Governance Protocol**: Governance using PQ signatures with voting schemes.
+- 🤝 **Achievement Quantum-Safe Consensus**: Consensus mechanisms with PQ security and validator coordination.
+- 🆔 **Achievement Post-Quantum Identity**: Identity management with PQ crypto and attestation tracking.
+- 💰 **Achievement Quantum-Resistant Escrow**: Escrow contracts with PQ security and conditional release.
+- 🌉 **Achievement PQ Cross-Chain Bridge**: Cross-chain bridges with PQ verification and finality tracking.
+- 🔮 **Achievement Quantum-Safe Oracle**: Oracles using PQ cryptography with signature schemes.
+- ♾️ **Achievement Post-Quantum Continuity**: Continuity guarantees with PQ primitives and migration paths.
+
+Deep dives for this resilience wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-χ--quantum-resilience-future-proof-security-f391f420).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
