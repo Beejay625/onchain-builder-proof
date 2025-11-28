@@ -559,6 +559,40 @@ Deep dives for this fusion wave live in [`docs/onchain-feature-expansion.md`](do
 
 Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-φ--quantum-nexus-f301f330).
 
+### Sovereign Nexus · 30 Sovereign Operations & Advanced Coordination
+- 🌐 **Achievement Sovereign Nexus Coordinator**: Coordinate sovereign operations across nexus networks with various coordination protocols.
+- 🤖 **Achievement Autonomous Fusion Grid**: Grid for autonomous fusion operations across domains with multiple topologies.
+- 🌉 **Achievement Cross-Sovereignty Bridge**: Bridge operations across sovereign boundaries with trustless, federated, or hybrid bridge types.
+- 💰 **Achievement Sovereign Treasury Orchestrator**: Orchestrate treasury operations across sovereignties with unified, segregated, or hybrid modes.
+- 🗳️ **Achievement Nexus Governance Assembly**: Governance assembly for nexus network operations with multiple voting mechanisms.
+- 🪪 **Achievement Sovereign Identity Federation**: Federate identities across sovereign boundaries with multiple identity standards.
+- 🌍 **Achievement Nexus Data Sovereignty**: Manage data sovereignty across nexus networks with configurable enforcement modes.
+- 📜 **Achievement Sovereign Attestation Network**: Network for sovereign attestations across boundaries with multiple attestation standards.
+- ✅ **Achievement Nexus Compliance Framework**: Compliance framework for nexus network operations with multiple enforcement levels.
+- ⚙️ **Achievement Sovereign Execution Environment**: Execution environment for sovereign operations with multiple execution models.
+- 📡 **Achievement Nexus Telemetry Fusion**: Fuse telemetry across nexus networks with aggregation, correlation, or hybrid methods.
+- 📊 **Achievement Sovereign Risk Governance**: Governance framework for sovereign risk management with multiple governance models.
+- 💸 **Achievement Nexus Settlement Protocol**: Settlement protocol for nexus network transactions with multiple settlement types.
+- 🔑 **Achievement Sovereign Access Federation**: Federate access control across sovereign boundaries with multiple access protocols.
+- 📋 **Achievement Nexus Continuity Matrix**: Matrix for tracking continuity across nexus networks with configurable intervals.
+- 🔗 **Achievement Sovereign Proof Network**: Network for sovereign proof operations with multiple proof types.
+- 🎯 **Achievement Nexus Intent Orchestrator**: Orchestrate intents across nexus networks with sequential, parallel, or hybrid strategies.
+- 🛡️ **Achievement Sovereign Guardian Council**: Guardian council for sovereign operations with multiple authority levels.
+- 📝 **Achievement Nexus Audit Trail**: Audit trail for nexus network operations with multiple retention policies.
+- 📨 **Achievement Sovereign Messaging Protocol**: Messaging protocol for sovereign communications with multiple message types.
+- 🔐 **Achievement Nexus Key Management**: Key management system for nexus networks with multiple key types and rotation policies.
+- 🤝 **Achievement Sovereign Consensus Mechanism**: Consensus mechanism for sovereign operations with multiple consensus types.
+- 📦 **Achievement Nexus Resource Pool**: Resource pool for nexus network operations with multiple allocation strategies.
+- ⚖️ **Achievement Sovereign Dispute Resolution**: Dispute resolution system for sovereign operations with multiple resolution mechanisms.
+- 🔒 **Achievement Nexus Security Framework**: Security framework for nexus network operations with multiple threat models.
+- 📊 **Achievement Sovereign Data Governance**: Data governance framework for sovereign operations with multiple governance models.
+- 🔗 **Achievement Nexus Interoperability Hub**: Hub for nexus network interoperability with multiple translation layers.
+- 📡 **Achievement Sovereign Event Stream**: Event streaming for sovereign operations with real-time, batch, or hybrid modes.
+- 📊 **Achievement Nexus Monitoring Dashboard**: Monitoring dashboard for nexus network operations with configurable refresh intervals.
+- 🎯 **Achievement Sovereign Nexus Platform**: Platform for sovereign nexus operations with public, private, or consortium types.
+
+Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ψ--sovereign-nexus-f331f360).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
