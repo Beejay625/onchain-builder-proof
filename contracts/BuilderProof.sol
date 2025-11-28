@@ -22,6 +22,9 @@ contract SocialMediaContract {
     uint256 public continuityDeltaVaultCount;
     uint256 public sovereignFailoverMeshCount;
     uint256 public continuityVectorCartographerCount;
+    uint256 public quantumKeyRotationCount;
+    uint256 public postQuantumSignatureVaultCount;
+    uint256 public quantumResistantVaultCount;
     
     struct Post {
         uint256 id;
@@ -159,6 +162,36 @@ contract SocialMediaContract {
         bytes32 reviewerSignature;
         uint256 recordedAt;
     }
+
+    struct QuantumKeyRotation {
+        uint256 id;
+        uint256 achievementId;
+        string algorithmType;
+        uint256 rotationSchedule;
+        bytes32 keyGenerationProof;
+        uint256 migrationWindow;
+        uint256 recordedAt;
+    }
+
+    struct PostQuantumSignatureVault {
+        uint256 id;
+        uint256 achievementId;
+        string signatureScheme;
+        bytes32 publicKeyHash;
+        bytes32 signatureProof;
+        uint256 expiryTimestamp;
+        uint256 recordedAt;
+    }
+
+    struct QuantumResistantVault {
+        uint256 id;
+        uint256 achievementId;
+        string encryptionAlgorithm;
+        string keyDerivationMethod;
+        bytes32 accessPolicyHash;
+        uint256 securityLevel;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -177,6 +210,9 @@ contract SocialMediaContract {
     mapping(uint256 => ContinuityDeltaVault) public continuityDeltaVaults;
     mapping(uint256 => SovereignFailoverMesh) public sovereignFailoverMeshes;
     mapping(uint256 => ContinuityVectorCartographer) public continuityVectorCartographers;
+    mapping(uint256 => QuantumKeyRotation) public quantumKeyRotations;
+    mapping(uint256 => PostQuantumSignatureVault) public postQuantumSignatureVaults;
+    mapping(uint256 => QuantumResistantVault) public quantumResistantVaults;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -197,6 +233,9 @@ contract SocialMediaContract {
     event ContinuityDeltaVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, bytes32 expectedHash, bytes32 observedHash, string varianceReason);
     event SovereignFailoverMeshLogged(uint256 indexed meshId, uint256 indexed achievementId, string regionId, bytes32 rehearsalHash);
     event ContinuityVectorCartographerLogged(uint256 indexed cartographerId, uint256 indexed achievementId, uint256 postureScore, bytes32 reviewerSignature);
+    event QuantumKeyRotationLogged(uint256 indexed rotationId, uint256 indexed achievementId, string algorithmType, uint256 rotationSchedule, bytes32 keyGenerationProof);
+    event PostQuantumSignatureVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string signatureScheme, bytes32 publicKeyHash, uint256 expiryTimestamp);
+    event QuantumResistantVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string encryptionAlgorithm, bytes32 accessPolicyHash, uint256 securityLevel);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -219,6 +258,9 @@ contract SocialMediaContract {
         continuityDeltaVaultCount = 0;
         sovereignFailoverMeshCount = 0;
         continuityVectorCartographerCount = 0;
+        quantumKeyRotationCount = 0;
+        postQuantumSignatureVaultCount = 0;
+        quantumResistantVaultCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
@@ -601,6 +643,29 @@ contract SocialMediaContract {
         });
         emit ContinuityVectorCartographerLogged(continuityVectorCartographerCount, achievementId, postureScore, reviewerSignature);
         return continuityVectorCartographerCount;
+    }
+
+    function logQuantumKeyRotation(
+        uint256 achievementId,
+        string memory algorithmType,
+        uint256 rotationSchedule,
+        bytes32 keyGenerationProof,
+        uint256 migrationWindow
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(rotationSchedule > block.timestamp, "Rotation schedule must be in future");
+        quantumKeyRotationCount++;
+        quantumKeyRotations[quantumKeyRotationCount] = QuantumKeyRotation({
+            id: quantumKeyRotationCount,
+            achievementId: achievementId,
+            algorithmType: algorithmType,
+            rotationSchedule: rotationSchedule,
+            keyGenerationProof: keyGenerationProof,
+            migrationWindow: migrationWindow,
+            recordedAt: block.timestamp
+        });
+        emit QuantumKeyRotationLogged(quantumKeyRotationCount, achievementId, algorithmType, rotationSchedule, keyGenerationProof);
+        return quantumKeyRotationCount;
     }
 }
 
