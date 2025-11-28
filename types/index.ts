@@ -728,6 +728,37 @@ export interface FeatureFlags {
   achievementPqCrossChainBridge: boolean
   achievementQuantumSafeOracle: boolean
   achievementPostQuantumContinuity: boolean
+  // Cross-Chain Security wave feature flags (F421-F450)
+  achievementCrossChainBridgeSecurity: boolean
+  achievementMultiChainVerificationNetwork: boolean
+  achievementBridgeAttestationProtocol: boolean
+  achievementCrossChainConsensusEngine: boolean
+  achievementInterChainTrustRegistry: boolean
+  achievementBridgeStateSynchronizer: boolean
+  achievementCrossChainFraudDetection: boolean
+  achievementMultiChainKeyManagement: boolean
+  achievementBridgeTransactionValidator: boolean
+  achievementCrossChainEventRelay: boolean
+  achievementInterChainMessageQueue: boolean
+  achievementBridgeLiquidityMonitor: boolean
+  achievementCrossChainIdentityBridge: boolean
+  achievementMultiChainGovernanceSync: boolean
+  achievementBridgeRiskAssessor: boolean
+  achievementCrossChainProofAggregator: boolean
+  achievementInterChainSettlementLayer: boolean
+  achievementBridgeCircuitBreaker: boolean
+  achievementCrossChainAuditTrail: boolean
+  achievementMultiChainComplianceChecker: boolean
+  achievementBridgeStateSnapshot: boolean
+  achievementCrossChainDisputeResolver: boolean
+  achievementInterChainTokenBridge: boolean
+  achievementBridgeHealthMonitor: boolean
+  achievementCrossChainDataIntegrity: boolean
+  achievementMultiChainAccessControl: boolean
+  achievementBridgeRecoveryProtocol: boolean
+  achievementCrossChainTimelock: boolean
+  achievementInterChainEscrow: boolean
+  achievementBridgeFinalityGuarantor: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
