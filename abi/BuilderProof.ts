@@ -576,6 +576,117 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'rotationId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'algorithmType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'rotationSchedule',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'keyGenerationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'QuantumKeyRotationLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'vaultId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'signatureScheme',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'publicKeyHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'expiryTimestamp',
+        type: 'uint256',
+      },
+    ],
+    name: 'PostQuantumSignatureVaultLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'vaultId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'encryptionAlgorithm',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'accessPolicyHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'securityLevel',
+        type: 'uint256',
+      },
+    ],
+    name: 'QuantumResistantVaultLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -1845,6 +1956,123 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logContinuityVectorCartographer',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'algorithmType',
+        type: 'string',
+      },
+      {
+        internalType: 'uint256',
+        name: 'rotationSchedule',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'keyGenerationProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'migrationWindow',
+        type: 'uint256',
+      },
+    ],
+    name: 'logQuantumKeyRotation',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'signatureScheme',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'publicKeyHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'signatureProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'expiryTimestamp',
+        type: 'uint256',
+      },
+    ],
+    name: 'logPostQuantumSignatureVault',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'encryptionAlgorithm',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'keyDerivationMethod',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'accessPolicyHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'securityLevel',
+        type: 'uint256',
+      },
+    ],
+    name: 'logQuantumResistantVault',
     outputs: [
       {
         internalType: 'uint256',
