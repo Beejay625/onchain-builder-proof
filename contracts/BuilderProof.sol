@@ -690,6 +690,29 @@ contract SocialMediaContract {
         emit PostQuantumSignatureVaultLogged(postQuantumSignatureVaultCount, achievementId, signatureScheme, publicKeyHash, expiryTimestamp);
         return postQuantumSignatureVaultCount;
     }
+
+    function logQuantumResistantVault(
+        uint256 achievementId,
+        string memory encryptionAlgorithm,
+        string memory keyDerivationMethod,
+        bytes32 accessPolicyHash,
+        uint256 securityLevel
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(securityLevel > 0, "Security level required");
+        quantumResistantVaultCount++;
+        quantumResistantVaults[quantumResistantVaultCount] = QuantumResistantVault({
+            id: quantumResistantVaultCount,
+            achievementId: achievementId,
+            encryptionAlgorithm: encryptionAlgorithm,
+            keyDerivationMethod: keyDerivationMethod,
+            accessPolicyHash: accessPolicyHash,
+            securityLevel: securityLevel,
+            recordedAt: block.timestamp
+        });
+        emit QuantumResistantVaultLogged(quantumResistantVaultCount, achievementId, encryptionAlgorithm, accessPolicyHash, securityLevel);
+        return quantumResistantVaultCount;
+    }
 }
 
 
