@@ -25,6 +25,9 @@ contract SocialMediaContract {
     uint256 public quantumKeyRotationCount;
     uint256 public postQuantumSignatureVaultCount;
     uint256 public quantumResistantVaultCount;
+    uint256 public crossChainBridgeSecurityCount;
+    uint256 public multiChainVerificationNetworkCount;
+    uint256 public bridgeAttestationProtocolCount;
     
     struct Post {
         uint256 id;
@@ -192,6 +195,35 @@ contract SocialMediaContract {
         uint256 securityLevel;
         uint256 recordedAt;
     }
+
+    struct CrossChainBridgeSecurity {
+        uint256 id;
+        uint256 achievementId;
+        string bridgeId;
+        address[] signers;
+        uint256 threshold;
+        bytes32 securityProof;
+        uint256 recordedAt;
+    }
+
+    struct MultiChainVerificationNetwork {
+        uint256 id;
+        uint256 achievementId;
+        string[] chainIds;
+        bytes32 consensusProof;
+        uint256 verificationCount;
+        uint256 recordedAt;
+    }
+
+    struct BridgeAttestationProtocol {
+        uint256 id;
+        uint256 achievementId;
+        string attestationType;
+        bytes32 attestationProof;
+        address attester;
+        uint256 validityPeriod;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -213,6 +245,9 @@ contract SocialMediaContract {
     mapping(uint256 => QuantumKeyRotation) public quantumKeyRotations;
     mapping(uint256 => PostQuantumSignatureVault) public postQuantumSignatureVaults;
     mapping(uint256 => QuantumResistantVault) public quantumResistantVaults;
+    mapping(uint256 => CrossChainBridgeSecurity) public crossChainBridgeSecurities;
+    mapping(uint256 => MultiChainVerificationNetwork) public multiChainVerificationNetworks;
+    mapping(uint256 => BridgeAttestationProtocol) public bridgeAttestationProtocols;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -236,6 +271,9 @@ contract SocialMediaContract {
     event QuantumKeyRotationLogged(uint256 indexed rotationId, uint256 indexed achievementId, string algorithmType, uint256 rotationSchedule, bytes32 keyGenerationProof);
     event PostQuantumSignatureVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string signatureScheme, bytes32 publicKeyHash, uint256 expiryTimestamp);
     event QuantumResistantVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string encryptionAlgorithm, bytes32 accessPolicyHash, uint256 securityLevel);
+    event CrossChainBridgeSecurityLogged(uint256 indexed securityId, uint256 indexed achievementId, string bridgeId, uint256 threshold, bytes32 securityProof);
+    event MultiChainVerificationNetworkLogged(uint256 indexed networkId, uint256 indexed achievementId, bytes32 consensusProof, uint256 verificationCount);
+    event BridgeAttestationProtocolLogged(uint256 indexed protocolId, uint256 indexed achievementId, string attestationType, address attester, uint256 validityPeriod);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -261,6 +299,9 @@ contract SocialMediaContract {
         quantumKeyRotationCount = 0;
         postQuantumSignatureVaultCount = 0;
         quantumResistantVaultCount = 0;
+        crossChainBridgeSecurityCount = 0;
+        multiChainVerificationNetworkCount = 0;
+        bridgeAttestationProtocolCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
