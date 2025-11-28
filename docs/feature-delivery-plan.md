@@ -2597,6 +2597,223 @@ Sovereign Nexus extends BuilderProof with thirty sovereign operations and advanc
 - **Automation**: Platform service coordinates all sovereign nexus operations.
 - **Acceptance**: Platform ID, at least one sovereignty, and platform address required; platform type selection mandatory.
 
+### Wave Ω · Hyperion Nexus (F361–F390)
+
+Hyperion Nexus extends BuilderProof with thirty advanced orchestration and intelligent automation primitives that enable real-time coordination, predictive optimization, and adaptive system management. Each feature leverages machine learning, intelligent routing, and adaptive algorithms to provide self-optimizing infrastructure that responds dynamically to changing conditions while maintaining onchain verifiability and operational control.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F361 | Achievement Hyperion Orchestration Engine | Advanced Orchestration | `components/onchain/OnchainAchievementHyperionOrchestrationEngine.tsx` |
+| F362 | Achievement Real-Time Coordination Hub | Real-Time Coordination | `components/onchain/OnchainAchievementRealTimeCoordinationHub.tsx` |
+| F363 | Achievement Intelligent Automation Mesh | Intelligent Automation | `components/onchain/OnchainAchievementIntelligentAutomationMesh.tsx` |
+| F364 | Achievement Adaptive Routing Network | Adaptive Routing | `components/onchain/OnchainAchievementAdaptiveRoutingNetwork.tsx` |
+| F365 | Achievement Predictive State Manager | Predictive Management | `components/onchain/OnchainAchievementPredictiveStateManager.tsx` |
+| F366 | Achievement Dynamic Consensus Orchestrator | Dynamic Consensus | `components/onchain/OnchainAchievementDynamicConsensusOrchestrator.tsx` |
+| F367 | Achievement Intelligent Load Balancer | Load Balancing | `components/onchain/OnchainAchievementIntelligentLoadBalancer.tsx` |
+| F368 | Achievement Adaptive Security Gateway | Adaptive Security | `components/onchain/OnchainAchievementAdaptiveSecurityGateway.tsx` |
+| F369 | Achievement Predictive Resource Allocator | Resource Allocation | `components/onchain/OnchainAchievementPredictiveResourceAllocator.tsx` |
+| F370 | Achievement Intelligent Event Processor | Event Processing | `components/onchain/OnchainAchievementIntelligentEventProcessor.tsx` |
+| F371 | Achievement Adaptive Failure Recovery | Failure Recovery | `components/onchain/OnchainAchievementAdaptiveFailureRecovery.tsx` |
+| F372 | Achievement Intelligent Scheduling Engine | Scheduling | `components/onchain/OnchainAchievementIntelligentSchedulingEngine.tsx` |
+| F373 | Achievement Predictive Scaling Controller | Scaling Control | `components/onchain/OnchainAchievementPredictiveScalingController.tsx` |
+| F374 | Achievement Adaptive Network Topology | Network Topology | `components/onchain/OnchainAchievementAdaptiveNetworkTopology.tsx` |
+| F375 | Achievement Intelligent Cache Manager | Cache Management | `components/onchain/OnchainAchievementIntelligentCacheManager.tsx` |
+| F376 | Achievement Predictive Anomaly Detector | Anomaly Detection | `components/onchain/OnchainAchievementPredictiveAnomalyDetector.tsx` |
+| F377 | Achievement Adaptive Workflow Engine | Workflow Management | `components/onchain/OnchainAchievementAdaptiveWorkflowEngine.tsx` |
+| F378 | Achievement Intelligent Data Pipeline | Data Processing | `components/onchain/OnchainAchievementIntelligentDataPipeline.tsx` |
+| F379 | Achievement Predictive Maintenance System | Maintenance | `components/onchain/OnchainAchievementPredictiveMaintenanceSystem.tsx` |
+| F380 | Achievement Adaptive Monitoring System | Monitoring | `components/onchain/OnchainAchievementAdaptiveMonitoringSystem.tsx` |
+| F381 | Achievement Intelligent Query Optimizer | Query Optimization | `components/onchain/OnchainAchievementIntelligentQueryOptimizer.tsx` |
+| F382 | Achievement Adaptive Backup System | Backup Management | `components/onchain/OnchainAchievementAdaptiveBackupSystem.tsx` |
+| F383 | Achievement Predictive Capacity Planner | Capacity Planning | `components/onchain/OnchainAchievementPredictiveCapacityPlanner.tsx` |
+| F384 | Achievement Intelligent Service Mesh | Service Mesh | `components/onchain/OnchainAchievementIntelligentServiceMesh.tsx` |
+| F385 | Achievement Adaptive Configuration Manager | Configuration Management | `components/onchain/OnchainAchievementAdaptiveConfigurationManager.tsx` |
+| F386 | Achievement Predictive Performance Optimizer | Performance Optimization | `components/onchain/OnchainAchievementPredictivePerformanceOptimizer.tsx` |
+| F387 | Achievement Intelligent Network Analyzer | Network Analysis | `components/onchain/OnchainAchievementIntelligentNetworkAnalyzer.tsx` |
+| F388 | Achievement Adaptive Resource Governor | Resource Governance | `components/onchain/OnchainAchievementAdaptiveResourceGovernor.tsx` |
+| F389 | Achievement Predictive Cost Optimizer | Cost Optimization | `components/onchain/OnchainAchievementPredictiveCostOptimizer.tsx` |
+| F390 | Achievement Hyperion Nexus Platform | Platform Infrastructure | `components/onchain/OnchainAchievementHyperionNexusPlatform.tsx` |
+
+#### F361 · Achievement Hyperion Orchestration Engine
+- **UI**: `components/onchain/OnchainAchievementHyperionOrchestrationEngine.tsx` configures engine ID, orchestration scope, orchestration mode, coordination strategy, and engine policy for advanced multi-domain orchestration.
+- **Contract**: Uses `addComment` with `HYPERION_ORCH` payloads that encode orchestration configuration and coordination parameters.
+- **Automation**: Engine service manages intelligent orchestration across domains using selected coordination strategy.
+- **Acceptance**: Engine ID and at least one domain in orchestration scope required; orchestration mode selection mandatory.
+
+#### F362 · Achievement Real-Time Coordination Hub
+- **UI**: Deploys hubs with hub ID, connected networks, coordination latency, sync mode, and hub policy for real-time coordination.
+- **Contract**: `addComment` logs `RT_COORD_HUB` entries for hub deployment.
+- **Automation**: Hub service manages real-time coordination with configured latency requirements.
+- **Acceptance**: Hub ID, at least one connected network, and positive coordination latency required.
+
+#### F363 · Achievement Intelligent Automation Mesh
+- **UI**: Deploys meshes with mesh ID, automation domains, intelligence level, learning mode, and mesh policy.
+- **Contract**: `addComment` stores `INTELLIGENT_AUTO_MESH` entries for mesh deployment.
+- **Automation**: Mesh service manages intelligent automation based on configured intelligence level.
+- **Acceptance**: Mesh ID and at least one automation domain required; intelligence level selection mandatory.
+
+#### F364 · Achievement Adaptive Routing Network
+- **UI**: Deploys networks with network ID, routing node addresses, routing algorithm, adaptation speed, and network policy.
+- **Contract**: `addComment` logs `ADAPTIVE_ROUTING` entries for network deployment.
+- **Automation**: Network service manages adaptive routing with configured adaptation speed.
+- **Acceptance**: Network ID and at least one routing node address required; routing algorithm selection mandatory.
+
+#### F365 · Achievement Predictive State Manager
+- **UI**: Deploys managers with manager ID, state domains, prediction model, prediction horizon, and manager policy.
+- **Contract**: `addComment` stores `PREDICTIVE_STATE` entries for state manager deployment.
+- **Automation**: Manager service manages predictive state operations with configured prediction horizon.
+- **Acceptance**: Manager ID and at least one state domain required; positive prediction horizon mandatory.
+
+#### F366 · Achievement Dynamic Consensus Orchestrator
+- **UI**: Deploys orchestrators with orchestrator ID, consensus networks, consensus type, adaptation rate, and orchestrator policy.
+- **Contract**: `addComment` logs `DYNAMIC_CONSENSUS` entries for consensus orchestration.
+- **Automation**: Orchestrator service manages dynamic consensus with configured adaptation rate.
+- **Acceptance**: Orchestrator ID and at least one consensus network required; consensus type selection mandatory.
+
+#### F367 · Achievement Intelligent Load Balancer
+- **UI**: Deploys balancers with balancer ID, target services, balancing algorithm, health check interval, and balancer policy.
+- **Contract**: `addComment` stores `INTELLIGENT_LB` entries for load balancer deployment.
+- **Automation**: Balancer service manages intelligent load distribution with configured health checks.
+- **Acceptance**: Balancer ID, at least one target service, and positive health check interval required.
+
+#### F368 · Achievement Adaptive Security Gateway
+- **UI**: Deploys gateways with gateway ID, protected resources, security level, threat response, and gateway policy.
+- **Contract**: `addComment` logs `ADAPTIVE_SEC_GW` entries for security gateway deployment.
+- **Automation**: Gateway service manages adaptive security with configured threat response.
+- **Acceptance**: Gateway ID and at least one protected resource required; security level selection mandatory.
+
+#### F369 · Achievement Predictive Resource Allocator
+- **UI**: Deploys allocators with allocator ID, resource types, allocation strategy, prediction window, and allocator policy.
+- **Contract**: `addComment` stores `PREDICTIVE_RESOURCE` entries for resource allocator deployment.
+- **Automation**: Allocator service manages predictive resource allocation with configured prediction window.
+- **Acceptance**: Allocator ID, at least one resource type, and positive prediction window required.
+
+#### F370 · Achievement Intelligent Event Processor
+- **UI**: Deploys processors with processor ID, event types, processing mode, routing intelligence, and processor policy.
+- **Contract**: `addComment` logs `INTELLIGENT_EVENT` entries for event processor deployment.
+- **Automation**: Processor service manages intelligent event processing with configured routing intelligence.
+- **Acceptance**: Processor ID and at least one event type required; processing mode selection mandatory.
+
+#### F371 · Achievement Adaptive Failure Recovery
+- **UI**: Configures recovery with recovery ID, protected systems, recovery strategy, target recovery time, and recovery policy.
+- **Contract**: `addComment` stores `ADAPTIVE_RECOVERY` entries for recovery configuration.
+- **Automation**: Recovery service manages adaptive failure recovery with configured recovery time.
+- **Acceptance**: Recovery ID, at least one protected system, and positive recovery time required.
+
+#### F372 · Achievement Intelligent Scheduling Engine
+- **UI**: Deploys engines with engine ID, scheduled task types, scheduling algorithm, optimization goal, and engine policy.
+- **Contract**: `addComment` logs `INTELLIGENT_SCHEDULER` entries for scheduling engine deployment.
+- **Automation**: Engine service manages intelligent scheduling with configured optimization goal.
+- **Acceptance**: Engine ID and at least one scheduled task type required; scheduling algorithm selection mandatory.
+
+#### F373 · Achievement Predictive Scaling Controller
+- **UI**: Deploys controllers with controller ID, scalable resources, scaling strategy, scaling window, and controller policy.
+- **Contract**: `addComment` stores `PREDICTIVE_SCALING` entries for scaling controller deployment.
+- **Automation**: Controller service manages predictive scaling with configured scaling window.
+- **Acceptance**: Controller ID, at least one scalable resource, and positive scaling window required.
+
+#### F374 · Achievement Adaptive Network Topology
+- **UI**: Deploys topologies with topology ID, network node addresses, topology type, reconfiguration trigger, and topology policy.
+- **Contract**: `addComment` logs `ADAPTIVE_TOPOLOGY` entries for topology deployment.
+- **Automation**: Topology service manages adaptive network reconfiguration with configured triggers.
+- **Acceptance**: Topology ID and at least one network node address required; topology type selection mandatory.
+
+#### F375 · Achievement Intelligent Cache Manager
+- **UI**: Deploys managers with manager ID, cache types, eviction policy, cache size, and manager policy.
+- **Contract**: `addComment` stores `INTELLIGENT_CACHE` entries for cache manager deployment.
+- **Automation**: Manager service manages intelligent cache operations with configured eviction policy.
+- **Acceptance**: Manager ID, at least one cache type, and positive cache size required.
+
+#### F376 · Achievement Predictive Anomaly Detector
+- **UI**: Deploys detectors with detector ID, monitored systems, detection model, sensitivity level, and detector policy.
+- **Contract**: `addComment` logs `PREDICTIVE_ANOMALY` entries for anomaly detector deployment.
+- **Automation**: Detector service manages predictive anomaly detection with configured sensitivity.
+- **Acceptance**: Detector ID and at least one monitored system required; detection model selection mandatory.
+
+#### F377 · Achievement Adaptive Workflow Engine
+- **UI**: Deploys engines with engine ID, workflow types, execution mode, adaptation trigger, and engine policy.
+- **Contract**: `addComment` stores `ADAPTIVE_WORKFLOW` entries for workflow engine deployment.
+- **Automation**: Engine service manages adaptive workflow execution with configured triggers.
+- **Acceptance**: Engine ID and at least one workflow type required; execution mode selection mandatory.
+
+#### F378 · Achievement Intelligent Data Pipeline
+- **UI**: Deploys pipelines with pipeline ID, data sources, processing mode, transformation rules, and pipeline policy.
+- **Contract**: `addComment` logs `INTELLIGENT_PIPELINE` entries for data pipeline deployment.
+- **Automation**: Pipeline service manages intelligent data processing with configured transformation rules.
+- **Acceptance**: Pipeline ID and at least one data source required; processing mode selection mandatory.
+
+#### F379 · Achievement Predictive Maintenance System
+- **UI**: Deploys systems with system ID, monitored components, maintenance strategy, prediction horizon, and system policy.
+- **Contract**: `addComment` stores `PREDICTIVE_MAINT` entries for maintenance system deployment.
+- **Automation**: System service manages predictive maintenance with configured prediction horizon.
+- **Acceptance**: System ID, at least one monitored component, and positive prediction horizon required.
+
+#### F380 · Achievement Adaptive Monitoring System
+- **UI**: Deploys systems with system ID, monitored metrics, threshold mode, alert strategy, and system policy.
+- **Contract**: `addComment` logs `ADAPTIVE_MONITORING` entries for monitoring system deployment.
+- **Automation**: System service manages adaptive monitoring with configured alert strategy.
+- **Acceptance**: System ID and at least one monitored metric required; threshold mode selection mandatory.
+
+#### F381 · Achievement Intelligent Query Optimizer
+- **UI**: Deploys optimizers with optimizer ID, query types, optimization strategy, optimization goal, and optimizer policy.
+- **Contract**: `addComment` stores `INTELLIGENT_QUERY` entries for query optimizer deployment.
+- **Automation**: Optimizer service manages intelligent query optimization with configured optimization goal.
+- **Acceptance**: Optimizer ID and at least one query type required; optimization strategy selection mandatory.
+
+#### F382 · Achievement Adaptive Backup System
+- **UI**: Deploys systems with system ID, backup targets, backup strategy, retention policy, and system policy.
+- **Contract**: `addComment` logs `ADAPTIVE_BACKUP` entries for backup system deployment.
+- **Automation**: System service manages adaptive backup operations with configured retention policy.
+- **Acceptance**: System ID and at least one backup target required; backup strategy selection mandatory.
+
+#### F383 · Achievement Predictive Capacity Planner
+- **UI**: Deploys planners with planner ID, capacity types, planning horizon, planning model, and planner policy.
+- **Contract**: `addComment` stores `PREDICTIVE_CAPACITY` entries for capacity planner deployment.
+- **Automation**: Planner service manages predictive capacity planning with configured planning horizon.
+- **Acceptance**: Planner ID, at least one capacity type, and positive planning horizon required.
+
+#### F384 · Achievement Intelligent Service Mesh
+- **UI**: Deploys meshes with mesh ID, service instances, routing policy, traffic management, and mesh policy.
+- **Contract**: `addComment` logs `INTELLIGENT_SERVICE_MESH` entries for service mesh deployment.
+- **Automation**: Mesh service manages intelligent service routing with configured traffic management.
+- **Acceptance**: Mesh ID and at least one service instance required; routing policy selection mandatory.
+
+#### F385 · Achievement Adaptive Configuration Manager
+- **UI**: Deploys managers with manager ID, configuration scopes, update strategy, validation mode, and manager policy.
+- **Contract**: `addComment` stores `ADAPTIVE_CONFIG` entries for configuration manager deployment.
+- **Automation**: Manager service manages adaptive configuration updates with configured validation mode.
+- **Acceptance**: Manager ID and at least one configuration scope required; update strategy selection mandatory.
+
+#### F386 · Achievement Predictive Performance Optimizer
+- **UI**: Deploys optimizers with optimizer ID, optimized systems, optimization target, optimization window, and optimizer policy.
+- **Contract**: `addComment` logs `PREDICTIVE_PERF` entries for performance optimizer deployment.
+- **Automation**: Optimizer service manages predictive performance optimization with configured optimization window.
+- **Acceptance**: Optimizer ID, at least one optimized system, and positive optimization window required.
+
+#### F387 · Achievement Intelligent Network Analyzer
+- **UI**: Deploys analyzers with analyzer ID, analyzed networks, analysis type, analysis depth, and analyzer policy.
+- **Contract**: `addComment` stores `INTELLIGENT_NET_ANALYZER` entries for network analyzer deployment.
+- **Automation**: Analyzer service manages intelligent network analysis with configured analysis depth.
+- **Acceptance**: Analyzer ID and at least one analyzed network required; analysis type selection mandatory.
+
+#### F388 · Achievement Adaptive Resource Governor
+- **UI**: Deploys governors with governor ID, governed resources, governance mode, allocation policy, and governor policy.
+- **Contract**: `addComment` logs `ADAPTIVE_RESOURCE_GOV` entries for resource governor deployment.
+- **Automation**: Governor service manages adaptive resource governance with configured allocation policy.
+- **Acceptance**: Governor ID and at least one governed resource required; governance mode selection mandatory.
+
+#### F389 · Achievement Predictive Cost Optimizer
+- **UI**: Deploys optimizers with optimizer ID, cost categories, optimization strategy, budget constraint, and optimizer policy.
+- **Contract**: `addComment` stores `PREDICTIVE_COST` entries for cost optimizer deployment.
+- **Automation**: Optimizer service manages predictive cost optimization with configured budget constraints.
+- **Acceptance**: Optimizer ID and at least one cost category required; optimization strategy selection mandatory.
+
+#### F390 · Achievement Hyperion Nexus Platform
+- **UI**: Deploys platforms with platform ID, platform services, platform type, intelligence level, platform address, and platform policy.
+- **Contract**: `addComment` logs `HYPERION_NEXUS_PLATFORM` entries for platform deployment.
+- **Automation**: Platform service coordinates all hyperion nexus operations with configured intelligence level.
+- **Acceptance**: Platform ID, at least one platform service, and platform address required; platform type selection mandatory.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
