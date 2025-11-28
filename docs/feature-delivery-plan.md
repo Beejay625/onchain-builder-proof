@@ -2814,6 +2814,223 @@ Hyperion Nexus extends BuilderProof with thirty advanced orchestration and intel
 - **Automation**: Platform service coordinates all hyperion nexus operations with configured intelligence level.
 - **Acceptance**: Platform ID, at least one platform service, and platform address required; platform type selection mandatory.
 
+### Wave Χ · Quantum Resilience Future-Proof Security (F391–F420)
+
+Quantum Resilience introduces thirty post-quantum cryptography primitives that future-proof BuilderProof against quantum computing threats. Each feature leverages quantum-resistant algorithms, hybrid cryptography bridges, and quantum-safe attestation schemes to ensure long-term security guarantees. Every capability ships behind a discrete feature flag and references the detailed acceptance criteria captured in [`docs/onchain-feature-expansion.md#quantum-resilience--future-proof-security`](docs/onchain-feature-expansion.md#quantum-resilience--future-proof-security).
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F391 | Achievement Quantum Key Rotation | Post-Quantum Cryptography | `components/onchain/OnchainAchievementQuantumKeyRotation.tsx` |
+| F392 | Achievement Post-Quantum Signature Vault | Signature Security | `components/onchain/OnchainAchievementPostQuantumSignatureVault.tsx` |
+| F393 | Achievement Quantum-Resistant Vault | Vault Security | `components/onchain/OnchainAchievementQuantumResistantVault.tsx` |
+| F394 | Achievement Quantum-Safe Attestation | Attestation Security | `components/onchain/OnchainAchievementQuantumSafeAttestation.tsx` |
+| F395 | Achievement Quantum Proof Anchor | Proof Anchoring | `components/onchain/OnchainAchievementQuantumProofAnchor.tsx` |
+| F396 | Achievement Hybrid Cryptography Bridge | Crypto Migration | `components/onchain/OnchainAchievementHybridCryptographyBridge.tsx` |
+| F397 | Achievement Quantum Key Escrow | Key Management | `components/onchain/OnchainAchievementQuantumKeyEscrow.tsx` |
+| F398 | Achievement Post-Quantum Merkle Trees | Data Structures | `components/onchain/OnchainAchievementPostQuantumMerkleTrees.tsx` |
+| F399 | Achievement Quantum-Safe Multi-Sig | Multi-Signature | `components/onchain/OnchainAchievementQuantumSafeMultiSig.tsx` |
+| F400 | Achievement Quantum Migration Path | Migration Strategy | `components/onchain/OnchainAchievementQuantumMigrationPath.tsx` |
+| F401 | Achievement Quantum Threat Monitor | Threat Detection | `components/onchain/OnchainAchievementQuantumThreatMonitor.tsx` |
+| F402 | Achievement PQ Certificate Authority | Certificate Management | `components/onchain/OnchainAchievementPqCertificateAuthority.tsx` |
+| F403 | Achievement Quantum-Safe Timelock | Timelock Security | `components/onchain/OnchainAchievementQuantumSafeTimelock.tsx` |
+| F404 | Achievement Post-Quantum Zero-Knowledge | ZK Proofs | `components/onchain/OnchainAchievementPostQuantumZeroKnowledge.tsx` |
+| F405 | Achievement Quantum-Resistant Randomness | Randomness Generation | `components/onchain/OnchainAchievementQuantumResistantRandomness.tsx` |
+| F406 | Achievement PQ Key Derivation | Key Derivation | `components/onchain/OnchainAchievementPqKeyDerivation.tsx` |
+| F407 | Achievement Quantum-Safe Hash Chain | Hash Chains | `components/onchain/OnchainAchievementQuantumSafeHashChain.tsx` |
+| F408 | Achievement Post-Quantum Commitment Scheme | Commitments | `components/onchain/OnchainAchievementPostQuantumCommitmentScheme.tsx` |
+| F409 | Achievement Quantum-Resistant Encryption | Encryption | `components/onchain/OnchainAchievementQuantumResistantEncryption.tsx` |
+| F410 | Achievement PQ Signature Aggregation | Signature Aggregation | `components/onchain/OnchainAchievementPqSignatureAggregation.tsx` |
+| F411 | Achievement Quantum-Safe State Transition | State Management | `components/onchain/OnchainAchievementQuantumSafeStateTransition.tsx` |
+| F412 | Achievement Post-Quantum Audit Trail | Audit Trails | `components/onchain/OnchainAchievementPostQuantumAuditTrail.tsx` |
+| F413 | Achievement Quantum-Resistant Token | Token Security | `components/onchain/OnchainAchievementQuantumResistantToken.tsx` |
+| F414 | Achievement PQ Governance Protocol | Governance Security | `components/onchain/OnchainAchievementPqGovernanceProtocol.tsx` |
+| F415 | Achievement Quantum-Safe Consensus | Consensus Security | `components/onchain/OnchainAchievementQuantumSafeConsensus.tsx` |
+| F416 | Achievement Post-Quantum Identity | Identity Management | `components/onchain/OnchainAchievementPostQuantumIdentity.tsx` |
+| F417 | Achievement Quantum-Resistant Escrow | Escrow Security | `components/onchain/OnchainAchievementQuantumResistantEscrow.tsx` |
+| F418 | Achievement PQ Cross-Chain Bridge | Bridge Security | `components/onchain/OnchainAchievementPqCrossChainBridge.tsx` |
+| F419 | Achievement Quantum-Safe Oracle | Oracle Security | `components/onchain/OnchainAchievementQuantumSafeOracle.tsx` |
+| F420 | Achievement Post-Quantum Continuity | Continuity Security | `components/onchain/OnchainAchievementPostQuantumContinuity.tsx` |
+
+#### F391 · Achievement Quantum Key Rotation
+- **UI**: Key rotation panel captures algorithm type, rotation schedule, key generation parameters, and migration window.
+- **Contract**: `createPost` stores `QUANTUM_KEY_ROTATION` payload with algorithm metadata and rotation proof.
+- **Automation**: Key rotation service schedules and executes rotations according to policy with Reown wallet integration.
+- **Acceptance**: Requires valid PQ algorithm selection, rotation schedule in future, and key generation proof hash.
+
+#### F392 · Achievement Post-Quantum Signature Vault
+- **UI**: Signature vault composer stores signature scheme, public key hash, signature proof, and expiry timestamp.
+- **Contract**: `addComment` logs `PQ_SIGNATURE_VAULT` entries with scheme metadata and signature verification data.
+- **Automation**: Signature verification service validates PQ signatures and updates vault status.
+- **Acceptance**: Requires valid PQ signature scheme, public key hash, and signature proof; expiry must be in future.
+
+#### F393 · Achievement Quantum-Resistant Vault
+- **UI**: Vault setup captures encryption algorithm, key derivation method, access policy, and security level.
+- **Contract**: `createPost` stores `QUANTUM_VAULT` payload with encryption metadata and access control hashes.
+- **Automation**: Vault service encrypts data using PQ algorithms and manages access according to policy.
+- **Acceptance**: Requires PQ encryption algorithm, valid key derivation method, and access policy hash.
+
+#### F394 · Achievement Quantum-Safe Attestation
+- **UI**: Attestation composer captures attestor address, PQ signature scheme, attestation proof, and validity period.
+- **Contract**: `addComment` logs `QUANTUM_ATTESTATION` payload with signature scheme and proof metadata.
+- **Automation**: Attestation service verifies PQ signatures and tracks attestation validity periods.
+- **Acceptance**: Requires attestor address, valid PQ signature scheme, and attestation proof; validity period must be positive.
+
+#### F395 · Achievement Quantum Proof Anchor
+- **UI**: Proof anchor panel captures proof hash, PQ hash algorithm, anchor chain, and block reference.
+- **Contract**: `createPost` stores `QUANTUM_ANCHOR` payload with hash algorithm and chain metadata.
+- **Automation**: Anchor service creates PQ hash anchors and verifies anchor integrity across chains.
+- **Acceptance**: Requires proof hash, valid PQ hash algorithm, and chain reference; block number must be positive.
+
+#### F396 · Achievement Hybrid Cryptography Bridge
+- **UI**: Bridge configurator defines classical algorithm, PQ algorithm, transition schedule, and compatibility mode.
+- **Contract**: `addComment` logs `HYBRID_CRYPTO_BRIDGE` entries with algorithm pairs and transition metadata.
+- **Automation**: Bridge service manages transition from classical to PQ cryptography with backward compatibility.
+- **Acceptance**: Requires both classical and PQ algorithms, transition schedule in future, and compatibility mode selection.
+
+#### F397 · Achievement Quantum Key Escrow
+- **UI**: Escrow setup captures escrow agent, key material hash, release conditions, and escrow duration.
+- **Contract**: `createPost` stores `QUANTUM_KEY_ESCROW` payload with agent address and release condition hashes.
+- **Automation**: Escrow service manages key material and enforces release conditions with PQ encryption.
+- **Acceptance**: Requires escrow agent address, key material hash, and release conditions; duration must be positive.
+
+#### F398 · Achievement Post-Quantum Merkle Trees
+- **UI**: Merkle tree builder defines tree structure, PQ hash function, leaf data, and root hash.
+- **Contract**: `addComment` logs `PQ_MERKLE_TREE` entries with hash function and root hash metadata.
+- **Automation**: Tree service constructs and maintains PQ Merkle trees with integrity verification.
+- **Acceptance**: Requires valid PQ hash function, at least one leaf, and matching root hash format.
+
+#### F399 · Achievement Quantum-Safe Multi-Sig
+- **UI**: Multi-sig composer configures signer set, PQ signature scheme, threshold, and approval workflow.
+- **Contract**: `createPost` stores `QUANTUM_MULTISIG` payload with signer addresses and threshold metadata.
+- **Automation**: Multi-sig service aggregates PQ signatures and enforces threshold requirements.
+- **Acceptance**: Requires at least two signers, valid PQ signature scheme, and threshold between 1 and signer count.
+
+#### F400 · Achievement Quantum Migration Path
+- **UI**: Migration planner defines current algorithm, target PQ algorithm, migration steps, and timeline.
+- **Contract**: `addComment` logs `QUANTUM_MIGRATION` entries with algorithm transition metadata and step hashes.
+- **Automation**: Migration service orchestrates algorithm transitions with rollback capabilities.
+- **Acceptance**: Requires current and target algorithms, at least one migration step, and timeline in future.
+
+#### F401 · Achievement Quantum Threat Monitor
+- **UI**: Threat monitor dashboard tracks quantum computing progress, threat level, and mitigation status.
+- **Contract**: `createPost` stores `QUANTUM_THREAT` payload with threat assessment and mitigation hashes.
+- **Automation**: Monitor service tracks quantum computing developments and triggers alerts when thresholds breach.
+- **Acceptance**: Requires threat level assessment and mitigation status; threat level must be valid enum value.
+
+#### F402 · Achievement PQ Certificate Authority
+- **UI**: CA setup captures authority identity, PQ signature scheme, certificate template, and validity period.
+- **Contract**: `addComment` logs `PQ_CERT_AUTHORITY` entries with authority metadata and certificate hashes.
+- **Automation**: CA service issues and validates PQ certificates with revocation tracking.
+- **Acceptance**: Requires authority identity, valid PQ signature scheme, and certificate template; validity period must be positive.
+
+#### F403 · Achievement Quantum-Safe Timelock
+- **UI**: Timelock configurator defines lock duration, PQ encryption, release conditions, and beneficiary.
+- **Contract**: `createPost` stores `QUANTUM_TIMELOCK` payload with duration and encryption metadata.
+- **Automation**: Timelock service enforces lock periods with PQ-secured release mechanisms.
+- **Acceptance**: Requires positive lock duration, valid PQ encryption scheme, and beneficiary address.
+
+#### F404 · Achievement Post-Quantum Zero-Knowledge
+- **UI**: ZK proof composer captures proof system, PQ primitives, statement, and proof data.
+- **Contract**: `addComment` logs `PQ_ZK_PROOF` entries with proof system metadata and verification data.
+- **Automation**: ZK service generates and verifies PQ zero-knowledge proofs with privacy guarantees.
+- **Acceptance**: Requires valid PQ proof system, statement hash, and proof data; proof system must support PQ primitives.
+
+#### F405 · Achievement Quantum-Resistant Randomness
+- **UI**: Randomness generator configures entropy source, PQ algorithm, output length, and verification method.
+- **Contract**: `createPost` stores `QUANTUM_RANDOM` payload with entropy source and algorithm metadata.
+- **Automation**: Randomness service generates PQ-secure random values with verifiable entropy.
+- **Acceptance**: Requires valid entropy source, PQ algorithm, and positive output length.
+
+#### F406 · Achievement PQ Key Derivation
+- **UI**: Key derivation setup captures input material, PQ KDF algorithm, derived key count, and key usage.
+- **Contract**: `addComment` logs `PQ_KEY_DERIVATION` entries with KDF algorithm and derived key hashes.
+- **Automation**: KDF service derives keys using PQ algorithms with usage tracking.
+- **Acceptance**: Requires input material hash, valid PQ KDF algorithm, and positive key count.
+
+#### F407 · Achievement Quantum-Safe Hash Chain
+- **UI**: Hash chain builder defines chain length, PQ hash function, initial value, and chain proof.
+- **Contract**: `createPost` stores `QUANTUM_HASH_CHAIN` payload with hash function and chain metadata.
+- **Automation**: Hash chain service maintains PQ hash chains with integrity verification.
+- **Acceptance**: Requires positive chain length, valid PQ hash function, and initial value hash.
+
+#### F408 · Achievement Post-Quantum Commitment Scheme
+- **UI**: Commitment composer captures commitment value, PQ algorithm, reveal schedule, and binding proof.
+- **Contract**: `addComment` logs `PQ_COMMITMENT` entries with algorithm and commitment metadata.
+- **Automation**: Commitment service manages PQ commitments with reveal scheduling and verification.
+- **Acceptance**: Requires commitment value hash, valid PQ algorithm, and reveal schedule in future.
+
+#### F409 · Achievement Quantum-Resistant Encryption
+- **UI**: Encryption setup captures plaintext hash, PQ encryption scheme, key material, and ciphertext proof.
+- **Contract**: `createPost` stores `QUANTUM_ENCRYPTION` payload with scheme and encryption metadata.
+- **Automation**: Encryption service performs PQ encryption with key management and decryption verification.
+- **Acceptance**: Requires plaintext hash, valid PQ encryption scheme, and key material hash.
+
+#### F410 · Achievement PQ Signature Aggregation
+- **UI**: Aggregation composer collects signatures, PQ scheme, aggregation method, and aggregated proof.
+- **Contract**: `addComment` logs `PQ_SIG_AGGREGATION` entries with scheme and aggregation metadata.
+- **Automation**: Aggregation service combines PQ signatures with verification and size optimization.
+- **Acceptance**: Requires at least two signatures, valid PQ scheme, and aggregation method selection.
+
+#### F411 · Achievement Quantum-Safe State Transition
+- **UI**: State transition panel captures current state hash, PQ verification, transition proof, and new state.
+- **Contract**: `createPost` stores `QUANTUM_STATE_TRANSITION` payload with state and verification metadata.
+- **Automation**: State service verifies PQ state transitions with integrity checks and rollback support.
+- **Acceptance**: Requires current and new state hashes, valid PQ verification scheme, and transition proof.
+
+#### F412 · Achievement Post-Quantum Audit Trail
+- **UI**: Audit trail recorder captures event type, PQ hash, timestamp, and audit proof.
+- **Contract**: `addComment` logs `PQ_AUDIT_TRAIL` entries with event metadata and hash chains.
+- **Automation**: Audit service maintains PQ-secured audit trails with tamper detection.
+- **Acceptance**: Requires event type, valid PQ hash, and positive timestamp.
+
+#### F413 · Achievement Quantum-Resistant Token
+- **UI**: Token configurator defines token standard, PQ security layer, transfer rules, and ownership proof.
+- **Contract**: `createPost` stores `QUANTUM_TOKEN` payload with standard and security metadata.
+- **Automation**: Token service manages PQ-secured tokens with transfer verification and ownership tracking.
+- **Acceptance**: Requires valid token standard, PQ security layer, and transfer rules hash.
+
+#### F414 · Achievement PQ Governance Protocol
+- **UI**: Governance setup captures proposal type, PQ voting scheme, quorum requirements, and execution proof.
+- **Contract**: `addComment` logs `PQ_GOVERNANCE` entries with voting scheme and proposal metadata.
+- **Automation**: Governance service manages PQ-secured voting with quorum enforcement and execution tracking.
+- **Acceptance**: Requires proposal type, valid PQ voting scheme, and positive quorum threshold.
+
+#### F415 · Achievement Quantum-Safe Consensus
+- **UI**: Consensus configurator defines consensus algorithm, PQ primitives, validator set, and consensus proof.
+- **Contract**: `createPost` stores `QUANTUM_CONSENSUS` payload with algorithm and validator metadata.
+- **Automation**: Consensus service implements PQ-secured consensus with validator coordination.
+- **Acceptance**: Requires valid consensus algorithm, PQ primitives, and at least one validator.
+
+#### F416 · Achievement Post-Quantum Identity
+- **UI**: Identity manager captures identity attributes, PQ signature, attestation proof, and validity period.
+- **Contract**: `addComment` logs `PQ_IDENTITY` entries with identity metadata and signature proofs.
+- **Automation**: Identity service manages PQ-secured identities with attestation and revocation tracking.
+- **Acceptance**: Requires identity attributes hash, valid PQ signature, and positive validity period.
+
+#### F417 · Achievement Quantum-Resistant Escrow
+- **UI**: Escrow setup captures escrow terms, PQ encryption, release conditions, and beneficiary proof.
+- **Contract**: `createPost` stores `QUANTUM_ESCROW` payload with terms and encryption metadata.
+- **Automation**: Escrow service manages PQ-secured escrows with conditional release and dispute resolution.
+- **Acceptance**: Requires escrow terms hash, valid PQ encryption, and release conditions.
+
+#### F418 · Achievement PQ Cross-Chain Bridge
+- **UI**: Bridge configurator defines source chain, target chain, PQ verification, and bridge proof.
+- **Contract**: `addComment` logs `PQ_BRIDGE` entries with chain and verification metadata.
+- **Automation**: Bridge service manages PQ-secured cross-chain transfers with verification and finality tracking.
+- **Acceptance**: Requires source and target chains, valid PQ verification scheme, and bridge proof.
+
+#### F419 · Achievement Quantum-Safe Oracle
+- **UI**: Oracle setup captures data source, PQ signature scheme, attestation proof, and update frequency.
+- **Contract**: `createPost` stores `QUANTUM_ORACLE` payload with source and signature metadata.
+- **Automation**: Oracle service provides PQ-secured data feeds with attestation and update verification.
+- **Acceptance**: Requires data source identifier, valid PQ signature scheme, and positive update frequency.
+
+#### F420 · Achievement Post-Quantum Continuity
+- **UI**: Continuity planner defines continuity guarantees, PQ security model, migration path, and proof.
+- **Contract**: `addComment` logs `PQ_CONTINUITY` entries with guarantees and security metadata.
+- **Automation**: Continuity service ensures PQ-secured continuity with migration support and proof verification.
+- **Acceptance**: Requires continuity guarantees description, valid PQ security model, and migration path hash.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
