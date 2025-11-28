@@ -754,6 +754,30 @@ contract SocialMediaContract {
         emit QuantumResistantVaultLogged(quantumResistantVaultCount, achievementId, encryptionAlgorithm, accessPolicyHash, securityLevel);
         return quantumResistantVaultCount;
     }
+
+    function logCrossChainBridgeSecurity(
+        uint256 achievementId,
+        string memory bridgeId,
+        address[] memory signers,
+        uint256 threshold,
+        bytes32 securityProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(signers.length >= 2, "At least 2 signers required");
+        require(threshold > 0 && threshold <= signers.length, "Invalid threshold");
+        crossChainBridgeSecurityCount++;
+        crossChainBridgeSecurities[crossChainBridgeSecurityCount] = CrossChainBridgeSecurity({
+            id: crossChainBridgeSecurityCount,
+            achievementId: achievementId,
+            bridgeId: bridgeId,
+            signers: signers,
+            threshold: threshold,
+            securityProof: securityProof,
+            recordedAt: block.timestamp
+        });
+        emit CrossChainBridgeSecurityLogged(crossChainBridgeSecurityCount, achievementId, bridgeId, threshold, securityProof);
+        return crossChainBridgeSecurityCount;
+    }
 }
 
 
