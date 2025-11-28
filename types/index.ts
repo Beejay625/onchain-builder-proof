@@ -697,6 +697,37 @@ export interface FeatureFlags {
   achievementAutonomousRewardBackstop: boolean
   achievementVaultIntegrityHarbinger: boolean
   achievementOmniLifecycleAccessSentinel: boolean
+  // Quantum Resilience wave feature flags (F391-F420)
+  achievementQuantumKeyRotation: boolean
+  achievementPostQuantumSignatureVault: boolean
+  achievementQuantumResistantVault: boolean
+  achievementQuantumSafeAttestation: boolean
+  achievementQuantumProofAnchor: boolean
+  achievementHybridCryptographyBridge: boolean
+  achievementQuantumKeyEscrow: boolean
+  achievementPostQuantumMerkleTrees: boolean
+  achievementQuantumSafeMultiSig: boolean
+  achievementQuantumMigrationPath: boolean
+  achievementQuantumThreatMonitor: boolean
+  achievementPqCertificateAuthority: boolean
+  achievementQuantumSafeTimelock: boolean
+  achievementPostQuantumZeroKnowledge: boolean
+  achievementQuantumResistantRandomness: boolean
+  achievementPqKeyDerivation: boolean
+  achievementQuantumSafeHashChain: boolean
+  achievementPostQuantumCommitmentScheme: boolean
+  achievementQuantumResistantEncryption: boolean
+  achievementPqSignatureAggregation: boolean
+  achievementQuantumSafeStateTransition: boolean
+  achievementPostQuantumAuditTrail: boolean
+  achievementQuantumResistantToken: boolean
+  achievementPqGovernanceProtocol: boolean
+  achievementQuantumSafeConsensus: boolean
+  achievementPostQuantumIdentity: boolean
+  achievementQuantumResistantEscrow: boolean
+  achievementPqCrossChainBridge: boolean
+  achievementQuantumSafeOracle: boolean
+  achievementPostQuantumContinuity: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
