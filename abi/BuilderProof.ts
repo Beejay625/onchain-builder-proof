@@ -687,6 +687,111 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'securityId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'bridgeId',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'threshold',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'securityProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CrossChainBridgeSecurityLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'networkId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'consensusProof',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'verificationCount',
+        type: 'uint256',
+      },
+    ],
+    name: 'MultiChainVerificationNetworkLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'protocolId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'attestationType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'attester',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'validityPeriod',
+        type: 'uint256',
+      },
+    ],
+    name: 'BridgeAttestationProtocolLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -2073,6 +2178,118 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logQuantumResistantVault',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'bridgeId',
+        type: 'string',
+      },
+      {
+        internalType: 'address[]',
+        name: 'signers',
+        type: 'address[]',
+      },
+      {
+        internalType: 'uint256',
+        name: 'threshold',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'securityProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCrossChainBridgeSecurity',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string[]',
+        name: 'chainIds',
+        type: 'string[]',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'consensusProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'verificationCount',
+        type: 'uint256',
+      },
+    ],
+    name: 'logMultiChainVerificationNetwork',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'attestationType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'attestationProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address',
+        name: 'attester',
+        type: 'address',
+      },
+      {
+        internalType: 'uint256',
+        name: 'validityPeriod',
+        type: 'uint256',
+      },
+    ],
+    name: 'logBridgeAttestationProtocol',
     outputs: [
       {
         internalType: 'uint256',
