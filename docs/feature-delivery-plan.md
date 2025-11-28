@@ -3031,6 +3031,223 @@ Quantum Resilience introduces thirty post-quantum cryptography primitives that f
 - **Automation**: Continuity service ensures PQ-secured continuity with migration support and proof verification.
 - **Acceptance**: Requires continuity guarantees description, valid PQ security model, and migration path hash.
 
+### Wave Α · Aether Nexus (F421–F450)
+
+Aether Nexus extends BuilderProof with thirty advanced network orchestration and stellar coordination primitives that enable unified multi-domain operations, intelligent resource management, and comprehensive governance frameworks. Each feature provides robust infrastructure for coordinating complex onchain operations while maintaining security, compliance, and operational excellence across distributed networks.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F421 | Achievement Aether Orchestration Core | Core Orchestration | `components/onchain/OnchainAchievementAetherOrchestrationCore.tsx` |
+| F422 | Achievement Stellar State Synchronizer | State Synchronization | `components/onchain/OnchainAchievementStellarStateSynchronizer.tsx` |
+| F423 | Achievement Aether Identity Mesh | Identity Management | `components/onchain/OnchainAchievementAetherIdentityMesh.tsx` |
+| F424 | Achievement Stellar Attestation Hub | Attestation | `components/onchain/OnchainAchievementStellarAttestationHub.tsx` |
+| F425 | Achievement Aether Treasury Network | Treasury | `components/onchain/OnchainAchievementAetherTreasuryNetwork.tsx` |
+| F426 | Achievement Stellar Governance Assembly | Governance | `components/onchain/OnchainAchievementStellarGovernanceAssembly.tsx` |
+| F427 | Achievement Aether Compliance Framework | Compliance | `components/onchain/OnchainAchievementAetherComplianceFramework.tsx` |
+| F428 | Achievement Stellar Security Gateway | Security | `components/onchain/OnchainAchievementStellarSecurityGateway.tsx` |
+| F429 | Achievement Aether Data Residency | Data Residency | `components/onchain/OnchainAchievementAetherDataResidency.tsx` |
+| F430 | Achievement Stellar Settlement Engine | Settlement | `components/onchain/OnchainAchievementStellarSettlementEngine.tsx` |
+| F431 | Achievement Aether Access Control | Access Control | `components/onchain/OnchainAchievementAetherAccessControl.tsx` |
+| F432 | Achievement Stellar Telemetry Hub | Observability | `components/onchain/OnchainAchievementStellarTelemetryHub.tsx` |
+| F433 | Achievement Aether Risk Matrix | Risk Management | `components/onchain/OnchainAchievementAetherRiskMatrix.tsx` |
+| F434 | Achievement Stellar Audit Trail | Auditability | `components/onchain/OnchainAchievementStellarAuditTrail.tsx` |
+| F435 | Achievement Aether Continuity Ledger | Continuity Tracking | `components/onchain/OnchainAchievementAetherContinuityLedger.tsx` |
+| F436 | Achievement Stellar Node Registry | Node Management | `components/onchain/OnchainAchievementStellarNodeRegistry.tsx` |
+| F437 | Achievement Aether Messaging Protocol | Messaging | `components/onchain/OnchainAchievementAetherMessagingProtocol.tsx` |
+| F438 | Achievement Stellar Consensus Oracle | Consensus | `components/onchain/OnchainAchievementStellarConsensusOracle.tsx` |
+| F439 | Achievement Aether Key Management | Key Management | `components/onchain/OnchainAchievementAetherKeyManagement.tsx` |
+| F440 | Achievement Stellar Resource Pool | Resource Management | `components/onchain/OnchainAchievementStellarResourcePool.tsx` |
+| F441 | Achievement Aether Security Framework | Security | `components/onchain/OnchainAchievementAetherSecurityFramework.tsx` |
+| F442 | Achievement Stellar Interoperability Hub | Interoperability | `components/onchain/OnchainAchievementStellarInteroperabilityHub.tsx` |
+| F443 | Achievement Aether Event Stream | Event Streaming | `components/onchain/OnchainAchievementAetherEventStream.tsx` |
+| F444 | Achievement Stellar Monitoring Dashboard | Monitoring | `components/onchain/OnchainAchievementStellarMonitoringDashboard.tsx` |
+| F445 | Achievement Aether Data Governance | Data Governance | `components/onchain/OnchainAchievementAetherDataGovernance.tsx` |
+| F446 | Achievement Stellar Dispute Resolution | Dispute Resolution | `components/onchain/OnchainAchievementStellarDisputeResolution.tsx` |
+| F447 | Achievement Aether Intent Orchestrator | Intent Orchestration | `components/onchain/OnchainAchievementAetherIntentOrchestrator.tsx` |
+| F448 | Achievement Stellar Guardian Council | Guardian Operations | `components/onchain/OnchainAchievementStellarGuardianCouncil.tsx` |
+| F449 | Achievement Aether Nexus Platform | Platform Infrastructure | `components/onchain/OnchainAchievementAetherNexusPlatform.tsx` |
+| F450 | Achievement Stellar Nexus Network | Network Infrastructure | `components/onchain/OnchainAchievementStellarNexusNetwork.tsx` |
+
+#### F421 · Achievement Aether Orchestration Core
+- **UI**: `components/onchain/OnchainAchievementAetherOrchestrationCore.tsx` configures core ID, orchestration domains, core mode, and core policy for unified multi-domain orchestration.
+- **Contract**: Uses `addComment` with `AETHER_ORCH_CORE` payloads that encode orchestration configuration and domain coordination.
+- **Automation**: Core service manages unified orchestration across domains using selected core mode.
+- **Acceptance**: Core ID and at least one orchestration domain required; core mode selection mandatory.
+
+#### F422 · Achievement Stellar State Synchronizer
+- **UI**: Deploys synchronizers with synchronizer ID, source networks, sync mode, and synchronizer policy for state synchronization.
+- **Contract**: `addComment` logs `STELLAR_STATE_SYNC` entries for synchronizer deployment.
+- **Automation**: Synchronizer service manages state synchronization with configured sync mode.
+- **Acceptance**: Synchronizer ID and at least one source network required; sync mode selection mandatory.
+
+#### F423 · Achievement Aether Identity Mesh
+- **UI**: Deploys meshes with mesh ID, identity providers, mesh topology, and mesh policy.
+- **Contract**: `addComment` stores `AETHER_ID_MESH` entries for identity mesh deployment.
+- **Automation**: Mesh service manages identity operations based on configured topology.
+- **Acceptance**: Mesh ID and at least one identity provider required; mesh topology selection mandatory.
+
+#### F424 · Achievement Stellar Attestation Hub
+- **UI**: Deploys hubs with hub ID, attestation types, hub address, and hub policy.
+- **Contract**: `addComment` logs `STELLAR_ATTEST_HUB` entries for hub deployment.
+- **Automation**: Hub service manages attestation operations with configured types.
+- **Acceptance**: Hub ID, at least one attestation type, and hub address required.
+
+#### F425 · Achievement Aether Treasury Network
+- **UI**: Deploys networks with network ID, asset types, network type, and network policy.
+- **Contract**: `addComment` stores `AETHER_TREASURY_NET` entries for treasury network deployment.
+- **Automation**: Network service manages treasury operations with configured asset types.
+- **Acceptance**: Network ID and at least one asset type required; network type selection mandatory.
+
+#### F426 · Achievement Stellar Governance Assembly
+- **UI**: Forms assemblies with assembly ID, member count, quorum threshold, voting mechanism, and assembly policy.
+- **Contract**: `addComment` logs `STELLAR_GOV_ASSEMBLY` entries for assembly formation.
+- **Automation**: Assembly service coordinates governance decisions with configured voting mechanism.
+- **Acceptance**: Assembly ID, positive member count, and quorum threshold required.
+
+#### F427 · Achievement Aether Compliance Framework
+- **UI**: Deploys frameworks with framework ID, compliance standards, jurisdictions, enforcement level, and framework policy.
+- **Contract**: `addComment` stores `AETHER_COMPLIANCE` entries for compliance framework deployment.
+- **Automation**: Framework service validates compliance across jurisdictions.
+- **Acceptance**: Framework ID and at least one compliance standard required; enforcement level selection mandatory.
+
+#### F428 · Achievement Stellar Security Gateway
+- **UI**: Deploys gateways with gateway ID, access policy, allowed addresses, and gateway policy.
+- **Contract**: `addComment` logs `STELLAR_SEC_GW` entries for security gateway deployment.
+- **Automation**: Gateway service enforces access policies with configured access policy.
+- **Acceptance**: Gateway ID and access policy selection required.
+
+#### F429 · Achievement Aether Data Residency
+- **UI**: Sets residency policies with policy ID, data type, allowed regions, enforcement mode, and policy rules.
+- **Contract**: `addComment` stores `AETHER_DATA_RESIDENCY` entries for data residency management.
+- **Automation**: Residency service enforces data location requirements.
+- **Acceptance**: Policy ID, data type, and at least one allowed region required; enforcement mode selection mandatory.
+
+#### F430 · Achievement Stellar Settlement Engine
+- **UI**: Deploys engines with engine ID, settlement mode, finality time, and engine policy.
+- **Contract**: `addComment` logs `STELLAR_SETTLE` entries for settlement engine deployment.
+- **Automation**: Engine service processes transactions with configured finality guarantees.
+- **Acceptance**: Engine ID, settlement mode selection, and positive finality time required.
+
+#### F431 · Achievement Aether Access Control
+- **UI**: Configures access with policy ID, resource type, access level, authorized entities, and policy rules.
+- **Contract**: `addComment` stores `AETHER_ACCESS` entries for access control configuration.
+- **Automation**: Access control service enforces resource access policies.
+- **Acceptance**: Policy ID, resource type, and at least one authorized entity required; access level selection mandatory.
+
+#### F432 · Achievement Stellar Telemetry Hub
+- **UI**: Deploys hubs with hub ID, telemetry types, aggregation interval, and hub policy.
+- **Contract**: `addComment` logs `STELLAR_TELEMETRY` entries for telemetry hub deployment.
+- **Automation**: Hub service aggregates telemetry with configured aggregation interval.
+- **Acceptance**: Hub ID, at least one telemetry type, and positive aggregation interval required.
+
+#### F433 · Achievement Aether Risk Matrix
+- **UI**: Assesses risks with assessment ID, risk category, severity, likelihood, and mitigation strategy.
+- **Contract**: `addComment` stores `AETHER_RISK` entries for risk assessment.
+- **Automation**: Risk service calculates and tracks risk assessments.
+- **Acceptance**: Assessment ID, risk category, severity, and likelihood required.
+
+#### F434 · Achievement Stellar Audit Trail
+- **UI**: Creates trails with trail ID, audit scope, retention policy, and trail policy.
+- **Contract**: `addComment` logs `STELLAR_AUDIT_TRAIL` entries for audit trail creation.
+- **Automation**: Trail service maintains immutable audit records.
+- **Acceptance**: Trail ID, audit scope, and retention policy selection required.
+
+#### F435 · Achievement Aether Continuity Ledger
+- **UI**: Records continuity with ledger ID, continuity type, checkpoint interval, continuity proof hash, and ledger policy.
+- **Contract**: `addComment` stores `AETHER_CONTINUITY` entries for continuity tracking.
+- **Automation**: Continuity service manages checkpoint intervals and proof validation.
+- **Acceptance**: Ledger ID, continuity type, and continuity proof hash required; positive checkpoint interval mandatory.
+
+#### F436 · Achievement Stellar Node Registry
+- **UI**: Registers nodes with node ID, node address, node role, status, and node metadata.
+- **Contract**: `addComment` logs `STELLAR_NODE_REG` entries for node registration.
+- **Automation**: Registry service manages node lifecycle and role assignments.
+- **Acceptance**: Node ID, node address, and node role selection required.
+
+#### F437 · Achievement Aether Messaging Protocol
+- **UI**: Deploys protocols with protocol ID, message type, encryption requirement, delivery guarantee, and protocol policy.
+- **Contract**: `addComment` stores `AETHER_MSG_PROTOCOL` entries for messaging protocol deployment.
+- **Automation**: Protocol service handles secure messaging with configured delivery guarantees.
+- **Acceptance**: Protocol ID and message type selection required; delivery guarantee selection mandatory.
+
+#### F438 · Achievement Stellar Consensus Oracle
+- **UI**: Deploys oracles with oracle ID, consensus type, quorum size, finality threshold, and oracle policy.
+- **Contract**: `addComment` logs `STELLAR_CONSENSUS` entries for consensus oracle deployment.
+- **Automation**: Oracle service processes consensus decisions based on configured parameters.
+- **Acceptance**: Oracle ID, consensus type selection, and positive quorum size required.
+
+#### F439 · Achievement Aether Key Management
+- **UI**: Configures systems with system ID, key type, key rotation policy, key storage, and key policy.
+- **Contract**: `addComment` stores `AETHER_KEY_MGMT` entries for key management configuration.
+- **Automation**: Key management service handles key lifecycle operations.
+- **Acceptance**: System ID and key type selection required; key rotation policy selection mandatory.
+
+#### F440 · Achievement Stellar Resource Pool
+- **UI**: Creates pools with pool ID, resource types, allocation strategy, pool capacity, and pool policy.
+- **Contract**: `addComment` logs `STELLAR_RESOURCE_POOL` entries for resource pool creation.
+- **Automation**: Pool service manages resource allocation with configured allocation strategy.
+- **Acceptance**: Pool ID, at least one resource type, and positive pool capacity required.
+
+#### F441 · Achievement Aether Security Framework
+- **UI**: Deploys frameworks with framework ID, security layers, threat model, security level, and framework policy.
+- **Contract**: `addComment` stores `AETHER_SECURITY` entries for security framework deployment.
+- **Automation**: Framework service enforces security policies with configured threat model.
+- **Acceptance**: Framework ID, at least one security layer, and threat model selection required.
+
+#### F442 · Achievement Stellar Interoperability Hub
+- **UI**: Registers hubs with hub ID, connected networks, interop protocols, translation layer, hub address, and hub policy.
+- **Contract**: `addComment` logs `STELLAR_INTEROP_HUB` entries for hub registration.
+- **Automation**: Hub service facilitates interoperability across networks.
+- **Acceptance**: Hub ID, at least one connected network, and hub address required; translation layer selection mandatory.
+
+#### F443 · Achievement Aether Event Stream
+- **UI**: Creates streams with stream ID, event types, stream mode, retention period, and stream policy.
+- **Contract**: `addComment` stores `AETHER_EVENT_STREAM` entries for event stream creation.
+- **Automation**: Stream service manages event distribution with configured stream mode.
+- **Acceptance**: Stream ID, at least one event type, and positive retention period required.
+
+#### F444 · Achievement Stellar Monitoring Dashboard
+- **UI**: Deploys dashboards with dashboard ID, monitoring metrics, refresh interval, and alert thresholds.
+- **Contract**: `addComment` logs `STELLAR_MONITORING` entries for dashboard deployment.
+- **Automation**: Dashboard service aggregates and displays monitoring data.
+- **Acceptance**: Dashboard ID, at least one monitoring metric, and positive refresh interval required.
+
+#### F445 · Achievement Aether Data Governance
+- **UI**: Deploys governance with governance ID, data categories, governance model, retention policy, and governance policy.
+- **Contract**: `addComment` stores `AETHER_DATA_GOV` entries for data governance deployment.
+- **Automation**: Governance service manages data policies with configured governance model.
+- **Acceptance**: Governance ID, at least one data category, and governance model selection required.
+
+#### F446 · Achievement Stellar Dispute Resolution
+- **UI**: Initiates resolutions with dispute ID, dispute type, resolution mechanism, and dispute details.
+- **Contract**: `addComment` logs `STELLAR_DISPUTE` entries for dispute resolution.
+- **Automation**: Dispute service manages resolution processes with configured resolution mechanism.
+- **Acceptance**: Dispute ID and dispute type selection required; resolution mechanism selection mandatory.
+
+#### F447 · Achievement Aether Intent Orchestrator
+- **UI**: Deploys orchestrators with orchestrator ID, target networks, orchestration strategy, failure mode, and orchestrator policy.
+- **Contract**: `addComment` stores `AETHER_INTENT_ORCH` entries for intent orchestration.
+- **Automation**: Orchestrator service coordinates intents across networks with configured orchestration strategy.
+- **Acceptance**: Orchestrator ID, at least one target network, and orchestration strategy selection required.
+
+#### F448 · Achievement Stellar Guardian Council
+- **UI**: Forms councils with council ID, member count, quorum threshold, authority level, and council policy.
+- **Contract**: `addComment` logs `STELLAR_GUARDIAN_COUNCIL` entries for council formation.
+- **Automation**: Council service coordinates guardian operations with configured authority level.
+- **Acceptance**: Council ID, positive member count, and quorum threshold required; authority level selection mandatory.
+
+#### F449 · Achievement Aether Nexus Platform
+- **UI**: Deploys platforms with platform ID, platform services, platform type, platform address, and platform policy.
+- **Contract**: `addComment` stores `AETHER_NEXUS_PLATFORM` entries for platform deployment.
+- **Automation**: Platform service coordinates all aether nexus operations.
+- **Acceptance**: Platform ID, at least one platform service, and platform address required; platform type selection mandatory.
+
+#### F450 · Achievement Stellar Nexus Network
+- **UI**: Joins networks with network ID, network type, participant count, and network policy.
+- **Contract**: `addComment` logs `STELLAR_NEXUS_NET` entries for network participation.
+- **Automation**: Network service manages stellar nexus network infrastructure.
+- **Acceptance**: Network ID, network type selection, and positive participant count required.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
