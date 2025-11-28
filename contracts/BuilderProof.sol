@@ -799,6 +799,30 @@ contract SocialMediaContract {
         emit MultiChainVerificationNetworkLogged(multiChainVerificationNetworkCount, achievementId, consensusProof, verificationCount);
         return multiChainVerificationNetworkCount;
     }
+
+    function logBridgeAttestationProtocol(
+        uint256 achievementId,
+        string memory attestationType,
+        bytes32 attestationProof,
+        address attester,
+        uint256 validityPeriod
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(attester != address(0), "Invalid attester");
+        require(validityPeriod > 0, "Validity period required");
+        bridgeAttestationProtocolCount++;
+        bridgeAttestationProtocols[bridgeAttestationProtocolCount] = BridgeAttestationProtocol({
+            id: bridgeAttestationProtocolCount,
+            achievementId: achievementId,
+            attestationType: attestationType,
+            attestationProof: attestationProof,
+            attester: attester,
+            validityPeriod: validityPeriod,
+            recordedAt: block.timestamp
+        });
+        emit BridgeAttestationProtocolLogged(bridgeAttestationProtocolCount, achievementId, attestationType, attester, validityPeriod);
+        return bridgeAttestationProtocolCount;
+    }
 }
 
 
