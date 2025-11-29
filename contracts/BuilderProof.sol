@@ -28,6 +28,9 @@ contract SocialMediaContract {
     uint256 public crossChainBridgeSecurityCount;
     uint256 public multiChainVerificationNetworkCount;
     uint256 public bridgeAttestationProtocolCount;
+    uint256 public autonomousDecisionEngineCount;
+    uint256 public intelligentProofValidatorCount;
+    uint256 public adaptiveRiskScoringCount;
     
     struct Post {
         uint256 id;
@@ -224,6 +227,35 @@ contract SocialMediaContract {
         uint256 validityPeriod;
         uint256 recordedAt;
     }
+
+    struct AutonomousDecisionEngine {
+        uint256 id;
+        uint256 achievementId;
+        string decisionType;
+        bytes32 mlModelHash;
+        uint256 confidenceScore;
+        bytes32 decisionProof;
+        uint256 recordedAt;
+    }
+
+    struct IntelligentProofValidator {
+        uint256 id;
+        uint256 achievementId;
+        string validationAlgorithm;
+        bytes32 proofHash;
+        uint256 validationScore;
+        bool isValid;
+        uint256 recordedAt;
+    }
+
+    struct AdaptiveRiskScoring {
+        uint256 id;
+        uint256 achievementId;
+        uint256 riskScore;
+        string riskFactors;
+        bytes32 scoringModelHash;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -248,6 +280,9 @@ contract SocialMediaContract {
     mapping(uint256 => CrossChainBridgeSecurity) public crossChainBridgeSecurities;
     mapping(uint256 => MultiChainVerificationNetwork) public multiChainVerificationNetworks;
     mapping(uint256 => BridgeAttestationProtocol) public bridgeAttestationProtocols;
+    mapping(uint256 => AutonomousDecisionEngine) public autonomousDecisionEngines;
+    mapping(uint256 => IntelligentProofValidator) public intelligentProofValidators;
+    mapping(uint256 => AdaptiveRiskScoring) public adaptiveRiskScorings;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -274,6 +309,9 @@ contract SocialMediaContract {
     event CrossChainBridgeSecurityLogged(uint256 indexed securityId, uint256 indexed achievementId, string bridgeId, uint256 threshold, bytes32 securityProof);
     event MultiChainVerificationNetworkLogged(uint256 indexed networkId, uint256 indexed achievementId, bytes32 consensusProof, uint256 verificationCount);
     event BridgeAttestationProtocolLogged(uint256 indexed protocolId, uint256 indexed achievementId, string attestationType, address attester, uint256 validityPeriod);
+    event AutonomousDecisionEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string decisionType, uint256 confidenceScore, bytes32 decisionProof);
+    event IntelligentProofValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validationAlgorithm, uint256 validationScore, bool isValid);
+    event AdaptiveRiskScoringLogged(uint256 indexed scoringId, uint256 indexed achievementId, uint256 riskScore, string riskFactors, bytes32 scoringModelHash);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -302,6 +340,9 @@ contract SocialMediaContract {
         crossChainBridgeSecurityCount = 0;
         multiChainVerificationNetworkCount = 0;
         bridgeAttestationProtocolCount = 0;
+        autonomousDecisionEngineCount = 0;
+        intelligentProofValidatorCount = 0;
+        adaptiveRiskScoringCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
