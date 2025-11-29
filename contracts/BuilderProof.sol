@@ -34,6 +34,9 @@ contract SocialMediaContract {
     uint256 public sovereignComputeNodeCount;
     uint256 public jurisdictionalComplianceEngineCount;
     uint256 public dataSovereigntyVaultCount;
+    uint256 public resilienceOrchestratorCount;
+    uint256 public adaptiveFailureRecoveryCount;
+    uint256 public predictiveResilienceEngineCount;
     
     struct Post {
         uint256 id;
@@ -287,6 +290,34 @@ contract SocialMediaContract {
         bytes32 residencyProof;
         uint256 recordedAt;
     }
+
+    struct ResilienceOrchestrator {
+        uint256 id;
+        uint256 achievementId;
+        string strategy;
+        bytes32 policyHash;
+        uint256 resilienceScore;
+        uint256 recordedAt;
+    }
+
+    struct AdaptiveFailureRecovery {
+        uint256 id;
+        uint256 achievementId;
+        string recoveryStrategy;
+        bytes32 recoveryProof;
+        uint256 recoveryTime;
+        bool isSuccessful;
+        uint256 recordedAt;
+    }
+
+    struct PredictiveResilienceEngine {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 modelHash;
+        uint256 predictionConfidence;
+        bytes32 predictionProof;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -317,6 +348,9 @@ contract SocialMediaContract {
     mapping(uint256 => SovereignComputeNode) public sovereignComputeNodes;
     mapping(uint256 => JurisdictionalComplianceEngine) public jurisdictionalComplianceEngines;
     mapping(uint256 => DataSovereigntyVault) public dataSovereigntyVaults;
+    mapping(uint256 => ResilienceOrchestrator) public resilienceOrchestrators;
+    mapping(uint256 => AdaptiveFailureRecovery) public adaptiveFailureRecoveries;
+    mapping(uint256 => PredictiveResilienceEngine) public predictiveResilienceEngines;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -349,6 +383,9 @@ contract SocialMediaContract {
     event SovereignComputeNodeLogged(uint256 indexed nodeId, uint256 indexed achievementId, string jurisdiction, string nodeIdStr, bytes32 complianceProof);
     event JurisdictionalComplianceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string jurisdiction, bool isCompliant, bytes32 complianceProof);
     event DataSovereigntyVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string jurisdiction, bytes32 dataHash, bytes32 residencyProof);
+    event ResilienceOrchestratorLogged(uint256 indexed orchestratorId, uint256 indexed achievementId, string strategy, bytes32 policyHash, uint256 resilienceScore);
+    event AdaptiveFailureRecoveryLogged(uint256 indexed recoveryId, uint256 indexed achievementId, string recoveryStrategy, uint256 recoveryTime, bool isSuccessful);
+    event PredictiveResilienceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, bytes32 modelHash, uint256 predictionConfidence, bytes32 predictionProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -383,6 +420,9 @@ contract SocialMediaContract {
         sovereignComputeNodeCount = 0;
         jurisdictionalComplianceEngineCount = 0;
         dataSovereigntyVaultCount = 0;
+        resilienceOrchestratorCount = 0;
+        adaptiveFailureRecoveryCount = 0;
+        predictiveResilienceEngineCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
