@@ -790,6 +790,37 @@ export interface FeatureFlags {
   achievementAdaptiveNetworkTopology: boolean
   achievementPredictiveSecurityThreat: boolean
   achievementIntelligentMonitoringSystem: boolean
+  // Sovereign Operations wave feature flags (F481-F510)
+  achievementSovereignComputeNode: boolean
+  achievementJurisdictionalComplianceEngine: boolean
+  achievementDataSovereigntyVault: boolean
+  achievementSovereignIdentityRegistry: boolean
+  achievementCrossJurisdictionAttestation: boolean
+  achievementSovereignDataResidency: boolean
+  achievementJurisdictionalAccessControl: boolean
+  achievementSovereignAuditTrail: boolean
+  achievementCrossBorderSettlement: boolean
+  achievementSovereignKeyManagement: boolean
+  achievementJurisdictionalDisputeResolver: boolean
+  achievementSovereignConsensusNetwork: boolean
+  achievementDataLocalizationEnforcer: boolean
+  achievementSovereignGovernanceFramework: boolean
+  achievementJurisdictionalProofValidator: boolean
+  achievementSovereignTreasuryVault: boolean
+  achievementCrossJurisdictionMessaging: boolean
+  achievementSovereignExecutionEnvironment: boolean
+  achievementJurisdictionalComplianceMonitor: boolean
+  achievementSovereignAttestationService: boolean
+  achievementDataSovereigntyBridge: boolean
+  achievementSovereignAccessPolicy: boolean
+  achievementJurisdictionalRiskAssessor: boolean
+  achievementSovereignContinuityGuarantee: boolean
+  achievementCrossBorderIdentityVerification: boolean
+  achievementSovereignDataRetention: boolean
+  achievementJurisdictionalEncryptionStandard: boolean
+  achievementSovereignRecoveryProtocol: boolean
+  achievementDataSovereigntyCompliance: boolean
+  achievementSovereignFinalityGuarantor: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
