@@ -1116,6 +1116,27 @@ contract SocialMediaContract {
         emit AdaptiveFailureRecoveryLogged(adaptiveFailureRecoveryCount, achievementId, recoveryStrategy, recoveryTime, isSuccessful);
         return adaptiveFailureRecoveryCount;
     }
+
+    function logPredictiveResilienceEngine(
+        uint256 achievementId,
+        bytes32 modelHash,
+        uint256 predictionConfidence,
+        bytes32 predictionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(predictionConfidence <= 100, "Prediction confidence must be <= 100");
+        predictiveResilienceEngineCount++;
+        predictiveResilienceEngines[predictiveResilienceEngineCount] = PredictiveResilienceEngine({
+            id: predictiveResilienceEngineCount,
+            achievementId: achievementId,
+            modelHash: modelHash,
+            predictionConfidence: predictionConfidence,
+            predictionProof: predictionProof,
+            recordedAt: block.timestamp
+        });
+        emit PredictiveResilienceEngineLogged(predictiveResilienceEngineCount, achievementId, modelHash, predictionConfidence, predictionProof);
+        return predictiveResilienceEngineCount;
+    }
 }
 
 
