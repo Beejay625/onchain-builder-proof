@@ -821,6 +821,37 @@ export interface FeatureFlags {
   achievementSovereignRecoveryProtocol: boolean
   achievementDataSovereigntyCompliance: boolean
   achievementSovereignFinalityGuarantor: boolean
+  // Advanced Resilience wave feature flags (F511-F540)
+  achievementResilienceOrchestrator: boolean
+  achievementAdaptiveFailureRecovery: boolean
+  achievementPredictiveResilienceEngine: boolean
+  achievementAutonomousHealthMonitor: boolean
+  achievementResiliencePolicyEngine: boolean
+  achievementAdaptiveCircuitBreaker: boolean
+  achievementPredictiveCapacityScaling: boolean
+  achievementAutonomousLoadBalancer: boolean
+  achievementResilienceMetricsCollector: boolean
+  achievementAdaptiveTimeoutManager: boolean
+  achievementPredictiveResourceOptimizer: boolean
+  achievementAutonomousFailoverController: boolean
+  achievementResilienceStateMachine: boolean
+  achievementAdaptiveRetryMechanism: boolean
+  achievementPredictiveAnomalyPrevention: boolean
+  achievementAutonomousBackupManager: boolean
+  achievementResilienceCheckpointSystem: boolean
+  achievementAdaptiveThrottling: boolean
+  achievementPredictiveMaintenanceScheduler: boolean
+  achievementAutonomousServiceMesh: boolean
+  achievementResilienceEventBus: boolean
+  achievementAdaptiveRateLimiter: boolean
+  achievementPredictiveScalingController: boolean
+  achievementAutonomousHealthChecker: boolean
+  achievementResilienceDataReplication: boolean
+  achievementAdaptiveQueueManager: boolean
+  achievementPredictiveFailurePrevention: boolean
+  achievementAutonomousRecoveryOrchestrator: boolean
+  achievementResilienceMonitoringDashboard: boolean
+  achievementAdaptiveSecurityPolicy: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
