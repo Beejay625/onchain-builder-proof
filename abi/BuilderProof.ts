@@ -1125,6 +1125,117 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'governanceType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'policyHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'decisionConfidence',
+        type: 'uint256',
+      },
+    ],
+    name: 'AutonomousGovernanceEngineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'protocolId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'proposalId',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'yesVotes',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'noVotes',
+        type: 'uint256',
+      },
+    ],
+    name: 'DecentralizedVotingProtocolLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'managerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'currentQuorum',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'targetQuorum',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'quorumPolicyHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'AdaptiveQuorumManagerLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -2949,6 +3060,118 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logPredictiveResilienceEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'governanceType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'policyHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'decisionConfidence',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'decisionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAutonomousGovernanceEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'proposalId',
+        type: 'string',
+      },
+      {
+        internalType: 'address[]',
+        name: 'voters',
+        type: 'address[]',
+      },
+      {
+        internalType: 'uint256',
+        name: 'yesVotes',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'noVotes',
+        type: 'uint256',
+      },
+    ],
+    name: 'logDecentralizedVotingProtocol',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'currentQuorum',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'targetQuorum',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'quorumPolicyHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAdaptiveQuorumManager',
     outputs: [
       {
         internalType: 'uint256',
