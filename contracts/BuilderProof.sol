@@ -971,6 +971,26 @@ contract SocialMediaContract {
         emit AdaptiveRiskScoringLogged(adaptiveRiskScoringCount, achievementId, riskScore, riskFactors, scoringModelHash);
         return adaptiveRiskScoringCount;
     }
+
+    function logSovereignComputeNode(
+        uint256 achievementId,
+        string memory jurisdiction,
+        string memory nodeId,
+        bytes32 complianceProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        sovereignComputeNodeCount++;
+        sovereignComputeNodes[sovereignComputeNodeCount] = SovereignComputeNode({
+            id: sovereignComputeNodeCount,
+            achievementId: achievementId,
+            jurisdiction: jurisdiction,
+            nodeId: nodeId,
+            complianceProof: complianceProof,
+            recordedAt: block.timestamp
+        });
+        emit SovereignComputeNodeLogged(sovereignComputeNodeCount, achievementId, jurisdiction, nodeId, complianceProof);
+        return sovereignComputeNodeCount;
+    }
 }
 
 
