@@ -759,6 +759,37 @@ export interface FeatureFlags {
   achievementCrossChainTimelock: boolean
   achievementInterChainEscrow: boolean
   achievementBridgeFinalityGuarantor: boolean
+  // Decentralized Intelligence wave feature flags (F451-F480)
+  achievementAutonomousDecisionEngine: boolean
+  achievementIntelligentProofValidator: boolean
+  achievementAdaptiveRiskScoring: boolean
+  achievementPredictiveFailureAnalysis: boolean
+  achievementSmartContractOptimizer: boolean
+  achievementDecentralizedMLInference: boolean
+  achievementIntelligentGasPricing: boolean
+  achievementAdaptiveConsensusMechanism: boolean
+  achievementPredictiveMaintenanceScheduler: boolean
+  achievementIntelligentResourceAllocator: boolean
+  achievementAutonomousIncidentResponse: boolean
+  achievementAdaptiveSecurityPolicy: boolean
+  achievementPredictiveComplianceMonitor: boolean
+  achievementIntelligentWorkflowOrchestrator: boolean
+  achievementDecentralizedDataAnalytics: boolean
+  achievementAdaptivePerformanceTuner: boolean
+  achievementPredictiveCapacityPlanner: boolean
+  achievementIntelligentLoadBalancer: boolean
+  achievementAutonomousRecoverySystem: boolean
+  achievementAdaptiveGovernanceFramework: boolean
+  achievementPredictiveAnomalyDetector: boolean
+  achievementIntelligentEventProcessor: boolean
+  achievementDecentralizedOracleNetwork: boolean
+  achievementAdaptiveSLAEnforcer: boolean
+  achievementPredictiveCostOptimizer: boolean
+  achievementIntelligentAuditSystem: boolean
+  achievementAutonomousUpgradeManager: boolean
+  achievementAdaptiveNetworkTopology: boolean
+  achievementPredictiveSecurityThreat: boolean
+  achievementIntelligentMonitoringSystem: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
