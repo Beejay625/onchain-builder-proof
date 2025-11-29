@@ -910,6 +910,27 @@ contract SocialMediaContract {
         emit IntelligentProofValidatorLogged(intelligentProofValidatorCount, achievementId, validationAlgorithm, validationScore, isValid);
         return intelligentProofValidatorCount;
     }
+
+    function logAdaptiveRiskScoring(
+        uint256 achievementId,
+        uint256 riskScore,
+        string memory riskFactors,
+        bytes32 scoringModelHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(riskScore <= 100, "Risk score must be <= 100");
+        adaptiveRiskScoringCount++;
+        adaptiveRiskScorings[adaptiveRiskScoringCount] = AdaptiveRiskScoring({
+            id: adaptiveRiskScoringCount,
+            achievementId: achievementId,
+            riskScore: riskScore,
+            riskFactors: riskFactors,
+            scoringModelHash: scoringModelHash,
+            recordedAt: block.timestamp
+        });
+        emit AdaptiveRiskScoringLogged(adaptiveRiskScoringCount, achievementId, riskScore, riskFactors, scoringModelHash);
+        return adaptiveRiskScoringCount;
+    }
 }
 
 
