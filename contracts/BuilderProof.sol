@@ -1201,6 +1201,29 @@ contract SocialMediaContract {
         emit AutonomousGovernanceEngineLogged(autonomousGovernanceEngineCount, achievementId, governanceType, policyHash, decisionConfidence);
         return autonomousGovernanceEngineCount;
     }
+
+    function logDecentralizedVotingProtocol(
+        uint256 achievementId,
+        string memory proposalId,
+        address[] memory voters,
+        uint256 yesVotes,
+        uint256 noVotes
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(voters.length > 0, "Voters required");
+        decentralizedVotingProtocolCount++;
+        decentralizedVotingProtocols[decentralizedVotingProtocolCount] = DecentralizedVotingProtocol({
+            id: decentralizedVotingProtocolCount,
+            achievementId: achievementId,
+            proposalId: proposalId,
+            voters: voters,
+            yesVotes: yesVotes,
+            noVotes: noVotes,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedVotingProtocolLogged(decentralizedVotingProtocolCount, achievementId, proposalId, yesVotes, noVotes);
+        return decentralizedVotingProtocolCount;
+    }
 }
 
 
