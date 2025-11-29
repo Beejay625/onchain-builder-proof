@@ -791,6 +791,38 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 - ✅ **Achievement Data Sovereignty Compliance**: Compliance with data sovereignty requirements.
 - 🎯 **Achievement Sovereign Finality Guarantor**: Guarantees finality with sovereign jurisdiction compliance.
 
+### Advanced Resilience · 30 Self-Healing System Primitives
+- 🎼 **Achievement Resilience Orchestrator**: Orchestrates resilience strategies across systems.
+- 🔄 **Achievement Adaptive Failure Recovery**: Adaptively recovers from failures with intelligent strategies.
+- 🔮 **Achievement Predictive Resilience Engine**: Predicts and prevents failures using ML models.
+- 💚 **Achievement Autonomous Health Monitor**: Autonomously monitors system health and triggers responses.
+- 📜 **Achievement Resilience Policy Engine**: Enforces resilience policies with configurable rules.
+- ⚡ **Achievement Adaptive Circuit Breaker**: Circuit breaker that adapts to system conditions.
+- 📈 **Achievement Predictive Capacity Scaling**: Scales capacity predictively based on demand forecasts.
+- ⚖️ **Achievement Autonomous Load Balancer**: Autonomously balances load across resources.
+- 📊 **Achievement Resilience Metrics Collector**: Collects and analyzes resilience metrics.
+- ⏱️ **Achievement Adaptive Timeout Manager**: Manages timeouts adaptively based on conditions.
+- 🎯 **Achievement Predictive Resource Optimizer**: Optimizes resources using predictive models.
+- 🔄 **Achievement Autonomous Failover Controller**: Autonomously controls failover operations.
+- 🔀 **Achievement Resilience State Machine**: State machine for resilience state transitions.
+- 🔁 **Achievement Adaptive Retry Mechanism**: Retry mechanism that adapts to failure patterns.
+- 🛡️ **Achievement Predictive Anomaly Prevention**: Prevents anomalies using predictive analysis.
+- 💾 **Achievement Autonomous Backup Manager**: Autonomously manages backup operations.
+- 📸 **Achievement Resilience Checkpoint System**: Checkpoint system for resilience state recovery.
+- 🚦 **Achievement Adaptive Throttling**: Throttling that adapts to system load.
+- 🔧 **Achievement Predictive Maintenance Scheduler**: Schedules maintenance using predictive models.
+- 🕸️ **Achievement Autonomous Service Mesh**: Autonomous service mesh for resilience.
+- 📡 **Achievement Resilience Event Bus**: Event bus for resilience event distribution.
+- 🚦 **Achievement Adaptive Rate Limiter**: Rate limiter that adapts to conditions.
+- 📈 **Achievement Predictive Scaling Controller**: Scaling controller with predictive capabilities.
+- 💚 **Achievement Autonomous Health Checker**: Autonomously checks system health.
+- 📦 **Achievement Resilience Data Replication**: Data replication for resilience and availability.
+- 📋 **Achievement Adaptive Queue Manager**: Queue manager that adapts to load patterns.
+- 🛡️ **Achievement Predictive Failure Prevention**: Prevents failures using predictive analysis.
+- 🎼 **Achievement Autonomous Recovery Orchestrator**: Autonomously orchestrates recovery operations.
+- 📊 **Achievement Resilience Monitoring Dashboard**: Dashboard for monitoring resilience metrics.
+- 🔐 **Achievement Adaptive Security Policy**: Security policy that adapts to threats.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
