@@ -1073,6 +1073,27 @@ contract SocialMediaContract {
         emit DataSovereigntyVaultLogged(dataSovereigntyVaultCount, achievementId, jurisdiction, dataHash, residencyProof);
         return dataSovereigntyVaultCount;
     }
+
+    function logResilienceOrchestrator(
+        uint256 achievementId,
+        string memory strategy,
+        bytes32 policyHash,
+        uint256 resilienceScore
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(resilienceScore <= 100, "Resilience score must be <= 100");
+        resilienceOrchestratorCount++;
+        resilienceOrchestrators[resilienceOrchestratorCount] = ResilienceOrchestrator({
+            id: resilienceOrchestratorCount,
+            achievementId: achievementId,
+            strategy: strategy,
+            policyHash: policyHash,
+            resilienceScore: resilienceScore,
+            recordedAt: block.timestamp
+        });
+        emit ResilienceOrchestratorLogged(resilienceOrchestratorCount, achievementId, strategy, policyHash, resilienceScore);
+        return resilienceOrchestratorCount;
+    }
 }
 
 
