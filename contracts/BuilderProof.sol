@@ -887,6 +887,29 @@ contract SocialMediaContract {
         emit AutonomousDecisionEngineLogged(autonomousDecisionEngineCount, achievementId, decisionType, confidenceScore, decisionProof);
         return autonomousDecisionEngineCount;
     }
+
+    function logIntelligentProofValidator(
+        uint256 achievementId,
+        string memory validationAlgorithm,
+        bytes32 proofHash,
+        uint256 validationScore,
+        bool isValid
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(validationScore <= 100, "Validation score must be <= 100");
+        intelligentProofValidatorCount++;
+        intelligentProofValidators[intelligentProofValidatorCount] = IntelligentProofValidator({
+            id: intelligentProofValidatorCount,
+            achievementId: achievementId,
+            validationAlgorithm: validationAlgorithm,
+            proofHash: proofHash,
+            validationScore: validationScore,
+            isValid: isValid,
+            recordedAt: block.timestamp
+        });
+        emit IntelligentProofValidatorLogged(intelligentProofValidatorCount, achievementId, validationAlgorithm, validationScore, isValid);
+        return intelligentProofValidatorCount;
+    }
 }
 
 
