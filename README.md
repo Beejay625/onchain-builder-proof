@@ -695,6 +695,40 @@ Deep dives for this resilience wave live in [`docs/feature-delivery-plan.md`](do
 
 Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-α--aether-nexus-f421f450).
 
+### DeFi Infrastructure · 30 Smart Contract Management & DeFi Primitives
+- 🔮 **Achievement Decentralized Oracle Network**: Decentralized oracle network for reliable data feeds with multiple consensus models.
+- 📋 **Achievement Smart Contract Registry**: Registry for smart contract verification and management with multiple contract types.
+- ✅ **Achievement Token Standard Compliance**: Ensures token compliance with ERC standards with multiple compliance levels.
+- ⛽ **Achievement Gas Optimization Engine**: Optimizes gas usage for smart contract operations with multiple optimization strategies.
+- 🔄 **Achievement Upgradeable Contract Manager**: Manages upgradeable smart contracts with proxy, diamond, or beacon upgrade types.
+- 📡 **Achievement Event Emission Tracker**: Tracks and indexes smart contract events with multiple indexing modes.
+- 🔒 **Achievement Contract Security Auditor**: Automated security auditing for smart contracts with multiple audit types.
+- 📅 **Achievement Token Vesting Schedule**: Manages token vesting schedules with linear, cliff, or staged vesting types.
+- 💧 **Achievement Liquidity Pool Manager**: Manages liquidity pools with constant product, stable, or weighted pool types.
+- 🎁 **Achievement Staking Rewards Distributor**: Distributes staking rewards based on participation with multiple distribution models.
+- 🗳️ **Achievement Governance Proposal System**: Manages governance proposals with multiple proposal types and voting mechanisms.
+- 🔐 **Achievement Multi-Sig Wallet Manager**: Manages multi-signature wallets with configurable thresholds and wallet types.
+- 🔥 **Achievement Token Burn Manager**: Manages token burning with scheduled, event-based, or manual burn types.
+- 📊 **Achievement Price Oracle Aggregator**: Aggregates price data from multiple oracle sources with multiple aggregation methods.
+- 🛡️ **Achievement Flash Loan Protection**: Protects against flash loan attacks with configurable protection levels.
+- 🔒 **Achievement Reentrancy Guard**: Protects contracts against reentrancy attacks with multiple guard types.
+- 🔑 **Achievement Access Control Manager**: Manages role-based access control for contracts with configurable role types.
+- ⏸️ **Achievement Pausable Contract Manager**: Manages pausable contracts with full, selective, or tiered pause types.
+- 🪙 **Achievement Token Minting Controller**: Controls token minting with unlimited, capped, or rate-limited minting types.
+- 🌾 **Achievement Yield Farming Vault**: Automated yield farming vault with multiple strategy types.
+- 📈 **Achievement Automated Market Maker**: Automated market making with multiple AMM types and swap fees.
+- 🖼️ **Achievement NFT Marketplace Manager**: Manages NFT marketplace with fixed price, auction, or both listing types.
+- 💱 **Achievement Decentralized Exchange**: Decentralized exchange with limit, market, or both order types.
+- 💰 **Achievement Lending Protocol Manager**: Manages lending protocol with multiple interest models and collateral factors.
+- 🛡️ **Achievement Insurance Pool Manager**: Manages insurance pools with multiple coverage types and premium rates.
+- 🔮 **Achievement Synthetic Asset Manager**: Manages synthetic assets with multiple collateral types and ratios.
+- 📊 **Achievement Options Trading Platform**: Decentralized options trading with call, put, or both option types.
+- 🔮 **Achievement Prediction Market Manager**: Manages prediction markets with binary, multiple choice, or scalar outcome types.
+- 🪪 **Achievement Decentralized Identity Provider**: Provides decentralized identity with multiple identity standards and attestation methods.
+- ⭐ **Achievement Reputation System Manager**: Manages reputation scores with multiple scoring models and decay rates.
+
+Deep dives for this infrastructure wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-γ--defi-infrastructure--smart-contract-management-f481f510).
+
 ### Cross-Chain Security · 30 Multi-Chain Security Primitives
 - 🌉 **Achievement Cross-Chain Bridge Security**: Secures bridge operations with multi-signature verification.
 - 🔗 **Achievement Multi-Chain Verification Network**: Verifies proofs across multiple chains with consensus.
