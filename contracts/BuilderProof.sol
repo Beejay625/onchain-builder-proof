@@ -864,6 +864,29 @@ contract SocialMediaContract {
         emit BridgeAttestationProtocolLogged(bridgeAttestationProtocolCount, achievementId, attestationType, attester, validityPeriod);
         return bridgeAttestationProtocolCount;
     }
+
+    function logAutonomousDecisionEngine(
+        uint256 achievementId,
+        string memory decisionType,
+        bytes32 mlModelHash,
+        uint256 confidenceScore,
+        bytes32 decisionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(confidenceScore <= 100, "Confidence score must be <= 100");
+        autonomousDecisionEngineCount++;
+        autonomousDecisionEngines[autonomousDecisionEngineCount] = AutonomousDecisionEngine({
+            id: autonomousDecisionEngineCount,
+            achievementId: achievementId,
+            decisionType: decisionType,
+            mlModelHash: mlModelHash,
+            confidenceScore: confidenceScore,
+            decisionProof: decisionProof,
+            recordedAt: block.timestamp
+        });
+        emit AutonomousDecisionEngineLogged(autonomousDecisionEngineCount, achievementId, decisionType, confidenceScore, decisionProof);
+        return autonomousDecisionEngineCount;
+    }
 }
 
 
