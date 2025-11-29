@@ -1224,6 +1224,27 @@ contract SocialMediaContract {
         emit DecentralizedVotingProtocolLogged(decentralizedVotingProtocolCount, achievementId, proposalId, yesVotes, noVotes);
         return decentralizedVotingProtocolCount;
     }
+
+    function logAdaptiveQuorumManager(
+        uint256 achievementId,
+        uint256 currentQuorum,
+        uint256 targetQuorum,
+        bytes32 quorumPolicyHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(targetQuorum > 0, "Target quorum must be positive");
+        adaptiveQuorumManagerCount++;
+        adaptiveQuorumManagers[adaptiveQuorumManagerCount] = AdaptiveQuorumManager({
+            id: adaptiveQuorumManagerCount,
+            achievementId: achievementId,
+            currentQuorum: currentQuorum,
+            targetQuorum: targetQuorum,
+            quorumPolicyHash: quorumPolicyHash,
+            recordedAt: block.timestamp
+        });
+        emit AdaptiveQuorumManagerLogged(adaptiveQuorumManagerCount, achievementId, currentQuorum, targetQuorum, quorumPolicyHash);
+        return adaptiveQuorumManagerCount;
+    }
 }
 
 
