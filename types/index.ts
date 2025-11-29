@@ -852,6 +852,37 @@ export interface FeatureFlags {
   achievementAutonomousRecoveryOrchestrator: boolean
   achievementResilienceMonitoringDashboard: boolean
   achievementAdaptiveSecurityPolicy: boolean
+  // Autonomous Governance wave feature flags (F541-F570)
+  achievementAutonomousGovernanceEngine: boolean
+  achievementDecentralizedVotingProtocol: boolean
+  achievementAdaptiveQuorumManager: boolean
+  achievementPredictiveProposalAnalyzer: boolean
+  achievementAutonomousPolicyEnforcer: boolean
+  achievementDecentralizedTreasuryManager: boolean
+  achievementAdaptiveStakeWeighting: boolean
+  achievementPredictiveGovernanceOutcome: boolean
+  achievementAutonomousProposalGenerator: boolean
+  achievementDecentralizedDisputeResolution: boolean
+  achievementAdaptiveVotingMechanism: boolean
+  achievementPredictiveConsensusForecast: boolean
+  achievementAutonomousDelegationManager: boolean
+  achievementDecentralizedRewardDistributor: boolean
+  achievementAdaptiveGovernanceMetrics: boolean
+  achievementPredictiveVoterBehavior: boolean
+  achievementAutonomousProposalCurator: boolean
+  achievementDecentralizedAccessGovernance: boolean
+  achievementAdaptiveProposalThreshold: boolean
+  achievementPredictiveGovernanceRisk: boolean
+  achievementAutonomousGovernanceAuditor: boolean
+  achievementDecentralizedPolicyRegistry: boolean
+  achievementAdaptiveVotingWindow: boolean
+  achievementPredictiveGovernanceImpact: boolean
+  achievementAutonomousGovernanceOrchestrator: boolean
+  achievementDecentralizedGovernanceNetwork: boolean
+  achievementAdaptiveProposalRanking: boolean
+  achievementPredictiveGovernanceTrends: boolean
+  achievementAutonomousGovernanceMonitor: boolean
+  achievementDecentralizedGovernancePlatform: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
