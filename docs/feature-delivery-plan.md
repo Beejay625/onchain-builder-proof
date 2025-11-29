@@ -3248,6 +3248,223 @@ Aether Nexus extends BuilderProof with thirty advanced network orchestration and
 - **Automation**: Network service manages stellar nexus network infrastructure.
 - **Acceptance**: Network ID, network type selection, and positive participant count required.
 
+### Wave Β · Cross-Chain Security (F451–F480)
+
+Cross-Chain Security extends BuilderProof with thirty multi-chain security primitives that enable secure cross-chain operations, bridge security, fraud detection, and comprehensive compliance across multiple blockchain networks. Each feature provides robust security infrastructure for coordinating operations across chains while maintaining trust, verification, and operational integrity.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F451 | Achievement Cross-Chain Bridge Security | Bridge Security | `components/onchain/OnchainAchievementCrossChainBridgeSecurity.tsx` |
+| F452 | Achievement Multi-Chain Verification Network | Verification | `components/onchain/OnchainAchievementMultiChainVerificationNetwork.tsx` |
+| F453 | Achievement Bridge Attestation Protocol | Attestation | `components/onchain/OnchainAchievementBridgeAttestationProtocol.tsx` |
+| F454 | Achievement Cross-Chain Consensus Engine | Consensus | `components/onchain/OnchainAchievementCrossChainConsensusEngine.tsx` |
+| F455 | Achievement Inter-Chain Trust Registry | Trust Management | `components/onchain/OnchainAchievementInterChainTrustRegistry.tsx` |
+| F456 | Achievement Bridge State Synchronizer | State Synchronization | `components/onchain/OnchainAchievementBridgeStateSynchronizer.tsx` |
+| F457 | Achievement Cross-Chain Fraud Detection | Fraud Detection | `components/onchain/OnchainAchievementCrossChainFraudDetection.tsx` |
+| F458 | Achievement Multi-Chain Key Management | Key Management | `components/onchain/OnchainAchievementMultiChainKeyManagement.tsx` |
+| F459 | Achievement Bridge Transaction Validator | Transaction Validation | `components/onchain/OnchainAchievementBridgeTransactionValidator.tsx` |
+| F460 | Achievement Cross-Chain Event Relay | Event Relay | `components/onchain/OnchainAchievementCrossChainEventRelay.tsx` |
+| F461 | Achievement Inter-Chain Message Queue | Messaging | `components/onchain/OnchainAchievementInterChainMessageQueue.tsx` |
+| F462 | Achievement Bridge Liquidity Monitor | Liquidity Monitoring | `components/onchain/OnchainAchievementBridgeLiquidityMonitor.tsx` |
+| F463 | Achievement Cross-Chain Identity Bridge | Identity Bridge | `components/onchain/OnchainAchievementCrossChainIdentityBridge.tsx` |
+| F464 | Achievement Multi-Chain Governance Sync | Governance Sync | `components/onchain/OnchainAchievementMultiChainGovernanceSync.tsx` |
+| F465 | Achievement Bridge Risk Assessor | Risk Assessment | `components/onchain/OnchainAchievementBridgeRiskAssessor.tsx` |
+| F466 | Achievement Cross-Chain Proof Aggregator | Proof Aggregation | `components/onchain/OnchainAchievementCrossChainProofAggregator.tsx` |
+| F467 | Achievement Inter-Chain Settlement Layer | Settlement | `components/onchain/OnchainAchievementInterChainSettlementLayer.tsx` |
+| F468 | Achievement Bridge Circuit Breaker | Circuit Breaker | `components/onchain/OnchainAchievementBridgeCircuitBreaker.tsx` |
+| F469 | Achievement Cross-Chain Audit Trail | Audit Trail | `components/onchain/OnchainAchievementCrossChainAuditTrail.tsx` |
+| F470 | Achievement Multi-Chain Compliance Checker | Compliance | `components/onchain/OnchainAchievementMultiChainComplianceChecker.tsx` |
+| F471 | Achievement Bridge State Snapshot | State Snapshot | `components/onchain/OnchainAchievementBridgeStateSnapshot.tsx` |
+| F472 | Achievement Cross-Chain Dispute Resolver | Dispute Resolution | `components/onchain/OnchainAchievementCrossChainDisputeResolver.tsx` |
+| F473 | Achievement Inter-Chain Token Bridge | Token Bridge | `components/onchain/OnchainAchievementInterChainTokenBridge.tsx` |
+| F474 | Achievement Bridge Health Monitor | Health Monitoring | `components/onchain/OnchainAchievementBridgeHealthMonitor.tsx` |
+| F475 | Achievement Cross-Chain Data Integrity | Data Integrity | `components/onchain/OnchainAchievementCrossChainDataIntegrity.tsx` |
+| F476 | Achievement Multi-Chain Access Control | Access Control | `components/onchain/OnchainAchievementMultiChainAccessControl.tsx` |
+| F477 | Achievement Bridge Recovery Protocol | Recovery Protocol | `components/onchain/OnchainAchievementBridgeRecoveryProtocol.tsx` |
+| F478 | Achievement Cross-Chain Timelock | Timelock | `components/onchain/OnchainAchievementCrossChainTimelock.tsx` |
+| F479 | Achievement Inter-Chain Escrow | Escrow | `components/onchain/OnchainAchievementInterChainEscrow.tsx` |
+| F480 | Achievement Bridge Finality Guarantor | Finality Guarantee | `components/onchain/OnchainAchievementBridgeFinalityGuarantor.tsx` |
+
+#### F451 · Achievement Cross-Chain Bridge Security
+- **UI**: `components/onchain/OnchainAchievementCrossChainBridgeSecurity.tsx` configures security ID, bridge ID, multi-sig threshold, signer addresses, and verification mode for bridge security.
+- **Contract**: Uses `addComment` with `XCHAIN_BRIDGE_SEC` payloads that encode security configuration and multi-signature verification.
+- **Automation**: Security service manages bridge security with configured multi-sig threshold and verification mode.
+- **Acceptance**: Security ID, bridge ID, positive multi-sig threshold, and at least one signer address required; verification mode selection mandatory.
+
+#### F452 · Achievement Multi-Chain Verification Network
+- **UI**: Deploys networks with network ID, target chains, consensus type, verification threshold, and network policy.
+- **Contract**: `addComment` logs `MULTICHAIN_VERIFY_NET` entries for verification network deployment.
+- **Automation**: Network service manages proof verification across chains with configured consensus type.
+- **Acceptance**: Network ID, at least one target chain, and positive verification threshold required; consensus type selection mandatory.
+
+#### F453 · Achievement Bridge Attestation Protocol
+- **UI**: Deploys protocols with protocol ID, bridge ID, attestation type, proof algorithm, and protocol policy.
+- **Contract**: `addComment` stores `BRIDGE_ATTEST_PROTOCOL` entries for attestation protocol deployment.
+- **Automation**: Protocol service manages bridge attestations with configured proof algorithm.
+- **Acceptance**: Protocol ID, bridge ID, and attestation type selection required; proof algorithm selection mandatory.
+
+#### F454 · Achievement Cross-Chain Consensus Engine
+- **UI**: Deploys engines with engine ID, participant chains, consensus algorithm, quorum size, and engine policy.
+- **Contract**: `addComment` logs `XCHAIN_CONSENSUS` entries for consensus engine deployment.
+- **Automation**: Engine service processes consensus decisions with configured algorithm and quorum size.
+- **Acceptance**: Engine ID, at least one participant chain, and positive quorum size required; consensus algorithm selection mandatory.
+
+#### F455 · Achievement Inter-Chain Trust Registry
+- **UI**: Creates registries with registry ID, chain pairs, trust level, verification method, and registry policy.
+- **Contract**: `addComment` stores `INTERCHAIN_TRUST_REG` entries for trust registry creation.
+- **Automation**: Registry service manages trust relationships between chains with configured trust level.
+- **Acceptance**: Registry ID, at least one chain pair, and trust level selection required; verification method selection mandatory.
+
+#### F456 · Achievement Bridge State Synchronizer
+- **UI**: Deploys synchronizers with synchronizer ID, bridge endpoints, sync mode, sync interval, and synchronizer policy.
+- **Contract**: `addComment` logs `BRIDGE_STATE_SYNC` entries for synchronizer deployment.
+- **Automation**: Synchronizer service manages state synchronization with configured sync mode and interval.
+- **Acceptance**: Synchronizer ID, at least one bridge endpoint, and positive sync interval required; sync mode selection mandatory.
+
+#### F457 · Achievement Cross-Chain Fraud Detection
+- **UI**: Deploys detectors with detector ID, monitored chains, detection model, sensitivity level, and detector policy.
+- **Contract**: `addComment` stores `XCHAIN_FRAUD_DETECT` entries for fraud detector deployment.
+- **Automation**: Detector service monitors and detects fraudulent operations with configured detection model.
+- **Acceptance**: Detector ID, at least one monitored chain, and detection model selection required; sensitivity level selection mandatory.
+
+#### F458 · Achievement Multi-Chain Key Management
+- **UI**: Configures systems with system ID, target chains, key type, key rotation policy, and key policy.
+- **Contract**: `addComment` logs `MULTICHAIN_KEY_MGMT` entries for key management configuration.
+- **Automation**: Key management service handles key lifecycle across chains with configured rotation policy.
+- **Acceptance**: System ID, at least one target chain, and key type selection required; key rotation policy selection mandatory.
+
+#### F459 · Achievement Bridge Transaction Validator
+- **UI**: Deploys validators with validator ID, bridge ID, validation rules, validation mode, and validator policy.
+- **Contract**: `addComment` stores `BRIDGE_TX_VALIDATOR` entries for validator deployment.
+- **Automation**: Validator service validates bridge transactions with configured validation mode.
+- **Acceptance**: Validator ID, bridge ID, validation rules, and validation mode selection required.
+
+#### F460 · Achievement Cross-Chain Event Relay
+- **UI**: Deploys relays with relay ID, source chains, target chains, event types, and relay policy.
+- **Contract**: `addComment` logs `XCHAIN_EVENT_RELAY` entries for event relay deployment.
+- **Automation**: Relay service manages event distribution across chains with configured event types.
+- **Acceptance**: Relay ID, at least one source chain, at least one target chain, and at least one event type required.
+
+#### F461 · Achievement Inter-Chain Message Queue
+- **UI**: Deploys queues with queue ID, source chain, target chain, queue type, max queue size, and queue policy.
+- **Contract**: `addComment` stores `INTERCHAIN_MSG_QUEUE` entries for message queue deployment.
+- **Automation**: Queue service manages message delivery with configured queue type and size.
+- **Acceptance**: Queue ID, source chain, target chain, and positive max queue size required; queue type selection mandatory.
+
+#### F462 · Achievement Bridge Liquidity Monitor
+- **UI**: Deploys monitors with monitor ID, bridge ID, asset types, threshold level, and monitor policy.
+- **Contract**: `addComment` logs `BRIDGE_LIQUIDITY_MON` entries for liquidity monitor deployment.
+- **Automation**: Monitor service tracks bridge liquidity with configured threshold level.
+- **Acceptance**: Monitor ID, bridge ID, at least one asset type, and threshold level selection required.
+
+#### F463 · Achievement Cross-Chain Identity Bridge
+- **UI**: Deploys bridges with bridge ID, source chain, target chain, identity standard, verification required, and bridge policy.
+- **Contract**: `addComment` stores `XCHAIN_ID_BRIDGE` entries for identity bridge deployment.
+- **Automation**: Bridge service manages identity bridging with configured identity standard.
+- **Acceptance**: Bridge ID, source chain, target chain, and identity standard selection required; verification required selection mandatory.
+
+#### F464 · Achievement Multi-Chain Governance Sync
+- **UI**: Configures sync with sync ID, governance chains, sync mode, sync frequency, and sync policy.
+- **Contract**: `addComment` logs `MULTICHAIN_GOV_SYNC` entries for governance sync configuration.
+- **Automation**: Sync service coordinates governance across chains with configured sync mode and frequency.
+- **Acceptance**: Sync ID, at least one governance chain, and positive sync frequency required; sync mode selection mandatory.
+
+#### F465 · Achievement Bridge Risk Assessor
+- **UI**: Assesses risks with assessor ID, bridge ID, risk category, severity, and mitigation strategy.
+- **Contract**: `addComment` stores `BRIDGE_RISK_ASSESS` entries for risk assessment.
+- **Automation**: Assessor service calculates and tracks bridge risk assessments.
+- **Acceptance**: Assessor ID, bridge ID, risk category, and severity selection required.
+
+#### F466 · Achievement Cross-Chain Proof Aggregator
+- **UI**: Deploys aggregators with aggregator ID, source chains, proof type, aggregation method, and aggregator policy.
+- **Contract**: `addComment` logs `XCHAIN_PROOF_AGG` entries for proof aggregator deployment.
+- **Automation**: Aggregator service combines proofs from multiple chains with configured aggregation method.
+- **Acceptance**: Aggregator ID, at least one source chain, and proof type selection required; aggregation method selection mandatory.
+
+#### F467 · Achievement Inter-Chain Settlement Layer
+- **UI**: Deploys layers with layer ID, participant chains, settlement mode, finality time, and layer policy.
+- **Contract**: `addComment` stores `INTERCHAIN_SETTLE` entries for settlement layer deployment.
+- **Automation**: Layer service processes cross-chain settlements with configured settlement mode and finality time.
+- **Acceptance**: Layer ID, at least one participant chain, and positive finality time required; settlement mode selection mandatory.
+
+#### F468 · Achievement Bridge Circuit Breaker
+- **UI**: Deploys breakers with breaker ID, bridge ID, trigger condition, threshold, and breaker policy.
+- **Contract**: `addComment` logs `BRIDGE_CIRCUIT_BREAKER` entries for circuit breaker deployment.
+- **Automation**: Breaker service protects bridge operations with configured trigger condition and threshold.
+- **Acceptance**: Breaker ID, bridge ID, and positive threshold required; trigger condition selection mandatory.
+
+#### F469 · Achievement Cross-Chain Audit Trail
+- **UI**: Creates trails with trail ID, monitored chains, audit scope, retention policy, and trail policy.
+- **Contract**: `addComment` stores `XCHAIN_AUDIT_TRAIL` entries for audit trail creation.
+- **Automation**: Trail service maintains immutable audit records across chains.
+- **Acceptance**: Trail ID, at least one monitored chain, audit scope, and retention policy selection required.
+
+#### F470 · Achievement Multi-Chain Compliance Checker
+- **UI**: Deploys checkers with checker ID, target chains, compliance standards, check frequency, and checker policy.
+- **Contract**: `addComment` logs `MULTICHAIN_COMPLIANCE` entries for compliance checker deployment.
+- **Automation**: Checker service validates compliance across chains with configured standards and frequency.
+- **Acceptance**: Checker ID, at least one target chain, at least one compliance standard, and positive check frequency required.
+
+#### F471 · Achievement Bridge State Snapshot
+- **UI**: Creates snapshots with snapshot ID, bridge ID, snapshot type, retention period, and snapshot policy.
+- **Contract**: `addComment` stores `BRIDGE_STATE_SNAPSHOT` entries for state snapshot creation.
+- **Automation**: Snapshot service captures bridge state for recovery with configured snapshot type.
+- **Acceptance**: Snapshot ID, bridge ID, and positive retention period required; snapshot type selection mandatory.
+
+#### F472 · Achievement Cross-Chain Dispute Resolver
+- **UI**: Initiates resolutions with resolver ID, dispute chains, dispute type, resolution mechanism, and resolver policy.
+- **Contract**: `addComment` logs `XCHAIN_DISPUTE_RESOLVE` entries for dispute resolution.
+- **Automation**: Resolver service manages dispute resolution across chains with configured resolution mechanism.
+- **Acceptance**: Resolver ID, at least one dispute chain, and dispute type selection required; resolution mechanism selection mandatory.
+
+#### F473 · Achievement Inter-Chain Token Bridge
+- **UI**: Deploys bridges with bridge ID, source chain, target chain, token types, verification required, and bridge policy.
+- **Contract**: `addComment` stores `INTERCHAIN_TOKEN_BRIDGE` entries for token bridge deployment.
+- **Automation**: Bridge service manages secure token bridging with configured token types and verification.
+- **Acceptance**: Bridge ID, source chain, target chain, at least one token type, and verification required selection required.
+
+#### F474 · Achievement Bridge Health Monitor
+- **UI**: Deploys monitors with monitor ID, bridge ID, health metrics, check interval, and alert thresholds.
+- **Contract**: `addComment` logs `BRIDGE_HEALTH_MON` entries for health monitor deployment.
+- **Automation**: Monitor service tracks bridge health with configured metrics and check interval.
+- **Acceptance**: Monitor ID, bridge ID, at least one health metric, and positive check interval required.
+
+#### F475 · Achievement Cross-Chain Data Integrity
+- **UI**: Deploys systems with system ID, monitored chains, integrity method, verification frequency, and system policy.
+- **Contract**: `addComment` stores `XCHAIN_DATA_INTEGRITY` entries for data integrity system deployment.
+- **Automation**: System service ensures data integrity across chains with configured integrity method.
+- **Acceptance**: System ID, at least one monitored chain, and positive verification frequency required; integrity method selection mandatory.
+
+#### F476 · Achievement Multi-Chain Access Control
+- **UI**: Configures policies with policy ID, target chains, resource type, access level, authorized entities, and policy rules.
+- **Contract**: `addComment` logs `MULTICHAIN_ACCESS` entries for access control configuration.
+- **Automation**: Access control service enforces resource access policies across chains.
+- **Acceptance**: Policy ID, at least one target chain, and at least one authorized entity required; resource type and access level selection mandatory.
+
+#### F477 · Achievement Bridge Recovery Protocol
+- **UI**: Deploys protocols with protocol ID, bridge ID, recovery strategy, recovery time, and protocol policy.
+- **Contract**: `addComment` stores `BRIDGE_RECOVERY_PROTOCOL` entries for recovery protocol deployment.
+- **Automation**: Protocol service manages bridge recovery with configured recovery strategy and time.
+- **Acceptance**: Protocol ID, bridge ID, and positive recovery time required; recovery strategy selection mandatory.
+
+#### F478 · Achievement Cross-Chain Timelock
+- **UI**: Creates timelocks with timelock ID, affected chains, lock duration, release mechanism, and timelock policy.
+- **Contract**: `addComment` logs `XCHAIN_TIMELOCK` entries for timelock creation.
+- **Automation**: Timelock service manages cross-chain timelocks with configured lock duration and release mechanism.
+- **Acceptance**: Timelock ID, at least one affected chain, and positive lock duration required; release mechanism selection mandatory.
+
+#### F479 · Achievement Inter-Chain Escrow
+- **UI**: Creates escrows with escrow ID, source chain, target chain, asset type, release conditions, and escrow policy.
+- **Contract**: `addComment` stores `INTERCHAIN_ESCROW` entries for escrow creation.
+- **Automation**: Escrow service manages cross-chain escrows with configured asset type and release conditions.
+- **Acceptance**: Escrow ID, source chain, target chain, asset type selection, and release conditions required.
+
+#### F480 · Achievement Bridge Finality Guarantor
+- **UI**: Deploys guarantors with guarantor ID, bridge ID, finality type, guarantee level, and guarantor policy.
+- **Contract**: `addComment` logs `BRIDGE_FINALITY_GUARANTOR` entries for finality guarantor deployment.
+- **Automation**: Guarantor service ensures finality guarantees for bridge operations with configured finality type.
+- **Acceptance**: Guarantor ID, bridge ID, and finality type selection required; guarantee level selection mandatory.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
