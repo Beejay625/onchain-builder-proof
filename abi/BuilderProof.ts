@@ -903,6 +903,117 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'nodeId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'nodeIdStr',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'SovereignComputeNodeLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isCompliant',
+        type: 'bool',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'JurisdictionalComplianceEngineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'vaultId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'dataHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'residencyProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DataSovereigntyVaultLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -2513,6 +2624,113 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logAdaptiveRiskScoring',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'nodeId',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logSovereignComputeNode',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'complianceRule',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bool',
+        name: 'isCompliant',
+        type: 'bool',
+      },
+    ],
+    name: 'logJurisdictionalComplianceEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'jurisdiction',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'dataHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'residencyProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDataSovereigntyVault',
     outputs: [
       {
         internalType: 'uint256',
