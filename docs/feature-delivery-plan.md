@@ -3465,6 +3465,223 @@ Cross-Chain Security extends BuilderProof with thirty multi-chain security primi
 - **Automation**: Guarantor service ensures finality guarantees for bridge operations with configured finality type.
 - **Acceptance**: Guarantor ID, bridge ID, and finality type selection required; guarantee level selection mandatory.
 
+### Wave Γ · DeFi Infrastructure & Smart Contract Management (F481–F510)
+
+DeFi Infrastructure & Smart Contract Management extends BuilderProof with thirty comprehensive DeFi primitives and smart contract management tools that enable secure, efficient, and compliant decentralized finance operations. Each feature provides robust infrastructure for token management, liquidity provision, governance, and security across the DeFi ecosystem.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F481 | Achievement Decentralized Oracle Network | Oracle Network | `components/onchain/OnchainAchievementDecentralizedOracleNetwork.tsx` |
+| F482 | Achievement Smart Contract Registry | Contract Registry | `components/onchain/OnchainAchievementSmartContractRegistry.tsx` |
+| F483 | Achievement Token Standard Compliance | Token Compliance | `components/onchain/OnchainAchievementTokenStandardCompliance.tsx` |
+| F484 | Achievement Gas Optimization Engine | Gas Optimization | `components/onchain/OnchainAchievementGasOptimizationEngine.tsx` |
+| F485 | Achievement Upgradeable Contract Manager | Contract Upgrade | `components/onchain/OnchainAchievementUpgradeableContractManager.tsx` |
+| F486 | Achievement Event Emission Tracker | Event Tracking | `components/onchain/OnchainAchievementEventEmissionTracker.tsx` |
+| F487 | Achievement Contract Security Auditor | Security Audit | `components/onchain/OnchainAchievementContractSecurityAuditor.tsx` |
+| F488 | Achievement Token Vesting Schedule | Token Vesting | `components/onchain/OnchainAchievementTokenVestingSchedule.tsx` |
+| F489 | Achievement Liquidity Pool Manager | Liquidity Pool | `components/onchain/OnchainAchievementLiquidityPoolManager.tsx` |
+| F490 | Achievement Staking Rewards Distributor | Staking Rewards | `components/onchain/OnchainAchievementStakingRewardsDistributor.tsx` |
+| F491 | Achievement Governance Proposal System | Governance | `components/onchain/OnchainAchievementGovernanceProposalSystem.tsx` |
+| F492 | Achievement Multi-Sig Wallet Manager | Multi-Sig Wallet | `components/onchain/OnchainAchievementMultiSigWalletManager.tsx` |
+| F493 | Achievement Token Burn Manager | Token Burn | `components/onchain/OnchainAchievementTokenBurnManager.tsx` |
+| F494 | Achievement Price Oracle Aggregator | Oracle Aggregation | `components/onchain/OnchainAchievementPriceOracleAggregator.tsx` |
+| F495 | Achievement Flash Loan Protection | Flash Loan Protection | `components/onchain/OnchainAchievementFlashLoanProtection.tsx` |
+| F496 | Achievement Reentrancy Guard | Reentrancy Protection | `components/onchain/OnchainAchievementReentrancyGuard.tsx` |
+| F497 | Achievement Access Control Manager | Access Control | `components/onchain/OnchainAchievementAccessControlManager.tsx` |
+| F498 | Achievement Pausable Contract Manager | Pausable Contract | `components/onchain/OnchainAchievementPausableContractManager.tsx` |
+| F499 | Achievement Token Minting Controller | Token Minting | `components/onchain/OnchainAchievementTokenMintingController.tsx` |
+| F500 | Achievement Yield Farming Vault | Yield Farming | `components/onchain/OnchainAchievementYieldFarmingVault.tsx` |
+| F501 | Achievement Automated Market Maker | AMM | `components/onchain/OnchainAchievementAutomatedMarketMaker.tsx` |
+| F502 | Achievement NFT Marketplace Manager | NFT Marketplace | `components/onchain/OnchainAchievementNFTMarketplaceManager.tsx` |
+| F503 | Achievement Decentralized Exchange | DEX | `components/onchain/OnchainAchievementDecentralizedExchange.tsx` |
+| F504 | Achievement Lending Protocol Manager | Lending Protocol | `components/onchain/OnchainAchievementLendingProtocolManager.tsx` |
+| F505 | Achievement Insurance Pool Manager | Insurance Pool | `components/onchain/OnchainAchievementInsurancePoolManager.tsx` |
+| F506 | Achievement Synthetic Asset Manager | Synthetic Assets | `components/onchain/OnchainAchievementSyntheticAssetManager.tsx` |
+| F507 | Achievement Options Trading Platform | Options Trading | `components/onchain/OnchainAchievementOptionsTradingPlatform.tsx` |
+| F508 | Achievement Prediction Market Manager | Prediction Market | `components/onchain/OnchainAchievementPredictionMarketManager.tsx` |
+| F509 | Achievement Decentralized Identity Provider | Identity Provider | `components/onchain/OnchainAchievementDecentralizedIdentityProvider.tsx` |
+| F510 | Achievement Reputation System Manager | Reputation System | `components/onchain/OnchainAchievementReputationSystemManager.tsx` |
+
+#### F481 · Achievement Decentralized Oracle Network
+- **UI**: `components/onchain/OnchainAchievementDecentralizedOracleNetwork.tsx` configures network ID, data sources, consensus model, oracle count, and network policy for decentralized oracle operations.
+- **Contract**: Uses `addComment` with `DECENTRALIZED_ORACLE` payloads that encode oracle network configuration and consensus parameters.
+- **Automation**: Oracle network service manages data feeds with configured consensus model and oracle count.
+- **Acceptance**: Network ID, at least one data source, and positive oracle count required; consensus model selection mandatory.
+
+#### F482 · Achievement Smart Contract Registry
+- **UI**: Registers contracts with registry ID, contract address, contract type, verification status, and registry policy.
+- **Contract**: `addComment` logs `SMART_CONTRACT_REG` entries for contract registration.
+- **Automation**: Registry service manages contract verification and type tracking.
+- **Acceptance**: Registry ID, contract address, and contract type selection required; verification status selection mandatory.
+
+#### F483 · Achievement Token Standard Compliance
+- **UI**: Verifies compliance with compliance ID, token address, standard type, compliance level, and compliance policy.
+- **Contract**: `addComment` stores `TOKEN_STD_COMPLIANCE` entries for token compliance verification.
+- **Automation**: Compliance service validates token standards with configured compliance level.
+- **Acceptance**: Compliance ID, token address, and standard type selection required; compliance level selection mandatory.
+
+#### F484 · Achievement Gas Optimization Engine
+- **UI**: Optimizes gas with engine ID, target contract, optimization strategy, target reduction, and engine policy.
+- **Contract**: `addComment` logs `GAS_OPTIMIZATION` entries for gas optimization.
+- **Automation**: Engine service analyzes and optimizes gas usage with configured optimization strategy.
+- **Acceptance**: Engine ID, target contract, and positive target reduction required; optimization strategy selection mandatory.
+
+#### F485 · Achievement Upgradeable Contract Manager
+- **UI**: Manages upgrades with manager ID, contract address, upgrade type, governance required, and manager policy.
+- **Contract**: `addComment` stores `UPGRADEABLE_CONTRACT` entries for upgradeable contract management.
+- **Automation**: Manager service handles contract upgrades with configured upgrade type and governance.
+- **Acceptance**: Manager ID, contract address, and upgrade type selection required; governance required selection mandatory.
+
+#### F486 · Achievement Event Emission Tracker
+- **UI**: Tracks events with tracker ID, contract address, event types, indexing mode, and tracker policy.
+- **Contract**: `addComment` logs `EVENT_EMISSION_TRACKER` entries for event tracking.
+- **Automation**: Tracker service indexes and tracks contract events with configured indexing mode.
+- **Acceptance**: Tracker ID, contract address, at least one event type, and indexing mode selection required.
+
+#### F487 · Achievement Contract Security Auditor
+- **UI**: Runs audits with auditor ID, contract address, audit type, severity level, and auditor policy.
+- **Contract**: `addComment` stores `CONTRACT_SECURITY_AUDIT` entries for security audits.
+- **Automation**: Auditor service performs security analysis with configured audit type and severity level.
+- **Acceptance**: Auditor ID, contract address, and audit type selection required; severity level selection mandatory.
+
+#### F488 · Achievement Token Vesting Schedule
+- **UI**: Creates schedules with schedule ID, token address, beneficiary, vesting type, vesting duration, and schedule policy.
+- **Contract**: `addComment` logs `TOKEN_VESTING` entries for vesting schedule creation.
+- **Automation**: Schedule service manages token vesting with configured vesting type and duration.
+- **Acceptance**: Schedule ID, token address, beneficiary, and positive vesting duration required; vesting type selection mandatory.
+
+#### F489 · Achievement Liquidity Pool Manager
+- **UI**: Creates pools with pool ID, token A, token B, pool type, fee percentage, and pool policy.
+- **Contract**: `addComment` stores `LIQUIDITY_POOL_MGR` entries for liquidity pool creation.
+- **Automation**: Pool service manages liquidity pools with configured pool type and fee percentage.
+- **Acceptance**: Pool ID, token A, token B, and positive fee percentage required; pool type selection mandatory.
+
+#### F490 · Achievement Staking Rewards Distributor
+- **UI**: Deploys distributors with distributor ID, staking token, reward token, distribution model, reward rate, and distributor policy.
+- **Contract**: `addComment` logs `STAKING_REWARDS` entries for rewards distributor deployment.
+- **Automation**: Distributor service manages staking rewards with configured distribution model and reward rate.
+- **Acceptance**: Distributor ID, staking token, reward token, and positive reward rate required; distribution model selection mandatory.
+
+#### F491 · Achievement Governance Proposal System
+- **UI**: Creates proposals with system ID, proposal type, voting mechanism, quorum threshold, and system policy.
+- **Contract**: `addComment` stores `GOV_PROPOSAL_SYSTEM` entries for governance proposals.
+- **Automation**: System service manages governance proposals with configured voting mechanism and quorum threshold.
+- **Acceptance**: System ID, proposal type selection, and positive quorum threshold required; voting mechanism selection mandatory.
+
+#### F492 · Achievement Multi-Sig Wallet Manager
+- **UI**: Creates wallets with wallet ID, owner addresses, threshold, wallet type, and wallet policy.
+- **Contract**: `addComment` logs `MULTISIG_WALLET` entries for multi-sig wallet creation.
+- **Automation**: Wallet service manages multi-sig wallets with configured threshold and wallet type.
+- **Acceptance**: Wallet ID, at least one owner address, and positive threshold required; wallet type selection mandatory.
+
+#### F493 · Achievement Token Burn Manager
+- **UI**: Configures burns with manager ID, token address, burn type, burn amount, and manager policy.
+- **Contract**: `addComment` stores `TOKEN_BURN_MGR` entries for token burn configuration.
+- **Automation**: Manager service handles token burning with configured burn type and amount.
+- **Acceptance**: Manager ID, token address, burn amount, and burn type selection required.
+
+#### F494 · Achievement Price Oracle Aggregator
+- **UI**: Deploys aggregators with aggregator ID, oracle sources, aggregation method, update interval, and aggregator policy.
+- **Contract**: `addComment` logs `PRICE_ORACLE_AGG` entries for price oracle aggregation.
+- **Automation**: Aggregator service aggregates price data with configured aggregation method and update interval.
+- **Acceptance**: Aggregator ID, at least one oracle source, and positive update interval required; aggregation method selection mandatory.
+
+#### F495 · Achievement Flash Loan Protection
+- **UI**: Deploys protection with protection ID, protected contract, protection level, validation window, and protection policy.
+- **Contract**: `addComment` stores `FLASH_LOAN_PROTECT` entries for flash loan protection.
+- **Automation**: Protection service guards against flash loan attacks with configured protection level and validation window.
+- **Acceptance**: Protection ID, protected contract, and positive validation window required; protection level selection mandatory.
+
+#### F496 · Achievement Reentrancy Guard
+- **UI**: Deploys guards with guard ID, protected contract, guard type, enforcement mode, and guard policy.
+- **Contract**: `addComment` logs `REENTRANCY_GUARD` entries for reentrancy guard deployment.
+- **Automation**: Guard service protects contracts against reentrancy with configured guard type and enforcement mode.
+- **Acceptance**: Guard ID, protected contract, and guard type selection required; enforcement mode selection mandatory.
+
+#### F497 · Achievement Access Control Manager
+- **UI**: Configures access with manager ID, contract address, role types, default role, and manager policy.
+- **Contract**: `addComment` stores `ACCESS_CONTROL_MGR` entries for access control configuration.
+- **Automation**: Manager service manages role-based access control with configured role types and default role.
+- **Acceptance**: Manager ID, contract address, at least one role type, and default role selection required.
+
+#### F498 · Achievement Pausable Contract Manager
+- **UI**: Manages pausable contracts with manager ID, contract address, pause type, pause authority, and manager policy.
+- **Contract**: `addComment` logs `PAUSABLE_CONTRACT` entries for pausable contract management.
+- **Automation**: Manager service handles contract pausing with configured pause type and authority.
+- **Acceptance**: Manager ID, contract address, and pause type selection required; pause authority selection mandatory.
+
+#### F499 · Achievement Token Minting Controller
+- **UI**: Configures controllers with controller ID, token address, minting type, max supply, minting rate, and controller policy.
+- **Contract**: `addComment` stores `TOKEN_MINTING_CTRL` entries for token minting configuration.
+- **Automation**: Controller service manages token minting with configured minting type and supply parameters.
+- **Acceptance**: Controller ID, token address, and minting type selection required.
+
+#### F500 · Achievement Yield Farming Vault
+- **UI**: Creates vaults with vault ID, deposit token, strategy type, performance fee, and vault policy.
+- **Contract**: `addComment` logs `YIELD_FARMING_VAULT` entries for yield farming vault creation.
+- **Automation**: Vault service manages yield farming strategies with configured strategy type and performance fee.
+- **Acceptance**: Vault ID, deposit token, and positive performance fee required; strategy type selection mandatory.
+
+#### F501 · Achievement Automated Market Maker
+- **UI**: Deploys AMMs with AMM ID, token pair, AMM type, swap fee, and AMM policy.
+- **Contract**: `addComment` stores `AUTOMATED_MM` entries for AMM deployment.
+- **Automation**: AMM service manages automated market making with configured AMM type and swap fee.
+- **Acceptance**: AMM ID, token pair, and positive swap fee required; AMM type selection mandatory.
+
+#### F502 · Achievement NFT Marketplace Manager
+- **UI**: Deploys marketplaces with marketplace ID, NFT contract, listing type, marketplace fee, and marketplace policy.
+- **Contract**: `addComment` logs `NFT_MARKETPLACE` entries for NFT marketplace deployment.
+- **Automation**: Marketplace service manages NFT trading with configured listing type and marketplace fee.
+- **Acceptance**: Marketplace ID, NFT contract, and positive marketplace fee required; listing type selection mandatory.
+
+#### F503 · Achievement Decentralized Exchange
+- **UI**: Deploys exchanges with exchange ID, supported tokens, order type, trading fee, and exchange policy.
+- **Contract**: `addComment` stores `DEX_EXCHANGE` entries for DEX deployment.
+- **Automation**: Exchange service manages order matching with configured order type and trading fee.
+- **Acceptance**: Exchange ID, at least one supported token, and positive trading fee required; order type selection mandatory.
+
+#### F504 · Achievement Lending Protocol Manager
+- **UI**: Deploys protocols with protocol ID, supported assets, interest model, collateral factor, and protocol policy.
+- **Contract**: `addComment` logs `LENDING_PROTOCOL` entries for lending protocol deployment.
+- **Automation**: Protocol service manages lending operations with configured interest model and collateral factor.
+- **Acceptance**: Protocol ID, at least one supported asset, and positive collateral factor required; interest model selection mandatory.
+
+#### F505 · Achievement Insurance Pool Manager
+- **UI**: Creates pools with pool ID, coverage type, premium rate, coverage limit, and pool policy.
+- **Contract**: `addComment` stores `INSURANCE_POOL` entries for insurance pool creation.
+- **Automation**: Pool service manages insurance coverage with configured coverage type and premium rate.
+- **Acceptance**: Pool ID, coverage limit, and positive premium rate required; coverage type selection mandatory.
+
+#### F506 · Achievement Synthetic Asset Manager
+- **UI**: Deploys managers with manager ID, synthetic asset, collateral type, collateral ratio, and manager policy.
+- **Contract**: `addComment` logs `SYNTHETIC_ASSET` entries for synthetic asset management.
+- **Automation**: Manager service manages synthetic assets with configured collateral type and ratio.
+- **Acceptance**: Manager ID, synthetic asset, and positive collateral ratio required; collateral type selection mandatory.
+
+#### F507 · Achievement Options Trading Platform
+- **UI**: Deploys platforms with platform ID, underlying asset, option type, expiry period, and platform policy.
+- **Contract**: `addComment` stores `OPTIONS_TRADING` entries for options platform deployment.
+- **Automation**: Platform service manages options trading with configured option type and expiry period.
+- **Acceptance**: Platform ID, underlying asset, and positive expiry period required; option type selection mandatory.
+
+#### F508 · Achievement Prediction Market Manager
+- **UI**: Creates markets with market ID, market question, outcome type, resolution date, and market policy.
+- **Contract**: `addComment` logs `PREDICTION_MARKET` entries for prediction market creation.
+- **Automation**: Market service manages prediction markets with configured outcome type and resolution date.
+- **Acceptance**: Market ID, market question, and resolution date required; outcome type selection mandatory.
+
+#### F509 · Achievement Decentralized Identity Provider
+- **UI**: Deploys providers with provider ID, identity standard, attestation method, and provider policy.
+- **Contract**: `addComment` stores `DID_PROVIDER` entries for identity provider deployment.
+- **Automation**: Provider service manages decentralized identities with configured identity standard and attestation method.
+- **Acceptance**: Provider ID, identity standard selection, and attestation method selection required.
+
+#### F510 · Achievement Reputation System Manager
+- **UI**: Deploys systems with system ID, reputation factors, scoring model, decay rate, and system policy.
+- **Contract**: `addComment` logs `REPUTATION_SYSTEM` entries for reputation system deployment.
+- **Automation**: System service manages reputation scores with configured scoring model and decay rate.
+- **Acceptance**: System ID, at least one reputation factor, and positive decay rate required; scoring model selection mandatory.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
