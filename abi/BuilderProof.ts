@@ -792,6 +792,117 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'decisionType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'confidenceScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'decisionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'AutonomousDecisionEngineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'validatorId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'validationAlgorithm',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'validationScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isValid',
+        type: 'bool',
+      },
+    ],
+    name: 'IntelligentProofValidatorLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'scoringId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'riskScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'riskFactors',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'scoringModelHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'AdaptiveRiskScoringLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -2290,6 +2401,118 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logBridgeAttestationProtocol',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'decisionType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'mlModelHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'confidenceScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'decisionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAutonomousDecisionEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'validationAlgorithm',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'proofHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'validationScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bool',
+        name: 'isValid',
+        type: 'bool',
+      },
+    ],
+    name: 'logIntelligentProofValidator',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'riskScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'riskFactors',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'scoringModelHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAdaptiveRiskScoring',
     outputs: [
       {
         internalType: 'uint256',
