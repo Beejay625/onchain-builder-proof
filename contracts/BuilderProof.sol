@@ -1013,6 +1013,26 @@ contract SocialMediaContract {
         emit JurisdictionalComplianceEngineLogged(jurisdictionalComplianceEngineCount, achievementId, jurisdiction, isCompliant, complianceProof);
         return jurisdictionalComplianceEngineCount;
     }
+
+    function logDataSovereigntyVault(
+        uint256 achievementId,
+        string memory jurisdiction,
+        bytes32 dataHash,
+        bytes32 residencyProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        dataSovereigntyVaultCount++;
+        dataSovereigntyVaults[dataSovereigntyVaultCount] = DataSovereigntyVault({
+            id: dataSovereigntyVaultCount,
+            achievementId: achievementId,
+            jurisdiction: jurisdiction,
+            dataHash: dataHash,
+            residencyProof: residencyProof,
+            recordedAt: block.timestamp
+        });
+        emit DataSovereigntyVaultLogged(dataSovereigntyVaultCount, achievementId, jurisdiction, dataHash, residencyProof);
+        return dataSovereigntyVaultCount;
+    }
 }
 
 
