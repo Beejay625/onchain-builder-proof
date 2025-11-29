@@ -991,6 +991,28 @@ contract SocialMediaContract {
         emit SovereignComputeNodeLogged(sovereignComputeNodeCount, achievementId, jurisdiction, nodeId, complianceProof);
         return sovereignComputeNodeCount;
     }
+
+    function logJurisdictionalComplianceEngine(
+        uint256 achievementId,
+        string memory jurisdiction,
+        string memory complianceRule,
+        bytes32 complianceProof,
+        bool isCompliant
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        jurisdictionalComplianceEngineCount++;
+        jurisdictionalComplianceEngines[jurisdictionalComplianceEngineCount] = JurisdictionalComplianceEngine({
+            id: jurisdictionalComplianceEngineCount,
+            achievementId: achievementId,
+            jurisdiction: jurisdiction,
+            complianceRule: complianceRule,
+            complianceProof: complianceProof,
+            isCompliant: isCompliant,
+            recordedAt: block.timestamp
+        });
+        emit JurisdictionalComplianceEngineLogged(jurisdictionalComplianceEngineCount, achievementId, jurisdiction, isCompliant, complianceProof);
+        return jurisdictionalComplianceEngineCount;
+    }
 }
 
 
