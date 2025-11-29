@@ -31,6 +31,9 @@ contract SocialMediaContract {
     uint256 public autonomousDecisionEngineCount;
     uint256 public intelligentProofValidatorCount;
     uint256 public adaptiveRiskScoringCount;
+    uint256 public sovereignComputeNodeCount;
+    uint256 public jurisdictionalComplianceEngineCount;
+    uint256 public dataSovereigntyVaultCount;
     
     struct Post {
         uint256 id;
@@ -256,6 +259,34 @@ contract SocialMediaContract {
         bytes32 scoringModelHash;
         uint256 recordedAt;
     }
+
+    struct SovereignComputeNode {
+        uint256 id;
+        uint256 achievementId;
+        string jurisdiction;
+        string nodeId;
+        bytes32 complianceProof;
+        uint256 recordedAt;
+    }
+
+    struct JurisdictionalComplianceEngine {
+        uint256 id;
+        uint256 achievementId;
+        string jurisdiction;
+        string complianceRule;
+        bytes32 complianceProof;
+        bool isCompliant;
+        uint256 recordedAt;
+    }
+
+    struct DataSovereigntyVault {
+        uint256 id;
+        uint256 achievementId;
+        string jurisdiction;
+        bytes32 dataHash;
+        bytes32 residencyProof;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -283,6 +314,9 @@ contract SocialMediaContract {
     mapping(uint256 => AutonomousDecisionEngine) public autonomousDecisionEngines;
     mapping(uint256 => IntelligentProofValidator) public intelligentProofValidators;
     mapping(uint256 => AdaptiveRiskScoring) public adaptiveRiskScorings;
+    mapping(uint256 => SovereignComputeNode) public sovereignComputeNodes;
+    mapping(uint256 => JurisdictionalComplianceEngine) public jurisdictionalComplianceEngines;
+    mapping(uint256 => DataSovereigntyVault) public dataSovereigntyVaults;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -312,6 +346,9 @@ contract SocialMediaContract {
     event AutonomousDecisionEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string decisionType, uint256 confidenceScore, bytes32 decisionProof);
     event IntelligentProofValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validationAlgorithm, uint256 validationScore, bool isValid);
     event AdaptiveRiskScoringLogged(uint256 indexed scoringId, uint256 indexed achievementId, uint256 riskScore, string riskFactors, bytes32 scoringModelHash);
+    event SovereignComputeNodeLogged(uint256 indexed nodeId, uint256 indexed achievementId, string jurisdiction, string nodeIdStr, bytes32 complianceProof);
+    event JurisdictionalComplianceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string jurisdiction, bool isCompliant, bytes32 complianceProof);
+    event DataSovereigntyVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, string jurisdiction, bytes32 dataHash, bytes32 residencyProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -343,6 +380,9 @@ contract SocialMediaContract {
         autonomousDecisionEngineCount = 0;
         intelligentProofValidatorCount = 0;
         adaptiveRiskScoringCount = 0;
+        sovereignComputeNodeCount = 0;
+        jurisdictionalComplianceEngineCount = 0;
+        dataSovereigntyVaultCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
