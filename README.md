@@ -759,6 +759,38 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 - 🚨 **Achievement Predictive Security Threat**: Predicts security threats using ML models.
 - 📊 **Achievement Intelligent Monitoring System**: Monitors systems using intelligent analysis.
 
+### Sovereign Operations · 30 Jurisdictional Compliance Primitives
+- 🖥️ **Achievement Sovereign Compute Node**: Deploys compute nodes with sovereign jurisdiction compliance.
+- ⚖️ **Achievement Jurisdictional Compliance Engine**: Enforces compliance with jurisdictional regulations.
+- 🔒 **Achievement Data Sovereignty Vault**: Stores data with sovereign jurisdiction guarantees.
+- 🆔 **Achievement Sovereign Identity Registry**: Manages identities with sovereign jurisdiction rules.
+- ✅ **Achievement Cross-Jurisdiction Attestation**: Attests across jurisdictions with compliance verification.
+- 📍 **Achievement Sovereign Data Residency**: Enforces data residency requirements per jurisdiction.
+- 🔐 **Achievement Jurisdictional Access Control**: Controls access based on jurisdictional policies.
+- 📋 **Achievement Sovereign Audit Trail**: Maintains audit trails with jurisdictional compliance.
+- 💰 **Achievement Cross-Border Settlement**: Settles transactions across borders with compliance.
+- 🔑 **Achievement Sovereign Key Management**: Manages keys with sovereign jurisdiction rules.
+- ⚖️ **Achievement Jurisdictional Dispute Resolver**: Resolves disputes according to jurisdictional laws.
+- 🤝 **Achievement Sovereign Consensus Network**: Consensus network with sovereign jurisdiction compliance.
+- 📍 **Achievement Data Localization Enforcer**: Enforces data localization requirements.
+- 🗳️ **Achievement Sovereign Governance Framework**: Governance framework with sovereign jurisdiction rules.
+- ✔️ **Achievement Jurisdictional Proof Validator**: Validates proofs according to jurisdictional standards.
+- 💼 **Achievement Sovereign Treasury Vault**: Treasury vault with sovereign jurisdiction compliance.
+- 📡 **Achievement Cross-Jurisdiction Messaging**: Messaging across jurisdictions with compliance.
+- ⚙️ **Achievement Sovereign Execution Environment**: Execution environment with sovereign jurisdiction rules.
+- 👁️ **Achievement Jurisdictional Compliance Monitor**: Monitors compliance with jurisdictional regulations.
+- ✅ **Achievement Sovereign Attestation Service**: Attestation service with sovereign jurisdiction compliance.
+- 🌉 **Achievement Data Sovereignty Bridge**: Bridges data across sovereign jurisdictions.
+- 📜 **Achievement Sovereign Access Policy**: Access policies with sovereign jurisdiction rules.
+- ⚠️ **Achievement Jurisdictional Risk Assessor**: Assesses risks according to jurisdictional standards.
+- ♾️ **Achievement Sovereign Continuity Guarantee**: Guarantees continuity with sovereign jurisdiction compliance.
+- 🆔 **Achievement Cross-Border Identity Verification**: Verifies identities across borders with compliance.
+- 📦 **Achievement Sovereign Data Retention**: Data retention with sovereign jurisdiction rules.
+- 🔐 **Achievement Jurisdictional Encryption Standard**: Encryption standards per jurisdiction requirements.
+- 🔄 **Achievement Sovereign Recovery Protocol**: Recovery protocol with sovereign jurisdiction compliance.
+- ✅ **Achievement Data Sovereignty Compliance**: Compliance with data sovereignty requirements.
+- 🎯 **Achievement Sovereign Finality Guarantor**: Guarantees finality with sovereign jurisdiction compliance.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
