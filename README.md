@@ -823,6 +823,38 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 - 📊 **Achievement Resilience Monitoring Dashboard**: Dashboard for monitoring resilience metrics.
 - 🔐 **Achievement Adaptive Security Policy**: Security policy that adapts to threats.
 
+### Autonomous Governance · 30 Decentralized Decision-Making Primitives
+- 🤖 **Achievement Autonomous Governance Engine**: Autonomous governance engine with intelligent decision making.
+- 🗳️ **Achievement Decentralized Voting Protocol**: Decentralized voting protocol with transparency.
+- ⚖️ **Achievement Adaptive Quorum Manager**: Manages quorum requirements adaptively.
+- 🔮 **Achievement Predictive Proposal Analyzer**: Analyzes proposals using predictive models.
+- 📜 **Achievement Autonomous Policy Enforcer**: Autonomously enforces governance policies.
+- 💰 **Achievement Decentralized Treasury Manager**: Manages treasury with decentralized governance.
+- ⚖️ **Achievement Adaptive Stake Weighting**: Weighting stakes adaptively based on conditions.
+- 🔮 **Achievement Predictive Governance Outcome**: Predicts governance outcomes using ML.
+- 📝 **Achievement Autonomous Proposal Generator**: Generates proposals autonomously.
+- ⚖️ **Achievement Decentralized Dispute Resolution**: Resolves disputes with decentralized mechanisms.
+- 🗳️ **Achievement Adaptive Voting Mechanism**: Voting mechanism that adapts to conditions.
+- 🔮 **Achievement Predictive Consensus Forecast**: Forecasts consensus using predictive models.
+- 🔄 **Achievement Autonomous Delegation Manager**: Manages delegations autonomously.
+- 💰 **Achievement Decentralized Reward Distributor**: Distributes rewards with decentralized governance.
+- 📊 **Achievement Adaptive Governance Metrics**: Metrics that adapt to governance conditions.
+- 🔮 **Achievement Predictive Voter Behavior**: Predicts voter behavior using ML models.
+- 📝 **Achievement Autonomous Proposal Curator**: Curates proposals autonomously.
+- 🔐 **Achievement Decentralized Access Governance**: Governs access with decentralized mechanisms.
+- 📊 **Achievement Adaptive Proposal Threshold**: Proposal threshold that adapts to conditions.
+- 🔮 **Achievement Predictive Governance Risk**: Predicts governance risks using ML.
+- 📋 **Achievement Autonomous Governance Auditor**: Audits governance autonomously.
+- 📜 **Achievement Decentralized Policy Registry**: Registry for decentralized policies.
+- ⏱️ **Achievement Adaptive Voting Window**: Voting window that adapts to conditions.
+- 🔮 **Achievement Predictive Governance Impact**: Predicts governance impact using ML.
+- 🎼 **Achievement Autonomous Governance Orchestrator**: Orchestrates governance autonomously.
+- 🌐 **Achievement Decentralized Governance Network**: Network for decentralized governance.
+- 📊 **Achievement Adaptive Proposal Ranking**: Ranks proposals adaptively.
+- 🔮 **Achievement Predictive Governance Trends**: Predicts governance trends using ML.
+- 👁️ **Achievement Autonomous Governance Monitor**: Monitors governance autonomously.
+- 🏛️ **Achievement Decentralized Governance Platform**: Platform for decentralized governance.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
