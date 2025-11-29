@@ -727,6 +727,38 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 - 💼 **Achievement Inter-Chain Escrow**: Escrow for cross-chain transactions.
 - 🎯 **Achievement Bridge Finality Guarantor**: Guarantees finality for bridge operations.
 
+### Decentralized Intelligence · 30 AI-Driven Automation Primitives
+- 🤖 **Achievement Autonomous Decision Engine**: AI-driven decision making with ML model verification and confidence scoring.
+- ✅ **Achievement Intelligent Proof Validator**: Validates proofs using intelligent algorithms with validation scoring.
+- ⚠️ **Achievement Adaptive Risk Scoring**: Dynamic risk assessment with adaptive scoring models and risk factor analysis.
+- 🔮 **Achievement Predictive Failure Analysis**: Predicts system failures using ML models and historical data patterns.
+- ⚡ **Achievement Smart Contract Optimizer**: Optimizes smart contract execution using AI-driven analysis.
+- 🧠 **Achievement Decentralized ML Inference**: Performs machine learning inference in a decentralized network.
+- ⛽ **Achievement Intelligent Gas Pricing**: AI-powered gas price optimization with predictive pricing models.
+- 🤝 **Achievement Adaptive Consensus Mechanism**: Adapts consensus mechanisms based on network conditions.
+- 🔧 **Achievement Predictive Maintenance Scheduler**: Schedules maintenance using predictive analytics.
+- 📊 **Achievement Intelligent Resource Allocator**: Allocates resources intelligently based on demand patterns.
+- 🚨 **Achievement Autonomous Incident Response**: Automatically responds to incidents using AI decision engines.
+- 🛡️ **Achievement Adaptive Security Policy**: Adapts security policies based on threat intelligence.
+- ✅ **Achievement Predictive Compliance Monitor**: Monitors compliance using predictive models.
+- 🎼 **Achievement Intelligent Workflow Orchestrator**: Orchestrates workflows using intelligent routing.
+- 📈 **Achievement Decentralized Data Analytics**: Performs analytics on decentralized data networks.
+- ⚙️ **Achievement Adaptive Performance Tuner**: Tunes performance parameters adaptively.
+- 📅 **Achievement Predictive Capacity Planner**: Plans capacity using predictive models.
+- ⚖️ **Achievement Intelligent Load Balancer**: Balances load using intelligent algorithms.
+- 🔄 **Achievement Autonomous Recovery System**: Automatically recovers from failures.
+- 🗳️ **Achievement Adaptive Governance Framework**: Adapts governance rules based on conditions.
+- 🔍 **Achievement Predictive Anomaly Detector**: Detects anomalies using predictive models.
+- 📡 **Achievement Intelligent Event Processor**: Processes events using intelligent filtering.
+- 🔮 **Achievement Decentralized Oracle Network**: Decentralized oracle network with intelligent aggregation.
+- ⏱️ **Achievement Adaptive SLA Enforcer**: Enforces SLAs adaptively based on conditions.
+- 💰 **Achievement Predictive Cost Optimizer**: Optimizes costs using predictive models.
+- 📋 **Achievement Intelligent Audit System**: Performs audits using intelligent analysis.
+- 🔄 **Achievement Autonomous Upgrade Manager**: Manages upgrades autonomously.
+- 🌐 **Achievement Adaptive Network Topology**: Adapts network topology based on conditions.
+- 🚨 **Achievement Predictive Security Threat**: Predicts security threats using ML models.
+- 📊 **Achievement Intelligent Monitoring System**: Monitors systems using intelligent analysis.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
