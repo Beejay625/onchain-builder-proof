@@ -1178,6 +1178,29 @@ contract SocialMediaContract {
         emit PredictiveResilienceEngineLogged(predictiveResilienceEngineCount, achievementId, modelHash, predictionConfidence, predictionProof);
         return predictiveResilienceEngineCount;
     }
+
+    function logAutonomousGovernanceEngine(
+        uint256 achievementId,
+        string memory governanceType,
+        bytes32 policyHash,
+        uint256 decisionConfidence,
+        bytes32 decisionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(decisionConfidence <= 100, "Decision confidence must be <= 100");
+        autonomousGovernanceEngineCount++;
+        autonomousGovernanceEngines[autonomousGovernanceEngineCount] = AutonomousGovernanceEngine({
+            id: autonomousGovernanceEngineCount,
+            achievementId: achievementId,
+            governanceType: governanceType,
+            policyHash: policyHash,
+            decisionConfidence: decisionConfidence,
+            decisionProof: decisionProof,
+            recordedAt: block.timestamp
+        });
+        emit AutonomousGovernanceEngineLogged(autonomousGovernanceEngineCount, achievementId, governanceType, policyHash, decisionConfidence);
+        return autonomousGovernanceEngineCount;
+    }
 }
 
 
