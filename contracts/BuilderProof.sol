@@ -37,6 +37,9 @@ contract SocialMediaContract {
     uint256 public resilienceOrchestratorCount;
     uint256 public adaptiveFailureRecoveryCount;
     uint256 public predictiveResilienceEngineCount;
+    uint256 public autonomousGovernanceEngineCount;
+    uint256 public decentralizedVotingProtocolCount;
+    uint256 public adaptiveQuorumManagerCount;
     
     struct Post {
         uint256 id;
@@ -318,6 +321,35 @@ contract SocialMediaContract {
         bytes32 predictionProof;
         uint256 recordedAt;
     }
+
+    struct AutonomousGovernanceEngine {
+        uint256 id;
+        uint256 achievementId;
+        string governanceType;
+        bytes32 policyHash;
+        uint256 decisionConfidence;
+        bytes32 decisionProof;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedVotingProtocol {
+        uint256 id;
+        uint256 achievementId;
+        string proposalId;
+        address[] voters;
+        uint256 yesVotes;
+        uint256 noVotes;
+        uint256 recordedAt;
+    }
+
+    struct AdaptiveQuorumManager {
+        uint256 id;
+        uint256 achievementId;
+        uint256 currentQuorum;
+        uint256 targetQuorum;
+        bytes32 quorumPolicyHash;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -351,6 +383,9 @@ contract SocialMediaContract {
     mapping(uint256 => ResilienceOrchestrator) public resilienceOrchestrators;
     mapping(uint256 => AdaptiveFailureRecovery) public adaptiveFailureRecoveries;
     mapping(uint256 => PredictiveResilienceEngine) public predictiveResilienceEngines;
+    mapping(uint256 => AutonomousGovernanceEngine) public autonomousGovernanceEngines;
+    mapping(uint256 => DecentralizedVotingProtocol) public decentralizedVotingProtocols;
+    mapping(uint256 => AdaptiveQuorumManager) public adaptiveQuorumManagers;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -386,6 +421,9 @@ contract SocialMediaContract {
     event ResilienceOrchestratorLogged(uint256 indexed orchestratorId, uint256 indexed achievementId, string strategy, bytes32 policyHash, uint256 resilienceScore);
     event AdaptiveFailureRecoveryLogged(uint256 indexed recoveryId, uint256 indexed achievementId, string recoveryStrategy, uint256 recoveryTime, bool isSuccessful);
     event PredictiveResilienceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, bytes32 modelHash, uint256 predictionConfidence, bytes32 predictionProof);
+    event AutonomousGovernanceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string governanceType, bytes32 policyHash, uint256 decisionConfidence);
+    event DecentralizedVotingProtocolLogged(uint256 indexed protocolId, uint256 indexed achievementId, string proposalId, uint256 yesVotes, uint256 noVotes);
+    event AdaptiveQuorumManagerLogged(uint256 indexed managerId, uint256 indexed achievementId, uint256 currentQuorum, uint256 targetQuorum, bytes32 quorumPolicyHash);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -423,6 +461,9 @@ contract SocialMediaContract {
         resilienceOrchestratorCount = 0;
         adaptiveFailureRecoveryCount = 0;
         predictiveResilienceEngineCount = 0;
+        autonomousGovernanceEngineCount = 0;
+        decentralizedVotingProtocolCount = 0;
+        adaptiveQuorumManagerCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
