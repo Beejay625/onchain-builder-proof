@@ -1094,6 +1094,28 @@ contract SocialMediaContract {
         emit ResilienceOrchestratorLogged(resilienceOrchestratorCount, achievementId, strategy, policyHash, resilienceScore);
         return resilienceOrchestratorCount;
     }
+
+    function logAdaptiveFailureRecovery(
+        uint256 achievementId,
+        string memory recoveryStrategy,
+        bytes32 recoveryProof,
+        uint256 recoveryTime,
+        bool isSuccessful
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        adaptiveFailureRecoveryCount++;
+        adaptiveFailureRecoveries[adaptiveFailureRecoveryCount] = AdaptiveFailureRecovery({
+            id: adaptiveFailureRecoveryCount,
+            achievementId: achievementId,
+            recoveryStrategy: recoveryStrategy,
+            recoveryProof: recoveryProof,
+            recoveryTime: recoveryTime,
+            isSuccessful: isSuccessful,
+            recordedAt: block.timestamp
+        });
+        emit AdaptiveFailureRecoveryLogged(adaptiveFailureRecoveryCount, achievementId, recoveryStrategy, recoveryTime, isSuccessful);
+        return adaptiveFailureRecoveryCount;
+    }
 }
 
 
