@@ -662,6 +662,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Aether Nexus Platform** — Platform for aether nexus operations with public, private, or consortium platform types.
 30. **Achievement Stellar Nexus Network** — Network infrastructure for stellar nexus operations with public, private, or consortium network types.
 
+## DeFi Infrastructure Wave · Smart Contract Management & DeFi Primitives (F481–F510)
+
+1. **Achievement Decentralized Oracle Network** — Decentralized oracle network for reliable data feeds with quorum, weighted, or threshold consensus models.
+2. **Achievement Smart Contract Registry** — Registry for smart contract verification and management with ERC20, ERC721, ERC1155, or custom contract types.
+3. **Achievement Token Standard Compliance** — Ensures token compliance with ERC standards with full, partial, or minimal compliance levels.
+4. **Achievement Gas Optimization Engine** — Optimizes gas usage for smart contract operations with storage, computation, memory, or hybrid optimization strategies.
+5. **Achievement Upgradeable Contract Manager** — Manages upgradeable smart contracts with proxy, diamond, or beacon upgrade types.
+6. **Achievement Event Emission Tracker** — Tracks and indexes smart contract events with real-time, batch, or on-demand indexing modes.
+7. **Achievement Contract Security Auditor** — Automated security auditing for smart contracts with static analysis, dynamic analysis, formal verification, or hybrid audit types.
+8. **Achievement Token Vesting Schedule** — Manages token vesting schedules with linear, cliff, or staged vesting types.
+9. **Achievement Liquidity Pool Manager** — Manages liquidity pools with constant product, stable, or weighted pool types.
+10. **Achievement Staking Rewards Distributor** — Distributes staking rewards based on participation with proportional, fixed, or tiered distribution models.
+11. **Achievement Governance Proposal System** — Manages governance proposals with parameter change, treasury, upgrade, or custom proposal types.
+12. **Achievement Multi-Sig Wallet Manager** — Manages multi-signature wallets with Gnosis Safe or custom wallet types.
+13. **Achievement Token Burn Manager** — Manages token burning with scheduled, event-based, or manual burn types.
+14. **Achievement Price Oracle Aggregator** — Aggregates price data from multiple oracle sources with median, weighted average, or trimmed mean aggregation methods.
+15. **Achievement Flash Loan Protection** — Protects against flash loan attacks with high, medium, or low protection levels.
+16. **Achievement Reentrancy Guard** — Protects contracts against reentrancy attacks with mutex, checks-effects-interactions, or pull payment guard types.
+17. **Achievement Access Control Manager** — Manages role-based access control for contracts with configurable role types and default roles.
+18. **Achievement Pausable Contract Manager** — Manages pausable contracts with full, selective, or tiered pause types.
+19. **Achievement Token Minting Controller** — Controls token minting with unlimited, capped, or rate-limited minting types.
+20. **Achievement Yield Farming Vault** — Automated yield farming vault with liquidity provision, lending, staking, or hybrid strategy types.
+21. **Achievement Automated Market Maker** — Automated market making with constant product, stable, weighted, or concentrated AMM types.
+22. **Achievement NFT Marketplace Manager** — Manages NFT marketplace with fixed price, auction, or both listing types.
+23. **Achievement Decentralized Exchange** — Decentralized exchange with limit, market, or both order types.
+24. **Achievement Lending Protocol Manager** — Manages lending protocol with linear, exponential, or jump rate interest models.
+25. **Achievement Insurance Pool Manager** — Manages insurance pools with smart contract, DeFi protocol, custody, or multi-coverage types.
+26. **Achievement Synthetic Asset Manager** — Manages synthetic assets with single, multi, or hybrid collateral types.
+27. **Achievement Options Trading Platform** — Decentralized options trading with call, put, or both option types.
+28. **Achievement Prediction Market Manager** — Manages prediction markets with binary, multiple choice, or scalar outcome types.
+29. **Achievement Decentralized Identity Provider** — Provides decentralized identity with DID, Verifiable Credentials, Soulbound Tokens, or hybrid identity standards.
+30. **Achievement Reputation System Manager** — Manages reputation scores with linear, exponential, or logarithmic scoring models.
+
 ## Enablement Notes
 
 - Each feature is toggled via `FeatureFlags`; keep them disabled by default until implementation ships.
