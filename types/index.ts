@@ -945,6 +945,37 @@ export interface FeatureFlags {
   achievementProtocolIntegrationHub: boolean
   achievementCrossProtocolAnalytics: boolean
   achievementUniversalInteroperabilityPlatform: boolean
+  // Performance Optimization wave feature flags (F631-F660)
+  achievementQueryOptimizationEngine: boolean
+  achievementCachingLayer: boolean
+  achievementBatchProcessingPipeline: boolean
+  achievementIndexingAccelerator: boolean
+  achievementDataCompressionEngine: boolean
+  achievementLoadBalancingOrchestrator: boolean
+  achievementResponseTimeOptimizer: boolean
+  achievementThroughputMaximizer: boolean
+  achievementResourcePoolManager: boolean
+  achievementConnectionPoolOptimizer: boolean
+  achievementDatabaseQueryPlanner: boolean
+  achievementAPIGatewayOptimizer: boolean
+  achievementCDNIntegrationLayer: boolean
+  achievementLazyLoadingManager: boolean
+  achievementPrefetchingEngine: boolean
+  achievementParallelProcessingCoordinator: boolean
+  achievementMemoryOptimizationEngine: boolean
+  achievementStorageOptimizationLayer: boolean
+  achievementNetworkOptimizationEngine: boolean
+  achievementComputationOptimizer: boolean
+  achievementLatencyReductionEngine: boolean
+  achievementScalabilityEnhancer: boolean
+  achievementConcurrencyController: boolean
+  achievementTaskSchedulerOptimizer: boolean
+  achievementPipelineOptimizationEngine: boolean
+  achievementWorkflowAccelerator: boolean
+  achievementPerformanceMonitoringDashboard: boolean
+  achievementBottleneckDetector: boolean
+  achievementAutoScalingController: boolean
+  achievementPerformanceBenchmarkingSuite: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
