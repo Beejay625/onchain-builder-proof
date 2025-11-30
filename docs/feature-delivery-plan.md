@@ -3682,6 +3682,223 @@ DeFi Infrastructure & Smart Contract Management extends BuilderProof with thirty
 - **Automation**: System service manages reputation scores with configured scoring model and decay rate.
 - **Acceptance**: System ID, at least one reputation factor, and positive decay rate required; scoring model selection mandatory.
 
+### Wave Δ · Decentralized Applications & Scalability Solutions (F511–F540)
+
+Decentralized Applications & Scalability Solutions extends BuilderProof with thirty comprehensive dApp primitives and scalability solutions that enable privacy-preserving operations, Layer 2 scaling, and diverse decentralized application platforms. Each feature provides robust infrastructure for building scalable, secure, and user-friendly decentralized applications across multiple domains.
+
+| ID | Feature | Theme | Primary Surface |
+| --- | --- | --- | --- |
+| F511 | Achievement Zero-Knowledge Proof System | Privacy & ZK | `components/onchain/OnchainAchievementZeroKnowledgeProofSystem.tsx` |
+| F512 | Achievement Merkle Tree Verifier | Data Integrity | `components/onchain/OnchainAchievementMerkleTreeVerifier.tsx` |
+| F513 | Achievement Batch Transaction Processor | Scalability | `components/onchain/OnchainAchievementBatchTransactionProcessor.tsx` |
+| F514 | Achievement State Channel Manager | Layer 2 | `components/onchain/OnchainAchievementStateChannelManager.tsx` |
+| F515 | Achievement Layer 2 Rollup Manager | Layer 2 | `components/onchain/OnchainAchievementLayer2RollupManager.tsx` |
+| F516 | Achievement Atomic Swap Manager | Cross-Chain | `components/onchain/OnchainAchievementAtomicSwapManager.tsx` |
+| F517 | Achievement Decentralized Voting System | Governance | `components/onchain/OnchainAchievementDecentralizedVotingSystem.tsx` |
+| F518 | Achievement Time-Locked Vault | Vault | `components/onchain/OnchainAchievementTimeLockedVault.tsx` |
+| F519 | Achievement Conditional Payment System | Payments | `components/onchain/OnchainAchievementConditionalPaymentSystem.tsx` |
+| F520 | Achievement Multi-Signature Escrow | Escrow | `components/onchain/OnchainAchievementMultiSignatureEscrow.tsx` |
+| F521 | Achievement Decentralized Lottery System | Gaming | `components/onchain/OnchainAchievementDecentralizedLotterySystem.tsx` |
+| F522 | Achievement Decentralized Random Number Generator | Randomness | `components/onchain/OnchainAchievementDecentralizedRandomNumberGenerator.tsx` |
+| F523 | Achievement Decentralized Auction House | Marketplace | `components/onchain/OnchainAchievementDecentralizedAuctionHouse.tsx` |
+| F524 | Achievement Decentralized Crowdfunding Platform | Crowdfunding | `components/onchain/OnchainAchievementDecentralizedCrowdfundingPlatform.tsx` |
+| F525 | Achievement Decentralized Gaming Platform | Gaming | `components/onchain/OnchainAchievementDecentralizedGamingPlatform.tsx` |
+| F526 | Achievement Decentralized Social Network | Social | `components/onchain/OnchainAchievementDecentralizedSocialNetwork.tsx` |
+| F527 | Achievement Decentralized Content Marketplace | Marketplace | `components/onchain/OnchainAchievementDecentralizedContentMarketplace.tsx` |
+| F528 | Achievement Decentralized Music Platform | Media | `components/onchain/OnchainAchievementDecentralizedMusicPlatform.tsx` |
+| F529 | Achievement Decentralized Video Platform | Media | `components/onchain/OnchainAchievementDecentralizedVideoPlatform.tsx` |
+| F530 | Achievement Decentralized Education Platform | Education | `components/onchain/OnchainAchievementDecentralizedEducationPlatform.tsx` |
+| F531 | Achievement Decentralized Healthcare Platform | Healthcare | `components/onchain/OnchainAchievementDecentralizedHealthcarePlatform.tsx` |
+| F532 | Achievement Decentralized Supply Chain Manager | Supply Chain | `components/onchain/OnchainAchievementDecentralizedSupplyChainManager.tsx` |
+| F533 | Achievement Decentralized Energy Trading Platform | Energy | `components/onchain/OnchainAchievementDecentralizedEnergyTradingPlatform.tsx` |
+| F534 | Achievement Decentralized Real Estate Platform | Real Estate | `components/onchain/OnchainAchievementDecentralizedRealEstatePlatform.tsx` |
+| F535 | Achievement Decentralized Charity Platform | Charity | `components/onchain/OnchainAchievementDecentralizedCharityPlatform.tsx` |
+| F536 | Achievement Decentralized Insurance Platform | Insurance | `components/onchain/OnchainAchievementDecentralizedInsurancePlatform.tsx` |
+| F537 | Achievement Decentralized Freelance Platform | Freelance | `components/onchain/OnchainAchievementDecentralizedFreelancePlatform.tsx` |
+| F538 | Achievement Decentralized Ride Sharing Platform | Transportation | `components/onchain/OnchainAchievementDecentralizedRideSharingPlatform.tsx` |
+| F539 | Achievement Decentralized Food Delivery Platform | Food Delivery | `components/onchain/OnchainAchievementDecentralizedFoodDeliveryPlatform.tsx` |
+| F540 | Achievement Decentralized Event Ticketing Platform | Ticketing | `components/onchain/OnchainAchievementDecentralizedEventTicketingPlatform.tsx` |
+
+#### F511 · Achievement Zero-Knowledge Proof System
+- **UI**: `components/onchain/OnchainAchievementZeroKnowledgeProofSystem.tsx` configures system ID, proof type, circuit type, trusted setup requirement, and system policy for ZK proof operations.
+- **Contract**: Uses `addComment` with `ZK_PROOF_SYSTEM` payloads that encode ZK proof configuration and circuit parameters.
+- **Automation**: System service generates and verifies ZK proofs with configured proof type and circuit type.
+- **Acceptance**: System ID and proof type selection required; circuit type and trusted setup selection mandatory.
+
+#### F512 · Achievement Merkle Tree Verifier
+- **UI**: Deploys verifiers with verifier ID, tree depth, hash function, leaf count, and verifier policy.
+- **Contract**: `addComment` logs `MERKLE_TREE_VERIFIER` entries for Merkle tree verifier deployment.
+- **Automation**: Verifier service verifies Merkle proofs with configured tree depth and hash function.
+- **Acceptance**: Verifier ID, positive tree depth, and positive leaf count required; hash function selection mandatory.
+
+#### F513 · Achievement Batch Transaction Processor
+- **UI**: Deploys processors with processor ID, batch size, processing mode, gas limit, and processor policy.
+- **Contract**: `addComment` stores `BATCH_TX_PROCESSOR` entries for batch processor deployment.
+- **Automation**: Processor service processes transactions in batches with configured batch size and processing mode.
+- **Acceptance**: Processor ID, positive batch size, and positive gas limit required; processing mode selection mandatory.
+
+#### F514 · Achievement State Channel Manager
+- **UI**: Creates channels with channel ID, participant addresses, channel type, dispute period, and channel policy.
+- **Contract**: `addComment` logs `STATE_CHANNEL_MGR` entries for state channel creation.
+- **Automation**: Manager service manages off-chain state channels with configured channel type and dispute period.
+- **Acceptance**: Channel ID, at least two participant addresses, and positive dispute period required; channel type selection mandatory.
+
+#### F515 · Achievement Layer 2 Rollup Manager
+- **UI**: Deploys managers with manager ID, rollup type, batch interval, sequencer address, and manager policy.
+- **Contract**: `addComment` stores `L2_ROLLUP_MGR` entries for rollup manager deployment.
+- **Automation**: Manager service manages Layer 2 rollup operations with configured rollup type and batch interval.
+- **Acceptance**: Manager ID, positive batch interval, and sequencer address required; rollup type selection mandatory.
+
+#### F516 · Achievement Atomic Swap Manager
+- **UI**: Initiates swaps with swap ID, asset A, asset B, swap type, timeout period, and swap policy.
+- **Contract**: `addComment` logs `ATOMIC_SWAP_MGR` entries for atomic swap initiation.
+- **Automation**: Manager service manages atomic swaps with configured swap type and timeout period.
+- **Acceptance**: Swap ID, asset A, asset B, and positive timeout period required; swap type selection mandatory.
+
+#### F517 · Achievement Decentralized Voting System
+- **UI**: Creates votes with vote ID, voting mechanism, privacy level, voting duration, and vote policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_VOTING` entries for voting system creation.
+- **Automation**: System service manages decentralized voting with configured voting mechanism and privacy level.
+- **Acceptance**: Vote ID and positive voting duration required; voting mechanism and privacy level selection mandatory.
+
+#### F518 · Achievement Time-Locked Vault
+- **UI**: Creates vaults with vault ID, asset type, lock duration, release mechanism, and vault policy.
+- **Contract**: `addComment` logs `TIMELOCK_VAULT` entries for time-locked vault creation.
+- **Automation**: Vault service manages time-locked assets with configured lock duration and release mechanism.
+- **Acceptance**: Vault ID, positive lock duration, and asset type selection required; release mechanism selection mandatory.
+
+#### F519 · Achievement Conditional Payment System
+- **UI**: Creates payments with payment ID, condition type, payment amount, recipient, and payment policy.
+- **Contract**: `addComment` stores `CONDITIONAL_PAYMENT` entries for conditional payment creation.
+- **Automation**: System service manages conditional payments with configured condition type and payment amount.
+- **Acceptance**: Payment ID, payment amount, and recipient required; condition type selection mandatory.
+
+#### F520 · Achievement Multi-Signature Escrow
+- **UI**: Creates escrows with escrow ID, signer addresses, signature threshold, asset type, and escrow policy.
+- **Contract**: `addComment` logs `MULTISIG_ESCROW` entries for multi-sig escrow creation.
+- **Automation**: Escrow service manages multi-sig escrows with configured signature threshold and asset type.
+- **Acceptance**: Escrow ID, at least one signer address, and positive signature threshold required; asset type selection mandatory.
+
+#### F521 · Achievement Decentralized Lottery System
+- **UI**: Creates lotteries with lottery ID, ticket price, randomness source, draw frequency, and lottery policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_LOTTERY` entries for lottery creation.
+- **Automation**: System service manages provably fair lotteries with configured randomness source and draw frequency.
+- **Acceptance**: Lottery ID, ticket price, and positive draw frequency required; randomness source selection mandatory.
+
+#### F522 · Achievement Decentralized Random Number Generator
+- **UI**: Deploys generators with generator ID, randomness method, entropy source, verification required, and generator policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_RNG` entries for RNG deployment.
+- **Automation**: Generator service provides verifiable random numbers with configured randomness method and entropy source.
+- **Acceptance**: Generator ID and randomness method selection required; entropy source and verification required selection mandatory.
+
+#### F523 · Achievement Decentralized Auction House
+- **UI**: Creates auctions with auction ID, auction type, item type, duration, and auction policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_AUCTION` entries for auction creation.
+- **Automation**: Auction house manages auctions with configured auction type and item type.
+- **Acceptance**: Auction ID, positive duration, and item type selection required; auction type selection mandatory.
+
+#### F524 · Achievement Decentralized Crowdfunding Platform
+- **UI**: Creates campaigns with campaign ID, funding goal, funding model, campaign duration, and campaign policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_CROWDFUND` entries for campaign creation.
+- **Automation**: Platform service manages crowdfunding campaigns with configured funding model and duration.
+- **Acceptance**: Campaign ID, funding goal, and positive campaign duration required; funding model selection mandatory.
+
+#### F525 · Achievement Decentralized Gaming Platform
+- **UI**: Deploys platforms with platform ID, game type, reward token, entry fee, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_GAMING` entries for gaming platform deployment.
+- **Automation**: Platform service manages gaming operations with configured game type and reward token.
+- **Acceptance**: Platform ID, reward token, and entry fee required; game type selection mandatory.
+
+#### F526 · Achievement Decentralized Social Network
+- **UI**: Deploys networks with network ID, content type, monetization model, and network policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_SOCIAL` entries for social network deployment.
+- **Automation**: Network service manages social content with configured content type and monetization model.
+- **Acceptance**: Network ID, content type selection, and monetization model selection required.
+
+#### F527 · Achievement Decentralized Content Marketplace
+- **UI**: Deploys marketplaces with marketplace ID, content category, royalty percentage, marketplace fee, and marketplace policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_CONTENT_MKT` entries for marketplace deployment.
+- **Automation**: Marketplace service manages content trading with configured content category and fees.
+- **Acceptance**: Marketplace ID, positive royalty percentage, and positive marketplace fee required; content category selection mandatory.
+
+#### F528 · Achievement Decentralized Music Platform
+- **UI**: Deploys platforms with platform ID, streaming model, royalty distribution, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_MUSIC` entries for music platform deployment.
+- **Automation**: Platform service manages music streaming with configured streaming model and royalty distribution.
+- **Acceptance**: Platform ID, streaming model selection, and royalty distribution selection required.
+
+#### F529 · Achievement Decentralized Video Platform
+- **UI**: Deploys platforms with platform ID, storage protocol, monetization type, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_VIDEO` entries for video platform deployment.
+- **Automation**: Platform service manages video content with configured storage protocol and monetization type.
+- **Acceptance**: Platform ID, storage protocol selection, and monetization type selection required.
+
+#### F530 · Achievement Decentralized Education Platform
+- **UI**: Deploys platforms with platform ID, credential type, verification method, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_EDUCATION` entries for education platform deployment.
+- **Automation**: Platform service manages educational credentials with configured credential type and verification method.
+- **Acceptance**: Platform ID, credential type selection, and verification method selection required.
+
+#### F531 · Achievement Decentralized Healthcare Platform
+- **UI**: Deploys platforms with platform ID, data type, encryption level, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_HEALTHCARE` entries for healthcare platform deployment.
+- **Automation**: Platform service manages healthcare data with configured data type and encryption level.
+- **Acceptance**: Platform ID, data type selection, and encryption level selection required.
+
+#### F532 · Achievement Decentralized Supply Chain Manager
+- **UI**: Deploys managers with manager ID, tracking method, verification level, and manager policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_SUPPLY_CHAIN` entries for supply chain manager deployment.
+- **Automation**: Manager service tracks products through supply chain with configured tracking method and verification level.
+- **Acceptance**: Manager ID, tracking method selection, and verification level selection required.
+
+#### F533 · Achievement Decentralized Energy Trading Platform
+- **UI**: Deploys platforms with platform ID, energy type, trading model, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_ENERGY` entries for energy trading platform deployment.
+- **Automation**: Platform service manages peer-to-peer energy trading with configured energy type and trading model.
+- **Acceptance**: Platform ID, energy type selection, and trading model selection required.
+
+#### F534 · Achievement Decentralized Real Estate Platform
+- **UI**: Deploys platforms with platform ID, ownership model, verification method, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_REAL_ESTATE` entries for real estate platform deployment.
+- **Automation**: Platform service manages real estate with configured ownership model and verification method.
+- **Acceptance**: Platform ID, ownership model selection, and verification method selection required.
+
+#### F535 · Achievement Decentralized Charity Platform
+- **UI**: Deploys platforms with platform ID, verification method, transparency level, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_CHARITY` entries for charity platform deployment.
+- **Automation**: Platform service manages charitable donations with configured verification method and transparency level.
+- **Acceptance**: Platform ID, verification method selection, and transparency level selection required.
+
+#### F536 · Achievement Decentralized Insurance Platform
+- **UI**: Deploys platforms with platform ID, insurance type, claims processing, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_INSURANCE` entries for insurance platform deployment.
+- **Automation**: Platform service manages insurance with configured insurance type and claims processing.
+- **Acceptance**: Platform ID, insurance type selection, and claims processing selection required.
+
+#### F537 · Achievement Decentralized Freelance Platform
+- **UI**: Deploys platforms with platform ID, escrow model, dispute resolution, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_FREELANCE` entries for freelance platform deployment.
+- **Automation**: Platform service manages freelance work with configured escrow model and dispute resolution.
+- **Acceptance**: Platform ID, escrow model selection, and dispute resolution selection required.
+
+#### F538 · Achievement Decentralized Ride Sharing Platform
+- **UI**: Deploys platforms with platform ID, payment model, rating system, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_RIDESHARE` entries for ride sharing platform deployment.
+- **Automation**: Platform service manages ride sharing with configured payment model and rating system.
+- **Acceptance**: Platform ID, payment model selection, and rating system selection required.
+
+#### F539 · Achievement Decentralized Food Delivery Platform
+- **UI**: Deploys platforms with platform ID, order tracking, payment release, and platform policy.
+- **Contract**: `addComment` stores `DECENTRALIZED_FOOD_DELIVERY` entries for food delivery platform deployment.
+- **Automation**: Platform service manages food delivery with configured order tracking and payment release.
+- **Acceptance**: Platform ID, order tracking selection, and payment release selection required.
+
+#### F540 · Achievement Decentralized Event Ticketing Platform
+- **UI**: Deploys platforms with platform ID, ticket type, resale policy, and platform policy.
+- **Contract**: `addComment` logs `DECENTRALIZED_TICKETING` entries for event ticketing platform deployment.
+- **Automation**: Platform service manages event tickets with configured ticket type and resale policy.
+- **Acceptance**: Platform ID, ticket type selection, and resale policy selection required.
+
 ### 5. Delivery Checklist Per Feature
 1. UX mock in Figma (or sandbox page) approved.
 2. Contract changes audited + ABI regenerated.
