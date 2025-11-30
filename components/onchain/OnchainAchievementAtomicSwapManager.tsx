@@ -7,16 +7,16 @@ export default function OnchainAchievementAtomicSwapManager(props: HeliosMeshFea
     <HeliosMeshComposer
       {...props}
       title="Atomic Swap Manager"
-      subtitle="Manages atomic swaps between different assets and chains"
+      subtitle="Manages atomic swaps for trustless cross-chain asset exchanges"
       accent="violet"
       ctaLabel="Initiate Swap"
       payloadPrefix="ATOMIC_SWAP_MGR"
       fields={[
         {
-          key: 'managerId',
-          label: 'Manager Identifier',
+          key: 'swapId',
+          label: 'Swap Identifier',
           type: 'text',
-          placeholder: 'manager-001',
+          placeholder: 'swap-001',
           required: true,
         },
         {
@@ -38,22 +38,22 @@ export default function OnchainAchievementAtomicSwapManager(props: HeliosMeshFea
           label: 'Swap Type',
           type: 'select',
           options: [
-            { label: 'Hash-Locked', value: 'hash_locked' },
-            { label: 'Time-Locked', value: 'time_locked' },
-            { label: 'Hybrid', value: 'hybrid' },
+            { label: 'Hash Time Lock', value: 'htlc' },
+            { label: 'Script-Based', value: 'script' },
+            { label: 'Contract-Based', value: 'contract' },
           ],
           required: true,
         },
         {
-          key: 'timeoutDuration',
-          label: 'Timeout Duration (seconds)',
+          key: 'timeoutPeriod',
+          label: 'Timeout Period (blocks)',
           type: 'number',
-          placeholder: '3600',
+          placeholder: '144',
           required: true,
         },
         {
-          key: 'managerPolicy',
-          label: 'Manager Policy',
+          key: 'swapPolicy',
+          label: 'Swap Policy',
           type: 'textarea',
           placeholder: 'Atomic swap rules and timeout parameters',
         },
@@ -61,4 +61,3 @@ export default function OnchainAchievementAtomicSwapManager(props: HeliosMeshFea
     />
   )
 }
-
