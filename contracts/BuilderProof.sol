@@ -1455,6 +1455,30 @@ contract SocialMediaContract {
         emit CrossProtocolBridgeLogged(crossProtocolBridgeCount, achievementId, sourceProtocol, targetProtocol, bridgeHash);
         return crossProtocolBridgeCount;
     }
+
+    function logUniversalMessagePassing(
+        uint256 achievementId,
+        string memory sourceProtocol,
+        string memory targetProtocol,
+        bytes32 messageHash,
+        bytes32 deliveryProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(sourceProtocol).length > 0, "Source protocol required");
+        require(bytes(targetProtocol).length > 0, "Target protocol required");
+        universalMessagePassingCount++;
+        universalMessagePassings[universalMessagePassingCount] = UniversalMessagePassing({
+            id: universalMessagePassingCount,
+            achievementId: achievementId,
+            sourceProtocol: sourceProtocol,
+            targetProtocol: targetProtocol,
+            messageHash: messageHash,
+            deliveryProof: deliveryProof,
+            recordedAt: block.timestamp
+        });
+        emit UniversalMessagePassingLogged(universalMessagePassingCount, achievementId, sourceProtocol, targetProtocol, messageHash);
+        return universalMessagePassingCount;
+    }
 }
 
 
