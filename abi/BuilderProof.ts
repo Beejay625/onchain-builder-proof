@@ -1532,6 +1532,191 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'queryType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'performanceGain',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'optimizationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'QueryOptimizationEngineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'layerId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'cacheStrategy',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'hitRate',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'cacheProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CachingLayerLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'pipelineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'batchSize',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'processingTime',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'batchProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'BatchProcessingPipelineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'acceleratorId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'indexType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'indexSize',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'indexingProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'IndexingAcceleratorLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'compressionAlgorithm',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'compressionRatio',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'compressionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DataCompressionEngineLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -3790,6 +3975,206 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logCrossChainStateSync',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'queryType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'optimizationHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'performanceGain',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'optimizationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logQueryOptimizationEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'cacheStrategy',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'cacheKey',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'hitRate',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'cacheProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCachingLayer',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'batchSize',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'batchHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'processingTime',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'batchProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logBatchProcessingPipeline',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'indexType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'indexHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'indexSize',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'indexingProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logIndexingAccelerator',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'compressionAlgorithm',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'originalHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'compressedHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'compressionRatio',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'compressionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDataCompressionEngine',
     outputs: [
       {
         internalType: 'uint256',
