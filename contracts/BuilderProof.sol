@@ -1503,6 +1503,32 @@ contract SocialMediaContract {
         emit InteroperabilityStandardsLogged(interoperabilityStandardsCount, achievementId, standardName, complianceScore, complianceProof);
         return interoperabilityStandardsCount;
     }
+
+    function logProtocolAdapterRegistry(
+        uint256 achievementId,
+        string memory protocolName,
+        string memory adapterVersion,
+        bytes32 adapterHash,
+        bool isActive,
+        bytes32 registrationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(protocolName).length > 0, "Protocol name required");
+        require(bytes(adapterVersion).length > 0, "Adapter version required");
+        protocolAdapterRegistryCount++;
+        protocolAdapterRegistries[protocolAdapterRegistryCount] = ProtocolAdapterRegistry({
+            id: protocolAdapterRegistryCount,
+            achievementId: achievementId,
+            protocolName: protocolName,
+            adapterVersion: adapterVersion,
+            adapterHash: adapterHash,
+            isActive: isActive,
+            registrationProof: registrationProof,
+            recordedAt: block.timestamp
+        });
+        emit ProtocolAdapterRegistryLogged(protocolAdapterRegistryCount, achievementId, protocolName, adapterVersion, isActive);
+        return protocolAdapterRegistryCount;
+    }
 }
 
 
