@@ -1287,6 +1287,29 @@ contract SocialMediaContract {
         emit AdaptiveQuorumManagerLogged(adaptiveQuorumManagerCount, achievementId, currentQuorum, targetQuorum, quorumPolicyHash);
         return adaptiveQuorumManagerCount;
     }
+
+    function logZeroDayVulnerabilityShield(
+        uint256 achievementId,
+        string memory vulnerabilityType,
+        bytes32 detectionHash,
+        uint256 severityLevel,
+        bytes32 mitigationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(severityLevel > 0 && severityLevel <= 10, "Severity level must be 1-10");
+        zeroDayVulnerabilityShieldCount++;
+        zeroDayVulnerabilityShields[zeroDayVulnerabilityShieldCount] = ZeroDayVulnerabilityShield({
+            id: zeroDayVulnerabilityShieldCount,
+            achievementId: achievementId,
+            vulnerabilityType: vulnerabilityType,
+            detectionHash: detectionHash,
+            severityLevel: severityLevel,
+            mitigationProof: mitigationProof,
+            recordedAt: block.timestamp
+        });
+        emit ZeroDayVulnerabilityShieldLogged(zeroDayVulnerabilityShieldCount, achievementId, vulnerabilityType, severityLevel, mitigationProof);
+        return zeroDayVulnerabilityShieldCount;
+    }
 }
 
 
