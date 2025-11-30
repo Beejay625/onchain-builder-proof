@@ -1812,6 +1812,126 @@ contract SocialMediaContract {
         emit DataCompressionEngineLogged(dataCompressionEngineCount, achievementId, compressionAlgorithm, compressionRatio, compressionProof);
         return dataCompressionEngineCount;
     }
+
+    function logDataAnalyticsEngine(
+        uint256 achievementId,
+        string memory analyticsType,
+        bytes32 dataHash,
+        uint256 insightsCount,
+        bytes32 analyticsProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(analyticsType).length > 0, "Analytics type required");
+        require(insightsCount > 0, "Insights count must be positive");
+        dataAnalyticsEngineCount++;
+        dataAnalyticsEngines[dataAnalyticsEngineCount] = DataAnalyticsEngine({
+            id: dataAnalyticsEngineCount,
+            achievementId: achievementId,
+            analyticsType: analyticsType,
+            dataHash: dataHash,
+            insightsCount: insightsCount,
+            analyticsProof: analyticsProof,
+            recordedAt: block.timestamp
+        });
+        emit DataAnalyticsEngineLogged(dataAnalyticsEngineCount, achievementId, analyticsType, insightsCount, analyticsProof);
+        return dataAnalyticsEngineCount;
+    }
+
+    function logPredictiveAnalyticsModel(
+        uint256 achievementId,
+        string memory modelType,
+        bytes32 modelHash,
+        uint256 accuracyScore,
+        bytes32 predictionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(modelType).length > 0, "Model type required");
+        require(accuracyScore <= 100, "Accuracy score must be <= 100");
+        predictiveAnalyticsModelCount++;
+        predictiveAnalyticsModels[predictiveAnalyticsModelCount] = PredictiveAnalyticsModel({
+            id: predictiveAnalyticsModelCount,
+            achievementId: achievementId,
+            modelType: modelType,
+            modelHash: modelHash,
+            accuracyScore: accuracyScore,
+            predictionProof: predictionProof,
+            recordedAt: block.timestamp
+        });
+        emit PredictiveAnalyticsModelLogged(predictiveAnalyticsModelCount, achievementId, modelType, accuracyScore, predictionProof);
+        return predictiveAnalyticsModelCount;
+    }
+
+    function logRealTimeInsightsDashboard(
+        uint256 achievementId,
+        string memory dashboardType,
+        bytes32 metricsHash,
+        uint256 updateFrequency,
+        bytes32 dashboardProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(dashboardType).length > 0, "Dashboard type required");
+        require(updateFrequency > 0, "Update frequency must be positive");
+        realTimeInsightsDashboardCount++;
+        realTimeInsightsDashboards[realTimeInsightsDashboardCount] = RealTimeInsightsDashboard({
+            id: realTimeInsightsDashboardCount,
+            achievementId: achievementId,
+            dashboardType: dashboardType,
+            metricsHash: metricsHash,
+            updateFrequency: updateFrequency,
+            dashboardProof: dashboardProof,
+            recordedAt: block.timestamp
+        });
+        emit RealTimeInsightsDashboardLogged(realTimeInsightsDashboardCount, achievementId, dashboardType, updateFrequency, dashboardProof);
+        return realTimeInsightsDashboardCount;
+    }
+
+    function logDataWarehouseIntegration(
+        uint256 achievementId,
+        string memory warehouseType,
+        bytes32 integrationHash,
+        uint256 dataVolume,
+        bytes32 integrationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(warehouseType).length > 0, "Warehouse type required");
+        require(dataVolume > 0, "Data volume must be positive");
+        dataWarehouseIntegrationCount++;
+        dataWarehouseIntegrations[dataWarehouseIntegrationCount] = DataWarehouseIntegration({
+            id: dataWarehouseIntegrationCount,
+            achievementId: achievementId,
+            warehouseType: warehouseType,
+            integrationHash: integrationHash,
+            dataVolume: dataVolume,
+            integrationProof: integrationProof,
+            recordedAt: block.timestamp
+        });
+        emit DataWarehouseIntegrationLogged(dataWarehouseIntegrationCount, achievementId, warehouseType, dataVolume, integrationProof);
+        return dataWarehouseIntegrationCount;
+    }
+
+    function logMachineLearningPipeline(
+        uint256 achievementId,
+        string memory pipelineStage,
+        bytes32 modelHash,
+        uint256 trainingAccuracy,
+        bytes32 pipelineProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(pipelineStage).length > 0, "Pipeline stage required");
+        require(trainingAccuracy <= 100, "Training accuracy must be <= 100");
+        machineLearningPipelineCount++;
+        machineLearningPipelines[machineLearningPipelineCount] = MachineLearningPipeline({
+            id: machineLearningPipelineCount,
+            achievementId: achievementId,
+            pipelineStage: pipelineStage,
+            modelHash: modelHash,
+            trainingAccuracy: trainingAccuracy,
+            pipelineProof: pipelineProof,
+            recordedAt: block.timestamp
+        });
+        emit MachineLearningPipelineLogged(machineLearningPipelineCount, achievementId, pipelineStage, trainingAccuracy, pipelineProof);
+        return machineLearningPipelineCount;
+    }
 }
 
 
