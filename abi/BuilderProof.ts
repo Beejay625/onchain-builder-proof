@@ -1902,6 +1902,376 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'sdkId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'sdkVersion',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'language',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'sdkProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DeveloperSDKLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'gatewayId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'gatewayType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'endpointCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'gatewayProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'APIGatewayLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'toolId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'templateType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'generatedFiles',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'generationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CodeGenerationToolLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'frameworkId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'frameworkType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'testCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'testProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'TestingFrameworkLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'generatorId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'docFormat',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'pageCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'docProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DocumentationGeneratorLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'sdkId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'sdkVersion',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'language',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'sdkProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DeveloperSDKLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'gatewayId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'gatewayType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'requestCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'gatewayProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'APIGatewayLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'toolId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'toolType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'generatedFiles',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'generationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CodeGenerationToolLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'frameworkId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'frameworkType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'testCoverage',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'testProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'TestingFrameworkLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'generatorId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'generatorType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'pagesGenerated',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'documentationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DocumentationGeneratorLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -4555,6 +4925,396 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logMachineLearningPipeline',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'sdkVersion',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'sdkHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'string',
+        name: 'language',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'sdkProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDeveloperSDK',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'gatewayType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'configHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'endpointCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'gatewayProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAPIGateway',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'templateType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'templateHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'generatedFiles',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'generationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCodeGenerationTool',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'frameworkType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'testSuiteHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'testCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'testProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logTestingFramework',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'docFormat',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'docHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'pageCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'docProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDocumentationGenerator',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'sdkVersion',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'sdkHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'string',
+        name: 'language',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'sdkProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDeveloperSDK',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'gatewayType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'endpointHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'requestCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'gatewayProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAPIGateway',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'toolType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'templateHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'generatedFiles',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'generationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCodeGenerationTool',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'frameworkType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'testSuiteHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'testCoverage',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'testProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logTestingFramework',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'generatorType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'docHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'pagesGenerated',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'documentationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDocumentationGenerator',
     outputs: [
       {
         internalType: 'uint256',
