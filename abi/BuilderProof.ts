@@ -1717,6 +1717,191 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'engineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'analyticsType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'insightsCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'analyticsProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DataAnalyticsEngineLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'modelId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'modelType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'accuracyScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'predictionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'PredictiveAnalyticsModelLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'dashboardId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'dashboardType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'updateFrequency',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'dashboardProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'RealTimeInsightsDashboardLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'integrationId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'warehouseType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'dataVolume',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'integrationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'DataWarehouseIntegrationLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'pipelineId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'pipelineStage',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'trainingAccuracy',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'pipelineProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'MachineLearningPipelineLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -4175,6 +4360,201 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logDataCompressionEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'analyticsType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'dataHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'insightsCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'analyticsProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDataAnalyticsEngine',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'modelType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'modelHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'accuracyScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'predictionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logPredictiveAnalyticsModel',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'dashboardType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'metricsHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'updateFrequency',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'dashboardProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logRealTimeInsightsDashboard',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'warehouseType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'integrationHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'dataVolume',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'integrationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logDataWarehouseIntegration',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'pipelineStage',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'modelHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'trainingAccuracy',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'pipelineProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logMachineLearningPipeline',
     outputs: [
       {
         internalType: 'uint256',
