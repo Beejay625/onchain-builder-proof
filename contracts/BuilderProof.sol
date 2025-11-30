@@ -715,6 +715,11 @@ contract SocialMediaContract {
     mapping(uint256 => RealTimeInsightsDashboard) public realTimeInsightsDashboards;
     mapping(uint256 => DataWarehouseIntegration) public dataWarehouseIntegrations;
     mapping(uint256 => MachineLearningPipeline) public machineLearningPipelines;
+    mapping(uint256 => DeveloperSDK) public developerSDKs;
+    mapping(uint256 => APIGateway) public apiGateways;
+    mapping(uint256 => CodeGenerationTool) public codeGenerationTools;
+    mapping(uint256 => TestingFramework) public testingFrameworks;
+    mapping(uint256 => DocumentationGenerator) public documentationGenerators;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -766,6 +771,11 @@ contract SocialMediaContract {
     event BatchProcessingPipelineLogged(uint256 indexed pipelineId, uint256 indexed achievementId, uint256 batchSize, uint256 processingTime, bytes32 batchProof);
     event IndexingAcceleratorLogged(uint256 indexed acceleratorId, uint256 indexed achievementId, string indexType, uint256 indexSize, bytes32 indexingProof);
     event DataCompressionEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string compressionAlgorithm, uint256 compressionRatio, bytes32 compressionProof);
+    event DeveloperSDKLogged(uint256 indexed sdkId, uint256 indexed achievementId, string sdkVersion, string language, bytes32 sdkProof);
+    event APIGatewayLogged(uint256 indexed gatewayId, uint256 indexed achievementId, string gatewayType, uint256 endpointCount, bytes32 gatewayProof);
+    event CodeGenerationToolLogged(uint256 indexed toolId, uint256 indexed achievementId, string templateType, uint256 generatedFiles, bytes32 generationProof);
+    event TestingFrameworkLogged(uint256 indexed frameworkId, uint256 indexed achievementId, string frameworkType, uint256 testCount, bytes32 testProof);
+    event DocumentationGeneratorLogged(uint256 indexed generatorId, uint256 indexed achievementId, string docFormat, uint256 pageCount, bytes32 docProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -824,6 +834,11 @@ contract SocialMediaContract {
         realTimeInsightsDashboardCount = 0;
         dataWarehouseIntegrationCount = 0;
         machineLearningPipelineCount = 0;
+        developerSDKCount = 0;
+        apiGatewayCount = 0;
+        codeGenerationToolCount = 0;
+        testingFrameworkCount = 0;
+        documentationGeneratorCount = 0;
         developerSDKCount = 0;
         apiGatewayCount = 0;
         codeGenerationToolCount = 0;
