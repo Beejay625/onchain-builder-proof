@@ -63,6 +63,11 @@ contract SocialMediaContract {
     uint256 public codeGenerationToolCount;
     uint256 public testingFrameworkCount;
     uint256 public documentationGeneratorCount;
+    uint256 public developerSDKCount;
+    uint256 public apiGatewayCount;
+    uint256 public codeGenerationToolCount;
+    uint256 public testingFrameworkCount;
+    uint256 public documentationGeneratorCount;
     
     struct Post {
         uint256 id;
@@ -571,6 +576,56 @@ contract SocialMediaContract {
         uint256 id;
         uint256 achievementId;
         string gatewayType;
+        bytes32 configHash;
+        uint256 endpointCount;
+        bytes32 gatewayProof;
+        uint256 recordedAt;
+    }
+
+    struct CodeGenerationTool {
+        uint256 id;
+        uint256 achievementId;
+        string templateType;
+        bytes32 templateHash;
+        uint256 generatedFiles;
+        bytes32 generationProof;
+        uint256 recordedAt;
+    }
+
+    struct TestingFramework {
+        uint256 id;
+        uint256 achievementId;
+        string frameworkType;
+        bytes32 testSuiteHash;
+        uint256 testCount;
+        bytes32 testProof;
+        uint256 recordedAt;
+    }
+
+    struct DocumentationGenerator {
+        uint256 id;
+        uint256 achievementId;
+        string docFormat;
+        bytes32 docHash;
+        uint256 pageCount;
+        bytes32 docProof;
+        uint256 recordedAt;
+    }
+
+    struct DeveloperSDK {
+        uint256 id;
+        uint256 achievementId;
+        string sdkVersion;
+        bytes32 sdkHash;
+        string language;
+        bytes32 sdkProof;
+        uint256 recordedAt;
+    }
+
+    struct APIGateway {
+        uint256 id;
+        uint256 achievementId;
+        string gatewayType;
         bytes32 endpointHash;
         uint256 requestCount;
         bytes32 gatewayProof;
@@ -769,6 +824,11 @@ contract SocialMediaContract {
         realTimeInsightsDashboardCount = 0;
         dataWarehouseIntegrationCount = 0;
         machineLearningPipelineCount = 0;
+        developerSDKCount = 0;
+        apiGatewayCount = 0;
+        codeGenerationToolCount = 0;
+        testingFrameworkCount = 0;
+        documentationGeneratorCount = 0;
         developerSDKCount = 0;
         apiGatewayCount = 0;
         codeGenerationToolCount = 0;
