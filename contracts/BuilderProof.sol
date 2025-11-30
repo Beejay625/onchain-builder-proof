@@ -600,6 +600,11 @@ contract SocialMediaContract {
     mapping(uint256 => BatchProcessingPipeline) public batchProcessingPipelines;
     mapping(uint256 => IndexingAccelerator) public indexingAccelerators;
     mapping(uint256 => DataCompressionEngine) public dataCompressionEngines;
+    mapping(uint256 => DataAnalyticsEngine) public dataAnalyticsEngines;
+    mapping(uint256 => PredictiveAnalyticsModel) public predictiveAnalyticsModels;
+    mapping(uint256 => RealTimeInsightsDashboard) public realTimeInsightsDashboards;
+    mapping(uint256 => DataWarehouseIntegration) public dataWarehouseIntegrations;
+    mapping(uint256 => MachineLearningPipeline) public machineLearningPipelines;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
