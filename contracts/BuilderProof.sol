@@ -40,6 +40,9 @@ contract SocialMediaContract {
     uint256 public autonomousGovernanceEngineCount;
     uint256 public decentralizedVotingProtocolCount;
     uint256 public adaptiveQuorumManagerCount;
+    uint256 public zeroDayVulnerabilityShieldCount;
+    uint256 public advancedThreatIntelligenceCount;
+    uint256 public behavioralAnomalyDetectorCount;
     
     struct Post {
         uint256 id;
@@ -350,6 +353,36 @@ contract SocialMediaContract {
         bytes32 quorumPolicyHash;
         uint256 recordedAt;
     }
+
+    struct ZeroDayVulnerabilityShield {
+        uint256 id;
+        uint256 achievementId;
+        string vulnerabilityType;
+        bytes32 detectionHash;
+        uint256 severityLevel;
+        bytes32 mitigationProof;
+        uint256 recordedAt;
+    }
+
+    struct AdvancedThreatIntelligence {
+        uint256 id;
+        uint256 achievementId;
+        string threatType;
+        bytes32 intelligenceHash;
+        uint256 threatLevel;
+        bytes32 analysisProof;
+        uint256 recordedAt;
+    }
+
+    struct BehavioralAnomalyDetector {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 behaviorHash;
+        uint256 anomalyScore;
+        bool isAnomalous;
+        bytes32 detectionProof;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -386,6 +419,9 @@ contract SocialMediaContract {
     mapping(uint256 => AutonomousGovernanceEngine) public autonomousGovernanceEngines;
     mapping(uint256 => DecentralizedVotingProtocol) public decentralizedVotingProtocols;
     mapping(uint256 => AdaptiveQuorumManager) public adaptiveQuorumManagers;
+    mapping(uint256 => ZeroDayVulnerabilityShield) public zeroDayVulnerabilityShields;
+    mapping(uint256 => AdvancedThreatIntelligence) public advancedThreatIntelligences;
+    mapping(uint256 => BehavioralAnomalyDetector) public behavioralAnomalyDetectors;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -424,6 +460,9 @@ contract SocialMediaContract {
     event AutonomousGovernanceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string governanceType, bytes32 policyHash, uint256 decisionConfidence);
     event DecentralizedVotingProtocolLogged(uint256 indexed protocolId, uint256 indexed achievementId, string proposalId, uint256 yesVotes, uint256 noVotes);
     event AdaptiveQuorumManagerLogged(uint256 indexed managerId, uint256 indexed achievementId, uint256 currentQuorum, uint256 targetQuorum, bytes32 quorumPolicyHash);
+    event ZeroDayVulnerabilityShieldLogged(uint256 indexed shieldId, uint256 indexed achievementId, string vulnerabilityType, uint256 severityLevel, bytes32 mitigationProof);
+    event AdvancedThreatIntelligenceLogged(uint256 indexed intelligenceId, uint256 indexed achievementId, string threatType, uint256 threatLevel, bytes32 analysisProof);
+    event BehavioralAnomalyDetectorLogged(uint256 indexed detectorId, uint256 indexed achievementId, uint256 anomalyScore, bool isAnomalous, bytes32 detectionProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
@@ -464,6 +503,9 @@ contract SocialMediaContract {
         autonomousGovernanceEngineCount = 0;
         decentralizedVotingProtocolCount = 0;
         adaptiveQuorumManagerCount = 0;
+        zeroDayVulnerabilityShieldCount = 0;
+        advancedThreatIntelligenceCount = 0;
+        behavioralAnomalyDetectorCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
