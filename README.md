@@ -1025,6 +1025,40 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 
 Deep dives for this optimization layer live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--performance-optimization-f631f660).
 
+### Data Intelligence · 30 Analytics & Insights Primitives
+- 📊 **Achievement Data Analytics Engine**: Engine for comprehensive data analytics and insights with proof verification.
+- 🔮 **Achievement Predictive Analytics Model**: Model for predictive analytics and forecasting with accuracy tracking.
+- 📈 **Achievement Real-Time Insights Dashboard**: Dashboard for real-time data insights and monitoring with configurable updates.
+- 🏪 **Achievement Data Warehouse Integration**: Integration with data warehouses for analytics with volume tracking.
+- 🤖 **Achievement Machine Learning Pipeline**: Pipeline for machine learning model training and deployment with accuracy metrics.
+- 💼 **Achievement Business Intelligence Suite**: Suite for business intelligence and reporting with automated insights.
+- 📊 **Achievement Data Visualization Engine**: Engine for creating data visualizations and charts with interactive features.
+- 📈 **Achievement Statistical Analysis Tool**: Tool for statistical analysis and hypothesis testing with confidence intervals.
+- 📉 **Achievement Trend Detection System**: System for detecting trends and patterns in data with anomaly alerts.
+- 🔍 **Achievement Anomaly Detection Engine**: Engine for detecting anomalies in data streams with real-time alerts.
+- ⛏️ **Achievement Data Mining Platform**: Platform for data mining and knowledge discovery with pattern recognition.
+- 📄 **Achievement Report Generation Engine**: Engine for generating automated reports and summaries with scheduling.
+- ✅ **Achievement Data Quality Monitor**: Monitor for data quality metrics and validation with threshold alerts.
+- 🔄 **Achievement ETL Processing Pipeline**: Pipeline for extract, transform, and load operations with error handling.
+- 🏛️ **Achievement Data Governance Framework**: Framework for data governance and compliance with policy enforcement.
+- 📚 **Achievement Data Catalog System**: System for cataloging and discovering data assets with metadata indexing.
+- 🔗 **Achievement Data Lineage Tracker**: Tracker for data lineage and provenance with dependency graphs.
+- 🔬 **Achievement Data Profiling Tool**: Tool for profiling data structure and quality with statistical summaries.
+- ✨ **Achievement Data Enrichment Service**: Service for enriching data with additional context and metadata.
+- 🔄 **Achievement Data Transformation Engine**: Engine for transforming data between formats with validation.
+- ✅ **Achievement Data Validation Framework**: Framework for validating data integrity and rules with error reporting.
+- 📦 **Achievement Data Retention Manager**: Manager for data retention policies and lifecycle with automated archiving.
+- 🏷️ **Achievement Data Classification System**: System for classifying data by sensitivity and type with tagging.
+- 🔒 **Achievement Data Privacy Engine**: Engine for privacy-preserving data processing with encryption support.
+- 🛡️ **Achievement Data Security Auditor**: Auditor for data security compliance and monitoring with audit trails.
+- ✅ **Achievement Data Compliance Checker**: Checker for regulatory compliance and standards with automated validation.
+- 💾 **Achievement Data Backup Orchestrator**: Orchestrator for automated data backup operations with scheduling.
+- 🔄 **Achievement Data Recovery Manager**: Manager for data recovery and restoration with point-in-time recovery.
+- 📦 **Achievement Data Archival System**: System for archiving data with retention policies and compression.
+- 🌐 **Achievement Unified Data Intelligence Platform**: Platform unifying all data intelligence capabilities with integrated workflows.
+
+Deep dives for this intelligence layer live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--data-intelligence-f661f690).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
