@@ -1310,6 +1310,29 @@ contract SocialMediaContract {
         emit ZeroDayVulnerabilityShieldLogged(zeroDayVulnerabilityShieldCount, achievementId, vulnerabilityType, severityLevel, mitigationProof);
         return zeroDayVulnerabilityShieldCount;
     }
+
+    function logAdvancedThreatIntelligence(
+        uint256 achievementId,
+        string memory threatType,
+        bytes32 intelligenceHash,
+        uint256 threatLevel,
+        bytes32 analysisProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(threatLevel > 0 && threatLevel <= 10, "Threat level must be 1-10");
+        advancedThreatIntelligenceCount++;
+        advancedThreatIntelligences[advancedThreatIntelligenceCount] = AdvancedThreatIntelligence({
+            id: advancedThreatIntelligenceCount,
+            achievementId: achievementId,
+            threatType: threatType,
+            intelligenceHash: intelligenceHash,
+            threatLevel: threatLevel,
+            analysisProof: analysisProof,
+            recordedAt: block.timestamp
+        });
+        emit AdvancedThreatIntelligenceLogged(advancedThreatIntelligenceCount, achievementId, threatType, threatLevel, analysisProof);
+        return advancedThreatIntelligenceCount;
+    }
 }
 
 
