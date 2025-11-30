@@ -1007,6 +1007,37 @@ export interface FeatureFlags {
   achievementDataRecoveryManager: boolean
   achievementDataArchivalSystem: boolean
   achievementUnifiedDataIntelligencePlatform: boolean
+  // Developer Experience wave feature flags (F691-F720)
+  achievementDeveloperSDK: boolean
+  achievementAPIGateway: boolean
+  achievementCodeGenerationTool: boolean
+  achievementTestingFramework: boolean
+  achievementDocumentationGenerator: boolean
+  achievementDebuggingTool: boolean
+  achievementErrorTrackingSystem: boolean
+  achievementLoggingFramework: boolean
+  achievementMonitoringDashboard: boolean
+  achievementCI_CDIntegration: boolean
+  achievementVersionControlIntegration: boolean
+  achievementCodeReviewTool: boolean
+  achievementDependencyManager: boolean
+  achievementPackageRegistry: boolean
+  achievementBuildAutomationTool: boolean
+  achievementDeploymentOrchestrator: boolean
+  achievementConfigurationManager: boolean
+  achievementSecretManagement: boolean
+  achievementEnvironmentManager: boolean
+  achievementFeatureFlagManager: boolean
+  achievementA_BTestingFramework: boolean
+  achievementPerformanceProfiler: boolean
+  achievementCodeQualityAnalyzer: boolean
+  achievementSecurityScanner: boolean
+  achievementComplianceChecker: boolean
+  achievementAuditTrailGenerator: boolean
+  achievementNotificationService: boolean
+  achievementWebhookManager: boolean
+  achievementIntegrationHub: boolean
+  achievementUnifiedDeveloperPlatform: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
