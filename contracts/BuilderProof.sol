@@ -1529,6 +1529,31 @@ contract SocialMediaContract {
         emit ProtocolAdapterRegistryLogged(protocolAdapterRegistryCount, achievementId, protocolName, adapterVersion, isActive);
         return protocolAdapterRegistryCount;
     }
+
+    function logCrossChainStateSync(
+        uint256 achievementId,
+        uint256 sourceChainId,
+        uint256 targetChainId,
+        bytes32 stateHash,
+        bytes32 syncProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(sourceChainId > 0, "Source chain ID required");
+        require(targetChainId > 0, "Target chain ID required");
+        require(sourceChainId != targetChainId, "Source and target chains must differ");
+        crossChainStateSyncCount++;
+        crossChainStateSyncs[crossChainStateSyncCount] = CrossChainStateSync({
+            id: crossChainStateSyncCount,
+            achievementId: achievementId,
+            sourceChainId: sourceChainId,
+            targetChainId: targetChainId,
+            stateHash: stateHash,
+            syncProof: syncProof,
+            recordedAt: block.timestamp
+        });
+        emit CrossChainStateSyncLogged(crossChainStateSyncCount, achievementId, sourceChainId, targetChainId, stateHash);
+        return crossChainStateSyncCount;
+    }
 }
 
 
