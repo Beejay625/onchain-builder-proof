@@ -1333,6 +1333,29 @@ contract SocialMediaContract {
         emit AdvancedThreatIntelligenceLogged(advancedThreatIntelligenceCount, achievementId, threatType, threatLevel, analysisProof);
         return advancedThreatIntelligenceCount;
     }
+
+    function logBehavioralAnomalyDetector(
+        uint256 achievementId,
+        bytes32 behaviorHash,
+        uint256 anomalyScore,
+        bool isAnomalous,
+        bytes32 detectionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(anomalyScore <= 100, "Anomaly score must be <= 100");
+        behavioralAnomalyDetectorCount++;
+        behavioralAnomalyDetectors[behavioralAnomalyDetectorCount] = BehavioralAnomalyDetector({
+            id: behavioralAnomalyDetectorCount,
+            achievementId: achievementId,
+            behaviorHash: behaviorHash,
+            anomalyScore: anomalyScore,
+            isAnomalous: isAnomalous,
+            detectionProof: detectionProof,
+            recordedAt: block.timestamp
+        });
+        emit BehavioralAnomalyDetectorLogged(behavioralAnomalyDetectorCount, achievementId, anomalyScore, isAnomalous, detectionProof);
+        return behavioralAnomalyDetectorCount;
+    }
 }
 
 
