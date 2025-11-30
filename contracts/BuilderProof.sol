@@ -1479,6 +1479,30 @@ contract SocialMediaContract {
         emit UniversalMessagePassingLogged(universalMessagePassingCount, achievementId, sourceProtocol, targetProtocol, messageHash);
         return universalMessagePassingCount;
     }
+
+    function logInteroperabilityStandards(
+        uint256 achievementId,
+        string memory standardName,
+        bytes32 standardHash,
+        uint256 complianceScore,
+        bytes32 complianceProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(standardName).length > 0, "Standard name required");
+        require(complianceScore <= 100, "Compliance score must be <= 100");
+        interoperabilityStandardsCount++;
+        interoperabilityStandards[interoperabilityStandardsCount] = InteroperabilityStandards({
+            id: interoperabilityStandardsCount,
+            achievementId: achievementId,
+            standardName: standardName,
+            standardHash: standardHash,
+            complianceScore: complianceScore,
+            complianceProof: complianceProof,
+            recordedAt: block.timestamp
+        });
+        emit InteroperabilityStandardsLogged(interoperabilityStandardsCount, achievementId, standardName, complianceScore, complianceProof);
+        return interoperabilityStandardsCount;
+    }
 }
 
 
