@@ -591,6 +591,11 @@ contract SocialMediaContract {
     event InteroperabilityStandardsLogged(uint256 indexed standardId, uint256 indexed achievementId, string standardName, uint256 complianceScore, bytes32 complianceProof);
     event ProtocolAdapterRegistryLogged(uint256 indexed registryId, uint256 indexed achievementId, string protocolName, string adapterVersion, bool isActive);
     event CrossChainStateSyncLogged(uint256 indexed syncId, uint256 indexed achievementId, uint256 sourceChainId, uint256 targetChainId, bytes32 stateHash);
+    event QueryOptimizationEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string queryType, uint256 performanceGain, bytes32 optimizationProof);
+    event CachingLayerLogged(uint256 indexed layerId, uint256 indexed achievementId, string cacheStrategy, uint256 hitRate, bytes32 cacheProof);
+    event BatchProcessingPipelineLogged(uint256 indexed pipelineId, uint256 indexed achievementId, uint256 batchSize, uint256 processingTime, bytes32 batchProof);
+    event IndexingAcceleratorLogged(uint256 indexed acceleratorId, uint256 indexed achievementId, string indexType, uint256 indexSize, bytes32 indexingProof);
+    event DataCompressionEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string compressionAlgorithm, uint256 compressionRatio, bytes32 compressionProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
