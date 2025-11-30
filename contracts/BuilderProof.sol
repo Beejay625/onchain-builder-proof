@@ -540,6 +540,11 @@ contract SocialMediaContract {
     mapping(uint256 => InteroperabilityStandards) public interoperabilityStandards;
     mapping(uint256 => ProtocolAdapterRegistry) public protocolAdapterRegistries;
     mapping(uint256 => CrossChainStateSync) public crossChainStateSyncs;
+    mapping(uint256 => QueryOptimizationEngine) public queryOptimizationEngines;
+    mapping(uint256 => CachingLayer) public cachingLayers;
+    mapping(uint256 => BatchProcessingPipeline) public batchProcessingPipelines;
+    mapping(uint256 => IndexingAccelerator) public indexingAccelerators;
+    mapping(uint256 => DataCompressionEngine) public dataCompressionEngines;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
