@@ -914,6 +914,37 @@ export interface FeatureFlags {
   achievementSecurityPolicyEnforcer: boolean
   achievementSecurityTrainingPlatform: boolean
   achievementSecurityMetricsDashboard: boolean
+  // Interoperability Nexus wave feature flags (F601-F630)
+  achievementCrossProtocolBridge: boolean
+  achievementUniversalMessagePassing: boolean
+  achievementInteroperabilityStandards: boolean
+  achievementProtocolAdapterRegistry: boolean
+  achievementCrossChainStateSync: boolean
+  achievementUniversalAssetRegistry: boolean
+  achievementInteroperabilityGovernance: boolean
+  achievementProtocolCompatibilityLayer: boolean
+  achievementCrossProtocolIdentity: boolean
+  achievementUniversalAccessControl: boolean
+  achievementInteroperabilityMetrics: boolean
+  achievementProtocolTranslationLayer: boolean
+  achievementCrossProtocolTreasury: boolean
+  achievementUniversalEventBus: boolean
+  achievementInteroperabilityAudit: boolean
+  achievementProtocolStandardization: boolean
+  achievementCrossProtocolAttestation: boolean
+  achievementUniversalProofSystem: boolean
+  achievementInteroperabilityTesting: boolean
+  achievementProtocolVersioning: boolean
+  achievementCrossProtocolConsensus: boolean
+  achievementUniversalDataFormat: boolean
+  achievementInteroperabilityMonitoring: boolean
+  achievementProtocolDiscovery: boolean
+  achievementCrossProtocolSettlement: boolean
+  achievementUniversalMessaging: boolean
+  achievementInteroperabilitySecurity: boolean
+  achievementProtocolIntegrationHub: boolean
+  achievementCrossProtocolAnalytics: boolean
+  achievementUniversalInteroperabilityPlatform: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
