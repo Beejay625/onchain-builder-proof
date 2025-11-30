@@ -695,6 +695,39 @@ Thirty net-new onchain capabilities that extend BuilderProof's provenance, autom
 29. **Achievement Decentralized Identity Provider** — Provides decentralized identity with DID, Verifiable Credentials, Soulbound Tokens, or hybrid identity standards.
 30. **Achievement Reputation System Manager** — Manages reputation scores with linear, exponential, or logarithmic scoring models.
 
+## Decentralized Applications Wave · Scalability Solutions & dApp Platforms (F511–F540)
+
+1. **Achievement Zero-Knowledge Proof System** — Generates and verifies zero-knowledge proofs for privacy-preserving operations with ZK-SNARK, ZK-STARK, Bulletproofs, or PLONK proof types.
+2. **Achievement Merkle Tree Verifier** — Verifies Merkle tree proofs for efficient data integrity checks with SHA256, Keccak256, or Poseidon hash functions.
+3. **Achievement Batch Transaction Processor** — Processes multiple transactions in a single batch for gas efficiency with sequential, parallel, or optimized processing modes.
+4. **Achievement State Channel Manager** — Manages off-chain state channels for scalable transactions with payment, general, or app-specific channel types.
+5. **Achievement Layer 2 Rollup Manager** — Manages Layer 2 rollup operations with optimistic, ZK-rollup, or validium rollup types.
+6. **Achievement Atomic Swap Manager** — Manages atomic swaps for trustless cross-chain asset exchanges with hash time lock, script-based, or contract-based swap types.
+7. **Achievement Decentralized Voting System** — Decentralized voting with multiple voting mechanisms and privacy options including public, private, or ZK-proof privacy levels.
+8. **Achievement Time-Locked Vault** — Vault with time-based locks for delayed withdrawals with automatic, manual, or conditional release mechanisms.
+9. **Achievement Conditional Payment System** — Payments that execute based on predefined conditions with time-based, event-based, oracle-based, or multi-condition types.
+10. **Achievement Multi-Signature Escrow** — Escrow requiring multiple signatures for release with configurable signature thresholds.
+11. **Achievement Decentralized Lottery System** — Provably fair lottery system with verifiable randomness using Chainlink VRF, commit-reveal, or RANDAO.
+12. **Achievement Decentralized Random Number Generator** — Generates verifiable random numbers for onchain applications with multiple randomness methods and entropy sources.
+13. **Achievement Decentralized Auction House** — Manages auctions with English, Dutch, sealed bid, or Vickrey auction types.
+14. **Achievement Decentralized Crowdfunding Platform** — Crowdfunding platform with all-or-nothing, flexible, or milestone-based funding models.
+15. **Achievement Decentralized Gaming Platform** — Gaming platform with provably fair mechanics and NFT rewards for turn-based, real-time, strategy, or multi-game types.
+16. **Achievement Decentralized Social Network** — Social network with content ownership and monetization for text, image, video, or mixed content types.
+17. **Achievement Decentralized Content Marketplace** — Marketplace for buying and selling digital content as NFTs with art, music, video, writing, or mixed categories.
+18. **Achievement Decentralized Music Platform** — Music platform with NFT-based ownership and streaming rewards with pay-per-stream, subscription, or hybrid models.
+19. **Achievement Decentralized Video Platform** — Video platform with decentralized storage and NFT-based monetization using IPFS, Arweave, Filecoin, or multi-protocol storage.
+20. **Achievement Decentralized Education Platform** — Education platform with verifiable credentials and NFT certificates for certificate, degree, badge, or mixed credential types.
+21. **Achievement Decentralized Healthcare Platform** — Healthcare platform with encrypted medical records and privacy-preserving access for medical records, prescriptions, lab results, or mixed data types.
+22. **Achievement Decentralized Supply Chain Manager** — Tracks products through supply chain with verifiable provenance using RFID, QR code, NFC, or hybrid tracking methods.
+23. **Achievement Decentralized Energy Trading Platform** — Peer-to-peer energy trading with smart grid integration for solar, wind, hydro, or mixed energy types.
+24. **Achievement Decentralized Real Estate Platform** — Real estate platform with fractional ownership and property NFTs with full, fractional, or timeshare ownership models.
+25. **Achievement Decentralized Charity Platform** — Charity platform with transparent donation tracking and impact verification with on-chain, oracle-based, or multi-party verification.
+26. **Achievement Decentralized Insurance Platform** — Insurance platform with parametric insurance and automated claims with parametric, traditional, or hybrid insurance types.
+27. **Achievement Decentralized Freelance Platform** — Freelance platform with escrow payments and reputation system with full escrow, partial escrow, or milestone-based models.
+28. **Achievement Decentralized Ride Sharing Platform** — Ride sharing platform with smart contracts for driver-rider matching with direct, escrow, or subscription payment models.
+29. **Achievement Decentralized Food Delivery Platform** — Food delivery platform with order tracking and payment escrow with real-time, milestone-based, or hybrid tracking.
+30. **Achievement Decentralized Event Ticketing Platform** — Event ticketing platform with NFT-based tickets and resale controls with NFT, soulbound, or transferable ticket types.
+
 ## Enablement Notes
 
 - Each feature is toggled via `FeatureFlags`; keep them disabled by default until implementation ships.
