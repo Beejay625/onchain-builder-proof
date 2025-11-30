@@ -883,6 +883,37 @@ export interface FeatureFlags {
   achievementPredictiveGovernanceTrends: boolean
   achievementAutonomousGovernanceMonitor: boolean
   achievementDecentralizedGovernancePlatform: boolean
+  // Advanced Security wave feature flags (F571-F600)
+  achievementZeroDayVulnerabilityShield: boolean
+  achievementAdvancedThreatIntelligence: boolean
+  achievementBehavioralAnomalyDetector: boolean
+  achievementCryptographicKeyRotation: boolean
+  achievementSecureMultiPartyComputation: boolean
+  achievementPrivacyPreservingAnalytics: boolean
+  achievementHomomorphicEncryptionVault: boolean
+  achievementDifferentialPrivacyEngine: boolean
+  achievementSecureEnclaveManager: boolean
+  achievementTrustedExecutionEnvironment: boolean
+  achievementHardwareSecurityModule: boolean
+  achievementBiometricAuthenticationGateway: boolean
+  achievementAdvancedEncryptionStandard: boolean
+  achievementSecureRandomNumberGenerator: boolean
+  achievementCryptographicHashValidator: boolean
+  achievementDigitalSignatureVerifier: boolean
+  achievementSecureChannelManager: boolean
+  achievementIntrusionDetectionSystem: boolean
+  achievementSecurityInformationEventManager: boolean
+  achievementVulnerabilityAssessmentEngine: boolean
+  achievementPenetrationTestingFramework: boolean
+  achievementSecurityComplianceAuditor: boolean
+  achievementThreatModelingTool: boolean
+  achievementSecurityIncidentResponse: boolean
+  achievementDataLossPrevention: boolean
+  achievementNetworkSecurityMonitor: boolean
+  achievementApplicationSecurityScanner: boolean
+  achievementSecurityPolicyEnforcer: boolean
+  achievementSecurityTrainingPlatform: boolean
+  achievementSecurityMetricsDashboard: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
