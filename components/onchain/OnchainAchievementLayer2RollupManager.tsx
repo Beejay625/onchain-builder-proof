@@ -7,9 +7,9 @@ export default function OnchainAchievementLayer2RollupManager(props: HeliosMeshF
     <HeliosMeshComposer
       {...props}
       title="Layer 2 Rollup Manager"
-      subtitle="Manages Layer 2 rollup operations with optimistic or zk-rollup support"
+      subtitle="Manages Layer 2 rollup operations with batch submissions"
       accent="indigo"
-      ctaLabel="Deploy Rollup"
+      ctaLabel="Deploy Manager"
       payloadPrefix="L2_ROLLUP_MGR"
       fields={[
         {
@@ -38,10 +38,11 @@ export default function OnchainAchievementLayer2RollupManager(props: HeliosMeshF
           required: true,
         },
         {
-          key: 'challengePeriod',
-          label: 'Challenge Period (blocks)',
-          type: 'number',
-          placeholder: '7',
+          key: 'sequencerAddress',
+          label: 'Sequencer Address',
+          type: 'text',
+          placeholder: '0x...',
+          required: true,
         },
         {
           key: 'managerPolicy',
@@ -53,4 +54,3 @@ export default function OnchainAchievementLayer2RollupManager(props: HeliosMeshF
     />
   )
 }
-
