@@ -1059,6 +1059,40 @@ Deep dives for this optimization layer live in [`docs/feature-delivery-plan.md`]
 
 Deep dives for this intelligence layer live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--data-intelligence-f661f690).
 
+### Developer Experience · 30 Developer Tools & Platforms
+- 🛠️ **Achievement Developer SDK**: SDK for developers to integrate with the platform with multi-language support.
+- 🚪 **Achievement API Gateway**: Gateway for managing and routing API requests with rate limiting.
+- ⚡ **Achievement Code Generation Tool**: Tool for generating code from templates and schemas with customization.
+- 🧪 **Achievement Testing Framework**: Framework for writing and running tests with coverage reporting.
+- 📚 **Achievement Documentation Generator**: Generator for creating API and code documentation with auto-updates.
+- 🐛 **Achievement Debugging Tool**: Tool for debugging applications and services with breakpoints.
+- 📝 **Achievement Logging Framework**: Framework for structured logging and log management with search.
+- 🚨 **Achievement Error Tracking System**: System for tracking and managing application errors with alerts.
+- 📊 **Achievement Performance Profiler**: Profiler for analyzing application performance with detailed metrics.
+- ✅ **Achievement Code Linter**: Linter for code quality and style checking with auto-fix.
+- 📦 **Achievement Dependency Manager**: Manager for handling project dependencies with version resolution.
+- 🔨 **Achievement Build Automation Tool**: Tool for automating build processes with caching.
+- 🚀 **Achievement Deployment Pipeline**: Pipeline for automated deployments with rollback support.
+- 🔄 **Achievement Version Control Integration**: Integration with version control systems with webhooks.
+- ⚙️ **Achievement CI/CD Platform**: Platform for continuous integration and deployment with parallel jobs.
+- 👀 **Achievement Code Review Tool**: Tool for conducting code reviews with automated suggestions.
+- 🔒 **Achievement Security Scanner**: Scanner for detecting security vulnerabilities with remediation guides.
+- 🎨 **Achievement Code Formatter**: Formatter for consistent code styling with configurable rules.
+- 📦 **Achievement Package Manager**: Manager for package distribution and versioning with registry.
+- 🐳 **Achievement Container Orchestrator**: Orchestrator for managing containerized applications with scaling.
+- 🌐 **Achievement Service Mesh**: Service mesh for microservices communication with observability.
+- ✅ **Achievement API Validator**: Validator for API contracts and schemas with compatibility checks.
+- 📋 **Achievement Schema Registry**: Registry for managing data schemas with versioning.
+- 🎭 **Achievement Mock Server**: Server for mocking APIs during development with realistic responses.
+- 🔗 **Achievement Integration Testing Suite**: Suite for integration testing with test data management.
+- ⚡ **Achievement Load Testing Tool**: Tool for load and stress testing with real-time metrics.
+- 📊 **Achievement Monitoring Dashboard**: Dashboard for application monitoring with customizable views.
+- 🔔 **Achievement Alerting System**: System for alerts and notifications with escalation policies.
+- 🔍 **Achievement Tracing Framework**: Framework for distributed tracing with correlation IDs.
+- 🌐 **Achievement Unified Developer Platform**: Platform unifying all developer tools and services with single sign-on.
+
+Deep dives for this developer platform live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--developer-experience-f691f720).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
