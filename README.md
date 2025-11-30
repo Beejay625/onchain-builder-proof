@@ -889,6 +889,38 @@ Deep dives for this infrastructure wave live in [`docs/feature-delivery-plan.md`
 - 👁️ **Achievement Autonomous Governance Monitor**: Monitors governance autonomously.
 - 🏛️ **Achievement Decentralized Governance Platform**: Platform for decentralized governance.
 
+### Advanced Security · 30 Enterprise-Grade Security Primitives
+- 🛡️ **Achievement Zero-Day Vulnerability Shield**: Protects against zero-day vulnerabilities with advanced detection.
+- 🕵️ **Achievement Advanced Threat Intelligence**: Provides advanced threat intelligence and analysis.
+- 🔍 **Achievement Behavioral Anomaly Detector**: Detects behavioral anomalies using ML models.
+- 🔑 **Achievement Cryptographic Key Rotation**: Rotates cryptographic keys automatically with secure protocols.
+- 🔐 **Achievement Secure Multi-Party Computation**: Performs secure multi-party computation with privacy guarantees.
+- 🔒 **Achievement Privacy-Preserving Analytics**: Analytics that preserve privacy using advanced techniques.
+- 🔐 **Achievement Homomorphic Encryption Vault**: Vault using homomorphic encryption for computation on encrypted data.
+- 🔒 **Achievement Differential Privacy Engine**: Engine for differential privacy with configurable privacy budgets.
+- 🏰 **Achievement Secure Enclave Manager**: Manages secure enclaves for trusted execution.
+- 🔐 **Achievement Trusted Execution Environment**: Trusted execution environment for secure operations.
+- 🔒 **Achievement Hardware Security Module**: Hardware security module for key management.
+- 👤 **Achievement Biometric Authentication Gateway**: Gateway for biometric authentication with multiple biometric types.
+- 🔐 **Achievement Advanced Encryption Standard**: Advanced encryption standard implementation with multiple modes.
+- 🎲 **Achievement Secure Random Number Generator**: Generates cryptographically secure random numbers.
+- 🔐 **Achievement Cryptographic Hash Validator**: Validates cryptographic hashes with multiple algorithms.
+- ✍️ **Achievement Digital Signature Verifier**: Verifies digital signatures with multiple signature schemes.
+- 🔐 **Achievement Secure Channel Manager**: Manages secure communication channels with encryption.
+- 🚨 **Achievement Intrusion Detection System**: Detects intrusions using pattern matching and ML.
+- 📊 **Achievement Security Information Event Manager**: Manages security information and events with correlation.
+- 🔍 **Achievement Vulnerability Assessment Engine**: Assesses vulnerabilities using automated scanning.
+- 🧪 **Achievement Penetration Testing Framework**: Framework for automated penetration testing.
+- ✅ **Achievement Security Compliance Auditor**: Audits security compliance with multiple standards.
+- 🎯 **Achievement Threat Modeling Tool**: Tool for threat modeling and risk assessment.
+- 🚨 **Achievement Security Incident Response**: Responds to security incidents with automated workflows.
+- 🛡️ **Achievement Data Loss Prevention**: Prevents data loss with monitoring and blocking.
+- 🌐 **Achievement Network Security Monitor**: Monitors network security with real-time analysis.
+- 🔍 **Achievement Application Security Scanner**: Scans applications for security vulnerabilities.
+- 📜 **Achievement Security Policy Enforcer**: Enforces security policies with automated controls.
+- 📚 **Achievement Security Training Platform**: Platform for security training and awareness.
+- 📊 **Achievement Security Metrics Dashboard**: Dashboard for security metrics and KPIs.
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
