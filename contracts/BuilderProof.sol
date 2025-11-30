@@ -53,6 +53,11 @@ contract SocialMediaContract {
     uint256 public batchProcessingPipelineCount;
     uint256 public indexingAcceleratorCount;
     uint256 public dataCompressionEngineCount;
+    uint256 public dataAnalyticsEngineCount;
+    uint256 public predictiveAnalyticsModelCount;
+    uint256 public realTimeInsightsDashboardCount;
+    uint256 public dataWarehouseIntegrationCount;
+    uint256 public machineLearningPipelineCount;
     
     struct Post {
         uint256 id;
@@ -496,6 +501,56 @@ contract SocialMediaContract {
         bytes32 compressionProof;
         uint256 recordedAt;
     }
+
+    struct DataAnalyticsEngine {
+        uint256 id;
+        uint256 achievementId;
+        string analyticsType;
+        bytes32 dataHash;
+        uint256 insightsCount;
+        bytes32 analyticsProof;
+        uint256 recordedAt;
+    }
+
+    struct PredictiveAnalyticsModel {
+        uint256 id;
+        uint256 achievementId;
+        string modelType;
+        bytes32 modelHash;
+        uint256 accuracyScore;
+        bytes32 predictionProof;
+        uint256 recordedAt;
+    }
+
+    struct RealTimeInsightsDashboard {
+        uint256 id;
+        uint256 achievementId;
+        string dashboardType;
+        bytes32 metricsHash;
+        uint256 updateFrequency;
+        bytes32 dashboardProof;
+        uint256 recordedAt;
+    }
+
+    struct DataWarehouseIntegration {
+        uint256 id;
+        uint256 achievementId;
+        string warehouseType;
+        bytes32 integrationHash;
+        uint256 dataVolume;
+        bytes32 integrationProof;
+        uint256 recordedAt;
+    }
+
+    struct MachineLearningPipeline {
+        uint256 id;
+        uint256 achievementId;
+        string pipelineStage;
+        bytes32 modelHash;
+        uint256 trainingAccuracy;
+        bytes32 pipelineProof;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -649,6 +704,11 @@ contract SocialMediaContract {
         batchProcessingPipelineCount = 0;
         indexingAcceleratorCount = 0;
         dataCompressionEngineCount = 0;
+        dataAnalyticsEngineCount = 0;
+        predictiveAnalyticsModelCount = 0;
+        realTimeInsightsDashboardCount = 0;
+        dataWarehouseIntegrationCount = 0;
+        machineLearningPipelineCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
