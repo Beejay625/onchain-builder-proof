@@ -1428,6 +1428,33 @@ contract SocialMediaContract {
         emit BehavioralAnomalyDetectorLogged(behavioralAnomalyDetectorCount, achievementId, anomalyScore, isAnomalous, detectionProof);
         return behavioralAnomalyDetectorCount;
     }
+
+    function logCrossProtocolBridge(
+        uint256 achievementId,
+        string memory sourceProtocol,
+        string memory targetProtocol,
+        bytes32 bridgeProof,
+        uint256 assetAmount,
+        bytes32 bridgeHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(sourceProtocol).length > 0, "Source protocol required");
+        require(bytes(targetProtocol).length > 0, "Target protocol required");
+        require(assetAmount > 0, "Asset amount must be positive");
+        crossProtocolBridgeCount++;
+        crossProtocolBridges[crossProtocolBridgeCount] = CrossProtocolBridge({
+            id: crossProtocolBridgeCount,
+            achievementId: achievementId,
+            sourceProtocol: sourceProtocol,
+            targetProtocol: targetProtocol,
+            bridgeProof: bridgeProof,
+            assetAmount: assetAmount,
+            bridgeHash: bridgeHash,
+            recordedAt: block.timestamp
+        });
+        emit CrossProtocolBridgeLogged(crossProtocolBridgeCount, achievementId, sourceProtocol, targetProtocol, bridgeHash);
+        return crossProtocolBridgeCount;
+    }
 }
 
 
