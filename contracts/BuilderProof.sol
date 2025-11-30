@@ -2052,6 +2052,126 @@ contract SocialMediaContract {
         emit MachineLearningPipelineLogged(machineLearningPipelineCount, achievementId, pipelineStage, trainingAccuracy, pipelineProof);
         return machineLearningPipelineCount;
     }
+
+    function logDeveloperSDK(
+        uint256 achievementId,
+        string memory sdkVersion,
+        bytes32 sdkHash,
+        string memory language,
+        bytes32 sdkProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(sdkVersion).length > 0, "SDK version required");
+        require(bytes(language).length > 0, "Language required");
+        developerSDKCount++;
+        developerSDKs[developerSDKCount] = DeveloperSDK({
+            id: developerSDKCount,
+            achievementId: achievementId,
+            sdkVersion: sdkVersion,
+            sdkHash: sdkHash,
+            language: language,
+            sdkProof: sdkProof,
+            recordedAt: block.timestamp
+        });
+        emit DeveloperSDKLogged(developerSDKCount, achievementId, sdkVersion, language, sdkProof);
+        return developerSDKCount;
+    }
+
+    function logAPIGateway(
+        uint256 achievementId,
+        string memory gatewayType,
+        bytes32 configHash,
+        uint256 endpointCount,
+        bytes32 gatewayProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(gatewayType).length > 0, "Gateway type required");
+        require(endpointCount > 0, "Endpoint count must be positive");
+        apiGatewayCount++;
+        apiGateways[apiGatewayCount] = APIGateway({
+            id: apiGatewayCount,
+            achievementId: achievementId,
+            gatewayType: gatewayType,
+            configHash: configHash,
+            endpointCount: endpointCount,
+            gatewayProof: gatewayProof,
+            recordedAt: block.timestamp
+        });
+        emit APIGatewayLogged(apiGatewayCount, achievementId, gatewayType, endpointCount, gatewayProof);
+        return apiGatewayCount;
+    }
+
+    function logCodeGenerationTool(
+        uint256 achievementId,
+        string memory templateType,
+        bytes32 templateHash,
+        uint256 generatedFiles,
+        bytes32 generationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(templateType).length > 0, "Template type required");
+        require(generatedFiles > 0, "Generated files must be positive");
+        codeGenerationToolCount++;
+        codeGenerationTools[codeGenerationToolCount] = CodeGenerationTool({
+            id: codeGenerationToolCount,
+            achievementId: achievementId,
+            templateType: templateType,
+            templateHash: templateHash,
+            generatedFiles: generatedFiles,
+            generationProof: generationProof,
+            recordedAt: block.timestamp
+        });
+        emit CodeGenerationToolLogged(codeGenerationToolCount, achievementId, templateType, generatedFiles, generationProof);
+        return codeGenerationToolCount;
+    }
+
+    function logTestingFramework(
+        uint256 achievementId,
+        string memory frameworkType,
+        bytes32 testSuiteHash,
+        uint256 testCount,
+        bytes32 testProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(frameworkType).length > 0, "Framework type required");
+        require(testCount > 0, "Test count must be positive");
+        testingFrameworkCount++;
+        testingFrameworks[testingFrameworkCount] = TestingFramework({
+            id: testingFrameworkCount,
+            achievementId: achievementId,
+            frameworkType: frameworkType,
+            testSuiteHash: testSuiteHash,
+            testCount: testCount,
+            testProof: testProof,
+            recordedAt: block.timestamp
+        });
+        emit TestingFrameworkLogged(testingFrameworkCount, achievementId, frameworkType, testCount, testProof);
+        return testingFrameworkCount;
+    }
+
+    function logDocumentationGenerator(
+        uint256 achievementId,
+        string memory docFormat,
+        bytes32 docHash,
+        uint256 pageCount,
+        bytes32 docProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(docFormat).length > 0, "Documentation format required");
+        require(pageCount > 0, "Page count must be positive");
+        documentationGeneratorCount++;
+        documentationGenerators[documentationGeneratorCount] = DocumentationGenerator({
+            id: documentationGeneratorCount,
+            achievementId: achievementId,
+            docFormat: docFormat,
+            docHash: docHash,
+            pageCount: pageCount,
+            docProof: docProof,
+            recordedAt: block.timestamp
+        });
+        emit DocumentationGeneratorLogged(documentationGeneratorCount, achievementId, docFormat, pageCount, docProof);
+        return documentationGeneratorCount;
+    }
 }
 
 
