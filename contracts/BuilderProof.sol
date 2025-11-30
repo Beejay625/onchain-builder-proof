@@ -1615,6 +1615,128 @@ contract SocialMediaContract {
         emit CrossChainStateSyncLogged(crossChainStateSyncCount, achievementId, sourceChainId, targetChainId, stateHash);
         return crossChainStateSyncCount;
     }
+
+    function logQueryOptimizationEngine(
+        uint256 achievementId,
+        string memory queryType,
+        bytes32 optimizationHash,
+        uint256 performanceGain,
+        bytes32 optimizationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(queryType).length > 0, "Query type required");
+        require(performanceGain > 0, "Performance gain must be positive");
+        queryOptimizationEngineCount++;
+        queryOptimizationEngines[queryOptimizationEngineCount] = QueryOptimizationEngine({
+            id: queryOptimizationEngineCount,
+            achievementId: achievementId,
+            queryType: queryType,
+            optimizationHash: optimizationHash,
+            performanceGain: performanceGain,
+            optimizationProof: optimizationProof,
+            recordedAt: block.timestamp
+        });
+        emit QueryOptimizationEngineLogged(queryOptimizationEngineCount, achievementId, queryType, performanceGain, optimizationProof);
+        return queryOptimizationEngineCount;
+    }
+
+    function logCachingLayer(
+        uint256 achievementId,
+        string memory cacheStrategy,
+        bytes32 cacheKey,
+        uint256 hitRate,
+        bytes32 cacheProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(cacheStrategy).length > 0, "Cache strategy required");
+        require(hitRate <= 100, "Hit rate must be <= 100");
+        cachingLayerCount++;
+        cachingLayers[cachingLayerCount] = CachingLayer({
+            id: cachingLayerCount,
+            achievementId: achievementId,
+            cacheStrategy: cacheStrategy,
+            cacheKey: cacheKey,
+            hitRate: hitRate,
+            cacheProof: cacheProof,
+            recordedAt: block.timestamp
+        });
+        emit CachingLayerLogged(cachingLayerCount, achievementId, cacheStrategy, hitRate, cacheProof);
+        return cachingLayerCount;
+    }
+
+    function logBatchProcessingPipeline(
+        uint256 achievementId,
+        uint256 batchSize,
+        bytes32 batchHash,
+        uint256 processingTime,
+        bytes32 batchProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(batchSize > 0, "Batch size must be positive");
+        require(processingTime > 0, "Processing time must be positive");
+        batchProcessingPipelineCount++;
+        batchProcessingPipelines[batchProcessingPipelineCount] = BatchProcessingPipeline({
+            id: batchProcessingPipelineCount,
+            achievementId: achievementId,
+            batchSize: batchSize,
+            batchHash: batchHash,
+            processingTime: processingTime,
+            batchProof: batchProof,
+            recordedAt: block.timestamp
+        });
+        emit BatchProcessingPipelineLogged(batchProcessingPipelineCount, achievementId, batchSize, processingTime, batchProof);
+        return batchProcessingPipelineCount;
+    }
+
+    function logIndexingAccelerator(
+        uint256 achievementId,
+        string memory indexType,
+        bytes32 indexHash,
+        uint256 indexSize,
+        bytes32 indexingProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(indexType).length > 0, "Index type required");
+        require(indexSize > 0, "Index size must be positive");
+        indexingAcceleratorCount++;
+        indexingAccelerators[indexingAcceleratorCount] = IndexingAccelerator({
+            id: indexingAcceleratorCount,
+            achievementId: achievementId,
+            indexType: indexType,
+            indexHash: indexHash,
+            indexSize: indexSize,
+            indexingProof: indexingProof,
+            recordedAt: block.timestamp
+        });
+        emit IndexingAcceleratorLogged(indexingAcceleratorCount, achievementId, indexType, indexSize, indexingProof);
+        return indexingAcceleratorCount;
+    }
+
+    function logDataCompressionEngine(
+        uint256 achievementId,
+        string memory compressionAlgorithm,
+        bytes32 originalHash,
+        bytes32 compressedHash,
+        uint256 compressionRatio,
+        bytes32 compressionProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(compressionAlgorithm).length > 0, "Compression algorithm required");
+        require(compressionRatio > 0, "Compression ratio must be positive");
+        dataCompressionEngineCount++;
+        dataCompressionEngines[dataCompressionEngineCount] = DataCompressionEngine({
+            id: dataCompressionEngineCount,
+            achievementId: achievementId,
+            compressionAlgorithm: compressionAlgorithm,
+            originalHash: originalHash,
+            compressedHash: compressedHash,
+            compressionRatio: compressionRatio,
+            compressionProof: compressionProof,
+            recordedAt: block.timestamp
+        });
+        emit DataCompressionEngineLogged(dataCompressionEngineCount, achievementId, compressionAlgorithm, compressionRatio, compressionProof);
+        return dataCompressionEngineCount;
+    }
 }
 
 
