@@ -976,6 +976,37 @@ export interface FeatureFlags {
   achievementBottleneckDetector: boolean
   achievementAutoScalingController: boolean
   achievementPerformanceBenchmarkingSuite: boolean
+  // Data Intelligence wave feature flags (F661-F690)
+  achievementDataAnalyticsEngine: boolean
+  achievementPredictiveAnalyticsModel: boolean
+  achievementRealTimeInsightsDashboard: boolean
+  achievementDataWarehouseIntegration: boolean
+  achievementMachineLearningPipeline: boolean
+  achievementBusinessIntelligenceSuite: boolean
+  achievementDataVisualizationEngine: boolean
+  achievementStatisticalAnalysisTool: boolean
+  achievementTrendDetectionSystem: boolean
+  achievementAnomalyDetectionEngine: boolean
+  achievementDataMiningPlatform: boolean
+  achievementReportGenerationEngine: boolean
+  achievementDataQualityMonitor: boolean
+  achievementETLProcessingPipeline: boolean
+  achievementDataGovernanceFramework: boolean
+  achievementDataCatalogSystem: boolean
+  achievementDataLineageTracker: boolean
+  achievementDataProfilingTool: boolean
+  achievementDataEnrichmentService: boolean
+  achievementDataTransformationEngine: boolean
+  achievementDataValidationFramework: boolean
+  achievementDataRetentionManager: boolean
+  achievementDataClassificationSystem: boolean
+  achievementDataPrivacyEngine: boolean
+  achievementDataSecurityAuditor: boolean
+  achievementDataComplianceChecker: boolean
+  achievementDataBackupOrchestrator: boolean
+  achievementDataRecoveryManager: boolean
+  achievementDataArchivalSystem: boolean
+  achievementUnifiedDataIntelligencePlatform: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
