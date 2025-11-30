@@ -729,6 +729,40 @@ Deep dives for this nexus live in [`docs/feature-delivery-plan.md`](docs/feature
 
 Deep dives for this infrastructure wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-γ--defi-infrastructure--smart-contract-management-f481f510).
 
+### Decentralized Applications · 30 Scalability Solutions & dApp Platforms
+- 🔐 **Achievement Zero-Knowledge Proof System**: Generates and verifies zero-knowledge proofs for privacy-preserving operations.
+- 🌳 **Achievement Merkle Tree Verifier**: Verifies Merkle tree proofs for efficient data integrity checks.
+- 📦 **Achievement Batch Transaction Processor**: Processes multiple transactions in a single batch for gas efficiency.
+- ⚡ **Achievement State Channel Manager**: Manages off-chain state channels for scalable transactions.
+- 🚀 **Achievement Layer 2 Rollup Manager**: Manages Layer 2 rollup operations with multiple rollup types.
+- 🔄 **Achievement Atomic Swap Manager**: Manages atomic swaps for trustless cross-chain asset exchanges.
+- 🗳️ **Achievement Decentralized Voting System**: Decentralized voting with multiple voting mechanisms and privacy options.
+- ⏰ **Achievement Time-Locked Vault**: Vault with time-based locks for delayed withdrawals.
+- 💰 **Achievement Conditional Payment System**: Payments that execute based on predefined conditions.
+- 🔐 **Achievement Multi-Signature Escrow**: Escrow requiring multiple signatures for release.
+- 🎲 **Achievement Decentralized Lottery System**: Provably fair lottery system with verifiable randomness.
+- 🎲 **Achievement Decentralized Random Number Generator**: Generates verifiable random numbers for onchain applications.
+- 🏛️ **Achievement Decentralized Auction House**: Manages auctions with multiple auction types and bidding mechanisms.
+- 💸 **Achievement Decentralized Crowdfunding Platform**: Crowdfunding platform with milestone-based releases.
+- 🎮 **Achievement Decentralized Gaming Platform**: Gaming platform with provably fair mechanics and NFT rewards.
+- 🌐 **Achievement Decentralized Social Network**: Social network with content ownership and monetization.
+- 🎨 **Achievement Decentralized Content Marketplace**: Marketplace for buying and selling digital content as NFTs.
+- 🎵 **Achievement Decentralized Music Platform**: Music platform with NFT-based ownership and streaming rewards.
+- 🎬 **Achievement Decentralized Video Platform**: Video platform with decentralized storage and NFT-based monetization.
+- 📚 **Achievement Decentralized Education Platform**: Education platform with verifiable credentials and NFT certificates.
+- 🏥 **Achievement Decentralized Healthcare Platform**: Healthcare platform with encrypted medical records and privacy-preserving access.
+- 📦 **Achievement Decentralized Supply Chain Manager**: Tracks products through supply chain with verifiable provenance.
+- ⚡ **Achievement Decentralized Energy Trading Platform**: Peer-to-peer energy trading with smart grid integration.
+- 🏠 **Achievement Decentralized Real Estate Platform**: Real estate platform with fractional ownership and property NFTs.
+- ❤️ **Achievement Decentralized Charity Platform**: Charity platform with transparent donation tracking and impact verification.
+- 🛡️ **Achievement Decentralized Insurance Platform**: Insurance platform with parametric insurance and automated claims.
+- 💼 **Achievement Decentralized Freelance Platform**: Freelance platform with escrow payments and reputation system.
+- 🚗 **Achievement Decentralized Ride Sharing Platform**: Ride sharing platform with smart contracts for driver-rider matching.
+- 🍕 **Achievement Decentralized Food Delivery Platform**: Food delivery platform with order tracking and payment escrow.
+- 🎫 **Achievement Decentralized Event Ticketing Platform**: Event ticketing platform with NFT-based tickets and resale controls.
+
+Deep dives for this applications wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-δ--decentralized-applications--scalability-solutions-f511f540).
+
 ### Cross-Chain Security · 30 Multi-Chain Security Primitives
 - 🌉 **Achievement Cross-Chain Bridge Security**: Secures bridge operations with multi-signature verification.
 - 🔗 **Achievement Multi-Chain Verification Network**: Verifies proofs across multiple chains with consensus.
