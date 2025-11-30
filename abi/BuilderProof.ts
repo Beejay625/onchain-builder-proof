@@ -1236,6 +1236,117 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'shieldId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'vulnerabilityType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'severityLevel',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'mitigationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'ZeroDayVulnerabilityShieldLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'intelligenceId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'threatType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'threatLevel',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'analysisProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'AdvancedThreatIntelligenceLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'detectorId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'anomalyScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isAnomalous',
+        type: 'bool',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'detectionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'BehavioralAnomalyDetectorLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -3172,6 +3283,123 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logAdaptiveQuorumManager',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'vulnerabilityType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'detectionHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'severityLevel',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'mitigationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logZeroDayVulnerabilityShield',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'threatType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'intelligenceHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'threatLevel',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'analysisProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAdvancedThreatIntelligence',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'behaviorHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'anomalyScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bool',
+        name: 'isAnomalous',
+        type: 'bool',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'detectionProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logBehavioralAnomalyDetector',
     outputs: [
       {
         internalType: 'uint256',
