@@ -58,6 +58,11 @@ contract SocialMediaContract {
     uint256 public realTimeInsightsDashboardCount;
     uint256 public dataWarehouseIntegrationCount;
     uint256 public machineLearningPipelineCount;
+    uint256 public developerSDKCount;
+    uint256 public apiGatewayCount;
+    uint256 public codeGenerationToolCount;
+    uint256 public testingFrameworkCount;
+    uint256 public documentationGeneratorCount;
     
     struct Post {
         uint256 id;
@@ -551,6 +556,56 @@ contract SocialMediaContract {
         bytes32 pipelineProof;
         uint256 recordedAt;
     }
+
+    struct DeveloperSDK {
+        uint256 id;
+        uint256 achievementId;
+        string sdkVersion;
+        bytes32 sdkHash;
+        string language;
+        bytes32 sdkProof;
+        uint256 recordedAt;
+    }
+
+    struct APIGateway {
+        uint256 id;
+        uint256 achievementId;
+        string gatewayType;
+        bytes32 endpointHash;
+        uint256 requestCount;
+        bytes32 gatewayProof;
+        uint256 recordedAt;
+    }
+
+    struct CodeGenerationTool {
+        uint256 id;
+        uint256 achievementId;
+        string toolType;
+        bytes32 templateHash;
+        uint256 generatedFiles;
+        bytes32 generationProof;
+        uint256 recordedAt;
+    }
+
+    struct TestingFramework {
+        uint256 id;
+        uint256 achievementId;
+        string frameworkType;
+        bytes32 testSuiteHash;
+        uint256 testCoverage;
+        bytes32 testProof;
+        uint256 recordedAt;
+    }
+
+    struct DocumentationGenerator {
+        uint256 id;
+        uint256 achievementId;
+        string generatorType;
+        bytes32 docHash;
+        uint256 pagesGenerated;
+        bytes32 documentationProof;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
@@ -714,6 +769,11 @@ contract SocialMediaContract {
         realTimeInsightsDashboardCount = 0;
         dataWarehouseIntegrationCount = 0;
         machineLearningPipelineCount = 0;
+        developerSDKCount = 0;
+        apiGatewayCount = 0;
+        codeGenerationToolCount = 0;
+        testingFrameworkCount = 0;
+        documentationGeneratorCount = 0;
     }
     
     function createPost(string memory content) public returns (uint256) {
