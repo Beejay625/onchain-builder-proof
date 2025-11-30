@@ -1347,6 +1347,191 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'bridgeId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'sourceProtocol',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'targetProtocol',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'bridgeHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CrossProtocolBridgeLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'messageId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'sourceProtocol',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'targetProtocol',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'messageHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'UniversalMessagePassingLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'standardId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'standardName',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'complianceScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'InteroperabilityStandardsLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'registryId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'protocolName',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'adapterVersion',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isActive',
+        type: 'bool',
+      },
+    ],
+    name: 'ProtocolAdapterRegistryLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'syncId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'sourceChainId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'targetChainId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'stateHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'CrossChainStateSyncLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -3400,6 +3585,211 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logBehavioralAnomalyDetector',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'sourceProtocol',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'targetProtocol',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'bridgeProof',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'assetAmount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'bridgeHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCrossProtocolBridge',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'sourceProtocol',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'targetProtocol',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'messageHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'deliveryProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logUniversalMessagePassing',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'standardName',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'standardHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'complianceScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logInteroperabilityStandards',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'protocolName',
+        type: 'string',
+      },
+      {
+        internalType: 'string',
+        name: 'adapterVersion',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'adapterHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bool',
+        name: 'isActive',
+        type: 'bool',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'registrationProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logProtocolAdapterRegistry',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'sourceChainId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'targetChainId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'stateHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'syncProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logCrossChainStateSync',
     outputs: [
       {
         internalType: 'uint256',
