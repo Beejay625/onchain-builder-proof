@@ -612,6 +612,56 @@ contract SocialMediaContract {
         uint256 recordedAt;
     }
 
+    struct OnboardingWizard {
+        uint256 id;
+        uint256 achievementId;
+        string wizardType;
+        bytes32 wizardHash;
+        uint256 stepCount;
+        bytes32 wizardProof;
+        uint256 recordedAt;
+    }
+
+    struct UserOnboardingFlow {
+        uint256 id;
+        uint256 achievementId;
+        string flowType;
+        bytes32 flowHash;
+        uint256 completionRate;
+        bytes32 flowProof;
+        uint256 recordedAt;
+    }
+
+    struct InteractiveTutorial {
+        uint256 id;
+        uint256 achievementId;
+        string tutorialType;
+        bytes32 tutorialHash;
+        uint256 lessonCount;
+        bytes32 tutorialProof;
+        uint256 recordedAt;
+    }
+
+    struct ContextualHelp {
+        uint256 id;
+        uint256 achievementId;
+        string helpType;
+        bytes32 helpContentHash;
+        uint256 helpViews;
+        bytes32 helpProof;
+        uint256 recordedAt;
+    }
+
+    struct AccessibilityCompliance {
+        uint256 id;
+        uint256 achievementId;
+        string standardType;
+        bytes32 complianceHash;
+        uint256 complianceScore;
+        bytes32 complianceProof;
+        uint256 recordedAt;
+    }
+
     struct DeveloperSDK {
         uint256 id;
         uint256 achievementId;
@@ -720,6 +770,11 @@ contract SocialMediaContract {
     mapping(uint256 => CodeGenerationTool) public codeGenerationTools;
     mapping(uint256 => TestingFramework) public testingFrameworks;
     mapping(uint256 => DocumentationGenerator) public documentationGenerators;
+    mapping(uint256 => OnboardingWizard) public onboardingWizards;
+    mapping(uint256 => UserOnboardingFlow) public userOnboardingFlows;
+    mapping(uint256 => InteractiveTutorial) public interactiveTutorials;
+    mapping(uint256 => ContextualHelp) public contextualHelps;
+    mapping(uint256 => AccessibilityCompliance) public accessibilityCompliances;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
