@@ -831,6 +831,11 @@ contract SocialMediaContract {
     event CodeGenerationToolLogged(uint256 indexed toolId, uint256 indexed achievementId, string templateType, uint256 generatedFiles, bytes32 generationProof);
     event TestingFrameworkLogged(uint256 indexed frameworkId, uint256 indexed achievementId, string frameworkType, uint256 testCount, bytes32 testProof);
     event DocumentationGeneratorLogged(uint256 indexed generatorId, uint256 indexed achievementId, string docFormat, uint256 pageCount, bytes32 docProof);
+    event OnboardingWizardLogged(uint256 indexed wizardId, uint256 indexed achievementId, string wizardType, uint256 stepCount, bytes32 wizardProof);
+    event UserOnboardingFlowLogged(uint256 indexed flowId, uint256 indexed achievementId, string flowType, uint256 completionRate, bytes32 flowProof);
+    event InteractiveTutorialLogged(uint256 indexed tutorialId, uint256 indexed achievementId, string tutorialType, uint256 lessonCount, bytes32 tutorialProof);
+    event ContextualHelpLogged(uint256 indexed helpId, uint256 indexed achievementId, string helpType, uint256 helpViews, bytes32 helpProof);
+    event AccessibilityComplianceLogged(uint256 indexed complianceId, uint256 indexed achievementId, string standardType, uint256 complianceScore, bytes32 complianceProof);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
