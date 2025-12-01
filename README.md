@@ -1093,6 +1093,40 @@ Deep dives for this intelligence layer live in [`docs/feature-delivery-plan.md`]
 
 Deep dives for this developer platform live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--developer-experience-f691f720).
 
+### User Experience · 30 UX Enhancement Primitives
+- 🧙 **Achievement Onboarding Wizard**: Wizard for guiding new users through setup with step-by-step instructions.
+- 🚀 **Achievement User Onboarding Flow**: Flow for onboarding new users with completion tracking.
+- 📚 **Achievement Interactive Tutorial**: Interactive tutorial for learning platform features with hands-on lessons.
+- 💡 **Achievement Contextual Help**: Contextual help system with tooltips and guides with view tracking.
+- ♿ **Achievement Accessibility Compliance**: Compliance with accessibility standards and guidelines with scoring.
+- 🌍 **Achievement Multi-Language Support**: Support for multiple languages and locales with translation management.
+- 🌙 **Achievement Dark Mode Toggle**: Toggle for dark mode and theme switching with preference persistence.
+- 🎨 **Achievement Customizable Dashboard**: Dashboard with customizable widgets and layouts with drag-and-drop.
+- 🔔 **Achievement Notification Preferences**: Preferences for managing notifications and alerts with granular controls.
+- 💬 **Achievement User Feedback System**: System for collecting and managing user feedback with analytics.
+- 💌 **Achievement In-App Messaging**: In-app messaging system for user communication with real-time delivery.
+- 📱 **Achievement Progressive Web App**: Progressive web app capabilities with offline support and install prompts.
+- 📴 **Achievement Offline Mode**: Offline mode for using the app without internet with sync capabilities.
+- 👆 **Achievement Gesture Controls**: Gesture controls for touch and mobile devices with customizable actions.
+- 🎤 **Achievement Voice Commands**: Voice commands for hands-free interaction with speech recognition.
+- ⌨️ **Achievement Keyboard Shortcuts**: Keyboard shortcuts for power users with customizable key bindings.
+- 🔍 **Achievement Search Functionality**: Advanced search functionality with filters and autocomplete.
+- 🔽 **Achievement Filtering System**: System for filtering and narrowing results with multiple criteria.
+- 📊 **Achievement Sorting Options**: Options for sorting data and content with multiple sort keys.
+- 📦 **Achievement Bulk Actions**: Bulk actions for managing multiple items with selection tools.
+- ↩️ **Achievement Undo/Redo System**: System for undoing and redoing actions with history tracking.
+- 💾 **Achievement Auto-Save Feature**: Auto-save feature for preventing data loss with version history.
+- 🖱️ **Achievement Drag and Drop Interface**: Drag and drop interface for intuitive interactions with visual feedback.
+- 📐 **Achievement Responsive Design**: Responsive design for all screen sizes with adaptive layouts.
+- 📱 **Achievement Mobile Optimization**: Optimization for mobile devices and touch screens with gesture support.
+- ⏳ **Achievement Loading States**: Loading states and progress indicators with skeleton screens.
+- ⚠️ **Achievement Error Messages**: User-friendly error messages and handling with recovery suggestions.
+- ✨ **Achievement Success Animations**: Animations for successful actions and feedback with celebration effects.
+- ⚙️ **Achievement User Preferences**: System for managing user preferences and settings with sync across devices.
+- 🌐 **Achievement Unified User Experience**: Unified experience across all platform features with consistent design.
+
+Deep dives for this UX layer live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--user-experience-f721f750).
+
 ### Nebula Forge · 30 Autonomous Continuity Controls
 - 🕸️ **Achievement Sovereign Failover Mesh**: Clone entire achievement scopes across sovereign deployments with notarized rehearsal receipts so failovers stay deterministic.
 - 🔥 **Achievement Adaptive Intent Firewall**: Run AI-scored policy firewalls ahead of broadcast and require hashed overrides for every exception.
