@@ -2088,6 +2088,39 @@ export const developerExperienceFlagMetadata: FeatureFlagDescriptor[] = [
   { key: 'achievementUnifiedDeveloperPlatform', title: 'Achievement Unified Developer Platform', summary: 'Platform unifying all developer tools and services.', docPath: '/docs/onchain-feature-expansion.md#developer-experience', wave: 'Developer Experience' },
 ]
 
+export const userExperienceFlagMetadata: FeatureFlagDescriptor[] = [
+  { key: 'achievementOnboardingWizard', title: 'Achievement Onboarding Wizard', summary: 'Wizard for guiding new users through setup.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementUserOnboardingFlow', title: 'Achievement User Onboarding Flow', summary: 'Flow for onboarding new users with step-by-step guidance.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementInteractiveTutorial', title: 'Achievement Interactive Tutorial', summary: 'Interactive tutorial for learning platform features.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementContextualHelp', title: 'Achievement Contextual Help', summary: 'Contextual help system with tooltips and guides.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementAccessibilityCompliance', title: 'Achievement Accessibility Compliance', summary: 'Compliance with accessibility standards and guidelines.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementMultiLanguageSupport', title: 'Achievement Multi-Language Support', summary: 'Support for multiple languages and locales.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementDarkModeToggle', title: 'Achievement Dark Mode Toggle', summary: 'Toggle for dark mode and theme switching.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementCustomizableDashboard', title: 'Achievement Customizable Dashboard', summary: 'Dashboard with customizable widgets and layouts.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementNotificationPreferences', title: 'Achievement Notification Preferences', summary: 'Preferences for managing notifications and alerts.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementUserFeedbackSystem', title: 'Achievement User Feedback System', summary: 'System for collecting and managing user feedback.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementInAppMessaging', title: 'Achievement In-App Messaging', summary: 'In-app messaging system for user communication.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementProgressiveWebApp', title: 'Achievement Progressive Web App', summary: 'Progressive web app capabilities with offline support.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementOfflineMode', title: 'Achievement Offline Mode', summary: 'Offline mode for using the app without internet.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementGestureControls', title: 'Achievement Gesture Controls', summary: 'Gesture controls for touch and mobile devices.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementVoiceCommands', title: 'Achievement Voice Commands', summary: 'Voice commands for hands-free interaction.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementKeyboardShortcuts', title: 'Achievement Keyboard Shortcuts', summary: 'Keyboard shortcuts for power users.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementSearchFunctionality', title: 'Achievement Search Functionality', summary: 'Advanced search functionality with filters.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementFilteringSystem', title: 'Achievement Filtering System', summary: 'System for filtering and narrowing results.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementSortingOptions', title: 'Achievement Sorting Options', summary: 'Options for sorting data and content.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementBulkActions', title: 'Achievement Bulk Actions', summary: 'Bulk actions for managing multiple items.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementUndoRedoSystem', title: 'Achievement Undo/Redo System', summary: 'System for undoing and redoing actions.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementAutoSaveFeature', title: 'Achievement Auto-Save Feature', summary: 'Auto-save feature for preventing data loss.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementDragAndDropInterface', title: 'Achievement Drag and Drop Interface', summary: 'Drag and drop interface for intuitive interactions.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementResponsiveDesign', title: 'Achievement Responsive Design', summary: 'Responsive design for all screen sizes.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementMobileOptimization', title: 'Achievement Mobile Optimization', summary: 'Optimization for mobile devices and touch screens.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementLoadingStates', title: 'Achievement Loading States', summary: 'Loading states and progress indicators.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementErrorMessages', title: 'Achievement Error Messages', summary: 'User-friendly error messages and handling.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementSuccessAnimations', title: 'Achievement Success Animations', summary: 'Animations for successful actions and feedback.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementUserPreferences', title: 'Achievement User Preferences', summary: 'System for managing user preferences and settings.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+  { key: 'achievementUnifiedUserExperience', title: 'Achievement Unified User Experience', summary: 'Unified experience across all platform features.', docPath: '/docs/onchain-feature-expansion.md#user-experience', wave: 'User Experience' },
+]
+
 let flagOverrides: Partial<FeatureFlags> = {}
 
 export const configureFeatureFlags = (overrides: Partial<FeatureFlags>) => {
