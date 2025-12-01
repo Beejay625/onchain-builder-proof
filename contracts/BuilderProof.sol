@@ -1411,7 +1411,7 @@ contract SocialMediaContract {
         string jurisdiction;
         bytes32 evidencePackageHash;
         bytes32 residencyProof;
-        bool sealed;
+        bool isSealed;
         uint256 recordedAt;
     }
 
