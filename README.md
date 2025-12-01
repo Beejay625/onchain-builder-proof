@@ -2730,6 +2730,40 @@ npm run dev
 
 Deep dives for this wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#developer-excellence-wave--30-onchain-developer-tools-f541f570).
 
+### Infrastructure Excellence Wave · 30 Advanced Development Infrastructure (F571-F600)
+- 🌐 **Achievement Decentralized API Gateway Registry**: Register and manage API gateways with endpoint tracking, rate limit policies, and authentication methods.
+- 📦 **Achievement Smart Contract Version Control System**: Track contract versions with changelog hashes, version numbers, and version proof validation.
+- 🗂️ **Achievement Decentralized Code Repository Network**: Manage code repositories with access control, repository types, and repository status tracking.
+- ✅ **Achievement Automated Code Quality Gate**: Enforce code quality standards with configurable thresholds, metric types, and quality gate validation.
+- 🔨 **Achievement Decentralized Build Pipeline Registry**: Register build pipelines with build types, configuration hashes, and pipeline status management.
+- 📊 **Achievement Smart Contract Monitoring Dashboard**: Monitor contract metrics with alert thresholds, metric types, and dashboard status tracking.
+- 💰 **Achievement Decentralized Code Snippet Marketplace**: Trade code snippets with pricing, license types, and snippet proof validation.
+- 🔄 **Achievement Automated Dependency Update Tracker**: Track dependency updates with security scoring, update counts, and dependency tracking.
+- 👥 **Achievement Decentralized Code Review Marketplace**: Connect reviewers with projects using pricing models, reviewer counts, and marketplace validation.
+- 🧪 **Achievement Smart Contract Testing Framework Registry**: Register testing frameworks with test counts, framework types, and framework validation.
+- 📈 **Achievement Decentralized Code Analytics Platform**: Provide code insights with analytics types, metric counts, and platform status tracking.
+- 📚 **Achievement Automated Code Documentation Generator**: Generate documentation with format selection, page counts, and generator status management.
+- 💾 **Achievement Decentralized Code Backup Network**: Manage code backups with backup types, backup sizes, and backup status tracking.
+- 📋 **Achievement Smart Contract Event Log Analyzer**: Analyze contract events with event counts, analysis types, and analyzer status management.
+- 🤝 **Achievement Decentralized Code Collaboration Workspace**: Manage collaboration with workspace types, collaborator counts, and workspace status tracking.
+- 🔧 **Achievement Automated Code Refactoring Tracker**: Track code improvements with refactoring types, improvement scores, and tracker validation.
+- 🔒 **Achievement Decentralized Code Security Scanner**: Perform security scans with scan types, vulnerability counts, and scanner status management.
+- ⚡ **Achievement Smart Contract Performance Profiler**: Profile contract performance with profile types, performance scores, and profiler validation.
+- 🚀 **Achievement Decentralized Code Deployment Automation**: Automate deployments with deployment types, deployment counts, and automation status tracking.
+- 🎯 **Achievement Automated Code Review Assignment System**: Assign reviews with algorithms, reviewer counts, and assignment system validation.
+- 📊 **Achievement Decentralized Code Metrics Dashboard**: Display code metrics with dashboard types, metric counts, and dashboard status management.
+- 🔄 **Achievement Smart Contract State Migration Tool**: Handle state migrations with migration types, state sizes, and migration tool validation.
+- 🧹 **Achievement Decentralized Code Linting Service**: Enforce code standards with linting rules, violation counts, and linting service status.
+- 🔀 **Achievement Automated Code Merge Conflict Resolver**: Resolve merge conflicts with resolution algorithms, conflict counts, and resolver validation.
+- 📑 **Achievement Decentralized Code Template Library**: Provide code templates with template categories, template counts, and library status tracking.
+- ⛽ **Achievement Smart Contract Gas Profiler**: Profile gas usage with gas metrics, optimization potential, and profiler status management.
+- 🔐 **Achievement Decentralized Code Access Control Manager**: Manage access permissions with control types, access levels, and manager validation.
+- ✨ **Achievement Automated Code Style Enforcer**: Enforce code style with style rules, compliance scores, and enforcer status tracking.
+- 📖 **Achievement Decentralized Code Knowledge Base**: Provide code documentation with knowledge domains, article counts, and knowledge base status.
+- 🗺️ **Achievement Smart Contract Upgrade Path Planner**: Plan upgrade strategies with upgrade paths, risk assessments, and planner validation.
+
+Deep dives for this infrastructure wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#infrastructure-excellence-wave--30-advanced-development-infrastructure-f571f600).
+
 ## Smart Contract
 
 The application uses a deployed `BuilderProof` smart contract on **Base chain** that allows users to:
@@ -2772,7 +2806,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **624+ features** shipped yet summarized cleanly in the README.
+- **654+ features** shipped yet summarized cleanly in the README.
 - **Unified onchain hub** for minting, governance, payouts, and badge ops.
 - **Reown-native wallet UX** with streaks, leaderboards, and social loops.
 - **Marketplace & NFT rail** covering rentals, royalties, and appraisals.
