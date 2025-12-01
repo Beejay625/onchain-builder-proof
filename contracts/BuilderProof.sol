@@ -4579,6 +4579,672 @@ contract SocialMediaContract {
         return autonomousRecoveryMeshCount;
     }
 
+    function logSentinelConsensusMirror(
+        uint256 achievementId,
+        bytes32 validatorVoteHash,
+        bytes32 crossDomainConfirmation,
+        uint256 finalityDrift
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        sentinelConsensusMirrorCount++;
+        sentinelConsensusMirrors[sentinelConsensusMirrorCount] = SentinelConsensusMirror({
+            id: sentinelConsensusMirrorCount,
+            achievementId: achievementId,
+            validatorVoteHash: validatorVoteHash,
+            crossDomainConfirmation: crossDomainConfirmation,
+            finalityDrift: finalityDrift,
+            recordedAt: block.timestamp
+        });
+        emit SentinelConsensusMirrorLogged(sentinelConsensusMirrorCount, achievementId, validatorVoteHash, crossDomainConfirmation, finalityDrift);
+        return sentinelConsensusMirrorCount;
+    }
+
+    function logPredictiveFailoverGraph(
+        uint256 achievementId,
+        bytes32 dependencyGraphHash,
+        bytes32 failoverPathHash,
+        uint256 confidenceLevel
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(confidenceLevel <= 100, "Confidence level must be <= 100");
+        predictiveFailoverGraphCount++;
+        predictiveFailoverGraphs[predictiveFailoverGraphCount] = PredictiveFailoverGraph({
+            id: predictiveFailoverGraphCount,
+            achievementId: achievementId,
+            dependencyGraphHash: dependencyGraphHash,
+            failoverPathHash: failoverPathHash,
+            confidenceLevel: confidenceLevel,
+            recordedAt: block.timestamp
+        });
+        emit PredictiveFailoverGraphLogged(predictiveFailoverGraphCount, achievementId, dependencyGraphHash, failoverPathHash, confidenceLevel);
+        return predictiveFailoverGraphCount;
+    }
+
+    function logIntentDelayVault(
+        uint256 achievementId,
+        uint256 holdWindow,
+        bytes32 overrideAttestation
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(holdWindow > 0, "Hold window required");
+        intentDelayVaultCount++;
+        intentDelayVaults[intentDelayVaultCount] = IntentDelayVault({
+            id: intentDelayVaultCount,
+            achievementId: achievementId,
+            holdWindow: holdWindow,
+            overrideAttestation: overrideAttestation,
+            released: false,
+            recordedAt: block.timestamp
+        });
+        emit IntentDelayVaultLogged(intentDelayVaultCount, achievementId, holdWindow, overrideAttestation);
+        return intentDelayVaultCount;
+    }
+
+    function releaseIntentDelayVault(uint256 vaultId) public {
+        require(vaultId > 0 && vaultId <= intentDelayVaultCount, "Vault missing");
+        IntentDelayVault storage vault = intentDelayVaults[vaultId];
+        require(!vault.released, "Vault already released");
+        vault.released = true;
+        emit IntentDelayVaultReleased(vaultId, msg.sender);
+    }
+
+    function logGuardianBondEscrow(
+        uint256 achievementId,
+        uint256 bondedAmount,
+        uint256 remediationSLA
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bondedAmount > 0, "Bonded amount required");
+        guardianBondEscrowCount++;
+        guardianBondEscrows[guardianBondEscrowCount] = GuardianBondEscrow({
+            id: guardianBondEscrowCount,
+            achievementId: achievementId,
+            bondedAmount: bondedAmount,
+            remediationSLA: remediationSLA,
+            slashed: false,
+            recordedAt: block.timestamp
+        });
+        emit GuardianBondEscrowLogged(guardianBondEscrowCount, achievementId, bondedAmount, remediationSLA);
+        return guardianBondEscrowCount;
+    }
+
+    function slashGuardianBondEscrow(uint256 escrowId) public {
+        require(escrowId > 0 && escrowId <= guardianBondEscrowCount, "Escrow missing");
+        GuardianBondEscrow storage escrow = guardianBondEscrows[escrowId];
+        require(!escrow.slashed, "Escrow already slashed");
+        escrow.slashed = true;
+        emit GuardianBondEscrowSlashed(escrowId, msg.sender);
+    }
+
+    function logCustodyChainSequencer(
+        uint256 achievementId,
+        string[] memory custodyHops,
+        bytes32 evidenceHash,
+        bytes32 artifactHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(custodyHops.length > 0, "Custody hops required");
+        custodyChainSequencerCount++;
+        custodyChainSequencers[custodyChainSequencerCount] = CustodyChainSequencer({
+            id: custodyChainSequencerCount,
+            achievementId: achievementId,
+            custodyHops: custodyHops,
+            evidenceHash: evidenceHash,
+            artifactHash: artifactHash,
+            recordedAt: block.timestamp
+        });
+        emit CustodyChainSequencerLogged(custodyChainSequencerCount, achievementId, evidenceHash, artifactHash);
+        return custodyChainSequencerCount;
+    }
+
+    function logEncryptionEnvelopeLedger(
+        uint256 achievementId,
+        string memory encryptionSuite,
+        uint256 rotationCadence,
+        bytes32 signerFingerprint,
+        bytes32 proofBundleHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(encryptionSuite).length > 0, "Encryption suite required");
+        encryptionEnvelopeLedgerCount++;
+        encryptionEnvelopeLedgers[encryptionEnvelopeLedgerCount] = EncryptionEnvelopeLedger({
+            id: encryptionEnvelopeLedgerCount,
+            achievementId: achievementId,
+            encryptionSuite: encryptionSuite,
+            rotationCadence: rotationCadence,
+            signerFingerprint: signerFingerprint,
+            proofBundleHash: proofBundleHash,
+            recordedAt: block.timestamp
+        });
+        emit EncryptionEnvelopeLedgerLogged(encryptionEnvelopeLedgerCount, achievementId, encryptionSuite, rotationCadence, signerFingerprint);
+        return encryptionEnvelopeLedgerCount;
+    }
+
+    function logDeviceTrustFabric(
+        uint256 achievementId,
+        bytes32 hardwareAttestationHash,
+        string memory geoHint,
+        bytes32 signingSessionHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        deviceTrustFabricCount++;
+        deviceTrustFabrics[deviceTrustFabricCount] = DeviceTrustFabric({
+            id: deviceTrustFabricCount,
+            achievementId: achievementId,
+            hardwareAttestationHash: hardwareAttestationHash,
+            geoHint: geoHint,
+            signingSessionHash: signingSessionHash,
+            recordedAt: block.timestamp
+        });
+        emit DeviceTrustFabricLogged(deviceTrustFabricCount, achievementId, hardwareAttestationHash, geoHint, signingSessionHash);
+        return deviceTrustFabricCount;
+    }
+
+    function logRateLimitBeacon(
+        uint256 achievementId,
+        uint256 throttleBudget,
+        uint256 throughputCap,
+        bytes32 automationAgentHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(throughputCap > 0, "Throughput cap required");
+        rateLimitBeaconCount++;
+        rateLimitBeacons[rateLimitBeaconCount] = RateLimitBeacon({
+            id: rateLimitBeaconCount,
+            achievementId: achievementId,
+            throttleBudget: throttleBudget,
+            throughputCap: throughputCap,
+            automationAgentHash: automationAgentHash,
+            recordedAt: block.timestamp
+        });
+        emit RateLimitBeaconLogged(rateLimitBeaconCount, achievementId, throttleBudget, throughputCap, automationAgentHash);
+        return rateLimitBeaconCount;
+    }
+
+    function logPostQuantumAttestor(
+        uint256 achievementId,
+        bytes32 pqProofTranscript,
+        string memory verifierImplementation,
+        bytes32 attestationHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(verifierImplementation).length > 0, "Verifier implementation required");
+        postQuantumAttestorCount++;
+        postQuantumAttestors[postQuantumAttestorCount] = PostQuantumAttestor({
+            id: postQuantumAttestorCount,
+            achievementId: achievementId,
+            pqProofTranscript: pqProofTranscript,
+            verifierImplementation: verifierImplementation,
+            attestationHash: attestationHash,
+            recordedAt: block.timestamp
+        });
+        emit PostQuantumAttestorLogged(postQuantumAttestorCount, achievementId, pqProofTranscript, verifierImplementation, attestationHash);
+        return postQuantumAttestorCount;
+    }
+
+    function logRollingProofContinuity(
+        uint256 achievementId,
+        uint256 proofWindowStart,
+        uint256 proofWindowEnd,
+        bytes32 overlapProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(proofWindowEnd > proofWindowStart, "End must be after start");
+        rollingProofContinuityCount++;
+        rollingProofContinuities[rollingProofContinuityCount] = RollingProofContinuity({
+            id: rollingProofContinuityCount,
+            achievementId: achievementId,
+            proofWindowStart: proofWindowStart,
+            proofWindowEnd: proofWindowEnd,
+            overlapProof: overlapProof,
+            recordedAt: block.timestamp
+        });
+        emit RollingProofContinuityLogged(rollingProofContinuityCount, achievementId, proofWindowStart, proofWindowEnd, overlapProof);
+        return rollingProofContinuityCount;
+    }
+
+    function logRollforwardRepairKit(
+        uint256 achievementId,
+        bytes32 repairScriptHash,
+        bytes32 stateHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        rollforwardRepairKitCount++;
+        rollforwardRepairKits[rollforwardRepairKitCount] = RollforwardRepairKit({
+            id: rollforwardRepairKitCount,
+            achievementId: achievementId,
+            repairScriptHash: repairScriptHash,
+            stateHash: stateHash,
+            executed: false,
+            recordedAt: block.timestamp
+        });
+        emit RollforwardRepairKitLogged(rollforwardRepairKitCount, achievementId, repairScriptHash, stateHash, false);
+        return rollforwardRepairKitCount;
+    }
+
+    function logMultihopRewardDirector(
+        uint256 achievementId,
+        address[] memory recipients,
+        bytes32 routingTreeHash,
+        bytes32 fallbackRecipient,
+        string memory reasonCode
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(recipients.length > 0, "Recipients required");
+        multihopRewardDirectorCount++;
+        multihopRewardDirectors[multihopRewardDirectorCount] = MultihopRewardDirector({
+            id: multihopRewardDirectorCount,
+            achievementId: achievementId,
+            recipients: recipients,
+            routingTreeHash: routingTreeHash,
+            fallbackRecipient: fallbackRecipient,
+            reasonCode: reasonCode,
+            recordedAt: block.timestamp
+        });
+        emit MultihopRewardDirectorLogged(multihopRewardDirectorCount, achievementId, routingTreeHash, fallbackRecipient, reasonCode);
+        return multihopRewardDirectorCount;
+    }
+
+    function logGasRefundRouter(
+        uint256 achievementId,
+        uint256 refundAmount,
+        bytes32 sponsoredTransactionHash,
+        address spender,
+        bytes32 attestation
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(refundAmount > 0, "Refund amount required");
+        require(spender != address(0), "Invalid spender");
+        gasRefundRouterCount++;
+        gasRefundRouters[gasRefundRouterCount] = GasRefundRouter({
+            id: gasRefundRouterCount,
+            achievementId: achievementId,
+            refundAmount: refundAmount,
+            sponsoredTransactionHash: sponsoredTransactionHash,
+            spender: spender,
+            attestation: attestation,
+            recordedAt: block.timestamp
+        });
+        emit GasRefundRouterLogged(gasRefundRouterCount, achievementId, refundAmount, sponsoredTransactionHash, spender);
+        return gasRefundRouterCount;
+    }
+
+    function logSovereignExecutorLedger(
+        uint256 achievementId,
+        address executor,
+        bytes32 permissionsHash,
+        bytes32 reviewHash,
+        bool approved
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(executor != address(0), "Invalid executor");
+        sovereignExecutorLedgerCount++;
+        sovereignExecutorLedgers[sovereignExecutorLedgerCount] = SovereignExecutorLedger({
+            id: sovereignExecutorLedgerCount,
+            achievementId: achievementId,
+            executor: executor,
+            permissionsHash: permissionsHash,
+            reviewHash: reviewHash,
+            approved: approved,
+            recordedAt: block.timestamp
+        });
+        emit SovereignExecutorLedgerLogged(sovereignExecutorLedgerCount, achievementId, executor, permissionsHash, reviewHash, approved);
+        return sovereignExecutorLedgerCount;
+    }
+
+    function logGuardianDriftRadar(
+        uint256 achievementId,
+        address guardian,
+        uint256 missedHeartbeats,
+        bytes32 escalationStepsHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(guardian != address(0), "Invalid guardian");
+        guardianDriftRadarCount++;
+        bool idle = missedHeartbeats > 0;
+        guardianDriftRadars[guardianDriftRadarCount] = GuardianDriftRadar({
+            id: guardianDriftRadarCount,
+            achievementId: achievementId,
+            guardian: guardian,
+            missedHeartbeats: missedHeartbeats,
+            escalationStepsHash: escalationStepsHash,
+            idle: idle,
+            recordedAt: block.timestamp
+        });
+        emit GuardianDriftRadarLogged(guardianDriftRadarCount, achievementId, guardian, missedHeartbeats, escalationStepsHash, idle);
+        return guardianDriftRadarCount;
+    }
+
+    function logIntegrityBeaconSwitchboard(
+        uint256 achievementId,
+        bytes32 integrityBeaconHash,
+        string[] memory storagePlanes,
+        bytes32 receiptHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(storagePlanes.length > 0, "Storage planes required");
+        integrityBeaconSwitchboardCount++;
+        integrityBeaconSwitchboards[integrityBeaconSwitchboardCount] = IntegrityBeaconSwitchboard({
+            id: integrityBeaconSwitchboardCount,
+            achievementId: achievementId,
+            integrityBeaconHash: integrityBeaconHash,
+            storagePlanes: storagePlanes,
+            receiptHash: receiptHash,
+            recordedAt: block.timestamp
+        });
+        emit IntegrityBeaconSwitchboardLogged(integrityBeaconSwitchboardCount, achievementId, integrityBeaconHash, receiptHash);
+        return integrityBeaconSwitchboardCount;
+    }
+
+    function logAuditReplayShuttle(
+        uint256 achievementId,
+        bytes32 datasetHash,
+        bytes32 incidentHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        auditReplayShuttleCount++;
+        auditReplayShuttles[auditReplayShuttleCount] = AuditReplayShuttle({
+            id: auditReplayShuttleCount,
+            achievementId: achievementId,
+            datasetHash: datasetHash,
+            incidentHash: incidentHash,
+            replayReady: true,
+            recordedAt: block.timestamp
+        });
+        emit AuditReplayShuttleLogged(auditReplayShuttleCount, achievementId, datasetHash, incidentHash, true);
+        return auditReplayShuttleCount;
+    }
+
+    function logEvidenceCompressionLab(
+        uint256 achievementId,
+        string memory compressionRecipe,
+        uint256 compressionRatio,
+        bytes32 verifierHash,
+        bytes32 originalHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(compressionRecipe).length > 0, "Compression recipe required");
+        require(compressionRatio > 0, "Compression ratio required");
+        evidenceCompressionLabCount++;
+        evidenceCompressionLabs[evidenceCompressionLabCount] = EvidenceCompressionLab({
+            id: evidenceCompressionLabCount,
+            achievementId: achievementId,
+            compressionRecipe: compressionRecipe,
+            compressionRatio: compressionRatio,
+            verifierHash: verifierHash,
+            originalHash: originalHash,
+            recordedAt: block.timestamp
+        });
+        emit EvidenceCompressionLabLogged(evidenceCompressionLabCount, achievementId, compressionRecipe, compressionRatio, verifierHash);
+        return evidenceCompressionLabCount;
+    }
+
+    function logReviewerSignalToken(
+        uint256 achievementId,
+        address reviewer,
+        uint256 signalScore,
+        bytes32 reviewAccuracyProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(reviewer != address(0), "Invalid reviewer");
+        require(signalScore <= 100, "Signal score must be <= 100");
+        reviewerSignalTokenCount++;
+        reviewerSignalTokens[reviewerSignalTokenCount] = ReviewerSignalToken({
+            id: reviewerSignalTokenCount,
+            achievementId: achievementId,
+            reviewer: reviewer,
+            signalScore: signalScore,
+            reviewAccuracyProof: reviewAccuracyProof,
+            transferable: false,
+            recordedAt: block.timestamp
+        });
+        emit ReviewerSignalTokenLogged(reviewerSignalTokenCount, achievementId, reviewer, signalScore, reviewAccuracyProof);
+        return reviewerSignalTokenCount;
+    }
+
+    function logBridgeTimeoutEscrow(
+        uint256 achievementId,
+        uint256 timeoutWindow,
+        bytes32 timeoutWitnessHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(timeoutWindow > 0, "Timeout window required");
+        bridgeTimeoutEscrowCount++;
+        bridgeTimeoutEscrows[bridgeTimeoutEscrowCount] = BridgeTimeoutEscrow({
+            id: bridgeTimeoutEscrowCount,
+            achievementId: achievementId,
+            timeoutWindow: timeoutWindow,
+            timeoutWitnessHash: timeoutWitnessHash,
+            completed: false,
+            recordedAt: block.timestamp
+        });
+        emit BridgeTimeoutEscrowLogged(bridgeTimeoutEscrowCount, achievementId, timeoutWindow, timeoutWitnessHash);
+        return bridgeTimeoutEscrowCount;
+    }
+
+    function completeBridgeTimeoutEscrow(uint256 escrowId) public {
+        require(escrowId > 0 && escrowId <= bridgeTimeoutEscrowCount, "Escrow missing");
+        BridgeTimeoutEscrow storage escrow = bridgeTimeoutEscrows[escrowId];
+        require(!escrow.completed, "Escrow already completed");
+        escrow.completed = true;
+        emit BridgeTimeoutEscrowCompleted(escrowId, msg.sender);
+    }
+
+    function logUnlockConditionGraph(
+        uint256 achievementId,
+        bytes32 dependencyGraphHash,
+        bytes32 unlockProofHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        unlockConditionGraphCount++;
+        unlockConditionGraphs[unlockConditionGraphCount] = UnlockConditionGraph({
+            id: unlockConditionGraphCount,
+            achievementId: achievementId,
+            dependencyGraphHash: dependencyGraphHash,
+            unlockProofHash: unlockProofHash,
+            unlocked: false,
+            recordedAt: block.timestamp
+        });
+        emit UnlockConditionGraphLogged(unlockConditionGraphCount, achievementId, dependencyGraphHash, unlockProofHash, false);
+        return unlockConditionGraphCount;
+    }
+
+    function logExecutionCircuitNotebook(
+        uint256 achievementId,
+        bytes32 circuitHash,
+        bytes32 stepProofHash,
+        bytes32 reviewerCommentHash,
+        uint256 version
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(version > 0, "Version required");
+        executionCircuitNotebookCount++;
+        executionCircuitNotebooks[executionCircuitNotebookCount] = ExecutionCircuitNotebook({
+            id: executionCircuitNotebookCount,
+            achievementId: achievementId,
+            circuitHash: circuitHash,
+            stepProofHash: stepProofHash,
+            reviewerCommentHash: reviewerCommentHash,
+            version: version,
+            recordedAt: block.timestamp
+        });
+        emit ExecutionCircuitNotebookLogged(executionCircuitNotebookCount, achievementId, circuitHash, stepProofHash, version);
+        return executionCircuitNotebookCount;
+    }
+
+    function logMempoolMirrorChain(
+        uint256 achievementId,
+        bytes32 mempoolSnapshotHash,
+        bytes32 transactionHash,
+        uint256 blockNumber
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(blockNumber > 0, "Block number required");
+        mempoolMirrorChainCount++;
+        mempoolMirrorChains[mempoolMirrorChainCount] = MempoolMirrorChain({
+            id: mempoolMirrorChainCount,
+            achievementId: achievementId,
+            mempoolSnapshotHash: mempoolSnapshotHash,
+            transactionHash: transactionHash,
+            blockNumber: blockNumber,
+            recordedAt: block.timestamp
+        });
+        emit MempoolMirrorChainLogged(mempoolMirrorChainCount, achievementId, mempoolSnapshotHash, transactionHash, blockNumber);
+        return mempoolMirrorChainCount;
+    }
+
+    function logMultiPartyDustSettlement(
+        uint256 achievementId,
+        address[] memory parties,
+        uint256 totalAmount,
+        bytes32 settlementPulseHash,
+        uint256 scheduledTime
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(parties.length >= 2, "At least 2 parties required");
+        require(totalAmount > 0, "Total amount required");
+        multiPartyDustSettlementCount++;
+        multiPartyDustSettlements[multiPartyDustSettlementCount] = MultiPartyDustSettlement({
+            id: multiPartyDustSettlementCount,
+            achievementId: achievementId,
+            parties: parties,
+            totalAmount: totalAmount,
+            settlementPulseHash: settlementPulseHash,
+            scheduledTime: scheduledTime,
+            recordedAt: block.timestamp
+        });
+        emit MultiPartyDustSettlementLogged(multiPartyDustSettlementCount, achievementId, totalAmount, settlementPulseHash, scheduledTime);
+        return multiPartyDustSettlementCount;
+    }
+
+    function logVaultWarmupScheduler(
+        uint256 achievementId,
+        bytes32 warmupScriptHash,
+        bytes32 sealProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        vaultWarmupSchedulerCount++;
+        vaultWarmupSchedulers[vaultWarmupSchedulerCount] = VaultWarmupScheduler({
+            id: vaultWarmupSchedulerCount,
+            achievementId: achievementId,
+            warmupScriptHash: warmupScriptHash,
+            sealProof: sealProof,
+            vaultReady: false,
+            recordedAt: block.timestamp
+        });
+        emit VaultWarmupSchedulerLogged(vaultWarmupSchedulerCount, achievementId, warmupScriptHash, sealProof, false);
+        return vaultWarmupSchedulerCount;
+    }
+
+    function logConfigLintOracle(
+        uint256 achievementId,
+        bytes32 configDiffHash,
+        bytes32 lintPolicyHash,
+        bool passed,
+        bytes32 verdictHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        configLintOracleCount++;
+        configLintOracles[configLintOracleCount] = ConfigLintOracle({
+            id: configLintOracleCount,
+            achievementId: achievementId,
+            configDiffHash: configDiffHash,
+            lintPolicyHash: lintPolicyHash,
+            passed: passed,
+            verdictHash: verdictHash,
+            recordedAt: block.timestamp
+        });
+        emit ConfigLintOracleLogged(configLintOracleCount, achievementId, configDiffHash, lintPolicyHash, passed, verdictHash);
+        return configLintOracleCount;
+    }
+
+    function logCarbonImpactProofset(
+        uint256 achievementId,
+        uint256 carbonFootprint,
+        bytes32 offsetAttestation,
+        uint256 retiredOffsets
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        carbonImpactProofsetCount++;
+        carbonImpactProofsets[carbonImpactProofsetCount] = CarbonImpactProofset({
+            id: carbonImpactProofsetCount,
+            achievementId: achievementId,
+            carbonFootprint: carbonFootprint,
+            offsetAttestation: offsetAttestation,
+            retiredOffsets: retiredOffsets,
+            recordedAt: block.timestamp
+        });
+        emit CarbonImpactProofsetLogged(carbonImpactProofsetCount, achievementId, carbonFootprint, offsetAttestation, retiredOffsets);
+        return carbonImpactProofsetCount;
+    }
+
+    function logAdaptiveRecoveryTree(
+        uint256 achievementId,
+        bytes32 recoveryTreeHash,
+        bytes32 branchingConditionHash,
+        address[] memory guardianRoles
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(guardianRoles.length > 0, "Guardian roles required");
+        adaptiveRecoveryTreeCount++;
+        adaptiveRecoveryTrees[adaptiveRecoveryTreeCount] = AdaptiveRecoveryTree({
+            id: adaptiveRecoveryTreeCount,
+            achievementId: achievementId,
+            recoveryTreeHash: recoveryTreeHash,
+            branchingConditionHash: branchingConditionHash,
+            guardianRoles: guardianRoles,
+            recordedAt: block.timestamp
+        });
+        emit AdaptiveRecoveryTreeLogged(adaptiveRecoveryTreeCount, achievementId, recoveryTreeHash, branchingConditionHash);
+        return adaptiveRecoveryTreeCount;
+    }
+
+    function logWarrantCanaryRegister(
+        uint256 achievementId,
+        bytes32 canaryStatementHash,
+        uint256 status,
+        uint256 expiryTimestamp,
+        bytes32 proof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(expiryTimestamp > block.timestamp, "Expiry must be in future");
+        warrantCanaryRegisterCount++;
+        warrantCanaryRegisters[warrantCanaryRegisterCount] = WarrantCanaryRegister({
+            id: warrantCanaryRegisterCount,
+            achievementId: achievementId,
+            canaryStatementHash: canaryStatementHash,
+            status: status,
+            expiryTimestamp: expiryTimestamp,
+            proof: proof,
+            recordedAt: block.timestamp
+        });
+        emit WarrantCanaryRegisterLogged(warrantCanaryRegisterCount, achievementId, canaryStatementHash, status, expiryTimestamp);
+        return warrantCanaryRegisterCount;
+    }
+
+    function logPrivacyEnvelopeSwitch(
+        uint256 achievementId,
+        string memory privacyLevel,
+        bytes32 approvalSignature,
+        address approver
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(privacyLevel).length > 0, "Privacy level required");
+        require(approver != address(0), "Invalid approver");
+        privacyEnvelopeSwitchCount++;
+        privacyEnvelopeSwitches[privacyEnvelopeSwitchCount] = PrivacyEnvelopeSwitch({
+            id: privacyEnvelopeSwitchCount,
+            achievementId: achievementId,
+            privacyLevel: privacyLevel,
+            approvalSignature: approvalSignature,
+            approver: approver,
+            active: true,
+            recordedAt: block.timestamp
+        });
+        emit PrivacyEnvelopeSwitchLogged(privacyEnvelopeSwitchCount, achievementId, privacyLevel, approver, approvalSignature, true);
+        return privacyEnvelopeSwitchCount;
+    }
+
     function logDecentralizedIdentityVerification(
         uint256 achievementId,
         string memory verificationId,
