@@ -1427,6 +1427,36 @@ contract SocialMediaContract {
     mapping(uint256 => ContinuityFusionOrchestrator) public continuityFusionOrchestrators;
     mapping(uint256 => QuantumStateSync) public quantumStateSyncs;
     mapping(uint256 => AutonomousRecoveryMesh) public autonomousRecoveryMeshes;
+    mapping(uint256 => DecentralizedIdentityVerification) public decentralizedIdentityVerifications;
+    mapping(uint256 => SmartContractAuditRegistry) public smartContractAuditRegistries;
+    mapping(uint256 => CodeContributionMerit) public codeContributionMerits;
+    mapping(uint256 => DecentralizedBugBounty) public decentralizedBugBounties;
+    mapping(uint256 => TokenizedSkillCertification) public tokenizedSkillCertifications;
+    mapping(uint256 => DecentralizedCodeReview) public decentralizedCodeReviews;
+    mapping(uint256 => AutomatedSecurityScanning) public automatedSecurityScannings;
+    mapping(uint256 => DecentralizedProjectFundingPool) public decentralizedProjectFundingPools;
+    mapping(uint256 => CrossProtocolAchievementBridge) public crossProtocolAchievementBridges;
+    mapping(uint256 => DecentralizedCodeMarketplace) public decentralizedCodeMarketplaces;
+    mapping(uint256 => AutomatedTestCoverageTracker) public automatedTestCoverageTrackers;
+    mapping(uint256 => DecentralizedDocumentationNetwork) public decentralizedDocumentationNetworks;
+    mapping(uint256 => SmartContractUpgradeRegistry) public smartContractUpgradeRegistries;
+    mapping(uint256 => DecentralizedDeveloperReputation) public decentralizedDeveloperReputations;
+    mapping(uint256 => AutomatedDependencyVulnerabilityScanner) public automatedDependencyVulnerabilityScanners;
+    mapping(uint256 => DecentralizedCodeLicensingRegistry) public decentralizedCodeLicensingRegistries;
+    mapping(uint256 => CrossChainAchievementAggregator) public crossChainAchievementAggregators;
+    mapping(uint256 => DecentralizedTechnicalDebtTracker) public decentralizedTechnicalDebtTrackers;
+    mapping(uint256 => AutomatedPerformanceBenchmarking) public automatedPerformanceBenchmarkings;
+    mapping(uint256 => DecentralizedCodeForkRegistry) public decentralizedCodeForkRegistries;
+    mapping(uint256 => SmartContractGasOptimizationTracker) public smartContractGasOptimizationTrackers;
+    mapping(uint256 => DecentralizedCodeCollaborationNetwork) public decentralizedCodeCollaborationNetworks;
+    mapping(uint256 => AutomatedComplianceChecker) public automatedComplianceCheckers;
+    mapping(uint256 => DecentralizedCodeQualityMetrics) public decentralizedCodeQualityMetrics;
+    mapping(uint256 => CrossPlatformAchievementSync) public crossPlatformAchievementSyncs;
+    mapping(uint256 => DecentralizedCodeArchiveNetwork) public decentralizedCodeArchiveNetworks;
+    mapping(uint256 => AutomatedCodeReviewBot) public automatedCodeReviewBots;
+    mapping(uint256 => DecentralizedDeveloperOnboardingSystem) public decentralizedDeveloperOnboardingSystems;
+    mapping(uint256 => SmartContractDeploymentRegistry) public smartContractDeploymentRegistries;
+    mapping(uint256 => DecentralizedCodeGovernancePlatform) public decentralizedCodeGovernancePlatforms;
     
     event PostCreated(uint256 indexed postId, address indexed author, string content, uint256 timestamp);
     event CommentAdded(uint256 indexed commentId, uint256 indexed postId, address indexed author, string content);
@@ -4341,7 +4371,7 @@ contract SocialMediaContract {
         require(bytes(metricType).length > 0, "Metric type required");
         require(qualityScore > 0 && qualityScore <= 100, "Quality score must be 1-100");
         decentralizedCodeQualityMetricsCount++;
-        decentralizedCodeQualityMetricses[decentralizedCodeQualityMetricsCount] = DecentralizedCodeQualityMetrics({
+        decentralizedCodeQualityMetrics[decentralizedCodeQualityMetricsCount] = DecentralizedCodeQualityMetrics({
             id: decentralizedCodeQualityMetricsCount,
             achievementId: achievementId,
             metricId: metricId,
