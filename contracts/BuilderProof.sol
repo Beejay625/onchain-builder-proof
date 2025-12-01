@@ -2361,6 +2361,336 @@ contract SocialMediaContract {
         string plannerStatus;
         uint256 recordedAt;
     }
+
+    struct DecentralizedCodeExecutionEnvironment {
+        uint256 id;
+        uint256 achievementId;
+        string environmentId;
+        string runtimeType;
+        uint256 resourceLimits;
+        bytes32 environmentProof;
+        string environmentStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractStateSnapshotManager {
+        uint256 id;
+        uint256 achievementId;
+        string snapshotId;
+        string snapshotType;
+        bytes32 stateHash;
+        bytes32 snapshotProof;
+        string snapshotStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeReviewAutomation {
+        uint256 id;
+        uint256 achievementId;
+        string automationId;
+        string automationType;
+        uint256 reviewCount;
+        bytes32 automationProof;
+        string automationStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractGasOptimizationAdvisor {
+        uint256 id;
+        uint256 achievementId;
+        string advisorId;
+        string optimizationSuggestions;
+        uint256 gasSavings;
+        bytes32 advisorProof;
+        string advisorStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeTestingMarketplace {
+        uint256 id;
+        uint256 achievementId;
+        string marketplaceId;
+        uint256 testerCount;
+        uint256 testPricing;
+        bytes32 marketplaceProof;
+        string marketplaceStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractSecurityPatternLibrary {
+        uint256 id;
+        uint256 achievementId;
+        string libraryId;
+        uint256 patternCount;
+        string patternCategory;
+        bytes32 libraryProof;
+        string libraryStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodePerformanceBenchmark {
+        uint256 id;
+        uint256 achievementId;
+        string benchmarkId;
+        string benchmarkType;
+        string performanceMetrics;
+        bytes32 benchmarkProof;
+        string benchmarkStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractComplianceChecker {
+        uint256 id;
+        uint256 achievementId;
+        string checkerId;
+        string complianceStandard;
+        string checkResult;
+        bytes32 checkerProof;
+        string checkerStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeCollaborationProtocol {
+        uint256 id;
+        uint256 achievementId;
+        string protocolId;
+        string protocolType;
+        uint256 participantCount;
+        bytes32 protocolProof;
+        string protocolStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractEventSubscriptionService {
+        uint256 id;
+        uint256 achievementId;
+        string serviceId;
+        string subscriptionType;
+        uint256 eventCount;
+        bytes32 serviceProof;
+        string serviceStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeRepositoryMirror {
+        uint256 id;
+        uint256 achievementId;
+        string mirrorId;
+        string sourceRepository;
+        string mirrorType;
+        bytes32 mirrorProof;
+        string mirrorStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractAccessControlMatrix {
+        uint256 id;
+        uint256 achievementId;
+        string matrixId;
+        uint256 roleCount;
+        uint256 permissionCount;
+        bytes32 matrixProof;
+        string matrixStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeVersionManager {
+        uint256 id;
+        uint256 achievementId;
+        string managerId;
+        uint256 versionCount;
+        string versioningScheme;
+        bytes32 managerProof;
+        string managerStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractStateTransitionValidator {
+        uint256 id;
+        uint256 achievementId;
+        string validatorId;
+        string transitionRules;
+        uint256 validationCount;
+        bytes32 validatorProof;
+        string validatorStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeBuildArtifactRegistry {
+        uint256 id;
+        uint256 achievementId;
+        string registryId;
+        uint256 artifactCount;
+        string artifactType;
+        bytes32 registryProof;
+        string registryStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractErrorHandlerRegistry {
+        uint256 id;
+        uint256 achievementId;
+        string registryId;
+        uint256 handlerCount;
+        string errorTypes;
+        bytes32 registryProof;
+        string registryStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeDependencyResolver {
+        uint256 id;
+        uint256 achievementId;
+        string resolverId;
+        uint256 dependencyCount;
+        string resolutionStrategy;
+        bytes32 resolverProof;
+        string resolverStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractFunctionCallTracker {
+        uint256 id;
+        uint256 achievementId;
+        string trackerId;
+        uint256 callCount;
+        string functionTypes;
+        bytes32 trackerProof;
+        string trackerStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeWorkflowEngine {
+        uint256 id;
+        uint256 achievementId;
+        string engineId;
+        uint256 workflowCount;
+        string workflowType;
+        bytes32 engineProof;
+        string engineStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractStateRecoverySystem {
+        uint256 id;
+        uint256 achievementId;
+        string systemId;
+        string recoveryType;
+        uint256 recoveryCount;
+        bytes32 systemProof;
+        string systemStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeIntegrationTestingFramework {
+        uint256 id;
+        uint256 achievementId;
+        string frameworkId;
+        uint256 testSuiteCount;
+        string integrationType;
+        bytes32 frameworkProof;
+        string frameworkStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractPermissionManager {
+        uint256 id;
+        uint256 achievementId;
+        string managerId;
+        uint256 permissionCount;
+        string permissionType;
+        bytes32 managerProof;
+        string managerStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeReleaseManager {
+        uint256 id;
+        uint256 achievementId;
+        string managerId;
+        uint256 releaseCount;
+        string releaseType;
+        bytes32 managerProof;
+        string managerStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractTransactionAnalyzer {
+        uint256 id;
+        uint256 achievementId;
+        string analyzerId;
+        uint256 transactionCount;
+        string analysisType;
+        bytes32 analyzerProof;
+        string analyzerStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeCodebaseIndexer {
+        uint256 id;
+        uint256 achievementId;
+        string indexerId;
+        uint256 indexedFileCount;
+        string indexType;
+        bytes32 indexerProof;
+        string indexerStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractUpgradeValidator {
+        uint256 id;
+        uint256 achievementId;
+        string validatorId;
+        uint256 upgradeCount;
+        string validationRules;
+        bytes32 validatorProof;
+        string validatorStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeSecurityPolicyEngine {
+        uint256 id;
+        uint256 achievementId;
+        string engineId;
+        uint256 policyCount;
+        string policyType;
+        bytes32 engineProof;
+        string engineStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractStateMachineDesigner {
+        uint256 id;
+        uint256 achievementId;
+        string designerId;
+        uint256 stateCount;
+        uint256 transitionCount;
+        bytes32 designerProof;
+        string designerStatus;
+        uint256 recordedAt;
+    }
+
+    struct DecentralizedCodeRepositoryForkManager {
+        uint256 id;
+        uint256 achievementId;
+        string managerId;
+        uint256 forkCount;
+        string forkType;
+        bytes32 managerProof;
+        string managerStatus;
+        uint256 recordedAt;
+    }
+
+    struct SmartContractLifecycleManager {
+        uint256 id;
+        uint256 achievementId;
+        string managerId;
+        string lifecycleStage;
+        uint256 stageCount;
+        bytes32 managerProof;
+        string managerStatus;
+        uint256 recordedAt;
+    }
     
     mapping(uint256 => Post) public posts;
     mapping(uint256 => Comment) public comments;
