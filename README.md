@@ -62,6 +62,41 @@ Thirty onchain capabilities that extend BuilderProof's provenance, automation, a
 - 🔐 **Achievement Quantum State Sync**: Sync quantum-resistant state across chains using post-quantum cryptographic algorithms.
 - 🕸️ **Achievement Autonomous Recovery Mesh**: Mesh autonomous recovery agents across domains with configurable recovery strategies.
 
+### Sentinel Cascade · Continuity Enhancers (F61-F90)
+
+Thirty onchain continuity enhancers that strengthen BuilderProof's resilience, security, and operational integrity. Each feature is implemented in the `BuilderProof.sol` contract.
+
+- 🛰️ **Achievement Sentinel Consensus Mirror**: Mirror validator votes and cross-domain confirmations to catch finality drift early.
+- 🔮 **Achievement Predictive Failover Graph**: Score infra dependency graphs and log predicted failover paths with confidence bands.
+- 🕰️ **Achievement Intent Delay Vault**: Apply programmable hold windows to high-risk intents plus override attestations.
+- 🛡️ **Achievement Guardian Bond Escrow**: Bond guardian capital onchain and auto-slash when remediation SLAs fail.
+- 🔗 **Achievement Custody Chain Sequencer**: Maintain immutable custody hop ledgers for evidence and artifact handling.
+- 🔐 **Achievement Encryption Envelope Ledger**: Register encryption suites, rotation cadences, and signer fingerprints per proof bundle.
+- 📱 **Achievement Device Trust Fabric**: Capture hardware attestation hashes and geo hints for every signing session.
+- 🚦 **Achievement Rate Limit Beacon**: Broadcast live throttle budgets so automation agents respect throughput caps.
+- 🧮 **Achievement Post-Quantum Attestor**: Log PQ-safe proof transcripts plus required verifier implementations.
+- ♻️ **Achievement Rolling Proof Continuity**: Require overlapping proof windows to eliminate telemetry gaps.
+- 🧰 **Achievement Rollforward Repair Kit**: Store deterministic repair scripts and hashes for replaying corrupted states.
+- 🧭 **Achievement Multihop Reward Director**: Define reward routing trees with fallback recipients and onchain reason codes.
+- 💸 **Achievement Gas Refund Router**: Publish refund splits tied to sponsored transactions with spender attestations.
+- 🏛️ **Achievement Sovereign Executor Ledger**: Track custom executors, permissions, and review hashes before execution.
+- 📡 **Achievement Guardian Drift Radar**: Detect idle guardians via missed heartbeats and log escalation steps.
+- 🔔 **Achievement Integrity Beacon Switchboard**: Fan-out signed integrity beacons to multiple storage planes with receipts.
+- 📦 **Achievement Audit Replay Shuttle**: Store replay-ready datasets so auditors can deterministically reproduce incidents.
+- 🗜️ **Achievement Evidence Compression Lab**: Document compression recipes, ratios, and verifiers for large evidence archives.
+- 🎯 **Achievement Reviewer Signal Token**: Mint non-transferable reviewer signal tokens that score review accuracy.
+- ⏱️ **Achievement Bridge Timeout Escrow**: Escrow risky bridge transfers until timeout witnesses confirm completion.
+- 🔓 **Achievement Unlock Condition Graph**: Graph unlock dependencies and proofs so downstream automations can reason over them.
+- 📓 **Achievement Execution Circuit Notebook**: Version control complex execution circuits with step proofs and reviewer comments.
+- 📊 **Achievement Mempool Mirror Chain**: Snapshot mempool transactions relevant to achievements with hash pointers.
+- 💰 **Achievement Multi-Party Dust Settlement**: Aggregate micro-payments into scheduled settlement pulses with receipts.
+- 🔥 **Achievement Vault Warmup Scheduler**: Publish warmup scripts and seal proofs before vaults accept live deposits.
+- ✅ **Achievement Config Lint Oracle**: Run lint policies on config/state diffs and notarize pass/fail verdicts.
+- 🌱 **Achievement Carbon Impact Proofset**: Attach per-achievement carbon footprint attestations plus retired offsets.
+- 🌳 **Achievement Adaptive Recovery Tree**: Encode adaptive recovery trees with branching conditions and guardian roles.
+- 🐦 **Achievement Warrant Canary Register**: Timestamp warrant-canary statements with status and expiry proofs.
+- 🔒 **Achievement Privacy Envelope Switch**: Toggle privacy envelopes (public, partner, sealed) with signed approvals.
+
 - **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 - **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
