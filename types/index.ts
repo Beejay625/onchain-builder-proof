@@ -1038,6 +1038,37 @@ export interface FeatureFlags {
   achievementWebhookManager: boolean
   achievementIntegrationHub: boolean
   achievementUnifiedDeveloperPlatform: boolean
+  // User Experience wave feature flags (F721-F750)
+  achievementOnboardingWizard: boolean
+  achievementUserOnboardingFlow: boolean
+  achievementInteractiveTutorial: boolean
+  achievementContextualHelp: boolean
+  achievementAccessibilityCompliance: boolean
+  achievementMultiLanguageSupport: boolean
+  achievementDarkModeToggle: boolean
+  achievementCustomizableDashboard: boolean
+  achievementNotificationPreferences: boolean
+  achievementUserFeedbackSystem: boolean
+  achievementInAppMessaging: boolean
+  achievementProgressiveWebApp: boolean
+  achievementOfflineMode: boolean
+  achievementGestureControls: boolean
+  achievementVoiceCommands: boolean
+  achievementKeyboardShortcuts: boolean
+  achievementSearchFunctionality: boolean
+  achievementFilteringSystem: boolean
+  achievementSortingOptions: boolean
+  achievementBulkActions: boolean
+  achievementUndoRedoSystem: boolean
+  achievementAutoSaveFeature: boolean
+  achievementDragAndDropInterface: boolean
+  achievementResponsiveDesign: boolean
+  achievementMobileOptimization: boolean
+  achievementLoadingStates: boolean
+  achievementErrorMessages: boolean
+  achievementSuccessAnimations: boolean
+  achievementUserPreferences: boolean
+  achievementUnifiedUserExperience: boolean
 }
 
 export type FeatureFlagKey = keyof FeatureFlags
