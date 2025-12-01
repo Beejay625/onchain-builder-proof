@@ -27,6 +27,41 @@ Onchain Builder Proof lets builders mint weekly milestones through Talenty Proto
 
 Roadmap waves (e.g., Onchain Operations Layer, Sentinel Cascade) bundle the problem statement, scoped features, required contract changes, and rollout notes. Skim here for direction, then dive into `docs/onchain-feature-expansion.md` for acceptance criteria, JSON schemas, and transaction templates.
 
+### Aurora Wave · Ethereum Control Plane (F1-F30)
+
+Thirty onchain capabilities that extend BuilderProof's provenance, automation, and compliance surface. Each feature is implemented in the `BuilderProof.sol` contract and can be toggled independently.
+
+- 💰 **Achievement MEV Amnesty Escrow**: Hold pledged MEV refund liquidity in escrow until affected achievements receive signed restitution confirmations.
+- 📝 **Achievement Slot Commitment Ledger**: Log slot-level commitment signatures so reviewers can trace which validators attested each milestone window.
+- 🔄 **Achievement L2 Settlement Mirror**: Mirror Optimism/Base/Arbitrum settlement proofs with challenge timers, ensuring downstream automation waits for safe-finality epochs.
+- 🔐 **Achievement Account-Abstraction Circuit**: Store ERC-4337 session scopes, policy hashes, and paymaster attestations for automation wallets servicing achievements.
+- ✅ **Achievement Deterministic Pre-Confirm Vaults**: Persist pre-confirmation signatures, expiry timestamps, and fallback intents to guarantee deterministic delivery.
+- 🏃 **Achievement Intent Baton Relay**: Allow squads to relay intents across programs with notarized baton metadata, preserving execution guarantees.
+- 🛡️ **Achievement Guardian Ragequit Pool**: Bond guardian capital with ragequit rules requiring attested replacements before exits settle.
+- 📊 **Achievement Operator Slippage Sentinel**: Track operator-led swaps against declared slippage ceilings and emit breach attestations onchain.
+- 🌐 **Achievement Cross-Rollup Witness Hub**: Register witness quorum proofs spanning rollups and L1 settlement to prove evidence continuity.
+- ⛽ **Achievement Deterministic Gas Oracle**: Capture gas oracle readings, variance envelopes, and reviewer approvals per achievement proof.
+- 💸 **Achievement Partial Withdrawal Router**: Route partial treasury withdrawals with multi-epoch attestation trails plus downstream unlock checkpoints.
+- 🌍 **Achievement Sovereign RPC Quorum**: Record quorum-approved RPC endpoints, heartbeat intervals, and failover receipts for each scope.
+- 🔗 **Achievement zkSync State Syncer**: Anchor zkSync Lite/Era state root sync proofs to guarantee checkpoint alignment with BuilderProof achievements.
+- 📚 **Achievement Intent Merkle Journal**: Maintain rolling Merkle journals of intents and associated evidence for rapid audit playback.
+- ⏰ **Achievement Deadline Arbitration Bridge**: Encode arbitration workflows that trigger when deadlines slip, including quorum verdict hashes.
+- 🎯 **Achievement Multi-Asset Proof Router**: Map ERC-20/721/1155 asset proofs with settlement policy metadata and reviewable release logs.
+- 🔍 **Achievement Verification Credit Ledger**: Track verifier credits burned per achievement to meter scarce audit resources onchain.
+- ⏳ **Achievement Guardian Vault Timelock**: Enforce guardian-managed timelocks before sensitive contract paths mutate state.
+- 📦 **Achievement Execution Capsule**: Package deterministic execution capsules with calldata hashes, replay guards, and evidence CIDs.
+- 📈 **Achievement Risk-Weighted Vault Matrix**: Score vault exposures per achievement, linking mitigation actions plus reviewer approvals.
+- 🔍 **Achievement Asset Trace Matrix**: Trace asset provenance hops with hashed receipts so treasury teams can prove intent congruence.
+- ✅ **Achievement Compliance Anchor Chain**: Chain compliance attestations (KYC/KYB) with revocation proofs and jurisdiction metadata.
+- 📄 **Achievement Offchain Evidence Hashline**: Anchor offchain bundle hashes, verifier signatures, and expiry timers for sealed archives.
+- 👥 **Achievement Guardian Multisig Assembler**: Register guardian multisig compositions, rotations, and quorum drift monitors per achievement.
+- ⏸️ **Achievement Intent Suspension Switch**: Allow reviewers to flip suspension flags that halt downstream automation until re-enabled.
+- 📡 **Achievement Resilience Score Beacon**: Publish resilience score oracles sourced from telemetry feeds with refresh proofs.
+- 💾 **Achievement Data Availability Vault**: Commit data-availability proofs (EIP-4844 blobs, Celestia shares) tying external data to achievements.
+- 🎼 **Achievement Continuity Fusion Orchestrator**: Orchestrate multi-domain continuity flows with sync policies and checkpoint intervals.
+- 🔐 **Achievement Quantum State Sync**: Sync quantum-resistant state across chains using post-quantum cryptographic algorithms.
+- 🕸️ **Achievement Autonomous Recovery Mesh**: Mesh autonomous recovery agents across domains with configurable recovery strategies.
+
 - **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 - **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
