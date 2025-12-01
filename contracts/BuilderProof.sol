@@ -7775,6 +7775,846 @@ contract SocialMediaContract {
         emit SmartContractUpgradePathPlannerLogged(smartContractUpgradePathPlannerCount, achievementId, plannerId, upgradePath, riskAssessment, plannerProof);
         return smartContractUpgradePathPlannerCount;
     }
+
+    function logDecentralizedCodeExecutionEnvironment(
+        uint256 achievementId,
+        string memory environmentId,
+        string memory runtimeType,
+        uint256 resourceLimits,
+        bytes32 environmentProof,
+        string memory environmentStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(environmentId).length > 0, "Environment ID required");
+        require(bytes(runtimeType).length > 0, "Runtime type required");
+        require(resourceLimits > 0, "Resource limits must be positive");
+        require(bytes(environmentStatus).length > 0, "Environment status required");
+        decentralizedCodeExecutionEnvironmentCount++;
+        decentralizedCodeExecutionEnvironments[decentralizedCodeExecutionEnvironmentCount] = DecentralizedCodeExecutionEnvironment({
+            id: decentralizedCodeExecutionEnvironmentCount,
+            achievementId: achievementId,
+            environmentId: environmentId,
+            runtimeType: runtimeType,
+            resourceLimits: resourceLimits,
+            environmentProof: environmentProof,
+            environmentStatus: environmentStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeExecutionEnvironmentLogged(decentralizedCodeExecutionEnvironmentCount, achievementId, environmentId, runtimeType, resourceLimits, environmentProof);
+        return decentralizedCodeExecutionEnvironmentCount;
+    }
+
+    function logSmartContractStateSnapshotManager(
+        uint256 achievementId,
+        string memory snapshotId,
+        string memory snapshotType,
+        bytes32 stateHash,
+        bytes32 snapshotProof,
+        string memory snapshotStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(snapshotId).length > 0, "Snapshot ID required");
+        require(bytes(snapshotType).length > 0, "Snapshot type required");
+        require(stateHash != bytes32(0), "State hash required");
+        require(bytes(snapshotStatus).length > 0, "Snapshot status required");
+        smartContractStateSnapshotManagerCount++;
+        smartContractStateSnapshotManagers[smartContractStateSnapshotManagerCount] = SmartContractStateSnapshotManager({
+            id: smartContractStateSnapshotManagerCount,
+            achievementId: achievementId,
+            snapshotId: snapshotId,
+            snapshotType: snapshotType,
+            stateHash: stateHash,
+            snapshotProof: snapshotProof,
+            snapshotStatus: snapshotStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractStateSnapshotManagerLogged(smartContractStateSnapshotManagerCount, achievementId, snapshotId, snapshotType, stateHash, snapshotProof);
+        return smartContractStateSnapshotManagerCount;
+    }
+
+    function logDecentralizedCodeReviewAutomation(
+        uint256 achievementId,
+        string memory automationId,
+        string memory automationType,
+        uint256 reviewCount,
+        bytes32 automationProof,
+        string memory automationStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(automationId).length > 0, "Automation ID required");
+        require(bytes(automationType).length > 0, "Automation type required");
+        require(reviewCount > 0, "Review count must be positive");
+        require(bytes(automationStatus).length > 0, "Automation status required");
+        decentralizedCodeReviewAutomationCount++;
+        decentralizedCodeReviewAutomations[decentralizedCodeReviewAutomationCount] = DecentralizedCodeReviewAutomation({
+            id: decentralizedCodeReviewAutomationCount,
+            achievementId: achievementId,
+            automationId: automationId,
+            automationType: automationType,
+            reviewCount: reviewCount,
+            automationProof: automationProof,
+            automationStatus: automationStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeReviewAutomationLogged(decentralizedCodeReviewAutomationCount, achievementId, automationId, automationType, reviewCount, automationProof);
+        return decentralizedCodeReviewAutomationCount;
+    }
+
+    function logSmartContractGasOptimizationAdvisor(
+        uint256 achievementId,
+        string memory advisorId,
+        string memory optimizationSuggestions,
+        uint256 gasSavings,
+        bytes32 advisorProof,
+        string memory advisorStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(advisorId).length > 0, "Advisor ID required");
+        require(bytes(optimizationSuggestions).length > 0, "Optimization suggestions required");
+        require(gasSavings > 0, "Gas savings must be positive");
+        require(bytes(advisorStatus).length > 0, "Advisor status required");
+        smartContractGasOptimizationAdvisorCount++;
+        smartContractGasOptimizationAdvisors[smartContractGasOptimizationAdvisorCount] = SmartContractGasOptimizationAdvisor({
+            id: smartContractGasOptimizationAdvisorCount,
+            achievementId: achievementId,
+            advisorId: advisorId,
+            optimizationSuggestions: optimizationSuggestions,
+            gasSavings: gasSavings,
+            advisorProof: advisorProof,
+            advisorStatus: advisorStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractGasOptimizationAdvisorLogged(smartContractGasOptimizationAdvisorCount, achievementId, advisorId, optimizationSuggestions, gasSavings, advisorProof);
+        return smartContractGasOptimizationAdvisorCount;
+    }
+
+    function logDecentralizedCodeTestingMarketplace(
+        uint256 achievementId,
+        string memory marketplaceId,
+        uint256 testerCount,
+        uint256 testPricing,
+        bytes32 marketplaceProof,
+        string memory marketplaceStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(marketplaceId).length > 0, "Marketplace ID required");
+        require(testerCount > 0, "Tester count must be positive");
+        require(testPricing > 0, "Test pricing must be positive");
+        require(bytes(marketplaceStatus).length > 0, "Marketplace status required");
+        decentralizedCodeTestingMarketplaceCount++;
+        decentralizedCodeTestingMarketplaces[decentralizedCodeTestingMarketplaceCount] = DecentralizedCodeTestingMarketplace({
+            id: decentralizedCodeTestingMarketplaceCount,
+            achievementId: achievementId,
+            marketplaceId: marketplaceId,
+            testerCount: testerCount,
+            testPricing: testPricing,
+            marketplaceProof: marketplaceProof,
+            marketplaceStatus: marketplaceStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeTestingMarketplaceLogged(decentralizedCodeTestingMarketplaceCount, achievementId, marketplaceId, testerCount, testPricing, marketplaceProof);
+        return decentralizedCodeTestingMarketplaceCount;
+    }
+
+    function logSmartContractSecurityPatternLibrary(
+        uint256 achievementId,
+        string memory libraryId,
+        uint256 patternCount,
+        string memory patternCategory,
+        bytes32 libraryProof,
+        string memory libraryStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(libraryId).length > 0, "Library ID required");
+        require(patternCount > 0, "Pattern count must be positive");
+        require(bytes(patternCategory).length > 0, "Pattern category required");
+        require(bytes(libraryStatus).length > 0, "Library status required");
+        smartContractSecurityPatternLibraryCount++;
+        smartContractSecurityPatternLibraries[smartContractSecurityPatternLibraryCount] = SmartContractSecurityPatternLibrary({
+            id: smartContractSecurityPatternLibraryCount,
+            achievementId: achievementId,
+            libraryId: libraryId,
+            patternCount: patternCount,
+            patternCategory: patternCategory,
+            libraryProof: libraryProof,
+            libraryStatus: libraryStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractSecurityPatternLibraryLogged(smartContractSecurityPatternLibraryCount, achievementId, libraryId, patternCount, patternCategory, libraryProof);
+        return smartContractSecurityPatternLibraryCount;
+    }
+
+    function logDecentralizedCodePerformanceBenchmark(
+        uint256 achievementId,
+        string memory benchmarkId,
+        string memory benchmarkType,
+        string memory performanceMetrics,
+        bytes32 benchmarkProof,
+        string memory benchmarkStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(benchmarkId).length > 0, "Benchmark ID required");
+        require(bytes(benchmarkType).length > 0, "Benchmark type required");
+        require(bytes(performanceMetrics).length > 0, "Performance metrics required");
+        require(bytes(benchmarkStatus).length > 0, "Benchmark status required");
+        decentralizedCodePerformanceBenchmarkCount++;
+        decentralizedCodePerformanceBenchmarks[decentralizedCodePerformanceBenchmarkCount] = DecentralizedCodePerformanceBenchmark({
+            id: decentralizedCodePerformanceBenchmarkCount,
+            achievementId: achievementId,
+            benchmarkId: benchmarkId,
+            benchmarkType: benchmarkType,
+            performanceMetrics: performanceMetrics,
+            benchmarkProof: benchmarkProof,
+            benchmarkStatus: benchmarkStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodePerformanceBenchmarkLogged(decentralizedCodePerformanceBenchmarkCount, achievementId, benchmarkId, benchmarkType, performanceMetrics, benchmarkProof);
+        return decentralizedCodePerformanceBenchmarkCount;
+    }
+
+    function logSmartContractComplianceChecker(
+        uint256 achievementId,
+        string memory checkerId,
+        string memory complianceStandard,
+        string memory checkResult,
+        bytes32 checkerProof,
+        string memory checkerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(checkerId).length > 0, "Checker ID required");
+        require(bytes(complianceStandard).length > 0, "Compliance standard required");
+        require(bytes(checkResult).length > 0, "Check result required");
+        require(bytes(checkerStatus).length > 0, "Checker status required");
+        smartContractComplianceCheckerCount++;
+        smartContractComplianceCheckers[smartContractComplianceCheckerCount] = SmartContractComplianceChecker({
+            id: smartContractComplianceCheckerCount,
+            achievementId: achievementId,
+            checkerId: checkerId,
+            complianceStandard: complianceStandard,
+            checkResult: checkResult,
+            checkerProof: checkerProof,
+            checkerStatus: checkerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractComplianceCheckerLogged(smartContractComplianceCheckerCount, achievementId, checkerId, complianceStandard, checkResult, checkerProof);
+        return smartContractComplianceCheckerCount;
+    }
+
+    function logDecentralizedCodeCollaborationProtocol(
+        uint256 achievementId,
+        string memory protocolId,
+        string memory protocolType,
+        uint256 participantCount,
+        bytes32 protocolProof,
+        string memory protocolStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(protocolId).length > 0, "Protocol ID required");
+        require(bytes(protocolType).length > 0, "Protocol type required");
+        require(participantCount > 0, "Participant count must be positive");
+        require(bytes(protocolStatus).length > 0, "Protocol status required");
+        decentralizedCodeCollaborationProtocolCount++;
+        decentralizedCodeCollaborationProtocols[decentralizedCodeCollaborationProtocolCount] = DecentralizedCodeCollaborationProtocol({
+            id: decentralizedCodeCollaborationProtocolCount,
+            achievementId: achievementId,
+            protocolId: protocolId,
+            protocolType: protocolType,
+            participantCount: participantCount,
+            protocolProof: protocolProof,
+            protocolStatus: protocolStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeCollaborationProtocolLogged(decentralizedCodeCollaborationProtocolCount, achievementId, protocolId, protocolType, participantCount, protocolProof);
+        return decentralizedCodeCollaborationProtocolCount;
+    }
+
+    function logSmartContractEventSubscriptionService(
+        uint256 achievementId,
+        string memory serviceId,
+        string memory subscriptionType,
+        uint256 eventCount,
+        bytes32 serviceProof,
+        string memory serviceStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(serviceId).length > 0, "Service ID required");
+        require(bytes(subscriptionType).length > 0, "Subscription type required");
+        require(eventCount > 0, "Event count must be positive");
+        require(bytes(serviceStatus).length > 0, "Service status required");
+        smartContractEventSubscriptionServiceCount++;
+        smartContractEventSubscriptionServices[smartContractEventSubscriptionServiceCount] = SmartContractEventSubscriptionService({
+            id: smartContractEventSubscriptionServiceCount,
+            achievementId: achievementId,
+            serviceId: serviceId,
+            subscriptionType: subscriptionType,
+            eventCount: eventCount,
+            serviceProof: serviceProof,
+            serviceStatus: serviceStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractEventSubscriptionServiceLogged(smartContractEventSubscriptionServiceCount, achievementId, serviceId, subscriptionType, eventCount, serviceProof);
+        return smartContractEventSubscriptionServiceCount;
+    }
+
+    function logDecentralizedCodeRepositoryMirror(
+        uint256 achievementId,
+        string memory mirrorId,
+        string memory sourceRepository,
+        string memory mirrorType,
+        bytes32 mirrorProof,
+        string memory mirrorStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(mirrorId).length > 0, "Mirror ID required");
+        require(bytes(sourceRepository).length > 0, "Source repository required");
+        require(bytes(mirrorType).length > 0, "Mirror type required");
+        require(bytes(mirrorStatus).length > 0, "Mirror status required");
+        decentralizedCodeRepositoryMirrorCount++;
+        decentralizedCodeRepositoryMirrors[decentralizedCodeRepositoryMirrorCount] = DecentralizedCodeRepositoryMirror({
+            id: decentralizedCodeRepositoryMirrorCount,
+            achievementId: achievementId,
+            mirrorId: mirrorId,
+            sourceRepository: sourceRepository,
+            mirrorType: mirrorType,
+            mirrorProof: mirrorProof,
+            mirrorStatus: mirrorStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeRepositoryMirrorLogged(decentralizedCodeRepositoryMirrorCount, achievementId, mirrorId, sourceRepository, mirrorType, mirrorProof);
+        return decentralizedCodeRepositoryMirrorCount;
+    }
+
+    function logSmartContractAccessControlMatrix(
+        uint256 achievementId,
+        string memory matrixId,
+        uint256 roleCount,
+        uint256 permissionCount,
+        bytes32 matrixProof,
+        string memory matrixStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(matrixId).length > 0, "Matrix ID required");
+        require(roleCount > 0, "Role count must be positive");
+        require(permissionCount > 0, "Permission count must be positive");
+        require(bytes(matrixStatus).length > 0, "Matrix status required");
+        smartContractAccessControlMatrixCount++;
+        smartContractAccessControlMatrices[smartContractAccessControlMatrixCount] = SmartContractAccessControlMatrix({
+            id: smartContractAccessControlMatrixCount,
+            achievementId: achievementId,
+            matrixId: matrixId,
+            roleCount: roleCount,
+            permissionCount: permissionCount,
+            matrixProof: matrixProof,
+            matrixStatus: matrixStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractAccessControlMatrixLogged(smartContractAccessControlMatrixCount, achievementId, matrixId, roleCount, permissionCount, matrixProof);
+        return smartContractAccessControlMatrixCount;
+    }
+
+    function logDecentralizedCodeVersionManager(
+        uint256 achievementId,
+        string memory managerId,
+        uint256 versionCount,
+        string memory versioningScheme,
+        bytes32 managerProof,
+        string memory managerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(managerId).length > 0, "Manager ID required");
+        require(versionCount > 0, "Version count must be positive");
+        require(bytes(versioningScheme).length > 0, "Versioning scheme required");
+        require(bytes(managerStatus).length > 0, "Manager status required");
+        decentralizedCodeVersionManagerCount++;
+        decentralizedCodeVersionManagers[decentralizedCodeVersionManagerCount] = DecentralizedCodeVersionManager({
+            id: decentralizedCodeVersionManagerCount,
+            achievementId: achievementId,
+            managerId: managerId,
+            versionCount: versionCount,
+            versioningScheme: versioningScheme,
+            managerProof: managerProof,
+            managerStatus: managerStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeVersionManagerLogged(decentralizedCodeVersionManagerCount, achievementId, managerId, versionCount, versioningScheme, managerProof);
+        return decentralizedCodeVersionManagerCount;
+    }
+
+    function logSmartContractStateTransitionValidator(
+        uint256 achievementId,
+        string memory validatorId,
+        string memory transitionRules,
+        uint256 validationCount,
+        bytes32 validatorProof,
+        string memory validatorStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(validatorId).length > 0, "Validator ID required");
+        require(bytes(transitionRules).length > 0, "Transition rules required");
+        require(validationCount > 0, "Validation count must be positive");
+        require(bytes(validatorStatus).length > 0, "Validator status required");
+        smartContractStateTransitionValidatorCount++;
+        smartContractStateTransitionValidators[smartContractStateTransitionValidatorCount] = SmartContractStateTransitionValidator({
+            id: smartContractStateTransitionValidatorCount,
+            achievementId: achievementId,
+            validatorId: validatorId,
+            transitionRules: transitionRules,
+            validationCount: validationCount,
+            validatorProof: validatorProof,
+            validatorStatus: validatorStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractStateTransitionValidatorLogged(smartContractStateTransitionValidatorCount, achievementId, validatorId, transitionRules, validationCount, validatorProof);
+        return smartContractStateTransitionValidatorCount;
+    }
+
+    function logDecentralizedCodeBuildArtifactRegistry(
+        uint256 achievementId,
+        string memory registryId,
+        uint256 artifactCount,
+        string memory artifactType,
+        bytes32 registryProof,
+        string memory registryStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(registryId).length > 0, "Registry ID required");
+        require(artifactCount > 0, "Artifact count must be positive");
+        require(bytes(artifactType).length > 0, "Artifact type required");
+        require(bytes(registryStatus).length > 0, "Registry status required");
+        decentralizedCodeBuildArtifactRegistryCount++;
+        decentralizedCodeBuildArtifactRegistries[decentralizedCodeBuildArtifactRegistryCount] = DecentralizedCodeBuildArtifactRegistry({
+            id: decentralizedCodeBuildArtifactRegistryCount,
+            achievementId: achievementId,
+            registryId: registryId,
+            artifactCount: artifactCount,
+            artifactType: artifactType,
+            registryProof: registryProof,
+            registryStatus: registryStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeBuildArtifactRegistryLogged(decentralizedCodeBuildArtifactRegistryCount, achievementId, registryId, artifactCount, artifactType, registryProof);
+        return decentralizedCodeBuildArtifactRegistryCount;
+    }
+
+    function logSmartContractErrorHandlerRegistry(
+        uint256 achievementId,
+        string memory registryId,
+        uint256 handlerCount,
+        string memory errorTypes,
+        bytes32 registryProof,
+        string memory registryStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(registryId).length > 0, "Registry ID required");
+        require(handlerCount > 0, "Handler count must be positive");
+        require(bytes(errorTypes).length > 0, "Error types required");
+        require(bytes(registryStatus).length > 0, "Registry status required");
+        smartContractErrorHandlerRegistryCount++;
+        smartContractErrorHandlerRegistries[smartContractErrorHandlerRegistryCount] = SmartContractErrorHandlerRegistry({
+            id: smartContractErrorHandlerRegistryCount,
+            achievementId: achievementId,
+            registryId: registryId,
+            handlerCount: handlerCount,
+            errorTypes: errorTypes,
+            registryProof: registryProof,
+            registryStatus: registryStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractErrorHandlerRegistryLogged(smartContractErrorHandlerRegistryCount, achievementId, registryId, handlerCount, errorTypes, registryProof);
+        return smartContractErrorHandlerRegistryCount;
+    }
+
+    function logDecentralizedCodeDependencyResolver(
+        uint256 achievementId,
+        string memory resolverId,
+        uint256 dependencyCount,
+        string memory resolutionStrategy,
+        bytes32 resolverProof,
+        string memory resolverStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(resolverId).length > 0, "Resolver ID required");
+        require(dependencyCount > 0, "Dependency count must be positive");
+        require(bytes(resolutionStrategy).length > 0, "Resolution strategy required");
+        require(bytes(resolverStatus).length > 0, "Resolver status required");
+        decentralizedCodeDependencyResolverCount++;
+        decentralizedCodeDependencyResolvers[decentralizedCodeDependencyResolverCount] = DecentralizedCodeDependencyResolver({
+            id: decentralizedCodeDependencyResolverCount,
+            achievementId: achievementId,
+            resolverId: resolverId,
+            dependencyCount: dependencyCount,
+            resolutionStrategy: resolutionStrategy,
+            resolverProof: resolverProof,
+            resolverStatus: resolverStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeDependencyResolverLogged(decentralizedCodeDependencyResolverCount, achievementId, resolverId, dependencyCount, resolutionStrategy, resolverProof);
+        return decentralizedCodeDependencyResolverCount;
+    }
+
+    function logSmartContractFunctionCallTracker(
+        uint256 achievementId,
+        string memory trackerId,
+        uint256 callCount,
+        string memory functionTypes,
+        bytes32 trackerProof,
+        string memory trackerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(trackerId).length > 0, "Tracker ID required");
+        require(callCount > 0, "Call count must be positive");
+        require(bytes(functionTypes).length > 0, "Function types required");
+        require(bytes(trackerStatus).length > 0, "Tracker status required");
+        smartContractFunctionCallTrackerCount++;
+        smartContractFunctionCallTrackers[smartContractFunctionCallTrackerCount] = SmartContractFunctionCallTracker({
+            id: smartContractFunctionCallTrackerCount,
+            achievementId: achievementId,
+            trackerId: trackerId,
+            callCount: callCount,
+            functionTypes: functionTypes,
+            trackerProof: trackerProof,
+            trackerStatus: trackerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractFunctionCallTrackerLogged(smartContractFunctionCallTrackerCount, achievementId, trackerId, callCount, functionTypes, trackerProof);
+        return smartContractFunctionCallTrackerCount;
+    }
+
+    function logDecentralizedCodeWorkflowEngine(
+        uint256 achievementId,
+        string memory engineId,
+        uint256 workflowCount,
+        string memory workflowType,
+        bytes32 engineProof,
+        string memory engineStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(engineId).length > 0, "Engine ID required");
+        require(workflowCount > 0, "Workflow count must be positive");
+        require(bytes(workflowType).length > 0, "Workflow type required");
+        require(bytes(engineStatus).length > 0, "Engine status required");
+        decentralizedCodeWorkflowEngineCount++;
+        decentralizedCodeWorkflowEngines[decentralizedCodeWorkflowEngineCount] = DecentralizedCodeWorkflowEngine({
+            id: decentralizedCodeWorkflowEngineCount,
+            achievementId: achievementId,
+            engineId: engineId,
+            workflowCount: workflowCount,
+            workflowType: workflowType,
+            engineProof: engineProof,
+            engineStatus: engineStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeWorkflowEngineLogged(decentralizedCodeWorkflowEngineCount, achievementId, engineId, workflowCount, workflowType, engineProof);
+        return decentralizedCodeWorkflowEngineCount;
+    }
+
+    function logSmartContractStateRecoverySystem(
+        uint256 achievementId,
+        string memory systemId,
+        string memory recoveryType,
+        uint256 recoveryCount,
+        bytes32 systemProof,
+        string memory systemStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(systemId).length > 0, "System ID required");
+        require(bytes(recoveryType).length > 0, "Recovery type required");
+        require(recoveryCount > 0, "Recovery count must be positive");
+        require(bytes(systemStatus).length > 0, "System status required");
+        smartContractStateRecoverySystemCount++;
+        smartContractStateRecoverySystems[smartContractStateRecoverySystemCount] = SmartContractStateRecoverySystem({
+            id: smartContractStateRecoverySystemCount,
+            achievementId: achievementId,
+            systemId: systemId,
+            recoveryType: recoveryType,
+            recoveryCount: recoveryCount,
+            systemProof: systemProof,
+            systemStatus: systemStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractStateRecoverySystemLogged(smartContractStateRecoverySystemCount, achievementId, systemId, recoveryType, recoveryCount, systemProof);
+        return smartContractStateRecoverySystemCount;
+    }
+
+    function logDecentralizedCodeIntegrationTestingFramework(
+        uint256 achievementId,
+        string memory frameworkId,
+        uint256 testSuiteCount,
+        string memory integrationType,
+        bytes32 frameworkProof,
+        string memory frameworkStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(frameworkId).length > 0, "Framework ID required");
+        require(testSuiteCount > 0, "Test suite count must be positive");
+        require(bytes(integrationType).length > 0, "Integration type required");
+        require(bytes(frameworkStatus).length > 0, "Framework status required");
+        decentralizedCodeIntegrationTestingFrameworkCount++;
+        decentralizedCodeIntegrationTestingFrameworks[decentralizedCodeIntegrationTestingFrameworkCount] = DecentralizedCodeIntegrationTestingFramework({
+            id: decentralizedCodeIntegrationTestingFrameworkCount,
+            achievementId: achievementId,
+            frameworkId: frameworkId,
+            testSuiteCount: testSuiteCount,
+            integrationType: integrationType,
+            frameworkProof: frameworkProof,
+            frameworkStatus: frameworkStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeIntegrationTestingFrameworkLogged(decentralizedCodeIntegrationTestingFrameworkCount, achievementId, frameworkId, testSuiteCount, integrationType, frameworkProof);
+        return decentralizedCodeIntegrationTestingFrameworkCount;
+    }
+
+    function logSmartContractPermissionManager(
+        uint256 achievementId,
+        string memory managerId,
+        uint256 permissionCount,
+        string memory permissionType,
+        bytes32 managerProof,
+        string memory managerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(managerId).length > 0, "Manager ID required");
+        require(permissionCount > 0, "Permission count must be positive");
+        require(bytes(permissionType).length > 0, "Permission type required");
+        require(bytes(managerStatus).length > 0, "Manager status required");
+        smartContractPermissionManagerCount++;
+        smartContractPermissionManagers[smartContractPermissionManagerCount] = SmartContractPermissionManager({
+            id: smartContractPermissionManagerCount,
+            achievementId: achievementId,
+            managerId: managerId,
+            permissionCount: permissionCount,
+            permissionType: permissionType,
+            managerProof: managerProof,
+            managerStatus: managerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractPermissionManagerLogged(smartContractPermissionManagerCount, achievementId, managerId, permissionCount, permissionType, managerProof);
+        return smartContractPermissionManagerCount;
+    }
+
+    function logDecentralizedCodeReleaseManager(
+        uint256 achievementId,
+        string memory managerId,
+        uint256 releaseCount,
+        string memory releaseType,
+        bytes32 managerProof,
+        string memory managerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(managerId).length > 0, "Manager ID required");
+        require(releaseCount > 0, "Release count must be positive");
+        require(bytes(releaseType).length > 0, "Release type required");
+        require(bytes(managerStatus).length > 0, "Manager status required");
+        decentralizedCodeReleaseManagerCount++;
+        decentralizedCodeReleaseManagers[decentralizedCodeReleaseManagerCount] = DecentralizedCodeReleaseManager({
+            id: decentralizedCodeReleaseManagerCount,
+            achievementId: achievementId,
+            managerId: managerId,
+            releaseCount: releaseCount,
+            releaseType: releaseType,
+            managerProof: managerProof,
+            managerStatus: managerStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeReleaseManagerLogged(decentralizedCodeReleaseManagerCount, achievementId, managerId, releaseCount, releaseType, managerProof);
+        return decentralizedCodeReleaseManagerCount;
+    }
+
+    function logSmartContractTransactionAnalyzer(
+        uint256 achievementId,
+        string memory analyzerId,
+        uint256 transactionCount,
+        string memory analysisType,
+        bytes32 analyzerProof,
+        string memory analyzerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(analyzerId).length > 0, "Analyzer ID required");
+        require(transactionCount > 0, "Transaction count must be positive");
+        require(bytes(analysisType).length > 0, "Analysis type required");
+        require(bytes(analyzerStatus).length > 0, "Analyzer status required");
+        smartContractTransactionAnalyzerCount++;
+        smartContractTransactionAnalyzers[smartContractTransactionAnalyzerCount] = SmartContractTransactionAnalyzer({
+            id: smartContractTransactionAnalyzerCount,
+            achievementId: achievementId,
+            analyzerId: analyzerId,
+            transactionCount: transactionCount,
+            analysisType: analysisType,
+            analyzerProof: analyzerProof,
+            analyzerStatus: analyzerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractTransactionAnalyzerLogged(smartContractTransactionAnalyzerCount, achievementId, analyzerId, transactionCount, analysisType, analyzerProof);
+        return smartContractTransactionAnalyzerCount;
+    }
+
+    function logDecentralizedCodeCodebaseIndexer(
+        uint256 achievementId,
+        string memory indexerId,
+        uint256 indexedFileCount,
+        string memory indexType,
+        bytes32 indexerProof,
+        string memory indexerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(indexerId).length > 0, "Indexer ID required");
+        require(indexedFileCount > 0, "Indexed file count must be positive");
+        require(bytes(indexType).length > 0, "Index type required");
+        require(bytes(indexerStatus).length > 0, "Indexer status required");
+        decentralizedCodeCodebaseIndexerCount++;
+        decentralizedCodeCodebaseIndexers[decentralizedCodeCodebaseIndexerCount] = DecentralizedCodeCodebaseIndexer({
+            id: decentralizedCodeCodebaseIndexerCount,
+            achievementId: achievementId,
+            indexerId: indexerId,
+            indexedFileCount: indexedFileCount,
+            indexType: indexType,
+            indexerProof: indexerProof,
+            indexerStatus: indexerStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeCodebaseIndexerLogged(decentralizedCodeCodebaseIndexerCount, achievementId, indexerId, indexedFileCount, indexType, indexerProof);
+        return decentralizedCodeCodebaseIndexerCount;
+    }
+
+    function logSmartContractUpgradeValidator(
+        uint256 achievementId,
+        string memory validatorId,
+        uint256 upgradeCount,
+        string memory validationRules,
+        bytes32 validatorProof,
+        string memory validatorStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(validatorId).length > 0, "Validator ID required");
+        require(upgradeCount > 0, "Upgrade count must be positive");
+        require(bytes(validationRules).length > 0, "Validation rules required");
+        require(bytes(validatorStatus).length > 0, "Validator status required");
+        smartContractUpgradeValidatorCount++;
+        smartContractUpgradeValidators[smartContractUpgradeValidatorCount] = SmartContractUpgradeValidator({
+            id: smartContractUpgradeValidatorCount,
+            achievementId: achievementId,
+            validatorId: validatorId,
+            upgradeCount: upgradeCount,
+            validationRules: validationRules,
+            validatorProof: validatorProof,
+            validatorStatus: validatorStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractUpgradeValidatorLogged(smartContractUpgradeValidatorCount, achievementId, validatorId, upgradeCount, validationRules, validatorProof);
+        return smartContractUpgradeValidatorCount;
+    }
+
+    function logDecentralizedCodeSecurityPolicyEngine(
+        uint256 achievementId,
+        string memory engineId,
+        uint256 policyCount,
+        string memory policyType,
+        bytes32 engineProof,
+        string memory engineStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(engineId).length > 0, "Engine ID required");
+        require(policyCount > 0, "Policy count must be positive");
+        require(bytes(policyType).length > 0, "Policy type required");
+        require(bytes(engineStatus).length > 0, "Engine status required");
+        decentralizedCodeSecurityPolicyEngineCount++;
+        decentralizedCodeSecurityPolicyEngines[decentralizedCodeSecurityPolicyEngineCount] = DecentralizedCodeSecurityPolicyEngine({
+            id: decentralizedCodeSecurityPolicyEngineCount,
+            achievementId: achievementId,
+            engineId: engineId,
+            policyCount: policyCount,
+            policyType: policyType,
+            engineProof: engineProof,
+            engineStatus: engineStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeSecurityPolicyEngineLogged(decentralizedCodeSecurityPolicyEngineCount, achievementId, engineId, policyCount, policyType, engineProof);
+        return decentralizedCodeSecurityPolicyEngineCount;
+    }
+
+    function logSmartContractStateMachineDesigner(
+        uint256 achievementId,
+        string memory designerId,
+        uint256 stateCount,
+        uint256 transitionCount,
+        bytes32 designerProof,
+        string memory designerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(designerId).length > 0, "Designer ID required");
+        require(stateCount > 0, "State count must be positive");
+        require(transitionCount > 0, "Transition count must be positive");
+        require(bytes(designerStatus).length > 0, "Designer status required");
+        smartContractStateMachineDesignerCount++;
+        smartContractStateMachineDesigners[smartContractStateMachineDesignerCount] = SmartContractStateMachineDesigner({
+            id: smartContractStateMachineDesignerCount,
+            achievementId: achievementId,
+            designerId: designerId,
+            stateCount: stateCount,
+            transitionCount: transitionCount,
+            designerProof: designerProof,
+            designerStatus: designerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractStateMachineDesignerLogged(smartContractStateMachineDesignerCount, achievementId, designerId, stateCount, transitionCount, designerProof);
+        return smartContractStateMachineDesignerCount;
+    }
+
+    function logDecentralizedCodeRepositoryForkManager(
+        uint256 achievementId,
+        string memory managerId,
+        uint256 forkCount,
+        string memory forkType,
+        bytes32 managerProof,
+        string memory managerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(managerId).length > 0, "Manager ID required");
+        require(forkCount > 0, "Fork count must be positive");
+        require(bytes(forkType).length > 0, "Fork type required");
+        require(bytes(managerStatus).length > 0, "Manager status required");
+        decentralizedCodeRepositoryForkManagerCount++;
+        decentralizedCodeRepositoryForkManagers[decentralizedCodeRepositoryForkManagerCount] = DecentralizedCodeRepositoryForkManager({
+            id: decentralizedCodeRepositoryForkManagerCount,
+            achievementId: achievementId,
+            managerId: managerId,
+            forkCount: forkCount,
+            forkType: forkType,
+            managerProof: managerProof,
+            managerStatus: managerStatus,
+            recordedAt: block.timestamp
+        });
+        emit DecentralizedCodeRepositoryForkManagerLogged(decentralizedCodeRepositoryForkManagerCount, achievementId, managerId, forkCount, forkType, managerProof);
+        return decentralizedCodeRepositoryForkManagerCount;
+    }
+
+    function logSmartContractLifecycleManager(
+        uint256 achievementId,
+        string memory managerId,
+        string memory lifecycleStage,
+        uint256 stageCount,
+        bytes32 managerProof,
+        string memory managerStatus
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(managerId).length > 0, "Manager ID required");
+        require(bytes(lifecycleStage).length > 0, "Lifecycle stage required");
+        require(stageCount > 0, "Stage count must be positive");
+        require(bytes(managerStatus).length > 0, "Manager status required");
+        smartContractLifecycleManagerCount++;
+        smartContractLifecycleManagers[smartContractLifecycleManagerCount] = SmartContractLifecycleManager({
+            id: smartContractLifecycleManagerCount,
+            achievementId: achievementId,
+            managerId: managerId,
+            lifecycleStage: lifecycleStage,
+            stageCount: stageCount,
+            managerProof: managerProof,
+            managerStatus: managerStatus,
+            recordedAt: block.timestamp
+        });
+        emit SmartContractLifecycleManagerLogged(smartContractLifecycleManagerCount, achievementId, managerId, lifecycleStage, stageCount, managerProof);
+        return smartContractLifecycleManagerCount;
+    }
 }
 
 
