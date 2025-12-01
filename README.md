@@ -97,6 +97,41 @@ Thirty onchain continuity enhancers that strengthen BuilderProof's resilience, s
 - 🐦 **Achievement Warrant Canary Register**: Timestamp warrant-canary statements with status and expiry proofs.
 - 🔒 **Achievement Privacy Envelope Switch**: Toggle privacy envelopes (public, partner, sealed) with signed approvals.
 
+### Bastion Lattice · Continuity Amplifiers (F121-F150)
+
+Thirty onchain continuity amplifiers that enhance BuilderProof's operational resilience, treasury management, and compliance capabilities. Each feature is implemented in the `BuilderProof.sol` contract.
+
+- ⏱️ **Achievement Latency Insurance Vaults**: Bond reimbursement pools that auto-pay when proof pipelines exceed target latency.
+- 📊 **Achievement Dynamic Risk Oracles**: Continuously update risk scores for each achievement and pause flows on critical alerts.
+- 🔄 **Achievement Cross-Chain Quorum Sync**: Mirror governance quorums across chains with notarized vote tallies and drift checks.
+- 🔮 **Achievement Predictive Ops Escalations**: Forecast escalations via telemetry models and pre-stage approvers onchain.
+- ♻️ **Achievement Attestation Revalidation Loop**: Schedule rolling attestation refreshes with expiry proofs and reviewer hashes.
+- 🛡️ **Achievement Data Residency Shields**: Seal evidence packages with jurisdiction metadata before they exit approved regions.
+- 🌉 **Achievement Compliant Bridging Escrows**: Wrap bridge transfers in compliance attestations plus automated escrow releases.
+- 💓 **Achievement Multi-Sig Heartbeat Logger**: Require periodic heartbeat signatures from multi-sig custodians prior to execution.
+- 🔄 **Achievement Keeper Fallback Registry**: Maintain backup keeper rosters that can assume automation tasks upon heartbeat loss.
+- 📋 **Achievement Chain Handoff Playbooks**: Encode migration playbooks for chain handoffs with validation checkpoints.
+- ⏰ **Achievement Timewarp Audit Trail**: Capture forward/back-dated adjustments with reviewer attestations and reasoning.
+- 📜 **Achievement Term Sheet Anchors**: Anchor contributor and sponsor term sheets with immutable change logs.
+- 💰 **Achievement Retro Funding Routers**: Route incoming retro funding to affected achievements using programmable splits.
+- ✅ **Achievement Onchain QA Queues**: Enforce QA verdicts, severity labels, and follow-ups before mint actions unlock.
+- 🗺️ **Achievement Service Graph Mapper**: Map upstream/downstream service dependencies with health proofs baked in.
+- 🗜️ **Achievement Deterministic Compression Forge**: Store deterministic compression recipes plus decompression proofs for evidence.
+- 💸 **Achievement Treasury Stress Map**: Simulate treasury stress envelopes and log reviewer approvals of assumptions.
+- 🎚️ **Achievement Reward Emission Governors**: Automatically throttle or boost emissions based on observed onchain KPIs.
+- 🌱 **Achievement Sustainable Mining Offsets**: Attach verified sustainability offsets to energy-intensive submissions.
+- ⚡ **Achievement Emergency Gas Switchboard**: Flip builders into sponsored, batched, or deferred gas modes during spikes.
+- 🔑 **Achievement Handover Escrow Keys**: Escrow admin keys during handovers with time-locked release attestations.
+- 🔍 **Achievement Credential Sanity Scanner**: Continuously scan verifiable credentials feeding achievements for revocations.
+- 📝 **Achievement Intent Failure Registry**: Chronicle failed intents with payload hashes, root-cause codes, and owners.
+- 🔓 **Achievement Progressive Disclosure Flows**: Gradually reveal sensitive evidence as reviewers clear checkpoints.
+- 📈 **Achievement KPI Confidence Bands**: Publish KPI confidence intervals with oracle references and refresh cadence.
+- 💧 **Achievement Liquidity Fallback Lines**: Register emergency liquidity providers tied to specific achievements or vaults.
+- 💎 **Achievement Operator Escrow Bonds**: Force operators to post escrow bonds that slash when commitments slip.
+- 📡 **Achievement Validator Relief Signals**: Broadcast validator relief signals and restitution plans after slashing events.
+- 📋 **Achievement Impact Audit Trails**: Chain audit workpapers, signatures, and remediation status for impact reviews.
+- 🚨 **Achievement Zero-Day Response Ledger**: Capture zero-day timelines, mitigations, and disclosure proofs end to end.
+
 - **Wave Ω · Aegis Matrix (F91–F120)** now maps thirty resilience catalysts across telemetry hygiene, treasury cushions, and cross-governance guardrails inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ω--aegis-matrix-resilience-catalysts-f91f120).
 - **Wave Ξ · Helios Forge (F181–F210)** layers thirty new deterministic continuity controls—delta vaults, custody arbitration, liquidity safety valves, and compliance relays—documented inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-ξ--helios-forge-continuity-grid-f181f210).
 - **Wave Π · Nebula Forge (F211–F240)** introduces AI intent firewalls, guardian accountability graphs, telemetry custody routers, and treasury hedge vaults inside [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#wave-π--nebula-forge-autonomous-grid-f211f240).
