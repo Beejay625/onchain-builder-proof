@@ -2696,6 +2696,40 @@ npm run dev
 └── tailwind.config.ts      # Tailwind configuration
 ```
 
+### Developer Excellence Wave · 30 Onchain Developer Tools (F541-F570)
+- 🆔 **Achievement Decentralized Identity Verification**: Verify developer identities with proof-based verification methods and identity type classification.
+- 🔍 **Achievement Smart Contract Audit Registry**: Register contract audits with auditor signatures, security scores, and audit report hashes.
+- 🏆 **Achievement Code Contribution Merit System**: Track code contributions with merit scoring, contributor addresses, and contribution proof validation.
+- 🐛 **Achievement Decentralized Bug Bounty Platform**: Manage bug bounties with vulnerability types, severity levels, reward amounts, and bounty status tracking.
+- 🎓 **Achievement Tokenized Skill Certification**: Issue skill certifications with certification levels, issuer addresses, and tokenized proof validation.
+- 👀 **Achievement Decentralized Code Review Network**: Manage code reviews with reviewer addresses, review scores, and review proof hashes.
+- 🔒 **Achievement Automated Security Scanning Integration**: Configure security scans with vulnerability tracking, risk levels, and scan report validation.
+- 💰 **Achievement Decentralized Project Funding Pool**: Create funding pools with funding goals, contributor tracking, and pool status management.
+- 🌉 **Achievement Cross-Protocol Achievement Bridge**: Bridge achievements across protocols with source/target protocol verification and achievement counting.
+- 🛒 **Achievement Decentralized Code Marketplace**: List code assets with pricing, license types, and asset proof validation.
+- ✅ **Achievement Automated Test Coverage Tracker**: Track test coverage with coverage percentages, test counts, and test suite hash validation.
+- 📚 **Achievement Decentralized Documentation Network**: Manage documentation with version control, content hashes, and documentation proof validation.
+- 🔄 **Achievement Smart Contract Upgrade Registry**: Register contract upgrades with upgrade types, contract addresses, and upgrade proof validation.
+- ⭐ **Achievement Decentralized Developer Reputation System**: Track developer reputation with reputation scores, reputation factors, and proof validation.
+- 🔍 **Achievement Automated Dependency Vulnerability Scanner**: Scan dependencies for vulnerabilities with dependency counts, vulnerability tracking, and risk scoring.
+- 📜 **Achievement Decentralized Code Licensing Registry**: Register code licenses with license types, licensor addresses, and license terms validation.
+- 🔗 **Achievement Cross-Chain Achievement Aggregator**: Aggregate achievements across chains with chain counts, achievement counts, and aggregation proof validation.
+- 📊 **Achievement Decentralized Technical Debt Tracker**: Track technical debt with debt types, debt amounts, priority levels, and debt proof validation.
+- ⚡ **Achievement Automated Performance Benchmarking**: Benchmark performance with performance scores, benchmark types, and benchmark proof validation.
+- 🍴 **Achievement Decentralized Code Fork Registry**: Register code forks with original and fork repository hashes, fork types, and fork proof validation.
+- ⛽ **Achievement Smart Contract Gas Optimization Tracker**: Track gas optimizations with gas savings, optimization types, and optimization proof validation.
+- 👥 **Achievement Decentralized Code Collaboration Network**: Manage code collaborations with collaborator counts, collaboration types, and collaboration proof validation.
+- ✅ **Achievement Automated Compliance Checker**: Check compliance with compliance standards, compliance scores, and compliance proof validation.
+- 📈 **Achievement Decentralized Code Quality Metrics**: Track code quality with metric types, metric values, quality scores, and metric proof validation.
+- 🔄 **Achievement Cross-Platform Achievement Sync**: Sync achievements across platforms with source/target platform verification and sync count tracking.
+- 📦 **Achievement Decentralized Code Archive Network**: Archive code with archive types, content hashes, and archive proof validation.
+- 🤖 **Achievement Automated Code Review Bot**: Configure review bots with bot types, review counts, review scores, and bot proof validation.
+- 🎯 **Achievement Decentralized Developer Onboarding System**: Manage developer onboarding with onboarding stages, completion rates, and onboarding proof validation.
+- 🚀 **Achievement Smart Contract Deployment Registry**: Register contract deployments with deployment networks, contract addresses, and deployment proof validation.
+- 🗳️ **Achievement Decentralized Code Governance Platform**: Manage code governance with proposal counts, voting mechanisms, and governance proof validation.
+
+Deep dives for this wave live in [`docs/feature-delivery-plan.md`](docs/feature-delivery-plan.md#developer-excellence-wave--30-onchain-developer-tools-f541f570).
+
 ## Smart Contract
 
 The application uses a deployed `BuilderProof` smart contract on **Base chain** that allows users to:
@@ -2738,7 +2772,7 @@ npm run lint
 
 ## 🎯 Key Highlights
 
-- **594+ features** shipped yet summarized cleanly in the README.
+- **624+ features** shipped yet summarized cleanly in the README.
 - **Unified onchain hub** for minting, governance, payouts, and badge ops.
 - **Reown-native wallet UX** with streaks, leaderboards, and social loops.
 - **Marketplace & NFT rail** covering rentals, royalties, and appraisals.
