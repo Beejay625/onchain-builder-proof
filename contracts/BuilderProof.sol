@@ -1327,6 +1327,301 @@ contract SocialMediaContract {
         uint256 recordedAt;
     }
 
+    struct LatencyInsuranceVault {
+        uint256 id;
+        uint256 achievementId;
+        uint256 reimbursementPool;
+        uint256 targetLatency;
+        bool autoPaid;
+        uint256 recordedAt;
+    }
+
+    struct DynamicRiskOracle {
+        uint256 id;
+        uint256 achievementId;
+        uint256 riskScore;
+        bool criticalAlert;
+        bool flowsPaused;
+        bytes32 riskModelHash;
+        uint256 recordedAt;
+    }
+
+    struct CrossChainQuorumSync {
+        uint256 id;
+        uint256 achievementId;
+        string[] chainIds;
+        bytes32 voteTallyHash;
+        uint256 driftCheck;
+        bytes32 syncProof;
+        uint256 recordedAt;
+    }
+
+    struct PredictiveOpsEscalation {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 telemetryModelHash;
+        address[] preStagedApprovers;
+        uint256 escalationProbability;
+        uint256 recordedAt;
+    }
+
+    struct AttestationRevalidationLoop {
+        uint256 id;
+        uint256 achievementId;
+        uint256 refreshSchedule;
+        bytes32 expiryProof;
+        bytes32 reviewerHash;
+        uint256 lastRefresh;
+        uint256 recordedAt;
+    }
+
+    struct DataResidencyShield {
+        uint256 id;
+        uint256 achievementId;
+        string jurisdiction;
+        bytes32 evidencePackageHash;
+        bytes32 residencyProof;
+        bool sealed;
+        uint256 recordedAt;
+    }
+
+    struct CompliantBridgingEscrow {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 complianceAttestation;
+        uint256 bridgeAmount;
+        bool autoReleased;
+        bytes32 releaseProof;
+        uint256 recordedAt;
+    }
+
+    struct MultiSigHeartbeatLogger {
+        uint256 id;
+        uint256 achievementId;
+        address[] custodians;
+        uint256 heartbeatInterval;
+        bytes32 lastHeartbeatHash;
+        uint256 lastHeartbeatTime;
+        uint256 recordedAt;
+    }
+
+    struct KeeperFallbackRegistry {
+        uint256 id;
+        uint256 achievementId;
+        address[] backupKeepers;
+        bytes32 automationTaskHash;
+        bool activated;
+        uint256 recordedAt;
+    }
+
+    struct ChainHandoffPlaybook {
+        uint256 id;
+        uint256 achievementId;
+        string sourceChain;
+        string targetChain;
+        bytes32 migrationPlaybookHash;
+        bytes32 validationCheckpoint;
+        uint256 recordedAt;
+    }
+
+    struct TimewarpAuditTrail {
+        uint256 id;
+        uint256 achievementId;
+        uint256 adjustmentTimestamp;
+        bytes32 reviewerAttestation;
+        string reasoning;
+        bool isBackdated;
+        uint256 recordedAt;
+    }
+
+    struct TermSheetAnchor {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 termSheetHash;
+        address contributor;
+        address sponsor;
+        bytes32 changeLogHash;
+        uint256 recordedAt;
+    }
+
+    struct RetroFundingRouter {
+        uint256 id;
+        uint256 achievementId;
+        uint256 fundingAmount;
+        bytes32 splitConfigHash;
+        uint256[] affectedAchievementIds;
+        bytes32 routingProof;
+        uint256 recordedAt;
+    }
+
+    struct OnchainQAQueue {
+        uint256 id;
+        uint256 achievementId;
+        string qaVerdict;
+        string severityLabel;
+        bytes32 followUpHash;
+        bool mintUnlocked;
+        uint256 recordedAt;
+    }
+
+    struct ServiceGraphMapper {
+        uint256 id;
+        uint256 achievementId;
+        string[] upstreamServices;
+        string[] downstreamServices;
+        bytes32 healthProofHash;
+        bytes32 dependencyGraphHash;
+        uint256 recordedAt;
+    }
+
+    struct DeterministicCompressionForge {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 compressionRecipeHash;
+        bytes32 decompressionProofHash;
+        bytes32 evidenceHash;
+        uint256 compressionRatio;
+        uint256 recordedAt;
+    }
+
+    struct TreasuryStressMap {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 stressEnvelopeHash;
+        bytes32 reviewerApprovalHash;
+        bytes32 assumptionsHash;
+        uint256 stressLevel;
+        uint256 recordedAt;
+    }
+
+    struct RewardEmissionGovernor {
+        uint256 id;
+        uint256 achievementId;
+        uint256 emissionRate;
+        bytes32 kpiHash;
+        bool throttled;
+        bool boosted;
+        uint256 recordedAt;
+    }
+
+    struct SustainableMiningOffset {
+        uint256 id;
+        uint256 achievementId;
+        uint256 energyIntensity;
+        bytes32 sustainabilityOffsetHash;
+        bytes32 verificationProof;
+        uint256 recordedAt;
+    }
+
+    struct EmergencyGasSwitchboard {
+        uint256 id;
+        uint256 achievementId;
+        string gasMode;
+        address[] builders;
+        bool active;
+        bytes32 switchProof;
+        uint256 recordedAt;
+    }
+
+    struct HandoverEscrowKeys {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 adminKeyHash;
+        uint256 timelockDuration;
+        bytes32 releaseAttestation;
+        bool released;
+        uint256 recordedAt;
+    }
+
+    struct CredentialSanityScanner {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 credentialHash;
+        bool revoked;
+        bytes32 revocationProof;
+        uint256 lastScanTime;
+        uint256 recordedAt;
+    }
+
+    struct IntentFailureRegistry {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 payloadHash;
+        string rootCauseCode;
+        address owner;
+        bytes32 failureProof;
+        uint256 recordedAt;
+    }
+
+    struct ProgressiveDisclosureFlow {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 evidenceHash;
+        uint256 checkpointCount;
+        bytes32 reviewerCheckpointHash;
+        bool fullyDisclosed;
+        uint256 recordedAt;
+    }
+
+    struct KPIConfidenceBands {
+        uint256 id;
+        uint256 achievementId;
+        uint256 confidenceInterval;
+        bytes32 oracleReferenceHash;
+        uint256 refreshCadence;
+        bytes32 kpiProof;
+        uint256 recordedAt;
+    }
+
+    struct LiquidityFallbackLine {
+        uint256 id;
+        uint256 achievementId;
+        address liquidityProvider;
+        uint256[] linkedAchievementIds;
+        bytes32 vaultHash;
+        bool active;
+        uint256 recordedAt;
+    }
+
+    struct OperatorEscrowBond {
+        uint256 id;
+        uint256 achievementId;
+        address operator;
+        uint256 bondAmount;
+        bytes32 commitmentHash;
+        bool slashed;
+        uint256 recordedAt;
+    }
+
+    struct ValidatorReliefSignal {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 reliefSignalHash;
+        bytes32 restitutionPlanHash;
+        uint256 slashingEventId;
+        uint256 recordedAt;
+    }
+
+    struct ImpactAuditTrail {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 auditWorkpaperHash;
+        bytes32 signatureHash;
+        string remediationStatus;
+        bytes32 impactReviewHash;
+        uint256 recordedAt;
+    }
+
+    struct ZeroDayResponseLedger {
+        uint256 id;
+        uint256 achievementId;
+        bytes32 timelineHash;
+        bytes32 mitigationHash;
+        bytes32 disclosureProof;
+        uint256 zeroDayTimestamp;
+        uint256 recordedAt;
+    }
+
     struct OnboardingWizard {
         uint256 id;
         uint256 achievementId;
