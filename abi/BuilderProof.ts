@@ -2272,6 +2272,191 @@ export const BuilderProofABI = [
     type: 'event',
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'wizardId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'wizardType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'stepCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'wizardProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'OnboardingWizardLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'flowId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'flowType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'completionRate',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'flowProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'UserOnboardingFlowLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'tutorialId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'tutorialType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'lessonCount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'tutorialProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'InteractiveTutorialLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'helpId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'helpType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'helpViews',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'helpProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'ContextualHelpLogged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'complianceId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'string',
+        name: 'standardType',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'complianceScore',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'AccessibilityComplianceLogged',
+    type: 'event',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256',
@@ -5315,6 +5500,201 @@ export const BuilderProofABI = [
       },
     ],
     name: 'logDocumentationGenerator',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'wizardType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'wizardHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'stepCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'wizardProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logOnboardingWizard',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'flowType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'flowHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'completionRate',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'flowProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logUserOnboardingFlow',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'tutorialType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'tutorialHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'lessonCount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'tutorialProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logInteractiveTutorial',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'helpType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'helpContentHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'helpViews',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'helpProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logContextualHelp',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'achievementId',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'standardType',
+        type: 'string',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'complianceHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'uint256',
+        name: 'complianceScore',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'complianceProof',
+        type: 'bytes32',
+      },
+    ],
+    name: 'logAccessibilityCompliance',
     outputs: [
       {
         internalType: 'uint256',
