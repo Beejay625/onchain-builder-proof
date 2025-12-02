@@ -6625,6 +6625,713 @@ contract SocialMediaContract {
         return privacyEnvelopeSwitchCount;
     }
 
+    function logContinuityChaosGuard(
+        uint256 achievementId,
+        bytes32 chaosSequenceHash,
+        bytes32 failoverLaneHash,
+        bool compliant,
+        bytes32 notarizationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        continuityChaosGuardCount++;
+        continuityChaosGuards[continuityChaosGuardCount] = ContinuityChaosGuard({
+            id: continuityChaosGuardCount,
+            achievementId: achievementId,
+            chaosSequenceHash: chaosSequenceHash,
+            failoverLaneHash: failoverLaneHash,
+            compliant: compliant,
+            notarizationProof: notarizationProof,
+            recordedAt: block.timestamp
+        });
+        emit ContinuityChaosGuardLogged(continuityChaosGuardCount, achievementId, chaosSequenceHash, failoverLaneHash, compliant, notarizationProof);
+        return continuityChaosGuardCount;
+    }
+
+    function logIntentHedgingPool(
+        uint256 achievementId,
+        uint256 pooledCapital,
+        uint256 riskThreshold,
+        bytes32 insuranceProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(pooledCapital > 0, "Pooled capital required");
+        intentHedgingPoolsCount++;
+        intentHedgingPools[intentHedgingPoolsCount] = IntentHedgingPool({
+            id: intentHedgingPoolsCount,
+            achievementId: achievementId,
+            pooledCapital: pooledCapital,
+            riskThreshold: riskThreshold,
+            autoInsured: false,
+            insuranceProof: insuranceProof,
+            recordedAt: block.timestamp
+        });
+        emit IntentHedgingPoolLogged(intentHedgingPoolsCount, achievementId, pooledCapital, riskThreshold, false, insuranceProof);
+        return intentHedgingPoolsCount;
+    }
+
+    function logMultiAgentIncidentMesh(
+        uint256 achievementId,
+        address[] memory responderAgents,
+        bytes32 authorityScopeHash,
+        bytes32 escalationPathHash,
+        bytes32 meshProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(responderAgents.length >= 2, "At least 2 agents required");
+        multiAgentIncidentMeshCount++;
+        multiAgentIncidentMeshes[multiAgentIncidentMeshCount] = MultiAgentIncidentMesh({
+            id: multiAgentIncidentMeshCount,
+            achievementId: achievementId,
+            responderAgents: responderAgents,
+            authorityScopeHash: authorityScopeHash,
+            escalationPathHash: escalationPathHash,
+            meshProof: meshProof,
+            recordedAt: block.timestamp
+        });
+        emit MultiAgentIncidentMeshLogged(multiAgentIncidentMeshCount, achievementId, authorityScopeHash, escalationPathHash, meshProof);
+        return multiAgentIncidentMeshCount;
+    }
+
+    function logTemporalRollbackPermit(
+        uint256 achievementId,
+        bytes32 permitSignature,
+        uint256 expiryTimestamp,
+        string memory reasonCode,
+        bytes32 reviewerQuorumProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(expiryTimestamp > block.timestamp, "Expiry must be in future");
+        require(bytes(reasonCode).length > 0, "Reason code required");
+        temporalRollbackPermitsCount++;
+        temporalRollbackPermits[temporalRollbackPermitsCount] = TemporalRollbackPermit({
+            id: temporalRollbackPermitsCount,
+            achievementId: achievementId,
+            permitSignature: permitSignature,
+            expiryTimestamp: expiryTimestamp,
+            reasonCode: reasonCode,
+            reviewerQuorumProof: reviewerQuorumProof,
+            executed: false,
+            recordedAt: block.timestamp
+        });
+        emit TemporalRollbackPermitLogged(temporalRollbackPermitsCount, achievementId, permitSignature, expiryTimestamp, reasonCode, reviewerQuorumProof);
+        return temporalRollbackPermitsCount;
+    }
+
+    function executeTemporalRollbackPermit(uint256 permitId) public {
+        require(permitId > 0 && permitId <= temporalRollbackPermitsCount, "Permit missing");
+        TemporalRollbackPermit storage permit = temporalRollbackPermits[permitId];
+        require(!permit.executed, "Permit already executed");
+        require(block.timestamp <= permit.expiryTimestamp, "Permit expired");
+        permit.executed = true;
+        emit TemporalRollbackPermitExecuted(permitId, msg.sender);
+    }
+
+    function logProbabilisticFailureForecaster(
+        uint256 achievementId,
+        bytes32 probabilityConeHash,
+        bytes32 failureWindowHash,
+        address mitigationOwner,
+        bytes32 forecastProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(mitigationOwner != address(0), "Invalid mitigation owner");
+        probabilisticFailureForecasterCount++;
+        probabilisticFailureForecasters[probabilisticFailureForecasterCount] = ProbabilisticFailureForecaster({
+            id: probabilisticFailureForecasterCount,
+            achievementId: achievementId,
+            probabilityConeHash: probabilityConeHash,
+            failureWindowHash: failureWindowHash,
+            mitigationOwner: mitigationOwner,
+            forecastProof: forecastProof,
+            recordedAt: block.timestamp
+        });
+        emit ProbabilisticFailureForecasterLogged(probabilisticFailureForecasterCount, achievementId, probabilityConeHash, failureWindowHash, mitigationOwner);
+        return probabilisticFailureForecasterCount;
+    }
+
+    function logReownSessionCircuit(
+        uint256 achievementId,
+        bytes32 sessionScopeHash,
+        bytes32 deviceAttestationHash,
+        bytes32 forceResetRulesHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        reownSessionCircuitCount++;
+        reownSessionCircuits[reownSessionCircuitCount] = ReownSessionCircuit({
+            id: reownSessionCircuitCount,
+            achievementId: achievementId,
+            sessionScopeHash: sessionScopeHash,
+            deviceAttestationHash: deviceAttestationHash,
+            forceResetRulesHash: forceResetRulesHash,
+            active: true,
+            recordedAt: block.timestamp
+        });
+        emit ReownSessionCircuitLogged(reownSessionCircuitCount, achievementId, sessionScopeHash, deviceAttestationHash, forceResetRulesHash, true);
+        return reownSessionCircuitCount;
+    }
+
+    function logCounterpartyEscalationBond(
+        uint256 achievementId,
+        address counterparty,
+        uint256 stakedAmount,
+        bytes32 escalationPolicyHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(counterparty != address(0), "Invalid counterparty");
+        require(stakedAmount > 0, "Staked amount required");
+        counterpartyEscalationBondsCount++;
+        counterpartyEscalationBonds[counterpartyEscalationBondsCount] = CounterpartyEscalationBond({
+            id: counterpartyEscalationBondsCount,
+            achievementId: achievementId,
+            counterparty: counterparty,
+            stakedAmount: stakedAmount,
+            escalationPolicyHash: escalationPolicyHash,
+            slashed: false,
+            recordedAt: block.timestamp
+        });
+        emit CounterpartyEscalationBondLogged(counterpartyEscalationBondsCount, achievementId, counterparty, stakedAmount, escalationPolicyHash);
+        return counterpartyEscalationBondsCount;
+    }
+
+    function slashCounterpartyEscalationBond(uint256 bondId) public {
+        require(bondId > 0 && bondId <= counterpartyEscalationBondsCount, "Bond missing");
+        CounterpartyEscalationBond storage bond = counterpartyEscalationBonds[bondId];
+        require(!bond.slashed, "Bond already slashed");
+        bond.slashed = true;
+        emit CounterpartyEscalationBondSlashed(bondId, msg.sender);
+    }
+
+    function logDistributedCustodyVault(
+        uint256 achievementId,
+        address[] memory storageProviders,
+        bytes32 custodyAttestationHash,
+        uint256 quorumRequirement,
+        bytes32 shardProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(storageProviders.length >= 2, "At least 2 providers required");
+        require(quorumRequirement > 0 && quorumRequirement <= storageProviders.length, "Invalid quorum");
+        distributedCustodyVaultsCount++;
+        distributedCustodyVaults[distributedCustodyVaultsCount] = DistributedCustodyVault({
+            id: distributedCustodyVaultsCount,
+            achievementId: achievementId,
+            storageProviders: storageProviders,
+            custodyAttestationHash: custodyAttestationHash,
+            quorumRequirement: quorumRequirement,
+            shardProof: shardProof,
+            recordedAt: block.timestamp
+        });
+        emit DistributedCustodyVaultLogged(distributedCustodyVaultsCount, achievementId, custodyAttestationHash, quorumRequirement, shardProof);
+        return distributedCustodyVaultsCount;
+    }
+
+    function logAutonomousPatchCaravan(
+        uint256 achievementId,
+        bytes32 patchPayloadHash,
+        bytes32 verificationHash,
+        bytes32 adoptionWatchdogHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        autonomousPatchCaravanCount++;
+        autonomousPatchCaravans[autonomousPatchCaravanCount] = AutonomousPatchCaravan({
+            id: autonomousPatchCaravanCount,
+            achievementId: achievementId,
+            patchPayloadHash: patchPayloadHash,
+            verificationHash: verificationHash,
+            adoptionWatchdogHash: adoptionWatchdogHash,
+            deployed: false,
+            recordedAt: block.timestamp
+        });
+        emit AutonomousPatchCaravanLogged(autonomousPatchCaravanCount, achievementId, patchPayloadHash, verificationHash, adoptionWatchdogHash, false);
+        return autonomousPatchCaravanCount;
+    }
+
+    function logTreasuryHeartbeatOrchestrator(
+        uint256 achievementId,
+        bytes32 heartbeatAttestationHash,
+        address[] memory signers,
+        bytes32 timelockHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(signers.length >= 2, "At least 2 signers required");
+        treasuryHeartbeatOrchestratorCount++;
+        treasuryHeartbeatOrchestrators[treasuryHeartbeatOrchestratorCount] = TreasuryHeartbeatOrchestrator({
+            id: treasuryHeartbeatOrchestratorCount,
+            achievementId: achievementId,
+            heartbeatAttestationHash: heartbeatAttestationHash,
+            signers: signers,
+            timelockHash: timelockHash,
+            lastHeartbeat: block.timestamp,
+            recordedAt: block.timestamp
+        });
+        emit TreasuryHeartbeatOrchestratorLogged(treasuryHeartbeatOrchestratorCount, achievementId, heartbeatAttestationHash, timelockHash, block.timestamp);
+        return treasuryHeartbeatOrchestratorCount;
+    }
+
+    function logSettlementFinalityRadar(
+        uint256 achievementId,
+        string[] memory chainIds,
+        uint256[] memory finalityLags,
+        uint256 alertThreshold,
+        bytes32 reviewerAckHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(chainIds.length == finalityLags.length, "Arrays must match");
+        require(chainIds.length > 0, "At least one chain required");
+        settlementFinalityRadarCount++;
+        settlementFinalityRadars[settlementFinalityRadarCount] = SettlementFinalityRadar({
+            id: settlementFinalityRadarCount,
+            achievementId: achievementId,
+            chainIds: chainIds,
+            finalityLags: finalityLags,
+            alertThreshold: alertThreshold,
+            reviewerAckHash: reviewerAckHash,
+            recordedAt: block.timestamp
+        });
+        emit SettlementFinalityRadarLogged(settlementFinalityRadarCount, achievementId, alertThreshold, reviewerAckHash);
+        return settlementFinalityRadarCount;
+    }
+
+    function logDisasterAidEscrowGrid(
+        uint256 achievementId,
+        string memory geography,
+        uint256 reliefEscrowAmount,
+        bytes32 oracleTriggerHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(geography).length > 0, "Geography required");
+        require(reliefEscrowAmount > 0, "Relief escrow amount required");
+        disasterAidEscrowGridCount++;
+        disasterAidEscrowGrids[disasterAidEscrowGridCount] = DisasterAidEscrowGrid({
+            id: disasterAidEscrowGridCount,
+            achievementId: achievementId,
+            geography: geography,
+            reliefEscrowAmount: reliefEscrowAmount,
+            oracleTriggerHash: oracleTriggerHash,
+            unlocked: false,
+            recordedAt: block.timestamp
+        });
+        emit DisasterAidEscrowGridLogged(disasterAidEscrowGridCount, achievementId, geography, reliefEscrowAmount, oracleTriggerHash);
+        return disasterAidEscrowGridCount;
+    }
+
+    function unlockDisasterAidEscrowGrid(uint256 gridId) public {
+        require(gridId > 0 && gridId <= disasterAidEscrowGridCount, "Grid missing");
+        DisasterAidEscrowGrid storage grid = disasterAidEscrowGrids[gridId];
+        require(!grid.unlocked, "Grid already unlocked");
+        require(grid.oracleTriggerHash != bytes32(0), "Oracle trigger required");
+        grid.unlocked = true;
+        emit DisasterAidEscrowGridUnlocked(gridId, msg.sender);
+    }
+
+    function logComplianceEvidenceRouter(
+        uint256 achievementId,
+        string memory regulatorEndpoint,
+        bytes32 encryptedEvidenceHash,
+        bytes32 receiptProof,
+        bytes32 deliveryHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(regulatorEndpoint).length > 0, "Regulator endpoint required");
+        complianceEvidenceRouterCount++;
+        complianceEvidenceRouters[complianceEvidenceRouterCount] = ComplianceEvidenceRouter({
+            id: complianceEvidenceRouterCount,
+            achievementId: achievementId,
+            regulatorEndpoint: regulatorEndpoint,
+            encryptedEvidenceHash: encryptedEvidenceHash,
+            receiptProof: receiptProof,
+            deliveryHash: deliveryHash,
+            recordedAt: block.timestamp
+        });
+        emit ComplianceEvidenceRouterLogged(complianceEvidenceRouterCount, achievementId, regulatorEndpoint, encryptedEvidenceHash, receiptProof);
+        return complianceEvidenceRouterCount;
+    }
+
+    function logMultiChainDebriefStudio(
+        uint256 achievementId,
+        string memory chainId,
+        bytes32 incidentDebriefHash,
+        bytes32 actionItemHash,
+        bytes32 debriefProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(chainId).length > 0, "Chain ID required");
+        multiChainDebriefStudioCount++;
+        multiChainDebriefStudios[multiChainDebriefStudioCount] = MultiChainDebriefStudio({
+            id: multiChainDebriefStudioCount,
+            achievementId: achievementId,
+            chainId: chainId,
+            incidentDebriefHash: incidentDebriefHash,
+            actionItemHash: actionItemHash,
+            debriefProof: debriefProof,
+            recordedAt: block.timestamp
+        });
+        emit MultiChainDebriefStudioLogged(multiChainDebriefStudioCount, achievementId, chainId, incidentDebriefHash, actionItemHash);
+        return multiChainDebriefStudioCount;
+    }
+
+    function logWitnessDensityTracker(
+        uint256 achievementId,
+        uint256 witnessCoverage,
+        uint256 policyRequirement,
+        bytes32 densityProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        witnessDensityTrackerCount++;
+        bool lowDensity = witnessCoverage < policyRequirement;
+        witnessDensityTrackers[witnessDensityTrackerCount] = WitnessDensityTracker({
+            id: witnessDensityTrackerCount,
+            achievementId: achievementId,
+            witnessCoverage: witnessCoverage,
+            policyRequirement: policyRequirement,
+            lowDensity: lowDensity,
+            densityProof: densityProof,
+            recordedAt: block.timestamp
+        });
+        emit WitnessDensityTrackerLogged(witnessDensityTrackerCount, achievementId, witnessCoverage, policyRequirement, lowDensity, densityProof);
+        return witnessDensityTrackerCount;
+    }
+
+    function logStagedRedemptionQueue(
+        uint256 achievementId,
+        uint256 redemptionAmount,
+        bytes32[] memory phaseEvidenceHashes,
+        uint256[] memory checkpointTimestamps
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(redemptionAmount > 0, "Redemption amount required");
+        require(phaseEvidenceHashes.length == checkpointTimestamps.length, "Arrays must match");
+        stagedRedemptionQueueCount++;
+        stagedRedemptionQueues[stagedRedemptionQueueCount] = StagedRedemptionQueue({
+            id: stagedRedemptionQueueCount,
+            achievementId: achievementId,
+            redemptionAmount: redemptionAmount,
+            phaseEvidenceHashes: phaseEvidenceHashes,
+            checkpointTimestamps: checkpointTimestamps,
+            fullyRedeemed: false,
+            recordedAt: block.timestamp
+        });
+        emit StagedRedemptionQueueLogged(stagedRedemptionQueueCount, achievementId, redemptionAmount, phaseEvidenceHashes, false);
+        return stagedRedemptionQueueCount;
+    }
+
+    function logQuantumReadinessRegistry(
+        uint256 achievementId,
+        uint256 readinessStatus,
+        uint256 cutoverDate,
+        bytes32 auditSignatureHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(readinessStatus <= 100, "Readiness status must be <= 100");
+        require(cutoverDate > block.timestamp, "Cutover date must be in future");
+        quantumReadinessRegistryCount++;
+        bool ready = readinessStatus == 100;
+        quantumReadinessRegistries[quantumReadinessRegistryCount] = QuantumReadinessRegistry({
+            id: quantumReadinessRegistryCount,
+            achievementId: achievementId,
+            readinessStatus: readinessStatus,
+            cutoverDate: cutoverDate,
+            auditSignatureHash: auditSignatureHash,
+            ready: ready,
+            recordedAt: block.timestamp
+        });
+        emit QuantumReadinessRegistryLogged(quantumReadinessRegistryCount, achievementId, readinessStatus, cutoverDate, auditSignatureHash, ready);
+        return quantumReadinessRegistryCount;
+    }
+
+    function logSovereignDataRelay(
+        uint256 achievementId,
+        bytes32 dataReplicationHash,
+        bytes32 manifestHash,
+        string memory jurisdiction,
+        bytes32 relayProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(jurisdiction).length > 0, "Jurisdiction required");
+        sovereignDataRelayCount++;
+        sovereignDataRelays[sovereignDataRelayCount] = SovereignDataRelay({
+            id: sovereignDataRelayCount,
+            achievementId: achievementId,
+            dataReplicationHash: dataReplicationHash,
+            manifestHash: manifestHash,
+            jurisdiction: jurisdiction,
+            relayProof: relayProof,
+            recordedAt: block.timestamp
+        });
+        emit SovereignDataRelayLogged(sovereignDataRelayCount, achievementId, dataReplicationHash, manifestHash, jurisdiction);
+        return sovereignDataRelayCount;
+    }
+
+    function logRegenerativeBudgetVault(
+        uint256 achievementId,
+        uint256 impactKPIThreshold,
+        bytes32 regenerativeProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(impactKPIThreshold > 0, "Impact KPI threshold required");
+        regenerativeBudgetVaultCount++;
+        regenerativeBudgetVaults[regenerativeBudgetVaultCount] = RegenerativeBudgetVault({
+            id: regenerativeBudgetVaultCount,
+            achievementId: achievementId,
+            impactKPIThreshold: impactKPIThreshold,
+            regenerativeProof: regenerativeProof,
+            refilled: false,
+            recordedAt: block.timestamp
+        });
+        emit RegenerativeBudgetVaultLogged(regenerativeBudgetVaultCount, achievementId, impactKPIThreshold, regenerativeProof, false);
+        return regenerativeBudgetVaultCount;
+    }
+
+    function logAdaptiveScopeGuard(
+        uint256 achievementId,
+        bytes32 achievementScopeHash,
+        bytes32 anomalySignalHash,
+        bytes32 adjustmentProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        adaptiveScopeGuardCount++;
+        bool quarantined = anomalySignalHash != bytes32(0);
+        adaptiveScopeGuards[adaptiveScopeGuardCount] = AdaptiveScopeGuard({
+            id: adaptiveScopeGuardCount,
+            achievementId: achievementId,
+            achievementScopeHash: achievementScopeHash,
+            anomalySignalHash: anomalySignalHash,
+            quarantined: quarantined,
+            adjustmentProof: adjustmentProof,
+            recordedAt: block.timestamp
+        });
+        emit AdaptiveScopeGuardLogged(adaptiveScopeGuardCount, achievementId, achievementScopeHash, anomalySignalHash, quarantined);
+        return adaptiveScopeGuardCount;
+    }
+
+    function logMultiHopTicketingGraph(
+        uint256 achievementId,
+        bytes32 ticketGraphHash,
+        bytes32 resolutionProofHash,
+        uint256 slaClock
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        multiHopTicketingGraphCount++;
+        multiHopTicketingGraphs[multiHopTicketingGraphCount] = MultiHopTicketingGraph({
+            id: multiHopTicketingGraphCount,
+            achievementId: achievementId,
+            ticketGraphHash: ticketGraphHash,
+            resolutionProofHash: resolutionProofHash,
+            slaClock: slaClock,
+            resolved: false,
+            recordedAt: block.timestamp
+        });
+        emit MultiHopTicketingGraphLogged(multiHopTicketingGraphCount, achievementId, ticketGraphHash, resolutionProofHash, slaClock, false);
+        return multiHopTicketingGraphCount;
+    }
+
+    function logOperatorCredentialVault(
+        uint256 achievementId,
+        address operator,
+        bytes32 credentialHash,
+        bytes32 rotationAttestationHash,
+        bytes32 revocationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(operator != address(0), "Invalid operator");
+        operatorCredentialVaultCount++;
+        operatorCredentialVaults[operatorCredentialVaultCount] = OperatorCredentialVault({
+            id: operatorCredentialVaultCount,
+            achievementId: achievementId,
+            operator: operator,
+            credentialHash: credentialHash,
+            rotationAttestationHash: rotationAttestationHash,
+            revocationProof: revocationProof,
+            active: true,
+            recordedAt: block.timestamp
+        });
+        emit OperatorCredentialVaultLogged(operatorCredentialVaultCount, achievementId, operator, credentialHash, rotationAttestationHash, true);
+        return operatorCredentialVaultCount;
+    }
+
+    function logResilienceKPISynthesizer(
+        uint256 achievementId,
+        bytes32 telemetryHash,
+        bytes32 synthesisRecipeHash,
+        uint256 resilienceKPI,
+        bytes32 notarizationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(resilienceKPI <= 100, "Resilience KPI must be <= 100");
+        resilienceKPISynthesizerCount++;
+        resilienceKPISynthesizers[resilienceKPISynthesizerCount] = ResilienceKPISynthesizer({
+            id: resilienceKPISynthesizerCount,
+            achievementId: achievementId,
+            telemetryHash: telemetryHash,
+            synthesisRecipeHash: synthesisRecipeHash,
+            resilienceKPI: resilienceKPI,
+            notarizationProof: notarizationProof,
+            recordedAt: block.timestamp
+        });
+        emit ResilienceKPISynthesizerLogged(resilienceKPISynthesizerCount, achievementId, telemetryHash, synthesisRecipeHash, resilienceKPI);
+        return resilienceKPISynthesizerCount;
+    }
+
+    function logOmniAlertCoordinator(
+        uint256 achievementId,
+        bytes32 alertAggregateHash,
+        string[] memory channels,
+        bytes32 acknowledgmentFlowHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(channels.length > 0, "Channels required");
+        omniAlertCoordinatorCount++;
+        omniAlertCoordinators[omniAlertCoordinatorCount] = OmniAlertCoordinator({
+            id: omniAlertCoordinatorCount,
+            achievementId: achievementId,
+            alertAggregateHash: alertAggregateHash,
+            channels: channels,
+            acknowledgmentFlowHash: acknowledgmentFlowHash,
+            acknowledged: false,
+            recordedAt: block.timestamp
+        });
+        emit OmniAlertCoordinatorLogged(omniAlertCoordinatorCount, achievementId, alertAggregateHash, acknowledgmentFlowHash, false);
+        return omniAlertCoordinatorCount;
+    }
+
+    function logHazardInsuranceGrid(
+        uint256 achievementId,
+        string memory hazardType,
+        bytes32 parametricScheduleHash,
+        bytes32 payoutProof,
+        uint256 coverageAmount
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(bytes(hazardType).length > 0, "Hazard type required");
+        require(coverageAmount > 0, "Coverage amount required");
+        hazardInsuranceGridCount++;
+        hazardInsuranceGrids[hazardInsuranceGridCount] = HazardInsuranceGrid({
+            id: hazardInsuranceGridCount,
+            achievementId: achievementId,
+            hazardType: hazardType,
+            parametricScheduleHash: parametricScheduleHash,
+            payoutProof: payoutProof,
+            coverageAmount: coverageAmount,
+            recordedAt: block.timestamp
+        });
+        emit HazardInsuranceGridLogged(hazardInsuranceGridCount, achievementId, hazardType, parametricScheduleHash, payoutProof, coverageAmount);
+        return hazardInsuranceGridCount;
+    }
+
+    function logStatefulCircuitBackup(
+        uint256 achievementId,
+        bytes32 circuitSnapshotHash,
+        bytes32 replayAttestationHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        statefulCircuitBackupsCount++;
+        statefulCircuitBackups[statefulCircuitBackupsCount] = StatefulCircuitBackup({
+            id: statefulCircuitBackupsCount,
+            achievementId: achievementId,
+            circuitSnapshotHash: circuitSnapshotHash,
+            replayAttestationHash: replayAttestationHash,
+            backupTimestamp: block.timestamp,
+            verified: false,
+            recordedAt: block.timestamp
+        });
+        emit StatefulCircuitBackupLogged(statefulCircuitBackupsCount, achievementId, circuitSnapshotHash, replayAttestationHash, block.timestamp, false);
+        return statefulCircuitBackupsCount;
+    }
+
+    function logRapidNeutralizationSwitch(
+        uint256 achievementId,
+        bytes32 neutralizationSequenceHash,
+        bytes32 authorizationProof
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        rapidNeutralizationSwitchCount++;
+        rapidNeutralizationSwitches[rapidNeutralizationSwitchCount] = RapidNeutralizationSwitch({
+            id: rapidNeutralizationSwitchCount,
+            achievementId: achievementId,
+            neutralizationSequenceHash: neutralizationSequenceHash,
+            authorizationProof: authorizationProof,
+            activated: false,
+            recordedAt: block.timestamp
+        });
+        emit RapidNeutralizationSwitchLogged(rapidNeutralizationSwitchCount, achievementId, neutralizationSequenceHash, authorizationProof, false);
+        return rapidNeutralizationSwitchCount;
+    }
+
+    function logRecoveryRoleRandomizer(
+        uint256 achievementId,
+        address[] memory recoveryRoles,
+        bytes32 randomizationProof,
+        bytes32 assignmentAttestation
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(recoveryRoles.length >= 2, "At least 2 recovery roles required");
+        recoveryRoleRandomizerCount++;
+        recoveryRoleRandomizers[recoveryRoleRandomizerCount] = RecoveryRoleRandomizer({
+            id: recoveryRoleRandomizerCount,
+            achievementId: achievementId,
+            recoveryRoles: recoveryRoles,
+            randomizationProof: randomizationProof,
+            assignmentAttestation: assignmentAttestation,
+            recordedAt: block.timestamp
+        });
+        emit RecoveryRoleRandomizerLogged(recoveryRoleRandomizerCount, achievementId, randomizationProof, assignmentAttestation);
+        return recoveryRoleRandomizerCount;
+    }
+
+    function logCustodialIntegrityGrid(
+        uint256 achievementId,
+        address custodialProvider,
+        uint256 integrityScore,
+        bytes32 breachChronologyHash,
+        bytes32 remediationHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        require(custodialProvider != address(0), "Invalid custodial provider");
+        require(integrityScore <= 100, "Integrity score must be <= 100");
+        custodialIntegrityGridCount++;
+        custodialIntegrityGrids[custodialIntegrityGridCount] = CustodialIntegrityGrid({
+            id: custodialIntegrityGridCount,
+            achievementId: achievementId,
+            custodialProvider: custodialProvider,
+            integrityScore: integrityScore,
+            breachChronologyHash: breachChronologyHash,
+            remediationHash: remediationHash,
+            recordedAt: block.timestamp
+        });
+        emit CustodialIntegrityGridLogged(custodialIntegrityGridCount, achievementId, custodialProvider, integrityScore, breachChronologyHash);
+        return custodialIntegrityGridCount;
+    }
+
+    function logEvidenceEscrowExchange(
+        uint256 achievementId,
+        bytes32 encryptedEvidenceHash,
+        bytes32 releaseProof,
+        bytes32 auditTrailHash
+    ) public returns (uint256) {
+        require(achievementId > 0, "Invalid achievement");
+        evidenceEscrowExchangeCount++;
+        evidenceEscrowExchanges[evidenceEscrowExchangeCount] = EvidenceEscrowExchange({
+            id: evidenceEscrowExchangeCount,
+            achievementId: achievementId,
+            encryptedEvidenceHash: encryptedEvidenceHash,
+            releaseProof: releaseProof,
+            auditTrailHash: auditTrailHash,
+            released: false,
+            recordedAt: block.timestamp
+        });
+        emit EvidenceEscrowExchangeLogged(evidenceEscrowExchangeCount, achievementId, encryptedEvidenceHash, releaseProof, auditTrailHash);
+        return evidenceEscrowExchangeCount;
+    }
+
+    function releaseEvidenceEscrowExchange(uint256 exchangeId) public {
+        require(exchangeId > 0 && exchangeId <= evidenceEscrowExchangeCount, "Exchange missing");
+        EvidenceEscrowExchange storage exchange = evidenceEscrowExchanges[exchangeId];
+        require(!exchange.released, "Exchange already released");
+        require(exchange.releaseProof != bytes32(0), "Release proof required");
+        exchange.released = true;
+        emit EvidenceEscrowExchangeReleased(exchangeId, msg.sender);
+    }
+
     function logDecentralizedIdentityVerification(
         uint256 achievementId,
         string memory verificationId,
