@@ -596,7 +596,7 @@ Deep dives for this flux live in [`docs/onchain-feature-expansion.md`](docs/onch
 
 Deep dives for this relay live in [`docs/onchain-feature-expansion.md`](docs/onchain-feature-expansion.md#polaris-relay--frontier-automations).
 
-### Continuity Fusion · 30 Cross-Domain Orchestration Modules
+### Continuity Fusion · 30 Cross-Domain Orchestration Modules (F271-F300)
 - 🔄 **Achievement Continuity Fusion Orchestrator**: Orchestrate multi-domain continuity flows with sync policies and checkpoint intervals.
 - ⚛️ **Achievement Quantum State Sync**: Sync quantum-resistant state across chains using post-quantum cryptographic algorithms.
 - 🤖 **Achievement Autonomous Recovery Mesh**: Mesh autonomous recovery agents across domains with configurable recovery strategies.
