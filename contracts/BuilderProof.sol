@@ -3864,7 +3864,7 @@ contract SocialMediaContract {
     event ComplianceEvidenceRouterLogged(uint256 indexed routerId, uint256 indexed achievementId, string regulatorEndpoint, bytes32 encryptedEvidenceHash, bytes32 receiptProof);
     event MultiChainDebriefStudioLogged(uint256 indexed studioId, uint256 indexed achievementId, string chainId, bytes32 incidentDebriefHash, bytes32 actionItemHash);
     event WitnessDensityTrackerLogged(uint256 indexed trackerId, uint256 indexed achievementId, uint256 witnessCoverage, uint256 policyRequirement, bool lowDensity, bytes32 densityProof);
-    event StagedRedemptionQueueLogged(uint256 indexed queueId, uint256 indexed achievementId, uint256 redemptionAmount, uint256[] phaseEvidenceHashes, bool fullyRedeemed);
+    event StagedRedemptionQueueLogged(uint256 indexed queueId, uint256 indexed achievementId, uint256 redemptionAmount, bytes32[] phaseEvidenceHashes, bool fullyRedeemed);
     event QuantumReadinessRegistryLogged(uint256 indexed registryId, uint256 indexed achievementId, uint256 readinessStatus, uint256 cutoverDate, bytes32 auditSignatureHash, bool ready);
     event SovereignDataRelayLogged(uint256 indexed relayId, uint256 indexed achievementId, bytes32 dataReplicationHash, bytes32 manifestHash, string jurisdiction);
     event RegenerativeBudgetVaultLogged(uint256 indexed vaultId, uint256 indexed achievementId, uint256 impactKPIThreshold, bytes32 regenerativeProof, bool refilled);
