@@ -3684,10 +3684,6 @@ contract SocialMediaContract {
     mapping(uint256 => SmartContractPayableFunctionRegistry) public smartContractPayableFunctionRegistries;
     mapping(uint256 => DecentralizedCodeContributionGraph) public decentralizedCodeContributionGraphs;
     mapping(uint256 => SmartContractReentrancyGuardAnalyzer) public smartContractReentrancyGuardAnalyzers;
-    mapping(uint256 => CrossChainProofAggregator) public crossChainProofAggregators;
-    mapping(uint256 => SmartContractAccessControlMatrix) public smartContractAccessControlMatrices;
-    mapping(uint256 => DecentralizedCodeWorkflowOrchestrator) public decentralizedCodeWorkflowOrchestrators;
-    mapping(uint256 => SmartContractStateTransitionValidator) public smartContractStateTransitionValidators;
     mapping(uint256 => CrossProtocolAttestationBridge) public crossProtocolAttestationBridges;
     mapping(uint256 => DecentralizedCodeQualityAssurance) public decentralizedCodeQualityAssurances;
     mapping(uint256 => SmartContractGasOptimizationEngine) public smartContractGasOptimizationEngines;
@@ -4029,6 +4025,35 @@ contract SocialMediaContract {
     event SmartContractPayableFunctionRegistryLogged(uint256 indexed registryId, uint256 indexed achievementId, string registryIdStr, uint256 payableCount, string functionType, bytes32 registryProof);
     event DecentralizedCodeContributionGraphLogged(uint256 indexed graphId, uint256 indexed achievementId, string graphIdStr, uint256 contributorCount, string graphType, bytes32 graphProof);
     event SmartContractReentrancyGuardAnalyzerLogged(uint256 indexed analyzerId, uint256 indexed achievementId, string analyzerIdStr, uint256 guardCount, uint256 vulnerabilityLevel, bytes32 analyzerProof);
+    event CrossChainProofAggregatorLogged(uint256 indexed aggregatorId, uint256 indexed achievementId, string aggregatorIdStr, uint256 chainCount, uint256 proofCount, bytes32 aggregationProof);
+    event SmartContractAccessControlMatrixLogged(uint256 indexed matrixId, uint256 indexed achievementId, string matrixIdStr, uint256 roleCount, uint256 permissionCount, bytes32 matrixProof);
+    event DecentralizedCodeWorkflowOrchestratorLogged(uint256 indexed orchestratorId, uint256 indexed achievementId, string orchestratorIdStr, uint256 workflowCount, string workflowType, bytes32 orchestratorProof);
+    event SmartContractStateTransitionValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string transitionRules, uint256 validationCount, bytes32 validatorProof);
+    event CrossProtocolAttestationBridgeLogged(uint256 indexed bridgeId, uint256 indexed achievementId, string bridgeIdStr, string sourceProtocol, string targetProtocol, uint256 attestationCount);
+    event DecentralizedCodeQualityAssuranceLogged(uint256 indexed assuranceId, uint256 indexed achievementId, string assuranceIdStr, uint256 qualityScore, string qualityStandard, bytes32 assuranceProof);
+    event SmartContractGasOptimizationEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string engineIdStr, uint256 gasSavings, string optimizationType, bytes32 engineProof);
+    event CrossChainAchievementValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, uint256 chainCount, uint256 validationCount, bytes32 validatorProof);
+    event DecentralizedCodeSecurityAuditLogged(uint256 indexed auditId, uint256 indexed achievementId, string auditIdStr, uint256 securityScore, string auditScope, bytes32 auditProof);
+    event SmartContractUpgradePathValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string upgradePath, uint256 riskAssessment, bytes32 validatorProof);
+    event CrossProtocolEvidenceSyncLogged(uint256 indexed syncId, uint256 indexed achievementId, string syncIdStr, string sourceProtocol, string targetProtocol, uint256 evidenceCount);
+    event DecentralizedCodeComplianceFrameworkLogged(uint256 indexed frameworkId, uint256 indexed achievementId, string frameworkIdStr, string complianceStandard, uint256 complianceScore, bytes32 frameworkProof);
+    event SmartContractPerformanceOptimizerLogged(uint256 indexed optimizerId, uint256 indexed achievementId, string optimizerIdStr, uint256 performanceScore, string optimizationType, bytes32 optimizerProof);
+    event CrossChainTreasuryManagerLogged(uint256 indexed managerId, uint256 indexed achievementId, string managerIdStr, uint256 chainCount, uint256 treasuryAmount, bytes32 managerProof);
+    event DecentralizedCodeGovernanceEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string engineIdStr, uint256 proposalCount, string votingMechanism, bytes32 engineProof);
+    event SmartContractSecurityPatternValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, uint256 patternCount, string patternType, bytes32 validatorProof);
+    event CrossProtocolIntentRouterLogged(uint256 indexed routerId, uint256 indexed achievementId, string routerIdStr, string sourceProtocol, string targetProtocol, uint256 intentCount);
+    event DecentralizedCodeAutomationFrameworkLogged(uint256 indexed frameworkId, uint256 indexed achievementId, string frameworkIdStr, uint256 automationCount, string automationType, bytes32 frameworkProof);
+    event SmartContractStateRecoveryValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string recoveryType, uint256 recoveryCount, bytes32 validatorProof);
+    event CrossChainGuardianNetworkLogged(uint256 indexed networkId, uint256 indexed achievementId, string networkIdStr, uint256 chainCount, uint256 guardianCount, bytes32 networkProof);
+    event DecentralizedCodeVerificationSystemLogged(uint256 indexed systemId, uint256 indexed achievementId, string systemIdStr, uint256 verificationCount, string verificationType, bytes32 systemProof);
+    event SmartContractComplianceAuditorLogged(uint256 indexed auditorId, uint256 indexed achievementId, string auditorIdStr, string complianceStandard, uint256 auditScore, bytes32 auditorProof);
+    event CrossProtocolAchievementMirrorLogged(uint256 indexed mirrorId, uint256 indexed achievementId, string mirrorIdStr, string sourceProtocol, string targetProtocol, uint256 mirrorCount);
+    event DecentralizedCodeDeploymentValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string deploymentType, uint256 validationCount, bytes32 validatorProof);
+    event SmartContractEventSubscriptionManagerLogged(uint256 indexed managerId, uint256 indexed achievementId, string managerIdStr, uint256 subscriptionCount, string subscriptionType, bytes32 managerProof);
+    event CrossChainProofVerificationNetworkLogged(uint256 indexed networkId, uint256 indexed achievementId, string networkIdStr, uint256 chainCount, uint256 verificationCount, bytes32 networkProof);
+    event DecentralizedCodeAccessControlFrameworkLogged(uint256 indexed frameworkId, uint256 indexed achievementId, string frameworkIdStr, uint256 accessLevelCount, string controlType, bytes32 frameworkProof);
+    event SmartContractLifecycleOrchestratorLogged(uint256 indexed orchestratorId, uint256 indexed achievementId, string orchestratorIdStr, string lifecycleStage, uint256 stageCount, bytes32 orchestratorProof);
+    event CrossProtocolEvidenceValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string sourceProtocol, string targetProtocol, uint256 validationCount);
     
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the owner");
