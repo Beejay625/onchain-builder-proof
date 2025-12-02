@@ -4001,9 +4001,6 @@ contract SocialMediaContract {
     event DecentralizedCodeContributionGraphLogged(uint256 indexed graphId, uint256 indexed achievementId, string graphIdStr, uint256 contributorCount, string graphType, bytes32 graphProof);
     event SmartContractReentrancyGuardAnalyzerLogged(uint256 indexed analyzerId, uint256 indexed achievementId, string analyzerIdStr, uint256 guardCount, uint256 vulnerabilityLevel, bytes32 analyzerProof);
     event CrossChainProofAggregatorLogged(uint256 indexed aggregatorId, uint256 indexed achievementId, string aggregatorIdStr, uint256 chainCount, uint256 proofCount, bytes32 aggregationProof);
-    event SmartContractAccessControlMatrixLogged(uint256 indexed matrixId, uint256 indexed achievementId, string matrixIdStr, uint256 roleCount, uint256 permissionCount, bytes32 matrixProof);
-    event DecentralizedCodeWorkflowOrchestratorLogged(uint256 indexed orchestratorId, uint256 indexed achievementId, string orchestratorIdStr, uint256 workflowCount, string workflowType, bytes32 orchestratorProof);
-    event SmartContractStateTransitionValidatorLogged(uint256 indexed validatorId, uint256 indexed achievementId, string validatorIdStr, string transitionRules, uint256 validationCount, bytes32 validatorProof);
     event CrossProtocolAttestationBridgeLogged(uint256 indexed bridgeId, uint256 indexed achievementId, string bridgeIdStr, string sourceProtocol, string targetProtocol, uint256 attestationCount);
     event DecentralizedCodeQualityAssuranceLogged(uint256 indexed assuranceId, uint256 indexed achievementId, string assuranceIdStr, uint256 qualityScore, string qualityStandard, bytes32 assuranceProof);
     event SmartContractGasOptimizationEngineLogged(uint256 indexed engineId, uint256 indexed achievementId, string engineIdStr, uint256 gasSavings, string optimizationType, bytes32 engineProof);
